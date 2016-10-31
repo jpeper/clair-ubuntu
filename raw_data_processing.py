@@ -17,7 +17,11 @@ class Post:
     	self.timeid = timeid
 
     def __str__(self):
-    	return userid
+    	return 'User ID: ' + str(self.userid) + '\nMessage: ' + ' '.join(self.message) + "\nTimeID: " + str(self.timeid)
+
+    def get_message(self):
+    	return self.message   
+    
 
 entries = []
 # open data file
@@ -28,10 +32,9 @@ with open('ubuntu_annotated_sample.txt', 'r') as myfile:
 	for line in myfile:	
 		
 		# if name is changed on line
-		if (re.search(r'^===', line)):	
+		if (re.search(r'^===', line)):			
 			
-			
-			# find old and new name
+			# extract old and new name
 			names = re.search(r'=== (.+?) is now known as (.*)\r?',line)
 			old_name = names.group(1) 
 			new_name = names.group(2)
@@ -44,31 +47,30 @@ with open('ubuntu_annotated_sample.txt', 'r') as myfile:
 			# to the id of the old name
 			else:
 				user_aliases[new_name] = user_aliases[old_name]
+
 		# if line contains a normal post, add username to dictionary
-		# if not already a key
 		else:
 			current_line = re.search(r'\[.+?\]\s<(.+?)>', line)
 			if current_line:
+
 				userid = current_line.group(1)
+				# if user has not posted before, assign them a user id
 				if not userid in user_aliases:
+					print newuserid
 					user_aliases[userid] = newuserid
 					newuserid += 1
 
-			# tokenize post body
-			current_entry = re.findall(r'\[.+?\]\s<.+?>\s(.*)', line)			
-			split = current_entry[0].split()
-			print user_aliases[userid]
-			# add object storing current comment's information to data list
-			bob = Post(user_aliases[userid], split, timestamp)
-			entries.append(bob)
-			timestamp += 1
-			
-
-
-
-		
-
-
+				# tokenize post body
+				current_entry = re.findall(r'\[.+?\]\s<.+?>\s(.*)', line)			
+				split = current_entry[0].split()
+				# add object storing current comment's information to data list
+				bob = Post(user_aliases[userid], split, timestamp)
+				entries.append(bob)
+				timestamp += 1
+	
+for entry in entries:
+	
+	print entry
 
 # print sorted(user_aliases.items(), key=operator.itemgetter(1))
 
