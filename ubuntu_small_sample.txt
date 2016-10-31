@@ -1,0 +1,31 @@
+[08:10] <Peppernrino> entered: sudo apt-get install libglew-dev libcheese7 libcheese-gtk23 libclutter-gst-2.0-0 libcogl15 libclutter-gtk-1.0-0 libclutter-1.0-0
+[08:10] <Peppernrino> and: sudo apt-get install cuda
+[08:10] <Peppernrino> says cuda needs cuda...
+[08:10] <Peppernrino> lol
+[08:11] <Peppernrino> could it be because i installed xorg-edgers?
+[08:11] <Peppernrino> i saw on a forum that it causes problems occasionally.
+[08:12] <mgor> simpsonc, have you tried without psr? I had flickering issues with it enabled
+[08:12] <Peppernrino> https://bugs.launchpad.net/ubuntu/+source/unity-control-center/+bug/1428972
+[08:13] <ubottu> Launchpad bug 1424466 in apt (Ubuntu Trusty) "duplicate for #1428972 Devel package not installable in 14.04.2" [Undecided,Confirmed]
+[08:13] <simpsonc> mgor: no, I haven't...I'm not entirely certain on how to disable it
+[08:14] <Peppernrino> https://devtalk.nvidia.com/default/topic/959599/depends-cuda-7-5-7-5-18-but-it-is-not-going-to-be-installed/
+[08:14] <Peppernrino> this is exactly what is happening to me.
+=== yinflying2016 is now known as yinflying
+[08:15] <Peppernrino> install cuda says needs cuda-7-5, instal cuda-7-5 says needs nvidia-drivers... etc
+[08:16] <mgor> simonf, do you have /etc/modprobe.d/i915.conf? if so remove enable_psr, also check /etc/default/grub and make sure you don't have i915.enable_psr in any of the GRUB_CMDLINE... (when changing /etc/default/grub, don't forget to run sudo update-grub)
+[08:16] <cart_Man> mjayk: Well it just said : " E:Unable to locate package device-tree-overlay
+[08:17] <simpsonc> less /etc/modprobe.d/i915.comf
+[08:17] <simpsonc> ach...sorry
+[08:19] <simpsonc> mgor: I recently had to re-install the OS due to issue with attempting to upgrade the kernel, so I'm back to 4.4.0-36...there is also no reference at all to psr in /etc/default/grub:
+[08:19] <simpsonc> simpsonc@simpsonc-nbk:~$ sudo grep psr /etc/default/grub
+=== twwwater is now known as tww
+[08:20] <simpsonc> simpsonc@simpsonc-nbk:~$is there another way to check if it's enabled?
+[08:20] <Peppernrino> error: not a command
+[08:20] <mgor> simpsonc, shouldn't be enabled unless you have explicitly enabled it
+[08:21] <simpsonc> ah ok...then that doesn't appear to be the issue...it's definitely something specific with 16.04 since it only presented itself after I upgraded from 15
+=== userarch is now known as eoli3n
+[08:32] <k1l> Peppernrino: please put all the apt commands and output on paste.ubuntu.com and show the link here
+[08:35] <EriC^^> how can i convert a .mp4 to a h.263 mp4 using avconv or ffmpeg?
+[08:35] <cfhowlett> EriC^^, man ffmpeg has the details
+[08:36] <EriC^^> cfhowlett: searched for 263 couldn't find anything
+=== mgor is now known as mgorAMA
