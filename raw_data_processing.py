@@ -21,7 +21,7 @@ class Post:
     	return self.userid
 
     def get_timeid(self):
-    	return self.userid
+    	return self.timeid
 
     
 # create dictionary to hold mappings to user id's
@@ -72,7 +72,7 @@ with open('ubuntu_small_sample.txt', 'r') as myfile:
 				bob = Post(user_aliases[userid], split, timestamp)
 				entries.append(bob)
 				timestamp += 1
-				
+
 # prints summary of each entry	
 for post in entries:
 	print post
