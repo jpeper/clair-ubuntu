@@ -20,7 +20,7 @@ class Post(object):
     	self.dialogueid = dialogueid;
 
     def __str__(self):
-    	return 'Username: ' + self.username + ', User ID: ' + str(self.userid) + ', Time ID: ' + str(self.timeid) + '\nMessage: ' + self.message 
+    	return 'Username: ' + self.username + ', User ID: ' + str(self.userid) + ', Time ID: ' + str(self.timeid) + ', Dialogue ID: ' + str(self.dialogueid) + '\nMessage: ' + self.message 
 
     def get_username(self):
     	return self.username
@@ -37,8 +37,11 @@ class Post(object):
     def get_timeid(self):
     	return self.timeid
 
-    def set_diaglogue_id(self, id_in):
+    def set_dialogue_id(self, id_in):    	
     	self.dialogueid = id_in  
+    	
+    def get_dialogue_id(self):
+    	return self.dialogueid
 
     
 # create dictionary to hold mappings to user id's
@@ -93,19 +96,39 @@ def file_processing(file_in):
 
 
 def annotate(entries_list):
-    num_messages = 10;
+    num_messages = 10
+    dialogueid = 0
     doAnnotation = True
-    index = 0;
-    while (doAnnotation == True):
+    index = 0
+    while ((doAnnotation == True) and (index < len(entries))):
     	num_entries_to_print = min(num_messages, index)
+    	print ("PREVIOUS MESSAGES\n")
     	for j in range(num_entries_to_print):
     		print ('[',j,'] ', entries_list[index - num_entries_to_print + j])
-    	index += 1
+    	
     	print ('\n')
-    	current_val = int(input("Please choose which dialogue current message pertains to. Enter 0 to create new dialogue. Enter -1 to exit annotation.\n" + 'Current Message: ' + str(entries_list[index])))
-    	if (current_val == -1):
-    		doAnnotation = False
+    	valid_input = False
+    	print ('CURRENT MESSAGE: ' + str(entries_list[index]) + '\n')
+    	while (valid_input == False):
+    		current_val = int(input("Please choose which dialogue current message pertains to. Enter -1 to create new dialogue. Enter -2 to exit annotation.\n"))
+    		if (current_val == -2):
+    			doAnnotation = False
+    			valid_input = True
+    		elif (current_val == -1):
+    			print ("HELLLOOOO")
+    			entries_list[index].set_dialogue_id(dialogueid)
+    			dialogueid += 1
+    			valid_input = True
+    			print (valid_input)
+    		elif ((current_val >= 0) and (current_val < num_entries_to_print)):
+    			entries_list[index].set_dialogue_id(entries_list[index - num_entries_to_print + current_val].get_dialogue_id())
+    			valid_input = True
+    		else:
+    			print ("Not a valid input. Please try again")
+
     	print ('_'*100)
+
+    	index += 1
 
 
 myfile = open('ubuntu_small_sample.txt', 'r')
