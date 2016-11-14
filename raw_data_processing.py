@@ -9,16 +9,21 @@ from scipy.spatial.distance import euclidean
 
 class Post(object):    
     # constructor
-    def __init__(self, userid, message_words, message, timeid):
+    def __init__(self, username, userid, message_words, message, timeid, dialogueid = None):
     	
     	# member variables
+    	self.username = username
     	self.userid = userid
     	self.message_words = message_words
     	self.message = message
     	self.timeid = timeid
+    	self.dialogueid = dialogueid;
 
     def __str__(self):
-    	return 'User ID: ' + str(self.userid) + '\nMessage: ' + self.message + "\nTimeID: " + str(self.timeid) + '\n'
+    	return 'Username: ' + self.username + ', User ID: ' + str(self.userid) + ', Time ID: ' + str(self.timeid) + '\nMessage: ' + self.message 
+
+    def get_username(self):
+    	return self.username
 
     def get_userid(self):
     	return self.userid
@@ -32,19 +37,22 @@ class Post(object):
     def get_timeid(self):
     	return self.timeid
 
+    def set_diaglogue_id(self, id_in):
+    	self.dialogueid = id_in  
+
     
 # create dictionary to hold mappings to user id's
 user_aliases = {}
-
 # list to store Post objects
 entries = []
 
-newuserid = 0
-timestamp = 0
+# file processing
+def file_processing(file_in):
 
-
-with open('2016-10-18_ubuntu.txt', 'r') as myfile:
-
+	global user_aliases
+	global entries
+	newuserid = 0
+	timestamp = 0
 	for line in myfile:	
 		# if name is changed on line
 		if (re.search(r'^===', line)):			
@@ -69,21 +77,42 @@ with open('2016-10-18_ubuntu.txt', 'r') as myfile:
 			current_line = re.search(r'\[.+?\]\s<(.+?)>', line)
 			if current_line:
 
-				userid = current_line.group(1)
+				username = current_line.group(1)
 				# if user has not posted before, assign them a user id
-				if not userid in user_aliases:
-					user_aliases[userid] = newuserid
+				if not username in user_aliases:
+					user_aliases[username] = newuserid
 					newuserid += 1
 
 				# tokenize post body and store strings in list
 				current_entry = re.findall(r'\[.+?\]\s<.+?>\s(.*)', line)	
 				split = current_entry[0].split()
 				# add object storing current comment's information to data list
-				bob = Post(user_aliases[userid], split, current_entry[0], timestamp)
+				bob = Post(username, user_aliases[username], split, current_entry[0], timestamp)
 				entries.append(bob)
 				timestamp += 1
 
 
+def annotate(entries_list):
+    num_messages = 10;
+    doAnnotation = True
+    index = 0;
+    while (doAnnotation == True):
+    	num_entries_to_print = min(num_messages, index)
+    	for j in range(num_entries_to_print):
+    		print ('[',j,'] ', entries_list[index - num_entries_to_print + j])
+    	index += 1
+    	print ('\n')
+    	current_val = int(input("Please choose which dialogue current message pertains to. Enter 0 to create new dialogue. Enter -1 to exit annotation.\n" + 'Current Message: ' + str(entries_list[index])))
+    	if (current_val == -1):
+    		doAnnotation = False
+    	print ('_'*100)
+
+
+myfile = open('ubuntu_small_sample.txt', 'r')
+file_processing(myfile)
+
+
+annotate(entries)
 
 
 message_list = []
@@ -100,7 +129,7 @@ print (bin_matrix.shape)
 
 vocab = vectorizer.get_feature_names()
 #print (vocab)
-num_clusters = 100
+num_clusters = 5
 kmeans = KMeans(n_clusters = num_clusters)
 kmeans.fit(bin_matrix)
 
