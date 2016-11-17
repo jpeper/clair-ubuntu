@@ -1,0 +1,177 @@
+[08:04] <atmosx> hello, is there any reliable way to know why apache2 is installed? Probably some php module is auto-installing apache
+[08:05] <Ben64> atmosx: aptitude why apache2
+[08:07] <mgor> atmosx, or sudo apt-cache rdepends --installed <package>
+[08:07] <cart_Man> Hi everyone.. I can not seem to install device-tree-overlay in ubuntu using apt-get. IS there some special package name for it?
+[08:07] <cart_Man> I used " apt-get install device-tree-overlay"
+[08:07] <cart_Man> did not work
+[08:07] <mjayk> what did it say cart_Man
+[08:09] <Peppernrino> any security risks in using 14.04.2?
+[08:10] <simpsonc> Hi, is there anyone that is familiar with the i915 video driver issues with 16.04? I've attempted the fix at https://aboutsimon.com/blog/2016/07/20/Ubuntu-16.04-external-monitor-flickering-and-turning-off-on-intel-i915.html which did not correct the issue.
+[08:10] <cfhowlett> Peppernrino, as opposed to the current 14.04.5 ??
+[08:10] <Peppernrino> seems cuda is a little more forgiving <=14.04.2
+[08:10] <Peppernrino> yeah
+[08:10] <Peppernrino> entered: sudo apt-get install libglew-dev libcheese7 libcheese-gtk23 libclutter-gst-2.0-0 libcogl15 libclutter-gtk-1.0-0 libclutter-1.0-0
+[08:10] <Peppernrino> and: sudo apt-get install cuda
+[08:10] <Peppernrino> says cuda needs cuda...
+[08:10] <Peppernrino> lol
+[08:11] <Peppernrino> could it be because i installed xorg-edgers?
+[08:11] <Peppernrino> i saw on a forum that it causes problems occasionally.
+[08:12] <mgor> simpsonc, have you tried without psr? I had flickering issues with it enabled
+[08:12] <Peppernrino> https://bugs.launchpad.net/ubuntu/+source/unity-control-center/+bug/1428972
+[08:13] <ubottu> Launchpad bug 1424466 in apt (Ubuntu Trusty) "duplicate for #1428972 Devel package not installable in 14.04.2" [Undecided,Confirmed]
+[08:13] <simpsonc> mgor: no, I haven't...I'm not entirely certain on how to disable it
+[08:14] <Peppernrino> https://devtalk.nvidia.com/default/topic/959599/depends-cuda-7-5-7-5-18-but-it-is-not-going-to-be-installed/
+[08:14] <Peppernrino> this is exactly what is happening to me.
+=== yinflying2016 is now known as yinflying
+[08:15] <Peppernrino> install cuda says needs cuda-7-5, instal cuda-7-5 says needs nvidia-drivers... etc
+[08:16] <mgor> simonf, do you have /etc/modprobe.d/i915.conf? if so remove enable_psr, also check /etc/default/grub and make sure you don't have i915.enable_psr in any of the GRUB_CMDLINE... (when changing /etc/default/grub, don't forget to run sudo update-grub)
+[08:16] <cart_Man> mjayk: Well it just said : " E:Unable to locate package device-tree-overlay
+[08:17] <simpsonc> less /etc/modprobe.d/i915.comf
+[08:17] <simpsonc> ach...sorry
+[08:19] <simpsonc> mgor: I recently had to re-install the OS due to issue with attempting to upgrade the kernel, so I'm back to 4.4.0-36...there is also no reference at all to psr in /etc/default/grub:
+[08:19] <simpsonc> simpsonc@simpsonc-nbk:~$ sudo grep psr /etc/default/grub
+=== twwwater is now known as tww
+[08:20] <simpsonc> simpsonc@simpsonc-nbk:~$is there another way to check if it's enabled?
+[08:20] <Peppernrino> error: not a command
+[08:20] <mgor> simpsonc, shouldn't be enabled unless you have explicitly enabled it
+[08:21] <simpsonc> ah ok...then that doesn't appear to be the issue...it's definitely something specific with 16.04 since it only presented itself after I upgraded from 15
+=== userarch is now known as eoli3n
+[08:32] <k1l> Peppernrino: please put all the apt commands and output on paste.ubuntu.com and show the link here
+[08:35] <EriC^^> how can i convert a .mp4 to a h.263 mp4 using avconv or ffmpeg?
+[08:35] <cfhowlett> EriC^^, man ffmpeg has the details
+[08:36] <EriC^^> cfhowlett: searched for 263 couldn't find anything
+[08:37] <k1l> EriC^^: "ffmpeg can't pack h263 stream in mp4 container" http://arthurcuth.blogspot.de/2012/05/ffmpeg-and-h263.html
+[08:37] <zetheroo> according to this ' The production Launchpad.net site runs on Ubuntu 12.04 LTS' - is this still true? https://dev.launchpad.net/Running
+[08:37] <EriC^^> k1l: oh, thanks
+[08:38] <EriC^^> anybody know an idea how i could get this done? ultimately i want to convert a video to something supported on android
+[08:38] <gattoinvestito> which is the best irc client for terminal? The simpler no scripting etc ^^
+[08:38] <EriC^^> gattoinvestito: irssi and weechat are nice
+[08:38] <k1l> EriC^^: seems like h263 and mp4 dont match at all
+[08:39] <xangua> EriC^^: why don't just install VLC?
+[08:39] <xangua> On Android
+[08:39] <gattoinvestito> and something with scrollbars? does it exist for terminal?
+[08:40] <k1l> zetheroo: i guess the gusy at #launchpad will know
+[08:40] <k1l> *-y
+[08:40] <zetheroo> k1l: ok
+[08:40] <gattoinvestito> Eric something with scrollbars for terminal? So i can look back and forward without writing commands?
+[08:40] <EriC^^> xangua: i'll do that but i also need to convert them
+[08:41] <xangua> gattoinvestito: don't hexchat and other IRC clients have a black kinda terminal themes?
+[08:41] <cfhowlett> xangua, hexchat does. the old xchat themes work
+[08:41] <k1l> gattoinvestito: scrollbars on cli?
+[08:41] <gattoinvestito> yes
+[08:42] <gattoinvestito> a terminal ui ^^
+[08:42] <EriC^^> gattoinvestito: you can scroll up and down with pageup i think
+[08:43] <k1l> gattoinvestito: what do you need scrollbars for? irssi supports scrolling with page-up and -down anyways
+[08:43] <gattoinvestito> ok I AM IDIOT it works
+[08:43] <gattoinvestito> tank k1l
+[08:43] <gattoinvestito> thanks
+[08:43] <EriC^^> these are the list of supported formats for android, http://onebestsoft.com/play-mp4-on-android/ , if anybody has an idea how to convert to one of them, let me know, thanks
+[08:44] <Dugroin> hello guys, I have a little question for you.. I can't have phpmyadmin running on my ubuntu.. I get 'The mbstring extension is missing. Please check your PHP configuration.' error.. does anyone have an idea ?
+[08:44] <cfhowlett> EriC^^, ?  idea?  ffmpeg -i foo.mp4 foo.webm or .mkv           done
+[08:45] <k1l> EriC^^: h264 and mp4 should work
+[08:45] <EriC^^> cfhowlett: i tried foo.mkv it didn't work
+[08:45] <maum> error: RPC failed; result=22, HTTP code = 404 fatal: The remote end hung up unexpectedly
+[08:45] <maum> how can I solve this git problem?
+[08:45] <EriC^^> k1l: the original file says h264 but it doesn't seem to work, android says unsupported format
+[08:46] <Peppernrino> man. i pressed the up button so many times...
+[08:47] <EriC^^> cfhowlett: i'll give .webm a shot
+=== Guest87601 is now known as alokj
+[08:49] <k1l> EriC^^: http://stackoverflow.com/questions/14171826/converting-video-for-android-using-ffmpeg
+=== rishabh is now known as Guest91838
+[08:49] <Guest91838> ubuntu is awesome
+[08:49] <k1l> EriC^^: there are some issues with android playing files. this link got a working command
+[08:50] <EriC^^> k1l: thanks! :)
+=== adroit_machine is now known as adroit_machine_
+=== Rumbles_ is now known as Rumbles
+[08:56] <Dugroin>  hello guys, I have a little question for you.. I can't have phpmyadmin running on my ubuntu.. I get 'The mbstring extension is missing. Please check your PHP configuration.' error.. does anyone have an idea ?
+[08:57] <cfhowlett> EriC^^, webm works on Android
+=== twwwater is now known as tww
+[08:57] <EriC^^> cfhowlett: cool thanks
+[08:57] <alkisg> Dugroin: apt search mbstring ==> and install the packages that you need
+[08:57] <alkisg> e.g. php-mbstring
+[08:58] <Dugroin> alkisg, done already.. no success :-(
+=== Rumbles is now known as Rumbles_
+[08:58] <alkisg> Dugroin: dpkg -l '*mbs*' | grep ^ii
+[08:59] <alkisg> What's the output of that?
+[08:59] <Dugroin> ii  php-mbstring    1:7.0+44+deb.sury.org~xenial+1 all          MBSTRING module for PHP [default]
+[08:59] <Dugroin> ii  php7.0-mbstring 7.0.10-2+deb.sury.org~xenial+1 amd64        MBSTRING module for PHP
+[09:00] <alkisg> Dugroin: you're using weird PPAs etc, better stop using them and use the stock versions instead
+[09:00] <alkisg> ~# dpkg -l '*mbs*' | grep ^ii
+[09:00] <alkisg> ii  php7.0-mbstring    7.0.4-7ubuntu2.1 amd64        MBSTRING module for PHP
+[09:00] <alkisg> With that ^, phpmyadmin works fine here
+[09:00] <Dugroin> how could I sort out these PPAs ?
+[09:00] <Dugroin>  :-()
+[09:00] <k1l> ppa-purge
+[09:00] <Dugroin> just 'ppa-purge' ?
+[09:01] <k1l> is php-gettext installed?
+[09:01] <Dugroin> yes k1
+[09:01] <k1l> !ppa-purge | Dugroin
+[09:01] <ubottu> Dugroin: To disable a PPA from your sources and revert your packages back to default Ubuntu packages, install ppa-purge and use the command: Â« sudo ppa-purge ppa:<repository-name>/<subdirectory> Â» â€“ For more information, see http://www.webupd8.org/2009/12/remove-ppa-repositories-via-command.html
+[09:02] <k1l> Dugroin: wait. did you restart the apache afterwards?
+[09:02] <Dugroin> i did k1l
+[09:02] <Dugroin> :-)
+[09:03] <k1l> did you enable the mod with sudo phpenmod mbstring ?
+[09:03] <Dugroin> not sure.. I'll try k1l
+=== Rumbles_ is now known as Rumbles-
+=== Rumbles- is now known as Rumbles
+[09:03] <Dugroin> WARNING: Module mbstring ini file doesn't exist under /etc/php/5.6/mods-available
+[09:03] <Dugroin> WARNING: Module mbstring ini file doesn't exist under /etc/php/5.6/mods-available
+[09:04] <k1l> so you are using php5 still? thought you were on 16.04
+[09:04] <Dugroin> I don't know k1l :-( I think php5 AND php7 are both installed :-(
+[09:06] <k1l> not on an original ubuntu setup
+[09:06] <Dugroin> :-( how could I sort this out :-( ?
+[09:06] <adamicron> hi, is it normal for kmsg to be 0 bytes?
+[09:07] <k1l> Dugroin: "dpkg -l | grep php | nc termbin.com 9999"
+[09:07] <Dugroin> k1l: http://termbin.com/kxla
+[09:08] <ph88> hey guys, how can i install this app on ubuntu gnome 16.04 ?  https://www.kde.org/applications/internet/krdc  i don't find it in Software
+[09:08] <k1l> Dugroin: ah, you installed php5 manually from a ppa
+[09:08] <Dugroin> I can get rid of it, if required :-)
+[09:08] <k1l> Dugroin: do you want/need php5?
+[09:09] <hateball> ph88: apt install krdc
+[09:09] <Dugroin> k1l, I just need php :-) If php7 is better, let's go for it :-)
+[09:09] <hateball> ph88: open terminal, type "sudo apt install krdc"
+[09:10] <hateball> ph88: it depends on kde-runtime tho. seems a bit overkill if you normally run gnome. should be an RDP client for gnome surely
+[09:10] <k1l> Dugroin: "apt-cache policy php5.6 | nc termbin.com 9999"
+[09:11] <Dugroin> k1l, http://termbin.com/ij1f
+[09:12] <someone235> Hi, I have a problem. When I plug out my headphones, I can't hear with the built in speakers. Is there a way to fix it without reboot?
+[09:13] <k1l> Dugroin: "sudo ppa-purge ppa:ondrej/php"
+[09:15] <Dugroin> k1l, PPA purged sucessfully :-)
+[09:15] <k1l> restart apache now, see if it works
+[09:16] <Dugroin> I try !
+[09:18] <Dugroin> k1l, you are great ! 100000000000 thanks !
+=== spartan is now known as Guest82091
+[09:19] <Guest82091> good morning, ubuntu!
+=== twwwater is now known as tww
+[09:21] <adamicron> ok, I see it's normal to have a size of 0 in procfs http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html so my question becomes: should /proc/kmsg contain something at any given time?
+[09:22] <adamicron> even a   sudo cat /proc/kmsg   produces no output on my 16.04
+[09:22] <ph88> hateball, they are buggy, but i found a good one now: rdesktop
+=== twwwater is now known as tww
+[09:27] <bhavesh> I don't understand why the pdf font looks so bad on Evince and Google Chrome/Firefox on Ubuntu, but looks quite fine on Windows with "Reader" app and other apps
+[09:27] <bhavesh> how do I make the pdf look good?
+=== Vampire0_ is now known as Vampire0
+[09:28] <bhavesh> http://imgur.com/a/QWujF
+[09:29] <chandru_in> How does the mini.iso verify integrity of packages that is downloads? Does the iso contain the archive signing keys?
+=== twwwater is now known as tww
+[09:34] <OerHeks> bhavesh, pic is removed
+[09:35] <bhavesh> OerHeks: works for me?
+[09:35] <OerHeks> chandru_in, yes, all iso's have the public key
+[09:35] <chandru_in> Thanks OerHeks.
+[09:36] <OerHeks> i see this http://imgur.com/a/4Exs5
+[09:36] <OerHeks> if you cannot see that, then there is something wrong with imgur
+[09:40] <bhavesh> OerHeks: http://i.imgur.com/i0hIlXd.png ?
+[09:42] <OerHeks> bhavesh, that is not windows, nor linux...
+[09:42] <bhavesh> OerHeks: lol I change it to mac osx theme, using xfce on Ubuntu 16.04 LTS
+[09:42] <bhavesh> changed*
+=== bogdan__ is now known as Bogdar
+[09:44] <OerHeks> oh, the well know ruin-my-system-theme...
+[09:45] <OerHeks> not a valid problem, if you ask me.
+[09:46] <k1l> bhavesh: what is the issue?
+[09:46] <atrlhvn> when I'm installing something from source, (./configure, make, etc) does it matter where the tarball is extracted?
+[09:47] <k1l> bhavesh: make sure you got a proper matching font on your system
+[09:48] <rangergord> Is there a way to prevent any given user program from freezing the UI when it goes wacko with CPU usage? I don't want to explicitly nice every program as I launch it, I want EVERY app running as my user, to have a nice/CPU cap level that prevents it from hanging the entire UI. So I can at least open a terminal and kill it when it goes haywire. How can I do that?
+[09:49] <mgor> atrlhvn, doesn't really matter, but to follow the filesystem hierarchy standard, you should place it in /usr/local/src, https://wiki.debian.org/FilesystemHierarchyStandard
+[09:50] <atrlhvn> mgor: so there is a standard place, but it will work even if its not there, right?
+[09:50] <mgor> atrlhvn, correct
+[09:50] <atrlhvn> mgor: and also the files should stay there, and not be deleted, right?
+=== alokj is now known as Guest43045
+[09:51] <mgor> atrlhvn, depends on what you're building, some make files has the uninstall target, which could be useful if you want to uninstall something
