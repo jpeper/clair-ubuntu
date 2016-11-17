@@ -8,30 +8,32 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
 from scipy.spatial.distance import euclidean
 
+input_file = '2016-10-18_ubuntu.txt'
 
 class Post(object):    
     # constructor
     def __init__(self, username, userid, message_words, message, postid, raw_line, responding_to_id = None):
     	
     	# member variables
+    	# stores name of user
     	self.username = username
+    	# stores id assigned to user and their aliases
     	self.userid = userid
+    	# stores list of strings which contains every 'word' in the message
     	self.message_words = message_words
+    	# string of message body
     	self.message = message
+    	# stores id number assigned to post
     	self.postid = postid
+    	# stores id number of the post that current post 
+    	# is responding to
     	self.responding_to_id = responding_to_id
+    	# stores actual line of raw input corresponding to current post
     	self.raw_line = raw_line
 
     def __str__(self):
     	return 'Username: ' + self.username + ', User ID: ' + str(self.userid) + ', Post ID: ' + str(self.postid) + ', Responding to Post ID: ' + str(self.responding_to_id) + '\nMessage: ' + self.message 
     
-    def get_serialized(self):
-    	return pickle.dumps(self)
-
-    def __repr__(self):
-    	# similar to str, but more dense
-    	return pickle.dumps(self)
-
     def get_username(self):
     	return self.username
 
@@ -56,12 +58,14 @@ class Post(object):
     def get_raw_line(self):
     	return self.raw_line
 
+    # returns annotated representation of message suitable for output to file
     def get_annotated(self):
     	return '(' + str(self.postid) + ')' + ' (' + str(self.responding_to_id) + ') ' + self.raw_line
 
     
 # create dictionary to hold mappings to user id's
 user_aliases = {}
+
 # list to store Post objects
 entries = []
 
@@ -110,16 +114,17 @@ def file_processing(file_in):
 				entries.append(new_post)
 				post_num += 1
 
-
 def annotate(entries_list):
-	#number of previous messages to display
-    filename = input("Please enter annotation output filename")
+
+	# prompt user for starting position, number of messages to display, and output filename  
     start_position = int(input("There are " + str(len(entries)) + " messages in this file. Pick starting message in range [0," + str(len(entries)) + ")\n" ))
     num_messages = int(input("How many past messages would you like to display?\n"))
+    filename = input("Please enter annotated output destination filename:\n")
     saveFile = open(filename, 'w')
 
     doAnnotation = True
     index = start_position
+
     # while user wants to do annotation of messages in list
     while ((doAnnotation == True) and (index < len(entries))):
 
@@ -127,20 +132,19 @@ def annotate(entries_list):
     	num_entries_to_print = min(num_messages, index)
     	print ("\nPREVIOUS MESSAGES")
     	for j in range(num_entries_to_print):
-    		print ('[',j,']\t', entries_list[index - num_entries_to_print + j].get_annotated())    	
-    		#print ('[',j,'] ', entries_list[index - num_entries_to_print + j])    	
+    		print ('[',j,']\t', entries_list[index - num_entries_to_print + j].get_annotated().rstrip())
     	print ('\n')
 
     	# display current message    	
     	print ('CURRENT MESSAGE:\n' + entries_list[index].get_annotated() + '\n')
-    	#print ('CURRENT MESSAGE: ' + str(entries_list[index]) + '\n')
 
     	# prompt input from user
     	valid_input = False
     	while (valid_input == False):
-    		current_val = int(input("Please choose which message current message is responding to. Enter -1 if not responding to a previous message. Enter -2 to exit annotation.\n"))
+
+    		current_val = int(input("Select previous message in dialogue. If none exists, enter -1. Enter -2 to exit annotation.\n"))
     		
-    		# if 'end of annoation' sentinel value, break from input
+    		# if 'end of annoation' sentinel value is entered, break from input
     		if (current_val == -2):
     			doAnnotation = False
     			break
@@ -153,24 +157,33 @@ def annotate(entries_list):
     		elif ((current_val >= 0) and (current_val < num_entries_to_print)):
     			entries_list[index].set_responding_to_id(entries_list[index - num_entries_to_print + current_val].get_postid())
     			valid_input = True
+
     		# if invalid input, prompt user to enter correct value
     		else:
     			print ("Invalid input. Please try again")
 
-    	# print line to keep annotation of each message distinct
-    	
-    	print ('_'*100)
+    	# print line to keep annotation of each message distinct    	
+    	print ('_'*120)
 
     	# if annotation is over, exit function
     	if (doAnnotation == False):
     		break;
+
+    	# write annotated object to line in output file	
     	saveFile.write(entries_list[index].get_annotated())
 
-    	# move to next message for next iteration of while loop
+    	# increment index
     	index += 1
 
+    # close output file
     saveFile.close()
-def clustering(entries_list, k):
+
+    print ("\nEnd of Annotation\n")
+
+def clustering(entries_list):
+
+	# determine number of clusters
+	k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
 
 	message_list = []
 	for posts in entries_list:
@@ -200,7 +213,7 @@ def clustering(entries_list, k):
 		min_dist = 1000000000;
 		min_index = 0;
 
-		print ("\n"*3, "MESSAGES IN CLUSTER",i,':')
+		print ("\n"*2, "\nMESSAGES IN CLUSTER",i,':')
 		for j in range(len(message_list)):
 			if (labels[j] == i):
 				if (euclidean(bin_matrix[j], centroids[i]) < min_dist):
@@ -211,26 +224,19 @@ def clustering(entries_list, k):
 		print ("_"*100)
 		
 
-
-myfile = open('ubuntu_small_sample.txt', 'r')
+# INPUT FILE
+myfile = open(input_file, 'r')
 file_processing(myfile)
 
+# run annotation function if requested
 do_annotation = input("Would you like to do annotation? (yes/no)\n")
 if do_annotation == 'yes':
 	annotate(entries)
-
+# run clustering fuction if requested
 do_clustering = input ("Would you like to do clustering? (yes/no)\n")
 if do_clustering == 'yes':
-	k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Pick value in range (0," + str(len(entries)) + "]\n"))
-	clustering(entries, k)
-'''
-pickled = repr(entries[2])
-#pickled = entries[2].get_serialized()
-print (type(pickled))
-print (pickled)
-unpickled = pickle.loads(pickled)
-print (unpickled)
-'''
+	clustering(entries)
+
 
 
 
