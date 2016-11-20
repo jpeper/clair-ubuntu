@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
 from scipy.spatial.distance import euclidean
 
-input_file = '2016-10-18_ubuntu.txt'
+input_file = '2016-11-02_ubuntu.txt'
 
 class Post(object):    
     # constructor
