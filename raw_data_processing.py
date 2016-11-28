@@ -7,8 +7,11 @@ import marshal
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer
 from scipy.spatial.distance import euclidean
+from sklearn.cluster import SpectralClustering
+from sklearn.cluster import MeanShift
+from sklearn.preprocessing import normalize
 
-input_file = '2016-11-02_ubuntu.txt'
+input_file = "ubuntu_medium_sample.txt"
 
 class Post(object):    
     # constructor
@@ -180,6 +183,113 @@ def annotate(entries_list):
 
     print ("\nEnd of Annotation\n")
 
+# KMEANS
+def tokenize(message):
+	split_message = message.split()
+	return split_message
+
+def clustering(entries_list):
+
+	# determine number of clusters
+	k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
+
+	message_list = []
+	for posts in entries_list:
+		message_list.append(posts.get_username() + " " + posts.get_message())
+
+	#vectorizer = CountVectorizer()
+	vectorizer = CountVectorizer(analyzer='word',binary=True,tokenizer=tokenize,preprocessor=None,stop_words=None) 
+	word_vec = vectorizer.fit_transform(message_list)
+	bin_matrix = normalize(word_vec)
+
+	bin_matrix = bin_matrix.todense()
+	
+	'''
+	for messages in entries:
+	for words in messages.message_words:
+		print (words)
+	'''
+
+	# print dimensions of binary frequency matrix
+	print ("Dimensions of matrix:",bin_matrix.shape)
+
+
+	vocab = vectorizer.get_feature_names()
+	print (vocab)
+	kmeans = KMeans(n_clusters = k)
+	kmeans.fit(bin_matrix)
+
+	dist = euclidean(bin_matrix[2,:], bin_matrix[3,:])
+	
+
+	centroids = kmeans.cluster_centers_
+	labels = kmeans.labels_
+
+	for i in range(k):
+		min_dist = 1000000000000;
+		min_index = 0;
+
+		print ("\n"*2, "\nMESSAGES IN CLUSTER",i,':')
+		for j in range(len(message_list)):
+			if (labels[j] == i):
+				if (euclidean(bin_matrix[j], centroids[i]) < min_dist):
+					min_dist = euclidean(bin_matrix[j], centroids[i]) 
+					min_index = j
+				print (message_list[j])
+		print ("\nCLUSTER " + str(i) + " MEDOID:\n" + message_list[min_index])
+		print ("_"*100)
+
+
+'''
+# MEAN SHIFT
+def clustering(entries_list):
+
+	# determine number of clusters
+	#k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
+
+	message_list = []
+	for posts in entries_list:
+		message_list.append(posts.get_message())
+
+
+	vectorizer = CountVectorizer(analyzer = "word", binary = True, tokenizer = None, preprocessor = None, stop_words = None) 
+	word_vec = vectorizer.fit_transform(message_list)
+
+	bin_matrix = word_vec.todense()
+	# print dimensions of binary frequency matrix
+	print ("Dimensions of matrix:",bin_matrix.shape)
+
+
+	vocab = vectorizer.get_feature_names()
+	#print (vocab)
+	kmeans = MeanShift()
+	kmeans.fit(bin_matrix)
+
+
+	dist = euclidean(bin_matrix[2,:], bin_matrix[3,:])
+	
+
+	centroids = kmeans.cluster_centers_
+	labels = kmeans.labels_
+	
+
+	for i in range(centroids.shape[0]):
+		min_dist = 1000000000;
+		min_index = 0;
+
+		print ("\n"*2, "\nMESSAGES IN CLUSTER",i,':')
+		for j in range(len(message_list)):
+			if (labels[j] == i):
+				if (euclidean(bin_matrix[j], centroids[i]) < min_dist):
+					min_dist = euclidean(bin_matrix[j], centroids[i]) 
+					min_index = j
+				print (message_list[j])
+		print ("\nCLUSTER " + str(i))
+		print ("_"*100)
+'''
+
+'''
+# SPECTRAL CLUSTERING
 def clustering(entries_list):
 
 	# determine number of clusters
@@ -190,7 +300,7 @@ def clustering(entries_list):
 		message_list.append(posts.get_message())
 
 
-	vectorizer = CountVectorizer(analyzer = "word", binary = True, tokenizer = None, preprocessor = None, stop_words = None, max_features = 5000) 
+	vectorizer = CountVectorizer(analyzer = "word", binary = True, tokenizer = None, preprocessor = None, stop_words = None) 
 	word_vec = vectorizer.fit_transform(message_list)
 
 	bin_matrix = word_vec.todense()
@@ -200,7 +310,22 @@ def clustering(entries_list):
 
 	vocab = vectorizer.get_feature_names()
 	#print (vocab)
-	kmeans = KMeans(n_clusters = k)
+	kmeans = SpectralClustering(k)
+	kmeans.fit(bin_matrix)
+
+	labels = kmeans.labels_
+
+	for i in range(k):
+		for j in range(len(message_list)):
+			if (labels[j] == i):
+				print (message_list[j])
+		print ("\nCLUSTER ", i)
+		print ("_"*100, "\n")
+'''
+
+	
+
+'''
 	kmeans.fit(bin_matrix)
 
 	dist = euclidean(bin_matrix[2,:], bin_matrix[3,:])
@@ -222,7 +347,8 @@ def clustering(entries_list):
 				print (message_list[j])
 		print ("\nCLUSTER " + str(i) + " MEDOID:\n" + message_list[min_index])
 		print ("_"*100)
-		
+	'''
+
 
 # INPUT FILE
 myfile = open(input_file, 'r')
@@ -232,6 +358,7 @@ file_processing(myfile)
 do_annotation = input("Would you like to do annotation? (yes/no)\n")
 if do_annotation == 'yes':
 	annotate(entries)
+
 # run clustering fuction if requested
 do_clustering = input ("Would you like to do clustering? (yes/no)\n")
 if do_clustering == 'yes':
