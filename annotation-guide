@@ -1,0 +1,117 @@
+This document contains general guidelines for conducting annotation on the Unbuntu IRC dataset.
+
+General Guidelines:
+    The goal of this annotation is to create a link/edge from the current message to zero or more previous messages that the current message responds to. Annotation should be straight-forward for the majority of messages, however, there are some ambiguous instances that this guide will attempt to resolve. 
+
+    The annotation of most messages can be generalized to just a few base cases. In addition to these bases cases, specialized/edge cases do exist, and we hope to provde guidlines for annotating some of them. In order for annotation to remain as consistent as possible between users, examples of these edge cases will be provided below in addition to examples of the base cases.
+
+    The goal of this guide is to minimize uncertainty when choosing how to annotate a message. If you come accross an ambiguous case while annotating and feel that it should adressed in this guide, please inform someone working on the project of this. We will do our best to make a ruling to resolve the ambiguity and add an example of this scenario to the guide if we feel it necessary.
+
+Dataset Overview:
+    We are dealing with the Ubuntu IRC dataset for the purposes of this annotation. This dataset contains messages from conversations that took place in the Ubuntu IRC chat logs. With this annotation we are attempting to model the structure of dialogues within this dataset.
+
+Annotation instructions:
+    // ??? will be written once annotation tool has been determined 
+
+TODO: Add guideline for the case of 'ubutto' (a bot triggered by users - is it responding to the request for it, or the person the message is aimed at?)
+
+
+
+// The scenarios are structured in the following format:
+//////////////////////////////////////////////////////////////////////////
+
+"Brief Summary of Scenario"
+    Scenario: "Description of scenario and potential ambguity that needs to be resolved"
+    Solution: "Guidelines for resolving the problem encountered in this scenario"
+
+        Example "example #":
+            (message #) (#'s' of message(s) current message responds to) "raw message line goes here" 
+            .
+            .
+            .
+            .
+            .
+            (message #) () "the last message would be here if it existed"
+            
+        // multiple examples may exist for the same scenario
+        // if example needs the original conversation followed by the annotated
+        // conversation, call the original the 'Raw' conversation, and call
+        // the annotation conversation the 'Annotated conversation'.
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+
+SCENARIOS:
+
+COMMON CASES:
+
+Distinct Consecutive Messages From a User.
+    Scenario: Consecutive messages 2 and 3 from the same user both respond to message 1. 2 and 3 are distinct thoughts.
+    Solution: 3 responds to 1 and 2 responds to 1. If messages can stand alone in response, then treat them as seperate.
+
+        Example 1: 
+            (1) (...) [00:40] <OerHeks> fels, you might want to reask in #ubuntu-server
+            (2) (1) [00:41] <fels> OerHeks: Thanks -
+            (3) (1) [00:41] <fels> OerHeks: are they brutal to newbies :)
+
+
+Message Is Continuation of Previous Message
+    Scenario: Consecutive messages 2 and 3 from the same user both respond to message 1. 3 is a continuation of the thought in 2. 
+    Solution: Merge 2 and 3. The merged message (assigned number 4 in this example) then responds to 1.
+        
+        Example 1:
+        Raw:
+            [02:08] <tgm4883> ThePotato: If you know you aren't supposed to come here, then why did you?
+            [02:08] <ThePotato> because the other chat is broked
+            [02:09] <ThePotato> for the distro
+        Annotated:
+            (1) (...) [02:08] <tgm4883> ThePotato: If you know you aren't supposed to come here, then why did you?
+            (4) (1)   [02:08] <ThePotato> because the other chat is broked for the distro
+
+
+Message Responds to Multiple Previous Messages
+    Scenario: Message 3 responds to distinct messages 1 and 2. 
+    Soluton: 3 responds to 1 and 3 responds to 2.
+
+        Example 1:
+            (1) (...) [00:11] <Bashing-om> ShinyShoes: Maube a fault in your mirror ? Maybe wait a spell and see if the mirror syncs up with mother .. or change your mirror ?
+            (2) (1)   [00:12] <lordcirth> Yes, the next thing to try would be switching mirrors
+            (3) (1,2) [00:13] <ShinyShoes> this could be the mirror problem, you're right
+
+
+User is Engaged in Multiple Conversations
+    Scenario: Message x and message y from the same user are unrelated yet occur within the same file
+    Solution: Treat x and y as being unique messages that could relate to different conversations.
+
+        Example 1:
+            (1) (None) [01:45] <ctf2> ddd
+            (2) (None) [01:45] <ctf2> adasdaasddas
+            
+        Example 2:
+            (1) (None)  [03:33] <henry> can anyone tell me how to install a new package on ubuntu 14.04?
+            (2) (None)  [03:48] <thomas> Is it necessary to create a liveUSB drive to install ubuntu?
+            (3) (2)     [03:52] <henry> thomas: you can also burn an .iso file to a cd to install
+
+
+EDGE CASES:
+
+User Responds to Messsage Multiple Times. Responses are somewhat related to each other.
+    Scenario: A user replies to a message multiple times. Some of the responses could stand alone but might make sense to merge. 
+    Solution: Treat all responses as seperately linking back to the original if they can stand alone as responses. We want to err on the side of retaining more information than less, so only merge if it is obvious one is a continuation of the other.
+
+        Example 1:
+            (44) (41) [00:26] <zxc_> I'm thinking of just locating it and then using MPV to open it
+            (46) (44) [00:27] <nacc> zxc_: not sure i follow -- of course you would have to know where the file is to open it
+            (48) (44) [00:27] <nacc> zxc_: do you not control how your files are created?
+            (49) (44) [00:28] <nacc> zxc_: oh you mean you want to do `locate ... | mpv` ?
+
+It is Unclear Which Previous Message(s) Current Message Responds To.
+    Scenario: A user post a message that it clearly part of a pre-existing dialogue, but it is unclear which particular message it is in response to.
+    Solution: ??? // Ask Jonathan at meeting on Monday
+            (1) () [22:19] <Onepamopa> does anyone know HOW to auto execute a command AFTER user login (Unity) ?
+            (2) (???) [22:20] <Onepamopa> or how to permanently disable mouse acceleration
+            (3) (2) <Onepamopa> seems like it gets auto enabled on login
+            (4) (1,2,3) <dankan> Onepamopa, let me tell you
+            (5) (4,2) <dankan> Onepamopa, https://wiki.archlinux.org/index.php/Mouse_acceleration see the bit "disabling mouse acceleration"ty
