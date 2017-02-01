@@ -132,10 +132,12 @@ Use of ubottu, an IRC bot:
              https://help.ubuntu.com/community/Skype - To record on Skype,
              check: https://wiki.ubuntu.com/SkypeRecordingHowto - Please use
              open protocols instead if you can, see !Ekiga
+    <karen_> I see, I'll try that.
 
 --- Link ubottu's response to both the person who called it (<OerHeks>) and the
---- person the information is directed at (<karen_>).
-
+--- person the information is directed at (<karen_>). If someone then says
+--- something that is essentially a response to the bot, link the message to the
+--- bot's message.
 
 
 Handling a series of lines of output:
