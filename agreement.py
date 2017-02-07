@@ -25,7 +25,7 @@ if __name__ == '__main__':
     pairs0 = get_pairs(args.file0)
     pairs1 = get_pairs(args.file1)
 
-    # Kappa
+    # Cohen's Kappa
     a, b, c, d = 0, 0, 0, 0
     max_pos = max(max([max(pair) for pair in pairs0]), max([max(pair) for pair in pairs1]))
     for i in range(max_pos):
@@ -42,9 +42,12 @@ if __name__ == '__main__':
     marginalB = (c + d) * (b + d) / total
     pE = (marginalA + marginalB) / total
     kappa = (pO - pE) / (1 - pE)
-    print(a, b, c, d, total, pO, marginalA, marginalB, pE)
 
+    # Harmonic mean of the two values for how many we had in common
     common = len(pairs0.intersection(pairs1))
-    # Calculate how many have agreement on 1 link per line
+    val0 = common / len(pairs0)
+    val1 = common / len(pairs1)
+    f1 = 2 * val0 * val1 / (val0 + val1)
 
-    print(common, len(pairs0), len(pairs1), common / max(len(pairs0), len(pairs1)), kappa)
+    print("F1", 100 * f1)
+    print("Kappa", kappa)
