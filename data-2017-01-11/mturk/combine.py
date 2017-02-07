@@ -6,7 +6,7 @@ import glob
 def read_file(filename):
     # Determine offset
     number = int(filename.split("rawLogtxtpart")[1].split("txt")[0])
-    offset = 40 * number
+    offset = 50 + 40 * number
 
     ans = {}
     data = eval(open(filename).read())
