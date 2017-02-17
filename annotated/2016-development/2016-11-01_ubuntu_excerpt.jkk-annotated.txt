@@ -1,0 +1,288 @@
+(0) (None) [00:00] <apb1963_> OerHeks, Hmmm.  I will try.  TY
+(1) (None) [00:00] <backbox> I do understand
+(2) (None) [00:00] <IMP> drkjstr, ty
+(3) (1) [00:00] <backbox> but it will ask for same process
+(4) (2) [00:00] <drkjstr> IMP, NP
+(5) (3) [00:00] <backbox> if i want to install any OS in that phone
+(6) (5) [00:01] <apb1963_> backbox, which is why you need help from people that know android well.  Try #android
+(7) (5) [00:01] <ikonia> backbox: this isn't something this channel supports
+(8) (6) [00:02] <backbox> they want me to register first ..?
+(9) (8) [00:02] <ikonia> backbox: then register
+(10) (8) [00:02] <apb1963_> backbox, go to #freenode for help with registration
+(11) (10) [00:02] <OerHeks> registering is not expensive today.
+(12) (10) [00:03] <apb1963_> backbox, they're having a Halloween special today only, free registration.
+(13) (12) [00:03] <backbox> ok but how things are there i mean this is life time regi or limited
+(14) (13) [00:04] <apb1963_> backbox, lifetime
+(15) (13) [00:04] <ikonia> backbox: the guys in #freenode can explain how it works
+(16) (15) [00:04] <backbox> Thanks guys
+(17) (16) [00:04] <backbox> but it seems like they are bit extra busy.
+(18) (None) [00:05] <apb1963_> #ubuntu... for the best in free traffic redirection.
+(19) (17) [00:05] <backbox> there is any link where i need to go?
+(20) (19) [00:06] <apb1963_> backbox, Everybody wants the free registration
+(21) (19) [00:06] <ikonia> backbox: what do you mean ?
+(22) (None) [00:07] <dylan> How do I add a brother printer on Xubuntu?
+(23) (21) [00:07] <backbox> done they are helping now i think
+(24) (22) [00:07] <backbox> you dnt need to add
+(25) (24) [00:07] <dylan> what?
+(26) (25) [00:07] <dylan> do you mean?
+(27) (26) [00:07] <backbox> printers are auto scan if you are in LAN
+(28) (27) [00:08] <dylan> sorry, but English please.
+(29) (28) [00:08] <OerHeks> dylan, check openprinting.org for your model, if no driver is available check vendor website
+(30) (None) [00:08] <apb1963_> backbox, Type "/msg NickServ help register" no quotes.
+(31) (22) [00:08] <maddawg2> lol add a printer... wtf is this Windows?
+(32) (31) [00:08] <ikonia> maddawg2: its not an unreaonable question, tone down the language please
+(33) (30) [00:08] <backbox> yes I did
+(34) (26) [00:08] <apb1963_> dylan, Go to http://127.0.0.1:631
+(35) (31) [00:08] <dylan> maddawg2, you are the reason people don't use linux.
+(36) (35) [00:09] <dylan> it's because the community isn't always patient
+(37) (28) [00:09] <ikonia> dylan: the problem you have is that brother have limited linux support, so it will depend on the model how you can use it
+(38) (37) [00:09] <dylan> okay, thanks for the help
+(39) (38) [00:09] <dylan> I'll do some more research on the printer.
+(40) (36) [00:09] <maddawg2> sheesh i was joking
+(41) (40) [00:09] <dylan> bye
+(42) (None) [00:09] <backbox> I got asked for email > apb1963
+(43) (40) [00:09] <maddawg2> people cant take a damn joke
+(44) (42) [00:10] <apb1963_> backbox, yes
+(45) (44) [00:10] <backbox> umm so if i type /msg NickServ REGISTER "bar" "foo@bar.com"
+(46) (45) [00:10] <backbox> i will get regi
+(47) (46) [00:10] <ikonia> backbox: ask in #freenode please
+(48) (43) [00:10] <maddawg2> yes
+(49) (48) [00:10] <apb1963_> maddawg2, people frustrated with their issue don't tend to find it funny when people make fun of them.  FYI
+(50) (48) [00:10] <kk4ewt> maddawg2,  remember irc is text, no one can see your body language and as humans we get 70% from body language
+(51) (46) [00:10] <ikonia> backbox: we are not here to support your using IRC for other channels
+(52) (46) [00:11] <maddawg2> tho i wouldnt put foo@bar.com backbox unless that is really your email
+(53) (52) [00:11] <backbox> I got that ..
+(54) (53) [00:11] <maddawg2> ;-)
+(55) (51) [00:11] <backbox> OK ikonia
+(56) (None) [00:12] <helllojesus12> hi, I want to set up local server using ubuntu and want to give users on my network access to it
+(57) (56) [00:12] <helllojesus12> how would I go about doing it?
+(58) (55) [00:12] <backbox> one more thing like you can see you can pick names and type msg at front ...
+(59) (58) [00:12] <backbox> how you guys do that
+(60) (59) [00:12] <apb1963_> backbox, type the first few letters of the name and then hit your TAB key
+(61) (57) [00:12] <ikonia> helllojesus12: access how ?
+(62) (60) [00:13] <backbox> apb1963_, done
+(63) (61) [00:13] <helllojesus12> over local network aka 192.168.0.0
+(64) (62) [00:13] <backbox> wow amazing apb1963_
+(65) (63) [00:13] <OerHeks> helllojesus12, tons of guides, https://help.ubuntu.com/lts/serverguide/network-file-system.html
+(66) (61) [00:13] <helllojesus12> @ikonia, I just want to put tomcat on my extra computer and run it as a local server
+(67) (66) [00:14] <helllojesus12> for learning purposes
+(68) (67) [00:14] <backbox> helllojesus12, search on google
+(69) (68) [00:14] <ikonia> backbox: no
+(70) (67) [00:14] <backbox> helllojesus12, first form will give the answer.
+(71) (68) [00:14] <ikonia> backbox: you've just asked for basic help, someone has a specific question and then you tell them to google - unacceptble
+(72) (67) [00:14] <ikonia> helllojesus12: ok, so you want the users to access tomcat via a browser ?
+(73) (67) [00:14] <apb1963_> helllojesus12,  Then there's really not much to do other than installing ubuntu and then tomcat...
+(74) (72) [00:15] <backbox> ikonia, helllojesus12 install samba services
+(75) (74) [00:15] <ikonia> backbox: no
+(76) (75) [00:15] <ikonia> backbox: read what he wants
+(77) (76) [00:15] <ikonia> backbox: he wants people to access a tomcat service
+(78) (None) [00:15] <apb1963_> helllojesus12, ignore backbox
+(79) (78) [00:16] <helllojesus12> the reason I ask is I want to set it up right the first time.. and I am not sure what is the right way..
+(80) (79) [00:16] <backbox> ikonia, setup local server using ubuntu
+(81) (80) [00:18] <ikonia> backbox: read more
+(82) (79) [00:20] <apb1963_> helllojesus12, Just set it up the normal way.  Do you know how to do that?
+(83) (82) [00:20] <apb1963_> helllojesus12, Do you have ubuntu installed on the server yet?
+(84) (81) [00:21] <backbox> got it ikonia
+(85) (79) [00:21] <OerHeks> helllojesus12, setting up can be easy, keeping it running an experience http://www.ubuntugeek.com/install-tomcat-8-on-ubuntu-16-04-server.html https://help.ubuntu.com/lts/serverguide/tomcat.html
+(86) (None) [00:21] <backbox> apb1963_, using this  /msg NickServ REGISTER "bar" "foo@bar.com" allow me to access all the channel right ..
+(87) (86) [00:21] <apb1963_> backbox, Other than invite only channels, yes.
+(88) (87) [00:21] <backbox> apb1963_, , if i type here    /msg NickServ REGISTER "123456" "132456foo@bar.com" this every one can se it
+(89) (85) [00:21] <helllojesus12> There are a lot guides but some are outdated and I rather do it the best way possible...
+(90) (89) [00:21] <helllojesus12> I am going to follow this guide and see how it goes..
+(91) (90) [00:21] <helllojesus12> https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04
+(92) (91) [00:21] <helllojesus12> I got ubuntu on my usb
+(93) (92) [00:21] <helllojesus12> I am going to make one now
+(94) (88) [00:21] <apb1963_> backbox,  no space before the leading slash
+(95) (94) [00:22] <backbox> apb1963_,  ok but still group can read those details ?
+(96) (95) [00:22] <apb1963_> backbox, no
+(97) (93) [00:23] <helllojesus12> thanks OerHeks ikonia apb1963_ backbox. I will go read and try it out. Thanks a lot.
+(98) (96) [00:23] <backbox>  /msg NickServ REGISTER P@ssword bloggagan1102@gmail.com
+(99) (98) [00:23] <backbox> ahahah
+(100) (97) [00:25] <helllojesus12> I didnt know there were different versions of ubuntu
+(101) (100) [00:25] <ikonia> helllojesus12: I think you may want to step back a little
+(102) (None) [00:25] <OerHeks> !flavor
+(103) (102) [00:25] <ubottu> Recognized Ubuntu flavors build on Ubuntu and provide a different user experience out of the box. They are supported both in #ubuntu and in their flavor channel. The current list is: !Edubuntu, !Ubuntu-GNOME, !Kubuntu, Ubuntu !Kylin, !Lubuntu, !Mythbuntu, Ubuntu !Studio, !Xubuntu, and Ubuntu !MATE
+(104) (101) [00:25] <ikonia> helllojesus12: get a better grasp of the basics of what ubuntu is, and what it means to use it
+(105) (104) [00:26] <ikonia> helllojesus12: then maybe plan on how to serve some people some pages via tomcat with the basics clear in your head
+(106) (105) [00:28] <helllojesus12> Yeah, I have a lot to read. My goal right now is to set up a small environment where me and my friends can code and put stuff.
+(107) (106) [00:28] <ikonia> helllojesus12: I'd get a better grasp of the very high level basics before moving forward
+(108) (107) [00:28] <helllojesus12> Do you have any specific reading you would suggest ikonia ?
+(109) (108) [00:29] <ikonia> helllojesus12: ubuntu.com is a good start
+(110) (None) [00:29] <backbox> Hi apb1963_
+(111) (109) [00:29] <ikonia> https://help.ubuntu.com for a basic introduction on how to use it
+(112) (110) [00:29] <backbox> thanks for help
+(113) (111) [00:29] <helllojesus12> ok, thanks! I will start there.
+(114) (112) [00:30] <backbox> but here I see you guys are in colored but i m in light gray apb
+(115) (114) [00:30] <ikonia> backbox: STOP
+(116) (115) [00:30] <backbox> ok
+(117) (116) [00:30] <ikonia> backbox: we are not here to help you use an IRC client / learn how to use IRC
+(118) (117) [00:30] <ikonia> you've been kicked as a warning, there will not be more warnings
+(119) (None) [00:30] <apb1963_> OerHeks, it doesn't look like POL is ready for Xenial.  The only instructions are for 14.04 and earlier.
+(120) (None) [00:31] <maddawg2> bleh too bad i cant add ram to a running machine :-(
+(121) (120) [00:31] <apb1963_> hot swappable RAM... interesting
+(122) (121) [00:32] <maddawg2> would be
+(123) (119) [00:32] <OerHeks> https://launchpad.net/ubuntu/xenial/+package/playonlinux and get that package
+(124) (122) [00:32] <maddawg2> some servers can do that
+(125) (123) [00:32] <apb1963_> OerHeks, TY
+(126) (124) [00:32] <maddawg2> but i dont think i can do that with vmware
+(127) (125) [00:32] <OerHeks> package from *  https://www.playonlinux.com/en/app-143-Microsoft_Office_2000.html
+(128) (None) [00:37] <mundus2018_> How long should starting the ubuntu installer take? Its been 8 minutes and im using usb 3
+(129) (None) [00:40] <X8_> hello
+(130) (127) [00:48] <apb1963_> OerHeks, The package you mention I get: Firefox doesn’t know how to open this address, because one of the following protocols (playonlinux) isn’t associated with any program or is not allowed in this context.
+(131) (130) [00:48] <apb1963_>   However, prior to noticing that comment I simply tried to install POL and Office... it gave me an internal error, and no cd rom found after it spun up the drive.
+(132) (131) [00:48] <apb1963_> OerHeks, I guess I have to associate
+(133) (None) [00:55] <lucas-arg> any ideas where we at placed with nvidia and new intel video chips and xorg? cant get away from tearing
+(134) (133) [00:55] <lordcirth> my GTX 1060 works just fine, as did my GT 650
+(135) (133) [00:56] <lucas-arg> i dont know where is the error in my sistem
+(136) (135) [00:56] <lucas-arg> system
+(137) (136) [00:57] <lucas-arg> i have a msi laptop and it works awful
+(138) (137) [00:57] <lucas-arg> i have and gtx950m and intel i see tearing even while browsing the web
+(139) (138) [00:58] <lucas-arg> ive tried every single thing you could find in the web and nothing worked
+(140) (None) [01:06] <designbybeck> Why when you zoom in the file browser thumbnail view do you get such an awful result of screen real estate usage!?
+(141) (140) [01:11] <de-facto> because nautilus thinks your pictures are nothing but really artistic and need space to show to advantage
+(142) (None) [01:22] <habarovsk> セガグループのマーザ・アニメーションプラネットと米国ソニー・ピクチャーズエンタテインメントで共同製作中のCGアニメと実写合成映画『ソニック・ザ・ヘッジホッグ（仮称）』にて、実力派制作陣の参加が決定！詳細
+(143) (None) [01:22] <Techspectre> My /home directory is on a 2TB HGST HDD that's less than a year old. I had no problems on 15.04 or 15.10, but ever since upgrading to 16.04, I get filesystem errors all the time and I have to do manual fsck every other boot. SMART data says the drive is fine
+(144) (143) [01:28] <lordcirth> Techspectre, ext4?
+(145) (144) [01:28] <Techspectre> lordcirth, yes
+(146) (145) [01:36] <fishcooker> if i do # sudo halt; could i expect that my /tmp folder has same content before doing halt command after i turn on the box?
+(147) (142) [01:36] <debkad> !jp | habarovsk
+(148) (147) [01:36] <ubottu> habarovsk: 日本語の場合は /join #ubuntu-jp または /join #kubuntu-jp を入力して下さい。
+(149) (146) [01:37] <MegaBrutal> fishcooker: Definitely not. In most setups, /tmp gets cleaned at each reboot.
+(150) (147) [01:38] <ubu1> im noob,what is jp?
+(151) (150) [01:38] <Daekdroom> ubu1, japanese
+(152) (150) [01:38] <kk4ewt> japanese
+(153) (150) [01:38] <debkad> japanese
+(154) (153) [01:38] <ubu1> thanks
+(155) (None) [01:40] <MegaBrutal> Hi all! I want to try the Livepatch Service, but I don't want to risk installing it on a productive machine right away, so I thought to test it in KVM. But I'm afraid it would count against my quota of 3 machines. Can I deauthorize the VM after I tested the service on it?
+(156) (155) [01:43] <MegaBrutal> As a matter of fact, is that quota actually enforced, or is it more like an honor system?
+(157) (None) [01:44] <ubu1> !de | ubu1
+(158) (157) [01:44] <ubottu> ubu1, please see my private message
+(159) (None) [01:45] <mikeymop> Hey
+(160) (159) [01:46] <mikeymop> Anyone experienced with network manager
+(161) (160) [01:47] <kk4ewt> mikeymop,  whats your question
+(162) (156) [01:48] <Flannel> MegaBrutal: That's a question for Canonical, not Ubuntu.  I'm not entirely sure which channel will be able to answer it, but if you ask in #canonical-sysadmin, they'll be able to point you to the correct Canonical channel (or answer you directly)
+(163) (161) [01:49] <mikeymop> I noticed in /etc/NetworkManager/system-connections there are config files
+(164) (163) [01:49] <mikeymop> I found e3 for my ethernet nic
+(165) (164) [01:49] <mikeymop> Inside I found a name for my ethernet connection with user specified
+(166) (165) [01:49] <mikeymop> I want to add root as a user, is this dangerous?
+(167) (166) [01:50] <mikeymop> kk4ewt: ^
+(168) (167) [01:50] <kk4ewt> i wouldnt
+(169) (None) [01:50] <ircclcv2> What is the meaning of jargonic ?
+(170) (167) [01:51] <kk4ewt> was it wireless or wired connection
+(171) (170) [01:51] <mikeymop> Wired
+(172) (171) [01:51] <kk4ewt> still wouldnt
+(173) (172) [01:51] <mikeymop> The reason: my kubuntu box I canot ssh into unless I first login
+(174) (173) [01:51] <mikeymop> Because network manager won't initialize unless I login
+(175) (174) [01:52] <mikeymop> I saw a post saying to check "make connection available to all users" I was curious if this was comparable
+(176) (175) [01:52] <kk4ewt> no the nm-applet isnt
+(177) (176) [01:52] <kk4ewt> mikeymop,  is this a desktop or lappy
+(178) (177) [01:53] <mikeymop> Old desktop relegated as a web, mail and Plex server
+(179) (178) [01:53] <kk4ewt> turn off NM and start networking
+(180) (179) [01:53] <mikeymop> 'networking'?
+(181) (180) [01:54] <kk4ewt> systemctl disable NetworkManager
+(182) (181) [01:54] <kk4ewt> systemctl enable networking
+(183) (182) [01:54] <kk4ewt> that should start your wired connection on every boot
+(184) (183) [01:54] <kk4ewt> it may be network
+(185) (184) [01:55] <mikeymop> I checked it's status /sbin/ifup
+(186) (185) [01:55] <mikeymop> Gave me an exit code. Probably because nm is running.
+(187) (186) [01:55] <mikeymop> I'm assuming this will terminate my connection so I should wait until I can be by my device?
+(188) (187) [01:56] <lordcirth> mikeymop, quite possibly, yeah I wouldn't do it over ssh
+(189) (None) [01:56] <ubu1> SOA
+(190) (187) [01:56] <mikeymop> It's networking definitely
+(191) (184) [01:57] <mikeymop> kk4ewt: does this require separate configuration? I have some vms NAT'd and several port rules
+(192) (191) [01:58] <kk4ewt> nope
+(193) (192) [01:58] <kk4ewt> NetworkManager is basicly for lappies
+(194) (193) [01:58] <kk4ewt> something that needs to be able to switch back and worth
+(195) (194) [01:59] <mikeymop> I was going to say odd, but this is Ubuntu
+(196) (None) [01:59] <ubu1> call +1-801-456-1000
+(197) (195) [01:59] <kk4ewt> between wired and wireless
+(198) (196) [01:59] <ubu1> it is your provider
+(199) (197) [01:59] <mikeymop> I do have a wifi card, but it's not often used
+(200) (199) [01:59] <kk4ewt> mikeymop,  no its not odd its in other distros as well
+(201) (200) [02:00] <kk4ewt> by letting the user select which network allows that flexibility
+(202) (201) [02:00] <mikeymop> Ok so not just a back end. It's also the applet used on DEs?
+(203) (202) [02:01] <mikeymop> Used to the /network/interfaces
+(204) (203) [02:01] <kk4ewt> yes
+(205) (None) [02:01] <ubu1> kick in window your mac
+(206) (205) [02:01] <ubu1> 2mac
+(207) (204) [02:01] <mikeymop> Gotcha, you cleared up a lot, better than the wikis
+(208) (207) [02:01] <mikeymop> Thank you
+(209) (206) [02:01] <ubu1> np
+(210) (209) [02:02] <kk4ewt> !op ubu1
+(211) (210) [02:02] <ubu1> friend?
+(212) (211) [02:02] <ubu1> ubu dead
+(213) (212) [02:02] <ubu1> i killer
+(214) (None) [02:17] <JonelethIrenicus> how can i move my boot folder to its own partition and how big should it be?
+(215) (214) [02:18] <kk4ewt> 500M-1G
+(216) (None) [02:23] <eexpss> Anyone can confirm the uget' built-in curl is multi-threaded?
+(217) (None) [02:34] <cokefenta> gfgf
+(218) (217) [02:35] <cokefenta> hey rich
+(219) (218) [02:35] <rich> hello
+(220) (219) [02:36] <rich> that was fast
+(221) (220) [02:36] <cokefenta> u are the first peroson that talk with me
+(222) (221) [02:36] <cokefenta> i was a new guy to play imrc
+(223) (222) [02:36] <rich> and you are the first for me :)
+(224) (223) [02:36] <cokefenta> yeah
+(225) (224) [02:37] <cokefenta> where are you come from
+(226) (225) [02:37] <cokefenta> my friend
+(227) (226) [02:37] <lordcirth> !ot
+(228) (227) [02:37] <ubottu> #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please register with NickServ (see /msg ubottu !register) and use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+(229) (226) [02:37] <rich> was  or tryed  ubuntu mint
+(230) (229) [02:38] <rich> this is better i think
+(231) (230) [02:38] <rich> and in washington state
+(232) (231) [02:39] <cokefenta> so good
+(233) (232) [02:39] <cokefenta> big city
+(234) (233) [02:39] <rich> how about you?
+(235) (234) [02:39] <cokefenta> china
+(236) (235) [02:39] <cokefenta> beijing~
+(237) (236) [02:39] <rich> oh
+(238) (237) [02:39] <cokefenta> yeash
+(239) (238) [02:40] <rich> Ilike to buy parts from bangood.com in china
+(240) (239) [02:41] <rich> rc helicopter parts
+(241) (240) [02:41] <lordcirth> rich, cokefenta did either of you have a support question?  Chatting is off topic here
+(242) (241) [02:41] <cokefenta> some of things i buy from alibaba
+(243) (242) [02:41] <rich> and save money
+(244) (243) [02:41] <cokefenta> i am so sorry
+(245) (244) [02:41] <rich> I fergot :)
+(246) (245) [02:42] <ubu1> retard
+(247) (246) [02:42] <rich> thats whut they told me in linux mint
+(248) (247) [02:44] <rich> Ihave a support question
+(249) (248) [02:44] <lordcirth> rich, well, what is it?
+(250) (249) [02:45] <rich> witch desktop and free os  everyone using?
+(251) (250) [02:45] <rich> the most
+(252) (251) [02:45] <cokefenta> unity
+(253) (251) [02:45] <lordcirth> rich, this is Ubuntu channel, so mostly Ubuntu and variants.  I am running Kubuntu.  Also, poll questions are not support questions
+(254) (253) [02:46] <rich> well why kubuntu?
+(255) (None) [02:46] <cokefenta> 可以说中文吗？
+(256) (254) [02:47] <lordcirth> rich, because I like KDE?  Although I'm having some stability problems with 5.
+(257) (254) [02:47] <ubu1> install archlinux
+(258) (256) [02:48] <rich> maybe you computer is too old
+(259) (258) [02:48] <lordcirth> rich, mine? no.
+(260) (259) [02:48] <rich> or xfce
+(261) (260) [02:49] <rich> have you tryed xfce?
+(262) (261) [02:49] <rich> desktop
+(263) (262) [02:49] <lordcirth> I have, I run Xubuntu on my work laptop.  It's nice.
+(264) (None) [02:50] <flink> Hi everyone! I want to know if it's worth it to defragment a hard disk with Ext4 FileSystem on Ubuntu or if it is absolutely useless?
+(265) (264) [02:50] <lordcirth> flink, did you fill it past 90%?
+(266) (265) [02:50] <lordcirth> If not, you probably don't need to
+(267) (266) [02:51] <flink> I have a 3Tb (1,5 Tb used) for my video streaming and a 500gb for my os (about 20% used)
+(268) (267) [02:51] <lordcirth> Then it won't be fragmented
+(269) (268) [02:51] <lordcirth> either of them
+(270) (269) [02:51] <kk4ewt> flink,  the OS will check it after so many boots
+(271) (270) [02:52] <lordcirth> kk4ewt, does the auto fsck do defrag too?
+(272) (271) [02:52] <flink> lorccirth thank you!
+(273) (272) [02:52] <lordcirth> np
+(274) (273) [02:52] <kk4ewt> it will do what it needs not really a defrag as in the windows world
+(275) (274) [02:54] <flink> kk4ewt That's what I thought!
+(276) (275) [02:54] <dax> fsck does not do defragmentation. lordcirth's comments on fullness are correct
+(277) (276) [02:54] <dax> there is a defragmentation tool for ext4, but it's pointless if you're not filling your filesystem enough
+(278) (None) [02:56] <rich> where is the chat channel?
+(279) (278) [02:56] <kk4ewt> #ubuntu-offtopic
+(280) (279) [02:56] <dax> (which requires nickserv registration)
+(281) (None) [03:06] <cash> Whats up guys
+(282) (281) [03:06] <lordcirth> cash, hi
+(283) (281) [03:09] <cash> Hey there
+(284) (281) [03:10] <cappicard> good evening :)
+(285) (281) [03:10] <cash> Question - if i set gsettings set org.gnome.settings-daemon.plugins.mouse active false, the touchpad settings GUI wont work correct?
+(286) (None) [03:20] <postmodern> what is the short-hand command to restart all systemd services under a target?
+(287) (None) [03:30] <JonelethIrenicus> i had windows install on this disk but i deleted it and now i want ubuntu to use the entire drive, but it is all messed up with partitions every where and I get warnings when trying to resize it with gparted.  What is the proper way to just save the / of the filesystem and copy the entire thing to the disk
