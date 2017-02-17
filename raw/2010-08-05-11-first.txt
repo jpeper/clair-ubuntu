@@ -1,0 +1,379 @@
+[10:39] <PythonPup> el_seano, The package is openoffice.org
+[10:39] <el_seano> whoops, my bad.
+[10:39] <KrisWood> ah ha! I need the "emerald theme manager" whatever that is... *googles it*
+[10:39] <alsem> PythonPup:  Not sure how long "a while is"  It is 2:20am here so probably not very long.  If you wish you can send it to my eMail  at  alsemus@yahoo.com
+[10:39] <Gothack> yeah,openoffice.org
+[10:40] <Gothack> i'm learning to use xchat.....this'is my first time use ubuntu
+[10:40] <PythonPup> alsem, It is 4:40am here.  You need to add a whole section at the bottom of the file.  I have that at home, and not here.  If you are still here, I'll post it to you when I get home.  It will take about 45 minutes.
+[10:41] <Gothack> it is 5:40pm here..................
+[10:41] <NightKhaos> PythonPup: lrwxrwxrwx 1 root root     36 2010-08-05 19:36 arm-elf-gcc -> /usr/local/arm/bin/arm-none-eabi-gcc ... got it work via for file in /usr/local/arm/bin/*; do sudo ln -s $file /usr/local/bin/arm-elf-${file#/usr/local/arm/bin/arm-none-eabi-}; done
+[10:41] <azlon1> when i remote (vnc) into my ubuntu machine, the vnc window on the other machine doesnt update
+[10:42] <abhijit> Namaste!
+[10:42] <abhijit> :)
+[10:42] <NightKhaos> PythonPup: took me a while to find # operator. :(
+[10:42] <PythonPup> NightKhaos, If I understood that right, then good.
+[10:42] <MaRk-I> azlon1: disable compiz
+[10:42] <alsem> PythonPup:  Thanks.  If I'm not here, might have gone back to bed, then just e-mail me please.   Thanks.........   Al
+[10:42] <MaRk-I> azlon1: on the remote machine I mean
+[10:42] <PythonPup> NightKhaos, I usually write Python scripts, not bash scripts, so I did not notice the error.
+[10:43] <azlon1> MaRk-I: on the client? the client is running windows 7...
+[10:43] <NightKhaos> PythonPup: figures, with the name and all.
+[10:43] <PythonPup> alsem, How would I do that, alsem?
+[10:43] <MaRk-I> azlon1: ah nvm then
+[10:43] <rocket16> Hello all
+[10:43] <PythonPup> NightKhaos, That is a pretty good clue.  I was putting together a spin of Puppy Linux with Python added.  Thence, this nickname.
+[10:44] <shin_> why if I try to connect via SSL with XCHAT receive the error * Connessione fallita. Errore: self signed certificate.? (18)
+[10:44] <zhang> hello,i'm new here
+[10:44] <alsem> PythonPup:  Use the email   alsemus@yahoo.com
+[10:44] <Gothack> zhang? are you chinese?
+[10:44] <zhang> yes
+[10:44] <ShapeShifter499> how do I enable my controller in ubuntu?
+[10:44] <Gothack> oh my dear
+[10:45] <zhang> how
+[10:45] <azlon1> MaRk-I: you were right, but the problem was compiz on the host machine... thanks!
+[10:45] <PythonPup> ShapeShifter499, just tell your wife she can use it.
+[10:45] <Gothack> so am i
+[10:45] <PythonPup> alsem, noted.
+[10:45] <ShapeShifter499> PythonPup: HAHAHAHAHHAAAA    btw I'm 16
+[10:45] <MaRk-I> azlon1: ahh good to know and yw
+[10:45] <ShapeShifter499> xD
+[10:45] <azlon1> MaRk-I: is there a way to disable compiz only when a machine connect via vnc, then restore compiz when the user disconnects?
+[10:45] <alsem> PythonPup:  Thanks a lot.
+[10:46] <shin_> I try to connect to irc.explosionirc.net in SSL whit port 6697 and I receive the error "self signed certificate.? (18)"
+[10:46] <rocket16> !hi | zhang
+[10:46] <ubottu> zhang: Hi! Welcome to #ubuntu! Feel free to ask questions and help people out. The channel guidelines are at https://wiki.ubuntu.com/IRC/Guidelines . Enjoy your stay!
+[10:46] <MaRk-I> azlon1: there was a way but I dont remember ATM you can search it... has to do with some -xnodamage thing
+[10:46] <Gothack> 都有多少中国的。。。。
+[10:46] <zhang> thank you
+[10:47] <zhang> 我是中国的
+[10:47] <MaRk-I> !cn
+[10:47] <ubottu> For Ubuntu help in Chinese 您可以访问中文频道： #ubuntu-cn 或者 #ubuntu-tw  或者 #ubuntu-hk
+[10:47] <PythonPup> azlon1, probably.  Look at gconf and see if there is a key to control it.  You can script changing those.
+[10:47] <ShapeShifter499> MaRk-I beat me to it
+[10:47] <ShapeShifter499> xD
+[10:47] <NightKhaos> PythonPup: hehe, I'm getting quite good at doing inline for loops. It freaks a couple of people out cause they tend to be like "wtf did you just do?"... to quote a friend of mine "my shell foo is strong"
+[10:47] <PythonPup> NightKhaos, That is a handy skill.
+[10:48] <zhang> my English is very poor
+[10:48] <rocket16> zhang: No problem, we all can understand you well, :)
+[10:48] <PythonPup> azlon1, the program gconftool-2 is what you would call in such a script.
+[10:48] <zhang> thank you
+[10:48] <ShapeShifter499> zhang: your fine
+[10:48] <zhang> thanks
+[10:49] <zhang> Who can teach me English
+[10:49] <abhijit> zhang, join ##english
+[10:49] <Gothack> mine is poor... too
+[10:49] <NightKhaos> PythonPup: my freakest one to date was: for file in *.s; do mv $file ${file}.old; sed s/';'/@/ ${file.old} > $file; done
+[10:49] <Gothack> ##english
+[10:49] <abhijit> Gothack, type /j ##english
+[10:50] <MaRk-I> azlon1: read post #11 https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/353126
+[10:50] <Gothack> i get ie
+[10:51] <sangi> Can anyone suggest a document to install ubuntu from windows
+[10:51] <ShapeShifter499> how do I use my game controller in ubuntu and wine?
+[10:51] <NightKhaos> sangi: in a VM or outside?
+[10:51] <abhijit> !wubi | sangi
+[10:51] <ubottu> sangi: Wubi is an Ubuntu installer for Windows users that allows you to install and uninstall Ubuntu like a Windows application, in a simple and safe way. http://wubi-installer.org/support.php and https://wiki.ubuntu.com/WubiGuide for troubleshooting. Please  file bugs at http://launchpad.net/wubi/+filebug.
+[10:51] <rocket16> sangi: https://wiki.ubuntu.com/WubiGuide
+[10:51] <sangi> i want to install through iso image
+[10:52] <rocket16> sangi: Just use an emulator, like Nero, which supports Virtual Drive. Load the ISO, and install using Wubi.
+[10:52] <zhang> I've always wanted to learn English,but always learn bad
+[10:52] <NightKhaos> rocket16: or Oracle VirtualBox... :P
+[10:53] <abhijit> !ot | zhang  type /j ##english
+[10:53] <ubottu> zhang  type /j ##english: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics. Thanks!
+[10:53] <rocket16> NightKhaos: Certainly, :) but Virtual OSes share same RAM, hence a performance-decrease is sure, :)
+[10:53] <encoder> hi all, i would like to copy my files to a FTP server (shared hosting) using a cron job. How do i pass the authentication to a script guys?
+[10:53] <NightKhaos> rocket16: meh... not a problem on either of my machines.
+[10:53] <NightKhaos> rocket16: but yes, that is a valid concern.
+[10:54] <NightKhaos> rocket16: 4GiB and 6GiB.
+[10:54] <rocket16> NightKhaos: I see.\
+[10:55] <JamesWStubbs> Hello, I'm doing an Ubuntu port to the iPhone, I'm having a problem with screen rotation using Fbdev and evtouch. Both will work fine in portrait, but for screen estate reasons I need it to be landscape before I can release my images. I've added Option "Rotate" "CW" to xorg.conf, which will rotate the screen when X starts but as soon as the screen is touched the X server closes. I've also tried adding Mode "480x320" to the Display section of xorg.conf bu
+[10:56] <abhijit> i installed kubuntu to external usb hdd. it shows os missing errror i need to edit grub. so where is grub in my usb?
+[10:56] <abhijit> help
+[10:57] <MaRk-I> abhijit: when you were installing you were supposed to add the grub to the usb to have it in the usb
+[10:57] <tim__b> Anyone knowing a plugin for audacious to remove songs shorter than a given time from the playlist (like removing all songs with a playtime less then 2 minutes to get rid of intros/outros/interludes)?
+[10:57] <gws> Hi, I installed latest 10.04 ubuntu release. I have Logitech wireless mouse and it does not work properly...it stucks, sometimes I can not click anywhere. Also some apps show me this error: "Could not grab the mouse". Can you help me with this problem please?
+[10:57] <abhijit> MaRk-I, installing means i write kubuntu iso using unetbootin. sorry my mistake.
+[10:58] <abhijit> i write kubuntu iso to external usb hdd using unetbootin. it shows os missing errror i need to edit grub. so where is grub in my usb?
+[10:58] <abhijit> help
+[10:58] <JamesWStubbs> Hello, I'm doing an Ubuntu port to the iPhone, I'm having a problem with screen rotation using Fbdev and evtouch. Both will work fine in portrait, but for screen estate reasons I need it to be landscape before I can release my images. I've added Option "Rotate" "CW" to xorg.conf, which will rotate the screen when X starts but as soon as the screen is touched the X server closes. I've also tried adding Mode "480x320" to the Display section of xorg.conf bu
+[10:58] <MaRk-I> abhijit: ahh well it should be there if done correctly
+[10:58] <abhijit> MaRk-I, it shows error operating system missing
+[10:59] <kancerman> *has unetbootin -- needs to figure out how to use it ;)*
+[11:00] <MaRk-I> abhijit: hhmm you should re-install it if its new, just make sure you format the usb as FAT32 and unebootin will do the rest
+[11:00] <abhijit> MaRk-I, okk
+[11:00] <ronank> I'm trying to boot a Eee from Ubuntu Netbook Edition on a USB stick, so that I can fix the messed-up installation on the SSD in the device, but it halts at "GRUB loading" with Error 15. Can anyone help sort this out?
+[11:02] <user9> join us
+[11:04] <red> hey, whats a decent mp3 encoding app? gui preferred
+[11:04] <Amber_> my sudo is all messed up
+[11:04] <JamesWStubbs> I've left the room
+[11:04] <Amber_> can anyone help me /
+[11:04] <KrisWood> hmmm I seem unable to use any emerald themes even with the theme manager....
+[11:04] <demoneye> how to increase the screen resolution on ubuntu 10.04? System > Preferences > Monitor > etc. It only has 800x600, I would like it to be more then 1000x.. Can anyone be kind to assist me with it?
+[11:04] <JamesWStubbs> Hello, I'm doing an Ubuntu port to the iPhone, I'm having a problem with screen rotation using Fbdev and evtouch. Both will work fine in portrait, but for screen estate reasons I need it to be landscape before I can release my images. I've added Option "Rotate" "CW" to xorg.conf, which will rotate the screen when X starts but as soon as the screen is touched the X server closes. I've also tried adding Mode "480x320" to the Display section of xorg.conf bu
+[11:04] <AshyIsMe> hi
+[11:04] <Laggie> Hi, I have a question about the nano editor, I have a strange problem, the text is visibly placed wrong, when I edit a line it is actually the line above I am writing on, so there is some kind of error
+[11:05] <AshyIsMe> how do i enable the 64bit kernel in ubuntu 10?
+[11:05] <user9> hi
+[11:05] <JoshuaL> demoneye, install the hardware drivers: System -> Administration -> Hardware drivers
+[11:05] <erUSUL> AshyIsMe: installing the 64 bit version of ubuntu
+[11:05] <KrisWood> ah there we go, lovely :D
+[11:05] <AshyIsMe> erUSUL, haha bugga
+[11:06] <gws> Hi, I installed latest 10.04 ubuntu release. I have Logitech wireless mouse and it does not work properly...it stucks, sometimes I can not click anywhere. Also some apps show me this error: "Could not grab the mouse". Can you help me with this problem please?
+[11:06] <demoneye> JoshuaL: I'll give a go
+[11:06] <demoneye> give it*
+[11:06] <red> hey, whats a decent mp3 encoding app? gui preferred.
+[11:06] <erUSUL> red: ripping too ? or only encoding ?
+[11:06] <user9> heloo
+[11:07] <demoneye> JoshuaL: It says "No proprietary drives are in use on this system"
+[11:07] <JoshuaL> demoneye, then I have no idea, sorry
+=== Guest62226 is now known as LjL
+[11:10] <demoneye> JoshuaL: Ok.
+[11:10] <demoneye> Anyone eles could help me with it?
+[11:11] <JamesWStubbs> Hello, I'm doing an Ubuntu port to the iPhone, I'm having a problem with screen rotation using Fbdev and evtouch. Both will work fine in portrait, but for screen estate reasons I need it to be landscape before I can release my images. I've added Option "Rotate" "CW" to xorg.conf, which will rotate the screen when X starts but as soon as the screen is touched the X server closes. I've also tried adding Mode "480x320" to the Display section of xorg.conf bu
+[11:11] <Amber_> My Sudo is all messed up can anyone help me with it ? sudo: must be setuid root
+[11:12] <ShapeShifter499> JamesWStubbs: omg to iphone
+[11:12] <JamesWStubbs> ShapeShifter499: Yes
+[11:12] <JamesWStubbs> ShapeShifter499: Currently only the 2G and 3G
+[11:12] <ShapeShifter499> JamesWStubbs: ubuntu on an idevice would be soo win
+[11:12] <JamesWStubbs> It's works nicely in landscape if I use evdev for input
+[11:12] <JamesWStubbs> Works fast using icewm for the window manager
+[11:13] <hiddenpearls> hey guys, this Ubuntu has mad me
+[11:13] <hiddenpearls> damn, it is not installing on my laptop
+[11:13] <hiddenpearls> anyone here can help me ?
+[11:14] <MaRk-I> Amber_: http://ubuntuforums.org/showpost.php?p=1467656&postcount=4
+[11:15] <ShapeShifter499> JamesWStubbs: too bad ipt aren't supported atm, if they were I would switch in a hartbeat
+[11:15] <JamesWStubbs> ShapeShifter499: I have the iPod Touch 1g Working fine.
+[11:15] <JamesWStubbs> ShapeShifter499: I need to finish sound support
+[11:16] <demoneye> how to increase the screen resolution on ubuntu 10.04? System > Preferences > Monitor > etc. It only has 800x600, I would like it to be more then 1000x.. Can anyone be kind to assist me with it?
+[11:16] <demoneye> hiddenpearls: why not?
+[11:16]  * ShapeShifter499 has teh crappy 3gen, no iboot jailbreak, and no linux alternative os  :D
+[11:16] <ShapeShifter499> *D:
+[11:16] <ShapeShifter499>  D:
+[11:17]  * ShapeShifter499 wants a iphone 3gen or 4 OR an android
+[11:17] <Minas1> I am using Ubuntu, and 3G USB modem, how to find the modem to install?
+[11:18] <neil_ubuntu> demoneye, you should install video drivers first, lspci first to verify video card
+[11:18] <bibo> does anyone know why the Ubuntu forums aren't updating?
+[11:19] <jpds> bibo: Howso?
+[11:19] <bibo> Well I only see posts from nine hours ago
+[11:19] <demoneye> neil_ubuntu: thank you, i'll give it a try
+[11:19] <hiddenpearls> I have downloaded ubuntu and put it on USB and also on virtual CD
+[11:20] <bibo> I've cleared my cache and gone to it on multiple computers and it still hasn't updated
+[11:20] <hiddenpearls> but whenever I try to run demo
+[11:20] <Somelauw> I created an alias like:  alias netbeans=~/netbeans-6.9/bin/netbeans
+[11:20] <hiddenpearls> it asks me to reboot system
+[11:20] <hiddenpearls> and when I reboot
+[11:20] <hiddenpearls> and ubuntu starts loading
+[11:20] <hiddenpearls> and it takes forever
+[11:20] <Somelauw> But when I do ls netbeans it says ls: cannot access netbeans: No such file or directory
+[11:20] <demoneye> running the first time, it might "take forever"
+[11:21] <Somelauw> Yes, I did source .bashrc
+[11:21] <Minas1> I am using Ubuntu, and 3G USB modem, how to find the modem to install?
+[11:21] <ashiswin> hello
+[11:21] <ashiswin> i need some help
+[11:21] <hiddenpearls> demoneye: why ?
+[11:21] <shamil> anyone want lubuntu 64 bit?
+[11:21] <shamil> i sort of made an iso
+[11:21] <ashiswin> my ubuntu, for the password fields, it should show big black circles. but now those are small. how do i make them big again
+[11:21] <hiddenpearls> I tried it many times .. everytime it sucks like that
+[11:22] <demoneye> I'm not sure myself
+[11:22] <hiddenpearls> demoneye: how I can install it then ?
+[11:22] <ashiswin> my ubuntu, for the password fields, it should show big black circles. but now those are small. how do i make them big again. Anyone has any idea?
+=== Krana is now known as Rapture1781
+[11:23] <neil_ubuntu> Minas1, you can try lsusb to verify modem model
+[11:23] <bibo> ashiwin: are you talking about how it hides your password with the circles?
+[11:23] <ashiswin> ya
+[11:23] <ashiswin> the circles are now tiny instead of big
+[11:23] <bibo> is that an issue?
+[11:23] <Minas1> neil_ubuntu,  how can I do it?
+[11:23] <ashiswin> yes bibo. sometimes i cant see if im typing
+=== Rapture1781 is now known as krana
+=== krana is now known as Krana
+[11:24] <neil_ubuntu> Minas1, open terminal type lsusb :)
+[11:24] <ashiswin> any idea how to fix it bibo?
+=== Krana is now known as Rapture1781
+[11:25] <bibo> certain themes do that. You could also go into your gdm as root and probably change the font size
+[11:25] <aga^_^> anyone can help me to configure freeradius on ubuntu 10
+[11:25] <ashiswin> bibo, im using the default theme
+[11:27] <demoneye> neil_ubuntu: i typed 'lscpi' in terminal, it replyed some stuff.. USB, VGA etc etc. What am I look for?
+[11:27] <Minas1> mine is netbook. I have problem with charge, how to fix it?
+[11:28] <tama> hello
+[11:28] <MaRk-I> Minas1: go to terminal and type: sudo apt-get install usb-modeswitch , unplug the usb plug it back and unmount the folder that appears on the desktop then go to network manager it shoud appear
+[11:29] <bibo> ashwin: sudo cp /usr/share/applications/gnome-appearance-properties.desktop /usr/share/gdm/autostart/LoginWindow
+[11:29] <bibo> then logout
+[11:29] <ashiswin> what will that do?
+[11:29] <MaRk-I> demoneye: lspci | grep -i vga
+[11:30] <bibo> it opens up the appearance settings for the login screen. You could change the font size
+[11:30] <Minas1> MaRk-I,  where is the terminal? it is my first day on ubuntu
+[11:30] <liuwang> what is there
+[11:30] <Somelauw> I created an alias like:  alias netbeans=~/netbeans-6.9/bin/netbeans
+[11:30] <Somelauw> But when I do ls netbeans it says ls: cannot access netbeans: No such file or directory
+[11:30] <bibo> then when you log back in put this in a terminal
+[11:30] <bibo> sudo unlink /usr/share/gdm/autostart/LoginWindow/gnome-appearance-properties.desktop
+[11:31] <MaRk-I> Minas1: the console/terminal
+[11:31] <ashiswin> k thx bibo
+[11:31] <ashiswin> i'll try that
+[11:31] <Minas1> MaRk-I,  do I have to turn of the copm?
+[11:31] <MaRk-I> no
+[11:32] <Minas1> (
+[11:32] <Minas1> I do not know the console place
+[11:32] <demoneye> MaRk-I: 01:00.0 VGA compatible controller: VIA Technologies, Inc. CN700/P4M800 Pro/P4M800 CE/VN800 [S3 UniChrome Pro] (rev 01)
+[11:32] <MaRk-I> Minas1: go to menu, first entry then look for "terminal" o "gnome terminal"
+=== scsix is now known as hispalis
+[11:32] <Minas1> MaRk-I,  ok :)
+[11:32] <MaRk-I> via ufff
+=== Krana is now known as Rapture1781
+[11:33] <bibo> you could also hit Ctrl+Alt+T to bring up the terminal
+[11:34] <Gyro54> I have just removed the top panel? Don't ask why! Anyone help me put it back please.....
+[11:35] <pyost> I've got a problem with UbuntuForums, could anyone confirm that it's not just me?
+[11:35] <Minas1> I see
+[11:35] <bibo> pyost: forums haven't updated? I'm having that problem
+[11:35] <TiK> !panel
+[11:36] <bibo> Gyro: If you have a panel left, right click on it, and there should be an option for new panel
+[11:36] <TiK> !help
+[11:36] <ubottu> Please don't ask to ask a question, simply ask the question (all on ONE line and in the channel, so that others can read and follow it easily). If anyone knows the answer they will most likely reply. :-)
+[11:36] <Gyro54> I have added a new panel but I cant find how to add the original toolbars
+[11:36] <pyost> Well, that too, it seems... When I logged in, it just threw me into an infinite refresh loop :\
+[11:36] <TiK> !gnome-panel
+[11:36] <TiK> i forgetthe command
+[11:36] <bibo> you'll have to add them in add to panel
+[11:36] <hiddenpearls> anyone can help me in installing Ubuntu ?
+[11:36] <TiK> Gyro54: there is a way t do it with 1 command
+[11:36] <MaRk-I> demoneye: pastebin the contents of your /etc/X11/xorg.conf
+[11:37] <bibo> pyrost: servers are probably down
+[11:37] <demoneye> MaRk-I: that file is empty
+[11:37] <TiK> Gyro54: http://www.celsius1414.com/2006/08/31/how-to-reset-gnome-panel-to-default-in-ubuntugnome2
+[11:37] <bibo> hiddenpearls: what do you need help with?
+[11:37] <pyost> great, just when I needed help... thanks, bibo, at least I know I'm not the only one :)
+[11:38] <Gyro54> TiK: You are a life saver!  Thanks for your help
+[11:38] <bibo> pyost: hehe I actually came on here for that very reason
+[11:38] <demoneye> MaRk-I: On /etc/X11, I dont seen a 'xorg.conf' file :(
+[11:38] <Minas1> MaRk-I,  may I PM ?
+[11:38] <bavbat> Q: i do this to compress a directory with ALL its files (incl. hidden): tar cvfz test.tar.gz /home/me/NetBeansProjects/test ... but in the created archive it contains the "me" and "NetBeansProjects" directories - how can i avoid that?
+[11:38] <hiddenpearls> bibo: I boot with USB
+[11:38] <k0sh> why o why when i pxeboot my ubuntu it tells me that it didnt found /lib/modules/2.6.32-21generic/modules.dep even tho that file exists in nfs exported dir, plus other distros netboot just fine, only ubuntu gives e such error and goes into kernel panic
+[11:38] <MaRk-I> Minas1: PMs are blocked sorry
+[11:39] <Minas1> MaRk-I,  ok
+[11:39] <pyost> bibo: unfortunately, my problem is of such nature that it probably can't be solved through irc :D
+[11:39] <TiK> cd into the dir first
+[11:39] <hiddenpearls> bibo: it takes forever to load from USB ot CD
+[11:39] <TiK> k0sh: cd into tedir first
+[11:39] <Minas1> MaRk-I,  I typed apt-get install usb-modeswitch
+[11:39] <TiK> the*
+[11:39] <Minas1> it asked are you root?
+[11:39] <hiddenpearls> bibo: I tried both methods
+[11:39] <Minas1> I typed yes
+[11:39] <vak> hi all
+[11:40] <MaRk-I> Minas1: it's:    sudo apt-get install usb-modeswitch      <<<<
+[11:40] <k0sh> TiK: what?
+[11:40] <Minas1> ok
+[11:40] <bibo> hiddenpearls: It takes a long time depending on your computer. Just wait a while and then you should be able to install it (~15 minutes max I've had for an old computer)
+[11:40] <TiK> k0sh: cd into the dir you want to compress or the one before it
+[11:40] <justin22885> well everyone... i made the neccessary FSTAB changes, and tweaked ext4 for running on a USB drive
+[11:40] <reverse821> hello
+[11:40] <hiddenpearls> bibo: I have 1.86 dual core + 4GB ram
+[11:40] <bibo> pyost: it'd be easier to solve on irc though
+[11:40] <k0sh> TiK: ????
+[11:41] <hiddenpearls> and it took 2 hours
+[11:41] <reverse821> anyone wanting to help me fix my BT headset? 8)
+[11:41] <k0sh> TiK: why o why when i pxeboot my ubuntu it tells me that it didnt found /lib/modules/2.6.32-21generic/modules.dep even tho that file exists in nfs exported dir, plus other distros netboot just fine, only ubuntu gives e such error and goes into kernel panic
+[11:41] <hiddenpearls> and nothing but loading with background
+[11:41] <MaRk-I> demoneye: S3 VIA cards are how can I say it barely supported and tricky you can reconfigure your X but might leave you without it if you dont do it right
+[11:41] <TiK> k0sh: cd /home/me/NetBeansProjects/ && tar cvfz test.tar.gz test
+[11:41] <bibo> hiddenpearls: How long did you wait? It takes a while, but once it's installled it's very fast
+[11:41] <hiddenpearls> bibo: not asking any option just loading with background
+[11:41] <justin22885> theres actually an immediate change in performance, EASILY noticed
+[11:41] <vak> Kino captures DV-video OK, but exports(encodes) it into ugly interlaced video. Did anyone successfully cope with it?.. Does de-interlacing really work in Kino?...
+[11:41] <k0sh> TiK: how does it relate to pxebooting???
+[11:42] <TiK> eeer
+[11:42] <TiK> i ment bavbat
+[11:42] <hiddenpearls> bibo: it took 2 hours
+[11:42] <k0sh> lol
+[11:42] <TiK> sorry k0sh
+[11:42] <k0sh> :D
+[11:42] <k0sh> k, np
+[11:42] <pyost> bibo: well, it doesn't seem to be that common, since I couldn't google a solution - to cut a long story short, I had to cancel a burning task in Brasero because it got stuck, and now the drive is dead in both ubuntu and windows
+[11:42] <TiK> :D
+[11:42] <fredfall> When does alpha 3 come?
+[11:42] <demoneye> MaRk-I: oh ok
+[11:42] <hiddenpearls> bibo: I was giving it a try from USB and CD
+[11:42] <bibo> hiddenpearls: You may have a bad burn. Try burning the .iso on the slowest speed possible. I've had that issue before.
+[11:42] <aswin> in our computer networking lab in college we connect to a server(running redhat) using telnet nd thn use vi editor for writing client and server..is ther a similar way for me to do the same in my ubuntu syste,
+[11:42] <bullgard4> [GNOME, Ubuntu 10.04.1] Why are there on one computer 2 processes gconf-helper, gdm-session-worker and gdm-simple-slave each? Ubuntu created them automatically. On another computer only 1 each.
+[11:43] <MaRk-I> demoneye: check this   http://wwww.ubuntuforums.org/showthread.php?p=9450721
+[11:43] <hiddenpearls> bibo: i see
+[11:43] <aswin> i want to try out the programs before i go to the lab..but i dnt have ny server here to telnet to..so can i use my laptop nd telnet to itself and try out the program
+[11:44] <bavbat> TiK: thanks (:
+[11:44] <k0sh> why o why when i PXEBOOT my ubuntu it tells me that it didnt found /lib/modules/2.6.32-21generic/modules.dep even tho that file exists in nfs exported dir, plus other distros netboot just fine, only ubuntu gives me such error and goes into kernel panic, dir is exported via nfs v3
+[11:44] <bibo> hiddenpearls: what's your hardware? It may be incompatible. Also you may just have had a bad bootup. I had that with Lubuntu, but then I tried again and it worked
+[11:44] <bibo> *may not be compatible
+[11:44] <experiMENTAL> hi. how to install vusb?
+[11:44] <hiddenpearls> bibo: I am at windows7 + dual core 1.86 + 4gb RAM + dell laptop
+[11:45] <bibo> aswin: what programs?
+[11:45] <MaRk-I> demoneye: also check this one might help  http://ubuntuforums.org/showthread.php?t=1488040&highlight=openchrome
+[11:45] <k0sh> why o why when i PXEBOOT my ubuntu it tells me that it didnt found /lib/modules/2.6.32-21generic/modules.dep even tho that file exists in nfs exported dir, plus other distros netboot just fine, only ubuntu gives me such error and goes into kernel panic, dir is exported via nfs v3
+[11:45] <hiddenpearls> bibo: you know what , when I install it from USB/CD it starts copying in C: drive
+[11:45] <bibo> hiddenpearls: ???
+[11:45] <demoneye> MaRk-I: sure looks confusing, I will, thank you :)
+[11:46] <hiddenpearls> bibo: and after copying, it starts downloading from torrent
+[11:46] <aswin> we write c programs like a chat system,retreving date nd time etc etc
+[11:46] <justin22885> hey everyone
+[11:46] <bibo> hiddenpearls: Are you doing a Wubi install?
+[11:46] <hiddenpearls> bibo: Yes
+[11:46] <hiddenpearls> wubi.exe is there
+[11:47] <vak> is any one here experienced with miniDV video encoding?
+[11:47] <bibo> hiddenpearls: Are you trying to run it by clicking on Wubi?
+[11:47] <justin22885> im noticing an immediate change in performance when i tweaked fstab to run ext4 on my USB flash drive...
+[11:47] <hiddenpearls> bibo: Yes
+[11:48] <MaRk-I> demoneye: on the 2nd link read post #3   that looks like it might help
+[11:48] <justin22885> its running faster, smoother, and optimized to write as little as neccessary to the actual drive
+[11:48] <hiddenpearls> bibo: and then I tried both options demo and install inside windows
+[11:50] <bibo> hiddenpearls: you could try setting it up as a dual boot
+[11:50] <hiddenpearls> bibo: how to set it dual boot ?
+[11:51] <bibo> hiddenpearls: First I have to ask, do you have a backup of Win7?
+[11:51] <hiddenpearls> bibo: no
+[11:51] <justin22885> first step is to load a liveCD, "tune2fs -o journal_data_writeback /dev/sdx1", then under fstab i used "/dev/sdx1 / ext4 noatime,nodiratime,data=writeback,nobh 0 0"
+[11:52] <justin22885> then also under fstab added /var/log, /tmp, and /var/tmp to operate under tmpfs
+[11:52] <hiddenpearls> bibo: I can try this on my other PC
+[11:52] <hiddenpearls> bibo: which have winxp
+[11:52] <leon> dd
+=== leon is now known as Guest90501
+[11:52] <hiddenpearls> bibo: though I have tried this there too but damn the same situation
+[11:53] <hiddenpearls> bibo: it starts loading with background and continues forever
+[11:53] <bibo> hiddenpearls: wubi is known to have problems, you could try reinstalling it, or to set up as a dual boot just put the live cd in the tray, shut down the system, and turn it back on, and it'll boot into the disk. Then there will be an option to easily create a partition for Ubuntu.
+[11:53] <Guest90501> anybody hear
+[11:54] <hiddenpearls> bibo: wubi extracts when I make ISO readable via magicISO
+[11:54] <hiddenpearls> or form USB
+[11:54] <arzhar> whats the name for png library ? libpng12-dev ?
+[11:55] <waltercool> libpng?
+[11:55] <hiddenpearls> bibo: partition is necassary to create ?
+[11:55] <ramontayag> hey guys. would anyone know why a windows share asks for a password when viewing via ubuntu, and it doesn't ask for a password when i'm viewing via another windows machine? i tried entering no password, my the guest's password, but it doesn't let me though.
+[11:55] <bibo> arzhar: libpng, it should be installed by default
+[11:55] <matrix> Hello guys
+[11:55] <matrix> i cant use some icons theme on my ubuntu
+[11:55] <matrix> why
+[11:55] <lunavorax> Hi everybody !
+[11:55] <matrix> Linux matrix-laptop 2.6.32-24-generic #39-Ubuntu SMP Wed Jul 28 05:14:15 UTC 2010 x86_64 GNU/Linux
+[11:55] <hiddenpearls> bibo: for ubuntu
+[11:55] <waltercool> arzhar, are you developing something with libpng or you need it for an app?
+[11:55] <lunavorax> Why is the line "force_color_prompt=yes" is commented in the .bashrc file ?
+[11:55] <matrix> my ubuntu cant use some art icons theme
+[11:56] <arzhar> bibo: it is, but trying to compile E gives me this Check if Evas was compiled with png module enabled and all required dependencies exist.
+[11:56] <bibo> matrix: I've had that same issue. Go to gnome-look.org and there's several icon sets that actually do work
+[11:56] <Laggie> I have some strange problems with the nano editor, the text is moved visibly one line too high, so when I start editing I edit the wrong line. To see the correct text on the line I need to use the right arrow key and punch through all text that I want to see correct first.
+[11:56] <arzhar> im gonna try again with the dev package
+[11:56] <Tecna> "Failed to retrieve share list from server" Somebody please help me figure out what's wrong with my samba server?   CLI output: http://pastebin.com/j3n4niis
+[11:57] <bibo> arzhar: Oh yeah you're right, I had to get that package for something, I just can't recall what
+[11:57] <arzhar> bibo: so if i want to compile something i need the dev package ?
+[11:58] <MaRk-I> hiddenpearls: here's a step by step http://www.hackourlives.com/dual-boot-windows-7-and-ubuntu-10-04-lucid-lynx/
+[11:58] <bullgard4> [GNOME, Ubuntu 10.04.1] Why are there on one computer 2 processes gconf-helper, gdm-session-worker and gdm-simple-slave each? Ubuntu created them automatically. On another computer only 1 each.
+[11:58] <demoneye> MaRk-I: I paste'ed this on xorg.conf, what should be the next thing? http://ubuntu.pastebin.com/aKz6mPwZ
+[11:58] <k0sh> why o why when i PXEBOOT my ubuntu it tells me that it didnt found /lib/modules/2.6.32-21generic/modules.dep even tho that file exists in nfs exported dir, plus other distros netboot just fine, only ubuntu gives me such error and goes into kernel panic, dir is exported via nfs v3
+[11:58] <aronaliaga> hola
+[11:58] <aronaliaga> no me funciona
+[11:58]  * demoneye is *blur*
+[11:58] <aronaliaga> el chat en español
+[11:58] <bibo> hiddenpearls: Well if you're dual booting, Ubuntu needs part of a harddrive specifically for itself. I don't know much about Wubi, I couldn't get it to work so I just dual booted.
+[11:58] <aronaliaga> alguien me ayuda?
+[11:59] <aronaliaga> q ocurre?
+[11:59] <io> !es | aronaliaga
+[11:59] <ubottu> aronaliaga: En la mayoría de canales de Ubuntu se habla sólo en inglés. Si busca ayuda en español o charlar entra en el canal #ubuntu-es. Escribe "/join #ubuntu-es" (sin comillas) y dale a enter.
+[11:59] <MaRk-I> demoneye: next step is to restart X,   just log out and back in

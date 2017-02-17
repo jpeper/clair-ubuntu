@@ -1,0 +1,240 @@
+[22:26] <holstein> i have used razorQT.. there is a ppa AFAIK
+[22:26] <_44trent3> my bad
+[22:26] <wilee-nilee> wissam, hope that makes sense. ;)
+[22:26] <green_> doesn't seem to be anything in this file  /etc/default/grub, GFX_MODE=
+=== Keith_Latteri is now known as N503658944
+=== N503658944 is now known as N503658943
+[22:26] <otak> green_: sorry GRUB_GFXMODE and GRUB_GFXPAYLOAD_LINUX
+[22:27] <green_> ty
+[22:27] <_44trent3> Nvidia?! I have amd gpu...
+[22:27] <holstein> wissam: you dont need to remove the others. you can run them all on the same machine, and just choose at login
+[22:27] <holstein> !nvidia | _44trent3 this should help you find what you installed, and help you remove it
+[22:27] <ubottu> _44trent3 this should help you find what you installed, and help you remove it: For Ati/NVidia/Matrox video cards, see https://help.ubuntu.com/community/VideoDriverHowto
+[22:27] <wissam> wilee-nilee: i found a meta package in the softwae center so i can remove this package later
+[22:27] <wissam> holstein: yes i know
+=== AlanChicken is now known as AlanBell
+[22:29] <wilee-nilee> wissam, If you think so, but I doubt that is a good idea, we have people come here all the time who install say the ubuntu-desktop, and then remove the ubuntu-desktop, leaving all the dependencies. I never use the software center so maybe you are okay.
+[22:29] <eksip> ! why ubuntu
+[22:29] <ikonia> ?
+[22:29] <_44trent3> I have the right driver, but the screen resoultion was set to 1440x1050 instead of 1680x1050, and I can't change the screen resolution now.
+[22:29] <green_> nothing in those either
+[22:29] <lillen> I would like to add my xubuntu-13.04-desktop-i386.iso as an apt-repository. Is there a good way to do this? Thanks a million!
+[22:29] <ikonia> !aptoncd | lillen
+[22:29] <ubottu> lillen: APTonCD is a tool with a graphical interface which allows you to create one or more CDs or DVDs with all of the packages you've downloaded via apt-get or aptitude, creating a removable repository that you can use on other computers - See also !offline
+[22:30] <wissam> wilee-nilee: ok thnx i will install it from the terminal
+[22:30] <lillen> wow, thanks! :)
+[22:30] <rocky> RockyNJ
+[22:31] <wilee-nilee> wissam, YOu will notice here at this website in the playing around section left column list to remove and install desktops. http://www.psychocats.net/ubuntu/
+[22:31] <wilee-nilee> lists*
+[22:32] <inclusa> exit
+[22:33] <_44trent3> Help?
+[22:33] <otak> green_: if you look in the file /etc/default/grub you will see a line beginning GRUB_GFXMODE=
+[22:33] <_44trent3> Am I in low graphics mode? I
+[22:34] <_44trent3> Hmm
+=== N503658943 is now known as ftft
+[22:34] <_44trent3> Was it because my laptop was unplugged?
+[22:35] <green_> ok
+=== JC_SoCal_ is now known as JC_SoCal
+[22:36] <wooo> Hello I want to see source code of c file of stdio. Where it is located ?
+[22:36] <Ari-Yang> _44trent3, you're probably in "low graphics" mode because fglrx failed to load
+[22:36] <ikonia> do you me the stdio header ?
+[22:36] <Ari-Yang> by "low graphics" mode do you mean VESA?
+[22:37] <Ari-Yang> !vesa
+[22:37] <ubottu> vesa is the default video driver if X can't find a better one. Also see !x
+[22:37] <_44trent3> If it failed, how do I make it unfailed
+[22:37] <Ari-Yang> dunno...
+[22:37] <Ari-Yang> it sounds like your problem is fglrx failing....
+[22:37] <Ari-Yang> _44trent3, perhaps google around to see?
+[22:37] <ikonia> Ari-Yang: have you actually checked....
+[22:37] <wooo> ikonia, no, .c file in which source code of function like fopen() will be there.
+[22:37] <Ari-Yang> ikonia, checked what?
+[22:37] <ikonia> see if it IS loading or not, see if that IS the problem
+[22:38] <ikonia> before sending him off to google something that may not be the problem
+[22:38] <wooo> ikonia, and also where stdio.h is present ?
+[22:38] <Ari-Yang> it sounds like it has failed ikonia; he ran fglrxinfo in terminal and got some error
+[22:38] <ikonia> wooo: ok, so that function will be referenced from a header thats included most likely
+[22:38] <Ari-Yang> (he pasted earlier)
+[22:38] <ikonia> Ari-Yang:.....have you checked
+[22:38] <Ari-Yang> ikonia, not at all. _44trent3 have you checked?
+[22:39] <_44trent3> Checked. yeah
+[22:39] <green_> now in that grub file where would I put vga+mormal nomodeset?
+[22:39] <wooo> ikonia, So where it is located ?
+[22:39] <ikonia> wooo: depends the file and the function
+[22:39] <green_> vga=normal nomodeset
+=== ftft is now known as N29533214
+[22:40] <wooo> ikonia, and how to check that ?
+[22:40] <Ari-Yang> _44trent3, what does glxinfo | grep -i opengl give you in terminal? pastebin it
+=== ferret___ is now known as ferret_
+[22:40] <ikonia> wooo: you should know/understand the pogram
+=== N29533214 is now known as N868189869
+[22:42] <_44trent3> How do I downgrade my driver?
+[22:43] <ikonia> _44trent3: why do you want to do that ?
+[22:43] <Ari-Yang> _44trent3, if you mean go back to the driver you were using, which was probably the open source radeon one, go to software sources and select it under the "Additional Drivers" tab
+[22:43] <green_> otac?
+[22:43] <otak> wooo: $ whereis stdio
+[22:43] <Ari-Yang> ikonia, I guess he wants to go back because fglrx is giving him trouble
+[22:44] <ikonia> otak: that's not going to work
+[22:44] <_44trent3> That brings up the Ubuntu store. Is that supossed to happen
+=== tt_ is now known as Guest79320
+[22:45] <_44trent3> how do i go to software sources
+[22:46] <green_> otak where should I put vga=normal nomodeset?
+[22:48] <otak> green_: I'd say GRUB_CMDLINE_LINUX="vga=normal nomodeset" but I would be guessing, you should probably read the info page or be prepared to edit the command line in grub. Also don't forget to run sudo update-grub after you edit the file
+[22:49] <green_> ok
+[22:49] <eksip> there is guy from debian chat, who says, that ubuntu is not respecting user, putting not free flash by default. WHat do you think  about that
+[22:49] <wooo> I got from C channel that the file is at  /usr/src/lib/libc/stdio/fread.c. But I couldn't find it.
+[22:50] <ikonia> wooo: it doesn't work like that
+[22:50] <wooo> ikonia, Where is it located on ubuntu.
+[22:51] <ikonia> wooo: it depends on a few things, hence why I say you need to know the program
+=== vox_ is now known as vox
+[22:52] <green_> otak i get this /usr/sbin/grub-mkconfig: 26: /etc/default/grub: nomodeset: not found
+[22:53] <otak> green_: I'm sorry I'm not familiar with those options. Also I have to sleep,
+[22:53] <green_> ok ty
+[22:56] <green_> anyone else have any idea on how to stop the screen from rolling on 1920x1080?
+[22:57] <ikonia> set it to a resolution that fits on your monitor ?
+=== ximian_ is now known as ximian
+[22:57] <green_> thats what fits my monitor
+[22:57] <ikonia> clearly not, as it's scrolling...
+[22:57] <ikonia> if it fit your monitor, it wouldn't scroll, as it would fit
+[22:59] <green_> every other ubuntu install worked fine on 1920x1090
+[22:59] <green_> 1080
+[22:59] <ikonia> so will this one.
+[23:00] <green_> brb
+=== Troy_ is now known as Troy^
+[23:09] <foobarian> How do I delete a flie from paste.ubuntu.com?  Thanks
+[23:11] <IdleOne> foobarian: you can't. In very special cases the admins will do it but you need to email them rt AT ubuntu.com
+[23:16] <Costeelation_> how can i associate all file types with firefox? i hate download files, i only want open it but i have that search for the aplications
+[23:18] <foobarian> IdleOne: Thanks.  Bootrepair automatically posted my data to paste.ubuntu.com without any notification or my authorization.  The developer really needs to review Linux philosophy.
+=== Troy_ is now known as Troy^
+[23:19] <IdleOne> foobarian: the bootrepair script is meant to do that and return the url to you so you can paste it. there is no sensitive info in that paste.
+[23:20] <IdleOne> you might as well not bother emailing the admins, they won't bother with that.
+=== Guest93412 is now known as Guga_
+[23:23] <Eredien> Hello, I am in grub rescue mode and am having trouble using the search and set procedure as descd in: https://help.ubuntu.com/community/Grub2/Troubleshooting#Search_.26_Set
+[23:24] <ikonia> Eredien: what do you want to do ?
+[23:25] <Eredien> I want to ultimately reinstall ubuntu from the live usb I made but right now when I turn on my computer it boots to the grub rescue mode so right now I am trying to find out where the grub.cfg files are and other core os files but they appear to be missing ?
+[23:26] <ikonia> Eredien: ok, so why are you looking for these files if you want to re-install, just re-install and they will get re-created
+[23:26] <Eredien> The computer won't boot; not into anything but a grub rescue prompt. It won't boot from live usb
+[23:27] <ikonia> Eredien: so that suggests your liveusb is not created correctly
+[23:27] <ikonia> focus on fixuing that
+=== CyberJacob_|Away is now known as CyberJacob
+[23:27] <Eredien> I made it today from the instructions on the ubuntu website with pendrive
+[23:28] <ikonia> Eredien: ok, so look at the facts, you've made a usb drive, and it won't boot
+[23:28] <ikonia> Eredien: either a.) you made it wrong b.) your system doesn't support booting from usb c.) your pen drive is broken
+[23:28] <f0urtyfive> is there any way I can see if a specific commit was included in the latest ubuntu kernel, or if I need to roll my own?
+[23:28] <f0urtyfive> specifically  58b2939b4d5a030eaec469d29812ab8477ee7e76
+[23:28] <ikonia> Eredien: which is the more likely
+[23:28] <styles> My installation is screwed up. I reinstalled AMD drivers (from their site) and then the top and side bar are completely missing. I've tried reinstalling ubuntu-desktop, no luck.
+[23:28] <ikonia> f0urtyfive: it won't work like that as the ubuntu kenrnels are patched
+[23:29] <Eredien> Okay, I get it, but what I am saying is that this computer used to have ubuntu on it then one day it just booted only to the grub rescue prompt and that's all it does. When I run ls it looks like the files are there but the os can't find 'em
+[23:29] <ikonia> f0urtyfive: it's base version + patches
+[23:29] <ikonia> Eredien: that has nothing to do with your usb - fix your usb boot
+[23:29] <f0urtyfive> ikonia: is their an ubuntu git that has the source for the current kernel so I could check myself?
+[23:30] <ikonia> f0urtyfive: no
+[23:30] <ikonia> f0urtyfive: and as I've just said - it doesn't work like that
+[23:30] <ikonia> f0urtyfive: pick the version ubuntu ships with, check it against the main line - don't worry about the patches
+[23:30] <ikonia> (being realistic)
+[23:30] <Eredien> this is without the usb in; when I put the usb in all that happens is a new hd and partition show up when I do ls on the hd at the rescue prompt
+[23:31] <ikonia> Eredien: so ?
+[23:31] <f0urtyfive> ikonia: ok, will have to wait for this box to finish updating then check the source package for the 1 line I want :P
+=== Jucelio is now known as JucelioJair
+[23:31] <Eredien> and it doesn't recognize the filesystem on any of the hd partitions except the hd that is already there (sans live usb)
+[23:32] <ikonia> Eredien: again so ?? what has this got to do with booting your livecd
+[23:33] <Eredien> What I am trying to say is that the liveusb isn't recognized when I plug it in and it has nothing to do with the liveusb working or not since it boots fine on the windows machine I made it on
+[23:33] <Eredien> I get the same grub rescue prompt whether the live usb is in or not
+[23:33] <ikonia> Eredien: right, so think it through,
+[23:33] <ikonia> Eredien: that suggests it's not trying to boot from usb
+[23:34] <ikonia> Eredien: so that goes back to the 3 points I gave you earlier
+=== Guest72740 is now known as MobGod
+[23:34] <ikonia> Eredien: 1.) you didn't make the usb properly 2.) your machine doesn't support booting from usb 3.) your usb disk is faulty
+[23:35] <Eredien> I'm happy to get another usb stick and try again with pen drive but like you said, it's not trying to boot from usb in the first place, all it's doing is recognizing another hd partition. How is making another pen drive going to help since it won't recognize usb at all since all the grub etc. files are missing or corrupted?
+[23:36] <ikonia> Eredien: READ what I said
+[23:36] <ikonia> Eredien: which of those situations is more realistic
+[23:36] <ikonia> Eredien: you know the pendrive is good as it boots on another machine, so you can have confidence in 1.) and 3.) being "ok" so what does that leave
+[23:37] <foobarian> IdleOne: I disagree.  It is my information and was posted publicly without my permission. This is a fundamental violation of the philosophy of Free Software.  If this is acceptable then why not send other information from users computers to any company willing to pay? to
+[23:37] <ikonia> f0urtyfive: it's nothing to do with free software philosophy
+[23:37] <Eredien> It's an eee, with no cd drive, how am I supposed to reinstall if it won't support booting from usb?
+[23:37] <ikonia> f0urtyfive: no where in free software philosophy does it say "data shouldn't be posted publicly"
+[23:37] <f0urtyfive> ikonia: >_>
+[23:38] <ikonia> foobarian: is there anything confidential in the post, yes/no
+[23:38] <ikonia> f0urtyfive: oops, foobarian was the target
+[23:38] <ikonia> sorry
+[23:39] <foobarian> ikonia: All of the information is my private property.
+[23:39] <wilee-nilee> foobarian, You can turn off the public post of the boot repair on the app.
+[23:39] <ikonia> foobarian: is there anything confidential in the post, yes/no
+=== CyberJacob is now known as CyberJacob|Away
+[23:40] <foobarian> wilee-nilee: This is correct but boot-repair should notify the user BEFORE posting the information!
+[23:40] <ikonia> foobarian: is there anything confidential in the post, yes/no
+[23:41] <wilee-nilee> foobarian, Can I suggest you cut the prozacs in half. ;)
+[23:41] <Eredien> ikonia: all it has is usb ports. No cd. So since the SSD won't boot right, is this really bricked?
+[23:42] <ikonia> Eredien: no - please read what I'm saying
+[23:42] <foobarian> wilee-nilee: ha ha ha.  I guess ad-hominim is the best you can do.
+[23:42] <IdleOne> foobarian: I understand your point and if you are that concerned you may want to contact the maintainers of bootrepair. I am just giving you the info I know from experience, won't hurt you to email the paste bin admins. I just don't think they will bother to remove it unless the is sensitive/confidential info.
+[23:43] <Eredien> Okay, you are suggestion #2 as the option that it won't boot from USB and I agree with you, but I don't know what to do as all I have are USB ports to try and reinstall the os
+=== BadLarry is now known as BadLarry_
+[23:43] <IdleOne> foobarian: any further discussion about this is off topic for this channel.
+[23:43] <ikonia> Eredien: ok - so you've accepted 2.) as the likely reason. Should your system support boot from USB by design ?
+[23:44] <Eredien> Yes. I have booted from usb before. In the BIOS removable media is listed as the first boot check option
+[23:44] <ikonia> Eredien: ok, so it "should" boot from usb media, and we know the media is good as you've tested it on other machines
+[23:45] <Eredien> Sure
+[23:45] <ikonia> Eredien: that leaves us to 1.) a hardware problem on your machine 2.) a configuration problem on your machine/bios
+[23:45] <ikonia> Eredien: so now you've narrowed it down to the real issue
+[23:48] <Eredien> I *think* it is a configuration problem due to the fact that I am having trouble finding where the grub files are once it boots into rescue mode, it looks like some of the other files (initrd.img for instance) are still there on the partition
+[23:48] <ikonia> Eredien: NO !
+[23:48] <Eredien> No, ok
+[23:48] <ikonia> Eredien: grub is nothing to do with your hardware/bios
+[23:49] <ikonia> Eredien: forget grub - your machine is broke, you want to re-install, your proven install media isn't working
+[23:49] <ikonia> that tells us there is a configure/fault with your hardware
+[23:49] <ikonia> fix it before moving forward
+[23:49] <Eredien> Thank you.
+[23:50] <Litepool> anyone good with mysql? i made a symbolic link and apparmour don't liike it
+[23:50] <ikonia> Litepool: update the apparmour rule
+=== Troy_ is now known as Troy^
+[23:51] <Litepool> ikonia what sort of update do i do, never touched apparmour before
+[23:51] <ikonia> Litepool: why do you think the issue is apparmour rule ?
+[23:52] <Litepool> ikonia, folks at #mysql sent me here telling me they positive it is apparmour rule
+[23:52] <ikonia> Litepool: "why"
+[23:52] <Litepool> i followed this guide ikonia http://www.webhostrepo.com/blog/how_to_change_mysql_data_directory/
+[23:52] <ikonia> ok, just read the scroll back in #mysql
+[23:53] <ikonia> Litepool: why are you changing the data directories ?
+[23:53] <Litepool> i setup an ssd
+[23:53] <Litepool> for my db
+[23:53] <Litepool> i really need my database back up and running, as its crucial
+[23:53] <Litepool> instead of reinstalling i just did this
+[23:53] <ikonia> you don't need to re-install
+[23:53] <Litepool> for the quickest way of migrating
+[23:53] <ikonia> why are you moving this data ???
+[23:54] <ikonia> that guide is terrible
+[23:54] <Litepool> my old hd can't handle the writes
+[23:54] <Litepool> i know i read the comment
+[23:54] <ikonia> really ??? how many read/write operations are you getting ?
+[23:54] <Litepool> well il explain sometime if it isn't relevant
+[23:54] <Litepool> really need this db up
+[23:55] <ikonia> Litepool: I would suggest putting it back to normal first of all
+[23:55] <ikonia> undo what you've done
+[23:55] <ikonia> then move it properly
+[23:55] <Litepool> i can undo it easily
+[23:55] <ikonia> that way your database is up
+[23:55] <Litepool> however, i don't want another downtime
+[23:55] <ikonia> it's down already....
+[23:55] <ikonia> so get it back up
+[23:55] <ikonia> undo it
+[23:55] <Litepool> so while its down i want to fix it
+[23:55] <Litepool> i run a mining pool
+[23:55] <Litepool> people can't keep connecting
+[23:56] <Litepool> its bad for there hardware
+[23:56] <ejv> you need some replication / failover sounds like, so downtown doesn't affect you
+[23:56] <ikonia> then you should have an idea what you are doing and how to manage this
+[23:56] <ejv> errr downtime*
+[23:56] <ikonia> you can't approach this issue like thia
+[23:56] <Litepool> well i didn't really expect it to happen, ufcourse i can put it back up
+[23:56] <ikonia> and you shouldn't be following random guides off the web
+[23:56] <Litepool> i didn't delete the /var/lib/mysql, i renamed it
+[23:56] <Litepool> after syncing
+[23:56] <Litepool> easy to bring it back up
+[23:57] <Litepool> ikonia, what do you have in mind>?
+[23:57] <epimeth> hi guys... My rub got fubar upgrading from LTS to whatever the next version was... 12.04 maybe?  I set prefix to (blabla)/boot/grub/i36-pc and insmod linux but get error: symbol not found: 'grub_realidt'
+[23:57] <ikonia> Litepool: what do you mean ?
+[23:57] <epimeth> s/rub/grub
+[23:58] <Litepool> ikonia, i don't know i thought you had a suggestion
+[23:58] <Litepool> ?
+[23:58] <ikonia> Litepool: I'd get the box back up, then actually analyise the problem, and come up with a real solution, rather than then buying an SSD and following a random guide off the web
+[23:59] <ikonia> if your writes are as high as you are suggesting where a normal disk can't actually keep up - then you'll blow that SSD away rather quickly

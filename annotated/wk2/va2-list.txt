@@ -1,0 +1,2 @@
+../../guide.txt tmp-file 0 0
+../../raw/2008-04-27-06-first.txt 2008-04-27-06-first.txt.annotated.va 101 0

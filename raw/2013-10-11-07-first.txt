@@ -1,0 +1,184 @@
+[05:25] <reisio> sunny_: as opposed to?
+[05:25] <hitsujiTMO> sunny_ it can be as long as the load for anyone service isn't effecting the other services
+[05:25] <cfhowlett> sunny_, single device, single application ...
+=== Chris__ is now known as chrisward
+[05:25] <zykotic10> sunny_: the more services you run, the greater the security risk... but sure, run as many as your system can handle.
+[05:27] <sunny_> reisio, in terms of stability and security
+[05:27] <sunny_> zykotic10, this is what i wanted to know.
+[05:27] <universal> the problem looks like that its missing its schema link - http://www.tiikoni.com/tis/view/?id=09d37bf Dr_Willis
+[05:32] <universal> how to restore or set a new schema ?
+=== anonymous is now known as Guest44991
+[05:34] <Guest44991> hy
+[05:34] <Guest44991> any one here
+[05:35] <wheatthin> nope
+[05:35] <Guest44991> how to hack ip adress in anonymous
+[05:36] <sunny_> Guest44991, good boys don't do bad things :)
+[05:36] <wheatthin> Umm you won't find out here lol
+[05:36] <cfhowlett> Guest44991, wrong channel
+[05:36] <Guest44991> u know how to do that
+[05:37] <Guest44991> sunny
+[05:37] <wheatthin> Guest44991, if you aren't here for ubuntu support, will you please go?
+[05:37] <cfhowlett> !hack|Guest44991,
+[05:37] <Guest44991> sorry wheatthin
+[05:38] <Guest44991> im here to support
+[05:38] <wheatthin> Thing is, we don't support hacking here. It's only for ubuntu help
+[05:38] <Guest44991> ok .. sorry for that
+[05:39] <Guest44991> cfhowlett
+[05:39] <Dr_Willis> of course 'hacking' is such a broad and overused term these days. its rather meaningless
+[05:39] <zykotic10> !hacker > cfhowlett ;)
+[05:39] <ubottu> cfhowlett, please see my private message
+[05:39] <Dr_Willis> we dont support what could be considered illeagle activies
+[05:39] <wheatthin> Yes, but the will to do ill intended deeds :)
+[05:39] <Dr_Willis> now if you are wanting to hack your raspberry pi into running a lego mindstorm robot... ;)
+[05:39] <cfhowlett> zykotic10, your ubottu-fu is unstoppable!
+[05:40] <zykotic10> cfhowlett: years of practice
+[05:40] <Guest44991> zykotic
+[05:41] <Guest44991> zykotic ..
+[05:41] <Dr_Willis> !tab | Guest44991
+[05:41] <ubottu> Guest44991: You can use your <tab> key for autocompletion of nicknames in IRC, as well as for completion of filenames and programs on the command line.
+[05:42] <Guest44991> ok thanks for help
+[05:43]  * wheatthin <3 virtual machines and linux :D
+=== zykotic10 is now known as zykotick9
+[05:58] <safk> quit
+=== Petazz is now known as Petazz_
+[06:09] <CharSet> 1 Server running Ubuntu Server - 2 clients: a) running ubuntu with locale set to ca_ES@utf8 - b) running crunchbang with localce set to ca_ES@UTF-8 - a) mounts a network device with no iocharset or codepage set to mount command and characters are well shown - b) characters are not well shown using exactly the same command as a)
+[06:09] <CharSet> 1 Server running Ubuntu Server - 2 clients: a) running ubuntu with locale set to ca_ES@utf8 - b) running crunchbang with localce set to ca_ES@UTF-8 - a) mounts a network device with no iocharset or codepage set to mount command and characters are well shown - b) characters are not well shown using exactly the same command as a) - HELP ME PLEASE!
+[06:09] <cfhowlett> !ubuntu-server|CharSet,
+[06:09] <ubottu> CharSet,: Ubuntu Server Edition is a release of Ubuntu designed especially for server environments, including a server specific !kernel and no !GUI. The install CD contains many server applications. Current !LTS version is !Precise (Precise Pangolin 12.04) - More info: http://www.ubuntu.com/products/whatisubuntu/serveredition - Guide: https://help.ubuntu.com/12.04/serverguide/C/ - Support in #ubuntu-server
+[06:12] <icmpv6> a
+[06:13] <icmpv6> ubuntu 13.10
+[06:13] <Dr_Willis> icmpv6:  support for 13.10 in #ubuntu+1 untill the 17th.
+[06:14] <Dr_Willis> Unless theres a delay in release
+[06:15] <icmpv6> k
+[06:15] <icmpv6> why delay
+[06:17] <icmpv6> <icmpv6> ubuntu 13.10 final beta, screen flashes bright on startup before desktop is shown. how do i remove that
+[06:17] <cfhowlett> !saucy|icmpv6,
+[06:17] <ubottu> icmpv6,: Ubuntu 13.10 (Saucy Salamander) will be the 19th release of Ubuntu. Announcement: http://www.markshuttleworth.com/archives/1252 - Discussion and support in #ubuntu+1. Release date will be 17th October 2013.
+=== linuxlite1969 is now known as nhaz
+[06:23] <nhaz> good day to all
+[06:23] <ryannathans> http://wiki.winehq.org/BuildingBiarchWineOnUbuntu i get to the last step sudo make install on my 64bit os and i get 32/64bit errors
+[06:23] <ryannathans> http://pastebin.com/LTc6Yxhm
+[06:33] <tcstory> quiet
+[06:33] <ryannathans> you can answer my problem :P
+[06:33] <cfhowlett> tcstory, quiet means Ubuntu is working!
+=== CyberJacob|Away is now known as CyberJacob
+=== GingerGeek[Away] is now known as GingerGeek
+[06:37] <Guest3903> someone around who could help me with a ubiquity issue?
+[06:37] <Guest3903> this is the issue i'm facing: https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1238446
+[06:37] <ubottu> Ubuntu bug 1238446 in ubiquity (Ubuntu) "Ubiquity is stuck after "Prepare" step" [Undecided,New]
+=== g_byers is now known as gbyers[Away]
+[06:47] <ryannathans> how can I have libpng12-dev and libpng12-dev:i386 installed at the same time?
+[06:49] <foofoobar> Hi. So I get this strange wifi connection problems: http://pastebin.com/Dh9ijK1K I found a thread on the manufacture forums of my model (dell xps 13 with ath9 driver) where ppl suggest two different solutions:
+[06:49] <foofoobar> 1) update kernel
+[06:49] <foofoobar> 2) install a backport
+[06:49] <foofoobar> This is the thread: http://en.community.dell.com/techcenter/os-applications/f/4613/t/19515554.aspx
+[06:49] <foofoobar> What is more "safe"? I dont want to lose functionality like the keys on my keyboard to controll background light
+=== mozzie- is now known as garson
+[06:51] <Ben64> foofoobar: safest would be to get a different wireless card
+[06:51] <Tylertwo> what'stuBe27to
+[06:51] <gulag2013> foofoobar, always check the physical. You checked the wires correct?
+[06:52] <foofoobar> gulag2013, the wires for the wireless connection? :D
+[06:52] <foofoobar> The wireless ap is a connection I'm using a long time, just with a different notebook
+[06:52] <foofoobar> Ben64, I cant replace the card of my notebook
+[06:52] <Ben64> you probably can, but i meant usb
+[06:54] <foofoobar> uh, no. I dont want to attach a usb wireless every time
+[06:54] <foofoobar> It would be nice to get this card working on ubuntu
+[06:54] <foofoobar> I read that on windows it has no problems
+[06:54] <foofoobar> There are also two suggestions on the thread
+[06:54] <Ben64> get a tiny one
+[06:55] <foofoobar> I'm just trying to figure out which is the better one
+[06:55] <Ben64> can stay plugged in all the time
+[06:55] <foofoobar> No, this is not a solution for me :/
+[06:55] <foofoobar> This notebook is new. I dont want to extend it because of a software bug
+[06:56] <foofoobar> so .. backport or linux kernel update? :)
+[06:56] <Ben64> you don't want to extend the notebook?
+[06:56] <Ben64> what does that even mean
+[06:57] <gordonjcp> foofoobar: I don't see anything in your paste that suggests a problem
+[06:58] <cfhowlett> foofoobar, backport is the "safer" method I would say.
+[06:58] <gordonjcp> foofoobar: have you filed a bug?
+[06:59] <cfhowlett> foofoobar, Also, let me point out that LTS is the preferred OS so 12.04.3
+[06:59] <Ben64> foofoobar: might help if you post more details, like what wireless card, what version of ubuntu
+[07:07] <helmut_> hi
+[07:07] <Dr_Willis> hi
+[07:23] <SupaSol> hi
+[07:24] <aeon-ltd> hi
+[07:25] <NetCatty> hi
+[07:27] <qq_q_z> Hi. My screen randomly freezes sometimes. It will show the same image no matter what I do until I turn it off. How do I debug this and find the cause?
+[07:29] <sunny_> what's the name of the login manager of ubuntu lightdm or gdm ?
+[07:29] <sunny_> it must be lightdm
+[07:30] <floryn90> hi everyone
+[07:30] <cfhowlett> floryn90, greetings
+[07:30] <floryn90> where can i find the ubuntu roadmap ?
+[07:31] <floryn90> cfhowlett, hi :P
+[07:31] <cfhowlett> !roadmap
+[07:31] <cfhowlett> floryn90, you mean the development type map?
+[07:32] <floryn90> yes
+[07:32] <floryn90> do you know if will be release a rc of saucy ?
+[07:32] <cfhowlett> !saucy
+[07:32] <ubottu> Ubuntu 13.10 (Saucy Salamander) will be the 19th release of Ubuntu. Announcement: http://www.markshuttleworth.com/archives/1252 - Discussion and support in #ubuntu+1. Release date will be 17th October 2013.
+[07:33] <cfhowlett> floryn90, best to ask in #ubuntu+1
+[07:33] <floryn90> cfhowlett, ok thanks
+[07:34] <floryn90> thanks to cfhowlett
+[07:34] <NetCatty> what happend to the bottom panel in nautilus 3.8.2?
+=== CyclicFlux is now known as Guest29308
+=== Harry is now known as Guest8455
+[07:35] <swaagie> day to of the skype will not install due to held  broken packages, missing skype-bin, on ubuntu 13.04, clean not had any previous version installed, followed https://help.ubuntu.com/community/Skype but not until after I did a manual install, tried all repository/apt clean/purge/fix commands, anybody any other pointers
+[07:35] <Dr_Willis> a lot of nautilus featres have been getting trimmed out NetCatty
+=== Guest8455 is now known as Harryfromthebloc
+=== Harryfromthebloc is now known as Jupp
+[07:36] <Dr_Willis> sunny_:  lightdm is the default. but i tend to use gdm because i like it better. ;)
+[07:36] <sunny_> Dr_Willis, than i need to try gdm
+[07:36] <Dr_Willis> sunny_:  also i think xubuntu and lubuntu have differnt lightdm themes.
+[07:36] <swaagie> day two* btw
+[07:37] <Dr_Willis> actually i Might be usng xubuntu's on this netbook. Im not sure ;) its a cleaner layout then the default ubuntu lightdm look
+[07:37] <NetCatty> Dr_Willis: that's just swell. Whoever thought that "trimming" the bottom panel would be a great idea? I cant read the last file name cuz it's been overlayed with the pop-up notification
+[07:38] <Dr_Willis> NetCatty:  cant say ive noticed. general gnome trend for the last few years has been to remove stuff and make everything cleaner if less functional.
+[07:38] <NetCatty> Dr_Willis: is there a way to stop the notification pop-up at the bottom?
+[07:39] <Dr_Willis> im nore annoyed at a lot of the other things removed from notilus
+[07:39] <sunny_> Dr_Willis, is their any theme package for lightdm ?
+[07:39] <Dr_Willis> NetCatty: what desktop are you using?
+[07:39] <NetCatty> gnome 3
+[07:39] <Dr_Willis> sunny_:  check the package manager and see. It may depend on your release
+[07:39] <Dr_Willis> NetCatty:  id look at the gnome3 extensions and see if theres one to put them somewhere else
+[07:40] <Dr_Willis> i dont use gnome-shell much
+[07:40] <sunny_> Dr_Willis, ok
+[07:40] <sunny_> Dr_Willis, which DE you use ?
+[07:40] <Dr_Willis> im on xubuntu on my netbook most of the time. or lubuntu
+[07:41] <shafox1> exit
+=== Hexeon|2 is now known as Hexeon
+[07:43] <Yoya> hello guys
+[07:43] <Yoya> any one on?
+[07:43] <cfhowlett> Yoya, greetings
+[07:43] <NetCatty> Dr_Willis: if it weren't for docky's limitating and annoying need for nautilus I'd have changed to thunar or nemo long time ago
+[07:43] <Yoya> hello cfhowlett
+=== jorn is now known as Guest94138
+[07:43] <Yoya> hey guys, i have a doubt
+[07:43] <cfhowlett> Yoya, no there's only a few THOUSAND here..  What's the issue?
+[07:43] <cgtdk> cfhowlett: 1650
+[07:44] <Yoya> i have to set a cron job, that job have to execute each one minute
+[07:44] <cfhowlett> cgtdk, sorry.  I'm in China: pop. 1.3  BILLION so I tend to get a bit fuzzy on small numbers :)
+[07:44] <Yoya> i use crontab -e, but if the user use another login
+[07:45] <Yoya> that job will be do?
+[07:45]  * cfhowlett Says nothing because he doesn't do cron stuff ...
+[07:45] <Yoya> jejeje
+[07:46] <Ben64> what does this mean...? <Yoya> i use crontab -e, but if the user use another login
+=== Wug[Hyperspace] is now known as Wug
+[07:46] <NetCatty> lol!? http://www.bilder-space.de/bild-askpng-10272.htm  > http://askubuntu.com/
+[07:47] <Yoya> i mean, i did a crontab -e with Yoya login, but if another person login with other user-login
+[07:47] <swaagie> so why doest apt-cache search skype show skype-bin as packkage on ubuntu 13.04?
+[07:48] <Dr_Willis> swaagie:  you dont have a repo with skype enabled. or if you do. you havent dond a sudo apt-get update yet
+[07:50] <jorn_> Hallo Welt!
+[07:50] <bazhang> !info skype partner | swaagie
+[07:50] <ubottu> swaagie: skype (source: skype): client for Skype VOIP and instant messaging service. In component main, is extra. Version 4.2.0.11-0ubuntu0.12.04.2 (partner), package size 15 kB, installed size 61 kB (Only available for i386; amd64)
+[07:50] <bazhang> enable partner repo swaagie
+[07:50] <swaagie> Dr_Willis: I haven't added a custom repo, only enabled i386 arch and enabled partner repo
+[07:50] <swaagie> bazhang: ^
+[07:51] <bazhang> swaagie, so update your sources.list
+[07:52] <swaagie> bazhang: Dr_Willis apt-get update && apt-get cache search -> https://gist.github.com/Swaagie/6931114
+=== ionut is now known as ionutica-99
+[07:53] <bazhang> swaagie, its apt-cache search ...not apt-get search
+[07:53] <swaagie> typo, see the gist
+[07:55] <Dr_Willis> bbl
+[07:56] <swaagie> pretty funky stuff
+[07:59] <lesshaste> should I install gnuplot-x11 or gnuplot-qt?
+[07:59] <lesshaste> for a standard ubuntu 13.04 install

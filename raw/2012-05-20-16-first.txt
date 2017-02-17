@@ -1,0 +1,465 @@
+[15:36] <Deihmos> isn't it strange that ubuntu works much better virtually that installed on my laptop? WHen I install it my fans go crazy, sound barely works and a host of other problems
+[15:36] <flowerpot> xtu, you would use  a newsreader, i imagine.  tons of newsreaders are available on ubuntu; since i don't use them myself i cannot recommend any, but google probably can.
+[15:36] <sirriffsalot> L3top: I wonder... i've got cpufreq installed, but I can't get it to run at 2.40Ghz, it always goes back to 1.20ghz or so... Is there a graphical user interface for configuring this?
+[15:36] <ActionParsnip> Deihmos: probably some weird acpi
+[15:37] <xtu> flowerpot, ok, i got it, thanks.
+[15:37] <ActionParsnip> Deihmos: is it an acer or an alienware?
+[15:37] <Deihmos> I have an HP envy that has two video cards
+[15:37] <ActionParsnip> Deihmos: that'll do it too
+[15:37] <vexaxv> anyone know why in ubuntu 12.04 the shutdown process hangs? im forced to hold down my power button..kinda annoying..
+[15:37] <L3top> sirriffsalot: cat /proc/cpuinfo | grep -i cores
+[15:37] <flowerpot> vexaxv, does it hang when you run shutdown -h now from a terminal?
+[15:38] <ActionParsnip> vexaxv: if you run: sudo shutdown -h now     does it die?
+[15:38] <vexaxv> errr..lemme try
+[15:38] <vexaxv> ill get back to u guys in a sec
+[15:38] <xtu> hi, is usernet is not free to use?
+[15:38] <angel282> Hello, I recently got a dedicated server with ubuntu 10.04 LTS (lucid) and I was wondering if it possible to upgrade the server to higher version using the ssh and idea? or good tutorial?
+[15:38] <vexaxv> no
+[15:39] <sirriffsalot> L3top: cpu cores    : 2 cpu cores    : 2
+[15:39] <vexaxv> Try `shutdown --help' for more information. thats what i get
+[15:39] <zykotick9> vexaxv: try "sudo shutdown -P now", if -h doesn't work
+[15:39] <deejay31> Hey
+[15:39] <ActionParsnip> !upgrade | angel282
+[15:39] <ubottu> angel282: For upgrading, see the instructions at https://help.ubuntu.com/community/UpgradeNotes - see also http://www.ubuntu.com/desktop/get-ubuntu/upgrade
+[15:39] <vexaxv> nope
+[15:39] <vexaxv> wont shutdown
+[15:40] <ActionParsnip> angel282: you can upgrade straight to precise from lucid
+[15:40] <deejay31> Who here uses a ZNC
+[15:40] <theadmin> vexaxv: Try appending "reboot=bios" to the kernel line.
+[15:40] <vexaxv> if i click shutdown it hangs at the ubuntu loading splash screen
+[15:40] <IdleOne> deejay31: people in #znc do
+[15:40] <vexaxv> k i did
+[15:40] <deejay31> Oh ok
+[15:40] <deejay31> Grrrr
+[15:41] <Kaduptm> vexaxv try this: sudo gedit /etc/default/grub
+[15:41] <zykotick9> !gksudo | Kaduptm vexaxv
+[15:41] <ubottu> Kaduptm vexaxv: If you need to run graphical applications as root, use « gksudo », as it will set up the environment more appropriately. Never just use "sudo"! (See http://psychocats.net/ubuntu/graphicalsudo to know why)
+[15:42] <maikls> hi. were ubuntu saves wifi config? Like I made adhoc AP, but I want to see the config file. Were should I look for it?
+[15:42] <sirriffsalot> L3top: what was that for?:D
+[15:42] <theadmin> Kaduptm: Please refrain from using "sudo" and "su" for graphical applications. Use their GUI counterparts, "gksudo" and "gksu".
+[15:42] <Kaduptm> and change: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" to GRUB_CMDLINE_LINUX_DEFAULT="quiet acpi=force"
+[15:42] <zykotick9> maikls: Network Manager doesn't save the wireless to a file... it's stored in a protected database (by default)
+[15:43] <Kaduptm> ok... my bad
+[15:43] <flowerpot> maikls, not sure what you mean by "wifi config," but the DHCP config stuff is located in files like /var/lib/dhcp/dhclient-2203de08-09c1-4415-a03c-882ba4217f8c-eth0.lease
+[15:43] <vexaxv> k now what
+[15:43] <flowerpot> there should be an entry for your wlan
+[15:43] <L3top> sirriffsalot: I am not sure... I am having a senior moment, I don't know if that 2.4 is supposed to be cumulative of the multiple cores, or if what you are reading should be the combined speed. I am still waking up... I am grabbing cpufreq now, have never used it.
+[15:43] <maikls> flowerpot: thx, zykotick9  - i dont need password, I just want to see how that ad-hoc configuration looks in .conf file
+[15:43] <vexaxv> Kaduptm, now what
+[15:43] <sirriffsalot> L3top: cool! Thanks for your time!
+[15:44] <angel282> ActionParsnip: Great... action.. I tried to upgrade using the "sudo do-release-upgrade" command but I get "no new release found. I think it because the hosting company changed the sources.list any idea? should I changed it back to the ubuntu main source.list?
+[15:44] <flowerpot> maikls, maybe the ip command?
+[15:44] <zykotick9> angel282: LTS->LTS Upgrades aren't offerend (by default) until the point release (sometime next couple of months)
+[15:45] <zykotick9> !schedule | angel282
+[15:45] <ubottu> angel282: The Ubuntu Precise Pangolin release schedule can be found at https://wiki.ubuntu.com/PrecisePangolin/ReleaseSchedule
+[15:46] <maikls> flowerpot: that gives me not what I want. The whole idea is - I'm runing gentoo but on 2nd laptop ubuntu. And I just not cannot make working adhoc on gentoo system, but on ubuntu its working like a charm. I just want to se what i'm doing wrong in gentoo - to compare  both .conf files.
+[15:46] <L3top> wow repos are braindamage slow...
+[15:46] <sirriffsalot> :D
+[15:46] <L3top> sirriffsalot: not to be silly... but is your scaling multiplier right in bios?
+[15:47] <sirriffsalot> L3top: qué?
+[15:47] <maikls> flowerpot: in gentoo it saves it in /etc/conf.d/net
+[15:47] <maikls> but in ubuntu it is empty
+[15:47] <y0wy-> maikls, did u try: ps aux, just to see the command?
+[15:47] <sirriffsalot> L3top: the bios I have in this computer is dated 2009 ... might be outdated, but how do I check if that is so?
+[15:48] <maikls> y0wy-: what does ps aux do? ;/
+[15:48] <flowerpot> try ps - ef
+[15:48] <zykotick9> maikls: i realize you don't believe me (or don't want to) - but N-M doesn't save stuff to config files...
+[15:48] <maikls> zykotick9:  ok, will try in different way
+[15:48] <L3top> the multiplier in bios which sets the clock speed... bioses can be very diffrerent. I would look at a manual for your board/computer
+[15:49] <theadmin> zykotick9: Uh, in Linux everything is a file. Even if NetworkManager uses some awkward gnome pseudo-registry thing such as dconf or gconf, those still store their data in files. If not those, what else?
+[15:49] <sirriffsalot> L3top: not sure there is a function of that kind in my bios at all...
+[15:49] <zykotick9> theadmin: yes yes - thanks for that totally unhelpful comment ;)
+[15:49] <jm> in unix, even Jesus is a file
+[15:49] <theadmin> zykotick9: No, I'm just trying to understand your point -- *where* does NetworkManager store configuration?
+[15:50] <Kaduptm> anyone have this problem?! ubuntu tweak 0.7.1 doesnt save cong after reboot...
+=== deejay31 is now known as deejay31|Offline
+[15:51] <zykotick9> theadmin: N-M reliese on some DM protected files (somewhere).  N-M can't do wireless without GDM/LightDM/KDM/etc. because of the permissions on saving the wireless info/credentials
+[15:51] <L3top> there pretty much has to be... if it can take different chips... I mean... maybe ions dont have them or integrated cpus... I dont know... I don't use those guys as anything but plug n play slim clients... I open the bios and set it to pxe boot and thats it.
+[15:51] <theadmin> zykotick9: Now *that* is one weird way to store configurations, indeed >.<
+[15:51] <zykotick9> theadmin: i have a word for it - but it's not #ubuntu permitted ;)
+[15:52] <sirriffsalot> L3top: checking again then... rebooting:D
+[15:53] <ActionParsnip> Kaduptm: I suggest you contact the ubuntu tweak maintainers
+[15:53] <ActionParsnip> theadmin: ${HOME}/.gconf/system/networking/connections/   according to http://ubuntuforums.org/showthread.php?t=1043039
+[15:54] <theadmin> ActionParsnip: Hm, but that's just gnome's gconf thing
+[15:54] <ActionParsnip> theadmin: sure
+=== kung is now known as Guest61381
+[15:55] <vitald> Hello, can someone help me with setup a microphone?
+[15:56] <ActionParsnip> !details | vitald
+[15:56] <ubottu> vitald: Please give us full details. For example: "I have a problem with ..., I'm running Ubuntu version .... When I try to do ..., I get the following output: ..., but I expected it to do ..."
+[15:58] <AminosAmigos> Hello
+[15:58] <naxil> hello
+[15:58] <vitald> I'm running Xubuntu 12.04 (updated). When I try to record a sound through my microphone I got a noise. I tried it in Audacity
+[15:58] <ActionParsnip> vitald: is it anything like the original sound?
+[15:58] <naxil> please i have a strange problem. I see the name of my monitor (i have two monitor). What i can do for not see the name on screen? i use gnome 10.04
+[15:58] <bedreamer> Anybody mind if I use this channel to learn about IRC
+[15:58] <ActionParsnip> vitald: is the microphone part of a laptop?
+[15:58] <AminosAmigos> is it possible to reposition the icons in th unity launcher ?
+[15:59] <ActionParsnip> AminosAmigos: sure, long click then move it up or down
+[15:59] <maddinw> Hello again...
+[15:59] <sirriffsalot> L3top: I really can't find any such function in the BIOS...
+[15:59] <vitald> mic isn't on laptop, sound is but with noise
+[16:00] <L3top> sirriffsalot: where are you getting the 1.2 from?
+[16:00] <sirriffsalot> Running an acer aspire x3200machine ..
+[16:00] <AminosAmigos> LoL at first it only moved the hole launcher but now it worked strange :D thnx ActionParsnip
+[16:00] <sirriffsalot> L3top: The 1.2?
+[16:00] <maddinw> I have been here a bit before and I would like to ask another question.
+[16:00] <L3top> ghz.
+[16:00] <sirriffsalot> L3top: Ah, from cpufreq-info -m
+[16:00] <deejay31> How can I remove the ubuntu documentation message on logon?
+[16:00] <maddinw> flowerpot: maybe you remember me ;)
+[16:01] <maddinw> I have taken flowerpots advice and put the command to open the tunnel into ~/.bashrc
+[16:01] <sirriffsalot> L3top: it shows two "analyzing CPU:" sections and both say "current CPU frequency is 1.20 GHz."
+[16:01] <maddinw> But not when I open up a console it throws an error message that it can't listen to the port the tunnel runs on.
+[16:02] <maddinw> .peak
+[16:02] <bedreamer> I'm using irsii. Is it easy to suppress all the 'has joined' messages?
+[16:03] <zykotick9> !quietirssii | bedreamer
+[16:03] <maddinw> Is there any way I can make it check for an existing tunnel and not try to open it if it finds one?
+[16:03] <zykotick9> !quietirssi | bedreamer
+[16:03] <ubottu> bedreamer: To ignore joins, parts, quits in irssi:  /ignore #ubuntu +JOINS +PARTS +QUITS
+[16:03] <small> it's very hard to find new soft which i just installed at ubuntu 12.04
+[16:03] <small> hard to use
+=== chinkung is now known as kung
+[16:03] <sirriffsalot> L3top: you given up too?:D
+[16:04] <theadmin> bedreamer: /ignore * JOINS PARTS QUITS NICKS
+[16:04] <Orpheon> does anyone have any more ideas for my wine/opengl problems?
+[16:04] <bedreamer> Thanks ubottu. Much better :-)
+[16:04] <sirriffsalot> Orpheon: what's the problem?
+[16:04] <naxil> bedreamer not run
+[16:04] <L3top> sirriffsalot: no... I am trying to figure out how to use this tool... and I am in a few other chats atm.. just be patient with me.
+[16:04] <Orpheon> I run some exe with wine through console: this error log
+[16:05] <zykotick9> theadmin: i didn't know you could wildcard the channel!  thanks!
+[16:05] <sirriffsalot> L3top: I do apologize, haha:)
+[16:05] <Orpheon> http://pastebin.com/RHEqt9xD
+[16:05] <Orpheon> in particular, three lines
+[16:05] <theadmin> zykotick9: lol um, no problem?
+[16:05] <sirriffsalot> Orpheon: what exe?
+[16:05] <Orpheon> 345
+[16:05] <Orpheon> a game
+[16:05] <L3top> sirriffsalot: all I have available is cpufreqd... and that command is not recognized... and... I am very tired.
+[16:05] <Orpheon> made in Game Maker
+[16:05] <naxil> hello
+[16:05] <Orpheon> it worked before an update I made a few days ago
+[16:05] <sirriffsalot> Orpheon: oh, hmm
+[16:06] <Orpheon> ubuntu 12.04 64-bit here
+[16:06] <sirriffsalot> L3top: alright, sleep well:)
+[16:06] <sirriffsalot> Orpheon: You're trying to run your own made game?
+[16:06] <Orpheon> good night
+[16:06] <Orpheon> well, almost
+[16:06] <Orpheon> yes
+[16:06] <Orpheon> I use it as a test now
+[16:06] <Orpheon> because it's always worked before
+[16:06] <L3top> sirriffsalot: I am still working... just not waking up... I can't sleep atm...
+[16:07] <Orpheon> and because it takes little time to execute
+[16:07] <mafiaboy> ubuntu 12.04 too unstable for now as compared to 10.04
+[16:07] <DoctorMonocular> hey L3Top, a little update -- I tried putting that new config info into .bash_profile, and .profile, and I thought I'd cracked the case when I found at the end of my .bashrc file a line refining the PATH, but removing that didn't help. So I'm still at the point where I can run ruby if I manually source bash_profile when I open a terminal, and I still can't run rails because it's looking for a wonky path to ruby1.8. What do you
+[16:07] <DoctorMonocular> think could cause bash_profile to not load?
+[16:07] <sirriffsalot> L3top: oh, well don't beat yourself up, I'm happy!
+[16:07] <Orpheon> Game Maker itself, or programs that do not use directX, run well
+[16:07] <ActionParsnip> mafiaboy: look at how mature Lucid is compared to Precise
+[16:07] <Darael> Having a problem on several machines since they were upgraded to Precise.  The settings for keyboard layouts are ignored, and the layout is permamently set to whatever the default for that account was before the upgrade, but behaves as though all the check-boxes under "options" were unset.  The other layouts I have configured are selectable from the indicator, but doing so has sod all effect.  That means I can't access QWERTY layouts
+[16:07] <L3top> wolfcore might be able to help you... I was unaware of bash_profiles existence/use
+[16:07] <sirriffsalot> Orpheon: Hmm, wine is very explicit in detailing events, most of those lines are insignificant to the actual problem as far as I  know... But I really have no idea how what you're trying to do works
+[16:08] <DoctorMonocular> L3top, is he around?
+[16:08] <mafiaboy> ActionParsnip : yea but i switched to it thinking that it would be stable
+[16:08] <sirriffsalot> Orpheon: only thing I can suggest is to undo what you did to when it was working
+[16:08] <mafiaboy> crashes a lot
+[16:08] <Orpheon> sirriffsalot: I tried un- and reinstalling pretty much everything I could possibly think of
+[16:08] <Orpheon> asking around
+[16:08] <ActionParsnip> mafiaboy: upgrade or clean install?
+[16:08] <Orpheon> and googling around
+[16:08] <sirriffsalot> Orpheon: backup files, reinstall entire ubuntu?:)
+[16:08] <Orpheon> most of the people told me I need a 32-bit opengl lib
+[16:08] <L3top> he does not make me aware of his whereabouts since he got loose from his chain.
+[16:09] <Orpheon> I have backups of /home and /usr
+[16:09] <Orpheon> of a month ago
+[16:09] <Darael> DoctorMonocular: As I recall, .profile and family only load in a login shell, which your standard terminal emulator is not.  Stick the lines (whatever they are; I just came in) in .bashrc instead?
+[16:09] <ActionParsnip> Orpheon: backup /etc too
+[16:09] <Orpheon> I'll do so from now on, ok
+[16:09] <Orpheon> also
+[16:10] <Orpheon> I tried copy-pasting some libs from the backup into my current /usr
+[16:10] <flowerpot> maddinw, yes
+[16:10] <Orpheon> is this bad?
+[16:10] <DoctorMonocular> L3top, you need to keep track of these things man, you're falling down on the job here
+[16:10] <mafiaboy> ActionParsnip : i did a fresh install
+[16:10] <Prsm> Where should I go for general computer talk?
+[16:11] <L3top> sirriffsalot: cat /proc/cpu | grep -i mhz
+[16:11] <flowerpot> One way to check, if you're using IPv4, would be: lsof -i 4TCP@remotehost:22
+[16:11] <sirriffsalot> L3top: cat: /proc/cpu: No such file or directory
+[16:11] <L3top> sirriffsalot: cat /proc/cpuinfo | grep -i mhz
+[16:11] <L3top> sorry
+[16:11] <sirriffsalot> L3top: mate, you're helping a lot of people, great, but sleep is important!!
+[16:11] <Orpheon> 8 hours per sleep
+[16:12] <Orpheon> is what you usually need
+[16:12] <L3top> I am in charge of a baby... cant sleep.
+[16:12] <DoctorMonocular> Darael, yeah I did that, and it works, but I was afraid I was doing something wrong, I'm really new to all this and I don't know exactly where stuff should sit
+[16:12] <sirriffsalot> L3top: cpu MHz        : 1200.000 power management: ts ttp tm stc 100mhzsteps hwpstate cpu MHz        : 1200.000 power management: ts ttp tm stc 100mhzsteps hwpstate
+[16:12] <flowerpot> 4 - specifies IPv4 (6 would specify IPv6).  TCP - specifies TCP (as opposed to UDP).  @remotehost - the hostname of the remote host.  :22 - specifies the port, in this case 22 for ssh
+[16:12] <ugur> hede
+[16:12] <sirriffsalot> L3top: should have slept before that then=(
+=== lu` is now known as lubmil
+[16:13] <Prsm> can someone please telnet 80.229.207.254 50007 and see if it works?
+[16:14] <L3top> speaking of which he is waking up, so I will be less avail... look for a manual on your PC and check bios settings explained there sirriffsalot... afk
+[16:14] <jellybellie> Im using Ubuntu classic, 12.04, And IM stuck in chinese. PLEASE HELP.
+[16:14] <sirriffsalot> L3top: cheers:)
+[16:14] <Diddy403> Im having a problem where I don't have an option for Appearance --> Visual Effects on Ubuntu. I have installed the AMD Proprietary Driver and all is working, but I cant add visual effects
+[16:14] <jellybellie> some in english, most in chinese
+=== Prsm is now known as Merceng
+[16:15] <ActionParsnip> Merceng: connects ok
+[16:15] <jellybellie> gnome-shell actually
+[16:15] <theadmin> Merceng: I connected, but it doesn't ask for anything, just a hanging connection
+[16:15] <jellybellie> no idea why it switched
+[16:15] <Merceng> ok
+[16:15] <Merceng> disconnect please
+[16:15] <ActionParsnip> Merceng: done
+[16:15] <Merceng> it's spamming me for some reason
+[16:15] <theadmin> Merceng: Done.
+[16:16] <jellybellie> I dont speak chinese :(
+[16:16] <Merceng> 82.9.34.77
+[16:16] <Merceng> please d/c
+[16:16] <terafl0ps> jellybellie, can you click on your username in the upper right hand corner and open "system settings"
+[16:17] <terafl0ps> There should be a "language support" option in there.
+[16:17] <armence>  /join #python-dev
+[16:17] <jellybellie> terafl0ps: I can get terminal
+[16:17] <jellybellie> I think its gnome-shell
+[16:17] <shukty> hi i need a fast hint ... i lost some files  and i need them back. .... os windows7 ( not this computer .... )
+[16:17] <sw0rdfish> hey my wifi network is the one that has internet... and so if I connect to it and connect to a LAN with an ethernet cable will my 12.04 automatically figure out which one has internet?
+[16:18] <Darael> Having a problem on several machines since they were upgraded to Precise.  The settings for keyboard layouts are ignored, and the layout is permamently set to whatever the default for that account was before the upgrade, but behaves as though all the check-boxes under "options" were unset.  The other layouts I have configured are selectable from the indicator, but doing so has sod all effect.  That means I can't access QWERTY layouts
+[16:18] <jellybellie> terafl0ps: got it
+[16:18] <sw0rdfish> and use that for internet?
+[16:18] <Diddy403> Im having a problem where I don't have an option for Appearance --> Visual Effects on Ubuntu. I have installed the AMD Proprietary Driver and all is working, but I cant add visual effects. Using Precise
+[16:18] <terafl0ps> jellybellie: Great, did everything switch back to English?
+[16:18] <theadmin> shukty: Windows is not supported here, try ##windows (other than that, Testdisk (Photorec, rather), Recuva and some other file recovery software can help)
+[16:18] <jellybellie> no
+[16:19] <ActionParsnip> shukty: use your backups, windows support is in ##windows
+[16:20] <sw0rdfish> hey my wifi network is the one that has internet... and so if I connect to it and connect to a LAN with an ethernet cable will my 12.04 automatically figure out which one has internet? .... and use that for internet?
+[16:20] <terafl0ps> jellybellie: if you go into "install/remove languages" what languages are checked ?
+[16:20] <kjm> ##windows
+[16:20] <Darael> jellybellie: I'm not entirely sure about gnome-shell, but the Unity search will often match the English name even when you're in another language, so searching for "language" will usually turn the language-settings tool up.
+[16:21] <jellybellie> terafl0ps: not sure
+[16:21] <jellybellie> in chinese, most, except top three
+[16:21] <sw0rdfish> and I'm hoping I could share the wifi internet with my desktop (either through a LAN router or connect them directly to each other)
+[16:21] <theadmin> !ics | sw0rdfish
+[16:21] <ubottu> sw0rdfish: If you want to share the internet connection of your Ubuntu machine with other machines in the network see https://help.ubuntu.com/community/Internet/ConnectionSharing
+[16:22] <Diddy403> !compiz
+[16:22] <ubottu> Compiz (compositing window manager), for a howto see http://help.ubuntu.com/community/CompositeManager and more help #compiz
+[16:22] <delac> Mobile broadband (3G usb stick) is always disabled on boot or after inserting the stick. This prevents the connection from starting automatically. Any way to set Mobile broadband to enabled by default?
+[16:22] <abhijitrucks> hi
+[16:22] <jellybellie> terafl0ps: how many down is english?
+[16:22] <abhijitrucks> how do i change launcher hot edge to bottom cornor?
+[16:22] <flowerpot> maddinw, you can also use netstat to check what processes are using what tcp ports (over ipv4) with: netstat -4tap
+[16:23] <jellybellie> I see Chhattisgarhi, chinese, Min Nan, Mari, Eastern, Shuswap, and Walser, the rest of the list is in chinese
+[16:23] <maddinw> flowerpot: thank you...this will be helpful.
+[16:23] <jellybellie> swear to god, it just changed, no idea why
+[16:23] <flowerpot> -4 = limit to ipv4.  -t = limit to tcp.  -a = show all connections, listening and otherwise.  -p = show process name
+[16:23] <abhijitrucks> :-|
+[16:23] <terafl0ps> jellybellie, I count English as th 36th language in the list.
+[16:24] <flowerpot> doesn't look like netstat can filter on its own by port # like lsof, so you'd have to grep, sed, awk, or perl yourself some extra detail for the script logic
+[16:24] <ActionParsnip> flowerpot: ooh like that, making an alias now :)
+[16:24] <terafl0ps> in the "installed languages" list
+[16:24] <kjm> quit
+[16:25] <maddinw> I did netstat -4tap | grep 8000
+[16:25] <ActionParsnip> flowerpot: was going to make a UDP joke too but couldn't be sure you got it :D
+[16:25] <abhijitrucks> huh?
+[16:25] <Darael> ActionParsnip: That's /terrible/.
+[16:25] <ActionParsnip> Darael: lots
+[16:26] <jellybellie> argh, the repos are lagging
+[16:26] <ActionParsnip> jellybellie: tried apt-fast ?
+[16:26] <jellybellie> ActionParsnip: what is that?
+[16:26] <ActionParsnip> jellybellie: a script to replace apt-get, uses axel
+[16:27] <jellybellie> I thought you were kidding...
+[16:27] <ActionParsnip> jellybellie: downloads from multiple sources
+[16:27] <ActionParsnip> jellybellie: its a thingf
+[16:27] <jellybellie> apt is usually fast, the ubuntu repos are lagging hard for me.
+[16:27] <stiltzkin> Hello all, this is not a critical issue or anything (this is basically throwaway hardware) but I'm wondering why 12.04 is randomly freezing on my old desktop computer. I did tail -f /var/log/syslog to see what's happening when it freezes, here's what it looks like: http://i.imgur.com/Wstm3.jpg
+[16:28] <jellybellie> terafl0ps: what language pack is english?
+[16:28] <jellybellie> language-pack-???-base
+[16:28] <Darael> jellybellie: en, probably.  Possibly en-$COUNTRYCODE.
+[16:28] <stiltzkin> As you can see, it just keeps trying to enumerate USB devices with MTP for some reason. I don't have any devices that use MTP attached, so this is confusing. Basically I just want to understand whether this is most likely hardware or software related.
+[16:28] <sebastian> hello, i need some help with gsynaptics
+[16:29] <cristi22> hei i instal windows over ubuntu 12.04 and i want to reinstal grub haw i can do?
+[16:29] <Darael> !grub | cristi22
+[16:29] <ubottu> cristi22: GRUB2 is the default Ubuntu boot manager since 9.10 (Karmic). Lost GRUB after installing Windows? See https://help.ubuntu.com/community/RestoreGrub - For more information and troubleshooting for GRUB2 please refer to https://help.ubuntu.com/community/Grub2 - See !grub1 for releases before Karmic (9.10)
+[16:29] <bost> hey man do you see me?
+[16:29] <n1ckn4me09876543> I downloaded Soundblaster X-Fi linux driver, now I have to install it, the readme file tells me: << In terminal,
+[16:29] <n1ckn4me09876543> 1) Goto source directory
+[16:29] <n1ckn4me09876543>  2) Execute make command as root
+[16:29] <n1ckn4me09876543>   make
+[16:29] <n1ckn4me09876543>     make install >> what's the command to install programs/driver
+[16:29] <FloodBot1> n1ckn4me09876543: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[16:29] <jellybellie> Darael: no
+[16:29] <ActionParsnip> jellybellie: sudo apt-get install axel
+[16:29] <BostX> yea I do
+[16:29] <ActionParsnip> jellybellie: then visit here: http://www.mattparnell.com/linux/apt-fast/
+[16:30] <ActionParsnip> jellybellie: grab apt-fast.sh and mark it as executable, I suggest you rename it to apt-fast and copy it to /usr/bin
+[16:30] <jellybellie> sh@, I installed Kashubian
+[16:30] <Darael> jellybellie: en is definitely the language code used in packages for US English.  I think UK English is en-gb.
+[16:30] <sebastian> hey guys i need some help, i can't initialize gsynaptics, and i cant find the xorg.conf archive
+[16:30] <ActionParsnip> jellybellie: you can then use:  sudo apt-fast upgrade
+[16:30] <flowerpot> maddinw, if you're running netstat to check for a tcp connection from localhost:someport to remotehost:8000, then you don't need to include -a in netstat
+[16:30] <jellybellie> Darael: what package do you have installed?
+[16:30] <terafl0ps> jelliebellie, What happened when you tried to reset English in the "language support" tool ?
+[16:30] <DoctorMonocular> so, when I run "rails c" I get this error: bash: /usr/local/bin/rails: /usr/bin/ruby1.8: bad interpreter: No such file or directory -- which seems like it's looking for ruby on the path "/usr/local/bin/rails: /usr/bin/ruby1.8" which is obviously wrong. It looks like there's an extra space in a config file somewhere -- where might that file be?
+[16:30] <jellybellie> ActionParsnip: I will definitely try it.
+[16:31] <jellybellie> language-pack-??
+[16:31] <Darael> jellybellie: language-pack-en and language-pack-en-base.
+[16:31] <jellybellie> k
+[16:31] <ActionParsnip> jellybellie: newer version here https://github.com/ilikenwf/apt-fast
+[16:31] <flowerpot> DoctorMonocular, someone else had the same problem yesterday. I don't know how his case turned out, but it's probably not a problem specific to your case.
+[16:31] <jellybellie> Darael: ubuntu 12.04?
+[16:32] <Darael> ActionParsnip: Axel works these days, then?  Last time I looked at it (about four years ago, I confess) it liked to segfault.
+[16:32] <Darael> jellybellie: That's right.  Been the same since forever, though.
+[16:32] <stiltzkin> Anyone know what this "udevd failed to execute mtp-probe" means? http://i.imgur.com/Wstm3.jpg
+[16:33] <ActionParsnip> jellybellie: ok stick to the first one :)
+[16:33] <jellybellie> this makes no sense, I didnt install anything...
+[16:33] <jellybellie> ActionParsnip: I will try it
+[16:33] <ActionParsnip> Darael: works great here
+[16:33] <jellybellie> but now, Im trying to get english back [:
+[16:33] <abhijitrucks> unity is getting ridiculus on ubuntu 12.04... :( i am gonna try gnome 3
+[16:33] <Darael> ActionParsnip: Good to know.  Four years is, after all, a long time.
+[16:33] <jellybellie> I cannot read the git hub in chinese
+[16:33] <abkarch> hey guys. I just installed ubuntu 12.04 on my laptop and everything went fine. I then used easyBCD from windows to add it to the boot list. Anyway, upon choosing to boot ubuntu, i get a black screen. I dont get a purple ubuntu loading screen before it or anything, it just goes straight to a black screen. If this helps at all, pressing the power button instantly turns off the laptop, which in my experience usually means no OS is boot
+[16:34] <stiltzkin> abkarch, have you tried recovery mode?
+[16:34] <jellybellie> this is crazy
+[16:34] <smerz> abkarch, also check disk activity to verify your theory
+[16:35] <smerz> (to be sure. never hurts)
+[16:35] <abhijitrucks> whoa!!! how do i install gnome in ubuntu 12.04??? help! terminal says gnome-shell is not available
+[16:35] <jellybellie> k, its not change to english
+[16:35] <Darael> abkarch: Is there any reason you didn't just use GRUB for the main bootloader?  I don't think the Windows bootloader understands Linux, and chainloading GRUB from it requires dumping a grub image to a file, or did last time I tried, about six months ago.
+[16:35] <abkarch> im not really an experienced linux user, how would i use GRUB?
+=== euphoria is now known as Guest53376
+[16:36] <abhijitrucks> someone help... how do i install gnome???
+[16:36] <jellybellie> its select to english
+[16:36] <jellybellie> but not english
+[16:36] <Darael> abkarch: It should have been installed with Ubuntu.  If it wasn't, something strange has been going on.  Did you use WUBI?  (the "install inside windows" option).
+[16:36] <abkarch> I burnt to a CD
+[16:36] <zykotick9> !notunity | abhijitrucks
+[16:36] <ubottu> abhijitrucks: Ubuntu 11.10 uses GNOME 3 with the !unity shell by default.  To use GNOME Shell instead, install the "gnome-shell" package and investigate "gnome-tweak-tool".  For GNOME Fallback mode, which is similar to GNOME 2, install "gnome-panel". Both packages will place entries in the Sessions dropdown. Using Natty? See !classic
+[16:37] <abkarch> its probably there, i dont know how to use it Darsel
+[16:37] <Darael> !grub | abkarch: See also
+[16:37] <ubottu> abkarch: See also: GRUB2 is the default Ubuntu boot manager since 9.10 (Karmic). Lost GRUB after installing Windows? See https://help.ubuntu.com/community/RestoreGrub - For more information and troubleshooting for GRUB2 please refer to https://help.ubuntu.com/community/Grub2 - See !grub1 for releases before Karmic (9.10)
+[16:37] <jellybellie> and I cannot select the window text to to translate
+[16:37] <terafl0ps> jellybellie, this may help: http://i45.tinypic.com/2r3y2xk.png
+[16:37] <stiltzkin> abhijitrucks, sudo apt-get install gnome-shell last time I checked
+[16:38] <Darael> abkarch: Incidentally, the tab key will autocomplete a nick, which is great for time-saving and making sure of spelling.  Unfortunately, I have to go (unexpected, my apologies) but I hope someone can sort you out.
+[16:38] <jellybellie> lookin
+[16:38] <abkarch> k
+[16:38] <terafl0ps> English is the 36th language down in the "installed languages" window.
+[16:38] <abhijitrucks> i did sudo apt-get install gnome-shell but it says "package gnome-shell has no insallation candidate"
+[16:38] <ActionParsnip> !info gnome-shell
+[16:38] <ubottu> gnome-shell (source: gnome-shell): graphical shell for the GNOME desktop. In component universe, is optional. Version 3.4.1-0ubuntu2 (precise), package size 329 kB, installed size 901 kB
+[16:38] <enotz> I am trying to use LWP::Simple with perl under 12.04 and if and when I try and get an https address it fails, without error.  I have installed LWP::Simple and http://pkgs.org/ubuntu-12.04/ubuntu-universe-i386/libcrypt-ssleay-perl_0.57-2ubuntu1_i386.deb - what am I missing here
+[16:39] <ActionParsnip> abhijitrucks: do you have universe repo enabled?
+[16:39] <stiltzkin> Still looking for some advice on this system freeze if anyone can tell me anything about it. Screenshot here: http://i.imgur.com/Wstm3.jpg
+[16:39] <abhijitrucks> how do i check?
+[16:39] <ActionParsnip> abhijitrucks: use software centre
+[16:39] <robertkeizer> Greetings.. Anyone else notice that the canoncial DNS servers just set ca.archive.ubuntu.com to go to the UK?
+[16:40] <euphoria_> hello
+[16:40] <jellybellie> terafl0ps: http://tinypic.com/r/2morp1f/6
+[16:40] <ActionParsnip> hi euphoria_
+[16:40] <euphoria_> hi
+[16:40] <abhijitrucks> ya
+[16:40] <abhijitrucks> universe respiratory is enabled
+[16:41] <c0deMaster> what are speedy alternatives to OpenVPN ?
+[16:41] <jellybellie> english is definitely installed, I translated it with google
+[16:42] <terafl0ps> jellybellie, What happens if you choose "English" and press that top button?
+[16:42] <terafl0ps> which should be "apply system wide"
+[16:42] <jellybellie> nothing
+[16:42] <stiltzkin> experience with udevd, anyone, anyone? bueller?
+[16:42] <abhijitrucks> ???
+[16:43] <jellybellie> terafl0ps: I got a pop up when I logged in sayin I chose a different language.  I make sure that the login language was english on the login screen
+=== system is now known as Guest73879
+[16:44] <jellybellie> this is insane
+[16:44] <jellybellie> Im gonna have to reinstall over this...
+[16:44] <abhijitrucks> ok. i added a gnome ppa
+[16:44] <jellybellie> my gawd ubuntu
+[16:45] <abhijitrucks> someone plz help
+[16:45] <abhijitrucks> how to install gnome 3
+[16:45] <abhijitrucks> in ubuntu 12.04
+[16:45] <tensorpudding> abhijitrucks, first, remove whatever ppa you added
+[16:46] <abhijitrucks> ok
+[16:46] <tensorpudding> abhijitrucks, then you're done, because 12.04 comes with gnome 3
+[16:46] <terafl0ps> jellybellie, I'm not sure what's going on then.  Have you tried logging out of gnome and logging back in after you applied the change?
+[16:46] <jellybellie> ubuntu just switched me to chinese, that is what happened
+[16:46] <jellybellie> no idea why
+[16:46] <abhijitrucks> ok i removed it
+[16:46] <tensorpudding> abhijitrucks, if you don't believe me, open System Monitor and look at the System tab, and see where it'll say GNOME 3.4.1
+[16:47] <jellybellie> terafl0ps: gonna try logging out.
+[16:47] <compdoc> I think ppl would be happier if 12.03 did run gnome 3, but it doesnt. But thats OK, I getting used to Unity
+[16:48] <abhijitrucks> but i cant login to a gnome session
+[16:48] <TheShruv> jellybellie: goto system>administration>language (or something like that)
+[16:48] <hypn0> i would be happier if something like openbox was installed too
+[16:48] <robin0800> compdoc: 12.04 does run gnome 3
+[16:48] <tensorpudding> abhijitrucks, unity is built on top of gnome 3, if you want gnome-shell, just install it by name from the software center, you'll get a GNOME session available
+[16:48] <LjL> !gnome3 | abhijitrucks
+[16:48] <ubottu> abhijitrucks: GNOME 3 is the desktop environment on which Unity is based.  To use GNOME Shell instead of Unity, install the "gnome-shell" package and investigate "gnome-tweak-tool". GNOME 3 is not supported under Natty/11.04, and may break your system if installed from alternate sources.
+[16:49] <compdoc> robin0800, not the gnome 3 that abhijitrucks means
+[16:49] <abhijitrucks> i have ubuntu 12.04
+[16:49] <tensorpudding> yes, do what it says, install gnome-shell and gnome-tweak-tool
+[16:49] <LjL> compdoc: yes, what you and abhijitrucks mean is "GNOME-Shell", not "GNOME 3"
+[16:49] <abhijitrucks> and i want to use gnome instead of unity
+[16:49] <LjL> abhijitrucks: follow the instructions in the factoid i just gave.
+[16:50] <n1ckn4me09876543> Can someone help me install driver for Soundblaster X-Fi Fatal1ty ?  I've google'd everywhere and cannot find a solution
+[16:50] <terafl0ps> Overall, I personally think Unity is awful on desktops and laptops.  I think something with a Unity-like interface makes much more sense on tablets and smartphones.
+[16:50] <ActionParsnip> compdoc: 12.04 uses Gnome3...
+[16:50] <robin0800> abhijitrucks: you may need gnome-panel then
+[16:50] <MrGizmo757> Unity is awsome  just takes getting used to
+[16:50] <ActionParsnip> n1ckn4me09876543: those can be a pita, not worth the hastle
+[16:51] <abhijitrucks> unity is kinda messed up in ubuntu 12.04
+[16:51] <ActionParsnip> n1ckn4me09876543: can you give the output of: wget -O alsa-info.sh http://www.alsa-project.org/alsa-info.sh && chmod +x ./alsa-info.sh && ./alsa-info.sh
+[16:51] <MrGizmo757> its rough around the edges but you can tweak it and make it good
+[16:51] <MrGizmo757> such as making the launcher dodge windows like it did in 11.10 amound many other things
+[16:51] <MrGizmo757> with a little TLC you can make unity quite good
+[16:52] <abhijitrucks> how do i change launcher to reveal when i move my mouse to bottom left corner?
+[16:52] <n1ckn4me09876543> ActionParsnip: http://www.alsa-project.org/db/?f=19897beae9289bea9247c92a6b29e6e89a4fbd57
+[16:52] <MrGizmo757> not sure about hot corners. i know My unity and even ubuntu tweak have some funtions like that.
+[16:52] <MrGizmo757> there is a way i just don tknow it.
+[16:52] <abhijitrucks> +they dont work in 12.04
+[16:53] <abhijitrucks> :(
+[16:53] <MrGizmo757> launcher dodgin open windows i have figured out. changin the default lens i have figured out.
+[16:53] <abhijitrucks> i mean i can only change hotsopts to left edge and top left corner
+[16:54] <terafl0ps> I admit I haven't tried Unity since 11.04, but I had lots of problems with it on dual displays, and I really couldn't stand the enormous icons.  Those big icons would make perfect sense on a small screen where they would scale down to the size of your fingertip though.
+[16:54] <MrGizmo757> i agree. out of the box as is Unity is kind of a mess.  but if you spend some time with it you can make it very good.
+[16:54] <MrGizmo757> hmm not sure about lower hot corners.   its not somthing i ever had a need for. i always just use keyboard shortcuts
+[16:54] <n1ckn4me09876543> win8 copied ubuntu's unity :>
+[16:54] <abhijitrucks> NO
+[16:55] <n1ckn4me09876543> yep, the left side bar thingie,  the square looking thing to see programs,  that's the "new" start in win8
+[16:55] <newhoa> Quick question: Nautilus is using media-eject-symbolic as the unmount icon in the sidebar now. Is there a way to define the color of this icon? Mine will only show black.
+=== Prsm is now known as Programmer099
+[16:55] <abhijitrucks> i got used to using bottom left corner for launcher in 11.10 so its kinda frarusting in 12.04
+[16:55] <MrGizmo757> no they didnt. steve balmmer ate some bad shrimp. puked it all out all over a pile of turds and then he copied that. thats windows 8    LOL!!!!
+[16:55] <solderMob> terafl0ps: failed.
+[16:55] <solderMob> terafl0ps: how do i get to the fonts?
+[16:55] <solderMob> maybe the fonts are off
+[16:56] <ActionParsnip> n1ckn4me09876543: is the right output device selected in sound options and are all levels cranked in alsamixer
+[16:56] <solderMob> its says english, but fonts are not english
+[16:56] <MrGizmo757> i like windows 7 am am not baching windows here but  windows 8  i can only ask what are hey smoking
+[16:56] <shadow_wraith> Hi, does anyone here know much about configuring a wacom pad in ubuntu?
+=== solderMob is now known as jellymob
+[16:56] <kelvinella> what happen to windows 8?
+[16:56] <abhijitrucks> and i cant even set expo hot corners in CCSM. the settings dissappear after a restart
+[16:56] <terafl0ps> solderMob, Was your nick jellybellie before?
+[16:56] <ActionParsnip> kelvinella: its offtopic here
+=== jellymob is now known as jellybellie
+[16:57] <petsounds> windows 8 is off-topic
+[16:57] <kelvinella> last month i try to install windows 8 in virtualbox it fails
+[16:57] <jellybellie> terafl0ps: sorry
+[16:57] <jellybellie> forgot
+[16:57] <abhijitrucks> forget about windows 8
+[16:57] <MrGizmo757> anyways i need help with WiFi in ubuntu. i cant get the LED ont eh front of my laptop to work.  anybody know how to fix that?
+[16:58] <n1ckn4me09876543> MrGizmo757: when you open programs in win8, it snaps it to the left screen,  sounds familiar? :> and a bunch of other stuff like   windows store to d/l apps like with ubuntu software centre, lol!
+[16:58] <ActionParsnip> MrGizmo757: does it connect despite the LED?
+[16:58] <MrGizmo757> yes wifi works fine. its just the LED that wont work.
+=== esm is now known as Guest50409
+[16:58] <abhijitrucks> windows 8 is metro and ubuntu is not metro
+[16:58] <abhijitrucks> lol
+[16:58] <ActionParsnip> MrGizmo757: why is the LED needed?
+[16:58] <MrGizmo757> its not its just annoying me
+[16:58] <abhijitrucks> haha
+[16:59] <ActionParsnip> MrGizmo757: could report a bug, its massively trivial. Personally I'd be glad it didn't light
+[16:59] <Kiril> someone can you tell me how to remove from apache to require htcaccess and stop give me a forbidden
+[16:59] <ActionParsnip> Kiril: try asking in the apache channel too
+[16:59] <terafl0ps> Ah.  I don't think it's a font issue.  I really think something is wrong with your language settings somewhere, but the language support program is failing to set them correctly now.
+[16:59] <MrGizmo757> yeah but its sopose to and it dosent.  to me thats annoying.  :-)
+[16:59] <totesmuhgoats> ooooh we are in #ubuntu
+[16:59] <abhijitrucks> kiril: use sudo
+[16:59] <totesmuhgoats> lol i am reading the buffer thinking i'm in ##windows

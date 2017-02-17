@@ -1,0 +1,356 @@
+[10:17] <ObrienDave> Wiz_KeeD... D/L the 32 bit file from Skype. Install the .deb file. it will work
+[10:18] <nerdtron> IamTrying, ssh-keygen on your local machine, then try to connect again
+[10:19] <ObrienDave> Wiz_KeeD... what version of Ubuntu you running?
+[10:19] <nerdtron> IamTrying, line 145-146 are Input/Output error... are you sure the files/hard drive on the remote machine are in good health?
+[10:21] <jcgs> IamTrying, I agree with nerdtron, it looks like a problem at the other end, can you log in to another server, or log in to that machine locally?
+[10:23] <ObrienDave> Wiz_KeeD... this will get you the latest 32bit file. http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+[10:25] <bmxscott1993> need help i getting tird of install all the programs i us on ubuntu and want them pre installed on a iso ubuntu dvd what do i use for it to make a like live cd that boot up like the normal iso dvd what it all normal just with a couple more preinstall program on it so i do not have to find them all the time with the lay out i got now just on a dvd
+[10:26] <[Gentoo]> bmxscott1993: you could do it that way, or write a script that installs all of them
+[10:27] <bmxscott1993> not good with script but tell me more on how
+[10:27] <Pymous_> Hello !
+[10:28] <Pymous_> It's probably a dump question, but I've recently installed Ubuntu 13, and I have a small brain issue
+[10:28] <[Gentoo]> bmxscott1993: just a 1 line script that would apt-get install package 1 2 3 4 etc
+[10:28] <[Gentoo]> would do
+[10:28] <ObrienDave> bmxscott1993... I think Ubuntu Customization Kit will work for you
+=== milessabin_ is now known as milessabin
+[10:28] <geirha> Pymous_: There's no Ubuntu 13. Do you mean 13.04? or the upcoming 13.10?
+[10:28] <Pymous_> In the explorator (files, directory, ...) how do I enter my own path ? In the older version, I had to double click on the button on top
+[10:28] <Pymous_> 13.04 geirha
+[10:28] <[Gentoo]> Pymous_: does pressing escape work?
+[10:28] <geirha> Pymous_: Ctrl+L iirc
+[10:29] <Pymous_> geirha > Not working :(
+[10:29] <Pymous_> [Gentoo] > Nop, sorry
+[10:29] <bmxscott1993> im just got that but there a nother one called ubuntu builder but can not find it in marked
+[10:29] <geirha> Pymous_: Hm. They might have disabled that feature then.
+[10:30] <ObrienDave> bmxscott1993... let me look again
+[10:30] <ObrienDave> brb
+[10:31] <bmxscott1993> ok
+[10:31] <cfhowlett> bmxscott1993, see this:  http://askubuntu.com/questions/9135/best-way-to-backup-all-settings-list-of-installed-packages-tweaks-etc
+[10:33] <ObrienDave> back
+[10:34] <LrdArc> how can I connect to authenticated proxy that contains "@" on username??
+[10:35] <[Gentoo]> LrdArc: have you tried it in quotes?
+[10:36] <LrdArc> not yet
+=== abdeljalil is now known as Kassano
+[10:38] <ObrienDave> bmxscott1993... try ubuntu-defaults-builder
+[10:39] <lesshaste> I got this message " Because of incompatible library changes, the upgrade of the GNU libc library will leave you unable to authenticate to these programs. You should arrange for these programs to be restarted or stopped before continuing this upgrade"
+[10:39] <lesshaste> how do I do that?
+[10:39] <bmxscott1993> ok
+[10:39] <lesshaste> "One or more running instances of xscreensaver or xlockmore have been detected on this system."
+[10:39] <lesshaste> that was a crucial missing part :)
+[10:43] <siberiannerd> should i write a bug report if expert install from 12.04.3 cd1 was finished without warnings and after reboot i end up with grub's "error: file not found." ?
+[10:48] <ikonia> siberiannerd: no
+[10:48] <siberiannerd> ikonia, what should i do?
+[10:48] <ikonia> fix the problem
+[10:48] <ikonia> and not cross-post the same question in mulitple ubuntu channels
+[10:48] <siberiannerd> ikonia, i tried twice with alternate and server, just asked for server
+=== Mayzie is now known as Mayzie`
+[10:49] <ikonia> siberiannerd: trying twice is not fixing the problem
+[10:49] <cfhowlett> siberiannerd, did you actually install grub?  where?  how do we reproduce the problem?  especially since most people haven't had your experience;
+[10:49] <ikonia> it's not even understanding the problem
+[10:49] <ikonia> siberiannerd: the first qestion I'd ask, is did you use a DVD, or a USB,
+[10:51] <siberiannerd> ikonia, hdd
+[10:51] <siberiannerd> cfhowlett, i can describe the steps to reproduce if you want me to
+[10:51] <siberiannerd> if i should to deal with it properly
+[10:52] <ikonia> siberiannerd: hdd ?
+[10:52] <ikonia> you used a hard disk to install from ?
+[10:52] <siberiannerd> ikonia, hard disk drive
+[10:52] <siberiannerd> yeah, why not?
+[10:52] <ikonia> siberiannerd: how did you install from hard disk ?
+[10:53] <siberiannerd> as it described by official manpages for debian installer and anywhere
+[10:53] <siberiannerd> without 3rd party tools to put an image to drive
+[10:53] <ikonia> if you can't be bothered answering questions - we can't help
+[10:53] <siberiannerd> ok, ikonia, dd if=iso of=hdd
+[10:53] <siberiannerd> and here we go
+[10:53] <ikonia> siberiannerd: that don't install it
+[10:53] <ikonia> siberiannerd: so please don't try to be clever when YOU are the one asking for help
+[10:54] <siberiannerd> ikonia, well you're terribly wrong
+[10:54] <ikonia> oh, really, dd'ing an install image to a harddisk = an install ?
+[10:54] <siberiannerd> you never read about debian installation procedure from hdd?
+[10:54] <cfhowlett> siberiannerd, umm, no that is NOT an installation procedure for ubuntu.
+[10:54] <siberiannerd> sorry to hear that
+[10:54] <ikonia> siberiannerd: I'm asking what YOU did
+[10:54] <siberiannerd> i jsut said what i did
+[10:54] <siberiannerd> i'm not lying
+[10:54] <ikonia> siberiannerd: that is not an install
+[10:54] <ikonia> siberiannerd: that is just putting an install iso onto a hard disk
+[10:55] <siberiannerd> i've put the installation media iso like that
+[10:55] <siberiannerd> after what i specified nodmraid nomodset expertinstall
+[10:55] <cfhowlett> siberiannerd, suggest you try this: make a boot ISO on usb.  Boot from that ISO and choose install.
+[10:56] <siberiannerd> ikonia, should i continue describing the steps over stages?
+[10:56] <ObrienDave> siberiannerd... an ISO has to be burned to a DVD or CD or installed onto a USB stick
+[10:56] <siberiannerd> no it shouldn't
+[10:56] <ikonia> siberiannerd: just lost total interest thanks to you trying to be smart with your answers, see if someone else wants to help you
+[10:56] <siberiannerd> works flawless
+[10:56] <ObrienDave> ok, if you say so
+[10:56] <siberiannerd> ikonia, i didn't try to you was just pointing that i was doing something wrong
+[10:57] <siberiannerd> come on guys i'm not trying to act clever or anything like that
+[10:57] <siberiannerd> i came with a problem i can't troubleshoot properly
+[10:57] <ikonia> it doesn't come across like that
+[10:57] <ikonia> as dd'ing the install image to the hard disk is NOT an install
+[10:57] <ikonia> it's dd'ing the install image to a hard disk - nothing more
+[10:57] <cfhowlett> siberiannerd, listen up.  copying to the HDD is NOT installing.  what you did is NOT an installation.
+[10:57] <siberiannerd> well let me read some manpages or howtos so i could behave more polite or being more informative
+[10:58] <siberiannerd> oh ok
+[10:58] <bazhang> !attitude | siberiannerd
+[10:58] <ubottu> siberiannerd: The people here are volunteers, your attitude should reflect that. Answers are not always available. See http://wiki.ubuntu.com/IRC/Guidelines
+[10:58] <siberiannerd> uhm i know that
+[10:58] <cfhowlett> siberiannerd, try this:    https://help.ubuntu.com/community/Installation
+[10:59] <siberiannerd> so i launched the setup from alternate image that was written to hdd via dd, completed the procedure of installation on the second hdd having /boot and mbr on the 3rd one
+[10:59] <siberiannerd> which resulted the above
+[10:59] <kuribas> How do I set environment variable for X apps?
+[11:00] <siberiannerd> d-i never prompted warnings or anything else
+[11:00] <kuribas> My variables in .bashrc aren't read.
+[11:01] <siberiannerd> cfhowlett, https://help.ubuntu.com/community/Installation/FromHardDriveWithFloppies
+[11:01] <siberiannerd> but without any floppies
+[11:01] <cfhowlett> siberiannerd, you did note that this method is for UNSUPPORTED version of ubuntu?  That means ... unsupported here as well.
+[11:02] <siberiannerd> somewhat no
+[11:03] <ObrienDave> siberiannerd... and it is also written for an 8 year old system?
+[11:03] <cfhowlett> siberiannerd, yeah that big pink banner across the top of the page.
+[11:03] <siberiannerd> ObrienDave, it has even 8 years old bugs in it so i thought it would be fine
+[11:03] <geirha> kuribas: Set environment variables in .profile. They do not belong in .bashrc
+[11:04] <ObrienDave> omg *face palm*
+[11:04] <kuribas> geirha: Ok, I'll try that.
+[11:04] <cfhowlett> siberiannerd, you're installing 12.04 using an outdated, end of life methodology?  OOOOOOkay then.
+[11:04] <geirha> kuribas: You may also set them in .pam_environment, which is read by the pam_env module when you log in, though note that .pam_environment is not a shell script, so shell syntax won't work in there.
+[11:04] <siberiannerd> ObrienDave, so there is not proper way to use hdd as installation media for ubuntu, is that correct?
+[11:04] <ObrienDave> siberiannerd... have fun with that. *lurking*
+[11:04] <siberiannerd> no, seriously
+[11:05] <cfhowlett> siberiannerd, back up.  Can your box boot from USB?
+[11:05] <siberiannerd> nope
+[11:05] <pseudonymous> Err yes it can
+[11:05] <cfhowlett> siberiannerd, ok.  what are the machine specs. it matters.
+[11:05] <siberiannerd> no
+[11:06] <siberiannerd> ok, it's mini-itx zotac mb without usb controlled on it
+[11:06] <siberiannerd> should i get deeper into details?
+[11:06] <cfhowlett> siberiannerd, nope.
+[11:06] <siberiannerd> r*
+[11:06] <ObrienDave> siberiannerd... is there a DVD burner?
+[11:06] <cfhowlett> siberiannerd, I would suggest you consider using lubuntu or xubuntu though.  Both are optimized for older and lower spec machines.
+[11:07] <siberiannerd> no, cd-rom is not integrated in motherboard unfortunately
+[11:07] <cfhowlett> siberiannerd, from that page I sent you:   https://help.ubuntu.com/community/SmartBootManager
+[11:07] <siberiannerd> cfhowlett, can i read about supported method of installing xubuntu from hdd media?
+[11:07] <cfhowlett> siberiannerd, same method as in the tutorial, just different OS.
+[11:08] <cfhowlett> siberiannerd, actually see the section: Installation without a CD"
+[11:09] <siberiannerd> cfhowlett, yeah but the only option in there is unsupported
+[11:09] <cfhowlett> siberiannerd, it's also possible you could do a network installation.  See server and network installations in that tutorial
+[11:09] <siberiannerd> as you pointed me to that pink banner
+[11:10] <siberiannerd> pxe is buggy in there
+[11:10] <cfhowlett> siberiannerd, dern.  I was literally tying PXE for your next optoin.
+[11:10] <cfhowlett> *option*
+[11:10] <siberiannerd> i wouldn't come if it was an option
+[11:11] <siberiannerd> and if i had sata dvd-rom
+[11:11] <cfhowlett> siberiannerd, https://help.ubuntu.com/community/Installation/Netboot
+[11:11] <Wiz_KeeD> ObrienDave, I have the 64 bit version
+[11:12] <Wiz_KeeD> What do you recommend in order to install the proper skype?
+[11:12] <Lemino> Hi all! Anyone who can help me get my trackpad working correctly? I'm on a Vostro 3360.
+[11:13] <kizzx2> hey guys
+[11:13] <kizzx2> i'm trying to install Datastax Cassandra on LTS 1204
+[11:13] <Wiz_KeeD> Anyone know how to install skype for ubuntu 64 bit?
+[11:13] <ObrienDave> Wiz_KeeD... where did you get a 64bit version???
+[11:13] <kizzx2> apt-get install dsc12
+[11:13] <Wiz_KeeD> of ubuntu ObrienDave ?
+[11:13] <kizzx2> but it says The following packages have unmet dependencies:
+[11:13] <kizzx2>  dsc12 : Depends: cassandra (= 1.2.9) but 2.0.0 is to be installed
+[11:13] <Wiz_KeeD> I didn't get a skype version for 64
+[11:13] <ikonia> !skype | Wiz_KeeD
+[11:14] <ubottu> Wiz_KeeD: To install Skype on Ubuntu, see https://help.ubuntu.com/community/Skype - To record on Skype, check: https://wiki.ubuntu.com/SkypeRecordingHowto - Please use open protocols instead if you can, see !Ekiga
+[11:14] <ObrienDave> no, Skype
+[11:14] <Wiz_KeeD> ikonia, that link suggest you should include 32 bit applications in your repository, something that a lot of people do not recommend
+[11:14] <ObrienDave> Wiz_KeeD... I meant 13.04 64bit?
+[11:14] <ikonia> Wiz_KeeD: so what's the problem then ?
+[11:14] <Wiz_KeeD> 12.04 ObrienDave
+[11:15] <ObrienDave> ok use the link
+[11:15] <Wiz_KeeD> ikonia, because from what I know installing 32-bit applications on 64 is not that good...also if i'm going to install the 32 bit one, why not use the one from skype.com?
+[11:15] <ObrienDave> Wiz_KeeD... this will get you the latest 32bit file. http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+[11:15] <siberiannerd> but uhm i don't have any bootable options but hdd unfortunately
+[11:15] <Wiz_KeeD> ObrienDave, that's what the link suggests
+[11:15] <ikonia> Wiz_KeeD: it is the one from skype.com
+[11:15] <Wiz_KeeD> sudo dpkg --add-architecture i386
+[11:15] <ikonia> Wiz_KeeD: where is the native 64bit skype client ?
+[11:15] <Lemino> I'll come back at another time!
+[11:15] <Wiz_KeeD> I have no idea ikonia
+[11:15] <ikonia> Wiz_KeeD: right, it doesn't exist
+[11:16] <ObrienDave> ikonia... miscommunication on the 64bit Skype
+[11:16] <ikonia> ObrienDave: do share
+[11:16] <ObrienDave> there isn't one, like you said ;))
+[11:17] <Wiz_KeeD> So it would be safe to add the 32 bit architecture then?
+[11:17] <ikonia> ObrienDave: so how is that  miscommunication ?
+[11:17] <Wiz_KeeD> You guys did that?
+[11:17] <siberiannerd> ok, ubuntu can't be installed from hdd i got it
+[11:17] <ikonia> Wiz_KeeD: I don't like adding the 32bit arch to the repos, no
+[11:17] <ObrienDave> oh lordy, nevermind
+[11:17] <ikonia> Wiz_KeeD: however, that is the current documented process
+[11:18] <Wiz_KeeD> hmmm
+[11:19] <Wiz_KeeD> how the hell can I get skype on my computer without adding the 32bit arch to the repos and still be able to upgrade it and all that...
+[11:19] <siberiannerd> should i write a feature request so the installation from hdd media could get some attention and support?
+[11:19] <ikonia> siberiannerd: nah
+[11:19] <siberiannerd> ikonia, why not?
+[11:19] <ObrienDave> Wiz_KeeD... install ia32libs then Skype
+[11:19] <jrib> Wiz_KeeD: why don't you want to add 32bit multiarch capability?
+[11:19] <ikonia> Wiz_KeeD: i shouldn't stop you upgrading
+[11:20] <Wiz_KeeD> jrib, because when searching for other software I wouldn't want to install 32bit designed packages that might not be optimized for 64
+[11:20] <jrib> Wiz_KeeD: that wouldn't happen unless you ask for it explicitly
+[11:20] <Wiz_KeeD> ObrienDave, then all 32bit applications will be available for download, something I wouldn't neccesairly want
+[11:20] <ikonia> Wiz_KeeD: it doesn't work like that
+[11:21] <Wiz_KeeD> I'm sorry, I'm new to this, it may very well be possible, I just read about it
+[11:21] <Wiz_KeeD> Ready to be educated though :D
+[11:21] <ObrienDave> Wiz_KeeD... no, that just adds 32bit support to 12.04
+[11:22] <Wiz_KeeD> ikonia still doesn't do it for a reason :)
+[11:23] <BluesKaj> 'Morning all
+[11:24] <ObrienDave> Wiz_KeeD... ia32libs just adds 32bit support to 12.04. necessary for some programs like most 3rd party SecondLife clients
+[11:27] <Wiz_KeeD> ObrienDave, someone on the ubuntu forum says for example "you don't want to install a packages that was not compiled for your platform. Either get a 64bit version or compile it yourself. "
+[11:27] <jrib> Wiz_KeeD: i've only seen skype provide 32bit packages.  Their 64bit package just depends on the 32bit real version.  Though I haven't check in the last few months
+[11:28] <iceroot> Wiz_KeeD: use the 32bit version, there is no single need for skype in 64bit
+[11:28] <iceroot> Wiz_KeeD: skype just needs to install some multiarch libs
+[11:28] <ObrienDave> Wiz_KeeD... thats a PITA, just add ia32libs then install Skype. no biggie. it works
+[11:29] <jrib> that shouldn't even be needed, just install skype after enabling multiarch
+[11:29] <Wiz_KeeD> If more people with professional opinions suggest the same thing I think it's time to do it
+[11:30] <Wiz_KeeD> ok sir!
+[11:30] <iceroot> Wiz_KeeD: and to correct the part with "you dont want to install.." the real thing is "you dont want to install NSA/MS stuff on your free software product and you dont want to use such evil stuff anymore" that would be the correct part and not the architecutre thing :)
+[11:31] <Wiz_KeeD> didn't get that fully tbh :-s
+[11:31] <ObrienDave> iceroot... LOL
+[11:31] <Wiz_KeeD> dpkg: error: unknown option --add-architecture
+[11:31] <ObrienDave> Wiz_KeeD... open a terminal. sudo apt-get install ia32libs
+[11:32] <Wiz_KeeD> Okay ObrienDave
+=== luke is now known as Guest56605
+[11:35] <Wiz_KeeD> And a real important question I have not been answered yet.If I somehow mess up by installing some wierd packages or from wrong repositories or smth like that and end up with conflicts and all that
+[11:35] <Wiz_KeeD> What is a good backup system that can take a snapshot and you just revert to ti?
+=== dude is now known as Guest87684
+[11:35] <Wiz_KeeD> Lik the windows recovery thing
+[11:35] <ObrienDave> now THAT is a good question
+[11:36] <ikonia> Wiz_KeeD: you shouldn't be using those "weird" packages as you where told yesterday
+[11:36] <ObrienDave> ikonia... lol
+[11:36] <Wiz_KeeD> Or any other mistake that might break my system
+[11:36] <Wiz_KeeD> Could be multilple causes
+[11:36] <Guest87684> is there a "Computer" menu in 1304?
+[11:36] <Wiz_KeeD> I compile wrongly, I install the wrong library and all that
+[11:36] <ikonia> Wiz_KeeD:if you don't use bad repos - you won't break your system
+[11:36] <Wiz_KeeD> I cannot be expected to work flawlessly
+[11:36] <iceroot> Wiz_KeeD: snapshot of the complete system?
+[11:36] <ikonia> Wiz_KeeD: you don't need to compile software that can cause a conflict with system libraries
+[11:37] <Wiz_KeeD> iceroot, yes
+[11:37] <ObrienDave> Wiz_KeeD... that's why we are trying to help you. sheesh
+[11:37] <Wiz_KeeD> ikonia, I had MANY MANY conflicts and crashes using JUST the standard repository
+[11:37] <ikonia> Wiz_KeeD: no you didn't
+[11:37] <ikonia> Wiz_KeeD: the standard repos do not conflict
+[11:37] <Wiz_KeeD> ObrienDave, in the idea that I might mess up and need to revert
+[11:38] <ikonia> Wiz_KeeD: the sooner you stop avoiding the advice of keep to the supported ubuntu repos, and don't try to compile software that conflicts with ubuntu software versions - you'll have no fatal problems
+[11:38] <ikonia> Wiz_KeeD: other types of problems are normally straight forward to fix
+[11:38] <Wiz_KeeD> That means I have to know when I install something else if it conflicts or not with ubuntu
+[11:38] <ObrienDave> Wiz_KeeD... i do understand your concerns. there are enough good people here that if someone gives you the wrong info, they will be pummeled with a very large trout LMAO
+[11:39] <ikonia> Wiz_KeeD: no, as if it's in the repo - it doesn't conflict.
+[11:40] <Wiz_KeeD> hahahha, lol ObrienDave
+[11:40] <Wiz_KeeD> ikonia, I understand
+[11:40] <Wiz_KeeD> I'll drop the backup idea then
+[11:40] <ikonia> Wiz_KeeD: nothing wrong with backups
+[11:41] <ikonia> Wiz_KeeD: but a full system backup for every change, you'll just waste time/disk space
+[11:41] <ObrienDave> Wiz_KeeD... backups are your friend, for sure
+[11:41] <Wiz_KeeD> File backups are not important to me, I just code in python and save the code with dvcs like git or bzr
+[11:41] <Wiz_KeeD> the rest is irrelevant
+[11:42] <Guest87684> anyone can help me navigate to the "Computer" menu?
+[11:42] <Daisyab__> i have 2 ubuntu accounts and i cant access one of them ever since i typed in a wrong path for installing xampp.  Can anyone help me recover my other account
+[11:42] <ikonia> Daisyab__: xammp has nothing to do with your login
+[11:42] <ObrienDave> Guest87684... what "computer" menu? on the desktop?
+[11:43] <universal> how to find out if the currrent wireless driver on my system is the lastest one and if not then where to find latest or latest stable one ? hardware is - hp pavilion g6 series laptop with broadcom BCM4313 mini wifi card. current wireless driver is "wl" the default one available in ubuntu 13.04 installed from soft. sources > additional drivers tab. wireless driver package is "bcmwl-kernel-source" Veriosn - 6.20.155.1+bdcom-0ubuntu6
+[11:43] <ikonia> universal: use the one ubuntu provides
+[11:43] <Daisyab__> ikonia: i know that but after i typed in the wrong path for installing xampp that account doesn't open anymore
+[11:43] <ikonia> Daisyab__: please define "doesn't open"
+[11:43] <Daisyab__> i'm thinking that the wrong path was used and it had no where to go
+[11:43] <universal> ikonia: ok...but the current driver 'wl' has some bugs
+[11:44] <universal> ikonia: its freezes system now or then
+[11:44] <Daisyab__> ikonia: after logging in with a password, my machine goes blank for a sec, then comes right back to the log in page
+[11:45] <ikonia> Daisyab__: login as the other user then "su - $other_username"
+[11:45] <ikonia> Daisyab__: see if that allows you to switch user withoout any errors/warnings
+[11:46] <ObrienDave> Wiz_KeeD... did you d/l ia32libs yet?
+[11:46] <Wiz_KeeD> It does not install ObrienDave because I started a backup with backintime program
+[11:46] <Wiz_KeeD> now i'm trying to stop and remove it
+[11:46] <Daisyab__> it does but i cant acces any of the files
+[11:46] <Wiz_KeeD> But it moves very sluggish, adn even though I closed it in ps -aux | grep backintime
+[11:46] <universal> !update
+[11:46] <ubottu> For upgrading, see the instructions at https://help.ubuntu.com/community/UpgradeNotes - see also http://www.ubuntu.com/desktop/get-ubuntu/upgrade
+[11:46] <Wiz_KeeD> I see a lot if instances running
+[11:46] <ObrienDave> NO!!! dont stop the backup!
+[11:46] <ikonia> Daisyab__: sounds like the permissions are wrong
+[11:47] <Wiz_KeeD> and that download of lib is still in 0% in building depdenency tree
+[11:47] <Wiz_KeeD> now what? :))
+[11:47] <ikonia> Daisyab__: can you do "pwd" when you su - $username
+[11:47] <Wiz_KeeD> Ubuntu is complex as hell man
+[11:47] <gerep> Hi all. What's the Linux Mint channel? I'm worried about my notebook temperature. It's 79ºC (4 cores) and the fan is spinning loud and fast =/
+[11:47] <ikonia> !mint | gerep
+[11:47] <ubottu> gerep: Linux Mint is not a supported derivative of Ubuntu. Please seek support in #linuxmint-help on irc.spotchat.org
+[11:47] <gerep> ikonia: that's why I asked what's the channel :) you know it?
+[11:48] <Wiz_KeeD> now i'm stuck, only idea that comes to mind is to restart
+[11:48] <Daisyab__> ikonia: it gives  me /root
+[11:48] <gerep> ikonia: thanks ;)
+[11:48] <ikonia> gerep: READ the ubottu gave you
+[11:48] <ikonia> Daisyab__: what command did you do "su...." exactly.
+[11:48] <gerep> #linuxmint-help
+[11:48] <ikonia> gerep: read it PROPERLY
+[11:48] <ikonia> gerep: it's not on freenode
+[11:48] <Daisyab__> su -$denis
+[11:48] <gerep> ikonia: sorry, I'm really stupid today hahaha
+[11:48] <ikonia> it's not funny
+[11:48] <Wiz_KeeD> any idea ObrienDave ?
+[11:48] <gerep> ikonia: thanks a lot, that will help ;)
+[11:48] <ObrienDave> Wiz_KeeD... it's not that difficult. just takes some getting used to is all
+[11:48] <Daisyab__> denis is the name of otheruse
+[11:48] <Daisyab__> *otheruser
+[11:49] <universal> !kernel
+[11:49] <ubottu> The core of Ubuntu is the Linux kernel: see https://help.ubuntu.com/community/Kernel - You shouldn't have to compile your own, and if you need to troubleshoot issues, you can try a !Mainline kernel instead, but if you insist, see https://help.ubuntu.com/community/Kernel/Compile (see also !Stages)
+[11:49] <ikonia> Daisyab__: what's the exact command you typed please.
+[11:49] <Wiz_KeeD> I think it's extremly difficult for these special cases, any retard can learn to apt-get install update and remove and kiill a few procceses in minutes
+[11:49] <Wiz_KeeD> But for this complex tasks almost nobody has the answer
+[11:49] <ikonia> Wiz_KeeD: please don't call people retards
+[11:49] <Daisyab__> ikonia: it was su -$denis
+[11:49] <ikonia> Daisyab__: ok, please do "exit" so you are back to your normal user, than do "su - denis"
+[11:50] <Wiz_KeeD> i'm not calling anyone retard, I was speaking generally to make the idea of "easy" more vivid :)
+[11:50] <ikonia> Wiz_KeeD: so don't do it please.
+[11:50] <Wiz_KeeD> How can I close all instances of backintime thing now...and uninstall it
+[11:50] <Daisyab__> ikonia: where denis takes the place of 'otheruser'
+[11:50] <Wiz_KeeD> Or should I restart first...
+[11:50] <universal> ikonia: what about updating kernel to a newer version which contains latest wl drivers
+[11:50] <ikonia> Daisyab__: is denis the name of the broken user
+[11:50] <ObrienDave> don't need to uninstall BackInTime
+[11:51] <Wiz_KeeD> Laptop moves right now like it has 200mb of ram
+[11:51] <ikonia> universal: use the kernel ubuntu provides
+[11:51] <universal> ikonia: yea...how to do it ?
+[11:51] <Wiz_KeeD> ObrienDave, need to stop it since it's killing my box and I see it in ps -aux | grep backintime
+[11:51] <Wiz_KeeD> even though I've closed everything
+[11:51] <Wiz_KeeD> And it's not running...
+[11:51] <ikonia> universal: you already are using the kernel ubuntu provides
+[11:51] <ikonia> universal: so stick with it
+[11:52] <Wiz_KeeD> And what's the point in keeping it there if i'm not going to use it ObrienDave ? :)
+[11:52] <Guest87684> ObrienDave, the menu that shows hard drives, and stuff well i guess the windows equivalent is "computer"
+[11:52] <Wiz_KeeD> anyway, I will restart now
+[11:52] <Wiz_KeeD> Since I don't know anything beter to do
+[11:52] <ObrienDave> Wiz_KeeD... go ahead and power off the machine
+[11:53] <universal> ikonia: no i mean the updated kernel....my system is 13.04 and now 13.10 is expected to be rolled out next month so there should a newer kernel
+[11:53] <ikonia> universal: so you upgrade when 13.10 is available
+[11:53] <Wiz_KeeD> I can't, it moves too slow
+[11:53] <Daisyab__> ikonia: just did that and entered password then i get an error message -su export: '=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/denis/lampp': not a valid identifier.  denis is the name of the broken account
+[11:53] <Wiz_KeeD> :))
+[11:53] <Wiz_KeeD> Great os
+[11:53] <universal> ikonia: no fixes for now ? :(
+[11:54] <ikonia> Daisyab__: ok, sounds like th profile is messed up a bit
+[11:54] <ObrienDave> Guest87684... Ubuntu does not use that type of a menu
+[11:54] <ikonia> Daisyab__: can you type "id" please.
+[11:54] <ikonia> Daisyab__: (as the user denis)
+[11:54] <ikonia> Daisyab__: show me the output
+[11:54] <nugroho> 11.5015.201081.0001 33.7415.201081.0001
+[11:54] <ObrienDave> Guest87684... you need to start with the folder called "file system"
+[11:55] <Guest87684> obriendave, in 12.04 i think there use to be that menu by moving ur mouse up to places then computer
+[11:55] <Daisyab__> what do you mean as the user denis
+=== hherholz is now known as HeikoH
+[11:55] <Guest87684> obriendave, it shows all the listed drives and stuff
+[11:55] <ObrienDave> Guest87684... then MOUNTED drives would be listed under the /mnt folder
+[11:55] <ikonia> Daisyab__: su - denis, then id
+[11:56] <ObrienDave> Guest87684... that's been removed in 13.04 i think
+[11:56] <Guest87684> obriendave, yeah that was my question, can we get that back?
+[11:56] <ObrienDave> Guest87684... not sure, I run Xubuntu
+[11:57] <Guest87684> obriendave, alright thx for the help
+[11:57] <ObrienDave> Guest87684... sorry i could not help you batter
+[11:58] <ObrienDave> *better
+[11:58] <Guest87684> obriendave, No problem thx for helping anyways
+[11:59] <Daisyab__> ikonia: result: uid = 1000(denis) gid = 1000 (denis)  groups = 1000 (denis), 4 (adm), 20 (dialout), 24(cdrom), 46(plugdev), 111(lpadmin), 119(admin), 122(sambashare), 127 (guest)
+[11:59] <ikonia> Daisyab__: ok, that's good.
+[11:59] <ikonia> Daisyab__: can you do "pwd" too and show me the output

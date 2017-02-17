@@ -1,0 +1,241 @@
+[17:09] <smerz> try disabling wlan power saving
+[17:09] <gmachine_24> smerz, ok
+[17:09] <smerz> that's an odd one though
+[17:09] <smerz> but it helped me on my campus wlan
+[17:09] <BlackZatara> My notebook is a HP G42-371br and he has two video cards
+[17:11] <OerHeks> BlackZatara, optimus?
+[17:11] <smerz> gmachine_24, "Power Management:off" when you run "iwconfig". can't recall how to disable it anymore :(
+[17:11] <BlackZatara> oerHeks
+[17:11] <BlackZatara> hi
+[17:12] <gmachine_24> smerz, I just checked. Power management is already off.
+[17:12] <AptGetter> Hi. How do I do an "apt-get upgrade" but exclude certain packages? Specifically I want to "apt-get upgrade" without upgrading any Unity packages. Thanks.
+[17:12] <BlackZatara> I'm having problems at the installation vga of my noteboo
+[17:12] <odinsbane> Damn unetbooten froze again while setting up persistence. It doesn't like 3gigs either.
+[17:12] <BlackZatara> help me
+[17:12] <BlackZatara> ?
+[17:12] <odinsbane> BlackZatara: what cards are you using.
+[17:13] <BlackZatara> um min
+[17:13] <smerz> gmachine_24, which channel are you on, and which are your neighbours on?
+[17:13] <smerz> because like channel 1,2,3 they all overlap. you really want to be 4-5 chans away from the mass. other than that I got no further ideas sorry :(
+[17:13] <BlackZatara> 01:05.0 VGA compatible controller: Advanced Micro Devices [AMD] nee ATI RS880M [Mobility Radeon HD 4200 Series]
+[17:13] <BlackZatara> 02:00.0 VGA compatible controller: Advanced Micro Devices [AMD] nee ATI Robson CE [AMD Radeon HD 6300 Series]
+[17:14] <tarathiel> hi, is there any way to bypass unity-greeter through ssh?
+[17:14] <odinsbane> BlackZatara: so you want an external monitor?
+[17:14] <deepa> Can you mount FFS in Ubuntu?
+[17:15] <BlackZatara> I want better performance, because it consumes much battery for my notebook and I can not use hdm
+[17:15] <smerz> deepa, i never heard of "FFS" but linux usually can mount a lot of types.
+[17:15] <deepa> Berkeley Fast File System
+[17:15] <McDuffy> ==================
+[17:16] <deepa> oh hey, apparently called UFS too
+[17:16] <OerHeks> BlackZatara, so it is hybride graphics ?
+[17:16] <smerz> deepa, yeah maybe go investigate along that route hehe
+[17:18] <BlackZatara> yes
+[17:18] <sanguisdex> so here an odd one for you. I was using wifi, then I plugged in, now wifi can't get any data depitethe connection
+[17:18] <sanguisdex> what should I be looking at?
+[17:20] <crazicoder> hi all
+[17:20] <KRomo> anyone know if the apple keyboard will work with ubuntu 12.04?
+[17:22] <KRomo> the wired keyboard
+[17:23] <sunday> hi hi
+[17:24] <OerHeks> KRomo, why don't you plug it in and see?
+[17:24] <RBV> KRomo: Sure it does
+[17:26] <KRomo> i dont own ir yet lol
+[17:26] <KRomo> OerHeks, thanks for the great advice lol
+[17:27] <oooaaaoooo> hi guys does anyone know if empathy supports proxies?
+[17:27] <RBV> oooaaaoooo: Did you even ask google? http://anupam128.blogspot.com/2011/03/using-empathy-behind-proxy.html
+=== dirtypillows is now known as ShameSpiral
+[17:28] <ssta> RBV: the policy of this channel tends to be "be nice to those people too inexperienced or lazy to google" :)
+[17:30] <pokkos> 000
+[17:30] <escott> ssta, RBV, i'm not sure lazy is allowed (i certainly don't help lazy people), but not everyone knows the right terms to google
+[17:31] <ssta> nah, lazy is allowed
+[17:31] <ssta> "be nice to everyone, no matter what"
+[17:31] <martinphone> i HAVE 400 radio stations I want to add to radio tray, but all of em are as link to: In the libreoffice calc document I am editing I see only kbps, the actual address is the link. I need to replace kbps for the actual address
+[17:32] <escott> martinphone, can you give an example line of what you have and what you need to have?
+[17:32] <go8765> Hello. Is anyway to download blogspot blog via wget with pictures that posting in blog?
+[17:34] <martinphone> escott: for just one line I see 128kbps, if I pass the mouse over it, the part I need appears: http://www.wdr.de/wdrlive/media/wdr2_essen_duesseldorf.m3u
+[17:34] <martinphone> like that for 400 lines
+[17:35] <escott> martinphone, does the link appear if you save as csv and open in a text editor?
+[17:35] <odinsbane> go8765: I beleive you need to follow links.
+[17:35] <martinphone> escott, no idea... ill give that a try
+[17:36] <odinsbane> go8765: or maybe something like this? http://linux.derkeiler.com/Newsgroups/comp.os.linux.misc/2006-03/msg00222.html
+[17:37] <escott> martinphone, alternately save as xml and then run grep and sed over the xml to find all the links
+[17:38] <falematte> hi all, i an trying to make a simple script that opens 4 firefox windows: http://pastebin.com/1m65gcSy If i launch it i get only one window started and then, if i close it another one ic created. What can i do to fix this?
+[17:38] <go8765> odinsbane: blogspot have pictures urls, like 3.bp.blogspot.* and wget dont download it, becouse it have not the same like blog url :(
+[17:39] <escott> falematte, command &
+[17:39] <falematte> escott, i tried that one too. In terminal it works but not in the script!
+[17:39] <escott> falematte, what is your shebang? /bin/sh is dash not bash
+[17:40] <sunday> .-.
+[17:40] <sunday> byeeeeeeeee
+[17:40] <falematte> escott, #!/usr/bin/env python
+[17:41] <falematte> escott, This is my first script :P Aniway i think u mean that line isn't it?
+[17:41] <odinsbane> go8765: what about setting the Domain Acceptance? http://www.editcorp.com/Personal/Lars_Appel/wget/wget_4.html
+[17:41] <escott> falematte, (a) why are you specifying "env python" instead of just python? (b) for a python script I dont know how you would background a job. python isnt a shell
+[17:42] <odinsbane> escott: that is the correct way.
+[17:42] <Somelauw> Hi, I noticed that both wmii and awesome don't work correctly in ubuntu 11.10. Has support for everything besides unity been stopped?
+[17:43] <Somelauw> Or has it something to do with my computer.
+[17:43] <falematte> escott, i am folowing a guide, i dunno why the "env". I am using python because is really more flexible than bash! With the subprocess.call it should do the job! With google chrome it works!
+[17:44] <odinsbane> falematte: you #! line is correct.
+[17:45] <falematte> odinsbane, i think i need some Firefox option...
+[17:45] <odinsbane> falematte: .call isn't as good as Popen. Is .call being called four times?
+[17:45] <ssta> falematte: I don't think firefox spawns a new window from the command line if one is already open.  There's a -new-window option IIRC
+[17:45] <falematte> Odd-rationale, yes
+[17:45] <odinsbane> falematte: ie add a check, print "something"
+[17:46] <falematte> odinsbane, checking
+[17:47] <falematte> odinsbane, how to ad a command in the for loop in python?
+[17:48] <falematte> ssta, i tried that option too :S
+[17:48] <roaje> hey i just updated firefox, when i open a new tab it shows me a list of commonly visited sites
+[17:49] <roaje> i dont see a prefernce option to disable that, anyone know how?
+=== digital_ownage is now known as digital_ownage{e
+[17:50] <zally666> hi
+[17:50] <zally666> so how do i reinstall dvb-t&analog tvtuner drivers in ubuntu ?
+[17:51] <JoseeAntonioR> zally666: sudo apt-get install --reinstall dvb-t analogtvtuner
+[17:51] <roaje> aha found it - in about:config the option is browser.newtabpage.enabled
+[17:52] <kangarooo> http://askubuntu.com/questions/145601/how-to-install-package-without-internet-connection
+[17:53] <odinsbane> I'm using kubuntu a kubuntu livecd and I used usb-creator-kde to create a usb and now it askes me to 'try ubuntu' or install every time.
+[17:54] <odinsbane> falematte: put a return after the colon, and then indent your line for each line of code.
+[17:54] <Somelauw> anyone?
+[17:55] <falematte> odinsbane, ok the function is launched 3 times
+[17:55] <odinsbane> falematte: but still only 1 window?
+[17:56] <falematte> odinsbane, yes but if i close it another one is opened
+[17:59] <falematte> odinsbane, ok problem solved, thx for help! here is the code  http://pastebin.com/NiVUGVrX
+=== lxde is now known as Guest1037
+[18:00] <Bhavesh> Using Compiz on 12.04 will kill me?
+[18:00] <xangua> Bhavesh: if you are using unity you are alreasy using compiz
+[18:01] <Bhavesh> xangua: I mean ccsm, or the desktop effects
+[18:01] <Somelauw> Does unity by chance ignore Xdefaults?
+[18:01] <xangua> Bhavesh: depends on the effects, unity+cube=bad idea
+[18:01] <Bhavesh> ok
+[18:02] <delac> Bhavesh: use ccsm only when also using gnome classic desktop
+[18:02] <MonkeyDust> Bhavesh  i tried unity + cube, for testing purposes and i can rrpeat what xangua  says
+[18:02] <Bhavesh> delac: so you mean I should install gnome-shell and then use ccsm on unity?
+[18:02] <Bhavesh> no
+[18:03] <delac> Bhavesh: I think gnome-panel is enough for gnome classic, but gnome-shell might incluede it too...
+[18:03] <Bhavesh> MonkeyDust: ok, rt
+[18:03] <Bhavesh> ty*
+[18:03] <Bhavesh> alright
+[18:04] <delac> Bhavesh: just see that the unity plugin is disabled in the ccsm before you start using other plugins
+[18:04] <Bhavesh> delac: ok thank you.
+[18:05] <jennie> what are features in ubuntu that makes it ahead of other distros ?
+[18:06] <oCean> jennie: this channel is for tech support issues. Please use #ubuntu-offtopic for general discussion
+=== eid is now known as eid_
+[18:08] <Jancoover> ##english
+[18:11] <LoRez> is there a way to get ubuntu 11.10/12.04 to not capture Alt-~?
+[18:12] <Python132o> root@arsenic:~/veth1#  iptables -t mangle -A PREROUTING -p tcp -m state --state NEW -m statistic --mode nth --every 2 --packet 0 -j WAN0
+[18:12] <Python132o> /lib/xtables/libxt_statistic.so: /lib/xtables/libxt_statistic.so: undefined symbol: lround  ====>  iptables v1.4.12: Couldn't load match `statistic':Success
+[18:13] <OAlexM992> E ai pessoas.
+=== oyost is now known as gujjuDholFafda
+[18:21] <jennie> I want my both hardware work printer and GFX card and drivers are available for linux please tell that ubuntu will make both work http://support-in.canon-asia.com/contents/IN/EN/0900772424.html http://www.amd.com/us/products/desktop/graphics/amd-radeon-hd-6000/hd-6570/pages/amd-radeon-hd-6570-overview.aspx
+[18:22] <martinphone> help, I need step by step instructions to extract all addresses from 400 lines of text
+[18:22] <escott> martinphone, did they appear in the csv?
+[18:22] <martinphone> escott, csv file will only list the actual text, not the links
+[18:23] <martinphone> same for xml
+[18:23] <martinphone> unless I am missing something, given the noob I am
+[18:24] <escott> martinphone, paste an example line that contains the link then
+[18:25] <martinphone> escott, 128 Kbps
+[18:25] <deffrag> How to find which device driver is in use to when USB hub is working?
+[18:25] <martinphone> right click on that will show the link
+[18:25] <escott> martinphone, no you need to find that text in the file
+[18:26] <escott> martinphone, when you open that file in gedit you need to find that link
+[18:27] <jennie> ?
+[18:29] <ska> I may have broken apt. I accidentally killed 'aptitude dist-upgrade' when it finished its download.
+[18:29] <Frood> when one moves a hard drive from one computer to another with Ubuntu on it, what do you have to do to get all the drivers, etc.
+[18:29] <ska> Is there a way to jump it?
+[18:29] <odinsbane> ska: apt-get install -f
+[18:29] <Frood> apparently Ubuntu didn't like moving from a Pentium with integrated graphics to an i5 with integrated graphics.
+[18:29] <odinsbane> Frood: why not reinstall?
+[18:30] <Frood> odinsbane: Because I have all the data on this one, and it's easier to just move the hard drive over.
+[18:31] <escott> Frood, i would think both would work as both use i915 what is in /etc/modules?
+[18:31] <ska> odinsbane: that didn't work but "aptitude upgrade -f" seems to have started a party.
+[18:31] <Frood> escott: just two lines. lp
+[18:31] <Frood> rtc
+[18:32] <kollision> i installed ia32-libs and now i cannot uninstall them
+[18:32] <escott> Frood, you dont have an Xorg.conf do you?
+[18:32] <escott> Frood, and what version is ubuntu/what revision is the i5
+=== zz_arejay is now known as arejay
+[18:33] <odinsbane> muon is a horrible estimater of diskspace usage. I removed some packages and updated a couple. It claimed I would save 85 megs, I ended up using an additional 130megs. And that was after using apt-get clean.
+[18:33] <Frood> escott: ivy bridge, i5-3550, and 12.04
+[18:34] <Frood> i don't recall creating Xorg.conf, but it was probably automatically generated
+[18:34] <Bhavesh_> Looks like gnome-shell for 64bit ubuntu 12.04 is missing from Ubuntu repos. Because sudo apt-get install gnome-shell returns 404 Nor Found.
+[18:34] <kollision> how can i get rid off that package ia32-libs? installation failed and now the apt db seems to be inconsistent
+[18:34] <escott> Frood, i'm not sure what it could be. i would expect that to autodetect
+[18:34] <Bhavesh_> Not*
+[18:35] <Frood> it seems to have fixed itself.
+[18:35] <Frood> now... why won't it detect that I have a bluetooth adapter?
+[18:35] <Silivrenion> Having a problem. I upgraded from 11 to 12, and now the system won't boot into unity? It gets stuck after checking battery state and wont continue. Help?
+[18:36] <Frood> with an intel centrino 6230
+[18:36] <Nicee> hi
+[18:36] <Nicee> porn
+[18:36] <oCean> Nicee: please behave
+[18:36] <Nicee> ok
+[18:37] <Nicee> hi
+[18:37] <Silivrenion> What does one do when a distro upgrade fails?
+[18:37] <Nicee> Is my computer open for Poker?
+[18:38] <Nicee> porn
+[18:38] <Kruptein> Hey I have the problem that some of my applications don't get an icon in the unity bar and hence if I minimize them I can't get to them anymore as alt-tab won't display the apps either
+[18:39] <det> Is it possible to make the system defaults fonts be the Deja Vu fonts instead of the Droid fonts ?
+[18:40] <Silivrenion> I cant get ubuntu to start past the loading of a few services. How can i fix this after the upgrade?
+=== JoFo_ is now known as Jofo
+[18:41] <deffrag> How to find which kernel driver is in use for connected USB hub?
+[18:41] <Silivrenion> I can't find any ubuntu information on what to do if an upgrade fails
+[18:41] <escott> deffrag, lshw
+[18:42] <M4rv> ciao
+[18:42] <M4rv> !list
+[18:42] <ubottu> M4rv: No warez here! This is not a file sharing channel (or network); read the channel topic. If you're looking for information about me, type « /msg ubottu !bot ». If you're looking for a channel, see « /msg ubottu !alis ».
+[18:43] <Eagleman> How to get rid of bacula? i'm seeing pieces of it everywhere, like in my mysql database and in /etc/init.d
+[18:45] <kollision> var/cache/apt/archives/libqtcore4_4%3a4.8.1-0ubuntu4.1_i386.deb
+[18:45] <kollision> E: Sub-process /usr/bin/dpkg returned an error code (1)
+[18:45] <kollision> wtf?
+[18:45] <Silivrenion> Is there any way to revert the 12.04 upgrade? Or am i stuck reinstalling?
+[18:45] <kollision> i have an amd64 and not an i386 system
+[18:45] <cypher-neo> Silivrenion, What went wrong?
+[18:45] <jennie> please answer friends I want my both hardware work, printer and GFX card and drivers are available for linux please tell ubuntu will make both work http://support-in.canon-asia.com/contents/IN/EN/0900772424.html http://www.amd.com/us/products/desktop/graphics/amd-radeon-hd-6000/hd-6570/pages/amd-radeon-hd-6570-overview.aspx
+[18:45] <Silivrenion> Upgrade from 11 to 12 went ok, restarted.  Wont boot now
+[18:46] <Silivrenion> It shows ubuntu purple with dots,  some terminal text and stops
+[18:46] <cypher-neo> Silivrenion, What does the Terminal text say?
+[18:46] <Silivrenion> checking batter state.  OK
+[18:47] <Silivrenion> Thays the last msg
+[18:47] <cypher-neo> Silivrenion, You upgraded from 11.10 to 12.04?
+[18:47] <Silivrenion> Yes
+[18:48] <deffrag> escott: No, I don't see USB hub in lshw
+[18:48] <cypher-neo> Silivrenion, See if you can access the boot menu by holding down Shift while it boots.
+[18:48] <Silivrenion> One sec
+[18:49] <cypher-neo> Silivrenion, There should be additional options in there. And if you have left-over linux images that haven't been deleted you could try booting from an older one and see if it completes the boot.
+[18:49] <Silivrenion> Im in grub
+[18:50] <cypher-neo> Silivrenion, Otherwise just hold for now... I'm gonna look something up.
+[18:50] <Silivrenion> Ok
+[18:50] <Eagleman> Kinda offtopic, how do i login on freenode?
+=== arejay is now known as zz_arejay
+[18:50] <dirtdog> dont they use nickserv
+[18:50] <xangua> !identify | Eagleman
+[18:50] <ubottu> Eagleman: You can identify automatically by using your NickServ password as the server password in your IRC client. When identifying manually, do NOT send the command from a channel's tab, or a typo may give away your password. If that happened, type « /msg NickServ set password <new-password> » in the server tab as soon as possible.
+[18:50] <cknox> Eagleman: /msg nickserv help
+[18:51] <cypher-neo> Silivrenion, This sounds like your problem here http://ubuntuforums.org/showthread.php?t=1859820
+[18:51] <Silivrenion> I see 3.0.0 20 generic and recovery,  previous version , and memtest,
+[18:51] <oCean> martinphone: I think if you Export as.. and choose XHTML, it will show the actual URL in the output
+[18:51] <oCean> martinphone: a little sed and cut will filter the links from that content
+[18:51] <cypher-neo> Silivrenion, Looks like it could be a graphics issue.
+[18:51] <tuxgeek> Eagleman: "/connect irc.freenode.net"
+[18:51] <Silivrenion> really?
+[18:51] <xangua> Silivrenion: sounds like the kernel was not upgraded, did your pc go to hibernation while upgrading interrupting the upgrade itself¿
+[18:52] <Silivrenion> No
+[18:52] <Silivrenion> It completed ok
+[18:52] <Eagleman> No login into my account
+[18:52] <oCean> Eagleman: please use #freenode channel for that
+[18:52] <Silivrenion> I restarted when the distro upgrade prompted
+[18:52] <Eagleman> ty
+[18:52] <cypher-neo> xangua, Check this out. It's sounds eerily the same http://ubuntuforums.org/showthread.php?t=1859820
+[18:53] <martinphone> oCean, Im already cutting with geany...
+[18:53] <martinphone> but thanks
+[18:53] <oCean> martinphone: ah ok.
+[18:53] <fasta> How do I get previews to work in dolphin for PDF files? I already told Dolphin to show them for PDF files, but it just doesn't work.
+[18:54] <Silivrenion> Strange, i dont use proprietary drivers. Its a netbook
+[18:55] <KRomo> wow just bought the apple keyboard from best buy...the thing is amazing
+[18:56] <Silivrenion> This is wierd
+[18:56] <Silivrenion> I opened in a terminal view and typed startx... nothing on screen
+[18:56] <Silivrenion> Wait, theres a cursor
+=== Travis is now known as Guest54787
+[18:57] <Guest54787> Ya I need a Project to work on today:) I just dont know what to do...
+[18:58] <Silivrenion> Its acting very strange. No mouse movement. I see page icons on the screen but no text or filetype icons. Theres no unity elements
+[18:59] <jennie> ...
+[18:59] <melkor> jennie one question at a time maybe. What is wrong with the printer?
+[18:59] <kangarooo> http://askubuntu.com/questions/145601/how-to-install-package-without-internet-connection
+=== miguel is now known as Guest72082

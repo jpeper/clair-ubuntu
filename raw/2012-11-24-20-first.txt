@@ -1,0 +1,316 @@
+[19:38] <ActionParsnip> arvislacis: sudo apt-get install libxatracker1
+[19:38] <stupid-by-defaul> any one free for helping me??
+[19:38] <arvislacis> AceBlade258, I can't get it directly because I have restriction of my internet.
+[19:38] <AceBlade258> lol, auto-complete fail
+[19:39] <ActionParsnip> blueribbon: usb is painfully slow,despite what people may think or say
+[19:39] <blueribbon> ActionParsnip: I lied. It does not work :(!
+[19:39] <winb> ActionParsnip: Didn't work for me. I have no /appa/indicators/datetime in dconf-editor
+[19:39] <ActionParsnip> stupid-by-defaul: just ask ad the channel will reply, if it can
+[19:39] <arvislacis> ActionParsnip, Could you please get 8.0.4-0ubuntu0.2 version, rename it and send to me?
+[19:39] <ActionParsnip> winb: search all of dconf for datetime then
+[19:39] <blueribbon> ActionParsnip: God damnit this is annoying :/ I give up. Thank god for USB connectivity in modern TVs.
+[19:39] <dcherniv> kieppie3, tried nomodeset in grub options?
+[19:39] <ActionParsnip> arvislacis: do you not have web access on the system?
+[19:40] <ActionParsnip> arvislacis: what is the output of:   uname -a
+[19:40] <arvislacis> ActionParsnip, I have university Internet and it bans some keywords.
+[19:40] <dcherniv> kieppie3, nomodeset might help if you have standard drivers
+=== stupid-by-defaul is now known as stupidBYdefault
+[19:41] <ActionParsnip> arvislacis: don't mind doing it :D
+[19:41] <arvislacis> What?
+[19:41] <dcherniv> kieppie3, for fglrx ati is notorious for deprecating older cards in the newest drivers. check the ati site for the newest driver and make sure your card is supported
+[19:41] <drecute> dcherniv: do you have alternative ideas on what I want to achieve?
+[19:41] <ActionParsnip> arvislacis: what is the output of:   uname -a
+[19:41] <arvislacis> Linux arvis 3.2.0-23-generic #36-Ubuntu SMP Tue Apr 10 20:41:14 UTC 2012 i686 i686 i386 GNU/Linux
+[19:41] <blueribbon> ActionParsnip: I can only assume usb3 is actually quite good?
+[19:41] <kieppie3> dcherniv: I have not. presently ssh'd into the box, trying to flush out some old bits & loading new.
+[19:41] <dcherniv> drecute, php-fpm is fast-cgi from what i can tell?
+[19:42] <kieppie3> dcherniv: thanks - I will. I'm happy to use the linux drivers if it offers 3D hardware-accelleration
+[19:42] <drecute> dcherniv: yeah
+[19:42] <ActionParsnip> arvislacis: https://dl.dropbox.com/u/8850924/package
+[19:42] <ActionParsnip> arvislacis: is that ok?
+[19:43] <ActionParsnip> blueribbon: its a faster tech, yes
+[19:43] <arvislacis> I will look.
+[19:43] <mavi> olaa
+[19:43] <blueribbon> ok coool :)
+[19:43] <dcherniv> drecute, what do php/apache logs say when it crashes?
+[19:44] <mavi> c'è qualche italiano che mi può dare una mano con ubuntu?
+[19:44] <arvislacis> Thanks ActionParsnip.
+[19:44] <ActionParsnip> blueribbon: personally I think PXE booting is the future :)
+[19:44] <ActionParsnip> arvislacis: np, got the file?
+[19:44] <blueribbon> PXE?
+[19:44] <arvislacis> Yes, also installed it.
+[19:45] <ActionParsnip> blueribbon: booting on the network
+[19:45] <blueribbon> ActionParsnip: Oh. Screw that :x
+[19:45] <ActionParsnip> blueribbon: you'll see :)
+=== len is now known as Guest11334
+[19:45] <blueribbon> ActionParsnip: hmm nahhh
+[19:46] <blueribbon> ActionParsnip: Far too much for me. Too many security issues etc
+[19:46] <kieppie3> dcherniv: the ATI site seems to indicate the 4xxx-series cards are supported, but does not explicitly list individual cards
+[19:46] <ActionParsnip> blueribbon: you can keep the PXE server updated, saves having to upgrade much once installed
+[19:46] <ActionParsnip> kieppie3: there is a PPA with the legacy driver
+[19:46] <ANTI-NON-FREE-OS> actionparsnip is there a way to upgrade to ubuntu 12.04 to 12.10 with out loosing your files like videos and soforth from upgrading from a usb install
+[19:46] <ActionParsnip> ANTI-NON-FREE-OS: your backups will prevent any data loss
+[19:47] <blueribbon> ActionParsnip: Seems like the dream to me ;)
+[19:47] <ANTI-NON-FREE-OS> what backups
+[19:48] <ActionParsnip> ANTI-NON-FREE-OS: the backups you made, your data is important. Right?
+[19:48] <ActionParsnip> blueribbon: https://launchpad.net/~makson96/+archive/fglrx
+[19:48] <dcherniv> kieppie3, cool, i'd install driver from ati site. usually all you have to do is run their install script. If that fails/usr/share/ati/fglrx-uninstall.sh --force
+[19:48] <ANTI-NON-FREE-OS> not realy
+[19:48] <ActionParsnip> ANTI-NON-FREE-OS: then why ask, just go for it
+[19:48] <ANTI-NON-FREE-OS> i can actually do with out i was just hoping i dint have to back everything up
+[19:48] <kieppie3> dcherniv: tried that - will do so again
+[19:48] <ActionParsnip> ANTI-NON-FREE-OS: the upgrade  process doesn't delete any user data......
+[19:49] <ActionParsnip> ANTI-NON-FREE-OS: you should have a backup if your data is of any value to you
+[19:49] <ANTI-NON-FREE-OS> but the thing is i dont know how to upgrade from usb
+[19:49] <mavi> hi
+[19:49] <mavi> someone can please help me ?
+[19:50] <ANTI-NON-FREE-OS> bbl going to go figure this out
+[19:50] <ActionParsnip> ANTI-NON-FREE-OS: you can boot to the media and there will be an upgrade optin
+[19:50] <ANTI-NON-FREE-OS> ahhh cool thanks action parsnip
+[19:50] <BluesKaj> mavi , just ask your question
+[19:50] <ActionParsnip> ANTI-NON-FREE-OS: use TAB to autocomplete nicks :)
+[19:51] <ANTI-NON-FREE-OS> ok
+[19:51] <mavi> ok i've ubuntu studio and i would like to install avant window navigator..how?
+[19:52] <stupidBYdefault> virtual box help?
+[19:52] <topper4125> Running 12.04.01, something keeps popping up asking for my gnomering password... how do I find out what program is prompting for it?
+[19:52] <ActionParsnip> mavi: what is the output of:  lsb_release -sc
+[19:52] <stupidBYdefault> on private if possible
+[19:52] <ActionParsnip> topper4125: its gnome-keyring
+[19:52] <topper4125> Right... but it never says *what* is asking for the PW
+[19:52] <ActionParsnip> stupidBYdefault: if you ask in the channel you have more chance of a fix as more eyes are reading your issue and can make suggestions
+[19:52] <mavi> quantal
+[19:53] <ActionParsnip> topper4125: its the password you set for it
+[19:53] <ActionParsnip> !info avant-window-navigator
+[19:53] <ubottu> avant-window-navigator (source: avant-window-navigator): MacOS X like panel for GNOME. In component universe, is optional. Version 0.4.1~bzr830-2ubuntu2 (quantal), package size 341 kB, installed size 1060 kB
+[19:53] <stupidBYdefault> yes, i know... cant follow all the lines
+[19:53] <xjkx> I ran this command (on the end of the message) to make my sound card work, but it was just not plugged right, I did it and now its shown. But after command, not even my onboard card works, and I cant play avi files anymore, it bugs. How can I undo this command ? I tested my sound card on an older version of ubuntu I have, and it worked, its all working now, except on this ubuntu I am now, which is the most updated, here is the command: sudo add-apt-reposito
+[19:53] <ActionParsnip> mavi: its in the official repos.
+[19:53] <AndreeeCZ> hi. I have a problem with my ac'97 integrated soundMAX soundcard.. Not even lspci can see it. What can i do? Thank you :)
+[19:54] <topper4125> I'm trying to figure out which app is asking for it... it pops up every 15ish minutes for no aparent reason... would like to find out why.
+[19:54] <ActionParsnip> AndreeeCZ: what is the output of: wget -O alsa-info.sh http://www.alsa-project.org/alsa-info.sh && chmod +x ./alsa-info.sh && ./alsa-info.sh --upload
+=== ubuntu__ is now known as jacobscrackers
+[19:55] <ActionParsnip> topper4125: if you don't know it then use http://askubuntu.com/questions/65281/how-to-recover-reset-forgotten-gnome-keyring-password
+[19:57] <topper4125> I didn't forget the password... I just don't know why my system keeps asking for it... or what app keeps requiring it
+[19:58] <cheesecakes> can anyone confirm this
+[19:58] <cheesecakes> i think i may have found a bug in the users app
+[19:59] <ActionParsnip> cheesecakes: what you got ?
+[19:59] <cheesecakes> when you click on the change password and
+=== jacobscrackers is now known as HwntwPenguin
+[19:59] <cheesecakes> the select the action as password asked on login and then click apply
+[19:59] <cheesecakes> i lose my password
+[20:00] <cheesecakes> the user password and then have to reset it using root prompt
+[20:00] <cheesecakes> because it fails to recognise the old password now
+[20:00] <ActionParsnip> cheesecakes: I suggest you report a bug
+[20:01] <ActionParsnip> cheesecakes: on the bug, give the steps to recreate and the bug guys can have a go
+[20:01] <cheesecakes> but i just want to know if its my system that acting weird
+[20:01] <cheesecakes> ActionParsnip: can you test this?
+[20:03] <ActionParsnip> cheesecakes: what is the output of:  lsb_release -sc
+[20:05] <cheesecakes> ActionParsnip: precise
+[20:05] <ActionParsnip> cheesecakes: I'm on raring, sorry
+[20:05] <cheesecakes> is raring newer?
+=== HwntwPenguin is now known as jBot1
+[20:06] <ActionParsnip> cheesecakes: yes, its the pre-release
+[20:06] <AndreeeCZ> ActionParsnip, sorry it took so long: http://www.alsa-project.org/db/?f=e019ff198ac38e216016f281f94c30f1b3356c72
+[20:06] <ActionParsnip> cheesecakes: quantal has been released and is stable and later than precise
+[20:06] <ActionParsnip> cheesecakes: Quantal is not LTS though
+[20:07] <d4rkh4nd8> Is there a terminal command to restore Ubuntu to like new install. I dont wanna go thru the hole reinstall
+[20:07] <ActionParsnip> AndreeeCZ: there are no sound cards detected in your system....
+[20:08] <AndreeeCZ> ActionParsnip, I know. But why? The soundcard IS on the mobo. It has jacks and is enabled in bios..
+[20:08] <ActionParsnip> d4rkh4nd8: if you make a new user and log in as that, is that how you want the system to be
+[20:08] <d4rkh4nd8> Ya, basicaly keep the updates and loose any programs installed
+[20:08] <ActionParsnip> AndreeeCZ: is it enabled in BIOS?
+[20:09] <AndreeeCZ> yes, it has two modes: auto and disabled. Now its on auto.
+[20:09] <ActionParsnip> d4rkh4nd8: the apps will not be uninstalled, all you need to do is default the apps
+[20:09] <cheesecakes> ActionParsnip: still give it a shot
+[20:09] <ActionParsnip> AndreeeCZ: i'd run:   dmesg | less     after a reboot and see if its deteted at boot
+[20:09] <cheesecakes> make sure your root password is different thought
+[20:10] <d4rkh4nd8> so new user and delet any olf files i dont want. Im giving the PC to a friend. But i cant do a new install my usb and cd/dvds are gone
+[20:10] <ActionParsnip> cheesecakes: I don't have  root password, its not required or advised
+[20:10] <cheesecakes> *though or you will have to go  into recoverymode
+[20:10] <tinyhand> Ubuntu is awesome, i just switched from Mac OS X and im loving it!
+[20:11] <ActionParsnip> d4rkh4nd8: if you boot to root recovery mode and dete the hidden folders (but not ~/.bashrc ~/.profile ~/.Xauthority and ~/.ICEauthority)  and reboot, you will get default folders made for your apps
+[20:11] <cheesecakes> tinyhand: yehaa
+[20:11] <d4rkh4nd8> okay thank you Action just wat i needed
+[20:12] <ActionParsnip> d4rkh4nd8: make sure you have no configs etc you want to keep for apps in $HOME or $HOME/.config    but remove the rest
+[20:12] <d4rkh4nd8> okay very kool thanks
+[20:12] <ActionParsnip> cheesecakes: so just set my login pass in the GUI app, that's all
+[20:12] <cheesecakes> no no
+[20:13] <ActionParsnip> cheesecakes: I have user accounts open and unlocked
+[20:13] <tinyhand> Apple's marketing department has coerced people in paying over 1k for a computer when all they plan on doing is some casual web browsing and office tasks
+[20:13] <cheesecakes> click on the password field in gui and then change the action to "Login without a password" and click change
+[20:13] <ActionParsnip> tinyhand: been saying that for years
+[20:14] <ActionParsnip> cheesecakes: I dont ave that. After I click the password dots. I get current, new , confirm
+[20:15] <cheesecakes> and then try to use the users password for something like sudo su
+[20:15] <ActionParsnip> cheesecakes: using:   sudo -i    is advised
+[20:15] <cheesecakes> dont you have a action drop down list ?
+[20:15] <cheesecakes> above current password
+[20:16] <ActionParsnip> cheesecakes: ahh got it, had to change a few things
+[20:16] <ActionParsnip> cheesecakes: yeah seems to kill the pass in Raring too
+=== alinmear is now known as alin|mobile
+=== alin|mobile is now known as alinmear
+[20:21] <cheesecakes> yo where did run off to?
+[20:21] <cheesecakes> *you
+[20:21] <AndreeeCZ> ActionParsnip, dmesg: sharetext.org/YPfM
+[20:21] <cheesecakes> ActionParsnip: recovery ?
+[20:21] <cheesecakes> lol
+[20:22] <ActionParsnip> AndreeeCZ: you need to read that, see where and if the sound device gets seen
+[20:22] <ActionParsnip> cheesecakes: indeed
+[20:22] <cheesecakes> i thought so
+[20:22] <d4rkh4nd8> Action i hope your still here... I made new user deleted old users, BUT i didnt set a pass for the new user. So now how do i Authenticate when it askes for it lol
+[20:23] <cheesecakes> my first bug report
+[20:23] <cheesecakes> yayy
+[20:23] <cheesecakes> lol
+[20:24] <d4rkh4nd8> Im trying to sudo chmod 777 FILENAME  and i dont have a pass to do it
+[20:24] <cheesecakes> d4rkh4nd8: do you know your root password?
+[20:24] <Wiz_KeeD> another installation question, best way to install java on ubuntu?
+[20:25] <AndreeeCZ> ActionParsnip, i think its not there. But neither is my GPU which works
+[20:25] <d4rkh4nd8> i never set one whats the default one ?
+[20:25] <cheesecakes> ok heres what you do
+[20:25] <cheesecakes> reboot and boot into recovery mode
+[20:26] <cheesecakes> then do passwd
+[20:26] <cheesecakes> and set a root password
+[20:26] <cheesecakes> then do passwd <user>
+[20:26] <d4rkh4nd8> so passwd root ?
+[20:26] <d4rkh4nd8> okay thank you
+[20:26] <Wiz_KeeD> on ubuntu 12.04 lts
+[20:26] <xjkx> I ran this command (on the end of the message) to make my sound card work, but it was just not plugged right, I did it and now its shown. But after command, not even my onboard card works, and I cant play avi files anymore, it bugs. How can I undo this command ? I tested my sound card on an older version of ubuntu I have, and it worked, its all working now, except on this ubuntu I am now, which is the most updated, here is the command: sudo add-apt-reposito
+[20:27] <cheesecakes> just passwd will set the root password when you are the root user
+[20:27] <d4rkh4nd8> okay awesoem thank you again
+[20:28] <cheesecakes> anytime
+[20:29] <Wiz_KeeD> or should i use the software center?
+[20:31] <AndreeeCZ> ActionParsnip, im sorry. The GPU is there, its just not stated the vendor or model.
+[20:31] <ActionParsnip> cheesecakes: i already fixed it when i'd come back....
+[20:31] <ActionParsnip> !rootpass
+[20:32] <Jaclyn> Hi
+[20:32] <cheesecakes> ActionParsnip: fixed what?
+[20:32] <ActionParsnip> cheesecakes: the password issue
+[20:32] <ActionParsnip> cheesecakes: or were you advising someone how to reset their password in root prompt?
+[20:32] <cheesecakes> oh i was helping d4rkh4nd8
+[20:33] <ActionParsnip> cheesecakes: please don't advise how to set the root password
+[20:33] <cheesecakes> may i ask why?
+[20:33] <cheesecakes> i think it is a good security measure
+[20:33] <ActionParsnip> cheesecakes: its not supported, advised or necessary in ubuntu
+[20:33] <ActionParsnip> cheesecakes: its worse, you have another account active, not better at all
+[20:34] <cheesecakes> but isnt root active by default?
+[20:34] <ActionParsnip> cheesecakes: the account is disabled for a reason
+[20:34] <cheesecakes> or am i confusing distros
+[20:34] <ActionParsnip> cheesecakes: by people I am very sure know more about Linux than you do
+[20:36] <ActionParsnip> cheesecakes: if the user forgets their password, easy access to root console is really handy. If they also forget their root password then guess who has to dig them out?
+[20:36] <Jaclyn> Is anyone willing to help me with two hardware problems and a wine problem?
+[20:36] <AceBlade258> Jaclyn: hardware
+[20:36] <cheesecakes> the recovery mode would help
+[20:36] <AceBlade258> let's start there
+[20:37] <ActionParsnip> cheesecakes: they will need the root password to log in there, which has been forgotten....
+[20:37] <ActionParsnip> cheesecakes: think
+[20:37] <cheesecakes> ahh
+[20:37] <cheesecakes> then the shadow file comes into play
+[20:37] <cheesecakes> lol you are right sorry
+[20:37] <Jaclyn> ok. Well, I upgraded from 11.10 to 12.10, and now ubuntu refuses to register anything plugged into one of my USB ports, and says that I have 1.7GiB of RAM when I have 2GB
+[20:38] <ActionParsnip> cheesecakes: if you want to set it on your system that's fine. But don't advise average users who may be new to Linux how to do it
+[20:38] <ActionParsnip> cheesecakes: it makes more work for supported
+[20:38] <cosmicfires> what's a good usb tv stick to use with ubuntu?
+[20:38] <AceBlade258> Jaclyn: Only one usb port?
+[20:38] <Jaclyn> Yup
+[20:38] <Jaclyn> Just one
+[20:38] <cheesecakes> ok cool will remeber this
+[20:38] <Jaclyn> It has power, but if I plug a mouse or a keyboard or anything into it, it doesn't work.
+[20:38] <ActionParsnip> Jaclyn: did you upgrade to Precise in between?
+[20:38] <Jaclyn> Yes
+[20:39] <cheesecakes> will not recommend setting the root password
+[20:39] <ActionParsnip> cheesecakes: thanks :)
+[20:39] <Jaclyn> I used the update manager to go from 11.10 > 12.04 >12.10
+[20:39] <ActionParsnip> Jaclyn: do you have an onboard video chip?
+[20:39] <Jaclyn> Yes
+[20:39] <AceBlade258> Jaclyn: ram isn't a big deal, are you using/do you have integrated graphics?
+[20:39] <cheesecakes> no problem
+[20:39] <Jaclyn> BEcause I have a crappy 2006 laptop
+[20:39] <ActionParsnip> Jaclyn: its using the system ram for the video RAM
+[20:40] <Jaclyn> ok.
+[20:40] <AceBlade258> Jaclyn: you can change the ammount used in the bios
+[20:40] <Jaclyn> Hmm
+[20:40] <Jaclyn> Well
+[20:40] <Jaclyn> That's fine
+[20:40] <Jaclyn> I just wanted to know where it was
+[20:40] <AceBlade258> Jaclyn: however, you should leave it where it's at, 256 is a decent graphics ram
+[20:40]  * Jaclyn planned on leaving it there
+[20:41] <AceBlade258> sorry, i tend to not read as i type
+[20:42] <Jaclyn> issok. But what's going on with the USB port?
+[20:42] <ActionParsnip> Jaclyn: do you have a usb keyboard?
+[20:42] <Jaclyn> Yes
+[20:42] <Wiz_KeeD> guys, can anyone tell me how to install java oracle on ubuntu 12.04 lts?
+[20:42] <Wiz_KeeD> the safe way :)
+[20:42] <ActionParsnip> Jaclyn: does the numlock key light if you press the numlock key?
+[20:42] <Wiz_KeeD> there is always multiple ways of doing it and i'd hate to mess things up on a fresh install
+[20:42] <Jaclyn> No.
+=== Sierr[a]AR is now known as SierraAR
+[20:43] <ActionParsnip> Wiz_KeeD: http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+[20:43] <Wiz_KeeD> using ubuntu software?
+[20:43] <Jaclyn> If I plug my mouse into the port it lights up for a second and then turns off
+[20:43] <ActionParsnip> Jaclyn: sounds like the USB ports are disabled. Are they enabled in BIOS?
+[20:43] <Jaclyn> YEs
+[20:43] <Jaclyn> If I boot up windows the USB ports work just fine
+[20:43] <Jaclyn> It's just that one USB port
+[20:43] <xjkx> is there any way to restore ubuntu to..as if it was just installed now, removing everything added, just like brand new again without burning cds, and losing /home
+[20:43] <Wiz_KeeD> ActionParsnip, isn't java 8 out?
+[20:44] <Jaclyn> The other two USB ports work just fine
+[20:44] <ActionParsnip> Wiz_KeeD: yes, its on that ppa too....
+[20:44] <Wiz_KeeD> so should i replace 7 with 8?
+[20:44] <ActionParsnip> Wiz_KeeD: yes........
+[20:45] <Wiz_KeeD> it has some freakish terminal menu instead of a nice gui ActionParsnip :))
+[20:45] <Wiz_KeeD> from where to accept the terms and conditions
+[20:46] <brontosaurusrex> xjkx: if home is on separate parition then yes
+[20:46] <ActionParsnip> Wiz_KeeD: use TAB and ENTER to accept the license
+[20:46] <ActionParsnip> Wiz_KeeD: not freakish at all
+[20:46] <xjkx> brontosaurusrex: no, its not. I dont mean reinstall, just restore it
+[20:46] <Wiz_KeeD> yes i did that, was just wondering why it has that old-school interface to it
+[20:46] <xjkx> its broken now
+[20:46] <Wiz_KeeD> when in some examples it showed a proper gui comming up when installing java
+[20:46] <brontosaurusrex> xjkx: i see, dunno about that
+[20:47] <ActionParsnip> Wiz_KeeD: lots of things have a text interface
+[20:47] <MonkeyDust> tip for future reference: hardinfo is a nice gui tool
+[20:47] <Wiz_KeeD> maybe the java7 was different idk
+[20:48] <Jaclyn> So. Do you have any idea why my USB port would do that? It was working just fine before I upgraded.
+[20:49] <ActionParsnip> Wiz_KeeD: its an installer using the tar.gz from the java site, the deb is just a jandy way to install it. Nothing more
+=== matt_ is now known as Guest58851
+[20:49] <ActionParsnip> Wiz_KeeD: you can do it manually using the archive, the deb just does it for you
+[20:50] <BluesKaj> Jaclyn, if you run lsusb , does it show ?
+[20:50] <ActionParsnip> Wiz_KeeD: the java will also update as the PPA is updated
+[20:51] <Mrokii> Hello. I want to create an encrypted archive with Archive manager but I can't seem to active encryption of the filelist itself.
+[20:51] <Guest58851> Hey, I was wondering if anyone could help me here. My Problem is: I have a D-Link DWL-G570
+[20:51] <Guest58851> And, I cant seem to connect to a network
+[20:51] <Mrokii> I mean, the option to encrypt the filelist in Archive Manager is ghosted.
+[20:52] <conall> Is there any way I can sync a folder to another partition easily WITHOUT ENCRIPTION?
+[20:52] <Jaclyn> It shows 5. I have three USB ports, a card slot, and A CF slot. Do you think the other two are those?
+[20:52] <Reptile_Skillz> Hey, I was wondering if anyone could help me. My Network card is working, It can list the nearby networks... But it wont connect to them, even with the correct password! Could someone please help me?
+[20:53] <ActionParsnip> Reptile_Skillz: what are you connecting to them to achieve?
+[20:53] <Reptile_Skillz> A Conenction to surf the web
+[20:53] <ActionParsnip> Reptile_Skillz: is it running a proxy software?
+[20:54] <Jaclyn> BluesKaj: It shows five.
+[20:54] <Reptile_Skillz> Nope.
+[20:54] <luckyphuq> conall: use GRSYNC (a frontend for rsync)
+[20:54] <ActionParsnip> Reptile_Skillz: do other systems connect to it ok?
+[20:54] <BluesKaj> Jaclyn, can you paste the output in pastebin
+[20:54] <conall> thanks luckyphuq
+[20:54] <Jaclyn> k
+[20:54] <Reptile_Skillz> ActionParsnip, Yes, But same problem.. I dont get it.
+[20:55] <ActionParsnip> Reptile_Skillz: can you ping 8.8.8.8 through the system?
+[20:55] <Reptile_Skillz> ActionParsnip,  Yeah, One sec. let me try that
+[20:56] <Reptile_Skillz> ActionParsnip,  Nope. It doesnt let me connect.. It keeps on saying Conenction for about 10 minuites before fail.
+[20:56] <Jaclyn> BluesKaj: http://pastebin.com/VZhLBYeQ
+[20:56] <Wiz_KeeD> everything worked ActionParsnip thank you
+[20:56] <ActionParsnip> Reptile_Skillz: check routing then
+[20:57] <n0sq> some stuff won't play in firefox from usatoday.com - don't know what i'm missing
+[20:57] <ActionParsnip> Wiz_KeeD: no wrries. The PPA makes life a lot easier
+[20:57] <kgs> topper4125: here? :)
+[20:57] <Reptile_Skillz> ActionParsnip,  I have. Ive also rebooted my Router And Modem.
+[20:57] <Wiz_KeeD> i saw these instructions on some other site using google but i never got which way is the best to go
+[20:57] <Wiz_KeeD> using software center, apt-get from repositories, adding other repositories and then isntalling, using debs to install
+[20:57] <ActionParsnip> Reptile_Skillz: why are you using a system to get web access if you have a router?
+[20:57] <Wiz_KeeD> there are so many ways
+[20:58] <ActionParsnip> Wiz_KeeD: there are lots of ways to do many things in any OS
+[20:58] <Wiz_KeeD> yeah well installing in ubuntu has many of them :))
+[20:58] <Reptile_Skillz> ActionParsnip,  No, I have a Wireless Router, And Im too far away to use a cable. I only have 1 cable in the house, And my Wireless card on my dekstop )Non Built In) Doesnt work
+[20:59] <ActionParsnip> Reptile_Skillz: did you setup the connection sharing in the other OS correctly?
+[20:59] <Reptile_Skillz> ActionParsnip,  Yeah, I Did. My dad is even stumped on this one
+[20:59] <BluesKaj> Jaclyn, that looks very normal , perhaps your mouse only works with USB2.0 , the others appear to be the older USB version 1.1
+[20:59] <ActionParsnip> Reptile_Skillz: can you ping the sharing system ok?

@@ -1,0 +1,346 @@
+[01:41] <Adrenal> worked for me
+[01:41] <quitte> Pozac sweet
+[01:41] <Adrenal> theres a howto is if doesn't, i;ll grab that for you now
+[01:41] <Pozac> quitte: maybe set the procotol to IMPS/2 in xorg.conf/XF86Config
+[01:42] <Adrenal> setite: u using a pentium or an athlon?
+[01:43] <Ex-Cyber> magiccheese: "ati card" covers quite a lot of different hardware with different levels of support
+[01:43] <Adrenal> setite?
+[01:43] <Ex-Cyber> I have had success with a Radeon 8500
+[01:43] <magiccheese> to be specific its a ati9600xt
+[01:43] <Pozac> dri.sourceforge.net has support for a lot of older (<9800 ?) ati cards
+[01:43] <quitte> Pozac as i'm loading it as a module i won'T even have to reboot:) wouldn'T help anyways
+[01:44] <Ex-Cyber> I think 9600 is an R300 variant
+[01:44] <Ex-Cyber> the DRI page has a guide I think
+[01:44] <Pozac> quitte :)
+[01:44] <magiccheese> i installed drivers and notice no diff in glxgears
+[01:44] <no0tic> magiccheese:
+[01:44] <magiccheese> i dont know if the agp setup is working
+[01:44] <no0tic> magiccheese: I was at lunch
+[01:44] <Pozac> mmm lunch
+[01:44] <magiccheese> hey welcome back
+[01:45] <Adrenal> lunch?
+[01:45] <Adrenal> its quarter to midnight
+[01:45] <Adrenal> ...weirdo
+[01:45] <no0tic> 1:45:08 PM
+[01:45] <Ex-Cyber> magiccheese: did you change your XF86Config?
+[01:45] <no0tic> Adrenal: ;)
+[01:45] <Ex-Cyber> or use fglrxconfig
+=== netjoined: irc.freenode.net -> kornbluth.freenode.net
+=== xtat [xtat@io.rapidpacket.com]  has joined #ubuntu
+=== WildRabbit [~WildRabbi@adsl7-69.simnet.is]  has joined #ubuntu
+[01:45] <Adrenal> http://www.timecube.com/
+[01:45] <Guardiann> 7:45 am here
+[01:45] <Adrenal> check and mate
+[01:46] <magiccheese> yeah to the new ones
+[01:46] <Adrenal> anyone else read sisya's post?
+[01:46] <Pozac> no?
+[01:46] <Guardiann> nope
+[01:46] <quitte> Pozac modprobe psmouse proto=imps didn't work
+=== MacPlusG3 [~stewart@c211-28-166-127.eburwd2.vic.optusnet.com.au]  has joined #ubuntu
+=== bob2 [rob@bob2.user]  has joined #ubuntu
+[01:47] <Ex-Cyber> magiccheese: if you do 'lsmod' do you see the fglrx module?
+[01:47] <Adrenal> just paid out linux, and the open source community
+=== vtg [vertigo@2001:888:11a7:0:260:8ff:fec9:effb]  has joined #ubuntu
+=== telemaco [~telemaco@79.Red-81-35-227.pooles.rima-tde.net]  has joined #ubuntu
+[01:48] <Pozac> quitte: I think you need to restart X and tell it about the imps/2 thing too
+=== beezly [~andy@2001:618:400:9627:20c:6eff:fee1:a9da]  has joined #ubuntu
+[01:48] <quitte> Pozac no - didn'T help
+[01:48] <Pozac> quitte :(
+=== null [~null@60-240-148-75.tpgi.com.au]  has joined #ubuntu
+[01:49] <Pozac> Adrenal: I'm not getting what you are talking about...
+[01:49] <Adrenal> http://ubuntuforums.org/showthread.php?p=57809#post57809
+[01:49] <magiccheese> on one of the under which one
+=== linux-rulz [~linux-rul@S0106000c6ec62859.cg.shawcable.net]  has joined #ubuntu
+[01:50] <magiccheese> sory ex which one?
+=== Ycros [~Ycros@211.30.18.47]  has joined #ubuntu
+=== da_bon_bon [~rohandhru@210.18.160.134]  has joined #ubuntu
+=== NetwrkMonkey [~Monkey@netwrkmonkey.user]  has joined #ubuntu
+=== BeTa [~beta@beta.loc.e-glop.net]  has joined #ubuntu
+[01:51] <Pozac> Adrenal: Eh, is he supposed to be somebody?
+[01:51] <Adrenal> some n00b
+[01:51] <Adrenal> a ms whore
+=== Pozac doesnt care for people whining about this community without reading ubuntu.com
+[01:51] <Adrenal> exactly
+[01:51] <Adrenal> he has wiki
+[01:51] <Adrenal> ubuntuguide
+[01:51] <Adrenal> and google
+[01:51] <Adrenal> no right to bitch
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[01:52] <Adrenal> anyone else having troubles with msn right now?
+[01:52] <evil-dna> hm
+[01:52] <evil-dna> blah
+[01:52] <evil-dna> i cant even boot the live-cd
+[01:53] <Adrenal> passwords sends, but msn doesn't pick up
+=== ^majik^ [~majik@68.119.96.36]  has joined #Ubuntu
+[01:53] <Adrenal> ...maybe they noticed my anti-ms propagande
+[01:53] <Pozac> Adrenal: Also the first place linked to go to for help is here. He wasnt here.
+[01:53] <Adrenal> ah well...JABBER TIME
+[01:53] <Adrenal> i know, i was the one who linked him
+[01:53] <Pozac> evil-dna: the new one?
+[01:53] <Guardiann> it seemed like he was a bit pissed at the responses he gets but oh well
+=== ^majik^ [~majik@68.119.96.36]  has left #Ubuntu []
+=== antec_ [~antec@61.68.239.231]  has joined #ubuntu
+=== ^majik^ [~majik@68.119.96.36]  has joined #Ubuntu
+=== Monkey-Dude [~Monkey-Du@D40AE932.rev.stofanet.dk]  has joined #ubuntu
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[01:56] <Monkey-Dude> hi.... i'm having trouble with mounting an ntfs drive... i have 3 ntfs partitions but 1 will not mount...
+=== theine [~theine@x1-6-00-0c-41-7e-f9-af.k200.webspeed.dk]  has joined #ubuntu
+[01:57] <Adrenal> specs?
+[01:57] <theine> hmmm, glxinfo says ``direct rendering: No'' all of the sudden. what could be the reason for that?
+[01:58] <Adrenal> brb guys
+[01:58] <Ex-Cyber> theine: kernel change?
+[01:59] <theine> Ex-Cyber: yes
+=== ephic [~ephic@68.184.7.52]  has joined #ubuntu
+[01:59] <ephic> hey how does the dpkg command work?
+=== FireEgl [Ariel@Atlantica.US]  has joined #Ubuntu
+[01:59] <rubenv> man dpkg
+[01:59] <Ex-Cyber> theine: are you using proprietary drivers? (ati/nvidia)?
+[01:59] <ephic> im trying to configure mozilla to recognize my java
+[01:59] <theine> Ex-Cyber: no, it's all there I think
+[01:59] <ephic> anyone had that problem with sun's jre?
+[02:00] <Guardiann> ephic read the info in www.ubuntuguide.org
+[02:00] <theine> Ex-Cyber: I'm using the open-source raderon drivers anyway
+[02:00] <Ex-Cyber> theine: I'm not sure what you mean
+[02:00] <ephic> alright.
+[02:00] <ephic> is there a downloadable document?
+=== LaurenceR|home is now known as LaurenceRowe
+[02:00] <Guardiann> works great
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:00] <theine> Ex-Cyber: oh sorry, i read ``missing'' instead of ``using''
+[02:01] <Guardiann> ephic theres only a few commands
+=== Adrenal [~drew@168.9.233.220.exetel.com.au]  has joined #ubuntu
+[02:01] <Ex-Cyber> theine: sometimes new kernels break the proprietary drivers
+[02:02] <Guardiann> damm i am tired of the cold
+[02:02] <theine> Ex-Cyber: wait a minute, now i remember, I have to un-install xorg-driver-fglrx
+[02:04] <quitte> is there a way to put a program to be run on gnome startup for every user?
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== digmig [~Digmig@pD9E39952.dip.t-dialin.net]  has joined #ubuntu
+=== Hwolf [~hidde@136.122.dynamic.phpg.net]  has joined #ubuntu
+[02:05] <Adrenal> whoa
+=== Nominus [~hanzo@2001:5c0:8fff:fffe:0:0:0:1175]  has joined #ubuntu
+[02:05] <Adrenal> its like a hundred connections cried out in pain
+=== bob2 [rob@bob2.user]  has joined #ubuntu
+=== Ribs [~freenode@riblet.plus.com]  has joined #ubuntu
+=== johane [~johan@h212n7c1o255.bredband.skanova.com]  has joined #ubuntu
+=== MornHyland [julia@morn.mornhyland.org]  has joined #ubuntu
+=== maddoc [~maddoc@h228n2fls311o871.telia.com]  has joined #ubuntu
+=== siretart [siretart@tauware.de]  has joined #ubuntu
+=== AcidPils [~acid@websrv.werbeagentur-aufwind.de]  has joined #ubuntu
+=== marcus| [~marcus@as17-3-4.hkn.g.bonet.se]  has joined #ubuntu
+[02:05] <Adrenal> but were then suddenly silenced
+=== MrNaughty [MrNaughty@d199-126-25-30.abhsia.telus.net]  has joined #ubuntu
+=== isaac_ [~isaac@adsl-67-112-24-57.dsl.snfc21.pacbell.net]  has joined #ubuntu
+[02:06] <Adrenal> ??
+[02:06] <quitte> Adrenal that was a netsplit. that happens regularly on freenode and is nothing to worry about
+[02:06] <Adrenal> but...i'm scared
+[02:07] <quitte> Adrenal you dont have to
+[02:07] <Guardiann> :)
+=== dutch [~dutch@cpe-024-211-215-161.nc.rr.com]  has joined #ubuntu
+[02:08] <Guardiann> alot fewer splits in here then many other networks
+[02:08] <Guardiann> must be the ircd
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:09] <Adrenal> well, see ya all later
+=== TheMuso_ [~luke@dsl-202-173-132-131.nsw.westnet.com.au]  has joined #ubuntu
+[02:09] <Guardiann> ok later Adrenal
+[02:09] <Hwolf> ugh. The ubuntu servers are slow... :-S
+[02:09] <quitte> seems Adrenal is hiding from further splits
+[02:09] <MM2> I have a little bit of problem
+=== stack [~stack@modemcable211.10-201-24.mc.videotron.ca]  has joined #ubuntu
+[02:09] <MM2> If I mount usb-stick as a admin user, it gets mounted all right
+[02:09] <quitte> Hwolf heh. look at the ubuntu page. mirrors exist.
+[02:10] <MM2> When I put it in as a regulas user, it won't get mounted
+[02:10] <Hwolf> quitte, untill 2 days ago, the ubuntu.com servers maxed out my connection.
+[02:10] <MM2> What setting I should stab?
+[02:10] <quitte> Hwolf until yesterday here.
+[02:11] <Pozac> MM2: Nothing should be done manually except physically inserting the device.
+[02:11] <Hwolf> quitte, at this moment I'm pulling 10kbs, barely
+=== Pozac dittos the 10kbs
+[02:12] <quitte> use mirrors.
+[02:13] <Hwolf> quitte, for apt? I can find mirrors for the iso's on the ubuntu.com site alright...
+[02:13] <MM2> Pozac: it won't work like that
+=== stack is now known as BOBbinette
+[02:13] <quitte> Hwolf yes for apt
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:13] <MM2> Pozac: usb stick lights up, but it won't get (auto)mounted at all
+=== steff [~steff@p508EEF4D.dip.t-dialin.net]  has joined #ubuntu
+=== hypn0 [~chatzilla@host81-7-54-228.surfport24.v21.co.uk]  has joined #ubuntu
+=== Badcel [~Badcel@p5086F38B.dip0.t-ipconnect.de]  has joined #ubuntu
+[02:14] <quitte> Hwolf: www.ubuntulinux.org/wiki/Archive/view?searchterm=mirrors
+=== da_bon_bon [~rohandhru@210.18.160.134]  has joined #ubuntu
+=== trygvebw [trygvebw@217-190-59.adsl.tele2.no]  has joined #ubuntu
+=== Ferry [~ferry@cust.15.118.adsl.cistron.nl]  has joined #ubuntu
+[02:16] <MM2> where there is configured which users can mount/umount a usb filesystem?
+[02:16] <BenZor|Lap> where do you change the apt mirrors?
+[02:16] <quitte> MM2 man pmount
+[02:17] <quitte> MM2 basically users have to be in group plugdev for gnome-volume-manager to work.
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:17] <steff> where i can change transparancy theme?
+[02:17] <ephic> hey ok lets see.. im trying to get mozilla to pick up on my javascript right?
+[02:18] <Guardiann> ephic no luck?
+[02:18] <MM2> well... then there is a serious trouble... users are all in same group called "domain users"...
+[02:18] <ephic> ln -s /usr/java/plugin/i386/ns7/<plugin> (-f to force overwrite)
+[02:18] <ephic> no luck.
+[02:18] <ephic> any ideas?
+[02:18] <Guardiann> did you d/l the java bin
+[02:18] <BenZor|Lap> wheres sources.list kept?
+[02:18] <ephic> er wait java bin?
+[02:19] <Guardiann> yeah 1 sec
+[02:19] <ephic> k
+=== haha [~haha@211.237.240.39]  has joined #ubuntu
+[02:19] <Guardiann> https://sdlcweb1c.sun.com/ECom/EComActionServlet;jsessionid=06207F54E566FA1D4F7F8E70AF172251
+[02:19] <Guardiann> that should get you the correct one
+[02:20] <ephic> ah ok thanks
+=== qbeek [~qbeek@sete.idealx.com]  has joined #ubuntu
+[02:20] <ephic> can i set that up at a repository?
+[02:20] <quitte> is it normal that no icons for devices appear on the desktop, but devices are still mounted and unmounted automatically?
+[02:20] <MM2> BenZor|Lap: /etc/apt
+[02:20] <BenZor|Lap> thought so
+[02:20] <BenZor|Lap> so just add
+[02:20] <Guardiann> you require the linux self extracting
+[02:20] <BenZor|Lap> deb  http://www.planetmirror.com/pub/ubuntu/ warty main universe
+[02:20] <BenZor|Lap> ?
+[02:20] <BenZor|Lap> universe will give stuff like amsn etc right
+[02:20] <Guardiann> and then just follow the directions in the guide
+[02:21] <ephic> alrighty
+[02:21] <ephic> thanks
+[02:21] <Guardiann> anytime
+=== FireEgl [Ariel@Atlantica.US]  has joined #Ubuntu
+=== leonel [~leonel@201.128.131.56]  has joined #ubuntu
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== stuNNed [~stuNNed@adsl-068-209-149-165.sip.msy.bellsouth.net]  has joined #ubuntu
+=== tritium [~tritium@ee213-dhcp-14.ecn.purdue.edu]  has joined #ubuntu
+[02:23] <quitte> usb disk gets mounted but doesn'T show up in computer :(
+[02:24] <Peter> so the 'i386' version of ubuntu - will that install on the amd64?
+[02:24] <mjr> Peter, yes
+=== NetwrkMonkey [~Monkey@netwrkmonkey.user]  has left #ubuntu ["Leaving"]
+[02:24] <BenZor|Lap> adding universe allows stuff like amsn etc to be installed, correct?
+[02:24] <Peter> just not 64bit, ok
+[02:24] <mjr> amd64 boxes can run regular x86 OSes, it's just a bit of a waste :)
+[02:24] <tritium> Peter, you didn't install that kernel I pointed you too last night?
+[02:24] <Peter> you pointed one to me?
+[02:25] <tritium> Peter, yes, you asked about installing off the archive
+[02:25] <Peter> oh yeah
+[02:25] <Tomcat_> Especially in Linux. :)
+[02:25] <stuNNed> ok i need help
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== SackeR [~sacker@206.74.57.91]  has joined #ubuntu
+[02:26] <stuNNed> lost some of my icons under the Computer menu
+[02:26] <stuNNed> for like Home, Desktop, Documents, Disk
+[02:26] <stuNNed> any way to get them back?
+[02:26] <stuNNed> this is warty
+[02:26] <Peter> tritium: i cant remember what the error was, but it didnt like it.
+[02:26] <Peter> i'll try it again.
+[02:26] <tritium> ok
+[02:27] <Peter> was it on the ubuntu ftp?
+[02:28] <tritium> Peter, archive.ubuntu.com is where you were looking
+[02:28] <Peter> ok
+[02:28] <tritium> http://archive.ubuntu.com/ubuntu/pool/main/l/linux-meta/
+[02:29] <Peter> "linux-image-386_2.6.10-3_i386.deb"
+[02:29] <Peter> like that one?
+[02:30] <tritium> Peter, you can give it a try, if you're sure you don't want to use the amd64 one
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== noflex [~noflex@D40AE630.rev.stofanet.dk]  has joined #ubuntu
+=== lamont [~lamont@mix.mmjgroup.com]  has joined #ubuntu
+[02:31] <Peter> ok.
+[02:31] <Peter> brb
+[02:33] <quitte> is it just here, or does gnome-volume-manager in hoary suck?
+[02:33] <quitte> sometimes icons appear
+[02:33] <quitte> sometimes not
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== buga [burjang@pandora.inf.elte.hu]  has joined #ubuntu
+=== magiccheese [~preston@ip68-107-185-118.lu.dl.cox.net]  has left #ubuntu []
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== Ycros [~Ycros@c211-30-18-47.thorn1.nsw.optusnet.com.au]  has joined #ubuntu
+=== oferw [~oferw@HFA62-0-138-173.bb.netvision.net.il]  has joined #ubuntu
+[02:41] <MM2> pmount works fine as a admin, but not as a regular user...
+[02:42] <BenZor|Lap> is anyone else having issues updating at the moment
+[02:42] <MM2> How I can change permissions so that regular user can mount usb stick to computer?
+[02:42] <quitte> MM2 pmount doesn't work if you have an entry in fstab
+=== antec_ [~antec@61.68.239.231]  has joined #ubuntu
+[02:42] <quitte> MM2 an user has to be in the plugdev group
+[02:42] <MM2> quitte: there is no entry in fstab
+[02:42] <MM2> ah...
+[02:42] <antec_> hi can someone tell me how to become root in ubuntu?
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:43] <thenuke> antec_: sudo -s -H
+=== Get [~gustav@gw5.web.thalamus.se]  has joined #ubuntu
+[02:43] <Get> Hi! Can I enable DHCP logging?
+[02:43] <antec_> thenuke and how I become user again?
+[02:43] <siretart> antec_: logout
+[02:43] <antec_> ok thanks guys
+=== ICU [~me@host-95173.ewetel.de]  has joined #ubuntu
+[02:45] <tritium> antec_, Ctrl-D does it also
+[02:46] <antec_> I still am not able to uncomment the 2 lines in sources.list
+[02:46] <antec_> in Debian it was different
+=== FireEgl [Ariel@Atlantica.US]  has joined #Ubuntu
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== klaym [~isom@a81-197-204-3.elisa-laajakaista.fi]  has joined #ubuntu
+=== MM2 wonders how to add all 1500 users to plugdev group with winbind...
+[02:48] <quitte> MM2 1500 users??
+[02:48] <klaym> hey what's the newest xchat version for Warty?
+[02:48] <tritium> antec_, it's the same as in debian
+[02:48] <MM2> antec_: sudo su and you'll become root
+[02:49] <MM2> quitte: 1500 users from windows server, userdatabase is in windows 2k :)
+[02:50] <MM2> quitte: it is rather paranoic to use ubuntu and terminal server client to access to w2k server from ubuntu
+[02:50] <tritium> antec_, see thenuke's coment above, edit file as in debian
+[02:50] <thenuke> MM2: sudo -s -H is better way
+[02:50] <MM2> it was nice to find that tool from ubuntu!
+[02:50] <quitte> MM2 good luck
+[02:50] <thenuke> MM2: so have the wiser ones told me
+=== snowblink [~snowblink@wind.snowblink.co.uk]  has joined #ubuntu
+[02:51] <klaym> could someone using xchat please check for me which is the version?
+[02:51] <scizzo> daniels: is there a problem with locales in hoary?
+=== jcoxon77 [~jac208@jac208.caths.cam.ac.uk]  has joined #ubuntu
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+[02:52] <MM2> klaym: 2.0.8
+[02:52] <quitte> nautilus in hoary is fucked. automounting works - but the desktop and computer folder are only updated when i do something with the cdrom icon in computer folder :(
+[02:52] <Guardiann> klaym 2.4.1
+[02:52] <klaym> ok thanks
+[02:52] <MM2> klaym: ah, hoary... sorry!
+[02:52] <klaym> 2.4.1 is the newest then I guess
+[02:52] <Guardiann> yep it is :)
+[02:53] <quitte> someone having the same problem? usb stick mounted, but not on desktop and in the computer folder?
+[02:53] <antec_> I try to open sources.list as root through terminal and it says permission denied
+[02:53] <Pozac> quitte: are you using 2.6.8 with gamin?
+=== Pozac thinks quitte needs inotify
+[02:53] <Guardiann> antec how are you trying to open it
+=== adnans [~adnans@noterik2.demon.nl]  has joined #ubuntu
+[02:54] <quitte> Pozac nautilus version seems to be 2.9.90
+[02:54] <antec_> Guardiann I tried like this:   /etc/apt/sources.list
+[02:54] <Pozac> quitte: inotify is in linux-i386 2.6.10
+[02:54] <quitte> Pozac gamin is installed
+[02:55] <quitte> Pozac: what is inotify?
+[02:55] <Guardiann>  as root you need to type this >>>>>  gedit /etc/apt/sources.list
+[02:55] <quitte> Pozac: a kernel patch?
+[02:55] <Pozac> quitte: replacement for dnotify :)
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu
+=== Nafallo [nafallo@h123n3c1o1027.bredband.skanova.com]  has joined #ubuntu
+[02:55] <quitte> Pozac in the kernel?
+[02:56] <antec_> Guardiann thanks it worked
+=== chroot [~elboog@chroot-0000002.user]  has joined #ubuntu
+[02:56] <Guardiann> yw
+=== chroot [~elboog@chroot-0000002.user]  has left #ubuntu ["Sto]
+[02:56] <quitte> Pozac installing dnotify now. cant find inotify. thanks
+[02:56] <Pozac> quitte: sudo apt-get install linux-i386
+[02:56] <Pozac> quitte: dont install dnotify
+[02:56] <quitte> Pozac. no. this kernel is absolutely perfectly suited for my machine
+[02:57] <Pozac> quitte: no, it doesnt have inofity
+[02:57] <Pozac> hehe
+[02:57] <quitte> Pozac i could add a patch
+=== Pozac uses the linux-i686 one
+[02:57] <tritium> Pozac, the kernel should have inotify
+[02:57] <Pozac> tritium: not 2.6.8 ?
+[02:57] <Pozac> he's using a homemade one
+[02:58] <tritium> Pozac, oh, okay
+[02:58] <mjg59> Ubuntu 2.6.8 kernels don't have inotify. Ubuntu 2.6.10 ones do.
+[02:58] <mjg59> Upstream 2.6.10 doesn't have inotify
+[02:58] <tritium> I knew my 2.6.10 had it
+[02:58] <Pozac> So how does he import his .config to 2.6.10 ?
+[02:58] <quitte> ok. it is a patch. i'll apply it myself.
+=== stub [~stub@dsl-246.248.240.220.dsl.comindico.com.au]  has left #ubuntu []
+=== jeegiz [~jeegy@213.197.167.90]  has joined #ubuntu
+[02:59] <tritium> mjg59, have you seen Dell laptops needing 2 presses of the power button to resume from sleep?
+[02:59] <tritium> Latitude 8000 series and C800 series?
+=== vpalle [~vpalle@park222.koll.au.dk]  has joined #ubuntu
+[02:59] <no0tic> when starting crossover-office, the screen goes blank; I have to Ctrl+ALt+Fn and then Alt+F7 to return to xorg correctly
+=== vtg [vertigo@route6.alumina.nl]  has joined #ubuntu

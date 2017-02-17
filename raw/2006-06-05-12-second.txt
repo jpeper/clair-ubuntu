@@ -1,0 +1,956 @@
+[11:48] <thoreauputic> avis: 1G RAM ? P4 ? pfft I have a celeron 2G with 512 running gnome/kde/xfce/fluxbox/ ....
+[11:48] <mr_luko> god hates me when it comes to linux....
+[11:48] <kasumix> mr_luko: you could try xampp
+[11:49] <mr_luko> xampp?
+=== seabiscuit [n=seabiscu@lsa.isep.ipp.pt]  has left #ubuntu ["Leaving"]
+=== pd273 [n=pd@203.196.194.98]  has joined #ubuntu
+[11:49] <jirwin> ion3 all the way
+[11:49] <kasumix> mr_luko: it is a package wich contains Apache, Mysql, FTP-Server and PhP
+[11:49] <Aeroraver> Florisz84 my computer freezes when the kernel is loading, im using kernel 2.6.15-23-386, it freezes when it says: mounting root filesystem
+[11:49] <Fujitsu> jirwin, yep!
+[11:49] <DarkRavenMixage> bderrly that module isn't loaded....
+[11:49] <kasumix> and its fast and easy set up
+[11:49] <DarkRavenMixage> there isn't in the list
+[11:49] <DarkRavenMixage> bderrly there isn't in the list
+[11:49] <pd273> Hi all, where did the site http://packages.ubuntu.com go, it is taking me to the ubuntu main site
+=== daneel [n=sarbogas@d213-103-234-4.cust.tele2.fr]  has joined #ubuntu
+[11:49] <mr_luko> kasumix, nice, should I uninstall apache, php5, and mysql first?
+[11:50] <kasumix> ya would be bether
+[11:50] <jirwin> Aeroraver, any more info than that?
+=== Rondom [n=Rondom@mrbg-d9b964e1.pool.mediaWays.net]  has joined #ubuntu
+[11:50] <kasumix> PM me again if you want more informations
+[11:50] <avis> i have have coffee, tylenol, and a cigarette to continue.  i'm afraid my desire to learn isn't agreeing with my will to not sleep.  though i'm sure thats nothing new amongst linux users.. entusiastically hacking away.
+[11:50] <avis> must
+[11:50] <daneel> hi everybody
+[11:50] <jirwin> I am looking to create a custom xsession for gdm...anyone done this before?
+[11:50] <florizs84> have you tried another kernel image? or is this your only one?
+[11:51] <thoreauputic> pd273: no problem here - just loaded it
+[11:51] <daneel> I would need some help to get mod_rewrite working on Apache2/Dapper Drake...
+[11:51] <Aeroraver> @ jirwinno not more, i upgraded yesterday to Dapper Drake, thats it, i get into the black screen, and after 30 minutes, still noting, im able to boot up recovery mode and thats it
+=== stelki [n=stelki@unaffiliated/stelki]  has joined #ubuntu
+=== nnz [n=get@ip223.cab35.mus.starman.ee]  has joined #ubuntu
+[11:52] <jirwin> it should keep your old kernels in grub
+[11:52] <jirwin> try a different one?
+[11:52] <stelki> Hello. When I installed the nvVidia drivers from aptt on my ubuntu install, all the text sizes suddenly got  very very small. How can I fix this? ((Like text in menues in kde etc, theyre all small)
+[11:52] <bderrly> DarkRavenMixage, perhaps you need to add it then...?  i know for nvidia cards you don't want it but perhaps you do with ati...i've never had an ati card so i'm not sure
+=== digitalgalileo [n=dan@user-0c2id4b.cable.earthlink.net]  has joined #ubuntu
+[11:52] <Aeroraver> yeah but the older one's wont seem to wanna use my wireless netcard
+[11:52] <pd273> thoreauputic: something wrong with my machine, it is working fine on another machine
+[11:52] <nnz> has there been a fix for apt not connecting ? even if i can wget from the same url
+[11:52] <pd273> strange
+[11:52] <pd273> thanks thoreauputic
+[11:53] <DarkRavenMixage> bderrly allright i'll give a try
+[11:53] <Aeroraver> its visble in device management and thats it
+[11:53] <daneel> could someone help me with mod_rewrite config ?
+[11:53] <florizs84> I would try booting on one of the older kernels and reinstall the latest kernel
+=== mrequena [n=mrequena@83.230.235.52]  has joined #ubuntu
+[11:53] <thoreauputic> pd273: DNS weirdness?
+[11:53] <bderrly> DarkRavenMixage, you are restarting gdm after you edit xorg.conf right?
+[11:54] <kasumix> mr_luko did it worked ?
+=== the_Kane [n=kane@097.pth0412.pth.iprimus.net.au]  has joined #ubuntu
+[11:54] <florizs84> what kind of hardware are you running?
+[11:54] <Aeroraver> @florisz that is the latest, but it isnt downloadable yet, else i already had
+[11:54] <jirwin> Aeroraver, what kind of wificard?
+[11:54] <the_Kane> hey
+[11:54] <the_Kane> need some help..
+[11:54] <Aeroraver> rt2500
+[11:55] <the_Kane> with smbfs, if i try to open the mounted folder for a second time... it hangs, and doesn't work... any ideas?
+[11:55] <mr_luko> kasumix, haven't installed it yet download the tar now
+[11:55] <DarkRavenMixage> bderrly ctrl+alt+del is ok or i have to rstart the machine?
+[11:55] <kasumix> mr_luko: oke have fun if you got problem PM me
+[11:55] <bderrly> DarkRavenMixage, that is perfect
+[11:55] <thoreauputic> DarkLegacy: ctrl-alt-bksp
+[11:55] <jirwin> rt2500?
+=== xrayboy [n=etmouse@218.65.110.184]  has joined #ubuntu
+=== Frogzoo [n=Frogzoo@202.155.165.25]  has joined #ubuntu
+[11:55] <mr_luko> kasumix, cool thanks for all the help dude!
+[11:55] <DarkRavenMixage> bderrly ok i'm resetting gdm
+[11:55] <joycetick> bderrly, the codes do not match, i guess that means i have to download it again?
+[11:56] <kasumix> mr_luko: no problem
+[11:56] <Fujitsu> joycetick, yes.
+[11:56] <Fujitsu> joycetick, or use BitTorrent to correct it.
+[11:56] <Aeroraver> jirwin, thats what it says in device manager
+[11:56] <bderrly> joycetick, like Fujitsu said
+[11:56] <joycetick> i dident think bit torrent could get it wrong :P
+[11:56] <jirwin> boot up and run lspci
+=== balmag [n=balmag@catv-5063e3e2.catv.broadband.hu]  has joined #ubuntu
+=== BanskuZ [n=BanskuZ@b-176-176.dsl.ipy.dnainternet.fi]  has joined #ubuntu
+=== jnoon [i=jnoon@c-67-188-175-53.hsd1.ca.comcast.net]  has joined #ubuntu
+[11:57] <Aeroraver> ok
+[11:57] <joycetick> how can u get bittorrent to check it? (i use azureus)
+[11:57] <jnoon> anyone decent with makefiles?
+[11:57] <divineomega> how do i install a C compiler?
+=== ROBOd [n=robod@86.34.246.154]  has joined #ubuntu
+[11:57] <ROBOd> hello
+[11:57] <florizs84> @divineomega sudo apt-get install gcc
+=== airtonix [n=airtonix@ppp231-237.lns2.adl4.internode.on.net]  has joined #ubuntu
+[11:57] <the_Kane> annyone?
+=== _harm [n=harm@82-171-74-86.dsl.ip.tiscali.nl]  has joined #ubuntu
+[11:57] <ROBOd> how to convert an ext2 partition to ext3?
+=== Rdde [n=Rdde_@c-11aae455.53-0004-74657210.cust.bredbandsbolaget.se]  has joined #ubuntu
+=== ramon [n=ramon@169.Red-83-54-201.dynamicIP.rima-tde.net]  has joined #ubuntu
+[11:58] <Ng> ROBOd: tune2fs -j /dev/hdX (where hdX is the partition in question). you might also need to update your /etc/fstab then to mount it as ext3 instead of ext2
+[11:58] <divineomega> florizs84 - that requests depencies which can't be instaleld
+[11:59] <ROBOd> thanks Ng
+[11:59] <daneel> I would need help with mod_rewrite configuration
+[11:59] <airtonix> hi guys, i did a stupid thing. i was chmoding a folder of stuff to 755, and i forgot to put a period before the slash...now I reckon system critical files are 755.......how do i reveerse this? can i load up a live cd and fix this?
+=== DarkRavenMixage [n=darkrave@85-18-136-103.fastres.net]  has joined #ubuntu
+[11:59] <DarkRavenMixage> bderrly .... not working :(
+=== thefish [n=thefish@unaffiliated/thefish]  has joined #ubuntu
+[11:59] <bderrly> DarkRavenMixage, as in X won't come up at all or just the 3d?
+[12:00] <holycow> airtonix, well yes :)
+=== void^ [n=void@p549E4C84.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:00] <DarkRavenMixage> bderrly no!! just the 3d!!!
+[12:00] <airtonix> holycow: can you point me to some docs or help me out?
+[12:00] <mr_luko> kasumix, I believe I am in business thanks for the help
+[12:00] <bderrly> DarkRavenMixage, ok, read through the log file again and see if you see anything else regarding GLcore or glx modules
+[12:00] <bderrly> DarkRavenMixage, look for (EE) and (WW)
+[12:00] <kasumix> mr_luko: sounds good... verry good :D
+=== James-C [n=jamesc@oucs-jamesc.oucs.ox.ac.uk]  has left #ubuntu []
+[12:00] <holycow> airtonix, docs for what? put livecd in, go to /media/harddrive/whatever and chmod it back to whatever
+[12:00] <KenSentMe> how do i propose packages to be included in the next release of ubuntu?
+[12:01] <bderrly> DarkRavenMixage, i've got to go to work now, and i don't think i'll be able to get on once i get there because today is going to be a busy day
+[12:01] <florizs84> @devineomega that is strange, what kind of dependency's?
+[12:01] <bderrly> DarkRavenMixage, keep reading docs online about your card and i know you'll get it
+[12:01] <DarkRavenMixage> bderrly allright :) thank you :)
+[12:02] <airtonix> but how do i know which octlet to set each and every file to? i didn't write them down before...not that i could before my retirement
+[12:02] <airtonix> holycow: you have to excuse me im pretty much a linux newbie....
+[12:02] <holycow> its okay
+[12:02] <mr_luko> kasumix, where is the index.php file?
+=== daneel [n=sarbogas@d213-103-234-4.cust.tele2.fr]  has left #ubuntu []
+[12:02] <holycow> airtonix, it might be faster to jsut reinstall actually
+[12:02] <airtonix> yeah....sigh.
+[12:02] <airtonix> oh well here i go
+[12:03] <airtonix> cheers
+[12:03] <airtonix> adios
+[12:03] <holycow> later
+=== veleno [n=veleno@adsl-ull-112-41.51-151.net24.it]  has joined #ubuntu
+[12:03] <digitalgalileo> if I leave room on my hard drive for ubuntu will the installer just recognise that and set up the partitions automatically without killing my windows partition?
+=== mike__ [n=mike@ip-213-135-229-140.dyn.luxdsl.pt.lu]  has joined #ubuntu
+[12:03] <holycow> digitalgalileo, kinda sorta
+[12:04] <holycow> digitalgalileo, it should ask you 'use available free space'
+[12:04] <holycow> but
+[12:04] <holycow> digitalgalileo, you want to edit the free space manually using the partition options in the installer
+=== vermoos [n=meso@host86-144-84-98.range86-144.btcentralplus.com]  has joined #ubuntu
+=== vince_ [n=vince@xbn44-2-82-225-226-129.fbx.proxad.net]  has joined #ubuntu
+=== ydnar [n=ydnar@cpe-67-10-187-94.houston.res.rr.com]  has joined #ubuntu
+=== truzak [n=chatzill@85.107.17.246]  has left #ubuntu []
+[12:04] <SurfnKid> time for sleep
+=== michael117 [n=michael@adsl-68-94-4-28.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[12:04] <SurfnKid> gnite
+[12:04] <digitalgalileo> holycow thanks
+[12:04] <holycow> digitalgalileo, at the end the installer will install the bootloader and will make entries for your old os and ubuntu
+=== Pip [n=yang@221.234.219.88]  has joined #ubuntu
+[12:05] <ydnar> for what reason would a dvd not play if i have libdvdcss2 installed?
+[12:05] <digitalgalileo> this is my second attempt at an install the last time i selected the resize automatically option and it just wiped my windows installation
+[12:05] <Ng> ydnar: what are you using to play it?
+[12:05] <holycow> ydnar, because it couldn't crack the encoding for the particual portion of the dvde
+[12:06] <holycow> ydnar, its common
+[12:06] <ydnar> tried vlc
+[12:06] <joycetick> fujitsu, i did a 'force re-check' in azureus and it scanned for a bit but dident do anything
+[12:06] <gourdin> we will we be able to access an edgy repo ?
+=== stasislove [n=stasislo@nl107-188-196.student.uu.se]  has joined #ubuntu
+=== Louaque [n=louaque@AStDenis-105-1-23-147.w81-248.abo.wanadoo.fr]  has joined #ubuntu
+[12:06] <cef> or if you're putting the DVD in a cd rom drive. *grin*
+[12:06] <holycow> ydnar, start up vlc from gnome terminal and try to play th edvd.  it will tell you where it erroring out
+[12:06] <gourdin> !edgy
+[12:06] <ubotu> Edgy Eft is the next codename for Ubuntu dapper+1. See https://lists.ubuntu.com/archives/ubuntu-announce/2006-April/000064.html.  initial release timeline - https://lists.ubuntu.com/archives/ubuntu-devel-announce/2006-June/000144.html
+=== Anfangs [n=matt@c-68-52-82-138.hsd1.tn.comcast.net]  has joined #ubuntu
+[12:06] <Fujitsu> joycetick, odd.
+[12:06] <alth> I saw a screenshot somewhere of Beagle running in the Gnome panel, anyone know how I could do that?
+[12:06] <Fujitsu> gourdin, it hasn't been created yet.
+[12:06] <ydnar> so then libdvdcss2 in other words will not work with my dvd-rom?
+[12:06] <Fujitsu> alth, add the `Deskbar' applet.
+[12:06] <holycow> ydnar, work with you cdrom? it has nothing to do with your cdrom
+=== airtonix [n=airtonix@ppp231-237.lns2.adl4.internode.on.net]  has joined #ubuntu
+[12:06] <stasislove> i try to compile wine but when i run configure it cant find flex/lex, synaptic doesnt have it, can anyone help where to got flex/lex? Should i ask what it is?
+=== Louaque [n=louaque@AStDenis-105-1-23-147.w81-248.abo.wanadoo.fr]  has left #ubuntu ["Leaving"]
+=== pax [n=pax@pdpc/supporter/student/pax]  has joined #ubuntu
+[12:07] <avis> coffee awaits me.  i think i would have bought an ubuntu coffee mug but i think they were $15.
+[12:07] <ydnar> i guess i don't understand the problem
+[12:07] <holycow> as cef said, either you DON'T have a dvd player but a cdrom in which case you put the wrong media into the wrong device
+[12:07] <Ng> stasislove: any particular reason you're not installing wine from the repositories?
+[12:07] <holycow> or libdvdcss cannot decode the encoding for the dvd
+[12:07] <holycow> one or the other
+[12:07] <holycow> libdvdcss has nothing to do with hardware
+[12:07] <Ng> stasislove: flex should be in the repositories too though
+[12:07] <ydnar> so then it was this specific dvd?
+[12:07] <Pip> is there any necessary for me to delete the old archives in /var/cache/apt/archives ?
+[12:08] <holycow> ydnar, in which case just do what i told you and run vlc from command line and quit talking already :)
+[12:08] <ydnar> oh
+[12:08] <holycow> ydnar, chances are yes
+[12:08] <holycow> ydnar, most dvds play
+[12:08] <mike__> Can someone please tell me the appropriate forum for discussing bcm43xx problems?
+[12:08] <holycow> ydnar, some simply cannot be decoded
+[12:08] <Pip> because I have updated my box from Breezy to Dapper
+=== bartholin [n=bartholi@3e6bb509.rev.stofanet.dk]  has joined #ubuntu
+[12:08] <ydnar> i'm a huge ubuntu noob
+[12:08] <vermoos> ahoy there
+[12:08] <ydnar> sorry
+[12:08] <holycow> ydnar, don't forget libdvdcss is illegal in the states
+[12:08] <avis> forums or irc channel ?
+[12:08] <ydnar> oh...
+[12:08] <holycow> ydnar, its okay i'm explaining anyway.  libdvdcss was REVERSE ENGINEERED
+[12:08] <holycow> what that means is ITS NOT PERFECT
+[12:09] <avis> holycow, well they can on windows
+[12:09] <the_Kane> QUESTION: Can i use valknut if im behind a proxy server>
+[12:09] <the_Kane> ?
+[12:09] <stasislove> Ng, no i just lice to compile, gives me the feeling that its better suited for my system then, but it doesnt matter i can install from repositories, but you sey i need flex anyway
+=== delire [n=delire@p54BCE54D.dip.t-dialin.net]  has joined #ubuntu
+[12:09] <avis> offtopic !
+=== lucas [n=lucas@h218n3c1o1124.bredband.skanova.com]  has joined #ubuntu
+=== sampan [n=bamboo@ppp-71-139-27-20.dsl.snfc21.pacbell.net]  has joined #ubuntu
+[12:09] <ydnar> ok, don't get mad but.. you told me to run vlc from the cl
+[12:09] <holycow> in order for you to play dvds legally in the states  you need to PAY FOR A PLAYER THAT THROWS A KICKBACK OF THAT $$ TO THE MOVIE STUDIOS THAT OWN THE PATENT
+[12:09] <vermoos> trivial question: i upgraded to dapper, and my .py files stopped looking like pythons :(
+[12:09] <ydnar> to do so, which directory would i navigate to?
+[12:09] <avis> word of advice, if you do something naughty, dont profit from it.
+[12:09] <Ng> holycow: could you not use quite so many caps and hold back on the ranting? ;)
+[12:09] <ydnar> i guess like the equivalent to c:\program files\
+[12:10] <holycow> avis, no they can't, windows users PAY TO PLAY DVDS by either buying the dvd player software, or buying windows where ms pays the extortionists money on a per licence basis or whatever their agreement is
+=== Tallia1Kubuntu [n=andrea@host183-114.pool8254.interbusiness.it]  has joined #ubuntu
+[12:10] <the_Kane> QUESTION: Can i use valknut if im behind a proxy server?
+[12:10] <holycow> Ng, emphasis helps , that was overboard indeed
+[12:10] <avis> holycow
+[12:10] <ROBOd> thanks guys
+=== ROBOd [n=robod@86.34.246.154]  has left #ubuntu ["http://www.robodesign.ro"]
+[12:10] <avis> you may not believe this
+[12:10] <joycetick> bderrly, i did a 'force re-check' in azureus and it scanned for a bit but dident do anything, should i just try downloading it again?
+[12:10] <delire> i've got a friend that is not online and i'm helping her over the phone. when ever she logs in she's dumped back to the login screen. we've deleted ~/.Xauthority and chmod'd the ~/.ICEauthority but still it persists. any clues?
+[12:11] <stasislove> what is flex/lex anyway? there must be somewhere i can get it o.0
+[12:11] <holycow> delire, the easiest thing is to create a new user from command line and transfer their files to that account .... :/
+[12:11] <avis> i plead the 5th i'm a linux neophyte
+[12:11] <cef> holycow: don't have a cow man!
+=== kimo [n=ahmed@82.129.234.122]  has joined #ubuntu
+[12:11] <Ng> stasislove: flex is used to generate code. It should be in synaptic. on dapper at least
+[12:11] <delire> holycow: she's tried that but even the new user has the same issue
+=== Lukketto [n=Lukketto@host63-134.pool8257.interbusiness.it]  has joined #ubuntu
+=== zipper_ [n=zipper@port19.ds1-hj.adsl.cybercity.dk]  has joined #ubuntu
+[12:12] <holycow> avis, :) lol no worries, i have plans on putting up a website explaining all the scams the big companies are pulling.  at first i was annoyed at linux not being able to play mp3's or whatever, now i'm just angry
+[12:12] <avis> okies holycow
+[12:12] <stasislove> Ng, i have dapper, i searched on flex, nothing came up named like that, but some other stuff were found named differently and allt were installed =\
+=== can_erogul [n=can@erogul.ceng.metu.edu.tr]  has joined #ubuntu
+=== _jpierre [n=JPA@212.12.234.76]  has joined #ubuntu
+[12:12] <avis> well i only bought 98 because i scratched my pirated copy
+=== Lukketto [n=Lukketto@host63-134.pool8257.interbusiness.it]  has left #ubuntu []
+[12:13] <Ng> stasislove: then I'm tempted to suggest your repositories are incorrectly configured because it's definitely in dapper, in the main section
+[12:13] <avis> i went from win 3.1 to xx64
+[12:13] <avis> x64
+[12:13] <DarkMageZ> holycow, linux can play mp3, unless you live in a country that doesn't allow it :)
+[12:13] <holycow> delire, oh shoot ... *hmm* i know that is fixable, but i don't have instructions on me bro ... i'm sorry.  trying to solve my sound problem so i don't have time to look it up for you. stick around someone will know
+[12:13] <avis> dual core x64
+[12:13] <delire> holycow: cheers.
+=== ydnar [n=ydnar@cpe-67-10-187-94.houston.res.rr.com]  has joined #ubuntu
+=== gnott [n=magnus@h24n5c1o1100.bredband.skanova.com]  has joined #ubuntu
+[12:13] <avis> now with genunie advante, i shell out the money on credit to buy the os
+[12:13] <stasislove> Ng, ok, ill try to find it by hand =\
+[12:13] <holycow> DarkMageZ, thats exactly what i mean, and now one company BOUGHT RIGHTS (paid extortionto the mp3 consortium) to let us play mp3's in all countries
+[12:13] <holycow> the companies name is fluendo
+[12:13] <Ng> stasislove: paste your /etc/apt/sources.list to a pastebin and we can check it for you
+[12:14] <holycow> everyone should write them and say thank you
+=== iwalker [i=alkaline@FT-ESR1-208-102-74-87.fuse.net]  has joined #ubuntu
+[12:14] <cef> DarkMageZ: yeah, linux (and even windows) can do lots of things. Wether they're legal or not is another question.
+[12:14] <zipper_> I'm trying to setup dualview on my geforce7900gt (2x dvi output). One of the screen is a regular lcd monitor, the other is a hdtv. If i only connect my lcd monitor, it works fine. But if i also connect my hdtv, everything is showed there and the lcd monitor goes black. Any hints on what might be wrong?
+[12:14] <_jpierre> Hello ... I just installed Dapper and I'm getting "Grub Hard Disk Error". However, I can see grub, when I try to boot from a Windows CD, but actually not booting as I'm not pressing any key when it says "To boot from CD press any key" any tips on fixing grub?
+[12:14] <avis> i also bought my father the window os (he is too dumb for linux) so he has a copy too.
+[12:14] <Ng> holycow: seriously, this is not the place for ranting, please use #ubuntu-offtopic
+=== Healot [n=kubuntu@60.49.68.100]  has joined #ubuntu
+=== goltsu [n=chatzill@194.137.73.40]  has left #ubuntu []
+[12:14] <gnott> hi..anyone knows how to set up a pxe-boot using the ubuntu cd mounted loopback? There would need to be a pxelinux-file, i guess...?
+[12:14] <holycow> Ng, dude, shut the f up.   first i'm not talking to you.
+[12:14] <holycow> second i'm not ranting.
+[12:14] <avis> i'm very generous to my father but he seems to fall short in many ways as a father but never let it be said i wasn't a good son -- most of the time.
+=== xrayboy [n=etmouse@218.65.110.184]  has joined #ubuntu
+[12:14] <Ng> !tell holycow about attitude
+=== Pip is now known as xpip
+[12:14] <holycow> if you cannot read simple irc text properly you don't belong on irc
+[12:15] <holycow> third i don't give a damn what you think
+[12:15] <holycow> and fourth, it is usefull information for newbies
+=== johan_ [n=johan@dsl52-216-100.fastxdsl.nl]  has joined #ubuntu
+[12:15] <Ng> holycow: if you're not asking a question or answering it, you're offtopic. This is a very busy channel, we just don't have the space for anything else.
+[12:15] <_jpierre> Hello ... I just installed Dapper and I'm getting "Grub Hard Disk Error". However, I can see grub, when I try to boot from a Windows CD, but actually not booting as I'm not pressing any key when it says "To boot from CD press any key" any tips on fixing grub?
+=== Renault [n=couretca@AToulon-152-1-67-156.w83-201.abo.wanadoo.fr]  has joined #ubuntu
+[12:15] <holycow> the problem is that newbies assume that because windows can do it so should linux, and they need to know WHY it can't
+[12:15] <holycow> Ng,  bite me bro
+[12:15] <holycow> seriously, just do it
+[12:15] <kimo> any idea when we're getting the first kernel update?
+[12:15] <digitalgalileo> holycow, good point
+[12:16] <the_Kane> QUESTION: where can i find an mp3 codec for totern
+[12:16] <Ng> !tell the_Kane about RestrictedFormats
+[12:16] <_jpierre> Hello ... I just installed Dapper and I'm getting "Grub Hard Disk Error". However, I can see grub, when I try to boot from a Windows CD, but actually not booting as I'm not pressing any key when it says "To boot from CD press any key" any tips on fixing grub?
+=== iwalker is now known as alkalineX
+[12:16] <cef> kimo: why you after a kernel update?
+[12:16] <avis> you can re-write grub in recovery mode i think and i am beginning to think that making a backup floppy of grub is essential to users and to user awareness in the installing ubuntu wiki
+[12:17] <airtonix> holycow: i have stuff i dont want to lose. my only problem so far isnot being able to log due to not beingable to write to my authorization file... if i chmod my entire home dir to 7777 would it help?
+[12:17] <holycow> avis, these days backup to usb probably is more relavant, i would agree
+[12:17] <stasislove> Ng, Postebin? I have used Linux for only 4 days or so, quite a noob, but i have what you asked for, just dont know how to send it
+=== C|B| [n=new@84-73-242-144.dclient.hispeed.ch]  has joined #ubuntu
+[12:17] <Ng> !tell stasislove about pastebin
+[12:17] <avis> kernel updates take care of themselves unless they compiled them themselves
+[12:18] <MadMerC> !pastebin
+[12:18] <ubotu> Please do not flood the channel http://paste.ubuntu-nl.org/ for pasting long texts it does not disrupt the channel. [webboard for Ubuntu: http://www.gnomefiles.org/app.php?soft_id=1269 : not an offical package] .
+[12:18] <avis> i only have 2 usb devices as storage, one is meant for music, the other is a 80 gig lappy in enclosure
+=== iceaxe18 [n=iceaxe18@c-67-183-186-107.hsd1.wa.comcast.net]  has joined #Ubuntu
+[12:18] <holycow> airtonix, well you can login with live cd such as knoppix ... then su - to root in that
+[12:18] <airtonix> im in the live now
+[12:18] <avis> formatted fat32 for portability in my room full of comps
+[12:18] <holycow> airtonix, then set the root pass so that you can modify stuff
+[12:18] <stasislove> Ng, please tell me again, turnd it of by misstake =(
+[12:18] <airtonix> done
+[12:18] <Ng> !tell stasislove about pastebin
+[12:18] <holycow> airtonix, which live cd, knoppix?
+=== Ubuntu [n=tiago@bl8-93-36.dsl.telepac.pt]  has joined #ubuntu
+[12:18] <airtonix> ahh no the dapper live
+[12:18] <holycow> anyway, once you are root you can do whatever
+=== imbrandon [n=brandon@ubuntu/member/imbrandon]  has joined #ubuntu
+[12:18] <Ubuntu> hi
+[12:19] <avis> www.pastebin.com -- over 2 lines of text ?  a simple url and they will thank you
+[12:19] <kimo> cef: coz the current kernel doesn't poweroff my laptop
+[12:19] <avis> maybe there is a special laptop kernel
+[12:19] <avis> laptops are finicky
+[12:19] <holycow> airtonix, oh i forget if livecd has root ... if not you can create root account, then go over to dir and copy it to whatever media
+=== Ubuntu [n=tiago@bl8-93-36.dsl.telepac.pt]  has left #ubuntu []
+[12:19] <Fujitsu> avis, there is no special laptop kernel...
+[12:19] <airtonix> back up.....ugh!
+[12:19] <avis> holycow, can you gnome terminal and sudo -i or sudo su ?
+[12:20] <Fujitsu> holycow, why create a root account!?
+=== h3sp4wn [n=samw@cpc1-leed11-0-0-cust262.leed.cable.ntl.com]  has joined #ubuntu
+[12:20] <avis> Fujitsu, okies.
+[12:20] <Fujitsu> holycow, do not recommend to set the root password!
+[12:20] <holycow> airtonix, its very easy on linux as compared to windows :)
+[12:20] <avis> mandriva would specialize kernels
+[12:20] <airtonix> i have a root account easily
+=== TiffOn [i=TiffOn@unaffiliated/tiff0n]  has joined #ubuntu
+=== iwalker [i=alkaline@FT-ESR1-208-102-74-87.fuse.net]  has joined #ubuntu
+[12:20] <holycow> Fujitsu, dude please stfu, and read what i said? he is using live cd to backup files and then reinstall
+=== Toma- [n=lin4me@203-59-195-148.dyn.iinet.net.au]  has joined #ubuntu
+[12:20] <cef> avis: what Fujitsu said. however, a kernel specific to the processor may help things
+[12:20] <Healot> the "root" account exists, but disabled by default installation
+[12:20] <thoreauputic> sudo -i if you need a temporary root shell
+[12:20] <airtonix> but i just need to know if an octlet of 7777 on my home dir will allow the gdm to swrite to my authorisation file.
+[12:20] <holycow> Fujitsu, of course he shouldn't use root, but i do appreciate the fact you are  noticing and warning everyone as it s a common mistake
+[12:20] <avis> holycow, watch your language.  save the drama for your mother.
+[12:21] <Fujitsu> holycow, can you please be pleasant. sudo -i is your friend.
+[12:21] <delire> airtonix: same problem here.
+=== mode/#ubuntu [+o thoreauputic]  by ChanServ
+[12:21] <holycow> or what? its straight up truth
+[12:21] <Toma-> is it easy enough to setup 2 gfx cards to work on 2 different monitors?
+[12:21] <thoreauputic> holycow: watch your language please
+=== Pjott^zZz is now known as Pjott
+[12:21] <airtonix> holycow: i dont want to have to re-install......
+[12:21] <holycow> Fujitsu, and that matters how on a live cd for a one time backup?
+[12:21] <delire> airtonix: a friend of mine can't log in to gnome after an upgrade. she's dumped back to the login window.
+[12:21] <thoreauputic> holycow: and your attitude
+[12:21] <airtonix> everyone: truth is important
+[12:21] <rambo3> Toma- i would't think that
+[12:21] <Pjott> Good Morning ppl :)
+[12:21] <avis> you can reconfigure X from a console prompt
+=== zenwhen [n=zenwhen@74.131.106.210]  has joined #ubuntu
+[12:21] <Fujitsu> holycow, it's a bad habit to get into. There is no reason to not use `sudo -i'.
+[12:22] <avis> sudo dpkg-reconfigure xserver-xorg
+[12:22] <holycow> thoreauputic, brother i respect you, but others need to learn to read first.  its okay tho, i make the same mistake
+[12:22] <thoreauputic> holycow: just cool it OK ?
+=== ablomen [n=ablomen@ipd50a6820.speed.planet.nl]  has joined #ubuntu
+[12:22] <airtonix> anyone know what a laodecian is.
+[12:22] <holycow> cool what? are you people high? its text on irc, with strangers.  amazing how people read stuff into text
+[12:22] <thoreauputic> airtonix: a spartan
+[12:22] <stasislove> Ng, now i have posted in postbin, do you need url now or can you see it?
+[12:23] <airtonix> thoreauputic: nope
+=== alkalineX [i=alkaline@FT-ESR1-208-102-74-87.fuse.net]  has joined #ubuntu
+[12:23] <Ng> stasislove: please give me the url
+[12:23] <airtonix> thoreauputic: its a lazy luke warm spirir without passion.
+[12:23] <zipper_> I'm trying to setup dualview on my geforce7900gt (2x dvi output). One of the screen is a regular lcd monitor, the other is a hdtv. If i only connect my lcd monitor, it works fine. But if i also connect my hdtv, everything is showed there and the lcd monitor goes black. Any hints on what might be wrong? My xorg.conf is here : http://pastebin.dk/index.php?show=1739
+[12:23] <Fujitsu> holycow, there's no need for bad language, there's no need to set a password on the root account.
+[12:23] <stasislove> Ng, http://paste.ubuntu-nl.org/15120
+[12:23] <airtonix> holycow has passion. its to be admired
+[12:23] <protocol1> I am a newb and it only took me 2 days to get a ftp server up and running and accessible from anywhere on the net
+[12:23] <avis> but his lack of manners is nto
+[12:23] <avis> not
+=== No1Viking [n=micke@h-83-140-104-3.ip.rixbredband.se]  has joined #ubuntu
+[12:23] <avis> anyway
+[12:23] <airtonix> well yes
+[12:24] <thoreauputic> airtonix: passion does not require rudeness
+=== Klaidas [n=klaidas@unaffiliated/klaidas]  has joined #ubuntu
+[12:24] <holycow> Fujitsu, you are correct, your advice is perfect.
+[12:24] <airtonix> anyway, will an octlet of 777 get me logged in?
+=== ablomen [n=ablomen@ipd50a6820.speed.planet.nl]  has left #ubuntu []
+[12:24] <Ng> stasislove: hmm, strange, it does look like you have enough repositories in there. Perhaps try telling Synaptic to reload the package lists
+[12:24] <airtonix> holycow: oh 7777 that is.
+[12:24] <Klaidas> http://www.ubuntuforums.org/showthread.php?t=186954 <- any ideas? :/
+[12:24] <Fujitsu> holycow, I must agree.
+[12:24] <rambo3> !easysource
+[12:24] <ubotu> For an easy to use custom sources.list creator, visit http://ubuntulinux.nl/source-o-matic
+[12:24] <protocol1> of course it took some reading
+[12:24] <holycow> airtonix, it should give you access to those files yes ... are you backing up or ... ?
+[12:25] <avis> everyone that wants a notepad for gnome -- ie for taking ubuntu notes -- please check out "tomboy" a notepad for gnome.
+[12:25] <holycow> airtonix, ohhhhhh wait ... you are asking for perms to fix tha tproblem
+[12:25] <airtonix> yeah you got it now....lol
+[12:25] <holycow> airtonix, i'm sorry i was answering the wrong question, i thought you were backing up to reinstall
+=== _Cass [n=Cass@cassnet.demon.co.uk]  has joined #ubuntu
+[12:25] <airtonix> it was an option id avoid
+=== hugomagic [n=ramiroji@adsl-70-234-234-54.dsl.rcsntx.sbcglobal.net]  has left #ubuntu ["Leaving"]
+[12:25] <airtonix> for nbow that is
+=== mode/#ubuntu [-o thoreauputic]  by thoreauputic
+[12:25] <holycow> airtonix, my appologies i'm not exactly certain, thats a very specific question
+=== jhunter [n=chatzill@80-46-119-180.static.dsl.as9105.com]  has joined #ubuntu
+[12:26] <_jpierre> Hello ... I just installed Dapper and I'm getting "Grub Hard Disk Error". However, I can see grub, when I try to boot from a Windows CD, but actually not booting as I'm not pressing any key when it says "To boot from CD press any key" any tips on fixing grub?
+[12:26] <stasislove> Ng, lol, now i found it, reload worked perfect, sorry to bother you, =\ *samed*
+[12:26] <airtonix> brb
+[12:26] <Ng> stasislove: no probs :0
+[12:26] <avis> those of you who are experimental and can hack it most of the time XGL rocks !!!!  i can manage my tasks easier when i can visually manipulate them
+=== chief_ [n=chief@p54AA8A12.dip0.t-ipconnect.de]  has joined #ubuntu
+=== dennis_ [n=dennis@202.43.236.247]  has joined #ubuntu
+[12:27] <the_Kane> QUESTION: does SDRAM have 3 sets of pins, and DDR has 2 sets? im trying to see what ram i have here
+[12:27] <holycow> avis, xgl is neat yeah, but i got bored of it really fast ... it was weird
+[12:27] <thoreauputic> airtonix: ah, I was thinking of "laconian" :)
+=== chief_ [n=chief@p54AA8A12.dip0.t-ipconnect.de]  has left #ubuntu ["Ex-Chat"]
+[12:27] <Fujitsu> the_Kane, SDRAM has 3.
+[12:27] <avis> thoreauputic, i do have to comment the ubuntu official documentation is poor in regards to XGL
+[12:27] <holycow> avis, the thing i ended up liking about it is how quickly the apps felt they loaded, even though they all loaded in the sam eamount of time
+[12:27] <delire> avis: is't pre-alpha software
+[12:27] <avis> holycow, i find it easier to manage
+=== VodkaLemon [n=VL@62.151.78.83.cust.bluewin.ch]  has joined #ubuntu
+=== orbin [n=orbin@unaffiliated/orbin]  has joined #ubuntu
+[12:28] <the_Kane> Fujitsu: thanks ;) also where on ubuntu can i find system information (such as processor speed, ram etc...)
+[12:28] <redmonkey> well, I rather work on a 2d desktop :)
+[12:28] <thoreauputic> avis: I wouldn't know - maybe send a mail to the ubuntu-docs list about it then :)
+[12:28] <Ng> avis: xgl is not part of the core of ubuntu, it's a community supported extra because it's in universe. The next release may well provide more official support for it
+=== AnAnt [n=anant@81.10.9.182]  has joined #ubuntu
+[12:28] <divineomega> :D I have DVD's playing finally.
+[12:28] <AnAnt> which package provides libtermcap.so ?
+[12:28] <holycow> xgl is dead anyway ... aiglx is the future
+=== holycow hides
+[12:28] <holycow> :)
+[12:28] <divineomega> Only 1 reason left to keep windows..
+=== glen_ [n=glen@83-71-11-69.b-ras1.dbn.dublin.eircom.net]  has joined #ubuntu
+[12:28] <zipper_> Ng, is there a deadline for the next release or is it ready when its ready?
+[12:28] <holycow> divineomega, whats that bro?
+=== lightstar [n=lightsta@60.50.46.230]  has joined #ubuntu
+[12:28] <thoreauputic> zipper_: Ocober
+[12:29] <thoreauputic> *October
+[12:29] <avis> i dont just rotate the cube i move apps around and seperate the "partitions in my brain"  i'm an ex windows user well i will use x64 again but grouping tasks is good
+=== OrTigaS [n=ja@66.180.156.167]  has joined #ubuntu
+[12:29] <zipper_> okay, thanks
+=== Madeye [n=Jad@81.10.126.86]  has joined #ubuntu
+[12:29] <divineomega> holycow, games - cedega doesn't do everything unfortunately
+=== ubuntuNewbee [n=chatzill@forestier.bn.cj.edu.ro]  has joined #ubuntu
+[12:29] <holycow> ah yes, well hopefully we will start to see more native ports anyway
+=== __doc__ [n=ubuntu@84-73-208-14.dclient.hispeed.ch]  has joined #ubuntu
+[12:29] <divineomega> hopefully
+[12:29] <avis> Ng, Dapper is the latest release and will be for the next 3 years at least
+[12:29] <holycow> now that we have gdebi, installing on ubuntu is WAY easier than on windows for newbs
+=== Morrowyn [n=Morrowyn@a80-126-193-138.adsl.xs4all.nl]  has joined #ubuntu
+[12:30] <__doc__> hi, I am installing dapper and I got some issue
+[12:30] <ubuntuNewbee> Ng, Hi!
+[12:30] <divineomega> I can slowly start to shrink my windows partition
+[12:30] <holycow> cleaner and safer hopefully too, for properly packaged items anyway
+[12:30] <airtonix> re: xgl....im waiting for the looking glass project  to step out of java and becomes "usable"....
+[12:30] <skippy81> ok anusien, are well im using xgl and compiz: phear my cube!!!
+[12:30] <Fujitsu> __doc__, what are these issues?
+=== gaz [n=gaz@cpc2-port1-0-0-cust354.cos2.cable.ntl.com]  has joined #ubuntu
+=== _nano_ [n=nano@ip70-162-104-171.ph.ph.cox.net]  has joined #ubuntu
+[12:30] <_jpierre> Hello ... I just installed Dapper and I'm getting "Grub Hard Disk Error". However, I can see grub, when I try to boot from a Windows CD, but actually not booting as I'm not pressing any key when it says "To boot from CD press any key" any tips on fixing grub?
+[12:30] <Morrowyn> morning
+[12:30] <skippy81> lol i had part of another sentance typed :D
+[12:30] <the_Kane> QUESTION: where on ubuntu can i find out how much ram speed i have, processor, and other stuff like that (such as windows System Information tool)
+[12:30] <holycow> airtonix, what does that doe that aiglx / glx dont?
+=== apokryphos [i=[U2FsdGV@server2.polaristar.com]  has left #ubuntu ["So]
+=== dinamizador [n=dinamiza@83.230.234.16]  has joined #ubuntu
+[12:30] <AnAnt> which package provides libtermcap.so.2 ?
+[12:31] <ubuntuNewbee> Ng: One question for you, if you have a little time, please
+[12:31] <__doc__> my problems are a) nvidia card. my screen resolution is 640x480 and I can-t click trough the installation because the rest of the installation dialog is outside my screen
+[12:31] <Ng> AnAnt: http://packages.ubuntu.com/ can search packages for specific files
+[12:31] <Ng> ubuntuNewbee: just ask, if someone can help you, they will
+[12:31] <airtonix> holycow: well. its hard to explain
+[12:31] <avis> Ng, yes i'm well aware of that and i'm done some reading and i'm quite content with what i've found and i dont use my mouse i use keyboard shifting unless i want to slide applications over.  its nifty on my 21" CRt
+[12:31] <holycow> the_Kane, free for ram, top for processes, uname -a for cpu
+[12:31] <Fujitsu> !find libtermcap.so
+[12:31] <avis> crt
+[12:31] <_nano_> _jpierre: if you have your rescue disk, boot and then run chkdsk, and then fixmbr and then fixboot
+[12:31] <thoreauputic> !tell __doc__ about fixres
+[12:31] <Fjodor> AnAnt: Install apt-file, do apt-file update and apt-file search libtermcap.so.2
+[12:31] <ubuntuNewbee> are there problems with the Switch user?
+[12:31] <ubotu> Ubuntu Search of 'libtermcap.so' (2 shown): (/usr/lib/libtermcap.so) in libdevel/libncurses5-dev ;; (/lib/{libtermcap.so.2|libtermcap.so.2.0.8}) in universe/oldlibs/termcap-compat.
+[12:31] <the_Kane> holycow: i dont follow?
+=== Klaidas [n=klaidas@unaffiliated/klaidas]  has left #ubuntu []
+[12:31] <airtonix> holycow: know how you can expand the cube into more sides than just 4?
+[12:32] <holycow> the_Kane, thoser are commands you can use to find that info from command line
+=== someone [n=someone@ppp92-130.lns1.mel3.internode.on.net]  has left #ubuntu []
+=== Abnix [n=abner@adsl-69-209-194-168.dsl.chcgil.ameritech.net]  has joined #ubuntu
+[12:32] <the_Kane> isn't there a gui ?
+[12:32] <__doc__> thoreauputic: hm?
+[12:32] <_jpierre> _nano_: I don't need to do the fixmbr, I want to fix the grub error. If I run fixmbr how will I run ubuntu?
+[12:32] <holycow> airtonix, add more virtual desktops maybe?
+=== eisen_ [n=eisen@xdsl-81-173-145-145.netcologne.de]  has left #ubuntu []
+[12:32] <avis> there is an apt-file search function ? after an update ?
+[12:32] <Ng> the_Kane: either the System Monitor or the Device manager
+[12:32] <airtonix> holycow: yeah kinda.....well its along those lines.....but i believe you can grab a window and throw it into the distance
+=== theliz48 [n=prout@mou06-1-82-246-4-197.fbx.proxad.net]  has joined #ubuntu
+[12:32] <Ng> the_Kane: in Applications->System Tools and System->Administration, respectively
+[12:33] <thoreauputic> __doc__: that URL should help with your 640x480 problem
+[12:33] <_nano_> _jpierre: once the mbr is fixed, you can reinstall grub
+[12:33] <AnAnt> Fjodor: thx
+[12:33] <airtonix> as if you were using operation flashpoint as your window manager
+[12:33] <avis> airtonix, you mentioned getting rid of novell splash, i'm interested
+[12:33] <holycow> anyway i think the cube idea is dumb ... i'd rather have more interesting animation between desktops ... say a nice blend, or say like a matrixy transition, or say maybe like an origamy folding transition ...
+=== theliz48 [n=prout@mou06-1-82-246-4-197.fbx.proxad.net]  has joined #ubuntu
+[12:33] <airtonix> xcruise meets xgl
+[12:33] <_jpierre> _nano_: how?
+[12:33] <__doc__> thoreauputic: sry i-m an irssi noob I probablz didn-t see the url
+[12:33] <thoreauputic> !fixres
+[12:33] <holycow> airtonix, *nod*
+[12:33] <_nano_> _jpierre: using the installation cd?
+[12:33] <Fjodor> AnAnt: Np. Didn't know ubotu would answer the query though ;-)
+[12:33] <ubotu> Help to fix the display resolution is available at http://wiki.ubuntu.com/FixVideoResolutionHowto
+[12:33] <airtonix> avis: i did? well i managed to put my own logo there
+[12:33] <thoreauputic> __doc__: see ubotu above
+=== pum` [n=spam@p508B733B.dip.t-dialin.net]  has joined #ubuntu
+[12:34] <_jpierre> _nano_: I did that/ I fixed the MBR and reinstalled Ubuntu.. Didn't work. I still get Grub Hard disk error
+=== nnz0id [n=get@ip171.cab32.mus.starman.ee]  has joined #ubuntu
+=== `Slay` [n=serkan@85.98.80.206]  has joined #ubuntu
+[12:34] <nnz0id> how to edit file in vi?
+[12:34] <airtonix> you may want to grab the compiztools or edit the apps/compiz tree in gconf
+[12:34] <avis> airtonix, i'm not interested in that.. they can take the credti for development but i dont see them unless i'm showing them off to papa.
+=== kkathman [n=kkathman@71.123.131.178]  has joined #ubuntu
+=== __doc__ tries, thx
+[12:35] <thoreauputic> nnz0id: to learn basic vi, type vimtutor
+[12:35] <__doc__> oh one other thing, where to set the input locale?
+=== `Slay` [n=serkan@85.98.80.206]  has left #ubuntu ["Ex-Chat"]
+[12:35] <orbin> nnz0id: press i for insert mode.....i'd stick with something easier though. try nano
+[12:35] <airtonix> avis : im confused.....
+[12:35] <holycow> allright guys now i need a bit of tlc ...
+[12:35] <nnz0id> cant nano doing a system resque
+=== skippy81 [n=skippy81@213.121.151.162]  has joined #ubuntu
+[12:35] <skippy81> !LAMP
+[12:35] <holycow> i'm  not finding much help on my sound issue, i just dist upgraded from beta of a week ago .. and my sound is gone
+=== kkathman is now known as kkathman-away
+[12:35] <orbin> nnz0id: what's that got to do w/ anything?
+[12:35] <holycow> modules seem loaded and sound card seems recognized
+=== bjmg [n=bjmg@p54A5526B.dip.t-dialin.net]  has joined #ubuntu
+[12:35] <nnz0id> from the dapper server cd
+[12:35] <holycow> and nothing seems to be muted
+[12:35] <nnz0id> it only runs sh
+[12:36] <bjmg> hi
+[12:36] <skippy81> hmm
+[12:36] <airtonix> holycow: mmmm
+=== syncmaster [n=mika@dsl-tregw3-fe59f800-123.dhcp.inet.fi]  has joined #ubuntu
+[12:36] <nnz0id> and when i do nano says some error
+[12:36] <holycow> any clever module tricks anyone might be aware of perhaps?
+[12:36] <_nano_> _jpierre: oh i see, in my case it worked..
+[12:36] <skippy81> !apache
+[12:36] <ubotu> methinks apache is https://wiki.ubuntu.com/ApacheMySQLPHP
+[12:36] <orbin> nnz0id: ah
+[12:36] <_jpierre> _nano_: Lucky you
+[12:36] <avis> holycow, lsmod
+[12:36] <Pjott> hmm
+[12:37] <Toma-> holycow: what are u doin?
+[12:37] <avis> holycow, apt-get install alsa-oss
+=== rturner [n=arty@175-41-112.adsl.terra.cl]  has joined #ubuntu
+=== rysiek|pl [n=rysiek@213-238-71-50.adsl.inetia.pl]  has joined #ubuntu
+[12:37] <OrTigaS> hi! why when i try to copy my file from Desktop to fat32 hd it said "no permission" to copy
+[12:37] <orbin> in azureus, what do the numbers in brackets mean for seeds and peers?
+[12:37] <avis> that would be a fstab problem i believe
+[12:37] <holycow> Toma-, i'm trying to figure out why my sound is gone, but modules are loaded, sound card is recognized and nothing is muted ... :/
+[12:37] <bjmg> On the website https://wiki.ubuntu.com/UbuntuWeeklyNewsletter/Issue1 you can read that there are updates for epihany-browser and other packages (section Ubuntu 6.06 LTS Updates). But they are not available on the mirrors (at least not in binary form). The source packages do exist.
+[12:38] <holycow> avis, *nod*, okay that is actually already installed *nod*
+[12:38] <avis> you can remove it from fstab and manually mount it
+[12:38] <avis> ok
+[12:38] <Toma-> holycow: speakers on?
+[12:38] <avis> lsmod reporting a sound card ?
+=== kasumix [n=kasumix@77-41-60-212-pool.cable.fcom.ch]  has left #ubuntu []
+=== izi [n=izi@ns.izimobil.org]  has joined #ubuntu
+[12:38] <skippy81> OrTigaS: the easiest way to fix it is to do "gksudo nautilus" browse to the folder, right click on it and set it to read and write
+[12:39] <holycow> Toma-, yeah, they worked just before the dist-upgrade infact with last weeks beta.  the weird thing is this  upgrade seems to have updated the kernel, i had to fix nvidia manually and its probably interfering with sound now too
+[12:39] <avis> speakers on and plugged in ?  right click volume control and go to the sound level adjustments and or mute panel ?
+=== rorian [n=dolo@host86-131-36-167.range86-131.btcentralplus.com]  has joined #ubuntu
+[12:39] <holycow> avis, *nod*nothing muted, i tried all of those *nod*
+[12:39] <Toma-> holycow: and you have rebooted?
+[12:39] <holycow> several times
+[12:39] <Toma-> ok
+[12:39] <avis> i'm no expert and thats what you need holycow
+[12:39] <holycow> i tried installing libesd-alsa ... which removed libesd0
+=== michael117 [n=michael@adsl-68-94-2-136.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[12:39] <holycow> reboot and nada
+[12:39] <avis> i suggest ubuntuforums.org in hardware sound
+[12:40] <holycow> reinstall libesd0 , reboot, nada
+[12:40] <Toma-> i agree, i gotta goto the movies right now...
+[12:40] <OrTigaS> skippy81,  i tries to copy then right click but the paste is not highlighted
+[12:40] <holycow> avis, *nod* indeed, i'm shooting in the dark here, no one seems to know
+[12:40] <protocol1> holycow, have you checked to make sure your cables were all connected properly
+[12:40] <holycow> Toma-, later, thanks for the help
+=== Hobart [i=jb@64.58.22.201]  has left #ubuntu []
+[12:40] <izi> hello, I have a sony laptop vaio pcg-k115z and I get random (2/per day) freezes with dapper, i have nothing in log files, what can i check ?
+[12:40] <avis> ubuntuforums.org is awesome.  it gets so much traffic my posts get outdated pretty quick with the new dapper release.  no one replies !
+[12:41] <avis> but to some quetions they wont be ignored
+[12:41] <holycow> protocol1, well i managed to make the speakers squeal by checking the wrong input box while i had another cardin to test ... i'll try th eother port again, but this one looks green to me ...
+[12:41] <Toma-> holycow: im guessing you might have had a modified /etc/modules/aliases file, and the dist-upgrade hasnt installed all the new aliases.
+[12:41] <avis> mine was a query for best gnome apps that are unknown
+[12:41] <skippy81> i find that the forums arnt good for really technical stuff
+[12:41] <nnz0id> when i press i in vi , kinda nothing happens , how to move pointer around
+[12:41] <Toma-> holycow: but thats just my first guess :( hope it points you somewhere! and sorry! :)
+[12:41] <nnz0id> like in normal text editor?
+[12:41] <skippy81> but the froums are a real asset for begineers
+[12:41] <holycow> Toma-, oh thats interesting ... *hmm* vaguely remember something about that way back ... okay googling
+=== cdfs [n=packerma@p5491A479.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:41] <avis> i got "tomboy" the notepad for gnome
+[12:41] <holycow> Toma-, danke
+[12:42] <skippy81> OrTigaS:  have you set the permissions of the folder to read and write for others?
+[12:42] <cdfs> I'm having problems installing mplayer...
+[12:42] <avis> then post to the mailing lists on the forums and it will be send out to the mailing lists
+[12:42] <cdfs> it seems to be removed from the repository...
+[12:42] <avis> or heh sign up for mailing list
+[12:42] <__doc__> about the display problem, the first suggestion "sudo dpkg-reconfigure xserver-xorg" does not work because "debconf: DbDriver "config": /var/cache/debconf/config.dat is locked by another process"
+=== squiddle [n=squiddle@port-195-158-178-150.dynamic.qsc.de]  has joined #ubuntu
+[12:43] <shrump_jimbo> i had problems with mplayer till I got the files from packages.ubuntu.com
+[12:43] <avis> forums are nice because its easily accessible to everyone
+[12:43] <zipper_> i'm having trouble determining the "BusID" (for xorg.conf) of my gfx card. lspci gives me "0000:04:00.0 VGA compatible controller: nVidia Corporation...". However, if i set BusID "PCI:0000:04:00.0" i get an error about there is no device there?
+=== anjo_alado [n=tiago@bl8-93-36.dsl.telepac.pt]  has joined #ubuntu
+=== cstrippie [n=cstrippi@adsl-69-225-50-184.dsl.skt2ca.pacbell.net]  has joined #ubuntu
+[12:43] <avis> mplayer requires some additional configuration other than apt-get thats in the ubuntu documenation
+=== johan_ [n=johan@dsl-165-104-34.telkomadsl.co.za]  has joined #ubuntu
+[12:43] <avis> its quite nice tho
+[12:43] <ubuntuNewbee> Ng: As it seems that nobody answers, it remains to me to present here the problem. I created the power user (sudoer), then a normal user. From my first account I switched (with the switch user button) to the normal account. From the normal account I chose log off and there was the problem: The greeter failed to show 6 times. After 6 times a message shows in text mode (very wired characters),...
+[12:43] <ubuntuNewbee> ...that tells me that "The display server has been shut down about 6 times in the last 90 seconds. I is likely that something bad is going on. Waiting for 2 minutes before trying again on display :0". After 2 minutes nothing happens.
+[12:43] <nnz0id> how can i add lines from command line to a file ? cant vi it coz vi sux
+[12:43] <ubuntuNewbee> What do you think about that?
+[12:43] <Healot> does your X start? zipper_
+[12:44] <zipper_> Healot, no
+[12:44] <avis> so is Muine
+=== AnAnt [n=anant@81.10.9.182]  has left #ubuntu []
+[12:44] <jhunter> I'm a new user, struggling to get the drivers working for my nVidia GeForce3 Ti200 working. The standard directings  just cause the system to hang, so I'm now in the  NvidiaManual part trying to install the drivers manually. I'm up to the stage sudo chmod +x NVIDIA*, but all I get is 'no such file or directory' - Anyone able to help?
+[12:44] <zipper_> if i remove BusID it works fine, but i need the setting for dualview (or well, i hope so at least)
+=== michael__ [n=michael@0x535b0d16.virnxx15.adsl-dhcp.tele.dk]  has joined #ubuntu
+[12:44] <airtonix> Healot: does it work when you set it to PCI:0000:01:0:0
+=== zx80user [n=adrian@81.1.85.9]  has left #ubuntu ["Leaving"]
+[12:44] <orbin> zipper_: that's equiv. to : "PCI:4:0:0" i think
+[12:45] <dennis_> hello Im new to linux i have the ubuntu breeze on my pc and tried to update to this new drake one it did everything with no errors but i could not log in my user name and password dint work any more
+[12:45] <Healot> airtonix: that wasn't my question ---? zipper_
+[12:45] <Ng> ubuntuNewbee: hmm, I've not come across that before. Perhaps check /var/log/Xorg.* for errors?
+[12:45] <airtonix> Healot: woops lol......
+[12:45] <a_monkey> Does anyone here have experience with the "suspend" function for laptops? mine suspends fine, but locks up totaly when trying to boot up again when i open the screen.
+=== Petrov [n=Petrov@150.91-136-217.adsl.skynet.be]  has joined #ubuntu
+[12:45] <avis> jhunter
+[12:45] <skippy81> ubuntuNewbee:  same thing happened on my gentoo installation - i just ran "sudo dpkg-reconfigure xserver-xorg" and that fixed it
+[12:45] <zipper_> orbin, think i've tried that, but i'll check it out
+[12:45] <orbin> a_monkey: ati card?
+=== apokryphos [i=[U2FsdGV@server2.polaristar.com]  has joined #ubuntu
+[12:45] <a_monkey> Nvidia
+[12:45] <delire> dennis_: does it take you straight back to the login screen?
+=== Firebird8 [n=Firebird@pool-141-156-51-217.res.east.verizon.net]  has joined #ubuntu
+=== anstei [n=anstei@adsl-84-227-70-205.adslplus.ch]  has joined #ubuntu
+[12:45] <orbin> zipper_: just do a reconfig of the xorg package and it will autodetect the id for you
+[12:45] <dennis_> yes
+[12:45] <avis> there should be native nvidia drivers you can apt-get from the repositories that are official nvidia
+[12:46] <zipper_> Healot, x does not start, it only gives me that error and shuts down. if i remove BusID it works fine, but i need the setting for dualview (or well, i hope so at least)
+[12:46] <avis> i got them upgrading to XGL
+[12:46] <ubuntuNewbee> Ng: but have you used that functionality before?
+=== steve343 [n=stephenj@cpc3-ely12-0-0-cust194.cdif.cable.ntl.com]  has joined #ubuntu
+[12:46] <delire> dennis_: do you see anything of the desktop before it dumps you back?
+[12:46] <DarkLegacy> How do I change my PCMCIA's cards model ?
+[12:46] <holycow> dennis_, at the begging, select 'safe mode' or whatever it is in grub where you haveto press f1 or whatever ... when it loads you will have root priviledges.  you can use adduser command to create a new user and go from there maybe?
+=== samark [n=samark@218.83.112.198]  has joined #ubuntu
+[12:46] <zipper_> orbin, yes, but i need to manually specify the busid to get dualview. Reconfiguring won't give me that setting
+[12:46] <DarkLegacy> It's listed as CEM56 in Device Manager, but it's really REM56G-100
+[12:46] <orbin> in azureus, what do the numbers in brackets mean for seeds and peers? e.g seeds: 3(2)
+[12:46] <ubuntuNewbee> skippy81: I'd do that, but the system doesn't allow me to enter command line
+=== samark [n=samark@218.83.112.198]  has left #ubuntu ["Leaving"]
+[12:47] <dennis_> no only like windows hourglass wait symbol
+[12:47] <Healot> zipper_: is your card nv or ati?
+[12:47] <holycow> zipper_, are you using nvidia?
+[12:47] <a_monkey> orbin, Nvidia 6600
+[12:47] <zipper_> nvidia geforce7900gt
+[12:47] <delire> dennis_: hmm. have you ever used the console before?
+[12:47] <Morrowyn> should work
+[12:47] <izi> does anyone have a vaio laptop here ?
+[12:47] <skippy81> ubuntuNewbee: it should, either boot in recovery mode, or just hit control alt backspace to escape from x windows and get to a prompt
+[12:47] <holycow> zipper_, want my xorg.conf file ... i run dual screen with dualview?
+=== yaru [n=brian@CPE0050f2c7e9f1-CM013319901457.cpe.net.cable.rogers.com]  has joined #ubuntu
+[12:47] <zipper_> holycow, yes please
+[12:47] <Healot> for each card you can download all the neccessary packages for multi-monitor...
+=== LinuxJones [n=willy@hlfxns01bbh-142177195240.ns.aliant.net]  has joined #ubuntu
+[12:47] <dennis_> no sorry im very new to linux
+[12:47] <Morrowyn> zipper, let me feed you me dual setup xorg.conf
+[12:48] <delire> dennis_: a friend had a similar problem we just fixed. but you need to do a little command or two from the console.
+[12:48] <Morrowyn> that one works for the 7900gtx i have
+[12:48] <zipper_> Morrowyn, keep 'em comming, the more the marrier :)
+[12:48] <Morrowyn> brb
+=== TimothyP [n=sdfsdf@83-217-93-182.adsl.realdsl.be]  has joined #ubuntu
+[12:48] <holycow> zipper_, accept
+[12:48] <skippy81> or ubuntuNewbee you could use control-alt-F2 to open a terminal and log in through that
+[12:48] <delire> dennis_: this happened after an upgrade?
+[12:48] <DarkLegacy> I have network problems. Help
+[12:48] <avis> i was able to apt-get install a kernel or something that allowed me to get "nvidia native" drivers for the kernel.. i had to edit xorg.conf and change nv to nvidia
+[12:48] <dennis_> yes
+[12:48] <zipper_> holycow, hmm, xchat seem to have some sort of auto-ignore dcc's... 2 secs
+[12:48] <TimothyP> Hi, I have the latest ubuntu on my pc, my pc contains numerous NTFS drives which I want to read from, I see them in "My Computer" but when I try to access them it can't seem to mount them I get the following error: 83.217.93.182
+[12:48] <orbin> a_monkey: i don't have an nvidia card but it could be driver related..that's why i saked.
+[12:48] <dennis_> 2 times i have last version cd
+[12:48] <TimothyP> err... wrong copy paste :p
+[12:48] <orbin> s/saked/asked
+[12:48] <avis> DarkLegacy, hey guy whats going on ?
+[12:48] <ubuntuNewbee> skippy81: control-alt-F2 has no effect when that problem appears
+[12:48] <holycow> no worries
+[12:49] <TimothyP> error: device /dev/sdb5 is not removable
+[12:49] <delire> dennis_: sounds very similar. so i want to be sure before we go on. you try to login, you get the little clock-wheel and then it dumps you back to the login screen
+[12:49] <TimothyP> error: could not execute pmount
+[12:49] <jhunter> I tried to install the nVidia drivers from the reppository - they just caused my screen to go blank and I had to replace the xorg.conf with a backup
+=== themike [n=mike@N655P005.adsl.highway.telekom.at]  has joined #ubuntu
+=== kholerabb1 [n=me@dsl-220-235-66-169.qld.westnet.com.au]  has joined #ubuntu
+[12:49] <skippy81> ubuntuNewbee: just reboot and use recovery kernel mode then
+[12:49] <dennis_> exactly
+[12:49] <skippy81> its just standard but without x being loaded
+[12:49] <zipper_> holycow and Morrowyn, try sending xorg.conf again
+[12:49] <TimothyP> jhunter, apt-get install nvidia-glx     and   nvidia-glx-config enable ?
+[12:49] <avis> i made the mistake of not backing up my xorg.conf but i didn't make a mistake of misediting xorg.conf
+[12:49] <delire> dennis_: ok type CTRL-ALT-F2
+[12:49] <kholerabb1> Can I install skype through synaptic or aptitude or do I have to download it from there website?
+[12:49] <holycow> try now
+=== hoary [n=ken@p54A98158.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:49] <delire> dennis_: you should see a text-only login prompt. type in your username and password.
+[12:49] <michael__> hello all. I would like if anyone can help me change GRUB so that windows is the default OS on launch.
+[12:50] <avis> i believe you have to download the deb
+[12:50] <avis> for skype
+[12:50] <dennis_> well i cant do that now im back on the older version i re installed
+[12:50] <zipper_> holycow, i'll get here on another irc client
+[12:50] <steve343> im very new to linux how do i make a fat32 partition write acessable?
+[12:50] <holycow> zipper_, http://pastebin.com/759410
+[12:50] <hoary> michael__: open /boot/grub/menu.lst and change default value to what windows is
+[12:50] <zipper_> ah, thanks
+[12:50] <holycow> i just put it on pastebing, copy paste as you like, i hope it helps
+[12:50] <kholerabb1> avis.. hmm ok
+[12:50] <themike> steve: have you already an entry in the /etc/fstab file?
+[12:50] <jhunter> Perhaps I'm doing something wrong - installing the confis automatically uninstalls the glx and also vice versa
+[12:50] <delire> dennis_: ahah, then i can't help you sadly ;/ i can only fix the problem on the Dapper.
+[12:50] <dennis_> im writing this down
+[12:50] <delire> dennis_: ok.
+[12:50] <avis> michael__, let me fetch you a url
+[12:50] <steve343> you see i dont even know what that means
+=== ubuntuNewbee [n=chatzill@forestier.bn.cj.edu.ro]  has joined #ubuntu
+[12:51] <avis> https://wiki.ubuntu.com/GrubHowto#head-28c697721b2f5d2352e43074a55f4621c415293d
+[12:51] <gnott> anyone here about pxe-boot? how to use the dapper install cd for pxeboot
+=== Pupeno [n=Pupeno@80-102-124-91.bcn1.adsl.uni2.es]  has joined #ubuntu
+[12:51] <themike> are you seeing the content of your fat partition?
+[12:51] <dennis_> i do like this operating system just not very good at it yet
+=== imbrandon [n=brandon@ubuntu/member/imbrandon]  has joined #ubuntu
+[12:51] <delire> dennis_: pm me.. so i can give you instructions
+[12:51] <michael__> thanks all
+[12:51] <steve343> yes but i cant save too it
+[12:51] <guillem101> How can I use startx for a user?
+=== engla [n=ulrik@kr-lun-116-144-233-83.3.cust.bredband2.com]  has joined #ubuntu
+[12:51] <kholerabb1> avis: do you know how to install skype form the deb? Could you explain please?
+[12:51] <avis> guillem101, i haven't heard anyone discussing disabling gdm
+[12:51] <TimothyP> you're not root steve343
+[12:52] <steve343> its unbuntu tho isnt it
+[12:52] <steve343> there is no root
+[12:52] <avis> i did get rid of boot splash and got console to 1024x768
+[12:52] <themike> open the file /etc/fstab as root
+=== dini [n=dini@60-240-81-11-nsw-pppoe.tpgi.com.au]  has joined #ubuntu
+[12:52] <orbin> avis: heh, same here
+[12:52] <alth> Hmm. I installed grub-splashimages, but does anyone know how I actually use the image I want?
+[12:52] <steve343> do i have to do that every time?
+[12:52] <themike> no just once
+[12:52] <delire> dennis_: see my PM?
+[12:52] <dennis_> new to this chat too did i do that right?
+[12:52] <guillem101> avis, don't want to disable gdm, just to be able to startx.... because I'm using Xgl and I want a non-xgl server as well
+[12:52] <avis> system-preferences-splash screen
+[12:53] <themike> there you should find a line like this: "/dev/hdxx /your/folder vfat ......"
+[12:53] <avis> ok
+[12:53] <themike> show me this line
+[12:53] <delire> dennis_: you should see a private message session somewhere in your IRC client.
+=== steve_ [n=steve@153.27.233.220.exetel.com.au]  has joined #ubuntu
+=== ePierre [n=ePierre@218-166-207-251.dynamic.hinet.net]  has joined #ubuntu
+[12:53] <avis> well i get standard X unless i type thefuture in gnome console
+[12:53] <ePierre> hello
+[12:53] <steve343> how do i open it as root?
+=== ja_ [n=ja@69.44.203.138]  has joined #ubuntu
+=== Guardian [n=Guardian@ANantes-252-1-93-90.w86-203.abo.wanadoo.fr]  has joined #ubuntu
+=== lupz [n=lupz@85-18-14-6.fastres.net]  has joined #ubuntu
+[12:54] <Guardian> re
+[12:54] <steve_> hey, does anyone know how i can get ubuntu to use the windows key? i actually want it so that when i press "windows + d" it will minimise everything and go to the deskop
+=== ePierre [n=ePierre@218-166-207-251.dynamic.hinet.net]  has left #ubuntu ["Leaving"]
+[12:54] <dennis_> i have you pm
+[12:54] <themike> type "alt-f2" and then "gksudo gedit /etc/fstab"
+[12:54] <avis> guillem101, look at this http://www.ubuntuforums.org/showthread.php?t=131267 it saved my life
+[12:54] <delire> dennis_: anyway, i'll do it here. fix 1) login into the text only console and try the following. first 'chmod 777 ~/.ICEauthority'. then go back to the gnome login screen with CTRL-ALT-F7 and try to login
+[12:54] <avis> hacking away at the comp for about 4 hours figuring out why it would not work anymore !
+=== uporabnik [n=hm@clj19-5.dial-up.arnes.si]  has joined #ubuntu
+=== uporabnik [n=hm@clj19-5.dial-up.arnes.si]  has left #ubuntu ["Leaving"]
+[12:55] <Guardian> i asked this morning about choosing between desktop cd or server cd, if i don't want to alter MBR, i have to choose server install cd or alternate install cd right ???
+=== grasshopper [n=conrad-l@62-31-45-140.cable.ubr03.camd.blueyonder.co.uk]  has left #ubuntu []
+=== dani [n=dani@169.Red-217-127-113.staticIP.rima-tde.net]  has joined #ubuntu
+[12:55] <Morrowyn> zipper_,  http://www.morrowyn.org/x/xorg.conf
+=== Balachmar [n=balachma@84.24.46.100]  has joined #ubuntu
+[12:55] <Morrowyn> this works for a gf7900gtx pcie
+[12:55] <avis> i just think the visual aesthetics is more condusive to grouping and using multiple destkops especially if yuo are migrating from windows -- plus it looks awesome by mouse
+=== moggio_ [n=moggio@213-48-145-61.cro.cvx.blueyonder.co.uk]  has joined #ubuntu
+=== Goshawk [n=vincenzo@d83-176-72-145.cust.tele2.it]  has joined #ubuntu
+[12:56] <delire> dennis_: if that doesn't work try fix 2) go back to the txt-only console with CTRL-ALT-F2 and 'rm -f ~/.Xauthority'. then go back to the login screen with CTRL-ALT-F7 and try to login.
+[12:56] <Morrowyn> i miss expose :D
+[12:56] <steve_> anyone?
+=== joe6packs [n=joe6pack@host41-138.pool8250.interbusiness.it]  has joined #ubuntu
+[12:56] <ubuntuNewbee> Ng: Are you there?
+=== liquidindian [n=alan@softbank221039118007.bbtec.net]  has joined #ubuntu
+[12:56] <zipper_> Morrowyn, thanks
+[12:56] <avis> Guardian either one of those is going to have grub on the system so if you dont have grub you can always make a grub floppy or cd
+=== kati [n=katrin@p5482E530.dip.t-dialin.net]  has joined #ubuntu
+[12:56] <liquidindian> !xfree
+[12:56] <ubotu> liquidindian: Did you get hit by a windmill? Try searching at http://ubuntu.cc.com.au/
+[12:56] <liquidindian> Hmm
+=== lastnode [n=lastnode@unaffiliated/mahangu]  has joined #ubuntu
+[12:56] <Morrowyn> steve, look into the metamode/key or something
+[12:57] <dennis_> ok thank you ill try upgrade this again
+[12:57] <avis> liquidindian, what tribe is uhm your ubuntu ? :)
+=== Nolt [n=nolt@aul190.internetdsl.tpnet.pl]  has joined #ubuntu
+[12:57] <delire> dennis_: if *that* doesn't let you login try this: fix 3) go to the text-only console and "mv ~/.gconf ~/.gconf.old'. then try to login again.
+[12:57] <steve343> why is it blank?
+=== dani [n=dani@169.Red-217-127-113.staticIP.rima-tde.net]  has joined #ubuntu
+[12:57] <steve_> Morrowyn: where is that?
+[12:57] <liquidindian> avis, erm, huh?
+[12:57] <kati> r0bby where are you from?
+[12:57] <Nolt> hello
+[12:58] <avis> liquidindian, lack of sleep -- appologize
+=== Alcohol [n=stfu@unaffiliated/paperclip]  has joined #ubuntu
+[12:58] <Morrowyn> you migth wanna check:  keyboard shortcut in preferences
+[12:58] <delire> dennis_: that last one is a little serious as you'll end up losing _all_ your preferences.
+[12:58] <avis> or namaste
+[12:58] <Guardian> avis: i have currently have a multiboot and i'm afraid desktop cd won't let me choose on which partition to install and wether or not grub should be placed on the mbr
+[12:58] <steve_> Morrowyn: thanks
+[12:58] <Morrowyn> under gnome, in kde i think its somewhere in the control center
+[12:58] <liquidindian> liquidindian, oh, okay:  I'm sorry.
+[12:58] <delire> dennis_: eg desktop shortcuts, desktop background, applets and stuff.
+[12:58] <rixxon> what do i use to convert some .ogg to .mp3?
+[12:58] <Ng> Guardian: the alternative install disc is probably the best way to go
+[12:58] <themike> have you entered you password? then open now the file "/etc/fstab"
+[12:58] <avis> Guardian the alternate cd is a piece of cake
+=== nomin [n=nomin@adsl-68-76-82-68.dsl.bcvloh.ameritech.net]  has joined #ubuntu
+[12:58] <steve343> it doesnt ask for a password
+[12:58] <dennis_> i dont have any as yet i just got the cd about 2 weeks before the upgrade and have been exploring the system
+[12:58] <themike> strange
+[12:59] <ubuntuNewbee> Ng: When you have time, please test that thing out. The problem is consistent. It keeps showing
+=== apsuva [n=dark@85.108.144.237]  has joined #ubuntu
+[12:59] <Alcohol> Hey guys. Is there a tool similar to partition magic available on Linux? I would like to install Windows XP alongside Ubuntu, but I don't want to have to reformat and partition everything again -and- reinstall Ubuntu too.
+[12:59] <kati> how can I change the room?
+=== clast [n=clemens@p54B3F282.dip.t-dialin.net]  has joined #ubuntu
+[12:59] <johan_> moorag?
+[12:59] <nomin> how do I control what applications are opened for different file extensions?
+[12:59] <Nolt> who knows where i can find a .deb package of verlihub ??? i tryied to compile but i compilation has been finished with error... Please help !!!!!!
+[12:59] <Morrowyn> qpart or gpart Alcohol
+[12:59] <Ng> Alcohol: gparted
+[12:59] <avis> Alcohol, yes qtparted
+[12:59] <Healot> Alcohol: g/qparted
+[12:59] <themike> ok, then we try the termal-way
+[12:59] <Morrowyn> thats the one :)
+[12:59] <Healot> the backend is parted
+=== nekromaan [n=nekromaa@82.149.100.216]  has joined #ubuntu
+[12:59] <Alcohol> Ah, thanks (:
+[12:59] <Alcohol> I will look into that.
+[12:59] <dennis_> thanks bye for now
+=== jake [n=jake@h236n1c1o986.bredband.skanova.com]  has joined #ubuntu
+[12:59] <themike> open a terminal by executing "xterm" after pressing "alt-f2"
+=== Bladesonfire [n=boffy@ip68-109-196-212.oc.oc.cox.net]  has joined #ubuntu
+[12:59] <Guardian> thx ng & navis
+[12:59] <Guardian> & avis
+[12:59] <Guardian> sorry : )
+[11:50] <mwe> squiddy: I haven't tried the auto updater thing
+[11:50] <squiddy> update from the web or from the cd
+[11:50] <brokenthorn> Bot_Builder, hmm l'll try fspot but in the mean time any other suggestions? Anything that is meant not to be easy? :D
+[11:50] <finley> mwe: i could ad it to /etc/mtab if it were a single machine i was trying to hack into shape
+[11:51] <squiddy> i have the terminal open. plz tell me how to update
+[11:51] <finley> mwe: however,
+[11:51] <Fear_is_the_mind> i use xchat too
+[11:51] <mwe> squiddle: from the web
+=== nbx909 [n=nbx909@71-80-82-71.dhcp.kgpt.tn.charter.com]  has joined #ubuntu
+[11:51] <Fear_is_the_mind> hehehe
+[11:51] <squiddy> squiddle or squiddy?
+[11:51] <nbx909> O.o
+=== testcees2 [n=testcees@dsl103-5-101.fastxdsl.nl]  has joined #ubuntu
+=== jenda [n=jenda@unaffiliated/jenda]  has joined #ubuntu
+[11:51] <finley> mwe: in this case, i'm making modifications to enterprise deployment software that needs to replicate machines _as they are_.
+=== gratefulfrog_ is now known as gratefulfrog
+[11:51] <mwe> finley: dont mess with mtab!
+=== squiddle is now known as squiddy_is_not_s
+[11:51] <mwe> finley: put it into fstab
+=== sam__ [n=sam@88-110-204-241.dynamic.dsl.as9105.com]  has joined #ubuntu
+[11:52] <finley> mwe: i can't assume that others will be happy with me deciding to re-configure this aspect of their systems
+=== squiddy is now known as squid
+[11:52] <sam__> file:///home/sam/Desktop/Kvcd_The_Da_Vinci_Code_TC_mpg.xdcc
+=== j_ack [n=nico@p508D9BBC.dip0.t-ipconnect.de]  has joined #ubuntu
+[11:52] <mwe> finley: no
+[11:52] <Fear_is_the_mind> Dandre ? is it ok ? here=> http://blackbanana.free.fr/Dean/sun-j2re1.4_1.4.2+11_i386.deb
+=== BHSPitMonkey [n=Steve-O@adsl-66-141-169-130.dsl.rcsntx.swbell.net]  has left #ubuntu ["Leaving"]
+[11:52] <finley> mwe: putting it in /etc/fstab is the easy way out, but is fixing the symptom, not the problem.
+=== mbmccormick [n=matt@adsl-67-38-15-86.dsl.sfldmi.ameritech.net]  has left #ubuntu []
+=== petrik [n=petrik@222-153-148-206.jetstream.xtra.co.nz]  has joined #ubuntu
+[11:52] <mwe> finley: that's true
+[11:53] <mwe> finley: I guess /etc/init.d/mtab should be fixed. or your setup
+=== gratefulfrog_ [n=chatzill@80.236.178.205]  has joined #ubuntu
+[11:53] <sergiol> ubuntu buy default reads /etc/profile or /etc/bashrc?
+[11:53] <sergiol> buy->by
+[11:53] <squid> mwe: so how can i update my system via commandline. and should i update from the web or from the cd?
+=== Exposure` [n=exposure@80.126.234.67]  has joined #ubuntu
+=== basti [n=basti@host245-203.eksjo.com]  has joined #ubuntu
+[11:53] <Dandre> Fear_is_the_mind,  ok fine
+[11:53] <Fear_is_the_mind> great
+[11:53] <finley> mwe: i want to fix systemimager to handle this situation, but i need to understand the situation first.
+=== sjoerd [i=sjoerd@tunnel3460.ipv6.xs4all.nl]  has joined #ubuntu
+[11:54] <mwe> finley: yes
+=== RadiantFire [n=ryan@c-69-180-43-27.hsd1.ga.comcast.net]  has joined #ubuntu
+=== gratefulfrog_ is now known as gratefulfrog
+=== gratefulfrog_ [n=chatzill@80.236.178.205]  has joined #ubuntu
+[11:54] <mwe> squid: sudo sed -i 's/breezy/dapper/g' /etc/apt/sources.list && sudo apt-get update && sudo apt-get dist-upgrade is pretty fool safe
+[11:54] <mwe> squid: try that
+=== danfg [n=dan@201.79.7.17]  has left #ubuntu ["Leaving"]
+=== schmity [n=JollySch@c-68-54-3-56.hsd1.nm.comcast.net]  has joined #ubuntu
+[11:55] <squid> i will. thanks
+[11:55] <mwe> squid: come back if it complains
+[11:55] <Dandre> time to go to bed, good night
+=== squiddy_is_not_s is now known as squiddle
+=== Dandre [n=testdan@can59-3-82-233-173-121.fbx.proxad.net]  has left #ubuntu ["Ex-Chat"]
+[11:55] <cached> woohoo i was banned from ubuntu-offtopipc
+[11:56] <cached> woohoo i was banned from ubuntu-offtopic
+[11:56] <zukalk> any reason why beep's not working since dapper?
+[11:56] <nbx909> ....
+=== Bay`Guy`27 [n=caper@blk-224-253-214.eastlink.ca]  has joined #ubuntu
+=== rogger [n=hcatlin@209.104.162.252]  has joined #ubuntu
+[11:56] <nootrope> beep's what?
+[11:56] <squid> mwe: well.. it does not work
+[11:56] <mwe> squid: what happened?
+[11:57] <amphi> cached: how did you sin?
+[11:57] <squid> i tryed all of the 3 things in the order you wrote them
+[11:57] <Madpilot> cached, keep it up and you'll be banned from here too...
+[11:57] <squid> 1st: nothing happens
+[11:57] <mwe> squid: paste sources.list to paste.ubuntu-nl.org
+=== mode/#ubuntu [+o Seveas]  by ChanServ
+=== cached [n=cached@146-115-65-15.c3-0.bkl-ubr2.sbo-bkl.ma.cable.rcn.com]  has left #ubuntu [requested]
+=== mode/#ubuntu [+b *!*@146-115-65-15.c3-0.bkl-ubr2.sbo-bkl.ma.cable.rcn.com]  by Seveas
+=== mode/#ubuntu [-o Seveas]  by ChanServ
+[11:57] <mwe> squid: that's a good sign
+[11:57] <mwe> squid: it means it worked
+[11:58] <mtoledo> Does anyone  noticed a problem in changing the initial date of the week in gnome? I have it set do Sunday and the calendar appears initial date as Monday. Any idea?
+=== redguy [n=mati@acm243.neoplus.adsl.tpnet.pl]  has joined #ubuntu
+[11:58] <squid> mwe squid: paste sources.list to paste.ubuntu-nl.or
+[11:58] <squid> how do you mean that
+=== valberg [n=valberg@0x5358b437.kjnxx6.adsl-dhcp.tele.dk]  has joined #ubuntu
+[11:58] <valberg> i need some help here
+[11:58] <squid> what should i exactly do. i do not know what i am doing ;)
+[11:58] <valberg> i've just run apt-get dist-upgrade
+=== Shadyman_ [n=Matthew@bas1-ottawa23-1128766322.dsl.bell.ca]  has joined #ubuntu
+[11:58] <mwe> squid: yes. first tell me what happened on sudo apt-get update
+[11:58] <rhican> is there a way to quickly "reset" an ubuntu installation? just reinstall the base system
+[11:59] <squid> ok
+[11:59] <mwe> Seveas: do you know if using automatix is approved now? the factoid seems to have changed.
+[11:59] <sergiol> to enable generation of core files ulimit -c unlimited is enough?
+[11:59] <squid> mwe squid: paste sources.list to paste.ubuntu-nl.or
+[11:59] <squid> oh sry
+=== jcole [n=jcole@palrel2.hp.com]  has left #ubuntu []
+=== Mazingaro [n=tetsuja@host127-215.pool8711.interbusiness.it]  has joined #ubuntu
+[11:59] <Seveas> !automatix
+[11:59] <ubotu> Automatix is a utility which helps install various codecs and applications which cannot be part of the default installation, also another utility is called EasyUbuntu, please join #automatix or #easyubuntu for more information
+[11:59] <Seveas> WTF
+[11:59] <Seveas> !no automatix is a piece of crap that wrecks your system. DO NOT use it
+[11:59] <ubotu> Seveas: please, watch your language.
+[11:59] <valberg> and now when it has fetched all the packages it comes with an error saying something like this (translated from danish): dpkg: error handling package  /var/cache/apt/archives/xserver-xorg-core_1%3a1.0.2-0ubuntu10_i386.deb (--unpack): \n tried to overwrite '/usr/bin/scanpci' which is also in the package gatos
+[11:59] <amphi> Seveas: ;)
+[12:00] <Seveas> !no automatix is a piece of cr*p that wrecks your system. DO NOT use it
+[12:00] <ubotu> okay, Seveas
+=== coucho [n=nikos@s559155cf.adsl.wanadoo.nl]  has joined #ubuntu

@@ -1,0 +1,1265 @@
+[11:55] <khermans> COSM0S, it depends how your setup the networking part
+[11:55] <leleobhz> bbrazil: im there! :]
+[11:55] <jcz`> ompaul, i did that already
+=== gavcos [i=gavcos@Darkstar.AceShells.com]  has left #ubuntu []
+[11:55] <leleobhz> im asking about you
+[11:55] <khermans> if it is NAT, then your host firewall i think is fine
+=== rsk [n=ruskie@c83-250-222-220.bredband.comhem.se]  has joined #ubuntu
+[11:55] <mind> Cand anyone help me configure X to allow refresh rates higher than 60 hz ? thanks
+[11:55] <bbrazil> leleobhz: /whois
+[11:55] <Sonderblade> !se
+[11:55] <ubotu> Svensk Ubuntu- och Kubuntusupport hittar du pa #ubuntu-se resp. #kubuntu-se
+=== Auckland_Pig [n=chatzill@210.48.105.242]  has left #ubuntu []
+[11:55] <COSM0S> it is simple a nat
+[11:55] <khermans> COSM0S, however, what do you lose if you have a friewall in the image too
+[11:55] <jcz`> ompaul, it just says 'localhost login'
+[11:55] <ompaul> jcz`,
+[11:55] <mnk> how do i update the sources.list? my system says there is nothing to upgrade
+[11:55] <Verithrax> Well thar she blows.
+[11:55] <dmb062082> install kubuntu-desktop, will this just add the  kde gui to my boot up display manager with the option to boot into kde? Or totally replace ubuntu
+=== Krpano [n=opera@196.139.62.81.cust.bluewin.ch]  has joined #ubuntu
+[11:55] <apokryphos> mnk: /msg ubotu upgrade
+=== holden [n=holden@d83-176-77-94.cust.tele2.it]  has joined #ubuntu
+[11:55] <dmb062082> sorry I dont know much
+[11:55] <Verithrax> Through apt, but GUIs inherently suck anyway.
+=== Krpano [n=opera@196.139.62.81.cust.bluewin.ch]  has left #ubuntu []
+=== fender__ [n=fender@mail.dropletsap.com]  has joined #ubuntu
+[11:55] <TheMadman> so uh is there any official releases other than bittorrents
+[11:56] <leleobhz> bbrazil: :P
+[11:56] <ompaul> jcz`, so your out of it that is a standard terminal, the one you want to go to is Ctrl+Alt+F7
+[11:56] <trygvebw> dmb062082, add the option
+[11:56] <apokryphos> dmb062082: it will add the option
+[11:56] <TheMadman> er are there
+[11:56] <COSM0S> i think that the image can be more slow
+[11:56] <dmb062082> woohoo awesome!!
+[11:56] <dmb062082> I love you guys
+[11:56] <Verithrax> At least shub-internet is being nice today, 200kbps. :D
+=== Jonnings [n=Jonnings@a143.dsl.halden.net]  has joined #ubuntu
+[11:56] <cef> yay! over 5000kB/s served out of the torrent
+[11:56] <Flannel> TheMadman: yes, but they've all slowed to a crawl.
+[11:56] <dmb062082> bye bye windows, now I just need to give vmware and crossover office a wack, thanks apok and try
+[11:56] <Big_T> Downstream: 252.96kb/s  Upstream: 4.43kb/s
+=== welsh_spud [n=ben@nidum.plus.com]  has joined #ubuntu
+[11:56] <dmb062082> still cant live with out dreamweaver heh, but gimp is nice
+[11:56] <khermans> cef, your torrent?
+[11:57] <backz> have ubuntu server automated LAMP?
+[11:57] <khermans> dmb062082, try Nvu
+[11:57] <Oddie> If you dont have alot of ram like myself.... How would I install it straght from the boot menu?
+[11:57] <bliss_> final build http://releases.ubuntu.com/6.06/ MD5 checksums confirmed it
+[11:57] <agwibowo> i still think nothing can beat dreamweaver, khermans
+[11:57] <cef> khermans: that's the current total down speed of all the people fetching the i386 desktop torrent. *grin*
+[11:57] <kbrooks> backz: no.
+[11:57] <dmb062082> Nvu?
+=== void^ [n=void@p549E0FE1.dip0.t-ipconnect.de]  has joined #ubuntu
+[11:57] <kbrooks> backz: get LAMP
+[11:57] <thoreauputic> !info nvu
+[11:57] <TheMadman> ahs o http://us.releases.ubuntu.com/releases/6.06/ all slow?
+[11:57] <kbrooks> !lamp
+[11:57] <cef> well. out of the 22 that are talking to my client
+[11:57] <ubotu> nvu: (Complete Web Authoring System), section universe/web, is optional. Version: 1.0-0ubuntu3 (breezy), Packaged size: 8349 kB, Installed size: 26468 kB
+[11:57] <ubotu> Linux-Apache-MySQL-PHP, one of the standard internet server installations. Installing LAMP in Ubuntu is fairly straightforward. More info at https://wiki.ubuntu.com/ApacheMySQLPHP
+=== trygvebw [n=trygvebw@54.85-200-30.bkkb.no]  has left #ubuntu ["GAAAAAHHHHHHH!!!"]
+[11:57] <khermans> cef, from your torrent or official Ubuntu servers?
+[11:58] <phatmonkey> how can i update from the RC? are the repositories updated yet?
+=== concept10 [n=concept1@c-67-172-222-62.hsd1.tx.comcast.net]  has joined #ubuntu
+[11:58] <thoreauputic> dmb062082: you picked a bad day for asking w=questions ;)
+[11:58] <leleobhz> problems with torrent seeds?
+[11:58] <KenSentMe> bbrazil rtorrent is the right package, thanx
+[11:58] <khermans> 2^10 users in here
+[11:58] <Grunt> installing LAMP on ubuntu 10 mins, setting it up on windows 1 hour!!
+[11:58] <kbrooks> "Also in 6.06 (Dapper Drake) you have the option of choosing to install a LAMP setup at the inital Ubuntu installation screen."
+[11:58] <jcz`> ompaul, ok someone told me to use alt-cntrl-f1 to get failsafe, then type xinit , yes ?
+[11:58] <dooglus> cef: I see "Swarm speed: 6.31MB/s (77.1 kB/s average)
+[11:58] <evi|one> That "Desktop CD" stuff is a combination of live CD and installation CD?
+[11:59] <kbrooks> !lamp is also in 6.06 (Dapper Drake) you have the option of choosing to install a LAMP setup at the inital Ubuntu installation screen.
+[11:59] <ubotu> okay, kbrooks
+=== chrisbudden14__ [n=chrisbud@host-87-74-57-142.bulldogdsl.com]  has joined #ubuntu
+[11:59] <KenSentMe> lol, my torrents are uploading more than they are downloading
+[11:59] <Lukketto> what are the differences between "dapper-desktop-i386.iso"  AND  "ubuntu-6.06-alternate-i386.iso" ???
+[11:59] <khermans> Grunt, installing LAMP on Windows is, by definition, impossible :-)
+[11:59] <dmb062082> later guys
+[11:59] <leleobhz> my torrent i386 is not downloading
+[11:59] <cef> dooglus: woo!
+[11:59] <evad> Lukketto: read http://releases.ubuntu.com/6.06/
+[11:59] <Astinus-> kbrooks: haven't seen that option ..
+[11:59] <kbrooks> khermans: WAMP exists
+[11:59] <jcz`> ompaul, how do i troubleshoot my 5 minute logon delay ?
+[11:59] <Linuturk> nvu isn't all that great
+[11:59] <Grunt> true what i should have said was WAMP ;-)
+[11:59] <agwibowo> KenSentMe: mine too!!! 70 KB/s upload, 3KB/s download
+[11:59] <chrisbudden14__> what the speed like on the torrents for you guys?
+=== winkle [i=winkle@130.239.18.162]  has joined #ubuntu
+[11:59] <Linuturk> nvu isn't all that great
+=== twager [n=twager@trufflesdad.plus.com]  has joined #ubuntu
+=== utrsds [n=gfh@BSN-77-107-61.dial-up.dsl.siol.net]  has joined #ubuntu
+[11:59] <ompaul> jcz`, if you want a terminal that is where you go, if you want failsafe then you do what I suggested, bottom left of the gui - then log in
+[11:59] <khermans> kbrooks, of cource -- my point
+[11:59] <dooglus> Lukketto: alternate is text-only; desktop is live+ graphical install
+[11:59] <phatmonkey>  how can i update from the RC? are the repositories updated yet? - anybody?
+[11:59] <ompaul> jcz`, then check what your loading at the start
+[11:59] <khermans> Linuturk, alright use emacs then
+[12:00] <Linuturk> heh, my irc client is lagging
+[12:00] <dooglus> phatmonkey: just update as usual.  apt-get update && apt-get dist-upgrade
+[12:00] <cef> phatmonkey: use rsync
+[12:00] <agwibowo> phatmonkey: you should just need to run apt-get
+[12:00] <kbrooks> phatmonkey: just update
+[12:00] <phatmonkey> ok, nothing there yet
+[12:00] <cute_bettong> http://www.deviantart.com/view/34111635/
+=== ..[topic/#ubuntu:Seveas] : Happy Dapper Day Everyone! ## Release Parties! https://wiki.ubuntu.com/DapperReleaseParties ## https://lists.ubuntu.com/archives/ubuntu-announce/2006-June/000083.html ## Upgrading? /msg ubotu upgrade ## Seed the torrents http://torrent.ubuntu.com:6969/ (USE THE ubuntu-6.06 torrents DO NOT!! USE the dapper-* torrents)
+[12:00] <leleobhz> someone with problems with torrent?
+[12:00] <zcat[1] > I've just started torrenting all the desktop iso's .. good speed into the NZ backbone so hopefully this will help everyone a little :)
+[12:00] <mnk> which file tells me which release i'm using pls?
+[12:00] <jcz`> ompaul, ok i dont see options on my bottom left gui
+[12:00] <dooglus> phatmonkey: nothing changed since the pcmcia update a few hours ago
+[12:00] <cef> phatmonkey: rsync will update the .iso, or if you've installed, just use apt-get
+[12:00] <mnk> is there something like /etc/ubuntu-release ?
+[12:00] <kbrooks> why is live AND desktop good? what does it bring to the user?
+[12:01] <bbrazil> Linuturk: you can use traffic control to gaurentee irc etc. bandwidth
+[12:01] <khermans> Least popular torrent:
+[12:01] <khermans> <cmisra@nic.umass.edu>,
+[12:01] <khermans> whoops
+[12:01] <Terminus-> mnk: type 'lsb_release -a' in a console. :)
+[12:01] <phatmonkey> haha, now it gets fixed. my upgrade died from a pcmcia problem
+[12:01] <kbrooks> why is live AND desktop good? what does it bring to the user?
+=== Afief [n=afief@85-250-53-90.bb.netvision.net.il]  has joined #ubuntu
+[12:01] <ompaul> jcz`, how did you get dapper?
+[12:01] <dooglus> kbrooks: it means I can try ubuntu without affecting windows, and then install it if I like it, all from the same CD
+[12:01] <zcat[1] > kbrooks: test your hardware before you install, prettyier installer, do other stuff while you wait..
+[12:02] <cef> kbrooks: you can play with it, and install from it using a graphical interface
+=== z4k4ri4 [n=zakaria@202.158.89.67]  has left #ubuntu []
+=== winkle [i=winkle@130.239.18.162]  has left #ubuntu []
+[12:02] <dooglus> kbrooks: previously I had to download 2 huge iso files - one to try, and one to install.
+[12:02] <thoreauputic> kbrooks: more like what it brings to the shipit distribution method ( lower costs)
+[12:02] <Afief> Can someone tell me where to get dapper from? the homepage still links to breezy
+[12:02] <jcz`> i downloaded it off torrents if i recall correctly about 10 days ago
+=== Mithrandir [n=tfheen@c5100BC63.inet.catch.no]  has left #ubuntu []
+[12:02] <jcz`> ompaul
+=== Mahmoud85 [n=Mahmoud@82.201.181.22]  has joined #ubuntu
+=== saeko [n=chris@82-43-160-213.cable.ubr04.newm.blueyonder.co.uk]  has joined #ubuntu
+[12:02] <kbrooks> dooglus: now you have to get 1 iso file?
+[12:02] <Oddie> dooglus: is there a way of installing the ubuntu from boot without having to load the live? I dont have much ram?
+[12:02] <owlmanatt> happy dapper day
+[12:02] <khermans> Lest popular: ubuntu-6.06-server-amd64.iso
+[12:02] <lightstar> Afief, http://releases.ubuntu.com/6.06/ubuntu-6.06-desktop-i386.iso.torrent
+[12:02] <ajmitch_> zcat[1] : 100Mbps+ ?
+[12:02] <dooglus> Oddie: I don't know
+[12:02] <ompaul> jcz`, I read that, okay, and you installed then, when did it start going that slow?
+[12:02] <dooglus> kbrooks: right.
+[12:02] <thoreauputic> kbrooks: built-in installer on the desktop/live CD
+=== siofwolves_ [n=siofwolv@unaffiliated/siofwolves]  has left #ubuntu ["Leaving"]
+[12:02] <Terminus-> Oddie: alternate cd i think. :)
+[12:02] <dooglus> kbrooks: the 'desktop' one is both live cd and install cd
+[12:02] <kbrooks> khermans: if course it is, amd64 sux after all
+=== flodine [n=flodine@c-24-4-174-71.hsd1.ca.comcast.net]  has joined #ubuntu
+[12:03] <jcz`> ompaul, the first time i rebooted after installing it
+=== K|NgGh0sT [i=mike@CPE0030bd076ff9-CM0014f85e4a58.cpe.net.cable.rogers.com]  has joined #ubuntu
+[12:03] <derfbugzi> Does anyone know if there will be a dvd release?
+=== pj-og77 [n=peer@p54A2878B.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:03] <zcat[1] > ajmitch_: 100Mbps minus whatever the webserver sucks up..
+[12:03] <K|NgGh0sT> I installed nvidia drivers, and now it seems that my DPI is messed up, anyone know how to fix this?
+[12:03] <bbrazil> derfbugzi: yes, we're still wating on it
+=== sm [n=simon@86.40.4.142]  has joined #ubuntu
+[12:03] <ajmitch_> zcat[1] : a shame I'm not downloading then :)
+[12:03] <kestas> how come the server and desktop cds are seperate? server is just desktop minus some packages right?
+[12:03] <ompaul> jcz`,  that is an indication that something is very wrong even my slowest machine is nothing like that
+=== peterpanero [n=jose@87.218.83.123]  has left #ubuntu []
+[12:03] <derfbugzi> bbrazil, cheers
+[12:03] <bbrazil> kestas: kinda
+=== ejofee [n=ejofee@195-245-89-185.dtcom.ro]  has joined #ubuntu
+[12:04] <Linuturk> server has a completely different kernel
+[12:04] <Linuturk> it's optimized to run on a server
+[12:04] <ompaul> jcz`, okay do this: Ctrl+Alt+F1
+[12:04] <khermans> kestas, i think you can type "server" from a desktop CD
+[12:04] <ompaul> jcz`, log in and tell me when your in
+=== malte` [n=malte@host-84-220-10-102.cust-adsl.tiscali.it]  has joined #ubuntu
+[12:04] <siccness> dooglus, so the 'desktop' is both desktop/live cd?
+[12:04] <kestas> Linuturk: you'd think they'd just put a different deb on a single cd
+[12:04] <siccness> and alternative is just desktop/install?
+=== Lure [n=lure@ubuntu/member/lure]  has left #ubuntu ["Konversation]
+[12:04] <kestas> Linuturk: a different deb for the optimised kernel
+=== negsoul [n=negsoul@193.126.193.148]  has joined #ubuntu
+=== Martolod [n=jeremy@ARennes-257-1-163-9.w86-214.abo.wanadoo.fr]  has joined #ubuntu
+[12:04] <siccness> s/alternative/alternate
+[12:04] <ukh> no, least popular is server-sparc, since it isn't there yet...
+[12:04] <selinium> derfbugzi: There is one, look in the torrents http://torrent.ubuntu.com:6969/
+[12:04] <bbrazil> siccness: alternate is text install
+[12:04] <kestas> khermans: k
+[12:04] <malte`> happy dapper day :D
+[12:04] <jcz`> ompaul, ok im in
+[12:05] <siccness> Ohhhh shi.....
+[12:05] <siccness> :|
+[12:05] <dooglus> siccness: desktop is live+install; alternate is a text based install
+[12:05] <siccness> I'm glad I haven't downloaded anything
+=== foobar54 [n=hze@c211-30-12-97.artrmn1.nsw.optusnet.com.au]  has left #ubuntu []
+=== isoTop [n=isot@85.64.203.209.dynamic.barak-online.net]  has joined #ubuntu
+[12:05] <khermans> Linuturk, can you still use "server" from a desktop CD?
+[12:05] <siccness> Thanks guys
+[12:05] <K|NgGh0sT> I installed nvidia drivers, and now it seems that my DPI is messed up, anyone know how to fix this?
+[12:05] <siccness> Heh :|
+[12:05] <kestas> this day is like a million christmases in one
+[12:05] <Linuturk> not anymore
+[12:05] <mnk> Ubuntu 6.06 LTS
+[12:05] <bbrazil> siccness: as long as you have the right arch, one can be changed to the other
+[12:05] <twager> Can anyone tell me if it is ok to install a 32 bit linux  distro on a 64 bit system ?
+[12:05] <mnk> what does LTS mean?
+[12:05] <siccness> bbrazil, oh ok.
+[12:05] <siccness> Long Term Support
+[12:05] <dooglus> Long Term support
+[12:05] <kestas> long term service
+[12:05] <mnk> [sorry about all the qs]
+[12:06] <mnk> aah cool
+[12:06] <bbrazil> twager: on amd64 or sparc64, yes
+[12:06] <Fillado> what should you use to run a graphical app as root from a terminal?
+[12:06] <kestas> service I say!
+[12:06] <siccness> Support I say!
+[12:06] <mnk> so it is upgraded then? :)
+=== dxdemetriou [n=dxdemetr@217-175-223-169.dyn-pool.spidernet.net]  has joined #ubuntu
+[12:06] <ompaul> jcz`, type this: sudo apt-get update
+[12:06] <khermans> Fillado, gksudo
+=== helloall [n=hello@222.172.224.129]  has joined #ubuntu
+=== mgedmin [n=mg@office.pov.lt]  has joined #ubuntu
+[12:06] <Celestar> where can I find the difference between the "desktop" and "server" versions?
+[12:06] <Fillado> as i'm told sudo isn't a good idea
+[12:06] <lmanul> kestas: Support :)
+[12:06] <Fillado> ah thanks
+[12:06] <ompaul> !root
+[12:06] <ubotu> Direct login as the root user is disabled in Ubuntu. Look at http://wiki.ubuntu.com/RootSudo for all information.
+[12:06] <mnk> I LOVE UBUNTU
+[12:06] <mnk> :d
+[12:06] <mnk> :D
+=== Yoric [n=ElYoric@cpc1-brig7-0-0-cust26.brig.cable.ntl.com]  has joined #ubuntu
+[12:06] <khermans> sudo su root
+[12:06] <isoTop> wow this channel is bigger than #gentoo
+[12:06] <freddo> lts: Long Time for the Success:p
+[12:06] <twager> thanks..I need a new mobo and 32 bit are quite rare
+=== Rotlaus [n=andre@pD95475BE.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:06] <ompaul> Fillado, wrong :-) it is the best thing since sliced bread please read that link ;-)
+[12:07] <flodine> cant find the mirror site for alternate iso
+=== chrisbudden14__ [n=chrisbud@host-87-74-57-142.bulldogdsl.com]  has left #ubuntu ["Bye"]
+[12:07] <dxdemetriou> From http://releases.ubuntu.com/dapper/ is the final release? I haven't see the Dapper in the website and Update Manager.
+[12:07] <jcz`> ompaul, im by dapper isnt online currently, does that matter ?
+[12:07] <zcat[1] > I don
+[12:07] <dooglus> ompaul: he means wrt running gui apps.
+=== Rotlaus [n=andre@pD95475BE.dip0.t-ipconnect.de]  has joined #ubuntu
+=== ktogias_ [n=ktogias@morias.chemeng.upatras.gr]  has joined #ubuntu
+=== zblach [n=zblach@Toronto-HSE-ppp3726253.sympatico.ca]  has left #ubuntu ["Konversation]
+[12:07] <ompaul> jcz`, yeap
+[12:07] <jcz`> ompaul, my dapper isnt online currently, does that matter ?
+[12:07] <ompaul> jcz`, it needs to be
+[12:07] <dooglus> ompaul: there are some here who claim that using sudo to run gui apps can mess things upo
+[12:07] <zcat[1] > I don't think I've had anything through dist-upgrade for most of the day so I'm probably running what's on the CD now anyhow :)
+[12:07] <Fillado> ompaul: ya what?
+[12:08] <ompaul> dooglus, I am one of them :-) so noted Fillado your talking gui
+[12:08] <Flannel> dooglus: that's correct.  use gksudo.
+=== sutur [n=gesr@chello080108102197.28.11.vie.surfer.at]  has joined #ubuntu
+[12:08] <ompaul> Fillado your talking gui gksudo
+[12:08] <evad> dooglus: how? sudo runs it as the root user - it works just fine and there cannot be (due to the way unix works) any bad side affects
+[12:08] <Fillado> ya
+=== frenkel [n=frank@j210092.upc-j.chello.nl]  has joined #ubuntu
+[12:08] <dooglus> Flannel: do you have any example of how sudo can mess anything up?  like a repeatable case?
+[12:08] <jcz`> ok, i have to switch cables, so i'll rejoin the channel using my linux box after i swap ethernet cables, be right back
+[12:08] <ompaul> jcz`, let me give you instructions first
+[12:08] <Flannel> evad: it's bugs in the qt library
+[12:09] <Afief> Isn't there a liveCD/Install CD of ubuntu anymore?
+=== ejofee [n=ejofee@195-245-89-185.dtcom.ro]  has left #ubuntu ["leaving"]
+[12:09] <jcz`> ok
+[12:09] <dooglus> evad: I'm with you on this, yet people (like ompaul just did) continue to claim that sudo is a bad idea
+[12:09] <thoreauputic> sudo can mess up ~/.ICEauthority on KDE, and .Xauthority
+[12:09] <Fillado> Afief: Yes, that's the desktop one :)
+[12:09] <khermans> dooglus, if there is a bad bug -- it could possibly hose your system
+[12:09] <evad> oh
+[12:09] <apokryphos> Afief: no, the setup has changed. There's an install+live CD (the desktop CD), and there's an old fashioned text install CD: the alternate CD
+[12:09] <slackern> argh, so annoying that when you connect through places to a server that is down that it locks up almost everything till it times out.
+[12:09] <dooglus> khermans: that's true of sudo and gksudo both
+[12:09] <jcz`> ompaul, ok
+[12:09] <khermans> dooglus, of course
+=== Beginer [n=Beginer@195.178.35.36]  has joined #ubuntu
+[12:09] <zcat[1] > you can run gui stuff from the terminal as 'sudo foo', i don't think there's any major difference... if you already have a terminal open. For alt-F2 you'd use gksudo because it can ask for password through a window..
+=== keiron [n=keiron@62.3.216.18]  has joined #ubuntu
+[12:09] <thoreauputic> dooglus: I've only seen sudo cause problems with KDE apps, personally
+[12:09] <evad> I enable root on Ubuntu anyway, sudo passwd root really isn't difficult.
+[12:09] <keiron> yo
+=== easthero_ [i=easthero@124.147.129.204]  has joined #ubuntu
+[12:09] <ompaul> jcz`, sudo apt-get update <then > sudo apt-get dist-upgrade <then reboot> to enable the ethernet connection the cheap dirty way is > sudo dhclient
+=== DevGet [n=gustav@h54n5fls32o1096.telia.com]  has joined #ubuntu
+=== krishnasbhaskar [n=krishnas@59.160.164.97]  has joined #ubuntu
+=== hypnox [n=dan@cornelyn.force9.co.uk]  has joined #ubuntu
+[12:10] <khermans> thoreauputic, kdelibs try to make sure you dont have setuid or setguid
+=== shackan [n=shackan@85-18-14-13.fastres.net]  has joined #ubuntu
+[12:10] <keiron> i see 6.06 has been released. when can i expect apt to get updated so i can do the update through there?
+[12:10] <Afief> apokryphos: so.... if i want to install, i have to boot into ubuntu live first?
+[12:10] <dooglus> thoreauputic: does it still?  I think that was fixed some time ago
+=== CrippsFX [n=CrippsFX@217.5.195.253]  has joined #ubuntu
+[12:10] <apokryphos> Afief: correct
+[12:10] <Flannel> !gksudo
+[12:10] <ubotu> Use gksudo to run qt applications with root privileges. Using sudo to start gtk apps can scramble your user account permissions.
+[12:10] <Linuturk> 5 hours until I'm only seeding server i386
+[12:10] <thoreauputic> dooglus: you may be right - this was last year IIRC
+=== bvanaerde [n=chatzill@kulnet-nat-2.kuleuven.net]  has joined #ubuntu
+[12:10] <ryanakca> what packages should I install for a lamp server?
+[12:10] <Rambo3> 1020 users
+[12:10] <thoreauputic> dooglus: k3b was one offender I remember
+[12:10] <ompaul> dooglus, I wish you had acked the fact that I agreed with you the statement I saw was without reference to gui - and I did concur that gk was the way with gnome
+[12:10] <zcat[1] > thanks Flannel I didn't know that :)
+[12:10] <dooglus> thoreauputic: k3b used to cause problems
+[12:10] <Afief> apokryphos: is everything alright with that? i mean, i have some bad experience with some of those live-installers
+[12:11] <thoreauputic> dooglus: right
+[12:11] <Nookie> !libdvdcss
+[12:11] <ubotu> I heard libdvdcss is (DVD playing is possible in ubuntu. You may need libdvdcss2, which is available via http://wiki.ubuntu.com/SeveasPackages (section extras)) for i386. See http://wiki.ubuntu.com/RestrictedFormats for PPC and amd64
+[12:11] <bbrazil> ryanakca: apache2, mysql-server, libapache-php4
+=== TheRev [n=therevis@203-173-151-111.bliink.ihug.co.nz]  has joined #Ubuntu
+[12:11] <apokryphos> Afief: it's the paciest/smoothest install I've ever done, probably
+[12:11] <tubbie> !amarok
+[12:11] <ubotu> hmm... amarok is a music player for Linux and Unix with an intuitive interface. See http://amarok.kde.org ; amaroK's features: http://amarok.kde.org/content/view/51/1/ - To install Amarok 1.4 on Ubuntu, see http://kubuntu.org/announcements/amarok-1.4.php
+=== hovan [n=hovan@222.172.224.129]  has joined #ubuntu
+[12:11] <dooglus> ompaul: I'm still not convinced that there's any need to use gksudo as opposed to sudo though
+[12:11] <bbrazil> !lamp
+[12:11] <keiron> !dapper
+[12:11] <ubotu> DAPPER IS OUT! PARTY TIME! https://lists.ubuntu.com/archives/ubuntu-announce/2006-June/000083.html
+[12:11] <Flannel> !tell ryanakca about lamp
+=== grimboy [n=grimboy@81-178-106-43.dsl.pipex.com]  has joined #ubuntu
+[12:11] <Fillado> !arrrgh
+[12:11] <ubotu> Fillado: NO SPEAKE ENLISH! Try searching at http://ubuntu.cc.com.au/
+[12:11] <CrippsFX> does anybody know how to fix sound problems in ET? the output from ET says that "/dev/dsp" is busy, or in use ... although, I don't have any programs using sound open ...
+[12:11] <Grunt> Hey I just wondered if there are any release parties happening in Birmingham, UK at all?
+[12:11] <Afief> apokryphos: have the changed the partitioning scheme? that was about the only thing that bugged me in breezy
+[12:11] <apokryphos> dooglus: there is; plain sudo doesn't set up the environment approprtiately for GUI applications
+[12:11] <zcat[1] > twice the traffic up as down. cool... must be helping someone :)
+[12:11] <keiron> when will the apt sources be updated to allow installation of dapper??!
+[12:12] <bbrazil> Grunt: https://wiki.ubuntu.com/DapperReleaseParties
+[12:12] <thoreauputic> Grunt: you have parties in Birmingham ? /me runs
+[12:12] <dooglus> apokryphos: in what sense?
+[12:12] <thoreauputic> Grunt: ;P
+[12:12] <Beginer> Can I use dial-up for internet on Ubuntu 6.06 Live CD?
+=== mgedmin [n=mg@office.pov.lt]  has left #ubuntu ["Ex-Chat"]
+[12:12] <ajmitch_> zcat[1] : yeah, I can upload at a whole 50K/sec.. not really worth it :)
+[12:12] <bbrazil> Grunt: there's one in Dublin if you want to fly over :)
+[12:12] <thoreauputic> Beginer: yes
+[12:12] <apokryphos> dooglus: many (particularly GTK, often I've seen) will be fine with the transition, but others you might have serious problems with. I've seen many cases where dcop sockets get mucked up, config files get incorrect permissions etc
+[12:12] <Grunt> I just wondered the only party on the list was in London
+[12:12] <jcz`> ompaul, doesnt dapper automatically detect my ethernet connections within 30 seconds after i physically  insert my ethernet connector into back of the mobo ?
+[12:12] <xukun> !dapper
+[12:12] <ubotu> DAPPER IS OUT! PARTY TIME! https://lists.ubuntu.com/archives/ubuntu-announce/2006-June/000083.html
+[12:12] <siccness> Hammer time!
+[12:12] <dooglus> apokryphos: do you know of any case where it still happens?
+=== Verithrax gives ubotu a cookie.
+=== WJames|lappy [n=wizardja@unaffiliated/wizardjames]  has joined #ubuntu
+[12:13] <dxdemetriou> The gksudo "update-manager -d" is not for beta?
+[12:13] <apokryphos> dooglus: I'm pretty sure it can still happen, yes of course.
+[12:13] <zcat[1] > !botsnack
+[12:13] <ubotu> thanks zcat[1]  :)
+[12:13] <tubbie> I have amarok 1.3.9 and I just added a new repo to get amarok 1.4. how do I update amarok?
+[12:13] <Celestar> tadadada
+=== jessy_ [n=jessy@4va54-1-81-56-98-29.fbx.proxad.net]  has joined #ubuntu
+[12:13] <dooglus> apokryphos: I'm looking for a specific example.
+[12:13] <apokryphos> dxdemetriou: eh?
+=== selinium [n=selinium@80-193-7-120.cable.ubr02.sout.blueyonder.co.uk]  has joined #ubuntu
+[12:13] <bvanaerde> !pony
+[12:13] <ubotu> bvanaerde: Wish I knew. Try searching at http://ubuntu.cc.com.au/
+[12:13] <CrippsFX> tubbie, apt-get upgrade amarok
+[12:13] <Fillado> sudo apt-get update && sudo apt-get upgrade
+=== easthero_ [i=easthero@124.147.129.204]  has left #ubuntu []
+[12:13] <apokryphos> dooglus: well, fire up kate with sudo, play with things, change some settings, and then see, perhaps.
+[12:13] <Verithrax> !botsnack
+[12:13] <apokryphos> CrippsFX: no
+[12:13] <ubotu> thanks verithrax :)
+=== krishnasbhaskar [n=krishnas@59.160.164.97]  has joined #ubuntu
+[12:13] <Verithrax> That's cute.
+=== kayde [n=kayde@CPE-60-231-58-126.qld.bigpond.net.au]  has joined #ubuntu
+[12:14] <CrippsFX> apokryphos, why not?
+=== paolob [n=donpaolo@pri-214-b7.codetel.net.do]  has joined #ubuntu
+[12:14] <Fillado> ^^Tubbie
+[12:14] <dxdemetriou> apokryphos: I readed for this command is for beta packages. The Update Manager will not ask for upgrade to Dapper normally?
+[12:14] <apokryphos> CrippsFX: to upgrade to latest amaroK you have to /msg ubotu amarok
+[12:14] <cef> hrm, 6.8gb downloaded from the torrent
+=== krishnasbhaskar [n=krishnas@59.160.164.97]  has left #ubuntu []
+[12:14] <thoreauputic> dxdemetriou: it should now
+[12:14] <dooglus> apokryphos: are you saying it only happens with KDE apps?  I don't have any of those
+=== Kingway [n=kingway@202.105.42.16]  has joined #ubuntu
+[12:14] <apokryphos> dxdemetriou: follow the same method for upgrading from rc. /msg ubotu rc
+=== Favorit [i=vlad@anarxi.st]  has joined #ubuntu
+[12:14] <cef> 8.85 now.. moving fast!
+[12:14] <apokryphos> dooglus: well I'm a KDE user, so I only have experience with KDE :)
+[12:14] <Favorit> hi there guys
+[12:14] <Beginer> How to set modem on a Live CD?
+[12:14] <grimboy> !tell bvanaerde about ponie
+[12:14] <thoreauputic> apokryphos: boo - hiss ;-)
+=== alexey__ [i=User@bzq-88-152-86-230.red.bezeqint.net]  has joined #ubuntu
+[12:15] <Favorit> i got a well known maybe problem which i'm pondering how to solve.
+[12:15] <alexey__> hi all !
+[12:15] <CrippsFX> apokryphos, once the repo is added to /etc/apt/sources.list doing an apt-get update and apt-get upgrade amarok should do it.
+=== CrippsFX is speaking from experience
+[12:15] <apokryphos> CrippsFX: the main repositories do not have the latest version of amarok
+[12:15] <Rambo3> lucky i got my copies  of official dapper from chinese blackmarket , before it was  released
+[12:15] <apokryphos> but if you /msg ubotu amarok you can ge tit
+[12:15] <apokryphos> get it
+=== petrik [n=petrik@222-153-148-206.jetstream.xtra.co.nz]  has joined #ubuntu
+[12:15] <Favorit> i compiled 2.6.16 on ubuntu 5.10, amd64, and device mapper complains about dm-linear Device lookup failed
+[12:15] <khermans> Rambo3, yeah me too
+[12:15] <tubbie> thanks  :)
+[12:15] <CrippsFX> apokryphos, I know that. He said that he's already added the repo for it.
+=== changlinn [n=mog@203.217.18.2]  has left #ubuntu []
+[12:15] <thoreauputic> Beginer: System - Admin - Networking
+[12:15] <alexey__> I am a SUSE Linux user and want to evaluate Ubuntu/Kubuntu. One question - is there a complete GNOME/KDE Ubuntu DVD?
+=== tomukas [n=thomas@p54A65E5B.dip.t-dialin.net]  has joined #ubuntu
+[12:15] <Favorit> further on it just hangs on i/o
+[12:15] <bvanaerde> grimboy: the bot is scared of me ;)
+[12:15] <dooglus> apokryphos: yet you use gksudo?
+[12:15] <apokryphos> CrippsFX: oh right; then you can just sudo apt-get install amarok, yes
+[12:16] <grimboy> Heh
+=== seife [n=arturo_m@201.211.154.201]  has joined #ubuntu
+=== XelHa [n=chatzill@h7.224.hpi.uni-potsdam.de]  has joined #ubuntu
+[12:16] <apokryphos> dooglus: no, I use kdesu. gksudo is the GTK-equivalent
+[12:16] <CrippsFX> apokryphos, yep. Ya just missed that part of the message in the lines above :)
+[12:16] <khermans> alexey__, not sure -- but you can easily install the kubuntu-desktop on top of Ubuntu
+[12:16] <Beginer> But its not recognizeing it
+[12:16] <kayde> How do i get gksudo "update-manager -d to update to dapper?
+=== uccoffee_loves_B [i=WinNT@203-206-90-51.dyn.iinet.net.au]  has joined #ubuntu
+=== Martolod [n=jeremy@ARennes-257-1-163-9.w86-214.abo.wanadoo.fr]  has joined #ubuntu
+=== mr_lampe [n=tho@dslb-084-056-187-253.pools.arcor-ip.net]  has joined #ubuntu
+[12:16] <apokryphos> kayde: /msg ubotu rc
+[12:16] <thoreauputic> Beginer: do you have a software modem?
+[12:16] <uccoffee_loves_B> hi every one
+[12:16] <uccoffee_loves_B> I m new to ubuntu
+[12:16] <grimboy> Click the button at the top
+[12:17] <uccoffee_loves_B> can anyone help me about setting up network?
+=== aLd [n=johan@dsl-165-104-34.telkomadsl.co.za]  has joined #ubuntu
+=== [Seawolf]  [n=seawolf@host40-21.pool8256.interbusiness.it]  has joined #ubuntu
+=== Big_T [n=hypertev@p5088BF4E.dip0.t-ipconnect.de]  has left #ubuntu []
+[12:17] <uccoffee_loves_B> please
+[12:17] <thoreauputic> Beginer: you need a hardware modem or a supported soft modem like a lucent
+[12:17] <CrippsFX> uccoffee_loves_B, depends. what information do you have to give us about what you already have?
+[12:17] <cmug> Is 6.06 available for download yet?
+[12:17] <zcat[1] > is lucent still supported?
+[12:17] <Beginer> Whats software modem?
+[12:17] <derfbugzi> http://www.ubuntu.com/download is finally updated
+[12:17] <apokryphos> cmug: yes; /topic
+=== [Seawolf]  [n=seawolf@host40-21.pool8256.interbusiness.it]  has left #ubuntu ["Leaving]
+[12:17] <dooglus> kayde: you don't need the -d any more...  all you need to do is make sure you're up to date - click 'update' and 'install' and it should offer you dapper
+[12:17] <derfbugzi> http://www.ubuntu.com/download
+[12:17] <cmug> apokryphos, oh yeah, thanks
+=== Freduardo [n=Freduard@109.84-200-80.adsl.skynet.be]  has joined #ubuntu
+[12:17] <Healot> Beginer: http://linmodem.org
+[12:17] <uccoffee_loves_B> [CrippsFX] : i m using netgear WG121, and i m using ubuntu 6.06
+=== RTB|Sleep is now known as Roger_The_Bum
+[12:18] <twager> Yesterday I could get to the dapper channel ubuntu+1 Today it tells me invitation only.anyone know why ?
+[12:18] <thoreauputic> Beginer: one usually designed for windows only ( braindead) see linmodems.org
+[12:18] <derfbugzi> its gone
+[12:18] <derfbugzi> this is drapper channel
+[12:18] <bionic> ubuntu-6.06-dvd-amd64.iso, is this the final dapper release for amd64?
+[12:18] <g-nome> still breezy
+[12:18] <apokryphos> twager: this is dapper support :)
+[12:18] <Roger_The_Bum> is it up ye-- W00TSICLE!
+[12:18] <uccoffee_loves_B> [CrippsFX] : the light infront of the WG121 are on
+=== tomukas [n=thomas@p54A65E5B.dip.t-dialin.net]  has left #ubuntu []
+=== wizardjames [n=Jamess@unaffiliated/wizardjames]  has joined #ubuntu
+[12:18] <zcat[1] > twager: cos there's no edgy yet...
+[12:18] <thoreauputic> Beginer: those modems require software drivers - real modems don't need drivers in Linux
+[12:18] <Beginer> I got SoftV92 modem
+=== gnuyen [n=gnuyen@68.65.24.134]  has joined #ubuntu
+=== evi|one [i=evilone@unaffiliated/evilone/x-000000001]  has left #ubuntu []
+[12:18] <twager> Sorry...Meant Breezy :-(
+[12:18] <kayde> dooglus, click update? where?
+[12:18] <Healot> http://linmodems.org/ even
+[12:18] <jcz`> ompaul, also maybe im not shutting down dapper corectly, each time i click on system-quit-shutdown, the screen only gets to the point where it says something about halt
+=== prozak [n=prozak@ehv163.internetdsl.tpnet.pl]  has joined #ubuntu
+[12:19] <CrippsFX> uccoffee_loves_B, in the gnome system menu, choose administration>networking
+[12:19] <Healot> Beginer: is it a PCI modem. or a serial modem?
+[12:19] <thoreauputic> Beginer: time for a trip to linmodems.org then to see if it is supported or not
+=== hovan [n=hovan@222.172.224.129]  has left #ubuntu [""]
+[12:19] <uccoffee_loves_B> [CrippsFX] : and I tried the system > admin > networking > pick the WG121 > add SSID etc
+[12:19] <flodine> is there a dapper channel
+[12:19] <Beginer> Ok I'll try linmodems
+[12:19] <derfbugzi> DVD Torrent File: http://torrent.ubuntu.com/releases/dapper/release/dvd/ubuntu-6.06-dvd-i386.iso.torrent
+[12:19] <uccoffee_loves_B> and other happen
+[12:19] <apokryphos> flodine: here
+[12:19] <cute_bettong> w00ty
+[12:19] <cute_bettong> XD
+[12:19] <CrippsFX> uccoffee_loves_B, what happened?
+[12:19] <zcat[1] > this is the dapper channel now!
+[12:19] <kayde> dooglus, click update? where? i dont understans, ....
+[12:19] <aLd> why can't i update with update maneger
+[12:19] <derfbugzi> zcat[1] , yes
+[12:19] <thoreauputic> Healot: Softv92 suggest a software modem
+[12:19] <twager> Dapper channel was ubuntu+1
+[12:19] <Celestar> :(
+[12:19] <Beginer> Thanks
+[12:19] <thoreauputic> ;)
+[12:19] <CrippsFX> zcat[1]  is the dapper channel now!
+[12:19] <Roger_The_Bum> why the dvd instead of the CD
+[12:19] <tubbie> dapper is out now?
+[12:20] <uccoffee_loves_B> [CrippsFX] : and nothing happen
+[12:20] <kayde> yeap
+[12:20] <apokryphos> tubbie: /topic
+[12:20] <zcat[1] > I am?
+[12:20] <thoreauputic> tubbie: /topic, and yes :))
+[12:20] <kayde> tubbie, yes :)
+[12:20] <uccoffee_loves_B> [CrippsFX] : doesnt feel like it, do i need a reboot like windows?
+[12:20] <hyphenated> is there a link that describes the files a bit better? (eg: desktop, server, alternative) ?
+=== cute_bettong does the happy littlw ubuntu dance XD
+=== Beginer [n=Beginer@195.178.35.36]  has left #ubuntu []
+[12:20] <thoreauputic> apokryphos: heh'
+[12:20] <CrippsFX> uccoffee_loves_B, open up a terminal and type "ping -b www.google.ca"
+[12:20] <flodine> i been running dapper from beta do i need to reinstall the final or just dist-upgrade
+[12:20] <crimsun> In the Twenty-frist Century, we dislike reading the topic before we ask questions. We'd much rather have PONIES.
+[12:20] <gnuyen> hrmm
+[12:20] <negsoul> ow many megs wll it take to upgrade to new dapper?
+[12:20] <gnuyen> since I don't want the "bleeding edge" version
+[12:20] <negsoul> im using the rc
+[12:20] <gnuyen> as much as the stable release
+[12:20] <kayde> how do i upgrade to dapper in root?
+=== evad [n=evad@melbourne.endb.net]  has left #ubuntu []
+[12:20] <Roger_The_Bum> OMG PONIES
+[12:20] <ajmitch_> crimsun: surely not?
+[12:20] <aLd> how do i update with update manager
+[12:20] <GazzaK> Ponies - woo
+=== tomukas [n=thomas@p54A65E5B.dip.t-dialin.net]  has joined #ubuntu
+[12:20] <apokryphos> kayde: /topic
+[12:20] <derfbugzi> hyphenated, if you dont know what you want, chances are you want the desktop version
+[12:20] <tubbie>  I don't have to reinstall. right? I have the flight 7 installed and updated everything
+[12:21] <GazzaK> but I want a donkey
+[12:21] <Tomcat__> PONIES!
+[12:21] <GazzaK> donkey donkey donkey
+[12:21] <hyphenated> derfbugzi: the description makes it sound like a live cd with an installer on it
+[12:21] <Tomcat__> tubbie: Correct.
+[12:21] <Roger_The_Bum> is there a reason that you would want the DVD?
+[12:21] <thoreauputic> Zebras!
+[12:21] <GazzaK> donkeys my friend
+[12:21] <ompaul> jcz`, try logging out and doing ctrl-alt-f1 and log in and do this: sudo shutdown -h now<< if that fails try >-r <in place of >-h< when the machine starts to show signs of booting up hit and hold the power switch you should be safe enough - it would be better than your current situation anyway
+=== threat [n=threat@60-240-43-214.static.tpgi.com.au]  has joined #ubuntu
+[12:21] <gnuyen> is the only way to use update manager to upgrade to dapper by running it -d?
+[12:21] <uccoffee_loves_B> [CrippsFX] : unknow host
+[12:21] <grimboy> negsoul: It says it's taking me 36 hours.
+[12:21] <negsoul> grimboy,  xi
+[12:22] <negsoul> so better download a new cd?
+[12:22] <kayde> kayde@ubuntu:~$ sudo apt-get install ubuntu-base ubuntu-desktop
+[12:22] <kayde> Reading package lists... Done
+[12:22] <kayde> Building dependency tree... Done
+[12:22] <kayde> E: Couldn't find package ubuntu-base
+[12:22] <kayde> kayde@ubuntu:~$
+[12:22] <uccoffee_loves_B> [CrippsFX] : terminal = application > accesories > terminal , right?
+=== brainball [n=haico@pdpc/supporter/active/brainball]  has joined #ubuntu
+=== AlinuxOS [n=AlinuxOS@d83-176-73-120.cust.tele2.it]  has joined #ubuntu
+[12:22] <kayde> help me...
+[12:22] <Almenfors> can i update from breezy to dapper somehow?
+[12:22] <CrippsFX> uccoffee_loves_B, okay. when you do "iwconfig" is there an "eth1" or a "wlan0" ?
+[12:22] <apokryphos> kayde: (i) do not flood the channel (ii) you do not need ubuntu-base specified there
+[12:22] <rixxon> how do i make files hidden?
+[12:22] <Tomcat__> gnuyen: I read the update manager will tell you automatically... might not work yet though... maybe tomorrow.
+[12:22] <rixxon> or folder
+[12:22] <apokryphos> Almenfors: /topic
+=== onkarshinde [n=onkarshi@203.199.147.101]  has joined #ubuntu
+[12:22] <grimboy> !tell Almenfors about upgrade
+[12:22] <uccoffee_loves_B> eth1
+[12:22] <ryanakca> Flannel: or in 6.06 (Dapper Drake) you have the option of choosing to install a LAMP setup at the inital Ubuntu installation screen.             I never got one of those... and I take it the howto is for breezy?
+[12:22] <thoreauputic> kayde: ubunt-desktop will pull in what you need
+[12:22] <gnuyen> alright I'll wait
+=== mr_lampe_ [n=tho@dslb-084-056-181-026.pools.arcor-ip.net]  has joined #ubuntu
+[12:22] <uccoffee_loves_B> [CrippsFX] : eth1
+[12:22] <gnuyen> it's probably slow as hell now anyway
+[12:22] <apokryphos> Almenfors: oh way, it was taken out :)
+[12:22] <Rambo3> 10 answers in one : rtfm (or wiki)
+[12:22] <hyphenated> ah, here's the one that explains desktop,server,alternate https://lists.ubuntu.com/archives/ubuntu-devel-announce/2006-May/000140.html
+[12:22] <holden> wrong link: http://releases.ubutnu.com/releases/6.06/ on http://www.ubuntu.com/download
+[12:22] <dooglus> rixxon: in Linux files are hidden if their name begins with a dot
+[12:22] <thoreauputic> kayde: * ubuntu-desktop
+[12:22] <kayde> apokryphos, ...?
+=== mode/#ubuntu [+o apokryphos]  by ChanServ
+=== Gervystar [n=gervysta@217-133-96-194.b2b.tiscali.it]  has left #ubuntu ["Ex-Chat"]
+[12:22] <threat> has it been released yet?
+[12:22] <CrippsFX> uccoffee_loves_B, okay. try "iwlist eth1 scan"
+=== Profichilla [n=Miranda@p548DDE63.dip.t-dialin.net]  has joined #ubuntu
+[12:23] <Almenfors> apokryphos, hehe
+=== holden wrong link: http://releases.ubutnu.com/releases/6.06/ on http://www.ubuntu.com/download
+[12:23] <ryanakca> Flannel: its php4 :S
+[12:23] <ajmitch_> ryanakca: LAMP option is for the server install cd
+[12:23] <uccoffee_loves_B> [CrippsFX] : sorry, wth2
+[12:23] <uccoffee_loves_B> [CrippsFX] : sorry, eth2
+[12:23] <onkarshinde> Congratulations everyone.
+[12:23] <uccoffee_loves_B> [CrippsFX] : sorry, eth2
+[12:23] <kayde> thoreauputic, the whole code is?
+[12:23] <jcz`> ompaul, ok
+=== ..[topic/#ubuntu:apokryphos] : Happy Dapper Day Everyone! ## Upgrading? /msg ubotu upgrade ## https://lists.ubuntu.com/archives/ubuntu-announce/2006-June/000083.html ## Upgrading? /msg ubotu upgrade ## Seed the torrents http://torrent.ubuntu.com:6969/ (USE THE ubuntu-6.06 torrents DO NOT!! USE the dapper-* torrents) ## Release Parties! https://wiki.ubuntu.com/DapperReleaseParties
+[12:23] <Rambo3> !tell Almenfors about upgrade
+=== nico [n=nico@blueice2n1.de.ibm.com]  has joined #ubuntu
+[12:23] <CrippsFX> uccoffee_loves_B, then replace "eth1" with "eth2"
+[12:23] <thoreauputic> kayde:  sudo apt-get install ubuntu-desktop
+[12:23] <aLd> running gksudo update-manager -d doesnt work for me
+=== kalvo [n=kalvo@82.159.202.47]  has joined #ubuntu
+=== Kadran [n=mohammed@196.218.71.160]  has joined #ubuntu
+[12:23] <K|NgGh0sT> I installed nvidia drivers, and now it seems that my DPI is messed up, anyone know how to fix this?
+[12:23] <takedown_> !easyubuntu
+[12:23] <apokryphos> uccoffee_loves_B: no flooding please
+[12:23] <ubotu> rumour has it, easyubuntu is an easy-to-use program for installing all your favorites. Java, Nvidia/ATI, and more. It is as safe as the team can make it. It doesn't change any settings by default. http://easyubuntu.freecontrib.org/.
+[12:23] <rixxon> dooglus: what if i don't want to break the path
+=== ThE-LiGhT [n=light@bzq-88-152-53-83.red.bezeqint.net]  has joined #ubuntu
+[12:23] <cute_bettong> ok um how do i order more than 8 cd;s of ubuntu at a time?
+[12:23] <apokryphos> Almenfors: there :)
+[12:23] <thoreauputic> kayde: that will pull in all the depenndencies for you
+=== holden wrong link: http://releases.ubutnu.com/releases/6.06/ on http://www.ubuntu.com/download
+[12:23] <bbrazil> apokryphos: you've got upgarding twice
+[12:23] <cute_bettong> i have a need for about 100 of the disks
+[12:23] <uccoffee_loves_B> [CrippsFX] : where to type?
+[12:24] <kayde> thoreauputic, sweet thanks mate
+[12:24] <CrippsFX> uccoffee_loves_B, in the terminal
+[12:24] <cute_bettong> must upgrade my clients XD
+[12:24] <apokryphos> bbrazil: heh, dang, it was there
+[12:24] <nico> HI ..Does the new dapper include xgl and compiz yet ??
+[12:24] <thoreauputic> kayde: no worries :)
+[12:24] <linuxboy> I just upgaded to dapper last night. I tried again, butthere are no updates...
+[12:24] <uccoffee_loves_B> [CrippsFX] : app > acc > terminal , right?
+[12:24] <CrippsFX> yes
+[12:24] <ompaul> jcz`, you would be better asking the channel - I am doing other things and if I see it I can answer but I may not and you could be left sitting there
+=== Jack-Ho [n=nimrod@85.65.32.203.dynamic.barak-online.net]  has left #ubuntu ["Leaving"]
+[12:24] <CrippsFX> uccoffee_loves_B, and leave the terminal open ;)
+=== Bols [n=bols@39.119-136-217.adsl.skynet.be]  has joined #ubuntu
+[12:24] <uccoffee_loves_B> [CrippsFX] : no scan results
+[12:24] <pekay> how can I update my KDE to 3.5.3?
+=== pianoboy3333 [n=pianoboy@ool-43567d61.dyn.optonline.net]  has joined #ubuntu
+[12:24] <CrippsFX> damn.
+[12:24] <ajmitch_> CrippsFX: yo
+=== ..[topic/#ubuntu:apokryphos] : Happy Dapper Day Everyone! http://tinyurl.com/qdbl7 ## Upgrading? /msg ubotu upgrade ## Seed the torrents http://torrent.ubuntu.com:6969/ (USE THE ubuntu-6.06 torrents DO NOT!! USE the dapper-* torrents) ## Release Parties! https://wiki.ubuntu.com/DapperReleaseParties
+[12:24] <Almenfors> apokryphos, got it as pm =)
+[12:24] <uccoffee_loves_B> yohyo
+[12:25] <CrippsFX> ajmitch_, word
+[12:25] <Roger_The_Bum> pekay: #kubuntu (if it exists)
+[12:25] <pekay> aha sorry
+=== protocol1 [n=protocol@68-35-178-69.gci.net]  has joined #ubuntu
+[12:25] <ajmitch_> CrippsFX: upgraded to dapper now?
+=== mode/#ubuntu [-oo apokryphos Seveas]  by apokryphos
+[12:25] <CrippsFX> ajmitch_, do you know lots about wireless ?
+[12:25] <CrippsFX> ajmitch_, I've been using dapper for a week and a half.
+[12:25] <kayde> thoreauputic, it wont work...
+[12:25] <ajmitch_> CrippsFX: using it in my laptop now
+[12:25] <kbrooks> takedown_: easyubuntu works on Dapper
+[12:25] <uccoffee_loves_B> [CrippsFX] : any other thoughts?
+=== g-nome [n=chatzill@80-218-14-133.dclient.hispeed.ch]  has left #ubuntu []
+[12:25] <nico> CrippsFX was that yes fot my question re xgl and compiz ??
+[12:25] <thoreauputic> kayde: be specific
+[12:25] <dooglus> apokryphos: that topic is unclear.  "USE THE ubuntu torrents DO NOT!!" is kind of a condradictory sentence
+[12:25] <CrippsFX> ajmitch_, would you care to give uccoffee_loves_B a hand then?
+[12:25] <kayde> thoreauputic, i would post what it says, but its to long..
+[12:25] <thoreauputic> kayde: did you update first
+[12:26] <kayde> thoreauputic, i pmd u
+[12:26] <kayde> thoreauputic, how?
+[12:26] <CrippsFX> nico, no, it wasn't, although it does apply.
+[12:26] <pianoboy3333> Are there any parental control programs for ubuntu?
+[12:26] <flodine> is the repositories from the rc the same as the final release repos?
+[12:26] <ajmitch_> uccoffee_loves_B: what wireless card/chipset are you using?
+[12:26] <zeR> pianoboy3333: what do you mean by that?
+[12:26] <takedown_> kbrooks: i know, i just need a link to easyubuntu
+[12:26] <uccoffee_loves_B> [ajmitch_] : wg121
+[12:26] <Chousuke> hm
+[12:26] <Pecisk> congrats everyone with Ubuntu 6.06 release!
+=== martin__ [n=martin@ip-85-160-22-49.eurotel.cz]  has joined #ubuntu
+[12:26] <thoreauputic> kayde: type this:  sudo apt-get update && sudo apt-get install ubuntu-desktop
+[12:26] <protocol1> thanks
+[12:26] <apokryphos> dooglus: well yes, it's not fully syntactically correct English; /me didn't put that, but hey.
+=== apokryphos sighs
+[12:26] <Chousuke> I don't even have a CD to burn Ubuntu on. :/
+=== mode/#ubuntu [+o apokryphos]  by ChanServ
+=== MistaED [n=alex@210-84-55-28.dyn.iinet.net.au]  has joined #ubuntu
+[12:26] <uccoffee_loves_B> [ajmitch_] : i m reading http://www.ubuntuforums.org/search.php?searchid=5669296 . but dun understand what to do
+[12:26] <nico> so i should add those one manually .. to get xgl and compiz working .. any plans for the future
+=== mephisto [n=mephisto@gw-105.selfnet.de]  has joined #ubuntu
+[12:27] <thoreauputic> kayde: the channel is kind of busy right now :)
+[12:27] <ajmitch_> uccoffee_loves_B: before trying iwlist, run sudo ifconfig eth2 up
+[12:27] <pianoboy3333> zeR: like, programs that would block pr0n on a site...
+=== tomukas [n=thomas@p54A65E5B.dip.t-dialin.net]  has left #ubuntu []
+=== livevil [n=maurizio@host55-234.pool80117.interbusiness.it]  has joined #ubuntu
+[12:27] <ajmitch_> thoreauputic: just a little ;)
+[12:27] <kbrooks> takedown_: #EasyUbuntu is the room for EU
+[12:27] <negsoul> grimboy, still 36hrs?
+=== ..[topic/#ubuntu:apokryphos] : Happy Dapper Day Everyone! http://tinyurl.com/qdbl7 ## Upgrading? /msg ubotu upgrade ## Seed the torrents http://torrent.ubuntu.com:6969/ (USE THE ubuntu-6.06 torrents DO NOT USE the dapper-* torrents) ## Release Parties! https://wiki.ubuntu.com/DapperReleaseParties
+[12:27] <ompaul> pianoboy3333, dans guardian and squid
+=== mode/#ubuntu [-oo apokryphos Seveas]  by apokryphos
+[12:27] <xukun> ist save to upgrade to dapper?
+[12:27] <martin__> Hello, does anybody else experience problem with OOo icons dissapearing?
+[12:27] <pianoboy3333> yes
+[12:27] <livevil> do you know a program for filesharing for linux ubuntu?
+[12:27] <pianoboy3333> xukun: yes
+[12:27] <ThE-LiGhT> can i remove old kernels? how
+[12:27] <OffHand> <pianoboy3333> you can use wildcards
+=== Cas [n=cas@83.98.233.2]  has joined #ubuntu
+[12:27] <dooglus> apokryphos: that's better
+[12:27] <kayde> thoreauputic, woa!
+=== user_ [n=user@mailloc.choppies.co.bw]  has joined #ubuntu
+[12:28] <thoreauputic> kayde: working?
+[12:28] <xukun> What is the easy way to upgrade?
+[12:28] <kayde> thoreauputic, its working....I think :)
+[12:28] <apokryphos> ok, now time to revise for the exam ;-)
+=== mekanzoo [n=mekanzoo@202.73.112.143]  has joined #ubuntu
+[12:28] <uccoffee_loves_B> [ajmitch_] : then?
+[12:28] <ryanakca> why is it that "Listen 80" in httpd.conf makes apache run on ipv6 instead of ipv4?
+[12:28] <thoreauputic> kayde: should be...
+[12:28] <Flannel> ryanakca: the differences are trivial, setup is basically the same.
+[12:28] <protocol1> hahah sick 1017 users in room
+=== nickm__ [n=nickm@81.168.52.43]  has joined #ubuntu
+=== l_r [n=NoName@adsl-ull-103-244.46-151.net24.it]  has left #ubuntu ["Sto]
+[12:28] <bcc|graf> livevil, frostwire
+[12:28] <K|NgGh0sT> I installed nvidia drivers, and now it seems that my DPI is messed up, anyone know how to fix this?
+[12:28] <aLd> i wan't to updat using update manager could someone point me in the right direction atleast
+[12:28] <kayde> ubuntu-desktop is already the newest version.
+[12:28] <kayde> 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[12:28] <livevil> thank'
+[12:28] <uccoffee_loves_B> [ajmitch_] : it asks for password
+[12:28] <apokryphos> aLd: /topic
+[12:28] <ThE-LiGhT> can i remove old kernels? how?
+[12:28] <uccoffee_loves_B> [ajmitch_] : is that my password?
+[12:28] <nico> what should be the best version ..desktop or alternate ??
+[12:29] <uccoffee_loves_B> [ajmitch_] : i typed my password in
+[12:29] <martin__> Hey, does anybody else experience problem with OOo icons in teh program dissapearing?
+[12:29] <cef> hrm, 28 GB down, 2TB to go *grin*
+[12:29] <onkarshinde> ThE-LiGhT: use synaptic to remove old kernels
+[12:29] <uccoffee_loves_B> [ajmitch_] : and back to flashing curser
+[12:29] <apokryphos> nico: desktop is the standard one
+[12:29] <xukun> how can I upgrade to dapper?
+[12:29] <apokryphos> xukun: /topic
+[12:29] <uccoffee_loves_B> [ajmitch_] : what's next?
+[12:29] <nico> what is in alternate then ??
+[12:29] <apokryphos> nico: the old classical text installer
+[12:29] <ThE-LiGhT> onkarshinde, how can i find them there?
+=== Shagshag [n=Shagshag@APoitiers-155-1-24-230.w83-200.abo.wanadoo.fr]  has joined #ubuntu
+=== SyntaxTerror [n=ian@CPE-203-45-121-145.nsw.bigpond.net.au]  has joined #ubuntu
+[12:29] <uccoffee_loves_B> oh
+[12:29] <nico> okay .. will download desktop then .. from our internal mirrors ..
+=== mydecay [n=mydecay@host14-46.pool81118.interbusiness.it]  has joined #ubuntu
+[12:30] <onkarshinde> nico: Desktop is basically live CD which can be installed also. If yoiu want to upgrade then use alternate CD
+[12:30] <mydecay> hi all
+[12:30] <uccoffee_loves_B> what to do next....
+[12:30] <ajmitch_> uccoffee_loves_B: now, sudo iwlist eth2 scan
+[12:30] <apokryphos> ubotu: alternate is <reply> The Alternate CD is the classical Ubuntu text-installer, with now Live session available.
+[12:30] <ubotu> okay, apokryphos
+[12:30] <ThE-LiGhT> onkarshinde, linux image?
+=== scheuri [n=stefan@147.86.141.93]  has joined #ubuntu
+[12:30] <onkarshinde> ThE-LiGhT: Search for linux-image
+[12:30] <uccoffee_loves_B> [ajmitch_] : no scan result :(
+[12:30] <apokryphos> nico: are you upgrading or installing?
+[12:30] <nico> i have 5.10 at  home . . no net connection ...
+[12:30] <flodine> i do i know if my dapper is up to date
+=== jsgotangco is now known as MysteriousGEGL
+[12:30] <nickm__> howcome ubuntu is only on a DVD now?
+[12:30] <tubbie> is it posible to use multiple lyriyc source if a lyric is not found ?
+[12:30] <ThE-LiGhT> onkarshinde, thx, is it safe?
+[12:31] <Roger_The_Bum> !tell me about DVD
+[12:31] <ajmitch_> uccoffee_loves_B: ok, I can't help terribly much since I don't know that driver too well, nor your network
+[12:31] <rixxon> can i hide a file/folder from nautilus without braking the path (ie dotfile it)?
+[12:31] <apokryphos> nickm__: it's not only on dvd
+[12:31] <onkarshinde> flodine: If you are not getting any notification then it is uptodate
+=== pUm [n=spam@p508B712E.dip.t-dialin.net]  has joined #ubuntu
+[12:31] <nickm__> apokryphos: the rest is just not up yet?
+[12:31] <derfbugzi> Roger_The_Bum, what about dvd?
+[12:31] <Bols> !tell me about DVD
+[12:31] <Roger_The_Bum> why the DVD
+[12:31] <apokryphos> nickm__: the DVDs are still synching, yes.
+=== leleobhz [n=Leonardo@unaffiliated/leleobhz]  has left #ubuntu []
+[12:31] <derfbugzi> !tell me about DVD
+=== kyral_ [n=kyral@ubuntu/member/kyral]  has joined #ubuntu
+[12:31] <Roger_The_Bum> rather than the normal Cd;s
+=== spami [n=spami@ns.bitdefender.com]  has joined #ubuntu
+[12:31] <onkarshinde> ThE-LiGhT: Yes it is. You don't need old kernel. Remember the old version is 2.6.12 while new one is 2.6.15
+[12:31] <apokryphos> You can /msg the bot guys :)
+[12:31] <flodine> onkarshin how do i tell in a terminal
+=== rackerz [n=rackerz@cpc3-cosh6-0-0-cust86.cos2.cable.ntl.com]  has joined #Ubuntu
+[12:31] <petrik> download talks about 6.06 but when you click on the links it gives you the badger
+[12:31] <uccoffee_loves_B> [ajmitch_] : what is ndiswrapper
+=== BanskuZ [n=BanskuZ@b-177-197.dsl.ipy.dnainternet.fi]  has joined #ubuntu
+[12:31] <derfbugzi> its 3 gig, gotta be good
+[12:31] <joshhendo> when is the date on this article going to be fixed? http://www.ubuntu.com/news/606released
+[12:32] <derfbugzi> !DVD
+[12:32] <ubotu> DVD playing is possible in ubuntu. You may need libdvdcss2, which is available via http://wiki.ubuntu.com/SeveasPackages (section extras)
+[12:32] <uccoffee_loves_B> [ajmitch_] : it said it work with ndiswrapper
+[12:32] <ajmitch_> uccoffee_loves_B: a way of using windows drivers for wireless
+[12:32] <onkarshinde> flodine: Can you please ask again?
+=== berrum [n=berrum@225.80-203-245.nextgentel.com]  has joined #ubuntu
+[12:32] <uccoffee_loves_B> [ajmitch_] : do i need it to run?
+[12:32] <ThE-LiGhT> onkarshinde, cool.. i just want to free up some space for the upgrade
+[12:32] <ajmitch_> and I've never needed to use ndiswrapper
+=== rommel [n=rommel@203.131.171.98]  has joined #ubuntu
+[12:32] <uccoffee_loves_B> [ajmitch_] : or how do i try?
+=== Sonderblade [n=muh@host-213.131.147.169.addr.tdcsong.se]  has joined #ubuntu
+[12:32] <ajmitch_> uccoffee_loves_B: I don't know
+[12:32] <rackerz> Was dapper released an hour ago?
+[12:32] <nickm__> when is the official release time when everything will be ready?
+[12:32] <onkarshinde> ThE-LiGhT: Wait
+[12:32] <Roger_The_Bum> uccoffee_loves_B: no
+[12:32] <nico> apokryphos .. it would be upgrading as i have 5.10 installed on Home pc .. it does not have net access ..
+[12:32] <apokryphos> rackerz: or so
+[12:32] <derfbugzi> ajmitch_, yes
+[12:32] <rackerz> cheers.
+[12:32] <onkarshinde> ThE-LiGhT: I though you already upgraded
+[12:32] <Roger_The_Bum> nickm__, it's been released
+[12:32] <flodine> onkarshin i deen on the beta for a long time do just do a dist-upgrade
+[12:32] <uccoffee_loves_B> anyone know how to use ndiswrapper?
+[12:32] <Bols> !DVD
+[12:32] <apokryphos> nico: ok, then you'll want to upgrade from the CD, yup. You'll want the alternate
+[12:32] <ubotu> DVD playing is possible in ubuntu. You may need libdvdcss2, which is available via http://wiki.ubuntu.com/SeveasPackages (section extras)
+[12:32] <ajmitch_> derfbugzi: excuse me?
+[12:32] <nico> but i don't mind re-installing at all ..
+[12:32] <Roger_The_Bum> nickm__, type /topic
+[12:32] <martin__> Hey, does anybody else experience problem with OOo icons inside the program dissapearing?
+[12:33] <apokryphos> uccoffee_loves_B: /msg ubotu ndiswrapper
+=== Zdra [n=zdra@di-pc66.ulb.ac.be]  has joined #ubuntu
+[12:33] <Roger_The_Bum> !install dvd
+[12:33] <ubotu> Roger_The_Bum: Did you get hit by a windmill? Try searching at http://ubuntu.cc.com.au/
+=== maddy [n=maddy@88-137-144-70.adslgp.cegetel.net]  has joined #ubuntu
+[12:33] <nickm__> just not all of the ISO's Roger_The_Bum
+[12:33] <derfbugzi> ajmitch_, i meant rackerz
+[12:33] <onkarshinde> flodine: Yes. 'Sudo apt-get update' and then 'sudo apt-get dist-upgrade'
+[12:33] <jessy_> somebody tried the DVD ? is this the version which can be used as an install cd or a live cd ??
+[12:33] <nico> what would i need for xgl and compiz on Dapper ??
+[12:33] <apokryphos> nico: if you want to reinstall then you can use desktop, sure.
+=== welsh_spud [n=ben@nidum.plus.com]  has left #ubuntu []
+[12:33] <apokryphos> jessy_: the DVD is desktop+alternate CD
+=== bbrazil [i=bbrazil@matrix.netsoc.tcd.ie]  has left #ubuntu []
+[12:33] <Spaceraver> man... we need o split this chan to the release and general tech... too much is being said at one time...
+[12:33] <jcz`> ompaul, by the way, i've already updated twice last week ... but it didnt seem to effect or solve my delayed login issue
+[12:33] <jessy_> ok thanks
+[12:33] <Roger_The_Bum> oh
+[12:33] <onkarshinde> jessy_: both I guess
+=== rommel [n=rommel@203.131.171.98]  has left #ubuntu ["Leaving"]
+[12:33] <Roger_The_Bum> then it's just superfluous
+[12:33] <flodine> onkarshin thxs very busy here i love it
+[12:33] <derfbugzi> !alternate
+[12:33] <nickm__> yeah, Roger_The_Bum, it may be available for download, just one DVD image or something, no use to most people :/
+[12:33] <ubotu> The Alternate CD is the classical Ubuntu text-installer, with now Live session available.
+=== Kadran [n=mohammed@196.218.71.160]  has joined #ubuntu
+=== Krpano [n=opera@196.139.62.81.cust.bluewin.ch]  has joined #ubuntu
+[12:34] <derfbugzi> ahh
+[12:34] <rackerz> 1008 people :O
+[12:34] <jessy_> ubuntu-6.06-dvd-i386.iso this one is the right ?
+[12:34] <apokryphos> Roger_The_Bum: or it isn't, since it gives the option of both.
+=== asc [n=asc@206.130.142.87]  has joined #ubuntu
+[12:34] <rackerz> jessy, yes.
+[12:34] <derfbugzi> jessy_, yes
+=== rekrutacja [n=rekrutac@cpi74.neoplus.adsl.tpnet.pl]  has joined #ubuntu
+[12:34] <onkarshinde> jessy_: yes
+=== nickm__ [n=nickm@81.168.52.43]  has left #ubuntu []
+[12:34] <jessy_> kk let's download it
+=== ROBOd [n=robod@86.34.246.154]  has joined #ubuntu
+[12:34] <ThE-LiGhT> onkarshinde, nah..
+[12:34] <ROBOd> hello guys
+[12:34] <dooglus> so the alternate CD is a bootable live CD as well as the desktop one?
+[12:34] <onkarshinde> ThE-LiGhT: How much space do you have left in /  ?
+[12:34] <rackerz> dooglus, yes :)
+[12:35] <thoreauputic> dooglus: no
+[12:35] <ompaul> jcz`, I am by no means a gnome expert, however if your telling me (as you have done already) that you don't have the word "options" on the bottom of the screen then I wonder if you are running dapper, it should be visible fromwhere you log in
+[12:35] <derfbugzi> the seeds for the dvd just vanished :noes:
+[12:35] <apokryphos> dooglus: no, re: alternate: /msg ubotu alternate
+[12:35] <dooglus> dooglus: maybe
+[12:35] <Spaceraver> looks like the first couple of users have the cd downloaded by now... more parts...
+[12:35] <zjimbo> why are all the link on the Ubu download page 404-ing?
+=== skippy81 [n=skippy81@213.121.151.162]  has joined #ubuntu
+=== johan__ [n=johan@dsl-165-104-34.telkomadsl.co.za]  has joined #ubuntu
+[12:35] <thoreauputic> rackerz: no the alternate istext mode
+[12:35] <onkarshinde> dooglus: No. Desktop is Live CD. Alternate is install CD
+[12:35] <johan__> whats up with the dvd
+[12:35] <ThE-LiGhT> onkarshinde, 629 mb or so.. no /home
+[12:35] <dooglus> thoreauputic: did you seen ubotu's factoid:
+[12:35] <dooglus> !alternate
+[12:35] <ubotu> The Alternate CD is the classical Ubuntu text-installer, with now Live session available.
+[12:35] <ompaul> jcz`, in a terminal type: lsb_release -d : what does that tell you
+[12:35] <thoreauputic> dooglus: yes, it has a typo
+=== SyntaxTerror [n=ian@CPE-203-45-121-145.nsw.bigpond.net.au]  has left #ubuntu ["Ex-Chat"]
+[12:35] <apokryphos> err, live cd available?
+[12:35] <thoreauputic> dooglus: now should be "no"
+[12:36] <cef> !ads
+[12:36] <ubotu> Alternate = Old text-style installer, Desktop = LiveCD and graphical installer in one, Server = Server-class install (minimal)
+[12:36] <derfbugzi> live cd is on all the cds as far as i understand
+[12:36] <Krpano> anyone know what font is this ?... http://www.gnome-look.org/content/pre1/39316-1.png ...
+[12:36] <onkarshinde> ThE-LiGhT: 629 should be sufficient don't you think? Did you try to update? Did it give error about insufficient space?
+=== denton [n=denton@host-184-9.adsl.euroweb.sk]  has joined #ubuntu
+[12:36] <derfbugzi> sorry, not the alternate
+[12:36] <Spaceraver> zjimbo... because every man/woman and their cat wants ubuntu right now...
+[12:36] <derfbugzi> but the oters
+=== takedown_ [n=takedown@hst10.nkosino.ru]  has joined #ubuntu
+[12:36] <zjimbo> lol
+[12:36] <thoreauputic> !alternate
+[12:36] <ubotu> alternate is, like, totally, The Alternate CD is the classical Ubuntu text-installer, with no live session available.
+[12:36] <ThE-LiGhT> onkarshinde, i'll check it... my friend needed 829 mb
+[12:36] <scheuri> Spaceraver: well, and my dog and my grandma and...
+[12:37] <rackerz> the text mode cd is bootable, i thought that was what he asked.
+[12:37] <rixth> !install
+[12:37] <ubotu> Installing Ubuntu? See http://wiki.ubuntu.com/Installation Installing software on Ubuntu? See http://wiki.ubuntu.com/InstallingSoftware
+[12:37] <thoreauputic> dooglus: I think thats right now
+[12:37] <Spaceraver> ROFL scheuri
+[12:37] <ROBOd> how to update to ubuntu 6.06 ?
+[12:37] <apokryphos> thoreauputic: yup
+=== picole_ [n=picole@202.101.10.137]  has joined #ubuntu
+[12:37] <apokryphos> ROBOd: /topic
+[12:37] <ROBOd> without using the command line
+[12:37] <rixth> ROBOd, best bet is to do a total reinstall.
+[12:37] <thoreauputic> apokryphos: OK - just changed it :)
+[12:37] <Grunt> BRB
+[12:37] <apokryphos> rixth: no it's not
+[12:37] <scheuri> ...and each and everyone of them needs to download it themself...;)
+[12:37] <ROBOd> rixth: why? :)
+[12:37] <onkarshinde> ThE-LiGhT: That depend on what all packages you have already installed. May be your friend installed mroe packages form repos.
+[12:37] <Spaceraver> ROBOd... use apt-get dist-upgrade or dl the cd...
+[12:37] <apokryphos> ROBOd: it isn't; a proper upgrade from stable -> stable is fully supported
+[12:38] <jcz`> ompaul, well, it says 'welcome to Ubuntu 6.06 LTS - Dapper Drake june 2006'
+[12:38] <zjimbo> it's odd - I started downloading a while ago from releases.ubuntu.com and the speed hasn't dropped.
+[12:38] <dooglus> thoreauputic: can you get him to miss out the "alternate is", like it did before?
+[12:38] <ROBOd> Spaceraver: shall i download the livecd or the "normal" cd?
+[12:38] <rixth> apokryphos, yeah, it kinda it for me anyway. All these updates have left orphaned files all over my filesystem, some functions such as auto-mounting of my camera don't work any more etc.
+[12:38] <ROBOd> does the livecd allow me to upgrade?
+[12:38] <Roger_The_Bum> yes
+[12:38] <apokryphos> dooglus: yes, use x is <reply> somemessage   syntax
+=== deb-fun [n=deb-fun@58.187.90.156]  has joined #ubuntu
+[12:38] <ROBOd> i suppose you guys have new repositories and such, for dapper
+[12:38] <Roger_The_Bum> there is no live cd anymore
+[12:38] <thoreauputic> apokryphos: of course if you want to be pedantic, it should be called "alternative" but whatever,
+[12:38] <apokryphos> rixth: well, time to report bugs :)
+[12:38] <thoreauputic> dooglus: I'll have another go
+[12:38] <dooglus> ROBOd: the choice is desktop or alternate.  you want desktop
+[12:38] <Roger_The_Bum> just the "desktop" cd
+[12:38] <apokryphos> thoreauputic: that's soo altnerative oh my gosh
+[12:38] <siccness> apokryphos, like what bugs?
+[12:38] <onkarshinde> Roger_The_Bum: Yes there is. Only it has been renamed to Desktop CD
+[12:39] <rixth> " The Alternate CD is the classical Ubuntu text-installer" does that mean 6.06 has a graphical installer?
+[12:39] <Roger_The_Bum> and it has an installer
+[12:39] <apokryphos> siccness: there aren't really many. Dapper is technically stable
+[12:39] <Roger_The_Bum> rixth, yep
+[12:39] <ROBOd> dooglus: so, i'll download desktop and it will nicely upgrade my stable ubuntu?
+[12:39] <apokryphos> of course some bugs still slip through
+[12:39] <thoreauputic> apokryphos: :)
+[12:39] <Cas> !tell ROBOd about upgrade
+[12:39] <rixth> Sweet! I can't wait 14 more minutes.
+=== Ahmad [n=chatzill@adsl17-126.qualitynet.net]  has joined #ubuntu
+[12:39] <siccness> apokryphos, as expected though.
+[12:39] <apokryphos> indeed
+[12:39] <dooglus> apokryphos: there are over 10,000 open bugs against dapper aren't there?
+[12:39] <siccness> I was just curious to know if there were any major flaws
+[12:39] <ROBOd> Cas: i already so that, and i ain't liking that
+=== chrisbudden14 [n=chrisbud@host-87-74-57-142.bulldogdsl.com]  has joined #ubuntu
+=== protocol1 [n=protocol@68-35-178-69.gci.net]  has joined #ubuntu
+[12:39] <Spaceraver> woot... now we might get a better rating at the sistro beginners shootout...
+[12:39] <jcz`> ompaul, when i click on system- about ubuntu
+[12:39] <apokryphos> dooglus: don't know
+[12:40] <rixth> I'm getting 90kb/sec from releases.ubuntu.com. (I can max at 255kb/sec)
+=== cvrse [n=ben@ppp78-183.lns1.mel3.internode.on.net]  has joined #ubuntu
+[12:40] <thoreauputic> !alternate
+[12:40] <ubotu> The Alternate CD is the classical Ubuntu text-installer, with no Live session available on it.
+[12:40] <Cas> ROBOd: you mean the updatemanager -d ? what is the problem?
+[12:40] <thoreauputic> OK
+[12:40] <bionic> ubuntu-6.06-dvd-amd64.iso, is this the final dapper release for amd64?
+[12:40] <zjimbo> Flaws? like yast in Suse?
+[12:40] <apokryphos> rixth: torrents might be better now
+=== Grunt [n=jamie@jgarner.demon.co.uk]  has left #Ubuntu []
+=== bigfoot1 [n=opera@FLH1Abv223.fko.mesh.ad.jp]  has joined #ubuntu
+[12:40] <apokryphos> zjimbo: yast is a flaw in suse?
+[12:40] <apokryphos> erm...
+=== deb-fun [n=deb-fun@58.187.90.156]  has left #ubuntu []
+[12:40] <asc> rixth: try the torrent, I'm getting 206 of 256
+[12:40] <rixth> apecat, only 15 minutes left, may as well just let it finish
+[12:40] <dooglus> apokryphos: did you see this?  http://launchpad.net/bugs/47195 :)
+[12:40] <asc> *KB
+[12:40] <rixth> Eeeeee! Now it is 33.
+[12:40] <apokryphos> zjimbo: flaws of Ubuntu? Not BiArch compatible, not really as much polish IMO as some other distros.
+[12:41] <ROBOd> Cas: i also want to have ubuntu 6.06 on my local disk, so i'll be able to do clean installs myself, if needed, without redownloading
+[12:41] <bigfoot1> 1 month ago i upgraded from breezy to dapper beta .should i do anytthing today to go to non-beta dapper, or is it already on my system (via the daily software-updates)?
+=== gambit_ [n=gambit@h244.120.140.67.ip.alltel.net]  has joined #ubuntu
+[12:41] <rixth> Can I start the correct against the semi downloaded ISO?
+[12:41] <rixth> the torrent, rather
+[12:41] <halibut> 6.06 LTS,  LTS = ?  is this the release I want?
+[12:41] <rixth> halibut, yep
+=== morten__ [n=morten@ti231120a080-0945.bb.online.no]  has joined #ubuntu
+[12:41] <rsk> halibut: yes
+[12:41] <rixth> halibut, LTS = long ter spport
+[12:41] <rackerz> LTS = Long Term Support rite?
+[12:41] <rackerz> guess so.
+[12:41] <Fillado> Rixth: yeah
+[12:41] <apokryphos> dooglus: nope, I don't think that means much at all.
+=== eXistenZ [i=eXistenZ@bzq-88-152-113-46.red.bezeqint.net]  has joined #ubuntu
+[12:41] <morten__> is the alternate iso additional packages? from dapper 6.06?
+[12:42] <negsoul> is wpa working ok now?
+[12:42] <apokryphos> morten__: /msg ubotu alternate
+[12:42] <ROBOd> thanks guys
+=== stephane [n=stephane@cm-198-159.dialup.ulg.ac.be]  has joined #ubuntu
+[12:42] <ROBOd> gotta go, bye
+=== ROBOd [n=robod@86.34.246.154]  has left #ubuntu ["http://www.robodesign.ro"]
+[12:42] <halibut> I have a 64bit amd processor, should I get the 64bit ubuntu, I have heard a lot of comments like "64 bit is not ready for prime time yet" etc
+[12:42] <berrum> hey! does anyone have experience with digital cameras and linux? need help
+[12:42] <stephane> how can i get dapper drake?
+[12:42] <stephane> a command in a terminal?
+[12:42] <Spaceraver> !tell me about release
+[12:42] <Fillado> Berrum: Plug it in :D
+[12:42] <apokryphos> stephane: /topic
+[12:42] <Pecisk> halibut: I think you should give it a shot :)
+[12:42] <r4zz> http://www.ubuntu.com/download
+=== pseudodeadkitty [n=chatzill@68-116-0-38.dhcp.knwk.wa.charter.com]  has joined #ubuntu
+[12:42] <kayde> thoreauputic, none of the options work...it wont let me downlod ANY of tthe way for daapper
+[12:43] <Cas> ROBOd: i really don't understand you, if you now run breezy and want to update do it with the update-manager -d, if you want to install it on on a new pc download the cd,
+[12:43] <eXistenZ> Is there a DVD version?
+[12:43] <berrum> Fillado, hehe, already done that!
+[12:43] <Lukketto> stephane: apt-get
+[12:43] <petrik> I heard that if you have a second drive even if you don't ask it to touch it it will ruin it anyhow. Is there any thruth to that?
+[12:43] <apokryphos> eXistenZ: yes, but I believe it's still synching on the mirrors
+[12:43] <thoreauputic> kayde: be specific - what errors are you getting ?
+[12:43] <rackerz> wow my download speed on torrents is kicking butt.
+[12:43] <petrik> 6.06 that is
+[12:43] <Fillado> Berrum: isn't it a Mass Storage Device?
+=== raquel [i=raquel@58.Red-217-127-181.staticIP.rima-tde.net]  has joined #ubuntu
+[12:43] <Cas> petrik: no
+[12:43] <halibut> petrik, nonsense
+[12:43] <PeanutHorst> berrum: yup
+[12:43] <derfbugzi> there are no seeders for the dvd at the moment :(
+[12:43] <petrik> thank goodness for that
+[12:43] <raquel> hola
+[12:43] <kayde> thoreauputic, update manager, nothing, says my pc is up to daate...
+[12:43] <stephane> yeah, apt get dapper drake?? doesnt work
+[12:43] <PeanutHorst> mount it like  a USB disk
+[12:44] <morten__> can anyone tell what the alternate iso is for?
+[12:44] <PeanutHorst> adios, ubuntu users!
+[12:44] <thoreauputic> kayde: did you read and follow the URL I gave you?
+=== PeanutHorst [n=peanut@unaffiliated/Peanuthorst]  has left #ubuntu ["SXEmacs]
+[12:44] <Cas> !tell stephane about upgrade
+[12:44] <kayde> thoreauputic, and root says same thing
+[12:44] <apokryphos> morten__: /msg ubotu alternate
+[12:44] <kayde> thoreauputic, yes
+[12:44] <Fillado> morten: if you have less RAM
+=== alan|laptop [n=alan@ARouen-151-1-2-172.w86-208.abo.wanadoo.fr]  has joined #ubuntu
+[12:44] <protocol1> ahahha office space is funnier than crap
+[12:44] <Fillado> than 192MB
+[12:44] <kayde> thoreauputic, tried all the options
+[12:44] <petrik> It's the 120GB drive I still need to tidy up and that I have not been able to get my two machines talking to each other for.
+[12:44] <thoreauputic> kayde: you are doing something wrong :)
+[12:44] <kayde> thoreauputic, yes :S
+[12:44] <raquel> q pasa?
+[12:44] <petrik> Hope networking is easier with 6.06
+[12:44] <thoreauputic> kayde: it works fine if you do all the steps
+[12:44] <Fillado> Morten: Read http://releases.ubuntu.com/6.06/
+[12:44] <hyphenated> protocol1: I'm gonna go right ahead and ask you to come in on Sunday
+[12:44] <Lukketto> stephane: apt-get dist-upgrade
+[12:44] <protocol1> hahaha
+[12:44] <halibut> will I be able to get nvidia drivers under 64 bit? will I be able to run 32 bit software as normal without running as root or something??
+[12:45] <dooglus> morten__: the alternate install CD is for special cases (OEM, automation, LVM, RAID, etc.)
+[12:45] <[zero] > How do I update?
+[12:45] <Cas> Lukketto: update-manager -d is much more easier ;)
+[12:45] <protocol1> hyphenated, looks like your having a bad case of the monday's
+=== Thirion [n=Thirion@p54932CE7.dip0.t-ipconnect.de]  has joined #ubuntu
+[12:45] <apokryphos> halibut: nvidia: yes; 32-bit software: as a general: no, ubuntu/debian is not biarch
+[12:45] <halibut> Is Gnome faster under 64bit?
+[12:45] <Cas> !tell [zero]  about upgrade
+=== derfbugzi is now known as wheelswitch
+[12:45] <thoreauputic> dooglus: also low memory machines
+[12:45] <apokryphos> halibut: yes
+[12:45] <[zero] > thankx cas
+[12:45] <raquel>  no me entero de naaa
+[12:45] <thoreauputic> dooglus: < 192 MB
+[12:45] <halibut> apokryphos, will I have significantly faster boot times?
+[12:45] <Cas> halibut: here is is a little but also uses more memory
+[12:45] <apokryphos> halibut: faster ish
+[12:45] <Lukketto> Cas: much more ;) You can use system->admin->update ;)
+[12:46] <Spaceraver> !es
+[12:46] <ubotu> Para Espaol por favor usen #ubuntu-es, #kubuntu-es o #edubuntu-es, alli obtendran mas ayuda.
+[12:46] <dooglus> thoreauputic: I was just quoting from https://lists.ubuntu.com/archives/ubuntu-devel-announce/2006-May/000140.html
+[12:46] <kerb> whats up with the tracker?
+[12:46] <Spaceraver> cant handle the traffic
+[12:46] <Pecisk> seems so
+=== IcyT [n=IcyT@p54ABC3E0.dip0.t-ipconnect.de]  has joined #ubuntu
+=== ollo82 [n=oliver@p3EE2A06F.dip0.t-ipconnect.de]  has joined #ubuntu
+=== raquel [i=raquel@58.Red-217-127-181.staticIP.rima-tde.net]  has left #ubuntu []
+[12:46] <Lukketto> stephane: did you copy it?
+[12:46] <hyphenated> protocol1: Well, I generally come in about 15 minutes late, I use the side door.. (can't remember the rest)
+[12:46] <kerb> lol, just when I got a 25mbit server up to seed :)
+[12:46] <thoreauputic> dooglus: fair enough ;) But the alternate CD should work better on low-memory machines for standard installs too :)
+[12:46] <reiki> ubuntu+1 is invite only? (I just woke up)
+[12:47] <kerb> reiki: closed until edgy opens
+[12:47] <Frogzoo> is Dapper in da house?
+[12:47] <ThE-LiGhT> onkarshinde, ok
+=== mvo [n=egon@p54A67F3F.dip.t-dialin.net]  has left #ubuntu ["Ex-Chat"]
+[12:47] <reiki> kerb: ahh
+=== CicalaMvta [n=CicalaMv@chello080109002146.13.14.vie.surfer.at]  has joined #ubuntu
+[12:47] <ThE-LiGhT> Frogzoo, yeah!!
+=== ska-fan [n=markus@markus.hostel.nstu.ru]  has joined #ubuntu
+[12:47] <protocol1> hyphenated, and I sit at my desk and stare at nothing for about an hour!
+[12:47] <Spaceraver> Frogzoo... look at the topic
+[12:47] <protocol1> lol
+[12:47] <thoreauputic> dooglus: I seem to recall seeing a discussion on ubuntu-devel list about problems with the desktop CD on low memory systems
+[12:47] <Frogzoo> ThE-LiGhT: SHWEET!!
+=== MistaED [n=alex@210-84-55-28.dyn.iinet.net.au]  has joined #ubuntu
+[12:47] <petrik> Just realised last CD I burned was on windoze. Now I have no more windoze this will be a test to see if breezy has CD writing set up correctly on this machine
+=== Corey [n=admin@203-206-222-238.dyn.iinet.net.au]  has joined #ubuntu
+[12:48] <Corey> woah
+=== dennis_ [n=dennis@202.43.236.203]  has joined #ubuntu
+[12:48] <hyphenated> protocol1: last time I watched it, I laughed extra hard seeing Dr Cox (from Scrubs) as one of the Bob's
+[12:48] <Corey> its really released !?
+=== Spaceraver points at topic
+[12:48] <ska-fan> Which disk do I need when I want to upgrade from breezy and do have network access but want to take as much packages as possible from the disk?
+[12:48] <thoreauputic> Corey: indeed
+[12:48] <zjimbo> hm cancel at 12% to dump cd for dvd or keep going...
+[12:48] <Corey> How can I upgrade from my current dapper installastion
+[12:48] <ska-fan> traffic costs here
+=== maddcore [n=m@60-240-188-242.tpgi.com.au]  has joined #ubuntu
+[12:48] <thoreauputic> ska-fan: alternate
+=== onkarshinde [n=onkarshi@203.199.147.101]  has left #ubuntu []
+[12:48] <thoreauputic> !alternate
+[12:48] <ubotu> The Alternate CD is the classical Ubuntu text-installer, with no Live session available on it.
+[12:48] <berrum> Fillado, i dont know it is a mass storage device
+=== bigfoot1 [n=opera@FLH1Abv223.fko.mesh.ad.jp]  has left #ubuntu []
+[12:48] <thoreauputic> ska-fan: it has more packages on  it
+[12:49] <r4zz> is the dvd worth waiting for?
+[12:49] <thoreauputic> ska-fan: add it to synaptic or use apt-cdrom add
+[12:49] <ska-fan> thoreauputic: ok. the old install cd is the new alternate cd?
+[12:49] <Spaceraver> zjimbo... what would you need the dvd ver for... packages will become old fast
+[12:49] <dooglus> r4zz: no
+[12:49] <ThE-LiGhT> !desktop
+[12:49] <ubotu> ThE-LiGhT: Some people juggle geese. Try searching at http://ubuntu.cc.com.au/
+=== Ahmad is now known as AhmadH
+[12:49] <thoreauputic> ska-fan: yup
+[12:49] <ska-fan> thoreauputic: thanks a lot
+[12:49] <Corey> Guys how do I update to dapper from my current dapper which I downlaoded 4 days ago
+[12:49] <berrum> Fillado, its a digital ixus 700
+[12:49] <Healot> the Desktop CD is like the LiveCD with installer option :-)
+[12:49] <thoreauputic> ska-fan: no problem :)
+[12:49] <r4zz> k... so http://mirror.mcs.anl.gov/pub/ubuntu-iso/CDs/6.06/ubuntu-6.06-desktop-i386.iso.torrent is the one I want right?
+[12:49] <ska-fan> :)
+=== ska-fan [n=markus@markus.hostel.nstu.ru]  has left #ubuntu ["Ex-Chat"]
+=== GrEaT [n=GrEaT@nan77-1-82-241-102-252.fbx.proxad.net]  has joined #ubuntu
+[12:50] <Frogzoo> Corey: sudo apt-get update ; sudo apt-get upgrade
+[12:50] <kayde> thoreauputic, the one that involves pastebin, might work, how do i do it? what do i doo with that weird stuff?
+[12:50] <protocol1> hyphenated, hahah peter gets promoted for blowing off
+[12:50] <Healot> if you need LVM/RAID support, low RAM, customization, take the alternate-CD
+[12:50] <Frogzoo> Corey: you may need to change your repos - not sure
+[12:50] <thoreauputic> kayde: huh? I don't follow you ...
+[12:50] <Corey> guys nothing updated
+[12:51] <thoreauputic> kayde: I suggest you caome back when the channel is a bit less busy in a day or so :)
+[12:51] <Frogzoo> Corey: check that you're using the release repos, not the beta ones - I think this would change
+[12:51] <thoreauputic> *come
+[12:51] <Spaceraver> Corey... then you dont need to..
+[12:51] <kayde> thoreauputic, the stuff about pastebin: Upgrading by changing sources and the command line...
+[12:51] <kayde> thoreauputic, ok
+=== fix-- [n=Bjorn@83-217-93-254.adsl.realdsl.be]  has joined #ubuntu
+[12:51] <Corey> Frogzoo how do i change them
+[12:51] <kayde> ?!!!!?!?!?!?!
+=== dedi [n=dedi@149.135.34.195]  has joined #ubuntu
+=== paradon [n=thomas@202.37.90.163]  has left #ubuntu []
+[12:52] <kayde> frogzoo
+[12:52] <kayde> wow
+=== capitanplaneta [n=CapitanP@62-14-81-61.inversas.jazztel.es]  has joined #ubuntu
+[12:52] <thoreauputic> kayde: you'll get more help when the release fever has calmed down a bit ;)
+=== Krpano [n=opera@196.139.62.81.cust.bluewin.ch]  has left #ubuntu []
+[12:52] <kayde> thoreauputic, :(
+=== hre [n=hre@d83-180-103-7.cust.tele2.ch]  has joined #ubuntu
+=== y2d2 [n=y2d2@crown-7-127.resnet.ucsc.edu]  has joined #ubuntu
+[12:52] <kayde> thoreauputic, ho well, se ya then
+[12:52] <negsoul> you ppl are too excited with the new release
+=== aboe [n=aboe@tb-c-76ec.adsl.wanadoo.nl]  has joined #ubuntu
+[12:52] <negsoul> go have sex
+[12:52] <Bilford> no
+[12:52] <kayde> !
+[12:52] <ubotu> kayde: I give up. Try searching at http://ubuntu.cc.com.au/
+[12:52] <thoreauputic> negsoul: or both at once?
+[12:53] <Verithrax> We're Linux geeks. Come on.
+[12:53] <r4zz> i second that no
+[12:53] <negsoul> thoreauputic, it can be
+[12:53] <negsoul> :p
+[12:53] <dennis_> i just got my ubuntu disks am i obsolete already?
+[12:53] <rixth> I have a girlfriend.
+[12:53] <jcz`> haha so true ==>> <negsoul> you ppl are too excited with the new release
+[12:53] <Frogzoo> negsoul: the gf says not until her lappie gets dapper :-(
+[12:53] <rixth> dennis_, yes =(
+[12:53] <Fillado> Berrum: Yeah looks like it should be as it works with Mac OS X
+[12:53] <negsoul> Frogzoo, ill take care of her
+[12:53] <negsoul> :P
+=== e_ is now known as e
+[12:53] <jcz`> Frogzoo, dapper lapper ??
+=== e is now known as e_
+[12:53] <Corey> Frogzoo: how do I check if i have the right repos ?
+=== Sampizcat [n=Sampizca@203-206-79-52.dyn.iinet.net.au]  has joined #ubuntu
+[12:53] <negsoul> Frogzoo,  im joking!
+[12:54] <Sampizcat> Hello all
+[12:54] <jcz`> lala
+=== jcz` *huggies* poor negsoul a bit..
+[12:54] <Frogzoo> Corey: dunno - someone will know where the prodn repos are - or you could take a look with your web browser
+[12:54] <rixth> I need to move 13gb of data between two partitions before I can upgrade =( It's gonna be a while.
+[12:54] <Corey> it says they are 6.06 official
+[12:54] <Frogzoo> Corey: well there u r - you're up 2 date
+[12:54] <Sampizcat> Is this the place to ask a question about 6.06 and RAID?
+[12:54] <rixth> Today has been a good and bad day.
+=== y2d2 [n=y2d2@crown-7-127.resnet.ucsc.edu]  has joined #ubuntu
+[12:55] <rixth> Good = Dapper is released.
+[12:55] <Corey> haha up to date 3 days ago :P
+[12:55] <rixth> Bad = The Pirate Bay was shutdow.
+=== cassidy [n=cassidy@infosulb.ulb.ac.be]  has joined #ubuntu
+[12:55] <Corey> stuff the riaa
+[12:55] <Frogzoo> rixth: NOoooo.....
+=== unf [n=unf@62-43-47-172.user.ono.com]  has joined #ubuntu
+=== exhale [n=exhale@c80-216-8-42.cm-upc.chello.se]  has joined #ubuntu
+[12:55] <Krhis> Corey, they are Swedish.
+[12:55] <rixth> Frogzoo, yah =( Swedish Police raided the datacenter.
+=== Frogzoo screams in pain & anguish
+[12:55] <zjimbo> rix_: who? how?
+=== subir [n=subir@202.79.37.177]  has joined #ubuntu
+[12:55] <negsoul> jcz`, you're a programmer?
+[12:55] <jcz`> can anyone tell me how i access my adjacent ntfs partition from dapper ?? i want to play a movie using that movie player thingee
+[12:55] <ThE-LiGhT> onkarshinde, i need more 379 mb :(
+[12:55] <Corey> well who ever got them
+[12:55] <rixth> www.thepiratebay.org
+[12:56] <Krhis> The Swedish Police?
+[12:56] <jcz`> negsoul, no haha me noob
+[12:56] <negsoul> jcz`, did you update daper?
+[12:56] <negsoul> +p
+=== leks [n=meyera@195.141.100.2]  has joined #ubuntu
+[12:56] <jcz`> yes
+=== mehdi [n=mehdi@adsl-164-95-192-81.adsl2.iam.net.ma]  has joined #ubuntu
+[12:56] <jcz`> last week tho
+[12:56] <Frogzoo> rixth: after all those uber cool email replies to legal threats
+[12:56] <rixth> Oh wow, they changed the index page at TPB. Now it says they will be back up soon.
+[12:56] <thoreauputic> Things are slowing down - we are below 1000 people now *grin*
+[12:56] <Sampizcat> I'm having trouble with 6.06 and setting up RAID - I've managed to configure the software raid (raid is disabled in BIOS) and it's formatted the partitions (by the looks of things), but now it's just gone to a blue screen, and noing else is happening
+[12:56] <jcz`> not in the last day or two
+[12:56] <negsoul> jcz`, to the new release today?
+[12:56] <exhale> whats the difference between the dapper and the 6.06 torrents?
+[12:56] <negsoul> ah ok
+[12:56] <jcz`> last week
+[12:56] <negsoul> me neither
+[12:57] <rixth> Frogzoo, my personal fave was "We've all heard the saying a few bad apples but come on" in response to an Apple suit.
+[12:57] <leks> r there any edgy ift repos yet?
+[12:57] <dennis_> i was a windows user and was pointed to ubuntu should i come back tomorrow for advice on this seems its busy?
+[12:57] <zjimbo> rix_: thanks but I meant who shut them down?
+[12:57] <Frogzoo> rixth: lol
+[12:57] <negsoul> jcz`, check forums and mount
+=== raquel [i=raquel@58.Red-217-127-181.staticIP.rima-tde.net]  has joined #ubuntu
+[12:57] <thoreauputic> leks: you're kidding , right?
+=== blckfx [n=blckfx@88.224.195.153]  has joined #ubuntu
+[12:57] <jcz`> im so noob i stink
+=== Laterix [n=late@dsl-aur-fee8de00-197.dhcp.inet.fi]  has left #ubuntu []
+[12:57] <y2d2> anyone else having problems with update manager saying "system is up to date" even though they are obviously not updated to dapper drake?
+[12:57] <leks> thoreauputic: no im not
+[12:57] <GazzaK> dennis_: it might be wise!!!
+[12:57] <dennis_> ok see ya tomorrow have fun
+[12:57] <blckfx> hi
+[12:57] <jcz`> negsoul, im hoping to just do an update
+[12:57] <Sampizcat> Has anyone managed to install 6.06 with RAID using the LAMP option?
+[12:57] <thoreauputic> leks: for heaven's sake - dapper only went official tody
+[12:57] <jcz`> maybe tomorrow
+[12:57] <thoreauputic> today
+[12:58] <leks> thoreauputic: whatever?
+[12:58] <Fillado> jcz`: http://ubuntuguide.org/#automountntfs
+[12:58] <jcz`> will updating give me the lastest stable dapper ?
+=== Firebird8 [n=Firebird@pool-138-88-110-109.res.east.verizon.net]  has joined #ubuntu
+[12:58] <thoreauputic> leks: let the developers have a party at least ;)
+[12:58] <thoreauputic> !ubuntuguide
+[12:58] <ubotu> [ubuntuguide]  badly out of date,  reported to break a lot and generally a bad source for information. Use help.ubuntu.com or wiki.ubuntu.com instead.
+[12:58] <leks> theres always an actual Sid in debian, even when theres a release
+[12:58] <leks> :)
+[12:58] <thoreauputic> leks: that's debian, this is ubuntu :)
+[12:58] <jcz`> Fillado, ohh good thx ! *huggie*
+[12:58] <Fillado> oh well
+=== Zap42 [n=schmidt@giscard.mcbone.net]  has joined #ubuntu
+[12:59] <ThE-LiGhT> i need to free up 379 mb.. any suggestions? old kernels or somthing?
+[12:59] <Fillado> that bit works anyway :D
+[12:59] <leks> thoreauputic: theyre much of the same
+=== P3L|C4N0 [n=sopmac@200.106.100.187]  has joined #ubuntu
+[12:59] <thoreauputic> leks: *sigh* the release model is different
+[12:59] <zjimbo> hey guys what's better RPM or deb?
+[12:59] <leks> i just want that CVS gnome hell
+[12:59] <ThE-LiGhT> suggesstions*
+[12:59] <leks> :-D
+[12:59] <Sampizcat> ThE-LiGhT: /tmp maybe? downloaded and installed packages from up2date
+=== venkatachar [n=venkatac@202.56.254.56]  has joined #ubuntu
+=== protocol2_ [n=protocol@68-35-178-69.gci.net]  has joined #ubuntu
+=== raquel [i=raquel@58.Red-217-127-181.staticIP.rima-tde.net]  has left #ubuntu []
+[12:59] <blckfx> may i ask something?

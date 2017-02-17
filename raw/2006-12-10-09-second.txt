@@ -1,0 +1,781 @@
+[08:47] <ryanakca> when filing a bug report on launchpad, should I put all the (5-6) backtraces into a tarball, or upload them individually?
+[08:47] <Kingsqueak> cmweb: only matters how you go about setting DNS
+[08:47] <cmweb> Kingsqueak,  the dns on the client is set to 192.168.0.1
+[08:47] <joefso> vaibhav, so ? apt-get install $software
+=== Kiongku [n=waikeung@ADSL-TPLUS-106-47.telecomplus.net]  has joined #ubuntu
+[08:47] <cmweb> Kingsqueak,  its been set like that
+=== salah__ [n=salah@217-11-225.0505.adsl.tele2.no]  has joined #ubuntu
+=== paulstarr [n=paulstar@host86-142-35-212.range86-142.btcentralplus.com]  has joined #ubuntu
+[08:47] <ubuntu_> could someone give me a shell comand please? im trying to mount my hard disk form live cd so that the hd icons on my desktop,its hd1 by the way
+[08:47] <Kingsqueak> cmweb: well if 192.168.0.1 doesn't have a DNS server, that won't work, try setting it to whatever your firewall has in /etc/resolv.conf for 'nameserver' entries
+[08:48] <ubuntu_> !mount
+[08:48] <ubotu> Partitioning programs: !GParted or QTParted  -  Formatting partitions: see the manual page for mkfs ("man mkfs")  -  Mounting partitions in Gnome: System -> Administration -> Disks
+[08:48] <cmweb> kingsqueak, nameserver 209.244.0.3
+[08:48] <cmweb> nameserver 209.244.0.4
+=== Dial_tone [i=steve@ip68-4-102-155.oc.oc.cox.net]  has joined #ubuntu
+[08:48] <Stengah> where do i add?  "In .profile (if your shell is bash, ksh, zsh or sh), add the following lines:"
+[08:48] <Kingsqueak> cmweb: set the client machine to use that one, your windows box
+[08:48] <cmweb> kingsqueak, are those it
+=== thevenin [n=sensei_0@cpe-76-188-38-166.neo.res.rr.com]  has joined #ubuntu
+[08:49] <cmweb> kingsqueak, k
+=== theSchnoz [n=willwm@71.237.199.217]  has joined #ubuntu
+=== mikeekim [n=uideqzer@static.user210.209.42.57.dsli.com]  has joined #ubuntu
+=== ankko [n=ankko@k1012.pp-ip.saunalahti.fi]  has joined #ubuntu
+=== jcore_ [n=jcore@ppp-69-239-236-168.dsl.scrm01.pacbell.net]  has joined #ubuntu
+[08:50] <mikeekim> im tryin to set up zimbra and im getting missing packet
+[08:50] <mikeekim> libgmp3
+=== HLM [n=geek@S0106006067664bde.no.shawcable.net]  has left #ubuntu []
+[08:50] <vaibhav> how does tracepath work?
+=== inetpro [n=inetpro@vc-196-207-45-253.3g.vodacom.co.za]  has joined #ubuntu
+=== SlicerDicer- [n=Slicer@24-119-155-26.cpe.cableone.net]  has joined #ubuntu
+=== aleks [n=aleks@82.52.162.170]  has joined #ubuntu
+[08:51] <SlicerDicer-> am I able to use remote desktop on ubuntu livecd?
+=== aleks [n=aleks@82.52.162.170]  has left #ubuntu ["Leaving"]
+[08:51] <ubuntu_> you can use ssh
+[08:51] <SlicerDicer-> but not vnc?
+=== brianMan [i=brianman@c83-249-69-26.bredband.comhem.se]  has joined #Ubuntu
+[08:52] <cmweb> kingsqueak, it works now thanks to you! Thanks
+=== ollekalle [n=ollekall@h128n2-m-kr-gr100.ias.bredband.telia.com]  has joined #ubuntu
+[08:52] <tuv> i'll try the alternate cd, but why would the live cd boot and start X then completely freeze on the orange screen with nothing on it? 128MB ram here
+=== Yawner [n=alex@82-44-194-226.cable.ubr07.haye.blueyonder.co.uk]  has joined #ubuntu
+=== cmweb [n=owner@dialup-4.91.104.189.Dial1.Orlando1.Level3.net]  has left #ubuntu []
+=== nulix [n=dmoyne@88.121.51.61]  has joined #ubuntu
+[08:52] <SlicerDicer-> ubuntu_: I am trying to remote it with vnc but that does not seem to work at all?
+=== theSchnoz [n=willwm@71.237.199.217]  has joined #ubuntu
+=== inimesekene [n=inimesek@80-235-63-50-dsl.trt.estpak.ee]  has joined #ubuntu
+=== caplink811-log [n=caplink8@dslb-088-073-023-115.pools.arcor-ip.net]  has joined #ubuntu
+[08:53] <ubuntu_> !vnc
+[08:53] <ubotu> VNC is a protocol for remote desktop. https://help.ubuntu.com/community/VNCOverSSH describes how to use it securely.  It works best over fast connections, otherwise look at !FreeNX
+[08:53] <Thialfihar> lynx -source 'http://209.85.129.104' happens almost instantly and lynx -source 'http://www.google.com' sits for 40+ seconds.
+=== ouroboros_ [n=joshua@dpc67143229085.direcpc.com]  has joined #ubuntu
+[08:53] <Thialfihar> But it's fine and fast in Firefox.
+=== brianMan [i=brianman@c83-249-69-26.bredband.comhem.se]  has left #Ubuntu []
+[08:53] <Stengah> "In .profile (if your shell is bash, ksh, zsh or sh), add the following lines:" how do i do that?
+=== brianMan [i=brianman@c83-249-69-26.bredband.comhem.se]  has joined #Ubuntu
+[08:54] <ollekalle> all: For some reason I manually need to "dhclient eth0" to get an IP address. I have added the command as post-up in my /etc/network/interfaces but it seems not to help me. Any suggestions?
+[08:54] <ouroboros_> Hello hello ubuntu commun-edy!
+[08:54] <tuv> hmm.. on the website it says alternate is for systems with less than 192MB ram, although on the live cd it states 128MB is the minimum requirement
+=== ThePub [n=nathan@24-117-47-78.cpe.cableone.net]  has joined #ubuntu
+=== MSTK [n=MSTK@ip70-187-130-65.oc.oc.cox.net]  has joined #ubuntu
+=== air0day [n=air0day@71-218-77-236.hlrn.qwest.net]  has joined #ubuntu
+[08:54] <air0day> i'm having a serious problem on my machine
+[08:54] <ubuntu_> SlicerDicer-, sorry cant really hepl you
+=== ouroboros_ is now known as rainbowjoshua
+[08:55] <air0day> i did chmod -R 0666 on a ton of files
+[08:55] <ubuntu_> could someone give me a shell comand please? im trying to mount my hard disk form live cd so that the hd icons on my desktop,its hd1 by the way
+[08:55] <air0day> and now they all seem to be deleted
+[08:55] <SlicerDicer-> no problem ubuntu_
+=== dou213 [n=x@e180242181.adsl.alicedsl.de]  has joined #ubuntu
+[08:55] <air0day> i did it on a folder at the top level, thinking it would give everyone read/write
+[08:55] <air0day> but im guessing that first 0 turned off all read
+[08:55] <air0day> is there a way to get them back?
+=== MurrayBR [n=redpill@201-69-104-46.dial-up.telesp.net.br]  has joined #ubuntu
+[08:56] <rainbowjoshua> So I am trying to get working this "Logitech Quickcam Fusion"... it's listed on the uvcvideo site as supported, and when I plug it in it is seen, but no works... anyone got any ideas?  The forums have proved inefected.
+[08:56] <mcscruff> i have a folder called storage and inside there are folders and files with mixed permissions, is there a command to set everything inside so my user can edit/create/delete etc
+[08:56] <air0day> please. i really really need help. linux may have just deleted 500 gigs of really really important files
+[08:56] <air0day> if anyone has the time to help me, i really really need it. a lot
+=== Metal_Militia [n=ioppo@host-84-222-35-182.cust-adsl.tiscali.it]  has joined #ubuntu
+=== poningru [n=poningru@ip72-209-68-178.ga.at.cox.net]  has joined #ubuntu
+=== defend [i=defend@38.113.5.165]  has joined #ubuntu
+[08:57] <Kingsqueak> mcscruff: you can use 'find' as in   'find . -type d -exec chmod 755 {} \;'
+[08:57] <Kingsqueak> mcscruff: that sets all dirs from . down to 755
+[08:57] <mcscruff> Kingsqueak, i'll have a go
+=== Adam_G [n=irc@adsl-20-189-138.clt.bellsouth.net]  has joined #ubuntu
+=== vn- [n=sys6x@bas5-quebec14-1177920301.dsl.bell.ca]  has joined #ubuntu
+[08:57] <Kingsqueak> mcscruff: you can use 'find' as in   'find . -type f -exec chmod 644 {} \;'  would do files to 644
+[08:57] <air0day> kingsqueak, can you help me?
+=== wickedsun [n=wicked@88.191.38.127]  has joined #ubuntu
+[08:58] <air0day> i think i set the read byte to zero on a ton of files and i need to get them back
+[08:58] <Kingsqueak> air0day: what I just told mcscruff would also work for that, what sort of files?
+=== wickedsun [n=wicked@88.191.38.127]  has joined #ubuntu
+[08:58] <defend> hi all was woundering if any one could offer some advise i have a fujitsu 64bit laptop and when i put in a dvd it freezes i think it is a acpi issue and i am not sure were to even start i have installed the newwest linux-sources but it still happens
+[08:58] <air0day> everything i have on my computer
+[08:58] <Kingsqueak> air0day: that's a problem because some where probably executable and you'll have to hand pick them to fix that
+=== theCore [n=alex@modemcable229.181-131-66.mc.videotron.ca]  has left #ubuntu ["Leaving"]
+[08:59] <Adam_G> ok, need some help with a shell command- how can I move everything in ./foo/foo into ./foo?
+[08:59] <Kingsqueak> air0day: I'd just back up data and reinstall myself
+[08:59] <nn> What are some good apps for discovering APs and cracking the WEP?
+[08:59] <air0day> king: not an option. these files are all documents and things ive made
+[08:59] <air0day> they're SUPER important
+=== Clavi [n=mj@a82-93-179-135.adsl.xs4all.nl]  has left #ubuntu ["Leaving"]
+[09:00] <Kingsqueak> air0day: so back them up and reinstall the system
+[09:00] <nn> preferably console based.. i used to have this kickass app i used back in the 2.2 days
+[09:00] <air0day> theres nothing to back up
+[09:00] <air0day> i cant see them
+[09:00] <air0day> they look like they're all gone
+[09:00] <nn> i forget the name
+[09:00] <nn> Kingsqueak: g'day fellow linpeopler
+[09:00] <Kingsqueak> air0day: you said all files, in a directory or the whole system?
+[09:00] <Adam_G> air0day, I missed the beginning of the question, but coudln't you use a bootable CD?
+[09:00] <Kingsqueak> nn: kismet?
+[09:00] <air0day> ugh, okay
+[09:00] <air0day> i have a mount
+=== leandro-1 [n=leandro-@host232.200-45-178.telecom.net.ar]  has joined #ubuntu
+[09:00] <vaibhav> Adam, mv /foo/foo/*.* /foo
+[09:00] <air0day> going to a share on another machine
+[09:00] <air0day> i did the chmod on that top level
+[09:00] <nn> Kingsqueak: something with few deps.. it's running off my 1gb thumbdrive in my BackpackPuter
+[09:01] <air0day> and now all of those files are missing
+[09:01] <rainbowjoshua> [17188058.384000]  usb 3-2: new high speed USB device using ehci_hcd and address 5
+[09:01] <rainbowjoshua> [17188063.708000]  uvcvideo: Found UVC 1.00 device <unnamed> (046d:08c1)
+[09:01] <rainbowjoshua> [17188064.008000]  uvcvideo: Failed to query (1) UVC control 1 (unit 0) : -110.
+[09:01] <rainbowjoshua> [17188064.008000]  uvcvideo: Failed to initialize the device (-5).
+[09:01] <rainbowjoshua> [17188065.008000]  5:3:1: cannot set freq 0 to ep 0x86
+[09:01] <Adam_G> vaibhav, that doesn't work if foo has sub-folders tho...
+[09:01] <Kingsqueak> air0day: ah, that's fixable
+[09:01] <rainbowjoshua> is what I get when I plug it in.
+=== dm__ [n=dm@cpe-71-74-78-235.insight.res.rr.com]  has joined #ubuntu
+=== Pudel_des_Todes [n=Pudel_de@dslb-084-058-241-130.pools.arcor-ip.net]  has joined #ubuntu
+[09:01] <Kingsqueak> air0day:  'sudo find /yourmount -type d -exec chmod 755 {} \;'
+[09:01] <nn> got my lovely LCD mounted on my sunglasses, found a nice LiPolymer battery pack, to give me 4+ hours of run-time if i enable powersaving mode
+[09:01] <Kingsqueak> air0day: 'sudo find /yourmount -type f -exec chmod 644 {} \;'
+[09:02] <Kingsqueak> air0day: that will get the dirs and files readable, if you had executables, you'll have to chmod them 755 once you get that straight
+=== christian1222 [n=christia@c-71-202-13-52.hsd1.ca.comcast.net]  has joined #ubuntu
+=== h1st0 [n=histo@adsl-75-33-38-55.dsl.bcvloh.sbcglobal.net]  has joined #ubuntu
+[09:02] <ubuntu_> so noone here knows how to mount a HD while runing a live cd?
+=== Faintofhearts [n=Faint@stjhnf0120w-142163081026.pppoe-dynamic.nl.aliant.net]  has left #ubuntu ["Good]
+=== h1st0 [n=histo@adsl-75-33-38-55.dsl.bcvloh.sbcglobal.net]  has left #ubuntu ["Google]
+[09:02] <dm_> is there anyway i can get my monitor refresh rate to something which come up on the list?
+=== Rprp sleep, good night all.
+[09:02] <christian1222> hey guys, why would gcc not be able to find stdio.h?
+=== knapp_ [n=knapp@67.132.247.223]  has joined #ubuntu
+[09:02] <nn> christian1222: you need libc-dev iirc
+=== CraHan [n=CraHan@55.117-244-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[09:03] <nn> libc6-dev, actually
+[09:03] <Kingsqueak> christian1222: your system probably isn't setup to build, try 'sudo apt-get install build-esentials'
+=== lupine_85 [n=lupine@nick.lupine.me.uk]  has joined #ubuntu
+=== Stengah [n=b14ck@86.106.30.207]  has left #ubuntu []
+[09:03] <christian1222> Kingsqueak: thanks, ill try that
+[09:03] <engla> ubuntu_: find out which disk is which and then create a folder (like /media/myhd), then sudo mount /dev/* /media/myhd
+=== CheshireViking [n=Inter@i-195-137-101-182.freedom2surf.net]  has joined #ubuntu
+[09:04] <engla> ubuntu_: but you have to find out what /dev/* is for your hd
+[09:04] <Pudel_des_Todes> hi, i have a toshiba m70-181 laptop, and ubuntu freezes in the installation process. the reason seams to be acpi, acpi=off kernel boot parameter means it will install, but then i dont have the power control tool, and the laptop is too loud...
+=== thenetduck [n=cobbweb@24-117-155-158.cpe.cableone.net]  has joined #ubuntu
+[09:04] <christian1222> Kingsqueak: that didnt work, i got "Couldn't find package build-esentials"
+[09:04] <Pudel_des_Todes> acpi_irq_balance doesn't help either. :-(
+[09:04] <thenetduck> does anyone know how to un zip a folder on a web server?
+[09:04] <dm_> is there anyway i can get my monitor refresh rate to something which come up on the list?
+[09:04] <thenetduck> or a fiel
+[09:04] <thenetduck> file*
+[09:04] <engla> Kingsqueak: wouldn't "chmod -R u+rwX /yourmount" work better and faster?
+[09:04] <christian1222> Kingsqueak: same when I spelled it 'essentials'
+[09:05] <nn> Kingsqueak: why would i get screen artifacts when i move a locally running window (WM is running on the remote system as are 99% of my applications)? ubuntu on both systems, same version, using SSH for X forwarding
+=== depi [n=depi@62.65.183.37]  has joined #ubuntu
+[09:05] <Kingsqueak> christian1222: sorry it's build-essential
+[09:05] <Pudel_des_Todes> can anybody help, or push me to the right direction?
+[09:06] <Kingsqueak> nn local network?
+[09:06] <depi> what is the correct pattern to delete all images ending with _thumb.jpg in a directory which have subdirectories?
+[09:06] <christian1222> Kingsqueak: thanks man, I appreciate it, if it wasnt for guys like you, I would have given up on computers a long time ago
+[09:06] <nn> Kingsqueak: Yea, gigabit ether
+=== andresmujica [n=AndresMu@201.245.236.213]  has left #ubuntu ["www.seaq.com.co"]
+[09:06] <Kingsqueak> nn odd, that's from lag in refresh, try a different wm maybe
+[09:06] <nn> Kingsqueak: this box just doesnt have much space (1gb thumbdrive for root FS), so i run everything off the server
+=== bouwe [n=bouwe@s55929cee.adsl.wanadoo.nl]  has joined #ubuntu
+[09:06] <nn> Kingsqueak: hmm, maybe...
+[09:06] <depi> I have tried rm *_thumb.jpg * (but not worked)
+[09:07] <Kingsqueak> christian1222: no problem, I learned a lot of what I know from this network over the years
+=== hdcool [n=hdcool@d54C0A10C.access.telenet.be]  has joined #ubuntu
+=== knapp_ [n=knapp@67.132.247.223]  has joined #ubuntu
+[09:08] <Kingsqueak> air0day: any luck?
+=== addicted68098 [n=marcus@adsl-69-210-143-150.dsl.milwwi.ameritech.net]  has joined #ubuntu
+[09:08] <Mwa> depi, rm *_thumb.jpg should work
+=== php-freak [n=php-frea@74.133.97.232]  has joined #ubuntu
+[09:08] <air0day> king, kinda...
+=== godtvisken [n=godtvisk@ip72-201-119-238.ph.ph.cox.net]  has joined #ubuntu
+[09:08] <air0day> i think it fixed the files. when i use so, i can ls them
+[09:08] <air0day> but its all screwed up otherwise. i cant even cd in
+[09:08] <godtvisken> I want to get a MiniDV camera. How do I know I'll be able to use it with linux? It has firewire and USB..
+[09:08] <air0day> im giving a linux guru friend a shella ccount
+[09:08] <air0day> hes going to fix it
+[09:08] <air0day> thanks
+[09:08] <Kingsqueak> air0day: the top mount might not be 755
+=== Adam_G [n=irc@adsl-20-189-138.clt.bellsouth.net]  has left #ubuntu ["Ex-Chat"]
+[09:09] <depi> Mwa: I just get rm: cannot remove `*_thumb.jpg': No such file or directory
+[09:09] <Kingsqueak> air0day: the commands I gave you assume the very top /yourmount is 755 already
+=== PhantomNJ [i=Darkness@ool-43559b9f.dyn.optonline.net]  has joined #ubuntu
+[09:09] <Kingsqueak> air0day: just 'sudo chmod 755 /yourmount'  see if that fixes it
+[09:09] <ollekalle> .com.co")
+[09:09] <ollekalle> <Kingsqueak> nn odd, that's from lag in refresh, try a different wm maybe
+[09:09] <ollekalle> <nn> Kingsqueak: this box just doesnt have much space (
+[09:09] <ollekalle> sorry
+=== davro [n=davro@cpc3-ches2-0-0-cust844.lutn.cable.ntl.com]  has joined #ubuntu
+=== lato_oscuro [n=drwx@87.18.225.20]  has joined #ubuntu
+[09:09] <Mwa> 'ls' and make sure you're in the right directory
+=== hugifrb [n=martin@p549FE91B.dip.t-dialin.net]  has joined #ubuntu
+[09:10] <PhantomNJ> For an Athlon, which kernel should I be using under Edgy Eft?   the i386 or the generic?   I used to use the K7 kernel under Dapper
+=== memphisto [n=marcus@vig38-3-82-241-207-43.fbx.proxad.net]  has joined #ubuntu
+[09:10] <Kingsqueak> PhantomNJ: -generic should work
+[09:10] <dm_> i've installed the ms core fonts but it doesn't include tahoma, where can i get this?
+=== knapp_ [n=knapp@67.132.247.223]  has joined #ubuntu
+=== php-freak [n=php-frea@74.133.97.232]  has left #ubuntu ["Leaving"]
+[09:10] <PhantomNJ> is one better than the other where the Athlon is concerned, Kingsqueak?
+=== macsim [n=macsim@cpc2-lewi5-0-0-cust613.bmly.cable.ntl.com]  has joined #ubuntu
+[09:10] <davro> How would i associate an avi with an application like vlc, so i can click on the file icon and vlc will open.
+[09:11] <Mwa> depi, Are you in the right directory?
+[09:11] <Kingsqueak> PhantomNJ: I don't believe so, they just made 'everything' kernels
+=== Mook` [i=MookDawg@pool-141-150-254-159.pskn.east.verizon.net]  has joined #ubuntu
+[09:11] <depi> Mwa: I'm in the root directory, there I have many subdirectories where are the photos
+=== leks [n=ale@80-218-96-27.dclient.hispeed.ch]  has joined #ubuntu
+[09:12] <ollekalle> all (again with additions): For some reason I manually need to "dhclient eth0" to get an IP address. I have added the command as post-up in my /etc/network/interfaces but it seems not to help me. I have also noticed that "sudo ifup eth0" will fail (invalid arguemnt) but still if I "sudo dhclient eth0" it works fine. Strange? Any suggestions?
+[09:12] <PhantomNJ> hmmm, wonder if I should just go back to Dapper Drake where the kernel is at least tuned for the processor
+[09:12] <nolimitsoya> PhantomNJ, the generic kernel is tuned. read up
+=== anarki_away is now known as anarki
+=== factorx [n=asdf@dslb-084-061-042-184.pools.arcor-ip.net]  has joined #ubuntu
+[09:13] <Mwa> depi, how many subfolders deep are these pictures?
+[09:13] <Kingsqueak> ollekalle: likely a mistake in /etc/network/interfaces in syntax
+[09:13] <ubuntu_> engla, ubuntu@ubuntu:~$ sudo mount /dev/hda1/media
+[09:13] <ubuntu_> mount: can't find /dev/hda1/media in /etc/fstab or /etc/mtab
+[09:13] <nolimitsoya> PhantomNJ, all the optimizations are loaded as modules
+[09:13] <PhantomNJ> oh?   I'll have to go take a look, last time I didn't find anything.......it in the wiki?
+=== kenrstone [n=ken@ool-43547f78.dyn.optonline.net]  has joined #ubuntu
+=== blujay [n=first@adsl-68-95-152-77.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[09:13] <Kingsqueak> ollekalle: can you pastebin your interfaces file?
+=== skeetbadger [n=jey@unaffiliated/skeetbadger]  has joined #ubuntu
+[09:13] <depi> Mwa: just one subfolder
+=== johny_ [n=chatzill@81-208-106-67.ip.fastwebnet.it]  has joined #ubuntu
+=== darthtalk [n=kussefis@x1-6-08-00-20-b5-c2-a7.k700.webspeed.dk]  has joined #ubuntu
+[09:13] <nolimitsoya> PhantomNJ, this has been discussed a number of times in the forum and on the mailinglists
+[09:13] <Mwa> depi, try rm */*_thumb.jpg
+=== darthtalk [n=kussefis@x1-6-08-00-20-b5-c2-a7.k700.webspeed.dk]  has left #ubuntu []
+=== hugifrb [n=martin@p549FE91B.dip.t-dialin.net]  has joined #ubuntu
+[09:13] <ollekalle> Kingsqueak: /etc/network/interfaces?
+=== Shadow_mil [n=chuck@SilentFlame/Member/pdpc.active.Shadow-mil]  has joined #ubuntu
+[09:13] <Kingsqueak> ollekalle: yes
+=== xFordPrefect [n=acoliver@cpe-071-077-006-045.nc.res.rr.com]  has joined #ubuntu
+[09:13] <nolimitsoya> PhantomNJ, why would anyone obsolete a kernel with one that isnt on par?
+=== TokenBad [i=TokenBad@c-71-237-151-178.hsd1.or.comcast.net]  has joined #ubuntu
+=== cmweb [n=owner@dialup-4.91.104.189.Dial1.Orlando1.Level3.net]  has joined #ubuntu
+=== johny_ is now known as johny454
+[09:14] <TokenBad> is there a way to get xmms to play ape files?
+[09:14] <Mwa> depi, make sure you don't  use -r or such, or you might rm the folders.
+=== vcef [n=vita@srot.kolej.mff.cuni.cz]  has joined #ubuntu
+[09:14] <PhantomNJ> I'm on too many mailing lists as it is, nolimitsoya........I usually rely on the wiki and the docs
+=== judgen [n=judgen@c-70a771d5.024-126-6c756c11.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:14] <depi> Mwa: it works, great
+[09:14] <cmweb> How do i go about seting up ssh for this pc so that i can administer my pc over Lan, my clients are using putty
+[09:14] <Mwa> TokenBad, http://sourceforge.net/projects/mac-port/
+[09:15] <Mwa> TokenBad, ape files being Monkey's Audio, yes?
+[09:15] <nagyv> could someone send me (via pastebin) a basic dapper drake sources.list file? I am helping a friend to upgrade from breezy, but I have edgy.
+[09:15] <PhantomNJ> and as for why anyone would do that, I'm not sure why they changed things the way they did without putting that information front and center
+[09:15] <depi> Mwa: thank you
+[09:15] <TokenBad> Mwa, yes
+[09:15] <Mwa> depi, you're welcome
+[09:15] <ollekalle> Kingsqueak: here we go: auto eth0;iface eth0 inet dhcp;pre-up mii-tool eth0 -F 100baseTx-FD;post-up sleep 3;post-up dhclient eth0. All 0-indented.
+[09:15] <Kingsqueak> cmweb: sshd should just be running, putty should work
+[09:15] <TokenBad> Mwa, but this is through ubuntu
+=== Elischa [n=rassihu@M3820P001.adsl.highway.telekom.at]  has joined #ubuntu
+[09:15] <cmweb> kingsqueak, Then if its working what do i do with putty
+[09:15] <Mwa> TokenBad, Yes. Try out that link.
+[09:16] <Kingsqueak> cmweb: connect with it?
+[09:16] <cmweb> kingsqueak, ive tryed that to connect to 192.168.0.1 and my firewall is set to permisive but
+[09:16] <cmweb> NOThing
+[09:16] <Kingsqueak> ollekalle: you don't need to have dhclient in there at all
+[09:16] <Mwa> TokenBad, specificallly http://sourceforge.net/project/showfiles.php?group_id=123827&package_id=136178
+[09:16] <nn> Kingsqueak: no longer using fbdev and switched to higher refresh fixes it :)
+[09:16] <cmweb> kingsqueak, it says it times out
+[09:17] <Kingsqueak> cmweb: use the IP if you are using a name, see if that works
+[09:17] <TokenBad> Mwa, ok that is what I was about to ask...if it was that one...
+[09:17] <cmweb> kingsqueak, 192.168.0.1 is what ive used
+[09:17] <Kingsqueak> cmweb: then either sshd isn't listening on that IP or the firewall is still blocking it
+=== sushi_ [n=sushi@adsl-75-36-220-222.dsl.pltn13.sbcglobal.net]  has joined #ubuntu
+=== magic_ninja [n=bleh@ip68-102-176-4.ks.ok.cox.net]  has joined #ubuntu
+[09:17] <Kingsqueak> cmweb: on the firewall do 'netstat -an | grep 22'  what's that show
+[09:17] <ollekalle> Kingsqueak: thats the thing. I added it there since my problem is that I have to manually enter that command to get my network fully functional. Obvioulsy that solution wasn't good enogh to tackle my root problem.
+[09:17] <Mwa> TokenBad, It is. :P
+[09:18] <Kingsqueak> ollekalle: the 'dhcp' line in interfaces should just do that for you
+[09:18] <TokenBad> answered before could ask
+[09:18] <sushi_> How do I stop a certain package from appearing in Software Updates?  Thanks
+[09:18] <TokenBad> heheh
+[09:18] <cmweb> kingsqueak, http://paste.ubuntu-nl.org/36310/
+[09:18] <Kingsqueak> ollekalle: I'd remove everything after the inet dhcp line, reboot, see if it comes up
+=== SlicerDicer- [n=Slicer@24-119-155-26.cpe.cableone.net]  has left #ubuntu ["Konversation]
+=== Alexandre [n=administ@201009240089.user.veloxzone.com.br]  has joined #ubuntu
+=== kikokos [n=jer@87.105.174.176]  has joined #ubuntu
+[09:19] <TokenBad> Mwa, thanks so much
+[09:19] <Kingsqueak> cmweb: next do this and pastebin it  'sudo iptables -L'
+=== Hudrake [n=chatzill@dsl-241-86-180.telkomadsl.co.za]  has joined #ubuntu
+=== aya_ [n=aya@APoitiers-153-1-78-78.w86-201.abo.wanadoo.fr]  has joined #ubuntu
+=== snype [n=snype@c-71-235-162-141.hsd1.ma.comcast.net]  has joined #ubuntu
+[09:20] <cmweb> kingsqueak, yeah im going to pastebin it alright http://paste.ubuntu-nl.org/36313/
+[09:20] <Mwa> TokenBad, no trouble
+=== aya_ is now known as tiara
+=== First|Laptop [n=Firsty@nv-76-4-226-104.dhcp.embarqhsd.net]  has joined #ubuntu
+[09:21] <Mwa> TokenBad, I found that ages ago while looking for a port of XMMS to Mac OS X
+=== blue-frog [n=bluefrog@83.153.134.95]  has joined #ubuntu
+[09:21] <snype> how can i make swiftfox open a specific url from command line
+=== martin9115 [n=martin91@62.216.196.189]  has joined #ubuntu
+[09:21] <ollekalle> Kingsqueak: thanks mate - works fine!!
+[09:21] <Mwa> snype, swiftfox <url>, no?
+[09:21] <nn> sushi_: you can "pin" a package, i believe
+=== mode/#ubuntu [+o LjL]  by ChanServ
+=== mode/#ubuntu [-b *!*@88-139-61-44.adslgp.cegetel.net]  by LjL
+=== mode/#ubuntu [-b *!*@dsl-225-59.hive.is]  by LjL
+=== mode/#ubuntu [-b *!*@cpe-66-66-21-94.rochester.res.rr.com]  by LjL
+[09:21] <snype> idk ill try
+=== mode/#ubuntu [-o LjL]  by LjL
+[09:21] <ProN00b> how do i enlarge a file with dd ?
+[09:21] <TokenBad> Mwa, I just tried to install it and it says needs xmms 1.2.4 but seems the newest xmms is 1.2.10
+[09:21] <nn> sushi_: forcing it to be heldback
+=== lcandell` [n=user@adsl-69-231-26-41.dsl.irvnca.pacbell.net]  has joined #ubuntu
+[09:22] <Kingsqueak> ollekalle: cool, figured it might have been 'confused'
+=== Jeffm515 [n=IceChat7@71-213-129-43.albq.qwest.net]  has joined #ubuntu
+=== Thar [i=opera@15-229.89-161.tel.tkb.net.pl]  has joined #ubuntu
+[09:22] <snype> yup that was it!
+[09:22] <Thar> hello
+[09:22] <Kingsqueak> cmweb: o.k. try 'sudo tail -f /var/log/messages | grep PROTO' , then leave that running while you try putty to the machine, see if it drops anything
+[09:22] <ollekalle> Kingsqueak: yeah, thanks again :)
+[09:22] <finalbeta> Anyone knows if/how I can make totem-xine use ESD?
+[09:22] <Mwa> TokenBad, Try modifying the source code to force it to work? :P Might break it though. Try submitting a complaint.
+[09:23] <Pudel_des_Todes> if there is anybody online who can help with acpi freezing ubuntu plz hl me. thx!
+[09:23] <Kingsqueak> ollekalle: what probably happened was, I bet you had dhclient running a few times at once
+=== startswithz [n=bohonz@209.184.165.20]  has joined #ubuntu
+[09:23] <kupesoft> I've got an enclosure for an external drive (USB and eSATA interfaces) and a brand new, blank,drive (250gb).  What type of filesystem should I format it as for maximum portability (win32, linux, os/x, freebsd)?
+[09:23] <cmweb> im goint to go ssh in
+[09:23] <startswithz> how do I update my kernel?
+[09:23] <snype> kupesoft  fat32
+[09:23] <kupesoft> does fat32 support large filesystems?
+=== kitche [n=guest@pool-70-18-117-29.buff.east.verizon.net]  has joined #ubuntu
+=== brush01uk [n=brush01u@62-30-75-207.cable.ubr03.brom.blueyonder.co.uk]  has joined #ubuntu
+=== godfather [n=godfathe@ip-59-21.sn2.eutelia.it]  has joined #ubuntu
+=== thedman [n=thedman@67.135.145.25]  has joined #ubuntu
+[09:24] <nn> kupesoft: cludgily (like everything else it does)
+[09:24] <godfather> hi guys
+=== BattiS [n=blatios@213.66.120.125]  has joined #ubuntu
+[09:24] <Pudel_des_Todes> kupesoft: it does, but afaik windows can't do it. try partition magic
+[09:24] <nolimitsoya> kupesoft, no (and yes)
+[09:24] <nn> i personally say give ext2 a shot with the windoze drivers
+[09:24] <kerik> kupesoft: yeah it does...take it to fat32
+=== mrtn [n=mrtn@dynadsl-080-228-75-193.ewetel.net]  has joined #ubuntu
+[09:25] <kupesoft> Should I make a small NTFS partition with the windows drivers and the rest ext3?
+[09:25] <kerik> as pudel said try partition magic, if you cannot do it from withing windows
+[09:25] <Kingsqueak> cmweb: if you see it dropping, pastebin what the logs showed
+[09:25] <Thar> having problem with installing ubuntu: although during the main installation process everything went fine, after it i suddenly noticed that installer have not created home folder and not properly recognized my hardware (including ethernet card, wich WAS configured with DHCP during installation)
+[09:25] <godfather> anyone could tell me the nameof a p2p programe like limewire and frostwire ... i've followed the tricks in the documentation but they don't run
+=== pantalaimon_ [n=pantalai@200.140.89.32]  has joined #ubuntu
+[09:25] <nolimitsoya> kupesoft, yes
+[09:25] <Thar> anyone can help?
+[09:25] <Mwa> snype, good
+[09:25] <nn> Kingsqueak: can you help me with this kismet stuff? :)
+[09:25] <kupesoft> What are the ext3 drivers for windows called?
+[09:25] <cmweb> kingsqueak, their was a dropping i pastebined the drop, but it timed out http://paste.ubuntu-nl.org/36314/
+[09:25] <Kingsqueak> nn I never really got into that very much
+=== arne_ [n=arne@81.26.51.5]  has joined #ubuntu
+[09:25] <nn> ah
+=== arne_ [n=arne@81.26.51.5]  has left #ubuntu ["Leaving"]
+[09:25] <nn> i miss my little curses AP finder
+[09:26] <Dial_tone> can someone tell me how to disable join/part messages with xchat-gnome?
+[09:26] <kerik> nolimit...I never got to say thanks...but thanks for your help earlier with the DVD thing...
+[09:26] <nolimitsoya> kerik, np. did things work out?
+=== brianMan [i=brianman@c83-249-69-26.bredband.comhem.se]  has joined #Ubuntu
+[09:27] <Kingsqueak> cmweb: hmm looks like it isn't allowing it properly
+[09:27] <jordanau> !wmv
+[09:27] <ubotu> For multimedia issues, this page has useful information: https://help.ubuntu.com/community/RestrictedFormats - See also http://help.ubuntu.com/ubuntu/desktopguide/C/common-tasks-chap.html - But please use free formats if you can: https://help.ubuntu.com/community/FreeFormats
+[09:27] <kitche> kupesoft: fs-driver.org is where to get them
+[09:27] <Pudel_des_Todes> startswithz: use adept for updating your kernel
+[09:27] <RxDx> please... what program should i use to convert ogg (video) to avi or mpg?
+[09:27] <kerik> nolimit: It seems to work fine :) but for some reason it lacks a little bit at times...maybe hardware issue?....I have a celeron 1,13ghz 256 ram
+[09:27] <Thar> oh, and it have installed 3 kernel images (2 x default and 1 generic)
+=== arrenlex [n=em@S01060040052da362.ed.shawcable.net]  has joined #ubuntu
+=== Mwa hums, then reposts his question
+=== arrenlex [n=em@S01060040052da362.ed.shawcable.net]  has left #ubuntu []
+=== yrjo [n=yrjo@dsl-83-148-208-239-dynip.ssp.fi]  has joined #ubuntu
+[09:28] <cmweb> kingsqueak, so the firewall
+[09:28] <nolimitsoya> kerik, shouldnt be a hardware issue, as long as you are running usefull graphics drivers. you can monitorcpu and memory usage while playing if you are curious. also, a tip: pressing tab after filling in the first letters of someones nick will autocomplete it so you dont have to type it all :)
+=== shorty114 [n=shorty11@unaffiliated/shorty114]  has joined #ubuntu
+=== ernz [n=ernz@217.17.122.143]  has joined #ubuntu
+[09:29] <Mwa> When I run the alternate installer for ubuntu, every key I press prints twice. This also happens when I use a USB keyboard. This only comes into effect once I boot the installer from the CD. The CD menu works fine. How do I stop this happening? It has been suggested that the keyboard sensitivity is too high. Can I lower it with a startup argument? I am using a White 2GHz intel based Macbook.
+=== towel [i=towel@c-71-57-66-67.hsd1.il.comcast.net]  has joined #ubuntu
+[09:30] <kerik> nolimitsoya: now see that's a usefull tip!!!! I have had a hard time typing in all them letters all the time :)
+[09:30] <jochen> where do i find the bootlocal ?
+[09:30] <Kingsqueak> cmweb: hmm try 'sudo iptables -A LSI -s 192.168.0.0/24 -d 0/0 -j ACCEPT'
+[09:30] <towel> hi
+[09:30] <nolimitsoya> !hi | towel
+[09:30] <ubotu> towel: Hi! Welcome to #ubuntu!
+[09:30] <kerik> nolimitsoya: do you know where to see which videocard and which drivers I am using? - I have a feeling it's an Intel, as I am using IBM thinkpad R31
+[09:30] <Kingsqueak> cmweb: that will just be temporary, but if that works, you need to make a rule in firestarter to permit connections from 192.168.0.0 to your firewall box 192.168.1.1
+[09:31] <sushi_> Hmm, how do I 'pin' a package ?
+[09:31] <RxDx> please... what program should i use to convert ogg (video) to avi or mpg?
+[09:31] <cyzie> kerik,  in /etc/X11/xorg.conf
+[09:31] <kerik> nolimitsoya: won't you look at that:) ...I think I found it :)
+[09:31] <jrib> RxDx: you could use mencoder
+[09:31] <Everflex> what is it the command to check free disk space and stuff is called?
+[09:31] <nolimitsoya> kerik, ah... mobile machines are diffrent beasts all together. :) there is a nice command to see your current running x driver, but i cant remember it unfortunaly...
+[09:32] <Kingsqueak> RxDx: possibly ffmpeg
+[09:32] <nolimitsoya> kerik, found what?
+=== knapp_ [n=knapp@67.132.247.223]  has joined #ubuntu
+=== rag [n=rag@58.Red-80-24-33.staticIP.rima-tde.net]  has joined #ubuntu
+[09:32] <kerik> think I found my setup-....
+[09:32] <kerik> thanks Cyzie
+[09:32] <RxDx> Kingsqueak, ty
+[09:32] <Kingsqueak> Everflex: df -h
+[09:32] <RxDx> jrib, ty
+[09:32] <Thar> guess nobody can help me... oh well ;)
+[09:32] <cyzie> kerik, welcome
+=== five_laptop [n=fiveiron@74.141.8.207]  has joined #ubuntu
+[09:32] <nolimitsoya> thats cheating :P
+=== wickedsun [n=wicked@88.191.38.127]  has joined #ubuntu
+[09:33] <nolimitsoya> ;)
+[09:33] <five_laptop> anybody using an xbox360 controller successfully in ubuntu?
+[09:33] <Everflex> Kingsqueak: thanks :D then i can read it as a human :D
+[09:33] <five_laptop> is there a tut anywhere?
+[09:33] <kerik> :)
+=== tate [n=tate@cpe-071-075-159-069.carolina.res.rr.com]  has joined #ubuntu
+[09:33] <tate> lexmark z65, anyone had any luck getting this to work in Ubuntu?
+[09:33] <cmweb> kingsqueak, no luck
+[09:34] <cmweb> tate, goolg it
+[09:34] <Kingsqueak> cmweb: well, it's definitely the firestarter rules, tougher to help with as it's a GUI
+[09:34] <sushi_> RxDx I use transcode
+=== memphisto [n=marcus@vig38-3-82-241-207-43.fbx.proxad.net]  has left #ubuntu ["Quitte"]
+[09:34] <nolimitsoya> kerik, so, does it read vesa or i810 as driver?
+[09:34] <cmweb> kingsqueak, maby let me deactivate and see if it is really iy
+[09:34] <J03> How do you connect to bluetooth devices in ubuntu?
+[09:34] <Kingsqueak> cmweb: ah, good idea
+[09:35] <sushi_> five_laptop: isn't there some sort of converter dongle?  Shouldn't you be looking for info on that dongle's use in linux?
+[09:35] <kerik> nolimitsoya: I think I was wrong....I can see something but not all...
+=== BasterTWO [n=christop@pD9E36319.dip.t-dialin.net]  has joined #ubuntu
+[09:35] <nolimitsoya> kerik, 'nano /etc/X11/xorg.conf'
+=== th1_ [n=tommi@dsl-lprgw1-fea5de00-78.dhcp.inet.fi]  has joined #ubuntu
+=== james^ [n=james@jeremiad.org]  has joined #ubuntu
+[09:35] <towel> hey, i have this new laptop and i just installed ubuntu.  Everything works fine except my keyboard in vi.  In the vi the backspace doesn't work and the arrow keys output a-d.   Anyone familiar to this lol?  I have a dell e1505 :[ im searching the forums but no luck of yet
+[09:35] <kerik> 82830 CGC [Chipset Graphics
+=== luisr [n=luisr@84-217-92-124.tn.glocalnet.net]  has joined #ubuntu
+=== sonium [n=sonium@F901b.f.strato-dslnet.de]  has joined #ubuntu
+[09:36] <nolimitsoya> kerik, what does it say under 'driver'?
+=== no_gatez_fan [n=patrick@cpe-069-132-015-252.carolina.res.rr.com]  has joined #ubuntu
+=== Thar [i=opera@15-229.89-161.tel.tkb.net.pl]  has left #ubuntu []
+[09:36] <luisr> Hello
+=== james^ is now known as james
+=== J-_ [n=justin@bas4-hamilton14-1168059365.dsl.bell.ca]  has joined #ubuntu
+[09:36] <Pudel_des_Todes> towel: im no vi expert, but i think this is normal vi behaviour
+=== leks [n=ale@80-218-96-27.dclient.hispeed.ch]  has joined #ubuntu
+=== derFlo [n=ullakatu@dslb-088-064-130-227.pools.arcor-ip.net]  has joined #ubuntu
+=== [Jonne]  [n=chatzill@40.159-240-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[09:37] <Kingsqueak> towel: what does 'echo $TERM' tell you?
+=== james is now known as njan
+[09:37] <kerik> nolimitsoya: I cannot find file xorg.conf
+[09:37] <luisr> Does anyone knows where can I find a Iso image for a macbook dual core
+[09:37] <luisr> Kingsquek your can always type man en echo on the term
+[09:38] <nolimitsoya> kerik, just cut and paste my line 'sudo nano /etc/X11/xorg.conf'
+=== Digitex [n=peppe@adsl-ull-150-88.49-151.net24.it]  has joined #ubuntu
+[09:38] <cmweb> kingsqueak, its not the firewall i still cant get in with it off
+[09:38] <towel> Kingsqueak: if I do that in a terminal.  It doesn't output anything
+[09:38] <Kingsqueak> towel: what does 'echo $SHELL' say?
+[09:38] <Kingsqueak> cmweb: you sure you checked the box for 'ssh' in putty?
+[09:39] <Kingsqueak> cmweb: or set port 22
+[09:39] <kerik> yeah I did that..but it cannot find the file...?
+[09:39] <J-_> following ubuntu guide http://ubuntuguide.org/wiki/Dapper#How_to_install_Graphics_Driver_.28NVIDIA.29, trying to get my nvidia driver going, it says, "To use XvMC to accelerate video playback, use the following flags." then a line for xine and mplayer. Do I put both those lines in the file that I just created, or run both in the terminal?
+=== Delemoose [n=rossi@res24853.rh.rit.edu]  has joined #ubuntu
+[09:39] <cmweb> kingsqueak, its on both of them
+[09:39] <judgen> !diskmounter
+[09:39] <ubotu> To view your Windows/Mac partitions see https://help.ubuntu.com/community/AutomaticallyMountPartitions  -  See also !fuse
+[09:39] <cmweb> kingsqueak, it may be because ive install other servers for ssh
+[09:39] <jordanau> i have been using ubuntu for a while now and would like to have an OS to learn linux better, should i go with slackware? gentoo? debian?
+[09:39] <nolimitsoya> kerik, then you are in trouble :P
+[09:39] <Kingsqueak> cmweb: open a cmd window on the windows box and do 'telnet 192.168.0.1 22'
+[09:39] <nolimitsoya> kerik, look again
+[09:39] <towel> odd I've used other linux distros with vi but haven't seen this.  Looks like I'm able to use vim and get around with the backspace and arrow keys
+[09:40] <jordanau> #slaqckware
+[09:40] <towel> must just be something with vi i guess
+[09:40] <J03> vi?
+=== ThePub [n=nathan@24-117-47-78.cpe.cableone.net]  has joined #ubuntu
+=== see-g [n=see-g@xdslde125.osnanet.de]  has joined #ubuntu
+[09:40] <Jeffm515> wow I hate vi
+[09:40] <nolimitsoya> J03, an advanced text editor
+[09:40] <towel> lol
+[09:40] <kerik> nolimitsoya: it is in the terminal I should put it in the terminal
+[09:40] <five_laptop> sushi_, i've got a wired controller hooked into my usb port.  I'm assuming I just need a driver for the device
+[09:40] <Kingsqueak> towel: it's a TERM setting I'm pretty sure, that's where I was going
+[09:40] <finalbeta> !paste
+=== funkyHat [n=matt@cpc5-nthc3-0-0-cust747.nrth.cable.ntl.com]  has joined #ubuntu
+[09:40] <ubotu> pastebin is a service to post large texts so you don't flood the channel. The Ubuntu pastebin is at http://paste.ubuntu-nl.org (be sure to give the URL of your paste - see also the #ubuntu channel topic)
+[09:40] <nolimitsoya> kerik, yes, removing the 's
+[09:40] <Jeffm515> a pain in the A$%^ text editor to learn, but EXTREAMLY powerful, doesn't instert ANY extra char.
+[09:40] <itsmabus> how come I can't run /sbin/backblocks on /dev/hda even though it's not mounted that I know of?
+[09:41] <J03> ahh :D
+[09:41] <J03> thanks
+[09:41] <jrib> towel: that's not normal vi behavior
+[09:41] <jrib> s/vi/vim
+=== ian_ [n=ian@62.3.232.250]  has joined #ubuntu
+[09:41] <towel> yeah :( ive never seen it before
+=== Eons [n=Eons@host-84-221-209-59.cust-adsl.tiscali.it]  has joined #ubuntu
+[09:41] <towel> vim works fine
+[09:41] <kerik> nolimit: the s?
+[09:41] <nolimitsoya> kerik, no the ' (in plural)
+=== sonicGB [n=geoffb@ppp244-69.static.internode.on.net]  has joined #ubuntu
+[09:41] <towel> but vi is strange
+[09:41] <J03> Whats the best way of keeping CPU Usage down?
+[09:41] <kerik> :) ohh
+=== Jahman [n=okay@87.231.178.129]  has joined #ubuntu
+[09:41] <jrib> towel: oh did you install vi then?
+[09:41] <Kingsqueak> J03: don't run anything
+=== Lam_ [n=Lam@128.227.23.106]  has joined #ubuntu
+[09:41] <cmweb> kingsqueak, can not connect to the host on port 23
+[09:41] <J03> lol.
+[09:41] <kitche> towel: think vi on ubuntu is the easy version of vim
+[09:42] <Jeffm515> lol @ king
+[09:42] <Kingsqueak> cmweb: not 23, 22
+[09:42] <Pudel_des_Todes> ok, seems that the computer pool i have been in last week has the same prob then you, towel *g*
+=== wasabi [n=wasabi@ubuntu/member/wasabi]  has joined #ubuntu
+[09:42] <Kingsqueak> cmweb: open a cmd window on the windows box and do 'telnet 192.168.0.1 22'
+[09:42] <fl1> !pastebin
+[09:42] <ubotu> pastebin is a service to post large texts so you don't flood the channel. The Ubuntu pastebin is at http://paste.ubuntu-nl.org (be sure to give the URL of your paste - see also the #ubuntu channel topic)
+[09:42] <cmweb> oh
+[09:42] <jrib> towel: sudo update-alternatives --config vi    see what you are using
+[09:43] <Kingsqueak> J03: was only half kidding really , if you run 'top' it will show what is running and an idea of what resources the processes are using, you can see if something is 'stuck'
+[09:43] <towel> ok
+=== ReTyPe [n=pvandewy@230.126-201-80.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+=== deep [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:43] <J03> ok, thanks
+[09:43] <Kingsqueak> J03: but it's normal for things to run 99% or so while actually doing something
+[09:43] <deep> j #ubuntu-se
+[09:43] <kerik> nolimitsoya: cannot find file...sudo nano/etc/X11/xorg.conf in terminal?
+=== auk_ [n=scott@h-66-167-7-179.lsanca54.dynamic.covad.net]  has joined #ubuntu
+=== nuxien [n=nuxien@82.247.25.125]  has joined #ubuntu
+[09:43] <Kingsqueak> kerik: space after 'nano' in that line
+[09:43] <kerik> OHHH!
+[09:44] <kerik> thanks kingsqueak
+=== nix_chix0r [n=nixchix0@12-208-222-217.client.mchsi.com]  has joined #ubuntu
+[09:44] <cmweb> kingsqueak, can not connect on 22
+[09:44] <towel> jrib: It says there is only 1 program which provides vi.  (/usr/bin/vim.tiny).  nothing to configure
+=== nuxien [n=nuxien@82.247.25.125]  has left #ubuntu ["Quitte"]
+[09:44] <vcef> omg
+[09:44] <vcef> how do I umount cdrom?
+[09:44] <nolimitsoya> kerik, that wasnt a copy and paste. ;) i told you to copy and paste for that very reason
+[09:44] <towel> i will use vim :)
+[09:44] <J03> Whats the best lunix FTP client? I have fryed somthing called gFTP, but its sh** (imo)
+[09:44] <kerik> nolimitsoya: TADAA!!!
+[09:44] <vcef> I put in cdrw, tried to use k3b to erase it
+=== dirle [n=dirle@adsl-227-185-173.clt.bellsouth.net]  has joined #ubuntu
+=== ubitux [n=ubitux@did75-15-88-160-187-174.fbx.proxad.net]  has joined #ubuntu
+[09:44] <vcef> and now I can't umount it!
+=== morghot [n=morghot@203.pool85-48-160.static.orange.es]  has joined #ubuntu
+[09:44] <morghot> hi all
+[09:44] <Kingsqueak> towel: what are you in for a terminal, actual console or xterm/aterm etc.?
+=== mcmahonm is now known as mcmahonm[A]
+[09:45] <jrib> towel: yeah, might want to install vim-full, though my vim.tiny doesn't do that arrow key weirdness you mentioned
+[09:45] <kerik> nolimitsoya: I have it open now
+=== lato_oscuro [n=drwx@87.18.225.20]  has left #ubuntu ["Leaving"]
+=== markus_ [n=markus@84-216-50-86.sprayadsl.telenor.se]  has joined #ubuntu
+[09:45] <five_laptop> ugh.... i don't want to have to recompile my kernel just to get this controller working
+[09:45] <nolimitsoya> kerik, scroll down to Section "Device"
+[09:45] <kerik> 2 sec
+=== Arwen [n=chatzill@wikipedia/anon32]  has joined #ubuntu
+[09:46] <nn> how does one go about making Xorg in ubuntu allow switching to regular consoles? I have to fix this every time i install ubuntu and i forget where..
+[09:46] <kerik> nolimitsoya: i810 as you said
+[09:46] <dirle> I got ntfs-3g installed and fstab edited and still don't have write access to the ntfs partitions..
+[09:46] <towel> just problems with vi but looks like vim solves the arrow keys / backspace.  They seem to be working with that
+[09:46] <cmweb> kingsqueak, no connection on 22
+=== ColonelZarkawi [n=zarkawi_@pD9E9D6BD.dip.t-dialin.net]  has joined #ubuntu
+[09:46] <nolimitsoya> kerik, then all is fine :) do some cpu and memory monitoring to see where you hit the roof
+[09:46] <kerik> :) ok
+=== k3_ [n=k3@achr247.neoplus.adsl.tpnet.pl]  has joined #ubuntu
+[09:46] <k3_> hi
+=== pitt0071 [n=username@ACCFE50C.ipt.aol.com]  has joined #ubuntu
+[09:46] <k3_> i have a BIG problem with feisty
+[09:46] <nolimitsoya> !hi | k3
+[09:46] <ubotu> k3: Hi! Welcome to #ubuntu!
+[09:46] <towel> I have no problem using the improved version of vi i guess lol
+=== Nogimics [i=n0gimics@195.242.221.54]  has joined #ubuntu
+[09:47] <kerik> can you recommend a monitor?
+[09:47] <wasynyt> good evenign everyone
+[09:47] <nolimitsoya> k3_, just get to it...
+[09:47] <wasynyt> *evening
+[09:47] <vcef> !umount
+[09:47] <towel> thanks for the help :)
+[09:47] <k3_> nolimitsoya: xd
+[09:47] <ubotu> Sorry, I don't know anything about umount - try searching on http://bots.ubuntulinux.nl/factoids.cgi
+=== inetpro [n=inetpro@vc-196-207-45-253.3g.vodacom.co.za]  has joined #ubuntu
+[09:47] <Kingsqueak> cmweb: odd so 'sudo iptables -L' shows you what now?
+=== llllo1 [n=leonel@adsl-144-146-74.mia.bellsouth.net]  has joined #ubuntu
+=== blinx [n=blinx@unixboard/user/blinx]  has left #ubuntu []
+[09:47] <wasynyt> now if just someone could tell how can i get gnome 2.16 for my 6.06
+[09:47] <wasynyt> ?
+=== yanis [n=yanis@88.218.24.163]  has joined #ubuntu
+[09:47] <nolimitsoya> k3_, btw, if you are a feisty user you are in the wrong channel. you should be in #ubuntu+1
+[09:47] <dirle> nolimit .. I got ntfs-3g installed and fstab edited and still don't have write access to the ntfs partitions
+=== zeembo [n=z@adsl-69-235-133-135.dsl.irvnca.pacbell.net]  has joined #ubuntu
+[09:48] <k3_> nolimitsoya: thx
+[09:48] <nolimitsoya> k3_, and feisty is supposed to be full of problems
+=== fromvega [n=fromvega@201-42-116-168.dsl.telesp.net.br]  has joined #ubuntu
+[09:48] <k3_> yeah
+[09:48] <k3_> i know
+=== cybdeb [n=perttu@hoasb-ff03dd00-235.dhcp.inet.fi]  has joined #ubuntu
+[09:48] <fromvega> hello
+[09:48] <Arwen> nolimitsoya, feisty has a release version>
+[09:48] <Arwen> ?*
+=== deep [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:48] <nolimitsoya> dirle, unmount the partitions and do 'sudo mount -a'
+=== zeembo [n=z@adsl-69-235-133-135.dsl.irvnca.pacbell.net]  has joined #ubuntu
+[09:48] <dirle> done that
+=== llllo1 [n=leonel@adsl-144-146-74.mia.bellsouth.net]  has left #ubuntu []
+[09:48] <cmweb> kingsqueak, http://paste.ubuntu-nl.org/36321/
+[09:48] <ThePub> galeon ftw :)
+[09:48] <Jeffm515> who here is REALLY good with bootcycles?
+[09:48] <Kingsqueak> cmweb: ah, iptables is still up, your firewall is still on
+[09:48] <nolimitsoya> Arwen, but its still not the stable release and therefore should be discussed in +1
+=== Apollo [n=jw@c-71-194-81-247.hsd1.il.comcast.net]  has joined #ubuntu
+=== deep [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+=== deep` [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:49] <fabiim> what does xhost + does?
+=== codingheaven [n=linuxer@bl6-52-252.dsl.telepac.pt]  has left #ubuntu ["Leaving"]
+[09:49] <Arwen> nolimitsoya, is it alpha, beta, rc, or pre-alpha?
+[09:49] <Kingsqueak> fabiim: it allows any host to connect to your x server
+=== CAP4295 [n=ircap8@201.250.233.88]  has joined #ubuntu
+=== Apollo [n=jw@c-71-194-81-247.hsd1.il.comcast.net]  has left #ubuntu []
+=== bouwe [n=bouwe@s55929cee.adsl.wanadoo.nl]  has joined #ubuntu
+[09:49] <dirle> nolimit.. I'll try again
+[09:49] <k3_> alpha]
+=== Apollo [n=jw@c-71-194-81-247.hsd1.il.comcast.net]  has joined #ubuntu
+=== beerman [n=beerman@0x55513f8c.adsl.cybercity.dk]  has joined #ubuntu
+[09:49] <cmweb> ah, ok its turned off now im testing
+=== livingdaylight [n=conrad@82-35-48-46.cable.ubr03.camd.blueyonder.co.uk]  has joined #ubuntu
+=== beerman [n=beerman@0x55513f8c.adsl.cybercity.dk]  has left #ubuntu ["Part"]
+[09:49] <CAP4295> hello everybody!
+[09:49] <livingdaylight> Hallo Jungs
+[09:49] <kitche> dirle, nolimitsoya: you have to use umask to have a user be able to write to a partition without sudo I don't use umask myself so I can't really tell you how to do it
+=== okaratas_ [n=okaratas@88.226.239.61]  has joined #ubuntu
+=== beerman [n=beerman@0x55513f8c.adsl.cybercity.dk]  has joined #ubuntu
+=== okaratas_ [n=okaratas@88.226.239.61]  has left #ubuntu ["Leaving"]
+[09:49] <fabiim> Kingsqueak: thanks
+[09:50] <livingdaylight> LjL, you booted me the other day - it wasn't fair, ok?!
+[09:50] <Arwen> if I wanted to convert my system from ubuntu to kubuntu, what should I remove?
+=== CAP4295 is now known as ubuguy
+[09:50] <tuv> hmm.. on the website it says alternate is for systems with less than 192MB ram, although on the live cd it states 128MB is the minimum requirement
+[09:50] <Kingsqueak> fabiim: you can do xhost + <hostname here> to permit one host
+[09:50] <ubuguy> im stock!!!
+[09:50] <Jeffm515> nevermind.. acpi=off .. figred it out
+[09:50] <ubuguy> please helpp
+=== deep [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+=== deep` [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:50] <Arwen> tuv: unless you have uber ram, live cd is slow as hell\
+[09:50] <k3_> oh what the heck, i'll revert to edgy
+=== con-man [n=con-man@d198-166-244-11.abhsia.telus.net]  has joined #ubuntu
+[09:50] <jrib> ubuguy: you are "stock"?
+[09:50] <k3_> f*
+[09:50] <livingdaylight> now, i want to copy a whole bunch of text from a website and paste it somewhere to edit, what is the best way please? i tried copy and paste it in OO.o it doesn't work
+[09:50] <Arwen> and even with uber ram, its limited by your cdrom drive
+[09:50] <rsteele> sup?
+[09:51] <ubuguy> jaja yeah jrib
+[09:51] <jrib> livingdaylight: how did you try to copy and paste?
+[09:51] <jrib> ubuguy: what do you mean?
+[09:51] <Slart> livingdaylight: didn't work? how? what did you expect? what did you get?
+[09:51] <livingdaylight> jrib, the normal highlight right-click and paste
+[09:51] <cmweb> kingsqueak, that worked im in
+[09:51] <Kingsqueak> livingdaylight: you can select it and drag it to your desktop and it will make a file for you
+[09:51] <fabiim> Kingsqueak: well i don't know what host i want to allow , I was editing crontab to perform DISPLAY=:0 amarok -p  and Xlib wasn't allowing , so i found that "xhost +" on google try it out and it work ...
+[09:51] <ubuguy> [jrib]  im just talk a wrong inglish
+=== fowlduck [n=nate@68-190-90-101.dhcp.mdsn.wi.charter.com]  has joined #ubuntu
+[09:51] <kerik> nolimit: can you recommend a monitor?
+[09:51] <jrib> livingdaylight: did you "copy" after highlighting?
+[09:51] <Slart> livingdaylight: hmmm.. that should work.. hold on.. I'll try
+[09:52] <cmweb> kingsqueak, what is the port i need to open up 22? i dont see why because its on passive
+[09:52] <livingdaylight> jrib, yes, of course then into openoffice right-click then paste
+[09:52] <nolimitsoya> kerik, monitor?
+[09:52] <Kingsqueak> cmweb: k, then you have to add a rule with firestarter to allow from 192.168.0.0/24 to 192.168.0.1 on port 22 tcp or 'ssh'
+[09:52] <livingdaylight> i only got one line
+[09:52] <livingdaylight> maybe i was trying to copy too much text?
+=== jw_606 [n=jw@ip70-177-83-61.ok.ok.cox.net]  has joined #ubuntu
+=== eliphas__ [n=eliphas_@host-84-9-255-148.bulldogdsl.com]  has joined #ubuntu
+=== okaratas [n=okaratas@fedora/ozgur]  has joined #ubuntu
+[09:52] <Kingsqueak> kerik: how much can you spend and how big do you want?
+[09:53] <kerik> nolimitsoya: monitor for system.. things
+[09:53] <jrib> livingdaylight: try highlighting and then middle clicking to paste, does that work?
+[09:53] <Slart> livingdaylight: it worked here.. what's the url you tried to copy?
+=== b08y [n=808y@pc24.riednet.wh.tu-darmstadt.de]  has joined #ubuntu
+=== root [n=root@210.113.40.24.aeneasdsl.com]  has joined #ubuntu
+[09:53] <root> hi, i have a problem, when i boot up all i get is a black screen with a white line in the topleft corner, the only way i can even start the computer is to go under recovery mode and startx from there, can someone please help
+[09:53] <cmweb> kingsqueak, ok im testing
+=== x0rx [n=ad@87.69.101.170]  has joined #ubuntu
+=== x0rx [n=ad@87.69.101.170]  has left #ubuntu ["Leaving"]
+[09:53] <Slart> root: try disconnecting external usb-thingies and try again.. worked for me
+[09:53] <jw_606> Hello, can someone help me get my internet connection working in wine 9.9? I'm using Ubuntu 6.06
+[09:53] <nolimitsoya> kerik, there is a plugin for gnome. rightclick any bar and press 'add'. scroll through for the system monitor. or, you can use the big one- from the system menu
+[09:53] <root> Slart: nothing USB connected for me
+[09:54] <livingdaylight> Slart, here is the url i tried http://www.oshoworld.com/onlinebooks/BookXMLMain.asp?BookName=discourse+series/the%20goose%20is%20out.txt
+=== fromvega_ [n=fromvega@201-42-116-168.dsl.telesp.net.br]  has joined #ubuntu
+[09:54] <fromvega_> hello again
+=== Khamael [n=raphael@73.80-202-81.nextgentel.com]  has joined #ubuntu
+[09:54] <livingdaylight> Slart, i wanted to grab all the text to edit
+[09:54] <fromvega_> I have two networks cards in my linux box. I want to configure it as router instead of the modem. Could you help me do that?
+[09:54] <Jeffm515> what's the best way to store extra commands in GRUB?
+[09:54] <Slart> root: oh.. I'm out of ideas then.. that fixed it for me.. I had an external DVD-drive..
+[09:54] <J-_> following ubuntu guide http://ubuntuguide.org/wiki/Dapper#How_to_install_Graphics_Driver_.28NVIDIA.29, trying to get my nvidia driver going, it says, "To use XvMC to accelerate video playback, use the following flags." then a line for xine and mplayer. Do I put both those lines in the file that I just created, or run both in the terminal?
+=== [BTF] Chm0d [n=rich@pool-71-101-108-49.tampfl.dsl-w.verizon.net]  has joined #ubuntu
+[09:54] <nn> Jeffm515: /boot/grub/menu.lst :P
+=== escargot [n=escargot@elf169.cleannet.orie.cornell.edu]  has joined #ubuntu
+=== deep__ [i=hej@c-8f2a71d5.017-19-626c671.cust.bredbandsbolaget.se]  has joined #ubuntu
+[09:54] <kitche> livingdaylight: why not just save the file it's in .txt format already
+=== andros [n=andros@blacksburg-bsr1-69-170-35-162.chvlva.adelphia.net]  has joined #ubuntu
+[09:54] <Jeffm515> danka nn
+[09:54] <root> Slart: i could try unplugging the computer and pluggin it back up
+=== Sapote [n=guillote@200.68.214.35]  has joined #ubuntu
+[09:55] <fromvega_> I'm trying to edit ip_forward file but I can't even with sudo!
+[09:55] <kerik> nolimitsoya: so in the applets?
+[09:55] <nn> Jeffm515: np
+=== Lurkan [n=agsm@189.142.97.154]  has joined #ubuntu
+[09:55] <root> fromvega: what are you trying to edit it with? kate? kwrite?
+[09:55] <Slart> livingdaylight: ok.. just cpy paste only pasted the first line... paste special, without formatting worked though.. try it.. it's in the edit menu
+[09:55] <livingdaylight> kitche, what is .asp format?
+[09:55] <nolimitsoya> kerik, yes, but the "big one" might be easier to read
+=== andros [n=andros@blacksburg-bsr1-69-170-35-162.chvlva.adelphia.net]  has left #ubuntu ["Leaving"]
+=== ok67_ [n=oddgeir@98.80-202-28.nextgentel.com]  has joined #ubuntu
+[09:56] <ubuguy> ALGUIEN QUE HABLE ESPAOL????
+[09:56] <Slart> root: unplugging the computer? I dont understand...
+[09:56] <jrib> !es | ubuguy
+[09:56] <ubotu> ubuguy: Para Espaol por favor usen #ubuntu-es, #kubuntu-es o #edubuntu-es, all obtendrn mas ayuda.
+[09:56] <livingdaylight> Slart, that is what i got only the first line, what did you do different?
+[09:56] <Sapote> sudo `echo 1 > /proc/sys/net/ipv4/ip_forward`
+=== meeow [n=meow@i-195-137-93-56.freedom2surf.net]  has joined #ubuntu
+[09:56] <root> Slart: it fixes most things
+[09:56] <Slart> livingdaylight: use "paste special" instead of paste
+[09:56] <fromvega_> root: gedit
+[09:56] <kerik> nolimitsoya: It doesnt seem to be present...?
+[09:56] <ubuguy> THANK YOU!!!!!!!!!!1
+[09:56] <root> Slart: or a hammer. eitherone
+[09:56] <root> fromvega: try nano
+[09:56] <kerik> nolimit: or am I looking wrong places?
+[09:56] <fromvega_> Sapote: no permission even with SUDO
+=== ericb [n=ebuth@cpe-72-130-176-179.san.res.rr.com]  has joined #ubuntu
+[09:57] <Slart> root: ah.. yes. =) but in my case the only problem was the DVD-drive.. after that, it booted fine
+[09:57] <nolimitsoya> kerik, im not on gnome so i cant check, but look for 'system monitor' or something similar under system->administration
+[09:57] <kitche> livingdaylight: it's frontpage extension but the file you want to edit is in .txt format discourse+seriesthe goose is out.txt it's even in the url
+[09:57] <meeow> lo, i'm trying to install 6.10 desktop. i get an error i/o not enough memory to load specified kernel
+[09:57] <fromvega_> Sapote: I've tried that but it says I have no permission
+[09:57] <kerik> nolimitsoya: will do :)
+[09:57] <root> frombega: do sudo nano <filename> in a terminal
+[09:57] <root> fromvega: do sudo nano <filename> in a terminal
+[09:58] <livingdaylight> Slart, i don't see a "paste special"
+=== KENSiN [n=rooot@dslb-088-072-093-166.pools.arcor-ip.net]  has joined #ubuntu
+[09:58] <jrib> livingdaylight: in your edit menu
+[09:58] <livingdaylight> kitche, huh?
+[09:58] <Sapote> sudo vi sysctl.conf
+[09:58] <root> meeow: how much ram do you have
+[09:58] <fromvega_> ok
+[09:58] <meeow> how do i install it with running ubuntu from cd
+[09:58] <Slart> livingdaylight: in open office.. edit menu.. just below "paste" ?
+[09:58] <livingdaylight> jrib, edit menu of openoffice?
+[09:58] <jrib> livingdaylight: yes
+[09:58] <meeow> without*
+[09:58] <kerik> nolimitsoya: it is already installed :)...and working...thanks mate!
+[09:58] <meeow> more than the recommended 128
+[09:58] <nolimitsoya> kerik, np
+=== i7ch [n=i7ch@CPE00096b5f17e9-CM0014045d3018.cpe.net.cable.rogers.com]  has joined #ubuntu
+[09:58] <root> you really need atleast 512
+=== AnnaAniston [n=annaanis@r125-63-128-21.cpe.unwired.net.au]  has joined #ubuntu
+[09:59] <livingdaylight> Slart, jrib, cool, thx guys!
+[09:59] <cmweb> kingsqueak, looks like it works now thanks a bunch
+[09:59] <kerik> nolimitsoya: it is > 50% in everything :)
+[09:59] <Arwen> does anyone here know what the heck a U3 flash drive is?
+[09:59] <Slart> livingdaylight: np.. paste special is a life saver when pasting from the web...
+[09:59] <fromvega_> root: I'm inside it, how do I save now? Not used to NANO
+=== masse|deferred [n=amasse@c-66-30-85-138.hsd1.ma.comcast.net]  has joined #ubuntu
+[09:59] <meeow> it's over 512
+[09:59] <Jeffm515> nn: it's giving me permission denyed to edit menu.lst
+[09:59] <Arwen> also, can fat32 partitions be resized?
+[09:59] <masse|deferred> any ideas why it wont let me resize my partition ?
+=== archangelpetro [n=petroleu@82.152.214.132]  has joined #ubuntu
+[09:59] <cmweb> !hi |masse
+[09:59] <nolimitsoya> kerik, while playing?
+[09:59] <ubotu> masse: Hi! Welcome to #ubuntu!
+[09:59] <masse|deferred> is it because it is NTFS?
+=== cmweb [n=owner@dialup-4.91.104.189.Dial1.Orlando1.Level3.net]  has left #ubuntu []

@@ -1,0 +1,412 @@
+[10:30] <puff> nsadmin: there are days (many) when I want to just go do another financial corp consulting gig and throw a lot of money at the infrastructure, and maybe someday I will, but meanwhile I'm just trying to make it work.
+[10:30] <Don_Miguel> raylu, do we need to rename/move   dpkg-b   back to   dpkg  ??
+[10:31] <puff> what a cool quote:  "A person with ubuntu is open and available to others, affirming of others, does not feel threatened that others are able and good, for he or she has a proper self-assurance that comes from knowing that he or she belongs in a greater whole and is diminished when others are humiliated or diminished, when others are tortured or oppressed. ~ Archbishop Desmond Tutu, 1999"
+[10:31] <raylu> Don_Miguel: no, making dpkg should be enough. why?
+[10:31] <PolitikerALT> raylu: rsync has a daemon? mom, I'll have a look
+[10:31] <raylu> mom?
+[10:31] <Don_Miguel> raylu, http://paste.ubuntu.com/100214/
+[10:31] <GbigG> hi - somebody know how to get mdadm raid after reboot?
+[10:31] <GbigG> to work
+[10:31] <PolitikerALT> moment, I'm reading the manual
+[10:32] <raylu> PolitikerALT: oh. i should mention that i have no experience with it
+[10:32] <puff> PolitikerALT: It can, depends on how you're using it.
+[10:32] <puff> PolitikerALT: I have only brushed the surface with rsync, but one mode of using it is you run rsync locally and it pushes deltas (changed data) to a daemon on the remote system.
+[10:32] <nils> -de
+[10:32] <nils> #ubuntu-de
+[10:33] <rww> nils, /join #ubuntu-de
+=== ziroday is now known as bingqiling
+[10:33] <PolitikerALT> puff: Ah, that would be exactly what I need, thanks
+[10:33] <nils> Sorry
+[10:33] <Ruudi> greetings
+[10:33] <Ruudi> HNY
+[10:33] <Gabbsmo> Is it possible to make a ALTERNATE install USB with UNetbootin?
+[10:34] <Ruudi> anyone speaks russian? could use some help to translate "IT support" to russian
+[10:34] <puff> PolitikerALT: Just a heads up, in my expereince rysnc is very finicky about file specifications, specifically it seems most straightforward thing to do is to specify *both* the source and destination paths with a trailing slash, e.g. rsynch /source/path/ /dest/path/
+[10:34] <rww> !ru | Ruudi
+[10:34] <ubottu> Ruudi: Пожалуйста посетите #ubuntu-ru для получения помощи на русском языке  / Pozhalujsta posetite #ubuntu-ru dlya polucheniya pomoshi na russkom yazyke
+[10:35] <Ruudi> thnx rww
+[10:35] <PolitikerALT> puff: thanks
+[10:36] <puff> PolitikerALT: The trailing slash tells rsync that you want "path" to be a directory at both locations, and you want th econtents of "path" to be synchronized.  Beyond that it gets iffy, but the safest thing seems to be to have the final element in the file spec be a directory name with a trailing slash.
+[10:36] <puff> PolitikerALT: I suspect this is rsync's achilles heel, and if they ever fix it rsync will become far more widespread.
+[10:36] <rww> trailing slashes in rsync irritate the heck out of me :(
+[10:37] <johny> Helloo
+[10:37]  * johny says hello
+[10:37] <puff> rww: Tell me about it :-).
+[10:38] <puff> rww: Tip:  if you ever have to clean up the results of such, kdiff-3 is invaluable.  Also incredibly handy for when you drift off source control and are trying to merge changes back in.
+[10:38] <wj32> how do I disable middle-click pasting?
+=== bingqiling is now known as ziroday
+[10:40] <puff> rww: However, kdiff-3 can easily bog down on some common use cases.  For example, when I was using kdiff3 to merge a couple different backups of my user directory, I found it *much* easier after I first a) cleaned up mozilla and beagle .files, b) moved four or five jdk hierarhies out of all versions of my user directory .
+[10:40] <johny> I'm on ATI radeon 9700 card, can't use fglrx with Intrepid, therefore, I got back to the "ati open-source" driver, but my xorg.cong isn't still configured, which is weird. Can anyone of you have a look http://paste2.org/p/124870
+[10:41] <rww> johny, Intrepid's version of Xorg does extensive autodetection, so many users have the default xorg.conf file. I have an ATI card too, and when I used to use radeon, the file looked like that.
+[10:42] <Don_Miguel> raylu, did you see my last ? [06:31] <Don_Miguel> raylu, http://paste.ubuntu.com/100214/
+[10:43] <johny> rww: Thanks, it's good to know. I was thinking about adding "radeon" line to it. Do you experience problems with CPu use going higher when scrolling any pages, even with dillo?
+[10:43] <Lars> Help, HELP - trying to get two monitors to work in twinview...one is a DFP, the other a CRT. The CRT works fine, DFP comes up black and not detecting...help!
+[10:44] <rww> johny, the Xorg process's CPU usage tends to spike when I scroll or move windows around or do anything... it's only momentary, though, so I never really bothered with it.
+[10:44] <rww> johny, adding the radeon line won't hurt, but it won't change anything either.
+[10:46] <johny> rww: Say what, I just typed "glxgears", and it eats the whole 100% of my CPU, is it usual behavior?
+[10:46] <Lars> Help, HELP - trying to get two monitors to work in twinview...one is a DFP, the other a CRT. The CRT works fine, DFP comes up black and not detecting...help!
+[10:47] <rww> johny, not sure; I'm running fglrx right now, so I can't check.
+[10:47] <rww> johny, but radeon isn't very efficient at running OpenGL stuff, so it wouldn't surprise me.
+[10:48] <AdvoWork> anyone had any problems with saving settings in about:config of firefox under ubuntu yet when you restart firefox or log out, it resets them?
+[10:48] <puff> hm, some digging around brings up XFS, woulod that work?
+[10:49] <johny> rww: If I wanted to test it out a bit going back to "vesa", for a while what should I do: Is removing "xorg-driver-video-ati" enough?
+[10:49] <rww> puff: that's not well supported, if I remember correctly.
+[10:50] <Lars> Help, HELP - trying to get two monitors to work in twinview...one is a DFP, the other a CRT. The CRT works fine, DFP comes up black and not detecting...help!
+[10:50] <Slart> rww, puff: XFS as in the file system?
+[10:50] <nonix4> Lars: Using the prog for choosing display outputs runtime?
+[10:50] <raylu> Don_Miguel: oops
+[10:50] <Mayank> which version of fedora should i download for my pentium-4, 1gb of ram?
+[10:51] <Slart> Mayank: ubuntu 8.10, 32 bit
+[10:51] <rww> johny: probably xserver-xorg-video-radeon, xserver-xorg-video-radeonhd, xserver-xorg-video-ati, depending on exactly which driver you're using
+[10:51] <raylu> Don_Miguel: i suppose you do need to move it back, then
+[10:51] <rww> !fedora | Mayank
+[10:51] <ubottu> Mayank: Other !Linux distributions besides !Ubuntu include: Debian, Mepis (using !APT); RedHat, Fedora, SUSE, Mandriva (using !RPM); Gentoo, Slackware (using other packaging systems)
+[10:51] <nonix4> Lars: xrandr that is?
+[10:51] <Mayank> slart, no, fedora, there is no i386 for fedora?
+[10:51] <rww> Mayank: oops, sorry, that was useless. Fedora support in #fedora, not here. #ubuntu is, unsurprisingly, only for Ubuntu support.
+[10:51] <Slart> Mayank: what channel are you in?
+[10:52] <raylu> Don_Miguel: i'd still recommend trying to follow the last suggestion in that post. removing references ot xulrunner in the available and status files may help
+[10:52] <Don_Miguel> raylu, remind me ,,, what is the command for that ?
+[10:52] <raylu> *to
+[10:52] <raylu> Don_Miguel: rm -r dpkg
+[10:52] <johny> rww: By the way: How can I check which one is used by the OS if my xorg doesn't put any entries in the config file?
+[10:52] <HomingHamster> hi
+[10:52] <raylu> Don_Miguel: mv dpkg-b dpkb
+[10:52] <raylu> Don_Miguel: both with sudo
+[10:52] <nonix4> Lars: try "xrandr --prop" to view currently detected screens
+[10:53] <puff> rww: Good 'nuff, that recommendation is probably outdated.
+[10:53] <HomingHamster> can anyone explain to me hoe i would use IP routes on my ubuntu machine to channel different ports down a different connection.
+[10:53] <rww> johny: I usually read the Xorg logfile at /var/log/Xorg.0.log. I know radeon and fglrx both put lines in there when they're in use.
+[10:53] <puff> Ah, crap, plugged the 500GB into a USB enclosure and it's not coming up at all.
+[10:54] <Lars> nonix4: you'll get a PM from LurkerInTheWebs in a sec
+[10:54] <puff> and not showing up in "df -h" output. Hm.
+[10:55] <nonix4> puff: nor dmesg?
+[10:55] <PokerFacePenguin> is there a change in the way memory shows up in intrepid?  I just noticed i am down from 4 to 3 GB RAM.  I recently did the upgrade to 8.10.
+[10:56] <PokerFacePenguin> 64 bit that is
+[10:56] <rww> PokerFacePenguin: what's the output of uname -a ?
+[10:56] <Slart> PokerFacePenguin: I haven't noticed any difference.. I have 3.9 GB available.. can't really remember if it was different in hardy
+[10:56] <PokerFacePenguin> Linux heirloom 2.6.27-9-generic #1 SMP Thu Nov 20 22:15:32 UTC 2008 x86_64 GNU/Linux
+[10:56] <LurkerInTheWebs> nonix4...check your PM
+[10:57] <nils__> Hello
+[10:57] <rww> PokerFacePenguin: hrm. Can you copy the output of "free" to http://paste.ubuntu.com/, then say the link here?
+[10:57] <puff> nonix4: No signs in dmesg.
+[10:58] <puff> nonix4:  nor in /var/log/messages
+=== ruben_ is now known as Repolete_
+[10:59] <Don_Miguel> raylu, still a problem     http://paste.ubuntu.com/100240/
+[10:59] <puff> Bah, humbug... it's 4am here, time to sleep and come at it with a fresh approach in the morning.
+[10:59] <jinja-sheep> Hmm.  I'm trying to install Ubuntu 8.04 LTS on mobile laptop.  However, I faced an issue when it comes to detect + mount CD-ROM.  The problem?  There is no CD/DVD reader so the CD-ROM drivers won't be needed.
+[10:59] <puff> G'night all.  Thank you much for your help and support.
+[10:59] <rww> puff: 'night! Good luck :)
+[10:59] <PokerFacePenguin> rww: http://paste.ubuntu.com/100241/
+[11:00] <johny> rww: Checked! It's certainly radeon (= ati Open-Source driver, right?) DRI is enabled, compiz launches on OS start too, but this scrolling is just horrible. As I've mentioned before: I installed Dillo to test it out, the browser itself is fast as hell, but when i scroll a page it just eats all the CPU. Yes, that's a momentary behavior, but it affect the entire system.
+[11:00] <puff> rww: Thanks. Ciao, baby.
+[11:00] <nils__> Goog Morning :D
+[11:00] <Slart> PokerFacePenguin: I don't know if memory can break without the computer crashing.. but perhaps it's possible
+[11:00] <nils__> Shut Up!!!!!!!!
+[11:00] <DawnLight> hello. is it reasonable to use gnome without a mouse?
+[11:00] <Don_Miguel> raylu, see my PM
+[11:01] <rww> johny: hmm. I think there's a radeon driver channel at #radeon on this server. Try asking there maybe?
+[11:01] <Slart> DawnLight: there are some accessability options for controlling the pointer with the numeric keyboard.. but I don't think gnome was meant for keyboard only operation
+[11:01] <johny> rww: Thanks, I will.
+[11:03] <Slart> DawnLight: but that would of course depend on how you use it.. what programs you run and so on..
+[11:04] <ActionParsnip> yo yo yo
+[11:04] <alexb92> gday guys, i have ubuntu installed inside a windows partition using wubi and now when i boot into ubuntu it comes up with alot of errors saying read only file system then x sevrer comes up in a big blue screen saying that due to internal erros, xserver can not be started please contact your namufacturer
+[11:04] <Slart> good morning, ActionParsnip
+[11:04] <alexb92> theres a big ok button
+[11:04] <rww> Geh, it's 3am already? 'night, all...
+[11:04] <Miguel_2009> Hey dudes, whick Linux (Deb based) distribution do you recommend for a PC with only 256Mb of DDR ?
+[11:04] <HomingHamster> can anyone explain to me hoe i would use IP routes on my ubuntu machine to channel different ports down a different connection?
+[11:04] <alexb92> and when i press the enter key, i get lead back up to the booting processes screen and it jus stays black
+[11:04] <ActionParsnip> Slart: I just got a weird message from you
+[11:04] <Slart> Miguel_2009: xubuntu
+[11:05] <DIFH-iceroot> Miguel_2009: xubuntu
+[11:05] <asea168> i coming
+[11:05] <Slart> ActionParsnip: just wondering what time you had there =)
+[11:05] <DIFH-iceroot> Miguel_2009: or dsl, but i dont know if it is debian-based
+[11:05] <ActionParsnip> Slart: haha 11:00am GMT
+[11:05] <Miguel_2009> DSL¿
+[11:05] <HomingHamster> is xubuntu ubuntu but with XFCE window manager?
+[11:05] <alexb92> 10:05 pm sydney time :P
+[11:05] <Miguel_2009> I'll look for it xD
+[11:05] <DIFH-iceroot> Miguel_2009: damn small linux
+[11:05] <Miguel_2009> Yep homing
+[11:05] <DIFH-iceroot> HomingHamster: yes
+[11:05] <Slart> ActionParsnip: if your irc-client hadn't been so paranoid it would have answered me =) "/ctcp Slart time" will tell you what time it is here
+[11:06] <ActionParsnip> Miguel_2009: puppylinux, xubuntu, DSL (damnsmalllinux)
+[11:06] <Miguel_2009> damn samll linux.. i've heared about it
+[11:06] <HomingHamster> can i "turn" ubuntu into xubuntu using synaptic?
+[11:06] <ActionParsnip> Slart: its pidgin, i have no idea what settings :)
+[11:06] <tuchha12> how can i change my boot from 9 sec to 3
+[11:06] <Miguel_2009> ahm dsl = damn small linux :P
+[11:06] <tuchha12> ?
+[11:06] <DIFH-iceroot> Miguel_2009: its a 50mb linux
+[11:06] <ActionParsnip> HomingHamster: yes, sudo apt-get install xubuntu-desktop
+[11:06] <Miguel_2009> tucha12
+[11:06] <Miguel_2009> tipe in a terminal:
+[11:06] <Slart> HomingHamster: I'm not sure if it will be the same but you can try installing xubuntu-desktop or whatever it's called
+[11:06] <HomingHamster> neat, thanks ActionParsnip
+[11:06] <Miguel_2009> sudo gedit /boot/grub/menu.lst
+[11:06] <DIFH-iceroot> Slart: it is the same
+[11:06] <Slart> ActionParsnip: ah.. pidgin.. destroyer of irc =)
+[11:07] <Miguel_2009> then go to the part it says timeout
+[11:07] <Miguel_2009> and change 9 for 3
+[11:07] <ActionParsnip> Miguel_2009: gksudo gedit dude, sudo gedit is incorrect
+[11:07] <HomingHamster> thanks Slart that sounds about right
+[11:07] <Miguel_2009> xD
+[11:07] <Slart> ah, thanks DIFH-iceroot
+[11:07] <ActionParsnip> Slart: it does irc, cant say fairer than that
+[11:07] <Miguel_2009> y use always sudo gedit xDDDDDD
+[11:07] <alexb92> does any one have any ideas?
+[11:08] <Slart> Miguel_2009: gksudo gedit.. never sudo with a gui
+[11:08] <ActionParsnip> Miguel_2009: so it sets up the environment and doesnt break permissions and ownerships on files
+[11:08] <Slart> !gksudo | Miguel_2009
+[11:08] <zhaozhou> Slart, Great tip, thanks for that!
+[11:08] <ubottu> Miguel_2009: If you need to run graphical applications as root, use « gksudo », as it will set up the environment more appropriately. Never just use "sudo"! (See http://psychocats.net/ubuntu/graphicalsudo to know why)
+[11:08] <zhaozhou> Slart, the ctcp time-one
+[11:08] <ActionParsnip> Miguel_2009: sudo is for cli apps like nano apt-get cp etc
+[11:08] <Miguel_2009> ah great xD
+[11:08] <Slart> zhaozhou: yes, it's nice.. there are other ctcp commands too.. I just use version and time
+[11:08] <Miguel_2009> i always do from the other way now i'll make it as you say xD
+[11:09] <stix_> I have this constant annoying sound on my system. Can I restart the sound daemon somehow?
+[11:09] <archman> i'm an idiot but i have to ask it again...when i install wine via synaptic i can get wine and wine-dev. How do i get wine-dev installed via sources? I want programs to see that i have wine development files on the dependency check.
+[11:10] <Miguel_2009> Well i'll take a look to DSM then
+[11:10] <alexb92> is there a way to repair ubuntu with the live cd?
+[11:11] <ActionParsnip> alexb92: define "repair"
+[11:11] <Slart> archman: I think wine-dev is sources... or at least headers
+[11:11] <alexb92> well as in my ubuntu wont boot up due to a read only file system as its installed under wubu\
+[11:11] <alexb92> wubi*
+[11:11] <alexb92> but it was working fine before though
+[11:11] <archman> Slart: and how can i point a program when he needs wine-dev files on installtion?
+[11:12] <ActionParsnip> alexb92: i dont think you can fix wubi with live cd, you could maybe mount the hdd imag and work on it from windows
+[11:13] <alexb92> lol sorry but im a complete noob when it comes to ubuntu so how do you do that?
+[11:13] <alexb92> i tried going into where the ubuntu directory was stored in my C: drive and making it read only there
+[11:13] <alexb92> but upon reboot it still didnt recognise it
+[11:13] <alexb92> and i tried defragging and disk check
+[11:13] <Slart> archman: oh.. I don't really know.. I don't even know where whatever wine-dev installs is located
+[11:14] <Slart> archman: /usr/src is a common place.. take a look and see... or check in synaptic what it installs
+[11:14] <ActionParsnip> alexb92: its a windows question really, you need something like magicdisk or some other virtual drive system
+[11:14] <alexb92> does windows and ubuntu even get along together? or do they try and fight for the partition and the filesystem
+[11:14] <alexb92> i have vmware available?
+[11:14] <alexb92> or should i just completely remove it and start fresh?
+[11:15] <ActionParsnip> alexb92: no they dont fight, they can sit side by side and with some config can read each others files
+[11:15] <Slart> alexb92: ubuntu is a nice os.. windows not so much
+[11:15] <alexb92> i know and i really like ubuntu\
+[11:15] <archman> Slart: /usr/include/ , and /usr/share, and libwine.so in /usr/lib/
+[11:15] <ActionParsnip> alexb92: if you are happy to start fresh, its an option
+[11:15] <alexb92> its just a pity that there isnt easy ways to fix things unlike windows
+[11:15] <ActionParsnip> alexb92: personally i despise wubi
+[11:15] <alexb92> but the annoying thing is that i have files in ubuntu which i cant access though
+[11:16] <alexb92> and i did a hell of alot of downloading with synaptic
+[11:16] <ActionParsnip> alexb92: its because its a half ass install of ubuntu from within windows, if you had a proper install you could boot to livecd and repair easily
+[11:16] <Slart> alexb92: I meant as in getting along with other os's too.. ubuntu is pretty considerate when it comes to overwriting stuff.. windows is more of a ignorant crybaby =)
+[11:16] <alexb92> yeah i know lol
+[11:16] <Slart> alexb92: ahhh.. using wubi.. then I can't really say.. haven't used it myself
+[11:17] <alexb92> i just did wubi at the time becoz i didnt have the space but now i have an external hdd so yeah i dont mind using that
+[11:17] <alexb92> but the hdd is only usb 2.0 not sata or anything
+[11:17] <Mass[UB]> Why do I always get time-out when I try to ping an ip from ubuntu?
+[11:17] <ActionParsnip> alexb92: you are also comparing badly due to experience, im sure yuor windows exposure is colossol compared to your linux exposure
+[11:17] <Slart> Mass[UB]: uhm.. you're pinging something that isn't answering?
+[11:17] <ActionParsnip> alexb92: you can install to usb in the live cd
+[11:18] <alexb92> yeah i know
+[11:18] <Mass[UB]> Slart: uhm, no when i do it from Windows it's answering, I'm using ubuntu on virtualhost
+[11:18] <AdvoWork> anyone recommend another terminal server client for ubuntu other than the "Terminal Server Client"?
+[11:18] <Slart> Mass[UB]: try pinging 74.125.79.147, that's a google machine.. it answers to my pings
+[11:18] <Mass[UB]> Trust me it's not the ip not answering
+[11:18] <alexb92> i mean my experience with ubuntu is a really positive one i love using ubuntu but its just when it crashes and your a new comer to the OS, its kind of hard to do things if you know what i mean
+[11:18] <Slart> Mass[UB]: then you probably don't have networking setup properly.. it's not a ubuntu feature
+[11:19] <ActionParsnip> AdvoWork: apt-cache search remote desktop
+[11:19] <Mass[UB]> --- 74.125.79.147 ping statistics ---, 3 packets transmitted, 0 received, 100% packet loss, time 2000ms
+[11:19] <ActionParsnip> alexb92: thats when you learn most
+[11:19] <alexb92> like in windows if something screws up u can repair with the cd or use software which does the things for u
+[11:19] <alexb92> exactly
+[11:19] <alexb92> and i want to learn linux becoz its the future OS
+[11:20] <ActionParsnip> alexb92: its one of them
+[11:20] <Mayank> is there any windows channel for xp or vista?
+[11:20] <Slart> !windows | Mayank
+[11:20] <ubottu> Mayank: For discussion on Microsoft Windows, or help with same, please visit ##windows. See http://launchpad.net/distros/ubuntu/+bug/1 http://linux.oneandoneis2.org/LNW.htm and /msg ubottu equivalents
+[11:20] <saera> hi im trying to use rythem box with my ipod so i need to convert my ogg files to a format ipod understands
+[11:20] <ActionParsnip> saera: i'd rerip your files, converting from one lossy format to another will degrade quality
+[11:21] <alexb92> oh is it possible to install ubuntu on a mac?
+[11:21] <alexb92> i have a friend who owns a mac and really liked ubuntu when he saw it on my comp
+[11:21] <Slart> alexb92: I think so, yes.. a newer intel-cpu mac, that is
+[11:21] <ActionParsnip> alexb92: yes
+[11:22] <Snupt> alexb92, why not? ;)
+[11:22] <Slart> alexb92: I don't think there's a wubi for os X though
+[11:22] <alexb92> how though?
+[11:22] <alexb92> i know that mac uses a feature called bootcamp
+[11:22] <Slart> !mac
+[11:22] <ubottu> To view your Windows/Mac partitions see https://help.ubuntu.com/community/AutomaticallyMountPartitions - For write access, see !NTFS-3g or !FUSE
+[11:22] <chipt4> alexb92: some models are better supported than others
+[11:22] <Slart> bah..
+[11:22] <ActionParsnip> alexb92: you can use standard installs on intel based macs, or get the ppc iso for Gx cpus (theres no flash plugin for ppc)
+[11:22] <saera> ActionParsnip, i'd really want to be able not, mp3 is simply compressed music files is it not? where would it loose quality?
+[11:23] <chipt4> alexb92: rEFIt is the bootloader, i believe
+[11:23] <ActionParsnip> saera: converting to ogg reduces quality of the original, like bmp is to jpeg
+[11:23] <chipt4> if it's an intel mac
+[11:23] <ActionParsnip> saera: if you convert from ogg to mp3 you will loose even more quality
+[11:23] <alexb92> saera: aac is a really good format for music
+[11:23] <chipt4> google around for a tutorial on the specific model of mac
+[11:23] <Snupt> alexb92, flac better
+[11:23] <alexb92> 96kbs of aac = 128 kbs of mp3
+[11:24] <ActionParsnip> saera: ogg is an awesome format but not so many players like it (I always buy cowon players due to this fact)
+[11:24] <Nothingman> siemanko jakies polaki :> tak  z ciekawości
+[11:24] <Nothingman> ;)
+[11:24] <alexb92> and it uses half the space
+[11:24] <Slart> !mp3
+[11:24] <ubottu> For multimedia issues, this page has useful information: https://help.ubuntu.com/community/RestrictedFormats - See also http://help.ubuntu.com/ubuntu/desktopguide/C/common-tasks-chap.html - But please use free formats if you can: https://help.ubuntu.com/community/FreeFormats
+[11:24] <saera> alexb92, i sm uding an ipod, rather i want to use my ipod and cant
+[11:24] <redduck666> can i make gnome cycle only through certain windows? (i have two monitors, i'd like windows on one to be fixed while working on the other one)
+[11:24] <alexb92> oh right
+[11:25] <alexb92> well i know that if you are willing to get custom firmware for your mac, you can play ogg files through it as well
+[11:25] <quinn`> hi
+[11:25] <alexb92> you can also add more themes and other things too
+[11:25] <ActionParsnip> alexb92: put rockbox on ipod and you have a winner
+[11:25] <ActionParsnip> !rockbox
+[11:25] <ubottu> rockbox is an open source firmware replacement for audio players from Archos, iRiver, Apple (iPod), and iAudio. See http://www.rockbox.org/ to get started!
+[11:25] <alexb92> yep
+[11:25] <alexb92> exactly
+[11:25] <ActionParsnip> !ot
+[11:25] <ubottu> #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics. Thanks!
+[11:25] <alexb92> good choice
+=== jonathan__ is now known as beilabs
+[11:25] <alexb92> just the thing
+[11:25] <FloodBot2> alexb92: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[11:26] <nillerz> Hello! How do I mount a windows partition?
+[11:26] <Snupt> hm. What happened with  FlodBoot_1_? :)
+[11:27] <ActionParsnip> !ntfs-3g | nillerz
+[11:27] <ubottu> nillerz: ntfs-3g is a Linux driver which allows read/write access to NTFS partitions. Installation instructions at https://help.ubuntu.com/community/MountingWindowsPartitions
+[11:27] <Slart> !ntfs | nillerz
+[11:27] <ubottu> nillerz: To view your Windows/Mac partitions see https://help.ubuntu.com/community/AutomaticallyMountPartitions - For write access, see !NTFS-3g or !FUSE
+[11:27] <vasyok> mount /dev/sdaX /media/windows_partition
+[11:27] <vega> a windows partition is not automatically ntfs..
+[11:27] <vasyok> mount -t FILESYSTEM_TYPE /dev/sdaX /media/windows_partition
+[11:28] <vega> "-t auto" also works quite well
+[11:28] <vega> if you are not sure
+[11:28] <ActionParsnip> if you install ntfs-3g you can write to plain permissioned files
+=== chaky_ is now known as chaky
+[11:33] <alexb92> oh another question
+[11:33] <alexb92> whats going to be changed in 9.04?
+[11:34] <ThinkMinus> Ubuntu live cd is demanding a username/password. What is username password for hardy heron live cd?
+[11:34] <alexb92> besides the fast boot up times with jaunty jantalope :P
+[11:34] <Guillem> How can I start gnome apps - such as evince- over a ssh -CX connection? Since Intrepid, those apps keep complaining about gconf is not running....
+[11:34] <Blue_AciD> Guys how do you kill a task and find what tasks are running also -.-
+[11:35] <ActionParsnip> Blue_AciD: ps -ef
+[11:35] <ThinkMinus> ?
+[11:35] <Guillem> Blue_AciD,  gnome-system-monitor
+[11:35] <ActionParsnip> ThinkMinus: try ubuntu for both
+[11:35] <ThinkMinus> ActionParsnip: ok...let me see
+[11:36] <Slart> Guillem: hmm.. never had any problems before.. hang on.. let me try it locally here
+[11:36] <light50> Blue_AciD: htop is nice
+[11:37] <Guillem> Slart, seems about a problem with dbus.
+=== Guest47093 is now known as Charitwo
+[11:37] <Slart> Guillem: I just tried running mousepad, since I run xfce on the remote computer and that worked nicely..
+[11:37] <Slart> Guillem: might be a gnome thing though..
+[11:38] <Guillem> Slart, yes, for sure. xfce apps won't complain about gconf
+[11:38] <Slart> Guillem: as I now see that you wrote in your question =)
+[11:39] <Slart> Guillem: let me boot up my laptop then.. it has plain ubuntu/gnome on it
+[11:39] <Guillem> Slart, my concern is that gconf needs to be properly launched with dbus somewhat, since latest gnome release.
+[11:39] <Guillem> Slart, also may be a problem of Gnome already running in the remote machine. I'll check that right now.
+[11:41] <Glimmerman> Dell D630 external monitor resolution problem....cant get 1280x1024 resolution....help plz
+[11:41] <stix_> I have this constant annoying sound on my system. Can I restart the sound daemon somehow?
+[11:42] <bsod__> здрасть
+[11:43] <ActionParsnip> Glimmerman: what video card?
+[11:43] <Glimmerman> intel onboard x3100
+[11:43] <asea168>  i speak Chinese who can know !
+[11:44] <yaris1234567890> what to do if i want to run more than one script in the background ? do i just stick all of em to /dev/null & ?
+[11:45] <Blue_AciD> Hey guys I'm on 8.04, on 8.10 I had compizfusion with like pour fire on screen etc in 8.10 it worked fine but in 8.04 it won't work at all or my screen goes blank etc\
+[11:45] <AdvoWork> how can i make a symbolic link from say /files/users to /files/shared ? :S
+[11:46] <Snupt> Blue_AciD, check youre video drivers
+[11:46] <Guillem> AdvoWork, ln -s /files/users /files/shared
+[11:46] <ActionParsnip> Glimmerman: http://ubuntuforums.org/showthread.php?t=883953
+[11:46] <Snupt> *your
+[11:47] <ActionParsnip> AdvoWork: ln -s /source/folder /destination/folder
+[11:47] <johny> ?seen rww
+[11:47] <saera> alexb92, i had a look at the rockbox thing and its not listing my ipod 4gb ipod shuffle there
+[11:48] <Slart> Guillem: it seems to work alright for me.. I get an error "Failed to create dbus proxu for org.gnome.Settings".. but it still works
+[11:48] <saera> any suggestions?
+[11:48] <saera> !ipod
+[11:48] <ubottu> For information on how to sync and add tracks to your iPod, see the guide at https://help.ubuntu.com/community/IPodHowto - See !RockBox for information on liberating your iPod
+[11:48] <ardaking> hi
+[11:48] <Snupt> seanw, shuffle doesn't suppot rockbox
+[11:48] <ActionParsnip> saera: i think you need a model with a screen
+[11:48] <Snupt> *support
+[11:48] <Guillem> Slart, hmm, but in my case works very slow at certain operations like showing a file-browser dialog, etc.
+[11:49] <cringous> Hi, I work a few months with ubuntu 8.10 64bits, with a Gforce 6600 and a LCD at 1280x800. Saturday the resolution falled to 1024x768, and even at nvidia-settings the monitor appears as CRT, and I can't change it to widescreen. Any clues ?
+[11:49] <Glimmerman> damn...so i'm stuffed
+[11:49] <Glimmerman> no ubuntu for me
+[11:49] <Glimmerman> :(
+[11:49] <ActionParsnip> Glimmerman: i gave you a link
+[11:49] <Glimmerman> i read it
+[11:49] <ardaking> how to increase monitor frequency with my ati on ubuntu 8.10 ?
+[11:49] <ActionParsnip> Glimmerman: edit your xorg.conf and add the mode
+[11:50] <Glimmerman> tried
+[11:50] <Slart> Guillem: well... it isn't very fast.. but it's still usable I think
+[11:50] <Glimmerman> i'll tinker some more
+[11:50] <asea168> how to install realplayer ?
+[11:50] <ActionParsnip> Glimmerman: did you restart x after changing the file?
+[11:50] <ActionParsnip> !realplayer | asea168
+[11:50] <ubottu> asea168: For multimedia issues, this page has useful information: https://help.ubuntu.com/community/RestrictedFormats - See also http://help.ubuntu.com/ubuntu/desktopguide/C/common-tasks-chap.html - But please use free formats if you can: https://help.ubuntu.com/community/FreeFormats
+[11:50] <Glimmerman> yeah....
+[11:50] <jessie> hey ppl does anyone know what to download to get all the restricted formats working?
+[11:50] <Guillem> Slart, yes, just I wish to find out which is the proper way to do remote use of current gnome apps...
+[11:50] <ActionParsnip> Glimmerman: then jump into display properties and select the resolution
+[11:50] <Glimmerman> would you suggest the 64bit edition for a cor2duo?
+[11:50] <cringous> I already has changed the mode at xorg.conf, but 8.10 works differently than olders versions with it
+[11:51] <ActionParsnip> Glimmerman: how much ram?
+[11:51] <Glimmerman> 2gig
+[11:51] <warloc> no
+[11:51] <ActionParsnip> Glimmerman: and what is the main purpose of the system?
+[11:51] <warloc> Stick 32bit
+[11:51] <Glimmerman> work
+[11:51] <ActionParsnip> Glimmerman: 32bit is my advice
+[11:51] <Glimmerman> k
+[11:51] <Glimmerman> thanks
+[11:51] <jinja-sheep> I'm curious -- Which partition would be faster for IO performance?  ext3 or lvm?
+[11:51] <asea168> give me Chinese page!!!
+[11:51] <ActionParsnip> Glimmerman: morfe stuff is 32bit and you dont have more than 4gb ram so you wont gain anything
+[11:52] <HacKBoX> ext4
+[11:52] <ardaking> anybody can help me about monitor frequency ?
+[11:52] <ActionParsnip> ardaking: you may have to modify xorg.conf to get the refresh you need
+[11:52] <HacKBoX> jinja-sheep ext3, ext4 if you can upgrade
+[11:52] <asea168> 中文
+[11:52] <ActionParsnip> HacKBoX: what proportion of speed upgrade is there?
+[11:52] <ardaking> ActionParsnip how i can do it ?
+[11:53] <ActionParsnip> !chinese | asea168
+[11:53] <ubottu> asea168: For Ubuntu help in Chinese 您可以访问中文频道： #ubuntu-cn 或者 #ubuntu-tw  或者 #ubuntu-hk
+[11:53] <ActionParsnip> ardaking: sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf_old; gksudo gedit /etc/X11/xorg.conf &
+[11:54] <ardaking> ActionParsnip ok i'm in xorg.conf...now ? sorry but i'm a newbie
+[11:55] <tons2000> Intrepid Ibex, my USB mouse appears to be sending two click events and two unclick events... Any ideas how I can correct this?
+[11:55] <Staale-> Is it possible to use firestarter to block certain ips from connecting to my computer? (There only seems to be options for allowing)
+[11:55] <Staale-> Or should I use /etc/hosts.deny
+[11:55] <ActionParsnip> ardaking: do some websearching about xorg.conf, you will see tonnes of guides and help
+[11:56] <ardaking> thanks ;)
+[11:56] <Slart> Staale-: it's possible using iptables.. I haven't used firestarter but I would be very surprised if there wasn't a way to do it
+=== tons2000 is now known as tonsofpcs
+[11:56] <siddu> what does this command mean 1>&2 in the command mean ?
+[11:57] <ActionParsnip> ardaking: im not overly sure how to do it but you setup displays in there so its probably the best place to start imho
+[11:57] <Staale-> Slart:  I currently use firestarter as that properly saves and restores my settings on reboot, and the package to do that for iptables was discontinued in debian afaik. Since I am using firestarter, I prefer not to mess with the underlying iptables rules directly as firestarter won't pick those up I think.
+[11:57] <asea168> how to download film???
+[11:57] <Slart> Staale-: sounds like a wise decision =)
+[11:58] <Guillem> Slart, strange, I've found out how to start dbus manually and "attach" gconf to it, and now I get the error you shown me.... and works much better. Your laptop is in Intrepid?
+[11:58] <ActionParsnip> !ot | asea168
+[11:58] <ubottu> asea168: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics. Thanks!
+[11:58] <Slart> asea168: click link, select save as.. save
+[11:58] <warloc> hey guys, any suggestion on an irc client (jaunty alpha 2) i hate xchat gnome and pidgen
+[11:58] <siddu> ﻿what does "1>&2"  mean in the "make install 1>&2 " ?
+[11:58] <Slart> Guillem: yes, 32 bit ubuntu 8.10
+[11:58] <ardaking> ActionParsnip i'm still searching in google but there isn't any guide/tut about it...
+[11:58] <asea168> where page is free??
+[11:58] <Guillem> Slart, OK
+[11:58] <Slart> siddu: have you checked in "man bash"
+[11:58] <Guillem> thanks for your help.
+[11:58] <Slart> Guillem: you're welcome
+[11:58] <chipt4> Staale-: it's a simple matter to create a script to load your iptables on reboot
+[11:59] <gavole> hello, i want install ubuntu 8.10, but my system is low specification ( P4 1.6Ghz, Memory 1G )
+[11:59] <ActionParsnip> warloc: sic
+[11:59] <warloc> thanks
+[11:59] <ActionParsnip> warloc: pork
+[11:59] <Slart> asea168: this isn't the place to discuss where to get films and such..
+[11:59] <warloc> Gavole: should be fine
+[11:59] <Guillem> gavole, my eeepc is not better than that I think
+[11:59] <Slart> asea168: this channel is for ubuntu support only
+[11:59] <ActionParsnip> warloc: epic4

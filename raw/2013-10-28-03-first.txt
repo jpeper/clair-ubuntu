@@ -1,0 +1,407 @@
+[02:10] <smuxi> it used*
+[02:11] <jmgk> haruuhi:  are you still around ?
+[02:11] <NCS_One> hitsujiTMO: VGA compatible controller: NVIDIA Corporation G98M [GeForce G 103M] (rev a1)
+[02:12] <Ben64> jmgk: obviously not, stop asking?
+[02:12] <jmgk> sorry
+[02:12] <hitsujiTMO> ns_one: install unity-tweak-tool and disable background blur in "search"
+[02:12] <hitsujiTMO> ncs_one: ^
+[02:15] <Crazyzurfer> hey guys.. how do I know if my nvidia 650m driver is installed? --> using ubuntu 13.10
+[02:16] <hitsujiTMO> Crazyzurfer: can you see something on the screen?
+[02:16] <Crazyzurfer> yes
+[02:17] <uncle_ben> i have an issue with an older dell dimension 2400, during boot, bios always complains: alert: previous fan failure.  the fan works fine...i cleared the system event log and it made no difference.  one thing i noticed is the the fan cable has four female connectors, but the mobo fan connector has only three pins...could that have something to do with the error message
+[02:17] <omnomnOMINOUS> Crazyzurfer, try going to Software & Updates > Additional Drivers?
+[02:17] <Crazyzurfer> but I've got 2 video cards, and I know one of them is obviously working, but I want to know if the nvidia driver is installed
+[02:17] <hitsujiTMO> Crazyzurfer: it's installed ... you can see what drivers are getting loaded in your xorg log ... /var/log/Xorg.0.log
+[02:17] <omnomnOMINOUS> I think that should tell you whether a proprietary video card driver is installed.
+[02:17] <uncle_ben>  i got the computer used, so not sure if fan is original, but it works
+[02:17] <omnomnOMINOUS> If I had chosen "encrypt my home folder" when I installed ubuntu 13.04, and now I want to do a clean install of 13.10 on top of it, without destroying my old data, is that possible? If I choose "encrypt my home folder" again, with the same password, will that be safe?
+[02:18] <hitsujiTMO> Crazyzurfer: you might want to have a look at this to get your optimus running: https://wiki.ubuntu.com/Bumblebee
+[02:19] <msdw> omnomnOMINOUS: you could try to update from the cd this way it  respects your data
+[02:20] <hitsujiTMO> uncle_ben: sounds like someone replaced it with the wrong type of fan.
+[02:20] <omnomnOMINOUS> msdw: I want to do a clean install, because my old install was broken. =/
+[02:20] <Crazyzurfer> hitsujiTMO: I've got it, because when upgraded to 13.10 I didn't have graphic interface, installed it and then worked... by the way that xorg log doesn't say anything about nvidia
+[02:20] <msdw> then the safes way is to back up you home and then do fresh install
+[02:21] <hitsujiTMO> Crazyzurfer: have you run optirun on anything to test it?
+[02:21] <Crazyzurfer> omnomnOMINOUS: It doesn't say anything.. it says, there are no aditional drivers
+[02:21] <Crazyzurfer> hitsujiTMO: nope, how can I do that?
+[02:21] <uncle_ben> hitsujiTMO, i mean it's not critical...the fan works..i just hit F1 and keep going, but it's kind of annoying
+[02:22] <cvtsx> Whats the best c++ ide on ubuntu?
+[02:22] <Ben64> !best | cvtsx
+[02:22] <ubottu> cvtsx: Usually, there is no single "best" application to perform a given task. It's up to you to choose, depending on your preferences, features you require, and other factors. Do NOT take polls in the channel. If you insist on getting people's opinions, ask BestBot in #ubuntu-bots.
+[02:22] <cvtsx> k
+[02:23] <msdw> cvtsx: try netbeans
+[02:23] <cvtsx> Does ubuntu have python 3.0 preinstalled?
+[02:23] <cvtsx> and thx msdw
+[02:23] <donavan01> how can I tell what chipset my wireless card uses?
+[02:23] <cvtsx> 12.04
+[02:24] <Crazyzurfer> hitsujiTMO: ran optirun firefox and got: (process:5661): GLib-CRITICAL **: g_slice_set_config: assertion 'sys_page_size == 0' failed --> is that normal?
+[02:24] <hitsujiTMO> Crazyzurfer: install mesa-utils that gives you glxgears. run it from the command line with and without optirun ... if theres a noticable difference in fps then you're good
+[02:25] <hitsujiTMO> Crazyzurfer: that looks like a known bug in firefox. try glxgears
+[02:26] <uncle_ben> donavan01, try sudo lshw (assuming you have that package installed...if not...install it)
+[02:27] <donavan01> I tried that and the only thing it says under wlan0 is wireless interface
+[02:27] <NCS_One> hitsujiTMO: thanks, I'll try it later
+[02:27] <Crazyzurfer> hitsujiTMO: I see not difference, both worked at 59.8 and 59.9 fps
+[02:28] <hitsujiTMO> Crazyzurfer: its vsyncing ... i get 1k fps on a crappy gpu
+[02:29] <hitsujiTMO> Crazyzurfer: 2 secs, ill see how to turn off the vsync
+[02:30] <hitsujiTMO> Crazyzurfer: do you have nvidia settings installed?
+[02:32] <Crazyzurfer> hitsujiTMO: the only thing I've installed is bumblebee and bumblebee-nvidia, nothing else... should I have it? :)
+[02:32] <hitsujiTMO> Crazyzurfer: can you try run it with by typing: vblank_mode=0 glxgears
+[02:32] <Crazyzurfer> I'm new with ubuntu
+[02:32] <Crazyzurfer> :O got
+[02:32] <Crazyzurfer> vblank_mode=0 glxgears
+[02:33] <hitsujiTMO> Crazyzurfer: and then ofcourse try: optirun vblank_mode=0 glxgears
+[02:33] <Crazyzurfer> hitsujiTMO: [15942.328392] [ERROR]Error running "vblank_mode=0": No such file or directory
+[02:33] <xrandr> Hello, has anyone encountered a problem with cinnamon on Ubuntu 13.10? I've been able to fix it where I can get a desktop background, and desktop icons, but no panel.
+[02:34] <Crazyzurfer> hitsujiTMO: that's when trying to use optirun
+[02:34] <hitsujiTMO> CrazyEddy: try this: echo "0/SyncToVBlank=0" >> ~/.nvidia-settings-rc
+[02:34] <hitsujiTMO> Crazyzurfer: echo "0/SyncToVBlank=0" >> ~/.nvidia-settings-rc
+[02:34] <hitsujiTMO> then run optirun glxgears
+[02:34] <exco> known problems with unity and nvidia nv43?
+[02:34] <exco> still no deal logging in, Dr_Willis
+[02:35] <Crazyzurfer> hitsujiTMO: 60 fps
+[02:36] <wiak> Oct 28 03:29:59 nwgat smbd[1898]: process_usershare_file: stat of /var/lib/samba/usershares/h failed. No such file or directory
+[02:36] <wiak> is driving me nuts
+[02:36] <Crazyzurfer> hitsujiTMO: I've got teamviewer, if you want, I can let you in :)
+[02:36] <hitsujiTMO> Crazyzurfer: is that the same for both runs?
+[02:36] <Crazyzurfer> hitsujiTMO: yes, but before, with the other commando for disabling vsync got like 3k
+[02:36] <sordidbass> windows free for 90 days :)
+[02:37] <hitsujiTMO> Crazyzurfer: it's probable running so. install dota 2 and run that to test for sure :P
+[02:37] <hitsujiTMO> !ot | sordidbass
+[02:37] <ubottu> sordidbass: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[02:37] <xrandr> anyone?
+[02:38] <hitsujiTMO> exco: thats pretty old, and is at the edge of support in linux afaik. not going to have a smooth experience in unity
+[02:39] <Dr_Willis> exco:  even with a differnt desktop?
+[02:39] <wilee-nilee> xrandr, This cinnamon from the ubuntu repos or a ppa?
+[02:39] <xrandr> from the repos
+[02:39] <exco> only had unity
+[02:39] <Crazyzurfer> hitsujiTMO: hahaha that's funny, the thing is that sometimes I get weird video behaviour. like when you have multiple windows open of the same program ex: nautilus and then you click twice on the icon on the launcher bar.. and you can see all the windows open.. there I see some withe lines around the windows and I just see the last opened windows, the other ones if you put the mouse in, you can see the orange border but nothing on those boxes
+[02:40] <Dr_Willis> exco:  sudo apt-get install jwm, and see if jwm works. ;) its like a huge 300k download.
+[02:40] <Dr_Willis> !info jwm
+[02:40] <ubottu> jwm (source: jwm): very small lightweight pure X11 window manager with tray and menus. In component universe, is optional. Version 2.1.0+svn579-2 (saucy), package size 110 kB, installed size 290 kB
+[02:40] <hitsujiTMO> Crazyzurfer: actually can you try nvidia-settings from the command line and see if a settings dialog opens
+[02:40] <xrandr> wilee-nilee: from the repos, not ppa
+[02:40] <Crazyzurfer> hitsujiTMO: "You do not appear to be using the NVIDIA X driver.  Please edit your X configuration file (just run `nvidia-xconfig` as root), and restart the X server."
+[02:41] <hitsujiTMO> Crazyzurfer: try optirun nvidia-settings
+[02:41] <wilee-nilee> xrandr, Not sure I have not used it.
+[02:43] <xrandr> anyone else?
+[02:45] <exco> jwm starts but reverts to login also quickly, Dr_Willis
+[02:46] <hitsujiTMO> exco: may be faster to do a fresh backup and fresh install than to fix the problem to be honest
+[02:46] <wilee-nilee> xrandr, appears to be various issues in general. http://askubuntu.com/questions/361392/does-cinnamon-2-0-really-break-your-13-10-desktop
+[02:47] <exco> hmm .. may be ... but now I know it's nvidia related
+[02:47] <zerodivided>  Hi I just installed cgminer on Ubuntu 13.10 using apt-get. I have an AMD video card. I now get this error when trying to launch an application. "Xlib: extension "NV-GLX" missing on display ":0"
+[02:50] <zerodivided> So did the package break something. I've removed it and I still get the error
+[02:50] <Dr_Willis> exco:  that is very very weird.
+[02:50] <Dr_Willis> exco: id go old school. make a .xsession file that has 2 lines..    xterm &      and then     exec jwm
+[02:51] <Dr_Willis> exco:  then stop the lightdm service and try 'startx' and see if you get a simple jwm + xterm desktop
+[02:51] <Dr_Willis> if that also crashes back to the console. you should see some error messages
+[02:55] <guest668779698>  Hello
+[02:56] <Dr_Willis> Jellos
+[02:57] <Dr_Willis> well...
+=== Matrixiumn is now known as CaveJohnson
+[03:00] <odium> with renice -20 is the highest priority right
+[03:00] <jon1233> is there a help channel
+[03:00] <ShayGuy> All my Chrome data is missing after the 13.10 upgrade.
+[03:01] <Dr_Willis> jon1233:  this is the ubuntu support channel
+[03:01] <jon1233> ty
+[03:01] <Dr_Willis> ShayGuy:  what data do you mean
+[03:01] <jon1233> How do I install VLC or video codecs on a ubuntu 13.10 new install that has no internet access
+[03:01] <jon1233> i can download here and transfer files via USB
+[03:01] <Ari-Yang> jon1233: download the .deb files
+[03:01] <jon1233> i did
+[03:02] <jon1233> but it said dependency error
+[03:02] <jon1233> Also the official site doesnt have VLC .deb anymore
+[03:02] <Ari-Yang> did you make sure to d/l all deps?
+[03:02] <jon1233> http://packages.ubuntu.com/saucy/video/
+[03:02] <jon1233> There is no VLC download there
+[03:02] <Ari-Yang> use a ppa https://launchpad.net/~videolan/+archive/stable-daily
+[03:02] <Ari-Yang> !14.04
+[03:02] <ubottu> Ubuntu 14.04 (Trusty Tahr) will be the 20th release of Ubuntu.  See the announcement at http://www.markshuttleworth.com/archives/1295 for more info.
+[03:03] <ShayGuy> Dr_Willis: Bookmarks, history, extensions, everything. I don't know if it's in the wrong directory or what, but Chrome's acting like it's the first time I've ever used it.
+[03:03] <jon1233> How do I download that Ari-Yang
+[03:03] <ShayGuy> Dr_Willis: I posted on Ask Ubuntu about it this morning, but haven't gotten a response.
+[03:04] <Ari-Yang> jon1233: download the .deb of the package, is fairly simple and the answer is right there in front of you on that page; I'm sure you can figure it out
+[03:04] <Ari-Yang> afk
+[03:04] <jon1233> I can't find the download link
+[03:05] <jon1233> I am on that page but no download links?
+[03:06] <jon1233> how do I download the file at https://launchpad.net/~videolan/+archive/stable-daily
+[03:06] <Dr_Willis> ShayGuy:  search through your home dir for the config dirs and cache. the package manager tools rarely if ever (i cant think of a single example)  touch files in the users /home/whatever directories.
+[03:07] <ironcamel> i'm trying to run gnome classic, but it is not showing up in my sessions list on the login screen. do i need to install a certain package to get it?
+[03:07] <hitsujiTMO> jon1233: click on package details, then choose your architecture then you can download the debs
+[03:08] <jon1233> I am on windows
+[03:08] <jon1233> I cannot use those terminal commands
+=== theinova is now known as inova
+[03:08] <Dr_Willis> ironcamel:  yes. depends on what ubuntu verion you are running
+[03:08] <jon1233> Windows computer has internet, ubuntu computer no internet
+[03:08] <Dr_Willis> !classic | ironcamel
+[03:08] <ubottu> ironcamel: The default interface in Ubuntu 11.04 is !Unity. To switch back to regular !GNOME: log out, click your username, click the Session box at the bottom of the screen, and select "Ubuntu Classic". For 11.10, see !notunity
+[03:08] <jon1233> usb to connect
+=== inova is now known as theinova
+[03:08] <ironcamel> Dr_Willis: i am using ubuntu 13.10
+[03:08] <Dr_Willis> ironcamel:  gnome-shell has its own classic-gnome-2 look. Im not sure if the other classic modes exist in 13.10
+[03:09] <Dr_Willis> ironcamel:  i have it. but i think i innstalled the 'ubuntu-gnome-desktop' package
+[03:09] <Dr_Willis> thats going to install all of gnome-shell
+[03:09] <ShayGuy> Dr_Willis: How specifically should I be searching? There are dozens of directories named "config" or "cache" in /home/myname.
+[03:09] <Dr_Willis> ShayGuy:  .config is first place to look.
+[03:10]  * ironcamel is installing ubuntu-gnome-desktop ...
+[03:10] <Dr_Willis> ShayGuy:  i got a .config/google-chrome and  .config/chromium  here
+=== Maxime is now known as maxxx
+[03:11] <maxxx> hi
+[03:11] <jon1233> :(
+[03:11] <philwdsa> hi
+[03:11] <maxxx> how i can install libgmp3c2 on ubuntu 13.04 amd64
+[03:11] <Dr_Willis> !find libgmp3c2
+[03:11] <philwdsa> is there a way to set video thumbnail previews?
+[03:11] <ubottu> Package/file libgmp3c2 does not exist in saucy
+[03:11] <ironcamel> the main thing i don't like about gnome is the alt tab behavior, it kills my workflow, thats why i want to try gnome classic ... just upgraded to gnome 13.10 and it broke my cinnamon
+[03:11] <philwdsa> for avi's and mpegs?
+[03:11] <jon1233> How do I install VLC package from https://launchpad.net/~videolan/+archive/stable-daily onto my windows machine, then move it to Ubuntu machine (no internet) via USB?
+[03:12] <ShayGuy> Dr_Willis: All right. I've got a /home/myname/.config/google-chrome and a /home/myname/.config/google-chrome-beta, along with .config/chromium.
+[03:12] <philwdsa> I only see them for images
+[03:12] <maxxx> for zimbra
+[03:12] <maxxx> how
+[03:12] <maxxx> i can add
+[03:12] <maxxx> in saucy ?
+[03:12] <ironcamel> ubuntu-gnome-desktop is installing the entire internet it seems like
+[03:12] <Dr_Willis> philwdsa:  Hmm. I see them for videos. i think theres some max file size config to let nautilus make them.
+=== lanr3fn1_sn3m is now known as Lacon1c
+[03:13] <Dr_Willis> ironcamel:  alt-tab in unity uses compiz. and has a lot of settings you can tweak
+[03:13] <ShayGuy> Dr_Willis: And .config/google-chrome is more than four times the size of the larger of the other two. I think we're on the right track.
+[03:13] <Dr_Willis> ironcamel:  not sure about gnome-shell or the classic mode
+[03:13] <philwdsa> Dr_Willis: where can this be adjusted?
+[03:13] <jon1233> How do I install VLC package from https://launchpad.net/~videolan/+archive/stable-daily onto my windows machine, then move it to Ubuntu machine (no internet) via USB?
+[03:13] <philwdsa> not sure if its the problem because I have penty of small video files
+[03:13] <Dr_Willis> philwdsa:  I see them for videos by default for local videos. I not for ones over the network shares.
+[03:13] <msdw> jon1233: why dont you download the code for the vlc and compile it on the linux machine
+[03:13] <jon1233> i dont know how
+[03:14] <jon1233> someone told me to go to https://launchpad.net/~videolan/+archive/stable-daily and download
+[03:14] <Dr_Willis> philwdsa:  i notice i DONT see them for .webm videos
+[03:14] <philwdsa> but for avi you do?
+[03:14] <odium> Why would playback of a bluray in vlc be effected  by using makemkv to copy and decrypt an unrelated bluray iso?
+[03:14] <msdw> when you download the code it comes with install instructions
+[03:14] <Dr_Willis> jon1233:  you will need to also download ALL the dependencies.. that can be a lot of differnt packages
+=== k is now known as Guest24257
+[03:14] <Dr_Willis> jon1233: most likely the .deb package by itself wont install. it will want other dependencies also
+[03:15] <jon1233> :(
+[03:15] <philwdsa> Dr_Willis: also I will add, I am trying to view the thumbnails on a external hd
+[03:15] <jon1233> How do I just make it work
+[03:15] <msdw> usuali you use comands like ./configure, make, make install
+[03:15] <philwdsa> but not sure why that would make a difference
+[03:15] <jon1233> Is there no easy way to do this?
+[03:15] <BlackWeb> Just curious I have a HP Laserjet that I have Connected to my machine, Which if my PC has been running for a long period of time it seems like the Printer doesnt communicate with the PC, To where I have to Unplug & Replug the printer back-in  in order to print to, Which I've tried doing service cups restart to have it re-spool the printer but it doesnt work, Is there another command I can use, Which seems like I did it before?
+[03:15] <jon1233> in windows I just download vlc.exe and put on USB and done
+[03:15] <jon1233> ubuntu = ???
+[03:15] <Dr_Willis> philwdsa:  external usb hd with videos i get thumbnails here
+[03:15] <ShayGuy> Dr_Willis: The launcher icon says "Google Chrome (beta)," too -- probably significant. Can I check what process it links to?
+[03:15] <philwdsa> Dr_Willis: hmm... strange
+[03:15] <Dr_Willis> jon1233:  you should connect to the internet and download it with the package manager
+[03:15] <msdw> jon1233:you can do the deb installation but just download the deendencies
+[03:16] <jon1233> I cant no internet adapter on that computer
+[03:16] <Dr_Willis> jon1233:  thats how ubuntu is designed to work.
+[03:16] <Dr_Willis> run a cable
+[03:16] <jon1233> no internet adapter
+[03:16] <jon1233> not even place to plug in cable
+[03:16] <Dr_Willis> otherwise you are going to spend i imagine several hours at this
+=== lanr3fn1_sn3m is now known as Lacon1c
+[03:16] <jon1233> so much for ease of use
+[03:16] <Dr_Willis> its designed for mondern people who do have internet.
+[03:16] <jon1233> windows works fine without internet
+[03:17] <jon1233> Is there no big file I can download that contains all the dependencies?
+[03:17] <msdw> jon1233:hey do you have a smart phone, u can use tether to share the internet
+[03:17] <jon1233> One big file that has it all and can auto-install?
+[03:17] <Dr_Willis> jon1233: not that i have EVER seen.
+[03:17] <Dr_Willis> ubuntu has a built in video player..
+[03:18] <shan> hey i'm having some trouble with editing my partitions, I have gparted installed and useable as a LiveUSB app, when i boot it, it puts me in  a debian desktop where i can use gparted... but i need help, here are my partitions: http://i.imgur.com/qResR5Y.png
+[03:18] <msdw> jon1233: only conected to the internet you can do the apt-get install vlc
+[03:18] <jon1233> I dont have a smartphone
+[03:18] <Dr_Willis> jon1233:  or find some ubuntu system that does have networking and use the apt-on-cd tool
+[03:18] <Dr_Willis> or even a ubuntu live-usb
+[03:18] <jon1233> Is there a way to get the restricted codecs installed?
+[03:18] <jon1233> I dont need VLC so much as codecs
+[03:18] <jon1233> just any video player that can play most video files
+[03:18] <Dr_Willis> codecs might be a single package
+[03:19] <jon1233> I downloaded them from that packages.ubuntu.com place
+[03:19] <jon1233> restricted-codecs-59.tar.gz
+=== javi is now known as Guest68120
+[03:19] <Dr_Willis> download everything that looks like you may need the .deb not the tar.gz
+[03:19] <jon1233> but it wouldn't load in the software thing in ubuntu
+[03:19] <Dr_Willis> .tar.gz would be source code
+[03:19] <Ari-Yang> jon1233: download the .deb and make sure you have the required dependencies of vlc https://wiki.videolan.org/Contrib_Status/
+[03:19] <Dr_Willis> in most cases
+[03:19] <Ari-Yang> jon1233: or you can configure https://wiki.videolan.org/Configure/
+[03:20] <Ari-Yang> as in compile from source
+[03:20] <Ari-Yang> good luck
+[03:20] <msdw> jon1233: http://www.videolan.org/vlc/
+[03:20] <Dr_Willis> vlc last i looked - pulled in quite a few dependencies on a normal install of ubuntu
+[03:20] <jon1233> There are 20+
+[03:20] <jon1233> i have vlc.deb
+[03:20] <jon1233> but it needed dependencies
+[03:21] <Dr_Willis> yep ;)
+[03:21] <jon1233> is deb file like exe?
+[03:21] <FoShizz> Hello!
+[03:21] <Dr_Willis> a .deb is the package you install
+[03:21] <jon1233> so like .msi
+[03:21] <Dr_Willis> its NOT an executable..
+[03:21] <Dr_Willis> its like an .apk on android. :)
+[03:22] <xrandr> I got cinnamon to work
+[03:22] <FoShizz> What would happen if I typed rm -rf /* on a livecd? Does it wipe the livecd permanently? Or does it wipe the entire computer as well?
+[03:22] <xrandr> the only way to make it work is via the ppa, not the repos
+[03:22] <Dr_Willis> FoShizz:  hope you dont have any hard drives mounted to /media/
+=== newbie is now known as Guest16023
+[03:22] <FoShizz> If there are harddrives, they all get wiped?
+[03:22] <Dr_Willis> FoShizz:  and ithink rm -rf/ has a failsafe these days - you need extra optins to do it
+[03:22] <Dr_Willis> FoShizz:  if they are MOUNTED
+[03:23] <FoShizz> Is there a quick way to unmount all harddrives?
+[03:23] <mojtaba> Hi,
+[03:23] <jon1233> Is there anyway to install restricted-extras via this http://archive.ubuntu.com/ubuntu/pool/multiverse/u/ubuntu-restricted-extras/
+[03:24] <Dr_Willis> FoShizz:  not that ive noticed.. theres differnt ways they can get mounted.. and if they are in use. you might need to force them to unmount
+[03:24] <jon1233> Files look too small
+[03:24] <FoShizz> dang
+[03:24] <mojtaba> I am using 13.10 and the clock is just disappeared from the top right of the desktop. Does anybody know what should I do?
+[03:24] <FoShizz> What's a good way to mess with someone who uses a livecd?
+[03:24] <Dr_Willis> ubuntu-restricted-extras is JUST a meta-package jon1233  its job is to pull in the other packages in an easy way
+[03:24] <FoShizz> Without damaging the acutal hdd?
+[03:25] <jon1233> Are the original files available for download that can be transferred on usb?
+[03:25] <Dr_Willis> jon1233:  the dependencies for that package are also .debs yopu can download and install. thats how the apt system works
+[03:25] <jon1233> have to transfer on usb after
+[03:25] <Dr_Willis> foo pulls in bar and fii... you could install bar and fii seperately
+[03:25] <mojtaba> I am using 13.10 and the clock is just disappeared from the top right of the desktop. Does anybody know what should I do? I searched clock in unity, but it is greyed out.
+[03:27] <jon1233> Is there a website that has the restricted-extras .deb files for 13.10 for download alone?
+[03:27] <Polymorph> Hello
+[03:28] <Polymorph> I need some help please
+[03:28] <Dr_Willis> jon1233:  the ubuntu-restricted-extas is a 'meta pacakge' it has no real content. it just 'depends' on the OTHER .deb packages
+[03:28] <Dr_Willis> jon1233:  so install ing it  - forces the system to get the other packages. and saves typeing. ;)
+[03:28] <Dr_Willis> jon1233:  ubuntu-desktop works the same way
+[03:28] <jon1233> Can I get those "other packages" from somewhere?
+=== vemacs is now known as vemacs|ded
+[03:28] <jon1233> And put them on USB and transfer
+[03:28] <Dr_Willis> jon1233:  yes.. same place you get all the otehr .debs
+[03:28] <Dr_Willis> however you are finding them
+[03:28] <ShayGuy> Dr_Willis: Sorry to interrupt -- DOES my launcher link to the wrong process?
+[03:29] <Dr_Willis> ShayGuy:  what launcher?
+[03:29] <ShayGuy> Dr_Willis: On the left side of the screen.
+[03:29] <Dr_Willis> ShayGuy:  launch it and try the about menu item and see perhaps? or use ps ax to see whats running
+[03:30] <Polymorph> I cannot login to Ubuntu forums today - yesterday was OK - firefox hangs at the address "https://login.ubuntu.com/j7l6Bkxx9zdlwRXq/+decide"
+[03:30] <Dr_Willis> or look at its .desktop file to see what its launching for that launcher
+=== mrapple is now known as MonsieurApple
+=== MonsieurApple is now known as mrapple
+[03:31] <Polymorph> anyone??
+[03:31] <jon1233> when i try that link polymorph it loads
+[03:32] <jon1233> Lost something? There's no page with this address in the Ubuntu One service. Check that you entered the address correctly and try again.
+[03:32] <ShayGuy> Dr_Willis: Well, I'm running Chrome now. I'm using webchat.
+[03:32] <Polymorph> I was in the login page and clicked "log in" - the address I have posted was cut from the address bar
+[03:33] <FoShizz> What's a good way to mess with someone running a livecd?
+[03:33] <ShayGuy> Dr_Willis: I looked in /usr/share/applications and found the desktop configuration file. The command was "/usr/bin/google-chrome-beta %U".
+[03:34] <jon1233> fuqqq
+[03:34] <Dr_Willis> ShayGuy:  looks like its running the beta to me. :)
+[03:35] <FoShizz> If I delete /etc, will I cripple a computer?
+[03:35] <ShayGuy> Dr_Willis: Would the upgrade have somehow changed the command? Do I just try and change it back now?
+[03:35] <Polymorph> Its OK - I have logged in from Chrome -wierd!!'
+[03:35] <Polymorph> thanks ppl
+[03:35] <Polymorph> bye
+[03:36] <msdw> FoShizz: the /etc file has the config of the ubunut
+[03:36] <ShayGuy> Dr_Willis: Not even sure exactly what the command's SUPPOSED to be... I don't know what the %U does, for instance.
+[03:36] <FoShizz> sweet
+[03:37] <FoShizz> if I rm -rf /etc a livecd, will it have permanent effects?
+[03:38] <jon1233> fuck this shit
+[03:38] <jon1233> i will download every dependency for vlc
+[03:38] <mojtaba> I am using 13.10 and the clock is just disappeared from the top right of the desktop. Does anybody know what should I do? I searched clock in unity, but it is greyed out.
+[03:38] <mojtaba> !language |jon1233
+[03:38] <ubottu> jon1233: Please watch your language and topic to help keep this channel family-friendly, polite, and professional.
+[03:39] <FoShizz> msdw if i rm a livecd will it be permanent?
+[03:39] <jon1233> Anyone know where VLC is at packages.ubuntu.com
+[03:39] <jon1233> I can't find it in the videos list
+[03:39] <msdw> no
+[03:39] <jon1233> http://packages.ubuntu.com/saucy/video/
+[03:39] <jon1233> no vlc
+[03:39] <FoShizz> so even if i rm -rf /* the entire filesystem, it will still boot?
+[03:40] <FoShizz> from the livecd that is
+[03:40] <msdw> its a live cd that can be changed any changes you make when you reboot it will be the same
+[03:40] <FoShizz> oh so you can store data on a livecd?
+[03:41] <msdw> yes, but make sure that you dont have a mounted partition
+[03:41] <FoShizz> wait idgi
+[03:41] <msdw> on the cd no, on a usb yes
+[03:41] <FoShizz> ok
+[03:42] <FoShizz> yea cuz i thought files livecd's restart everytime while usbs can be permanent
+[03:42] <msdw> yes
+[03:42] <we6jbo> Hi
+[03:42] <FoShizz> so basically, no matter how screwed up you get a livecd, it will still be fine and dandy
+[03:42] <we6jbo> I have a question
+[03:42] <msdw> yes
+[03:42] <FoShizz> thats awesome
+[03:42] <FoShizz> thanks!
+[03:42] <l_r> hello
+[03:43] <msdw> but if your going to do any thing do it on a vm safer
+[03:43] <l_r> can you tell me what is the comiler g++ version in ubuntu 13.10?
+[03:43] <anudas> heloo
+[03:44] <anudas> compiler is for compiling :-)
+=== faizul_ is now known as faizul
+[03:44] <msdw> l_r: put <application> -v
+[03:44] <l_r> msdw, i don't have it installed
+[03:45] <msdw> just install it
+[03:45] <jmgk> hello anudas
+[03:45] <jmgk> Welcome
+[03:45] <l_r> msdw, i don't have 13.10 installed
+[03:45] <jon1233> last thing I need help with: anyone know where the VLC package is @ packages.ubuntu.com? I can't see it at http://packages.ubuntu.com/saucy/video/
+[03:45] <msdw> unles that you want a version that you can download and compile
+[03:46] <SPEEDWAVE> hi
+[03:46] <l_r> msdw, no i just need to know which version of g++ comes with ubuntu 13.10, as i don't have 13.10 installed to check
+[03:46] <anudas> hi jmgk
+[03:46] <Dr_Willis> FoShizz:  i run live cds on systems with no hard drives.
+[03:48] <jmgk> anudas:  Hey
+[03:48] <Dr_Willis> !find g++
+[03:48] <ubottu> Found: account-plugin-aim, account-plugin-facebook, account-plugin-flickr, account-plugin-google, account-plugin-jabber, account-plugin-salut, account-plugin-twitter, account-plugin-windows-live, account-plugin-yahoo, activity-log-manager (and 15871 others) http://packages.ubuntu.com/search?keywords=g%2B%2B&searchon=names&suite=saucy&section=all
+[03:49] <Dr_Willis> $ g++ --version
+[03:49] <Dr_Willis> g++ (Ubuntu/Linaro 4.8.1-10ubuntu8) 4.8.1
+[03:49] <l_r> thx
+[03:49] <jon1233> Is it possible for me to use apt-get vlc, then somehow collect those downloaded files and put them on USB to another ubuntu machine?
+[03:49] <jmgk> anudas:  how is Ubuntu?
+[03:49] <Dr_Willis> jon1233:  thats what 'apt-on-cd' does
+[03:49] <Dr_Willis> lets you make a moveable repository
+[03:49] <Dr_Willis> !aptoncd
+[03:49] <ubottu> APTonCD is a tool with a graphical interface which allows you to create one or more CDs or DVDs with all of the packages you've downloaded via apt-get or aptitude, creating a removable repository that you can use on other computers - See also !offline
+[03:49] <jon1233> mmmmmmmmmm
+[03:49] <jon1233> nice
+[03:49] <Dr_Willis> cd/dvd or usb ;)
+[03:50] <anudas> jmgk fine
+[03:50] <ShayGuy> Dr_Willis: I gather I'm supposed to edit the launcher, but I don't know what the command is supposed to be.
+[03:50] <jmgk> good good
+[03:50] <jon1233> is there
+[03:50] <jon1233> !aptonusb
+[03:50] <jmgk> anudas:  on a laptop or desktop
+[03:50] <jmgk> ?
+[03:50] <xmetal> i usually just backup the DEB files themeselves, though APTtoCD is a good app
+[03:50] <Dr_Willis> ShayGuy:  i dont know eitehr. i dont know what you are doing.  there MIGHT be a .desktop launcher for the non beta one. i imagine the command will be the same only without the beta :)
+[03:50] <xmetal> themselves*
+[03:51] <anudas> desktop
+[03:51] <jon1233> how do I get the "show desktop" button on 13.10
+[03:51] <jmgk> ah
+[03:52] <Dr_Willis> jon1233:  i recall theres some check box in one of the settings tools to enable it.
+[03:52] <Dr_Willis> I never need it. ;) my desktop is blank
+[03:52] <anudas> and you?
+[03:53] <jon1233> hmm
+[03:53] <jon1233> the ubuntu machine i have connected to internet is 10.04 LTS
+[03:53] <jon1233> will apt-get VLC for the CD repository still work?
+[03:53] <jon1233> to transfer to 13.10 cpu?
+[03:55] <Dr_Willis> jon1233:  thats going to make things a lot harder.
+[03:55] <Dr_Willis> and no it wont work
+[03:55] <jon1233> ;(
+[03:55] <Dr_Willis> 10.X stuff is 3 years older then whats in 13.x
+[03:55] <we6jbo> I have a computer with a mac address of b8:ca:3a:b2:a8:6c and the ip is 66.75.232.175. Is there a way to wake it up if I'm on a different connection and the computer is asleep or off?
+[03:55] <jon1233> can i use the 13.10 cd to boot off of
+[03:55] <msdw> jon1233: the best way would be to compile it
+[03:55] <jon1233> msdw how do i do that?
+[03:55] <Dr_Willis> boot the 13.10 cd on the pc with the networking.. intall vlc.. see wht it downlaods
+[03:56] <Dr_Willis> copy styff to flash.. move it over
+=== dziegler_off is now known as dziegler
+[03:56] <Dr_Willis> compile it? thats not the best way. he would have to download ALL the dev pcakges and stuff
+[03:56] <Dr_Willis> then hope he can compile it
+[03:56] <jmgk> hi Dr_Willis
+[03:57] <Dr_Willis> jon1233:   a live usb with a persistant save file. with 13.10 - you could then install vlc on it.. and get the debs it used
+[03:57] <Dr_Willis> is another way. (or use it to make an apt-on-usb setup)
+[03:57] <jon1233> !apt-on-usb
+[03:58] <jon1233> why cant ubuntu just have one file that installs it
+[03:58] <jon1233> like windows has .exe
+[03:58] <jon1233> can put exe on usb
+[03:58] <anudas> jmgk
+[03:58] <ShayGuy> Dr_Willis: OK, I'm going to try removing the -beta from the launcher. Wish me luck.
+[03:59] <unicornjedi> Hi does anyone know how to use rosegarden?

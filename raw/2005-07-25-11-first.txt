@@ -1,0 +1,383 @@
+[10:31] <compubomb> ^rob^: do you know to get enlightenment to appear in the session dialog in gdm ?
+[10:32] <mindspin> neither
+[10:32] <compubomb> ndray: $ sudo su -
+[10:32] <IIIEars> jurgonh - still there? :)
+[10:32] <compubomb> then type your userpassword
+[10:32] <^rob^> compubomb: sorry - i have used enlight looong time ago - but... 1 sec
+[10:32] <gp_aaron|upstair> how do you show the amount of ram currently installed?
+[10:32] <compubomb> gp_aaron|upstair: mem ?
+[10:32] <IIIEars> "top"?
+[10:33] <ndray> ok, tks a lot compubomb
+[10:33] <gp_aaron|upstair> thats the one I was looking for
+[10:33] <mindspin> ^rob^: ping doesn't work neither, the only help is restarting network and readding default gw by hand
+[10:34] <gp_aaron|upstair> i seriously went throught almost every system tool installed to find that out, i even ran 'top', just didn't see it listed there
+[10:34] <mindspin> I dunno, wether it could be a kde problem, I'm kinda lost ...
+=== compubomb is starting to miss his mandriva
+[10:34] <jurgonh> yepp =)
+[10:34] <RQ> is there a package containing xlsfonts ATM? ;]
+[10:35] <gp_aaron|upstair> ew..
+[10:35] <^rob^> mindspin: hmm - looks like you have other problem than ipv6 - but - try unloading ipv6 and see if net goes down
+[10:35] <^rob^> if so - do a script on load to unload ipv6
+=== thisfred [~thisfred@a80-127-80-154.adsl.xs4all.nl]  has joined #ubuntu
+[10:36] <IIIEars> gp_aaron|upstair, - erm - top will let you know about all ram installed/used you can use synaptic - apologies thought it came installed
+[10:36] <mindspin> ^rob^: ERROR: Module ipv6 is in use
+[10:36] <^rob^> nice
+[10:37] <gp_aaron|upstair> IIIEars, i'm running server install
+[10:37] <^rob^> do you have ipv6 ip or ipv4 ?
+=== BL4NK [blank@adsl-69-226-46-72.dsl.irvnca.pacbell.net]  has joined #ubuntu
+=== maradong [~bhentges@vodsl-3888.vo.lu]  has joined #ubuntu
+[10:37] <mindspin> you mean my IP adresses? ip4
+[10:38] <^rob^>  compubomb: sorry - i can't remember the file which contain the script to seek for available vm
+[10:38] <compubomb> ^rob^: so uhm..
+[10:38] <compubomb> :(
+=== mikl [~mikkel@mikl.active.supporter.pdpc]  has joined #ubuntu
+=== espi [~espi@213.151.103.118]  has joined #ubuntu
+=== mantass [~Mantas@193.219.181.179]  has joined #ubuntu
+=== aatim_ [~aatim@203.131.175.93]  has joined #ubuntu
+=== espi [~espi@213.151.103.118]  has left #ubuntu ["Me'n]
+=== Hackmo [~sean13@82-41-83-57.cable.ubr01.dund.blueyonder.co.uk]  has joined #ubuntu
+[10:40] <Hackmo> hey can anyone tell me why programs just randomly close
+[10:40] <^rob^> um - gtg - kde installed ;)
+[10:40] <^rob^> bye
+=== ^rob^ [~daci@82.79.28.160]  has left #ubuntu []
+[10:40] <Hackmo> I started them in the terminal and I it returns segmentation fault when they close
+=== okeanos [~okeanos@rulerbude.wh-hauff.uni-ulm.de]  has joined #ubuntu
+[10:41] <synd> configure: error: Library requirements (libglade-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.
+=== synd dunno
+=== highvoltage [~Jono@196.36.161.235]  has joined #ubuntu
+=== Epic|| [~Epic__@dialup-4.240.69.239.Dial1.Phoenix1.Level3.net]  has joined #ubuntu
+[10:43] <Tomcat_> synd: Did you install the libglade-2.0-dev package?
+[10:44] <Tomcat_> libglade2-dev
+=== othernoob [~othernoob@p54A2FBE7.dip.t-dialin.net]  has joined #ubuntu
+=== gp_aaron|upstair [~gp_aaron@S0106000d87b24134.tb.shawcable.net]  has left #ubuntu []
+[10:44] <synd> Tomcat_: on it as we speak..
+=== tecta [~tecta@199.160.33.65.cfl.res.rr.com]  has joined #Ubuntu
+=== tecta [~tecta@199.160.33.65.cfl.res.rr.com]  has left #Ubuntu ["bah"]
+=== rob^ [~rob@rob-ubuntu.student.supporter.pdpc]  has joined #ubuntu
+[10:47] <jurgonh> a couple of questions, i am a linux user since yesterday so i am a newbie. there seems to be some problem with my soundcard, i have sound in my headphones but not in my speakers? what to do?
+[10:48] <Tomcat_> jurgonh: Open volume control and juggle around with the preferences...
+[10:48] <topyli> jurgonh: you plugged the phones in the cd drive?
+=== jb__ [~jb@nat1.cur-archamps.fr]  has joined #ubuntu
+=== mantass [~Mantas@193.219.181.179]  has left #ubuntu []
+[10:48] <Tomcat_> jurgonh: There is probably some volume control or switch in there that you have to enable first.
+=== jb__ [~jb@nat1.cur-archamps.fr]  has left #ubuntu ["Leaving"]
+=== primos [~primos@38-180.adsl.lpoy.dnainternet.fi]  has joined #ubuntu
+[10:49] <jurgonh> ok.. no i have them plugged into my soundcard.
+=== HrdwrBoB [~matt@bob.is.teh.admin.at.vicnet.net.au]  has joined #ubuntu
+=== sacool [~email@p548283C1.dip0.t-ipconnect.de]  has joined #ubuntu
+=== sacool [~email@p548283C1.dip0.t-ipconnect.de]  has left #ubuntu []
+[10:50] <Tomcat_> jurgonh: It was the same here... Ubuntu installed - no sound on the rear speakers... after playing around with the preferences, I found a volume control for the rear out... that's even more control than in Windows. :)
+=== ateves [~ateves@e176124063.adsl.alicedsl.de]  has joined #ubuntu
+[10:50] <synd> Tomcat_: i was gonna install checking for gstreamer-0.8... Package gstreamer-0.8 was not found in the pkg-config search path.
+=== JDGBOLT [~aaron@VDSL-130-13-61-167.PHNX.QWEST.NET]  has joined #ubuntu
+[10:50] <jurgonh> oki =)
+[10:50] <jurgonh> i will look that up =)
+[10:50] <synd> erm, that messed up
+=== martink [~martin@p54B3B71F.dip0.t-ipconnect.de]  has joined #ubuntu
+[10:51] <synd> i dunno which gstreamer i need from the repos
+=== karljp [~karl@194-144-39-202.du.xdsl.is]  has joined #ubuntu
+[10:52] <synd> libgstreamer0.8-dev?
+=== karljp [~karl@194-144-39-202.du.xdsl.is]  has left #ubuntu ["Leaving"]
+=== chiquito [~pedromeng@249.Red-83-45-135.pooles.rima-tde.net]  has joined #ubuntu
+=== fox[off]  [~FoX@Granby-ppp28051.qc.sympatico.ca]  has joined #ubuntu
+=== helgoman_ [~helgoman@dsl-082-082-159-187.arcor-ip.net]  has joined #ubuntu
+=== maddler [maddler@81.174.27.50]  has joined #ubuntu
+[10:54] <IIIEars> gstreamer-mad would work also, no?
+[10:54] <synd> ok past that..
+=== seb128_ [~seb128@ANancy-151-1-45-6.w83-196.abo.wanadoo.fr]  has joined #ubuntu
+[10:54] <synd> cc1: Permission denied: opening dependency file .deps/debug.Tpo
+[10:54] <synd> ugh
+[10:55] <ateves> why does gnomebaker take up to 20 minutes to encode 12 mp3 files to burn it as an audio CD?
+=== GNULinuxer [~ghoseb@59.95.3.161]  has joined #ubuntu
+=== jeff_ [~jeff@CPE0010a726d5aa-CM0012c99f15fe.cpe.net.cable.rogers.com]  has joined #ubuntu
+=== jeff_ [~jeff@CPE0010a726d5aa-CM0012c99f15fe.cpe.net.cable.rogers.com]  has joined #ubuntu
+=== nxv_ [~matrix@dsl-084-056-080-200.arcor-ip.net]  has joined #ubuntu
+=== jeff_ [~jeff@CPE0010a726d5aa-CM0012c99f15fe.cpe.net.cable.rogers.com]  has joined #ubuntu
+=== magnus__ [~magnus@h4n1fls35o897.telia.com]  has joined #ubuntu
+=== Rorviker [~rory@ti112210a080-1054.bb.online.no]  has joined #ubuntu
+=== highvoltage [~Jono@196.36.161.235]  has joined #ubuntu
+[10:59] <konki> how do i change the splashscreen?
+=== Sponge_ [~Sponge@pc-183-143-239-201.cm.vtr.net]  has joined #ubuntu
+[11:00] <topyli> konki: apps -> system -> config editor. search for "splash"
+=== Hoxzer [Hoxzer@dsl-hkigw2ga0.dial.inet.fi]  has joined #ubuntu
+[11:00] <Rorviker> Just installed Ubuntu and got wlan up and running. But when rebooting it dosnt start wlan0, I did ndiswrapper -m and added ndiswrapper to /etc/modules. What more is needed ?
+[11:00] <Sponge_> Can I install ubuntu in another computer without losing the /home data?
+[11:00] <konki> thanks topyli
+[11:01] <topyli> Sponge_: if /home is on a partition of its own
+=== hno73 [~henrik@henrik.gotadsl.co.uk]  has joined #ubuntu
+[11:04] <topyli> konki: actually, trying to search for "splash" doesn't give any results. anyway, it's in apps/gnome-session/options
+[11:04] <konki> topyli, i'm in the config editor just dropdown the folders ??
+[11:04] <konki> topyli, yes it doesn't...
+=== flyingpenguin [~flyingpen@pool-71-103-171-206.lsanca.dsl-w.verizon.net]  has joined #ubuntu
+[11:04] <Tomcat_> Rorviker: https://wiki.ubuntu.com//SetupNdiswrapperHowto
+[11:05] <topyli> konki: so drill down to apps/gnome-session
+[11:05] <Rorviker> thx Tomcat_ :)
+=== maddler [maddler@81.174.27.50]  has joined #ubuntu
+[11:05] <Tomcat_> :>
+=== flyingpenguin900 [~flyingpen@pool-71-103-171-206.lsanca.dsl-w.verizon.net]  has joined #ubuntu
+=== mumbles [~admin@cpc1-bror1-6-0-cust90.bmly.cable.ntl.com]  has joined #ubuntu
+=== flyingpenguin900 is now known as Server-Penguin
+=== daves [~daves@203.184.24.59]  has joined #ubuntu
+=== xst_ [~xst@hst-250-210.splius.lt]  has joined #ubuntu
+=== DeMi is now known as __DeMi
+[11:08] <Rorviker> Tomcat_: "5. You also need to add the ndiswrapper module to the startup modules so Ubuntu can setup the device when your machine starts. You need to add ndiswrapper to the end of the /etc/modules file." <-- I've done that
+[11:08] <Rorviker> and still I need to do a ifconfig wlan0 up when I start
+[11:08] <Seveas> Rorviker, add 'auto wlan0' to /etc/network/interfaces
+[11:09] <konki> topyli, do i unset my default splash image? if yes, how do i insert the new one if i DL it and its in HOME??
+[11:09] <Seveas> and also: iface wlan0 inet dhcp
+=== ichy [~zaklane1@chello213047083134.7.14.vie.surfer.at]  has joined #ubuntu
+[11:09] <Seveas> konki, the login splash image?
+[11:09] <Rorviker> :)
+[11:09] <Seveas> (what you see after logging in before the desktop shows)
+=== Kamping_Kaiser [~Kaiser@ppp208-157.lns1.adl2.internode.on.net]  has joined #ubuntu
+[11:10] <daves> Question ... using warty and would like roller to use rar arcs (is roller good or arc better ?)
+[11:10] <topyli> konki: in apps/gnome-session/options, just change the value of splash_image to wherever you have the image
+[11:10] <topyli> konki: like /home/konki/my-new-splash.png
+[11:11] <jurgonh> How do i asociate files in Ubuntu? i Want beep media player to play my mp3s?
+[11:11] <Tomcat_> jurgonh: Right mouse button, properties, "Open With"
+[11:11] <konki> topyli, like    /apps/gnome-session/options/splash_image??
+[11:11] <Burgundavia> jurgonh, right click on an mp3
+=== rofel [~rofel@83.150.6.34]  has joined #ubuntu
+[11:11] <topyli> konki: yes
+[11:11] <Burgundavia> jurgonh, 3rd tab, choose mplayer
+[11:12] <konki> oops! /apps/gnome-session/options/splash_image
+[11:12] <daves> Ummm Ya i have a similar problem with my mp3s. they did play under ALSA in Mandrake 10.0 official but not in ubuntu now (permissions are good)
+[11:13] <NetEcho> I got a problem
+[11:13] <Seveas> daves, which player?
+[11:13] <NetEcho> someone the top gnome bar on the livecd got dragged to the left side of the screen and I can't drag it back
+[11:13] <konki> topyli, thanks lemme test it out...
+=== GNAM [~auauauau@host9-241.pool80183.interbusiness.it]  has joined #ubuntu
+[11:14] <daves> Totem & music player, Totem gives an unknown error used to use totem under MDK.
+[11:14] <jurgonh> but when i double click on mp3s its always Totem that pops up.. i must rightcklick each time and chose"open with", how do i do so that i can double click on songs?
+[11:15] <Burgundavia> daves, switch to totem-xine
+[11:15] <Seveas> daves, have you installed gstreamer0.8-mad?
+[11:15] <Burgundavia> jurgonh, right click and choose properties
+[11:15] <Burgundavia> jurgonh, 4th tab, select beep
+[11:16] <daves> how ? this is very much a new install (gstreamer0.8-mad - think so if it's done by default)
+[11:16] <Burgundavia> daves, it is not done by default
+[11:16] <jurgonh> Thx =)
+[11:16] <Burgundavia> daves, see wiki.ubuntu.com/RestrictedFormats
+[11:17] <jurgonh> is there any good DC client fpr Ubuntu Linux?
+[11:17] <Burgundavia> DC?
+[11:17] <konki> daves, try VLC... it plays almost everything for me
+[11:17] <synd> anyone use TunesBrowser?
+=== nievrix [~mumbly@con58-1-82-244-12-40.fbx.proxad.net]  has joined #ubuntu
+[11:17] <daves> okay go it now so won't be repling to much
+=== aatim_ is now known as aatim
+=== philc [~reformist@63.99.57.54]  has joined #ubuntu
+=== wijnand [wijnand@spoon.pkl.net]  has joined #ubuntu
+[11:18] <Rorviker> After adding the changes to /etc/network/interfaces none of the cards get up
+[11:18] <daves> konki: thing is i have a very defualt setup at the mo and used to using KDE not Gnome so getting around a new GUI and OS is a bit of a head scratcher :)
+[11:19] <pvanhoof> freax@lort:~/cvs/gnome/gnome-schedule/src $ at tomorrow
+[11:19] <pvanhoof> warning: commands will be executed using /bin/sh
+[11:19] <pvanhoof> at> ls
+[11:19] <pvanhoof> at> <EOT>
+[11:19] <pvanhoof> job 6 at 2005-07-21 11:18
+[11:19] <pvanhoof> freax@lort:~/cvs/gnome/gnome-schedule/src $ at -c 6
+[11:19] <pvanhoof> Cannot open a00006011d52ce: Permission denied
+=== Davey|Work [davey@140.99.30.50]  has joined #ubuntu
+[11:19] <pvanhoof> freax@lort:~/cvs/gnome/gnome-schedule/src $
+[11:19] <pvanhoof> howcome?
+[11:19] <Burgundavia> daves, you can install KDE
+[11:19] <Burgundavia> daves, install kubuntu-desktop
+[11:19] <daves> Ya i'm at the mo getting Kubuntu iso
+[11:19] <Seveas> pvanhoof, way off topic here and please don't paste...
+=== araw1 [~haha@203.115.176.234]  has joined #ubuntu
+=== _ [~bartix@d54C25B24.access.telenet.be]  has joined #ubuntu
+[11:20] <Seveas> hmm, ditch the first part, misread it
+[11:20] <konki> daves, try this site http://www.videolan.org/vlc/download-debian.html
+[11:21] <topyli> konki: vlc is apt-gettable, no need to hunt for it on the web :)
+[11:21] <pvanhoof> Seveas, how is it offtopic? it's an ubuntu bug
+[11:21] <pvanhoof> it's not a at bug
+[11:22] <pvanhoof> ubuntu has the permissions of the location where at can store it's stuff totally wrong
+[11:22] <Seveas> indeed
+[11:22] <Seveas> odd
+[11:22] <pvanhoof> https://bugzilla.ubuntu.com/show_bug.cgi?id=12825
+[11:22] <pvanhoof> so it's not offtopic
+[11:22] <Seveas> hmm, ditch the first part, misread it <--
+[11:22] <daves> Burgundavia: Do i need to go to synptic to get all those files ??  using 56k modem bit of a job, this is a reason for my questioning about doing a offline repository lastnight, i d/l stuff then set them up for installing via synaptic
+[11:22] <konki> topyli, i got it from my SPM, i think daves can easily find it there
+[11:22] <peterretief> any good uml editors around
+[11:23] <daves> konki: thanks will visit them.
+=== cmatheson [~cmatheson@71-32-225-55.slkc.qwest.net]  has joined #ubuntu
+=== derreck [~derreck@69-162-63-128.stcgpa.adelphia.net]  has joined #ubuntu
+[11:23] <Burgundavia> daves, ouch
+[11:23] <pvanhoof> Seveas, in fact, it's making it impossible for some other guy to make an ubuntu package for gnome-schedule. Since gnome-schedule depends on a correct implementation of both crontab and at
+[11:24] <topyli> konki: sure, since you say there are debian packages and they work on ubuntu
+[11:24] <Burgundavia> daves, get a friend to burn you the dvd or the kubuntu iso
+=== halgeir [~halgeir@193.157.81.154]  has joined #ubuntu
+=== trevi [~eugoias@dial-148-240-20-155.zone-1.dial.net.mx]  has joined #ubuntu
+=== Bitmastro [~Bitmastro@d83-176-17-196.cust.tele2.it]  has joined #ubuntu
+[11:24] <halgeir> How do I install a .deb-package that I have downloaded locally?
+=== nomis_ [~nomis|@chello062178225065.14.15.vie.surfer.at]  has joined #ubuntu
+[11:25] <Bitmastro> hi
+=== ishai_ [ishai@24-205-124-191.bb-cres.charterpipeline.net]  has joined #ubuntu
+[11:25] <Bitmastro> #halgeir sudo dpkg -i package.deb
+=== highvoltage [~Jono@196.36.161.235]  has joined #ubuntu
+[11:25] <daves> spoke to unoob (i think it's the name last night about telecom NZ at lenght, they're a monopoly and give shit service for boardband eg 256 down and 128 up
+[11:25] <konki> sudo dpkg -i <.deb>
+[11:26] <halgeir> worked great. Thanks!
+[11:26] <Bitmastro> guys.. does anyone know where to find an ubuntulite iso?
+[11:26] <Bitmastro> the site is unusable
+[11:26] <halgeir> Just out of curiosity... is there a "graphical" way of doing the same?
+[11:27] <Kamping_Kaiser> no, not unless synaptic now does it
+[11:27] <Bitmastro> mmm maybe some nautilus script can do
+[11:27] <_> i've got the same problem installing packages
+[11:28] <Seveas> pvanhoof, hmm, even after I corrected these permissions, it still says permission denied....
+[11:28] <trevi> Why my pc turns off after a while without activity? The fan keeps working but the sistem don't
+[11:28] <daves> halgier: from my reading there is but you have to create a packages.gz via dpkg then setup a new repository via synaptic
+[11:28] <konki> halgeir, doesn't seem but if syn does it would just be great
+[11:28] <peterretief> Hello all, know of uml editor
+[11:28] <halgeir> OK. Thanks.
+=== atlas95 [~cyril@84.5.54.62]  has joined #ubuntu
+[11:29] <pvanhoof> Seveas, on a normal debian woody it's working for me
+[11:29] <konki> more of a mouse guy then keyboard
+[11:30] <rommer> i have a couple of identical computers that i am looking to turn into a cluster using ubuntu linux, anyone have an idea on how to do this
+[11:30] <_> can anybody give me a explanation about the installing proces in dutch?
+=== tombs [~tombs@h141156.upc-h.chello.nl]  has joined #ubuntu
+=== flogiston [~flogiston@c-38a2e253.27-1-64736c10.cust.bredbandsbolaget.se]  has joined #ubuntu
+[11:30] <konki> _ how come you have it in dutch??
+[11:31] <pvanhoof> Seveas, I added a comment to https://bugzilla.ubuntu.com/show_bug.cgi?id=12825 with the output on a woody (same commands)
+=== ubuntu_demon [~roald@82-217-148-214.cable.quicknet.nl]  has joined #ubuntu
+[11:31] <ubuntu_demon> hi
+[11:31] <Bitmastro> hi
+[11:32] <RQ> hi
+[11:32] <flogiston> Hi all. I need help on installing Warcraft 3. When i wine the autoplay.exe file from the cd it complaines about that warcraft 3 doesn't work on win95...
+=== zever [~zever@ip-81-11-193-92.dsl.scarlet.be]  has joined #ubuntu
+=== ptlo [~senko@darguner.rdlab.carnet.hr]  has joined #ubuntu
+=== keikoz [~keikoz@vol75-6-82-227-148-105.fbx.proxad.net]  has joined #ubuntu
+=== didascalos [~Hagen@p54A899FB.dip0.t-ipconnect.de]  has joined #ubuntu
+[11:33] <RQ> try wine'ing the setup.exe, maybe? :)
+[11:33] <Bitmastro> never used wine... but i think there is a config file in ~/.wine that let you choose what os
+[11:34] <Bitmastro> you want
+=== n3C [~n3C@212.122.206.61]  has joined #ubuntu
+[11:34] <IIIEars> as long as it's windows - lol
+[11:34] <Seveas> pvanhoof, can you put the ls -al /var/spool/cron/ there too
+=== kamstrup [~kamstrup@0x3e42da90.adsl.cybercity.dk]  has joined #ubuntu
+=== tium [~LaLu@AMontsouris-151-1-65-207.w82-123.abo.wanadoo.fr]  has joined #ubuntu
+=== wrtpeeps [~andy@wrtpeeps.user]  has joined #ubuntu
+[11:35] <IIIEars> If Wine needs a certain windows file is it logged so you can copy it from the windows install?
+[11:35] <synd> why doesnt ubuntu come with gcc by default, just like all other linux distros?
+=== yuacht [~zth@82.193.191.4]  has joined #ubuntu
+[11:36] <IIIEars> one CD install?
+=== ichy [~zaklane1@chello213047083134.7.14.vie.surfer.at]  has left #ubuntu []
+[11:36] <Burgundavia> synd, most people don't use it, and it is therefor a security risk
+[11:36] <pvanhoof> Seveas, I think it's a user/group setup problem rather than a filesystem permission one
+[11:36] <topyli> synd: i don't think many distros install it by default
+[11:36] <wrtpeeps> hi
+[11:36] <synd> Burgundavia: hows it a security risk?
+=== tvoss [~tvoss@p508E0ED6.dip0.t-ipconnect.de]  has joined #ubuntu
+[11:37] <pvanhoof> anyway, I added it as a comment (on both hosts)
+[11:37] <Burgundavia> synd, any program is a secrity risk
+[11:37] <Burgundavia> synd, allows people to compile stuff on your machine
+=== jiyuu0 [~jiyuu0@219.95.210.238]  has joined #ubuntu
+[11:37] <Burgundavia> synd, and most distros have stopped installing it by default
+[11:37] <IIIEars> <<- removes fakeroot AND GCC to reinstall as needed.   lol
+[11:37] <topyli> synd: crack into a box, compile a trojan or recompile ls to include a trojan, etc.
+=== anders [~anders@x1-6-00-40-f4-95-26-c6.k130.webspeed.dk]  has joined #ubuntu
+=== opawahamster [~hamster@202-0-49-213.paradise.net.nz]  has joined #ubuntu
+[11:38] <tvoss> hi all, does anyone know when the Humility icon theme will be released officially
+=== heyko [~face@p54846BD6.dip.t-dialin.net]  has joined #ubuntu
+=== qbeek [~qbeek@sete.idealx.com]  has joined #ubuntu
+=== heyko_ [~face@p54846BD6.dip.t-dialin.net]  has joined #ubuntu
+[11:38] <RQ> Humility?
+=== KB2000 [~kb@port227.ds1-oebr.adsl.cybercity.dk]  has joined #ubuntu
+[11:39] <daves> Burgundavia: great joys :) got the gstreamer0.8-mad and now music.....
+[11:39] <tvoss> RQ: On Ubuntuforums.org, the thread about breezy development has some screenshots that show some *nice* new icons ... according to comments it's called "Humility"!
+[11:40] <RQ> tvoss, have a link? :)
+=== RQ likes eye candy :P)
+[11:40] <RQ> :))
+[11:40] <Nermal> tvoss: url ?
+[11:40] <Burgundavia> tvoss, no idea
+[11:40] <IIIEars> !eyecandy
+[11:40] <ubotu> hmm... eyecandy is http://art.gnome.org - http://www.gnome-look.org - http://kdelook.org - http://themes.freshmeat.net/browse/58/ - http://themes.freshmeat.net/browse/57/
+[11:40] <Burgundavia> tvoss, #ubuntu-artwork
+[11:40] <tvoss> one moment ...
+[11:41] <anders> hello
+=== Mez [~Mez@cpc2-lich4-3-0-cust115.brhm.cable.ntl.com]  has joined #ubuntu
+[11:41] <Bitmastro> hi
+[11:41] <didascalos>  hi everybody, yesterday I tried the configuration of a winmodem with the Intel AC '97 chipset and I failed. Anybody out there with same experiences?
+[11:42] <tvoss> http://dev.realistanew.com/nautilus.png
+[11:42] <anders> is here a ftp user in here ???
+[11:43] <anders> are you toaking overclokking ??
+[11:43] <Nermal> english please
+[11:44] <daves> okay got Open office 2.0 beta ... 106 and used dpgk -i and all went well  but then it just stopped and dropped to the command line.  recall someone saying you have to remove a file *tool* out of the deb file can anyone tell me the filename to be removed and how :)
+[11:44] <qbeek> hello, does the kernel contain the version of the gcc which compiled it?
+[11:44] <anders> have you overclock it?
+[11:44] <Nermal> overclock what ?
+[11:44] <anders> you chip ?
+[11:44] <Seveas> qbeek, kernels don't contain compilers...
+[11:44] <Nermal> qbeek: yes
+[11:44] <Nermal> Seveas: read the question
+[11:44] <Nermal> qbeek: first line of dmesg
+=== darkling [~hugo@joshua.ecs.soton.ac.uk]  has joined #ubuntu
+[11:44] <Seveas> oh, version NUMBER
+[11:45] <Seveas> lol :)
+[11:45] <Nermal> ubuntu (~) $ dmesg |head
+[11:45] <Nermal> Linux version 2.6.10-4-686-smp (buildd@mcmurdo) (gcc version 3.3.5 (Debian 1:3.3.5-8ubuntu2)) #1 SMP Sat Mar 12 11:15:47 GMT 2005
+[11:45] <Nermal> see :)
+=== nievrix [~mumbly@con58-1-82-244-12-40.fbx.proxad.net]  has left #ubuntu ["a+]
+[11:45] <pvanhoof> Seveas, there's a difference in the SUID setup of /usr/bin/at. On woody it's SUID root. On Hoary it's SUID daemon
+=== Grid_block [~orhs@cm-62.179.142.231.chello.no]  has joined #ubuntu
+[11:45] <Grid_block> hey all
+[11:46] <pvanhoof> note that daemon is in at.deny
+=== didascalos [~Hagen@p54A899FB.dip0.t-ipconnect.de]  has left #ubuntu []
+[11:46] <anders> hi
+[11:46] <peterretief> hello all, any tips on a good flowchart/uml editor please
+[11:46] <Rorviker> if I'm going to enter a non hex password for wlan "wlan_key s:key" ?
+[11:46] <Grid_block> i just want to say how much this channel has helped me :D
+[11:46] <Seveas> pvanhoof, heh, stupid bug I guess:)
+[11:46] <Grid_block> in a bit of a happy mood here.. :P
+=== rofel [~rofel@83.150.6.34]  has joined #ubuntu
+=== Aegir^ [Richard@d220-238-117-152.dsl.vic.optusnet.com.au]  has joined #ubuntu
+[11:46] <anders> is some baddy a casemod freek ??
+[11:47] <Seveas> pvanhoof, /var/spool/cron/atjobs/* shoud have mod g+rwx too then
+=== paines [~al@p508A503F.dip.t-dialin.net]  has joined #ubuntu
+[11:47] <Nermal> anders: no
+[11:47] <Bitmastro> peterretief poseidon for uml
+[11:47] <paines> hi
+[11:47] <Bitmastro> there is a linux ver
+[11:47] <Nermal> peterretief: dia ?
+[11:47] <Nermal> !info dia
+[11:47] <ubotu> dia: (Diagram editor), section universe/graphics, is optional. Version: 0.94.0-5ubuntu1 (hoary), Packaged size: 171 kB, Installed size: 472 kB
+[11:47] <anders> i think i meak a ship as and computer
+[11:47] <Nermal> anders: /quit
+[11:47] <Seveas> anders, this is not an overclocking/case modding channel...
+[11:47] <peterretief> Bitmastro, thanks
+[11:47] <Bitmastro> np
+[11:48] <Nermal> with hardware being so cheap these days, no need to overclock anyway
+[11:48] <Seveas> :)
+[11:48] <Nermal> if a 3ghz cpu can't run a piece of software, something is wrong ;)
+[11:48] <peterretief> Nermal, thanks but I tried it, but it kept crashing
+[11:48] <Nermal> peterretief: :(
+=== cmatheson [~cmatheson@71-32-225-55.slkc.qwest.net]  has joined #ubuntu
+=== msieradzki [~marek@xdsl-1118.wroclaw.dialog.net.pl]  has joined #ubuntu
+=== paines [~al@p508A503F.dip.t-dialin.net]  has left #ubuntu ["Konversation]
+=== X7C [~xtc@200.83.150.15]  has joined #ubuntu
+=== Prof_Frink [~Alan@tnt-13-86.easynet.co.uk]  has joined #ubuntu
+[11:52] <daves> anyone able to help... with open office 2.0 and installing it (got it on HD now) ?
+=== AlohaWulf [alohawolf@cpe-67-49-121-123.socal.res.rr.com]  has joined #ubuntu
+=== tna [~elevation@37.184.33.65.cfl.res.rr.com]  has joined #ubuntu
+=== Grid_block [~orhs@cm-62.179.142.231.chello.no]  has joined #ubuntu
+[11:55] <tna> hi im a noob and was wondering if ubuntu would be a good newbie linux distro?
+[11:56] <Bitmastro> why don't you try the live cd so you judge by yourself?
+[11:56] <Bitmastro> i could tell you it'll newbie friendly, but i can be biased
+[11:57] <Bitmastro> just my 2 cents
+[11:57] <daves> tna: i have been using MDK for @ 2yrs and just moved to ubuntu, apart from the new GUI (using KDE) and getting to learn new qurks of ubuntu i am not doing too badly with it
+[11:57] <anacron> tna: i'd say it is
+[11:57] <Seveas> tna, Ubuntu is suitable for newbies
+=== NatF-UQI [~internat@dare.to.play.on.our-lan.com]  has joined #ubuntu
+=== MarleK [~MarleK@slo.r00x.net]  has joined #ubuntu
+[11:57] <daves> tna: thin kyou just have to get your feet wet and try it
+[11:57] <poningru> tna: yes its an excellent noob distro
+[11:58] <poningru> never tried anything but win
+=== AlohaWulf [alohawolf@cpe-67-49-121-123.socal.res.rr.com]  has left #ubuntu []
+[11:58] <poningru> then tried ubuntu on recommendation of friend
+[11:58] <poningru> yep its easy to configure etc.
+[11:58] <poningru> even on a laptop
+[11:58] <tna> k cool ty all :)
+[11:59] <daves> tna: also find a local lug group in your area, this is only the 2nd time i've really done live chatting and have got some good info.
+[11:59] <tna> k brb
+[11:59] <anacron> ubuntu is good since its easy to noobs and also suitable for advanced users
+=== anatole [~anatole@a84-0-161-95.adsl-pool.axelero.hu]  has joined #ubuntu
+=== NatF-UQI [~internat@dare.to.play.on.our-lan.com]  has joined #ubuntu

@@ -1,0 +1,799 @@
+[07:51] <hogne> The process uses no cpu
+[07:51] <clarity> http://www.danish-schnapps-recipes.com/cinnamon.html
+[07:51] <clarity> err
+[07:51] <clarity> sorry
+[07:51] <fde> nickthorley: Only real issue these days is no utilization of NetworkManager (no easy roaming)
+[07:52] <harry_> anyone here who can help me with a couple of ubuntu problems?
+[07:52] <hogne> Anyone know how to kill a process beyond using the kill command, or know some special funky way to do it?
+[07:52] <jingjing> when ubuntu 7.10 desktop expire support time??
+[07:52] <DistroJockey> jingjing, April 2009
+[07:52] <nickthorley> fde: so you cant search for access points - you have to manually add them?
+[07:52] <legolasw> Any comment?@ <magnetron>
+[07:52] <harry_> hogne: after kill -9, there is none
+[07:52] <harry_> unless it's a zombie: kill the parent
+[07:52] <hogne> harry_: is it a bug in the hardy kernel?
+[07:52] <fde> nickthorley: Yes, it's treated as a wired connection as far as the system is concerned.
+[07:52] <harry_> reaper will fix the rest
+[07:52] <harry_> hogne: don't know actually
+[07:53] <harry_> i have a few problems
+[07:53] <hogne> harry: How do I see the process tree?
+[07:53] <harry_> pstree
+[07:53] <tuntun> gparted and qtparted report that I have 'no devices' I tried root but neither of them are doing anything. Whats wrong?
+[07:53] <lethalamby> My RAM usage shown in top and system monitor is totally different. Top says I am using up over a gig of ram while sys monitor says about 600MB. Any ideas why. It was like this yesterday also
+[07:53] <jumbers> I updated to Hardy and my sound stopped working. I went to the Dell Wiki and followed its information for restoring the sound, and it still won't work
+[07:53] <hogne> harry_: eclipse runs on init
+[07:53] <nickthorley> fde: ok i can compromise on that for the time being just to get my wireless working - i am hoping a fix for my card will be out soon as it is one of the main ones
+[07:54] <harry_> hogne: whats the status of eclipse?
+[07:54] <jingjing> DistroJockey: thankyou! , on 8.04 desktop resolution very low (800*600) but 7.10 have have 1024*768
+[07:54] <legolasw> Any comment?@ <magnetron>
+[07:54] <RedScare> NemeisD
+[07:54] <magnetron> legolasw: if anyone knows, they will answer.
+[07:54] <hogne> harry_: How do I see it?
+[07:54] <harry_> ps aux | grep eclipse
+[07:54] <lethalamby> RedScare, NemesisD offline
+[07:54] <RedScare> is he
+[07:54] <DistroJockey> jingjing, *nods* have seen many say that. Might be worth searching launchpad.net about that
+[07:55] <NemesisD> no im not
+[07:55] <legolasw> If I give you my user and pass, can you test it? @ megatron
+[07:55] <RedScare> he should be back
+[07:55] <hogne> harry_: hogne     7117  0.2  1.8 426404 75780 ?        D    08:47   0:01 /home/hogne/Programs/eclipse/eclipse
+[07:55] <nickthorley> whats the main site to log ubuntu bugs ?
+[07:55] <NemesisD> RedScare, it works now, turned out i wrote the path wrong in menu.lst
+[07:55] <astro76> tuntun: running them from your installed system or livecd?
+[07:55] <RedScare> NemesisD, you said the drive was a good
+[07:55] <NemesisD> using the new kernel seems to fix everything
+[07:55] <tuntun> astro76, installed
+[07:55] <harry_> so it's dead... give it a : kill -9 7117
+[07:55] <RedScare> yea, I was just about to say
+[07:55] <astro76> tuntun: wubi?
+[07:55] <harry_> and hope for the best
+[07:55] <magnetron> legolasw: no. and it's magnetron, not megatron
+[07:55] <lethalamby> My RAM usage shown in top and system monitor is totally different. Top says I am using up over a gig of ram while sys monitor says about 600MB. Any ideas why. It was like this yesterday also
+[07:55] <tuntun> astro76, no
+[07:55] <harry_> it might be stuck in a non interruptible IO
+[07:55] <nickthorley> nemesisd: wish it would fix my wireless card haha
+[07:55] <harry_> which is blocked for some reason
+[07:55] <hogne> harry_: : hogne     7117  0.2  1.8 426404 75780 ?        D    08:47   0:01 /home/hogne/Programs/eclipse/eclipse
+[07:55] <lethalamby> RedScare,  Any idea why this happening with me
+[07:55] <hogne> harry_: still there
+[07:56] <NemesisD> lol
+[07:56] <NemesisD> bummer
+[07:56] <RedScare> 24-16 it what you should be on
+[07:56] <djdarkman> hello, if the restricted driver manager doens`t manage to set up the firmware(broadcom) how can I run it manualy trough the terminal?
+[07:56] <hogne> harry_: I got this exact same with nautilus yesterday and had to reboot..
+[07:56] <astro76> tuntun: what do you have? what does sudo fdisk -l show?
+[07:56] <harry_> hogne: depending on your asm skills, you can attach a debugger to it
+[07:56] <hogne> harry_: I don't have asm skills =)
+[07:56] <harry_> and play around ... see what it's doing
+[07:56] <hogne> harry_: sorry..
+[07:56] <legolasw> Sorry for mis-spell. Thanks.
+[07:56] <MrPockets> djdarkman, what firmware are you trying to upgrade?
+[07:56] <hogne> harry_: then my only last resort is to reboot?
+[07:56] <harry_> then i'm affraid i can 't help you further
+[07:57] <harry_> just leave it :)
+[07:57] <tuntun> astro76, 6 partitions
+[07:57] <harry_> it might just die after a while
+[07:57] <lethalamby> RedScare, tell me some other ubuntu channels . Need lots of answers
+[07:57] <hogne> harry_: can't leave it, its splash screen is on my desktop
+[07:57] <tuntun> astro76, over 2 discs
+[07:57] <harry_> xkill?
+[07:57] <harry_> doesn't xkill remove it?
+[07:57] <hogne> harry_: gonna try
+[07:58] <hogne> harry_: yes it removed it, the process is still there though
+[07:58] <astro76> tuntun: fdisk showed them?
+[07:58] <billy12> djdark: flower thw server intrsurtions
+[07:58] <hogne> harry_: shall I post a bug report on the ubuntu forums?
+[07:58] <tuntun> astro76, yes
+[07:58] <harry_> can anyone help with my problem: i have a ipw2200 wifi card, when i boot, it doesn't see my wpa2 wifi network, i can't connect to it
+[07:58] <dfranke> Hi, I've just grudgingly switched from Debian stable to Hardy and I'd like to configure my sources.list to feed me nothing besides security updates.  Is hardy-updates the best I can get, or is there something more stable available?
+[07:58] <RedScare> lethallamby
+[07:58] <RedScare> lethalamby
+[07:58] <harry_> hogne: don't know if it's a ubuntu problem or an eclipse problem
+[07:58] <lethalamby> RedScare, ya
+[07:59] <white_eagle> ok, guys I have problems in here
+[07:59] <white_eagle> I have a half working hardy system
+[07:59] <djdarkman> MrPockets: I have a friend who has trouble installing the broadcom wireless firmware trough the restricted drivers manager, and I would like to give him the command line commands instead
+[07:59] <RedScare> AFAIK, they just have different ways to show used memory
+[07:59] <Uplink> ubuntu wont load my broadcom drivers :(
+[07:59] <astro76> dfranke: you want hardy-security and hardy-updates
+[07:59] <RedScare> To get similar values, take the 'used' from top, and subtract 'buffers' and 'cached'
+[07:59] <dfranke> There are a bunch of commented out security.ubuntu.com entries, but if I uncomment them then apt-get update hangs.
+[08:00] <billy12> djdark: what ubuntu you have
+[08:00] <diagon> I'm having problems with my laptop shutting down, I think due to overheating
+[08:00] <white_eagle> look, I am logged in as root, because I cant do anything from my account because I can't sudo, and when i do sudo I get that the host (whiteeagle-laptop) is unknown
+[08:00] <RedScare> SM only the apps
+[08:00] <diagon> I'm sure there's an easy way to adjust the temp at which the fan should kick in, right?
+[08:00] <white_eagle> please tell me how can I fix it from here
+[08:00] <dfranke> astro76: I *think* I only want hardy-security, but as I just said it doesn't seem to work.
+[08:00] <lethalamby> RedScare,
+[08:00] <tuntun> dfranke, system > administration > synaptic > settings > repositories > updates ?...
+[08:00] <lethalamby> My RAM usage shown in top and system monitor is totally different. Top says I am using up over a gig of ram while sys monitor says about 600MB. Any ideas why. It was like this yesterday also
+[08:01] <white_eagle> hello?
+[08:01] <dfranke> tuntun: this is server edition, I don't have a GUI yet.
+[08:01] <RedScare> right, this is because TOP factors in everything, SM only factors APPs
+[08:01] <RedScare> you are in fact using over a gig total
+[08:01] <olskolirc> hey guys, I installed a tar.gz of xmms and now I see we have xmms2 in the Hardy Heron repository.  How do I uninstall my xmms....tar.gz?
+[08:01] <astro76> dfranke: well there's no reason not to enable main, universe, multiverse or restricted, as  they don't change
+[08:01] <lethalamby> RedScare, You mean ubuntu is using more than a GB of RAM. Ubuntu ultimate
+[08:01] <dfranke> astro76: right, I've got those.  But I don't want non-security-related bugfixes.
+[08:02] <astro76> dfranke: so what happens with -updates disabled ?
+[08:02] <DistroJockey> white_eagle, edit /etc/hosts and make sure you have both a 127.0.0.1 line and a 127.0.1.1
+[08:02] <RedScare> yes, I'm assuming you're running compiz-fusion
+[08:02] <Uplink> ubuntu wont load my broadcom drivers :(
+[08:02] <RedScare> broadcom hates me uplink
+[08:02] <dfranke> astro76: exactly what you'd expect.  But if I enable -security, things hang.  I don't know whether the server is just down or what.
+[08:02] <white_eagle> http://rafb.net/p/x7jW2z38.txt
+[08:02] <white_eagle> see that
+[08:02] <white_eagle> I have dependency problems
+[08:02] <hogne> doesn't the fact that userland processes can enter an unkillable "D" state beat the purpose of protected memory?
+[08:03] <white_eagle> the update was interrupted by some error
+[08:03] <Uplink> RedScare, it detects em but failes to load them
+[08:03] <hogne> could have just as well run AmigaOS! =)
+[08:03] <white_eagle> i was upgrading to hardy
+[08:03] <b0x> how can i find out wat version of ubuntu i have
+[08:03] <white_eagle> DistroJockey: I don't have those 2 lines
+[08:03] <b0x> like i had 7.10 but i dno if it upgraded propper
+[08:03] <b0x> so i wanna check
+[08:03] <white_eagle> DistroJockey: should I add them at the bottom?
+[08:04] <DistroJockey> white_eagle,  mine looks like:  127.0.0.1       localhost      <linebreakhere>     127.0.1.1       myubuntu.home.gateway   myubuntu
+[08:04] <RedScare> b0x, the geek way or the GUI way?
+[08:04] <b0x> any
+[08:04] <DistroJockey> white_eagle, top is better
+[08:04] <astro76> b0x: lsb_release -a
+[08:04] <harry_> is there anyone here who knows what can be done about a broken keyboard indicator applet ?
+[08:04] <white_eagle> DistroJockey: tell me exactly where should I add them, plesae
+[08:04] <harry_> is there anyone here who knows what can be done about a broken wpa2 wifi problem at boottime?
+[08:04] <DistroJockey> white_eagle, at the very top of /etc/hosts
+[08:04] <white_eagle> DistroJockey: here is pastebin http://rafb.net/p/zBNDZF93.txt
+[08:04] <b0x> thanx
+[08:04] <RedScare> yes harry!
+[08:04] <RedScare> what a pain that was
+[08:04] <harry_> is there anyone here who knows what can be done about a broken mythtv vieuwing problem?
+[08:05] <Uplink> lol
+[08:05] <RedScare> but I had the same problem in gutsy
+[08:05] <harry_> RedScare: did you get it fixed?
+[08:05] <white_eagle> DistroJockey: I don't want to mess up, please edit that file
+[08:05] <RedScare> yes, after a clean install :)
+[08:05] <DistroJockey> white_eagle, yep right at the top
+[08:05] <harry_> is there anyone here who knows what can be done about a broken remote problem?
+[08:05] <RedScare> Harry, describe the specific WPA2 problem you're having
+[08:05] <pawan> hi
+[08:06] <pawan> how to repair grub
+[08:06] <harry_> RedScare: in gutsy, i had to remove 85-ifupdown from udev.d/rules.d
+[08:06] <DistroJockey> white_eagle, here's mine as a guide:  http://pastebin.com/f5e58e2f1
+[08:06] <harry_> well... disable, then it worked at boottime
+[08:06] <pawan> i installed vista and it removed my grub
+[08:06] <harry_> now, i upgraded (restored the udev crap_
+[08:06] <HermanChess> where can I see my hardware?
+[08:06] <harry_> and now, when i reboot, it doesn't see my network
+[08:06] <pawan> but ubuntu is installed but cant select it
+[08:06] <harry_> if i click and edit networks, its there
+[08:06] <Matic`Makovec> Hello there. I remember Gutsy Gibbon having an awesome application for handing .bin files (it practically mounted it, but it was great). Now after I upgraded to Hardy I don't have it anymore and so I'm woundering what would that kind of thing be called?
+[08:07] <RedScare> pawan, install EasyBCD inside vista too manage it
+[08:07] <harry_> but there's no way to tell it to connect to that config
+[08:07] <RedScare> please continue harry
+[08:07] <alienseer23> i have 3 partitions mounted in "/media/" that belong to "root:plugdev" and have pretty restricctive permissions, but all of my media is on them, I cannot get to it, "sudo chown" and "sudo chmod" have no effect... how can I fix this?
+[08:07] <RedScare> hm
+[08:07] <dfranke> astro76: ah, now it's working.  Guess the server was just down.
+[08:07] <astro76> HermanChess: lshw, lspci, lsusb
+[08:07] <harry_> so now, i removed the ifupdown rule again
+[08:07] <pawan> where to get easybcd
+[08:07] <harry_> and manually do a /etc/init.d/network restart
+[08:07] <RedScare> BCD Easy
+[08:07] <harry_> and it connects
+[08:07] <RedScare> free download
+[08:07] <ferronica> hi all
+[08:07] <RedScare> google
+[08:07] <RedScare> what a pain that must be harry
+[08:07] <harry_> it's a ipw2200
+[08:07] <white_eagle> DistroJockey: and what should I add at the right side of the second numbers?
+[08:08] <white_eagle> whiteeagle-laptop?
+[08:08] <harry_> does give me a "strange" error in dmesg tough
+[08:08] <RedScare> I'm on iwl3945
+[08:08] <astro76> dfranke: cool
+[08:08] <hogne> Man
+[08:08] <harry_> [  221.971060] ipw2200: Failed to send SYSTEM_CONFIG: Already sending a command.
+[08:08] <hogne> ls crashed and I can't kill it
+[08:08] <hogne> wow
+[08:08] <hogne> this is bad
+[08:08] <RedScare> is that a proprietary driver harry?
+[08:08] <DistroJockey> white_eagle, yourhostname.domainname  yourhostname
+[08:08] <harry_> think so
+[08:08] <pawan> where to get itr
+[08:08] <ferronica> i have downloded ubuntu 8.04 ISO image after burning, checking integrity fail
+[08:08] <white_eagle> DistroJockey: how am I supposed to know tat?
+[08:08] <white_eagle> that*
+[08:08] <DistroJockey> white_eagle, replacing with values appropriate
+[08:09] <RedScare> http://neosmart.net/dl.php?id=1
+[08:09] <white_eagle> ohhh
+[08:09] <white_eagle> DistroJockey: oh
+[08:09] <dfranke> alright, now to get X working with my three displays.  I had a nice hand-written xorg.config on my old system that I forgot to back up :-(
+[08:09] <DistroJockey> white_eagle, just make something up, should be fine
+[08:09] <white_eagle> and If I don't have a host name
+[08:09] <astro76> ferronica: check the md5sum of the iso you downloaded, if that's good, burn at a slower speed
+[08:09] <astro76> !md5 | ferronica
+[08:09] <ubottu> ferronica: To verify your Ubuntu ISO image (or other files for which an MD5 checksum is provided), see http://help.ubuntu.com/community/VerifyIsoHowto or http://www.linuxquestions.org/linux/answers/LQ_ISO/Checking_the_md5sum_in_Windows
+[08:09] <DistroJockey> white_eagle, can't be any worse than it is now :)
+[08:09] <Twigman> Hi All... can't start hardy installer :-/
+[08:10] <harry_> RedScare: ?
+[08:10] <RedScare> can you check harry, under the GUI System>Admin>Hardware Drivers
+[08:10] <harry_> ah
+[08:10] <ferronica> astro76: MD5SUM is okay
+[08:10] <lethalamby> RedScare, I checked system monitor docs. It mentions clearly that it shows total memory usage. And its usage seems more realistic also.
+[08:10] <Twigman> This is on a Dell Vostro - fairly common piece of hardware..
+[08:10] <diagon> Okay, so acpitool shows my laptop's thermal trip at 105 C
+[08:10] <lethalamby> I am not running any application that will take 1 GB RAM
+[08:10] <white_eagle> DistroJockey: so it looks like this http://pastebin.com/m4723c1b0
+[08:10] <Twigman> I'm being dumped into busybox....
+[08:10] <white_eagle> DistroJockey: is it ok?
+[08:11] <RedScare> really lethal? I find that buffers and cached aren't typically included on mine
+[08:11] <diagon> also I've found out that toshiba kernel stuff isn't loaded, and I tried some shot-in-the-dark "modprobe -l |grep toshiba" and then tried just adding it, didn't seem to work
+[08:11] <harry_> ah
+[08:11] <harry_> no , only my nvidia driver
+[08:11] <astro76> lethalamby: I would trust free -m
+[08:11] <bobbie4> I'm going to bed now, g'nite
+[08:11] <DistroJockey> white_eagle, yep that looks fine. But I guess, technically  localhost  should be changed to  whiteeagle
+[08:11] <diagon> so all I need to know is how to lower the thermal trip that's shown in the /proc/acpi stuff
+[08:12] <lethalamby> astro76, I just started my PC
+[08:12] <Twigman> Anyone heard of problems getting the Hardy install cd to boot? I'm being dropped into a busybox shell..
+[08:12] <pawan> installed now
+[08:12] <jmsp3> Could anyone tell me what's wrong with mounting a windows ntfs partition automatically with /etc/fstab?
+[08:12] <white_eagle> DistroJockey: is it ok?
+[08:12] <white_eagle> oh
+[08:12] <white_eagle> sorry
+[08:12] <white_eagle> ;)
+[08:12] <FloodBot1> white_eagle: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[08:12] <DistroJockey> white_eagle, np :)
+[08:12] <RedScare> so non-proprietary really shouldn't be giving you that sort of problem harry
+[08:12] <RedScare> hang on
+[08:12] <lethalamby> 1963 MB of RAM usage
+[08:12] <harry_> that's my opinion aswell ;)
+[08:12] <lethalamby> this is shown by free -m
+[08:12] <legolasw> Anyone interested in testing VPN connection problems?
+[08:13] <legolasw>  Is there any way to see VPN connection debug messages or log file?
+[08:13] <RedScare> is that wlan0 harry?
+[08:13] <white_eagle> DistroJockey: and can I fix those dependency problems?
+[08:13] <astro76> lethalamby: how much is cached?
+[08:13] <lethalamby> 1307
+[08:13] <harry_> not that i changed an aweful lot, but i don't want to reinstall ;)
+[08:13] <rpedro_> anybody else getting slow file copying speeds between different physical hdd's?
+[08:13] <harry_> especially my mythbox
+[08:13] <white_eagle> DistroJockey: http://pastebin.com/m2194be0e
+[08:14] <rpedro_> compared to gutsy
+[08:14] <lethalamby> and swap not used. Still almost 2 gigs of RAm used when running nothing significant :(
+[08:14] <DistroJockey> white_eagle, possibly, that hosts issue may have been the cause. Give it onther try
+[08:14] <knoppix> I had been here earlier asking about why ubuntu sets up partitions as sda1 sda2 and sda5. I gatered that it creates two primary partitions with an extended partition sda5 for swap that really occupies all of sda3. is that correct?
+[08:14] <lethalamby> astro76, swap usage shown 0
+[08:14] <white_eagle> DistroJockey: yes!
+[08:14] <knoppix> sorry sda2 not 3
+[08:15] <RedScare> oh hell
+[08:15] <astro76> lethalamby: first off, system monitor only shows your user processes if not run as root
+[08:15] <pawan> now
+[08:15] <white_eagle> DistroJockey: lets hope so
+[08:16] <Twigman> Anyone heard of problems getting the Hardy install cd to boot? I'm being dropped into a busybox shell.. I get a lot of messages from ata2.00 saying status: { DRDY } (and other messages)
+[08:16] <pawan> i am in vista my grub is lost
+[08:16] <lethalamby> astro76, Now the problem is I want to know why is so much RAM being used. I have run linux on 256 MB RAm also. If I have 2Gb it should not mean it occupies all :(
+[08:16] <pawan> i have ubuntu installed
+[08:16] <olskolirc> can I get the pastebin address please?
+[08:16] <lethalamby> pawan: boot from CD
+[08:17] <lethalamby> http://paste.ubuntu.com
+[08:17] <pawan> then
+[08:17] <lethalamby> there is a section in ubuntu docs
+[08:17] <olskolirc> thanks
+[08:17] <lethalamby> read that and you'll be fine
+[08:17] <Boredom_inc> Wow, since a couple of days after my 8.04 update, ubntu has been running really sluggish. I was making a bug report
+[08:17] <pawan> ok
+[08:17] <DistroJockey> Twigman, yes, I have seen that issue brought up a few times. Maybe try the Alternate CD if you just wish to install to HDD
+[08:17] <Boredom_inc> Ubuntu*
+[08:18] <Twigman> DistroJockey: thanks for the reply. Will the alternate be able to boot?
+[08:18] <Daniel^> just got a message about a new distribution upgrade, is that a good idea?
+[08:18] <harry_> Daniel^: NO
+[08:18] <Daniel^> ok :)
+[08:18] <Uplink> ubuntu wont load my broadcom drivers :(
+[08:18] <Twigman> I just got an error: synchronous SCSI scan failed without making any progress,
+[08:18] <ikonia> Uplink: expand on that please.
+[08:18] <Uplink> sure
+[08:18] <DistroJockey> Twigman, not entirely sure (might be worth checking launchpad.net for the issue) but it generally works better
+[08:19] <Boredom_inc> When I was making the bug report I noticed Ubuntu is not recognising my swap partition. It says utilising 0 of 0 bytes. Is this the cause of my sluggish performance (I still have 50% RAM) or is it something else. Either way how do I make Ubuntu aware of my swap partition again.
+[08:19] <Uplink> <i load the ubuntu live cd and my broadcom drivers fail to load on startup>
+[08:19] <lethalamby> someone help me
+[08:19] <olskolirc> can someone help me with my xmms issue? http://paste.ubuntu.com/8848/plain/ I can't get it to execute.
+[08:19] <Twigman> ok sounds good... It actually looks like it doesn't like my cdrom drive..
+[08:19] <ikonia> Boredom_inc: it only uses swap when you need it
+[08:19] <lethalamby> my ubuntu using up 2 GB of RAM
+[08:19] <ikonia> Uplink: how do you know ?
+[08:19] <knoppix> how does upgrading to 8.04 affect VMware if you already have that installed. I hear 8.04 has a new kernel
+[08:19] <Twigman> Btw.. this is a new pc, so it may have some later hardware..
+=== lymeca_ is now known as lymeca
+[08:19] <ikonia> knoppix: depends on the compatability
+[08:19] <Boredom_inc> ikonia: I know this but shouldn't it say something like 0 bytes of .... bytes used rather than 0 of 0?
+[08:20] <Uplink> it tells me on the screen when loading the drivers>
+[08:20] <ikonia> Boredom_inc: show me the exact message
+[08:20] <olskolirc> can someone help me with my xmms issue? http://paste.ubuntu.com/8848/plain/ I can't get it to execute.  I'm on Hardy Heron
+[08:20] <ikonia> olskolirc: where did you get xmms - it's not in hardy
+[08:20] <knoppix> ikonia: how so?
+[08:20] <lethalamby> please some one help me reduce RAM usage. I feel RAM is not being freed..:(  here is a paste of my /proc/meminfo   http://paste.ubuntu.com/8850/
+[08:20] <makiavelli> apt-get :D
+[08:20] <dubby> hey anyone, i just went from gutsy kubuntu to hardy ubuntu and any ways kubuntu has this control panel thing to see what drives where connected to the system and then it mounted them for me, I was wondering if any such thing exists in Ubuntu?
+[08:20] <DistroJockey> Twigman, possibly choosing something like legacy mode for sata/ide in bios may get the cd to boot
+[08:20] <astro76> lethalamby: your ram usage is normal, and Linux is very intelligent with memory which you should know by running low ram systems
+[08:21] <jk_> i am having a very annoying problem there seems to be glitches in my ubuntu, suddenly loose all sound from the system until i logoff or reboot, and when i open the wastebin nautlius jumps to 50% and becomes non-responsive any help?
+[08:21] <ikonia> osiris: I can see a few issues, but I need to know where you got it
+[08:21] <astro76> lethalamby: worry about it when you start swapping
+[08:21] <Boredom_inc> ikonia: It's from the System manager... "0 bytes (0.0%) of 0 bytes".
+[08:21] <astro76> !memory | lethalamby
+[08:21] <ubottu> lethalamby: A quick FAQ on Memory Management: http://gentoo-wiki.com/FAQ_Linux_Memory_Management For Lubos Lunak's desktop memory usage comparison, see: http://ktown.kde.org/~seli/memory/desktop_benchmark.html
+[08:21] <olskolirc> I got a copy from their web site as a tar.gz and it won't execute so I found we have xmms2 in Hardy Heron and it won't execute either ikonia
+[08:21] <Uplink> <ikonia, it says "broacom 43.x.x drivers couldnt be loaded">
+[08:21] <ikonia> Boredom_inc: thats fine
+[08:21] <Twigman> DistroJockey: ok I'll look, however, the bios is pretty light on configuration..
+[08:22] <DistroJockey> Twigman, *nods*
+[08:22] <dubby> I have 2 hard-drives in this computer but I can only see the mount / can someone tell me how to view my other hard drive ( i do not know its device name like /dev/sdc1)
+[08:22] <lethalamby> astro76, I always beleived Linux being superior to windows. But my total memory usage including swap has never gone above 1gig on windows
+[08:22] <white_eagle> everyone, I am getting dependecy errors http://pastebin.com/m2194be0e\
+[08:22] <Boredom_inc> ikonia: Do you have any ideas then as to what could be causing the performance issue. It was fine after I first rebooted 8.04 however it seems to have got steadily worse after each reboot. I'm still using the same nVidia drivers and nothing else (that I'm aware of) has changed since I updated from 7.10 to 8.04.
+[08:23] <white_eagle> can you help me??
+[08:23] <astro76> lethalamby: Linux doesn't waste the RAM you paid for, it keeps things in cache and frees when needed
+[08:23] <white_eagle> I am logged in as root, because the primary account had problems with sudo
+[08:23] <astro76> lethalamby: please read that first link ubottu gave you to understand
+[08:23] <x1250> dubby: $ sudo fdisk -l maybe helps
+[08:23] <Boredom_inc> white_eagle: You really shouldn't be logged in as root.
+[08:23] <amrik> Hey are there any tutorials about coding C in emacs?
+[08:23] <white_eagle> I have a half working hardy, half gutsy system
+[08:23] <white_eagle> Boredom_inc: I must
+[08:23] <lethalamby> astro76, waiting for it to open. 2nd one opened
+[08:24] <Boredom_inc> white_eagle: Have you tried to create a new account?
+[08:24] <white_eagle> Boredom_inc: because I can't do anything from my primary account
+[08:24] <white_eagle> Boredom_inc: will that help?
+[08:24] <ikonia> Boredom_inc:1 moment, I'm on the phone
+[08:24] <Boredom_inc> ikonia: Thanks
+[08:24] <Boredom_inc> ﻿white_eagle: Possibly. If it does then you will know the problem is to do with that users settings.
+[08:24] <DistroJockey> white_eagle, did fixing the hosts file not work?
+[08:25] <white_eagle> DistroJockey: I haven't tried
+[08:25] <white_eagle> rebooting
+[08:25] <jim_beam> how do u add a session to gdm startup
+[08:25] <white_eagle> should i?
+[08:25] <DistroJockey> white_eagle, yes, reboot :)
+[08:25] <white_eagle> bye
+[08:25] <edreamleo> Hello all
+[08:25] <edreamleo> My sound doesn't work
+[08:25] <lethalamby> astro76, it seems normal now :D
+[08:26] <edreamleo> BTW, how can I find my system version :-)
+[08:26] <jim_beam> i installled e17  using http://ubuntuforums.org/showthread.php?t=546746
+[08:26] <x1250> edreamleo: /etc/issue
+[08:26] <jim_beam> on login i cant see e17 (enlightenment)
+[08:26] <oddalot> edreamleo System-> about ubuntu
+[08:26] <olskolirc> can someone help me with my xmms issue? http://paste.ubuntu.com/8848/plain/ I can't get it to execute.  I'm on Hardy Heron
+[08:26] <amrik> Anyone, are there any tutorials about coding C in emacs?
+[08:26] <smee> can someone help me setup wireless internet access on my laptop?
+[08:27] <oddalot> olskolirc i can help
+[08:27] <olskolirc> thanks oddalot
+[08:27] <ikonia> olskolirc: the tar file from the website is not compatible
+[08:27] <lethalamby> I am not able to put my system on standby . Can anyone help please
+[08:27] <olskolirc> how do I uninstall the tar file?
+[08:27] <ikonia> osiris: rm it
+[08:27] <olskolirc> ikonia,
+[08:27] <edreamleo> I don't see About Ubuntu, I only see About Gnome
+[08:27] <oddalot> olskolirc install the deb, like 2 steps
+[08:27] <oddalot> https://launchpad.net/ubuntu/hardy/+package/xmms
+[08:28] <oddalot> :D
+[08:28] <astro76> edreamleo: lsb_release -a
+[08:28] <olskolirc> where do I get the .deb file?
+[08:28] <oddalot> ^^link i just posted
+[08:28] <lethalamby> how do I register on this channel ???
+[08:28] <olskolirc> i looked everywhere even for my last version oddalot
+[08:28] <astro76> !register | lethalamby
+[08:28] <ubottu> lethalamby: By default, only registered users can send private messages - Information about registering your nickname: http://freenode.net/faq.shtml#userregistration - Type « /nick <nickname> » to select your nickname.
+[08:28] <oddalot> hmmm
+[08:28] <oddalot> well it was there
+[08:28] <oddalot> hmm one sec
+[08:28] <lethalamby> thanks astro76
+[08:29] <edreamleo> ok 7.10 gutsy
+[08:29] <x1250> edreamleo: cat /etc/issue
+[08:29] <Uplink> ikonia, it says "broacom 43.x.x drivers couldnt be loaded"
+[08:29] <ikonia> Uplink: 1 moment
+[08:29] <oddalot> i had to install xmms verstion .10
+[08:29] <edreamleo> anyway, I have no sound
+[08:29] <oddalot> the .12 didn't compile
+[08:29] <Uplink> ok ty ikonia ^_^
+[08:29] <oddalot> https://launchpad.net/ubuntu/hardy/i386/xmms/1:1.2.10+20070601-1
+[08:29] <oddalot> here use that
+[08:30] <oddalot> see if that .deb works, just click it, then click install package
+[08:30] <kelvin911> hi i just update from 7.10 to 8.04 through ubuntu update, now my AWN dock is gone.
+[08:30] <Boredom_inc> why we are all waiting for ikonia... has anybody else had problems with 8.04 where is is running quite sluggish compared to 7.10?
+[08:30] <olskolirc> yeahhhhh niceeee oddalot
+[08:30] <kelvin911> how to enable it back?
+[08:30]  * olskolirc gives oddalot thumbs up
+[08:30] <x1250> edreamleo: $ lspci, check your audio controller and search ubuntuforums.org
+[08:30] <white_eagle> DistroJockey: no, the problem isn't fixed
+[08:30] <kelvin911> and looks like the fonts are different too....
+[08:31] <white_eagle> I am logged in as root now
+[08:31] <white_eagle> because I can't get the connection to work under the account
+[08:31] <oddalot> olskolirc there is a bug on mine though, the playlist doesn't minimize with the main windows of xmms
+[08:31] <Boredom_inc> white_eagle: What was/is the original problem? I missed that part
+[08:31] <DistroJockey> white_eagle, :(
+[08:31] <white_eagle> I can't even see the network applet at the top when I am logged in as that user (whiteeagle)
+[08:31] <Boredom_inc> white_eagle: Create a new account
+[08:31] <edreamleo> x1250 will do, thx
+[08:31] <kelvin911> and what is tracker search??  is it new in hardy?
+[08:32] <olskolirc> ohhh ok
+[08:32] <ikonia> white_eagle: 1.) how are you logged in as root - three is no root password 2.) your network connection should not be specific to your username
+[08:32] <xxxxxxx> what is the purpose of the minimal.iso?
+[08:32] <oddalot> olskolirc can you tell me if you have the same problem once you install?
+[08:32] <ikonia> Boredom_inc: tell me about this swap issue - 0 ussages is a good thing
+[08:32] <olskolirc> hey you know what?  If this doesn't work, I'll just use mp3blaster.  That's a cool app too
+[08:32] <ikonia> xxxxxxx: small install
+[08:32] <olskolirc> ok oddalot brb
+[08:32] <DistroJockey> Boredom_inc, white_eagle had no 127.0.0.1 or 127.0.1.1 lines in /etc/hosts
+[08:33] <ikonia> Uplink: broadcom drivers can't be loaded, is that message coming up in the restricted drivers tool ?
+[08:33] <xxxxxxx> ikonia I am trying to get an app to work without a desktop
+[08:33] <xxxxxxx> should i use the minimal?
+[08:33] <ikonia> xxxxxxx: no
+[08:33] <xxxxxxx> its only 9.5mb where does the os come from is it downloaded?
+[08:33] <ArthurArchnix> Anyone know anything about this xserver crash when trying to play videos? I'm on Hardy, and this is a real bad bug. I have an intel GM955 card, and run metacity with compositing enabled. It happens about half the time when I click on a video file (avi, flash, so far) and it's never happened when I right-click and open. It's happened on Totem and VLC. And again, no error messages, no freezing. Immediate restart of the xserver
+[08:33] <ikonia> xxxxxxx: the interenet
+[08:33] <xxxxxxx> ok i thought so
+[08:33] <DistroJockey> Boredom_inc, white_eagle : And I know from experience that that breaks sudo ;)
+[08:34] <xukun> hi all
+[08:34] <xxxxxxx> ikonia i am trying to have the system dedicated to xbmc-linux
+=== _nikro is now known as nikro
+[08:34] <xxxxxxx> just that one app
+[08:34] <ikonia> strtok: define the crash
+[08:34] <xxxxxxx> I need it to boot into it and shut down from it
+[08:34] <ikonia> oops
+[08:34] <ikonia> ArthurArchnix: define the crash pleas.e
+[08:34] <Boredom_inc> Distrojockey: Has he fixed the hosts file yet then?
+[08:34] <Jordan_U> xxxxxxx, Then just install the base system and install that one app
+[08:34] <DistroJockey> Boredom_inc, I believe so
+[08:34] <oddalot> Boredom_inc  HAH AH nice nick
+[08:34] <xxxxxxx> so minimal.iso would be a good starting point?
+[08:35] <ArthurArchnix> ikonia: I'm not sure what you mean. I click on a video. The screen briefly turns black, then I see GDM logout text, then GDM comes up asking me to login.
+[08:35] <xukun> I have a new microsoft wireless keyboard, not all the keys are working. Is there a way to solve this this?
+[08:35] <Uplink> ikonia, when i boot up the PC with the live cd, and its before the desktop loading
+[08:35] <ikonia> ArthurArchnix: ok, so X resets totally
+[08:35] <Boredom_inc> Distrojockey: Then it's probably something else.... is whiteeagle account listed as a sudoer?
+[08:35] <Jordan_U> xxxxxxx, Yes, if you are comfortable setting things up from a command line
+[08:35] <ikonia> Uplink: ahh, what model card have you got
+[08:35] <Ace_NoOne> hi there - before upgrading to Hardy, I want to make an image of my entire HDD
+[08:35] <Twigman> DistroJockey: Thanks for your help, turns out this is a problem that happens with some dell computers. Bug page is here: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/153702
+[08:35] <ubottu> Launchpad bug 153702 in linux-source-2.6.22 "Dell Inspiron 530 SATA drive not detected in IDE mode" [High,Won't fix]
+[08:35] <DistroJockey> Boredom_inc, not sure, not got that far
+[08:35] <Ace_NoOne> any advice on how best to do this - especially with regards to easy restoration in case something goes wrong?
+[08:35] <bazhang> nickthorley: yeah, but only for a bit
+[08:35] <ArthurArchnix> ikonia: Yeah. It's really wierd. It's basically like videos have been turned into a logout button without any prompts. But only sometimes.
+[08:35] <Uplink> ikonia, im not quite sure... broamcom 4.3.X.X i think :/
+[08:35] <xxxxxxx> ok jordan the only thing im not sure about are drivers
+[08:35] <white_eagle> Boredom_inc: the original problem is, the upgrade to hardy was interrupted because some package wanted to overwrite some file which some other package had already installed (the upgrader was at 23%) so I had only the close button and the system demanded a restart from me, I rebooted and logged into recovery mode (as LjL told me to do) so he told me to do apt-get -f install and then dpkg --configure -a several bunch of times till it gets
+[08:35] <ikonia> Uplink: thats not a model - I need the exact model
+[08:36] <Squa7ch> how do I access the shared folders settings in Hardy Heron?
+[08:36] <Uplink> ikonia, im on windows, how can i check
+[08:36] <DistroJockey> Twigman, ahh *nods* You're welcome
+[08:36] <nickthorley> bazhang: its ok am at work now so cant try anything on laptop - had a play getting wireless working last night and no luck
+[08:36] <white_eagle> I can see I have a half hardy system and a half gutsy system
+[08:36] <ikonia> Uplink: click on the network card properties
+[08:36] <xxxxxxx> when i installed heron I had to click on hardware drivers to find the ati driver for the amd 780g
+[08:36] <robmillion> can someone please tell me why I cannot download Ubuntu 8.04 successfully
+[08:36] <robmillion> pls pm me
+[08:36] <ikonia> Uplink: use device manager
+[08:36] <white_eagle> i don't know the exact command, but I had 2 kernels installed
+[08:36] <ikonia> robmillion: what is the error
+[08:36] <white_eagle> as I could se
+[08:36] <Uplink> oh ok
+[08:36] <xxxxxxx> is it possible to install the driver from the command line?
+[08:36] <surplusxmas> I'm attempting to install Kubuntu 8.04 (KDE4 Remix) on a 3.00GHz Pentium D, 1GB RAM, 300GB SATA with the alternative install CD.  When I reach the installation step called "Select and install software", it hangs for a while at 6% with the message "Please wait...", eventually goes through the steps, but reaches the end with an error that says the specific installation step ("Select and install software") failed.  It then allows m
+[08:36] <surplusxmas>  (quicker this time).  Is this a common problem?  Any suggestions?
+[08:36] <bazhang> nickthorley: will be aroudn later if you want to try again ;]
+[08:36] <xxxxxxx> can i check to find out which driver i have installed?
+[08:36] <Twigman> Btw.. there is a workaround, put sata into 'raid' mode instead of ide mode.. sounds dangerous... works though!
+[08:36] <ikonia> xxxxxxx: use the desktop cd, and disable X11
+[08:36] <DistroJockey> white_eagle, personally, I would back up your data and do a nice clean install
+[08:36] <Twigman> I'll just make sure windows still boots first though ;)
+[08:37] <nickthorley> bazhang: i cant tonight - possibly tomorrow night
+[08:37] <ikonia> Twigman: what is "raid mode"
+[08:37] <Twigman> See yas...
+[08:37] <ikonia> Twigman: if you mean fakeraid, I strongly advise agaisnt it
+[08:37] <x1250> robmillion: how can we know? try another mirror
+[08:37] <DistroJockey> Twigman, ahh, yeah, sorta what I was getting at with the legacy stuff
+[08:37] <nickthorley> bazhang: i am wondering whether to try ndis wrapper instead
+[08:37] <xxxxxxx> ikonia what about all the stuff in the desktop that I don't need?
+[08:37] <Jordan_U> xxxxxxx, sudo apt-get install xorg-driver-fglrx ( if you have an ATI card )
+[08:37] <Twigman> ikonia: well.. it sounds like the drives should be joined..
+[08:37] <bazhang> nickthorley: well its not like we ever leave--see you then ;]
+[08:37] <ikonia> xxxxxxx: what about it ?
+[08:37] <ikonia> xxxxxxx: just disable it
+[08:37] <Uplink> ikonia, it just tells me Broadcom 802.11 a/b/g WLAN
+[08:37] <xxxxxxx> also is x11 the same as x or xorg?
+[08:37] <Squa7ch> how do I access the shared folder settings in Ubuntu 8.04?  In 7.10 it was I think System>Administration>Shared Folders, was it not?
+[08:37] <ikonia> xxxxxxx: yes
+[08:37] <Twigman> ikonia: unfortunately there's no disabled...
+[08:37] <xxxxxxx> I think xbmc linux needs an x server
+[08:37] <ikonia> xxxxxxx: use the desktop cd
+[08:38] <jk_> !backup
+[08:38] <kelvin911> hello?
+[08:38] <ubottu> There are many ways to back your system up. Here's a few: https://help.ubuntu.com/community/BackupYourSystem , https://help.ubuntu.com/community/DuplicityBackupHowto , https://wiki.ubuntu.com/HomeUserBackup , https://help.ubuntu.com/community/MondoMindi - See also !sbackup and !cloning
+[08:38] <Jordan_U> xxxxxxx, It does
+[08:38] <ikonia> Twigman: where are you trying to set this
+[08:38] <white_eagle> DistroJockey: no, thats not possible, I am capped I cant download the install cd from one side, and my cd-rom doesn't work from the other side
+[08:38] <Twigman> This is in the bios of a dell vostro 200
+[08:38] <ikonia> Twigman: contact your bios vendor then
+[08:38] <xxxxxxx> then if it does won't disabling x11 prevent me from installing xbmc?
+[08:38] <white_eagle> DistroJockey: so I'm stuck
+[08:38] <ikonia> xxxxxxx: don't disable X then
+[08:38] <DistroJockey> white_eagle, you can install without burning
+[08:38] <Uplink> ikonia, in on details [service] and tells me BCM43XX
+[08:38] <DistroJockey> !install | white_eagle
+[08:38] <ubottu> white_eagle: Ubuntu can be installed in a lot of ways. Please see https://help.ubuntu.com/community/Installation for documentation. Problems during install? See https://wiki.ubuntu.com/CommonProblemsInstall. Don't want to use a CD? Try http://tinyurl.com/3exghs - See also !automate
+[08:38] <xukun> is there a package I need to install for the keyboard to work well? I have microsoft wireless laser keyboard 5000
+[08:38] <ikonia> Uplink: ok, I'm looking
+[08:39] <Twigman> ikonia:  without that setting, linux doesn't see the cdrom drive... but I'll check for a bios update, this machine just arrived today from dell so I doubt there will be an update yet..
+[08:39] <nickthorley> bazhang: i found this that looks like it may be worth a try http://blog.gunbladeiv.com/
+[08:39] <DistroJockey> white_eagle, checkout that last link
+[08:39] <white_eagle> DistroJockey: USB install?
+[08:39] <ikonia> Twigman: contact your vendor - nothing can be done to fix your bios in linux
+[08:39] <xxxxxxx> I thought i would use the minimal.iso and install the dependencies and x-server
+[08:39] <white_eagle> DistroJockey: in that case I would need to buy a new usb stick
+[08:39] <kelvin911> i just install new ubuntu, and all the applet in awn are gone ?
+[08:39] <robmillion> there is no particular error
+[08:39] <white_eagle> oh
+[08:39] <ikonia> xxxxxxx: from what your saying, your not going to find it easy due to your lack of experience
+[08:39] <DistroJockey> white_eagle, yeah, should be able to install from an iso on a usb drive
+[08:39] <Twigman> *nod* understood..... there are reports of the machine working correctly with that RAID setting though..
+[08:39] <bazhang> nickthorley: will bookmark and check out in a bit; I have to head out now--hope to see you soon ;]
+[08:39] <robmillion> the download finishes after 450 odd MB
+[08:39] <ikonia> xxxxxxx: use the desktop cd (it's a 300 meg install-ish)
+[08:39] <ere4si> !bot
+[08:39] <ubottu> I am ubottu, standing in for ubotu while he's getting his haircut done, nose powdered, updated and transitioned to his new, gorgeous looks in the near future ;)
+[08:40] <nickthorley> bazhang: will be here in approx 5 hours if you want to chat but wont have laptop with me - thanks
+[08:40] <DistroJockey> heyya ere4si :)
+[08:40] <white_eagle> DistroJockey: but that last link focuses on windows as the preinstalled system
+[08:40] <xxxxxxx> ikonia how does the desktop install cd differ from the main cd or is it the same?
+[08:40] <ere4si> hey! DistroJockey
+[08:40] <ikonia> white_eagle: mount the iso
+[08:40] <robmillion> can anyone help?
+[08:40] <white_eagle> I am ****ing stuck
+[08:40] <white_eagle> :(
+[08:40] <ikonia> xxxxxxx: the desk is the iso
+[08:40] <ikonia> white_eagle: there is no need for bad language
+[08:40] <ikonia> white_eagle: you've been here enough to know that
+[08:41] <ikonia> white_eagle: "I'm stuck" would have done
+[08:41] <robmillion> Linux would be great - if you didn't need a degree in computer engineering to use it.
+[08:41] <white_eagle> ikonia: I'm sorry
+[08:41] <frandavid100> hi guys
+[08:41] <Twigman> Haha... windows will not boot with that setting, this is not looking good.. I'll just install under windows for the time being *sigh*
+[08:41] <robmillion> can't even download the damn thing
+[08:41] <x1250> robmillion: you don't
+[08:41] <x1250> :P
+[08:41] <ere4si> robmillion: are you short of hard disk space?
+[08:41] <robmillion> nope
+[08:41] <white_eagle> ikonia: I'm on the edge of my nerves
+[08:41] <robmillion> all is fine
+[08:41] <Uplink> ikonia, btw. im on HP Pavilion dv5000 series
+[08:41] <x1250> robmillion: did you try another mirror?
+[08:41] <ikonia> Uplink: ok, that helps
+[08:41] <robmillion> yes
+[08:41] <robmillion> different mirrors
+[08:41] <x1250> robmillion: $ df -h ?
+[08:41] <robmillion> ????
+[08:41] <robmillion> I'm on windows
+[08:41] <kelvin911> how come the fonts are so funny after update to hardy??
+[08:41] <FloodBot1> robmillion: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[08:41] <ikonia> robmillion: what happens when you download ?
+[08:41] <kelvin911> looks different?
+[08:42] <x1250> robmillion: you have problems downloading ubuntu from windows?
+[08:42] <white_eagle> !minimal
+[08:42] <ubottu> The Minimal CD image is very small in size, and it downloads most packages from the Internet during installation, allowing you to select only those you want (the installer is like the one on the !Alternate CD). See https://help.ubuntu.com/community/Installation/MinimalCD
+[08:42] <frandavid100> quick question: how can I found out how to write the pound sign in a Spanish keyboard?
+[08:42] <robmillion> the MD5 checksum is incorrect
+[08:42] <robmillion> 3 times
+[08:42] <napnaop> Hi all
+[08:42] <ikonia> white_eagle: what good is the minimal cd to you ?
+[08:42] <robmillion> different mirrors
+[08:42] <white_eagle> ikonia: for installing from usb
+[08:42] <ikonia> white_eagle: you don't need that
+[08:42] <white_eagle> what do I need
+[08:42] <ikonia> white_eagle: did you read the links that where given to you ?
+[08:43] <xxxxxxx> whiteeagle how big is your usb drive? is it flash?
+[08:43] <white_eagle> I have a 512MB usb stick
+[08:43] <white_eagle> yes
+[08:43] <robmillion> the download seems to go fine although it only gets 450Mb of a 695Mb file
+[08:43] <Boredom_inc> ikonia: Do you have any idea as to why 8.04 is running so badly?
+[08:43] <white_eagle> ikonia: yes, I read the links
+[08:43] <ikonia> Boredom_inc: whats running bad about it (can you give more detali)
+[08:43] <white_eagle> ikonia: but that last link focuses on windows
+[08:43] <DistroJockey> !install | white_eagle, try the first link
+[08:43] <ubottu> white_eagle, try the first link: Ubuntu can be installed in a lot of ways. Please see https://help.ubuntu.com/community/Installation for documentation. Problems during install? See https://wiki.ubuntu.com/CommonProblemsInstall. Don't want to use a CD? Try http://tinyurl.com/3exghs - See also !automate
+[08:43] <vemon> robmillion, so downloading a file is somthing which need a cs-degree? :)
+[08:44] <x1250> robmillion: are you very sure you have more than 450MB free on your disk?
+[08:44] <ikonia> robmillion: have you tried a torrent ?
+[08:44] <xxxxxxx> whiteeagle i was able to boot hardy heron from usb but i used the full distro cd
+[08:44] <xxxxxxx> 1gig drive
+[08:44] <ikonia> xxxxxxx: he has not read the links
+[08:44] <white_eagle> I can't use a cd
+[08:44] <ikonia> white_eagle: thats a CD
+[08:44] <ikonia> white_eagle: so why are you looking at the minimal cd ?
+[08:44] <x1250> robmillion: I downloaded from here just a moments ago, it works: http://de.archive.ubuntu.com/ubuntu-releases/hardy/ubuntu-8.04-desktop-i386.iso
+[08:44] <DistroJockey> ikonia, I told to look at last link first (my bad)
+[08:44] <white_eagle> ikonia: can't I boot the minimal cd from a flash drive?
+[08:44] <ikonia> DistroJockey: not at all
+[08:44] <ikonia> white_eagle: "it's a CD"
+[08:44] <Boredom_inc> ikonia: Everything is slow and unresponsive. Even typing this message the text appears on screen in jolts. It takes a while to swap windows, scroll, open windows. Firefox is particularly affected.
+[08:45] <lesshaste> Hi
+[08:45] <ikonia> Boredom_inc: talk to me about a.) your video card b.) your ram
+[08:45] <ferronica> at what speed should i burn ubuntu 8.04 iso image ?
+[08:45] <lesshaste> I can't start X at all in hardy. I get this is .xsession-errors xmodmap:  unable to open display ':1'
+[08:45] <magnetron> ferronica: 4x is usually good
+[08:45] <lesshaste> http://pastebin.com/f2bc6aef7 for the whole thing
+[08:46] <DistroJockey> Boredom_inc, how long has it been installed?
+[08:46] <ikonia> ferronica: slow as possible
+[08:46] <ferronica> magnetron: 1X
+[08:46] <jk_> if i wanted to reinstall for whatever reason, can i save my settings and transfer it when the resintall was done?
+[08:46] <ikonia> jk_: thats quite tricky
+[08:46] <Boredom_inc> ikonia: RAM usage is 50% still ~300MiB available and I'm using the same nVidia drivers as 7.10. I have a backup of my xorg.conf from 7.10 and they are identical. I installed the RC 1 day before the official release.
+[08:46] <bullgard5> What does '=m' mean in /boot/config-2.6.22-14-generic?
+[08:46] <DistroJockey> Boredom_inc, I seem to recall some of my installs were slow for a little while (maybe it's indexing?)
+[08:47] <ferronica> magnetron:  ikoniz: getting integrity check fail two times on max
+[08:47] <x1250> jk_: settings like what, from where? /home/user ?
+[08:47] <xxxxxxx> ikonia, lets say I went the mini.iso route is it possible to find out what driver I have installed now and find that exact same driver for my onboard amd 780g/ati radeon 3200?
+[08:47] <ikonia> bullgard5: where ?
+[08:47] <tau> hi, can someone please give me some advice on how to move the MFT out of the free space at the end of an NTFS partition?  (I tried asking this on the ##windows channel but nobody will respond :( )
+[08:47] <Matic`Makovec> Hello there. I remember Gutsy Gibbon having an awesome application for handing .bin files (it practically mounted it, but it was great). Now after I upgraded to Hardy I don't have it anymore and so I'm woundering what would that kind of thing be called?
+[08:47] <Uplink> ikonia, what should i do?
+[08:47] <magnetron> ferronica: 2x or 4x is as slow as you would ever need to go
+[08:47] <white_eagle> ikonia: hey, what about making a new partition and installing ubuntu hardy on it, then from hardy wiping this partition? will that work?
+[08:47] <bullgard5> ikonia: at many places there, at least 10 different ones.
+[08:47] <ikonia> xxxxxxx: it is possible, but you'll find it VERY long winded
+[08:47] <ArthurArchnix> Darn. Stupid bug.
+[08:47] <arooni_> i'm trying to configure my ddwrt enabled router to have give 2 mac addresses a static lease (so they'll always have the same IP address).  this is great!  but it asks me for a host name ..... i dont know what to do here.
+[08:47] <ikonia> bullgard5: can you re-paste the line, I didn't see =m in any of the line you posted
+[08:48] <axion> tau MFT ?
+[08:48] <ikonia> white_eagle: that up to you
+[08:48] <ferronica> magnetron:  but i did 1X :(
+[08:48] <jk_> thinking about it i wasted my compiz settings, just found way to save that x1250
+[08:48] <tau> axion: Master File Table
+[08:48] <ikonia> Uplink: look in /var/log/messages to see why it couldn't load the driver
+[08:48] <magnetron> ferronica: check the downloaded iso with md5
+[08:48] <tarelerulz> have any of you try out the new version of Empathy that can voice with gtalk windows users ?
+[08:48] <white_eagle> ikonia: i'm talking about this https://help.ubuntu.com/community/Installation/FromLinux
+[08:48] <ikonia> arooni_: we don't support your router
+[08:48] <ferronica> magnetron:  its okay
+[08:48] <frandavid100> I'm trying to type the pound sign
+[08:48] <Boredom_inc> ikonia: The strange thing is it ran fine the first time I booted into 8.04, maybe even marginally faster than 7.10, at least firefox was. But on each reboot things seem to be getting slower. I don't know if this is just coincidence, but something isn't right
+[08:48] <kelvin911> hello why after installing hardy the arial fonts are so ugly
+[08:48] <arooni_> ikonia, damn :(
+[08:48] <frandavid100> ﻿U+00A3 POUND SIGN
+[08:48] <ikonia> white_eagle: and as I said "thats up to you"
+[08:48] <ferronica> magnetron:  all matching
+[08:48] <axion> tau: noboby's answering you because that's a stupid question
+[08:48] <kelvin911> specially when the characters are bold
+=== DreamThi1f is now known as DreamThief
+[08:49] <ikonia> Boredom_inc: how much ram do you have, also is the "tracker" process still running
+[08:49] <white_eagle> ikonia: OK
+[08:49] <magnetron> ferronica: how long did it take to burn it at 1X speed?
+[08:49] <kelvin911> anyone update their ubuntu to 8.04 ?
+[08:49] <tau> axion: is it, and how am I supposed to install ubuntu when I can only shrink the NTFS volume by 7MB?  yow
+[08:49] <magnetron> kelvin911: yes, anyone did
+[08:49] <axion> it's as asking how to move all the inode tables scattered throughout the ext2/3fs to the beginngin
+[08:49] <jk_> my ubuntu has become unstable, not sure why. i open wastebin and it hangs, nautilus fails and cliking icons takes forever to launch apps
+[08:49] <ferronica> magnetron:  burning right now
+[08:49] <kelvin911> why the fonts are different?
+[08:49] <Boredom_inc> ikonia: 600 MiB of RAM (yes a very strange quantity). The tracker is idle.
+[08:49] <ferronica> magnetron:  at 1X
+[08:49] <x1250> jk_: no settings or config files in ~/ would be erased or modified after reinstalling/upgrading
+[08:50] <tarelerulz> ﻿kelvin911  I ugraded to Ubuntu 8.04
+[08:50] <magnetron> ferronica: how long did it take to burn it at 1X? when it failed?
+[08:50] <x1250> jk_: unless a new version needs to modify it
+[08:50] <axion> jk_, resizentfs ?
+[08:50] <tau> axion: may I ask how you installed ubuntu?
+[08:50] <kelvin911> i use auto update to ungrade it
+[08:50] <kelvin911> ugrade
+[08:50] <axion> oops sorry jk_
+[08:50] <lethalamby> clear
+[08:50] <kelvin911> upgrade*
+[08:50] <lethalamby> sorry
+[08:50] <lethalamby> wrong place
+[08:50] <axion> tau, empty drive..
+[08:50] <tau> axion: not all of us have that luxury :(
+[08:50] <kelvin911> it tooks me hour and half to download about 1GB of like 2000 files
+[08:50] <bullgard5> ikonia: http://ubuntuusers.de/paste/208551/
+[08:50] <Boredom_inc> ikonia: Any ideas, it seems pretty strange to me.
+[08:50] <ferronica> magnetron:  when i check integrity using brasero
+[08:51] <tarelerulz> ﻿kelvin911, I download the beta cd and did fresh install.
+[08:51] <kelvin911> why it is so big?
+[08:51] <napnaop> I'm under Hardy with Firefox 3 and java plugin doesn't work... How can I enable it ? I've downloaded java-6-sun-1.6.0.06 and ia32-java6-sun-1.6.0.06 but applet on firefox doesn't appear and about:plugins doesn't show java...How can I do please ?
+[08:51] <kelvin911> i didnt do fresh install
+[08:51] <axion> tau download the cd and brun it
+[08:51] <axion> burn
+[08:51] <kelvin911> i just click the upgrade button in auto update
+[08:51] <Twigman> Thanks for the help all... Just fyi - get anyone who has a dell vostro that wont boot to look here: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/153702
+[08:51] <ubottu> Launchpad bug 153702 in linux-source-2.6.22 "Dell Inspiron 530 SATA drive not detected in IDE mode" [High,Won't fix]
+[08:51] <white_eagle> !unetbootin
+[08:51] <ubottu> Factoid unetbootin not found
+[08:51] <kelvin911> and it tooks me like 2 hours to download and install hardy
+[08:51] <tau> axion: already done, but like I said I can't install it so long as the MFT is in the way
+[08:52] <x1250> napnaop: install sun-java5-plugin and sun-java6-plugin
+[08:52] <ferronica> magnetron:  at the time of installation check cd for error , when i do 67 file errors
+[08:52] <Twigman> Make sure they follow the all-generic-ide method of booting..
+[08:52] <tau> damn microsoft!
+[08:52] <ikonia> Boredom_inc: is the tracker process running ?
+[08:52] <kelvin911> now the fonts are ugly
+[08:52] <ikonia> bullgard5: they are modules
+[08:52] <ferronica> magnetron:  i am using CD-RW
+[08:52] <kelvin911> can someone help me?
+[08:52] <magnetron> ferronica: use a CD-R
+[08:52] <ferronica> magnetron:  moserbaer CD-RW
+[08:52] <ferronica> magnetron: i did same error :(
+[08:52] <axion> tau get a copy of partition magic or something
+[08:52] <tarelerulz> ﻿kelvin911 , a fresh is  very good sometimes.  No configure that conflik.
+[08:52] <xxxxxxx> hey thanks ikonia for the advice I'm going to go tinker with it and see what I can do.
+[08:52] <magnetron> ferronica: how long did it take to burn it at 1X? when it failed?
+[08:53] <Boredom_inc> ikonia: It's listed in System Manager but when I hover above it is says "Idle"
+[08:53] <white_eagle> ok, bye
+[08:53] <white_eagle> ikonia: thanks very much
+[08:53] <white_eagle> and everyone else who helped
+[08:53] <ferronica> magnetron: burning it right now at 1X
+[08:53] <DistroJockey> white_eagle, good luck
+[08:53] <axion> tau try defragmenting the drive under windows
+[08:53] <ikonia> Boredom_inc: try disabling it
+[08:53] <magnetron> ferronica: you said it failed when you burned it at 1X
+[08:53] <napnaop> x1250 really ? I think I've downloaded it ...
+[08:53] <ikonia> Boredom_inc: I appriciate it's idle, but it can cause issues
+[08:53] <tau> axion: yes, I have tried with numeroes different programs, but none of them will move the MFT!
+[08:53] <ferronica> magnetron: no at max it say
+[08:54] <ikonia> Boredom_inc: what video card driver does x.org say your currently using
+[08:54] <tau> axion: it's very frustrating
+[08:54] <axion> well g\tau do you have a recent system ?
+[08:54] <AfroRowan> hey people
+[08:54] <axion> tau no older then 6 years ?
+[08:54] <ferronica> magnetron:accept it
+[08:54] <AfroRowan> i wanna expand my memory on hda3 (my ext3 partition)
+[08:54] <tau> axion: it's not actually my system, I'm helping a friend - he is running XP SP2, with a single core pentium, I think it's like 2.6Ghz or something
+[08:54] <AfroRowan> when i use  gparted
+[08:55] <tarelerulz> ﻿tau, maybe  it is the files itself .  I would download it again and see if that might help. I would do via torrent they make sure it don't get messed up
+[08:55] <AfroRowan> i cant do anything
+[08:55] <magnetron> <magnetron> ferronica: 2x or 4x is as slow as you would ever need to go  <ferronica> magnetron:  but i did 1X :(
+[08:55] <DistroJockey> AfroRowan, you will need to do it from a live CD
+[08:55] <axion> ok tau get an external usb-drive and install it on there..
+[08:55] <AfroRowan> okay
+[08:55] <lesshaste> how do I move from Xgl to normal X?
+[08:55] <Boredom_inc> ikonia: Closing the tracker seems to have sped things up a bit. Still not running as fast as it was when I first reboot. What does the tracker do anyway?
+[08:55] <DistroJockey> AfroRowan, can't change mounted partitions
+[08:55] <ferronica> magnetron: mistyped sorry
+[08:56] <AfroRowan> then i know enough but one last thing, shall i lose any files ?
+[08:56] <axion> tau I ran ubuntu on a 4GB usb-stick for a whole month while on vacation
+[08:56] <ferronica> magnetron: accept the file that i sent you
+[08:56] <DistroJockey> AfroRowan, shouldn't but a backup is very much advised
+[08:56] <magnetron> ferronica: i did. it says you cancelled
+[08:56] <AfroRowan> okay
+[08:56] <AfroRowan> thx !
+[08:56] <DistroJockey> AfroRowan, you're welcome
+[08:56] <Boredom_inc> ikonia: By when I first reboot I mean when I first installed 8.04
+[08:56] <tau> axion: I will run those suggestions past him, but I think he wants to use his existing drive
+[08:56] <AfroRowan> ;)
+[08:56] <tau> axion: thanks anyway
+[08:57] <axion> tau are there more hdd's in the system ?
+[08:57] <ferronica> magnetron: again i sent you
+[08:57] <tau> axion: nope, well there is an external, but it is full
+[08:57] <magnetron> ferronica: i accepted it
+[08:57] <Boredom_inc> ikonia: xorg.conf says Identifier	"nVidia Corporation NV5M64 [RIVA TNT2 Model 64/Model 64 Pro]"... It's old but it ran in 7.10 and had no problem
+[08:58] <magnetron> ferronica: use tinypic or similar
+[08:58] <AfroRowan> hey im back
+[08:58] <sajt> Hello!
+[08:58] <axion> usb sticks have become dirt cheap and fast..
+[08:58] <ferronica> magnetron: ok
+[08:58] <AfroRowan> my update-manager just came up
+[08:58] <AfroRowan> and it says to upgrade to 8.04 lts...
+[08:58] <AfroRowan> is it safe ?
+[08:58] <sajt> My sound is not working after the upgrade to hardy
+[08:58] <axion> when installing on a usb stick make sure the stick is in the first port of the usb-bus.. so it is detected as the first device
+[08:58] <DistroJockey> AfroRowan, that's debatable ;)
+[08:59] <x1250> AfroRowan: it can be, it can be not...
+[08:59] <sajt> Where can I find information about it?
+[08:59] <DistroJockey> hehe
+[08:59] <AfroRowan> whats debatable xD
+[08:59] <ferronica> magnetron: http://i31.tinypic.com/2por71y.png
+[08:59] <lesshaste> how do I move from Xgl to normal X?
+[08:59] <tau> axion: okay, I don't know if he's interested in that (no money to spend) but I'll mention it
+[08:59] <DistroJockey> AfroRowan, if it's working, may be better to leave it alone.
+[08:59] <pepe_swash> hello. How do i make heron to recognize an ich9r raid array?
+[08:59] <kelvin911> which file is the repos list?
+[08:59] <AfroRowan> ok, thx again ;)

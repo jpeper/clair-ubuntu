@@ -1,0 +1,281 @@
+[21:20] <abc> bekks, mong, ThinkT510 : thankyou  guyzz...
+[21:20] <dogbert2> hmmmm
+[21:21] <Lukario45> My god i fainted when i saw this channel
+[21:23] <number-7> how come if i type echo $LINES it shows me 24 25 whatever, but LINES is not automatically exported?
+[21:25] <number-7> ok, how come LINES is not automatically exported?
+[21:26] <number-7> how does a program get the number of lines on an xterm?
+[21:26] <cnf> xkernel: with pam, if you can figure it out :P
+[21:30] <cnf> ARGL, pam driving me nuts >,<
+[21:32] <DiegoNolan> Anyone know how to solve the unable to login in problem?  Using gdm is not working
+=== benjamo is now known as benjamino
+[21:33] <OerHeks> DiegoNolan, your ..Xauthority might be owned by root, remove this file and you can get back in >>  http://www.kubuntuforums.net/showthread.php?62084-Can-t-login-into-the-system&s=287bbb93656dee7c53625958a278db98&p=323637&viewfull=1#post323637  this is an Kubuntu answer, applies to ubuntu too
+[21:34] <DiegoNolan> i Tried that.  I maved in to a backup  mv ~/.Xauthority ~/.Xauthority.backup
+[21:35] <OerHeks> DiegoNolan, oh, then i have no clue, this answer is working for most users with this issue
+[21:36] <woutersimons> DiegoNoaln can you logg in to console with the same credentials
+[21:37] <th0r> DiegoNolan, are you sure that moved the file? If it is owned by root you will have to use sudo
+[21:37] <DiegoNolan> dmm
+[21:37] <OerHeks> for same credentials he should restore that backup
+[21:37] <DiegoNolan> it was back so i romoved it again
+[21:37] <DiegoNolan> maybe this will work
+[21:38] <OerHeks> it is re-generated on boot...
+[21:38] <DiegoNolan> nope
+[21:38] <DiegoNolan> this is a pretty infuriating issue
+[21:38] <m1chael> i bought a new asus laptop. i am experiencing this bug: https://bugs.launchpad.net/ubuntu/+source/network-manager/+bug/1172151 .. when will this fix make it to a release?
+[21:38] <ubottu> Launchpad bug 1172151 in linux (Ubuntu) "168c:0032 ASUS F75A wi-fi disabled by hardware switch" [Undecided,Fix committed]
+[21:38] <UBlondie> when it states to make a file 'writable', what exactly does that mean?  ...ie. File in question has permissions: -rw-r--r--  ...is that enough?  should it ideally have  -rw-rw-rw-  ?
+=== BadLarry is now known as BadLarry_
+[21:38] <xkernel> cnf, it's just uses a USB serial number to authenticate?? http://linuxconfig.org/linux-authentication-login-with-usb-device
+[21:39] <UBlondie> trying to change it using chmod (and sudo chmod) were completely ineffective (and didn't come up with any errors)
+[21:39] <cnf> xkernel: i use TOTP myself
+[21:40] <cnf> xkernel: but it's just pam configuration
+[21:40] <cnf> which i am having a problem with myself, atm :P
+[21:41] <cnf> xkernel: what from that article isn't working?
+[21:41] <UBlondie> ...I was also able to edit the contents of the file using gedit by the way ...so in that context it seems 'writable'
+[21:41] <DiegoNolan> well can i change my keyboard to programmer dvorak via cmomand line, else i'm going to take 5 days to back these files up in qwerty
+[21:41] <xkernel> cnf, didn't try it yet but I see it's identifies a USB device S/N and UUID to authenticate it
+[21:41] <cnf> yes...
+[21:42] <xkernel> cnf, this can be easily evade by a microcontroller  or fake device,  I'm looking for something that fetches certificate from the USB
+[21:43] <cnf> why? i think it's kinda stupid anyway
+[21:43] <cnf> 1)  physical access means it is too late, really, anyway
+[21:43] <cnf> it's far easier booting from usb than faking usb ID's
+[21:43] <cnf> 2) doesn't work remote
+[21:43] <cnf> 3) TOTP is FAR easier, and works remote
+[21:44] <servvs> okay so i made the terrible decision today to upgrade to 13.04, I have to revert to the live disc because I am not able to use internet and my video looks terrible, my resolution is way down. Is this a common issue with 13.04 not installing the proper drivers?
+[21:45] <cnf> xkernel: and 4) TOTP has to be authed every time, so it is secure remote as well
+[21:45] <OerHeks> m1chael, read after #35, the issue is solved, it was a bios update, not a wpa issue, so it will be available tru updated atheros  i guess, else be patient.
+[21:45] <cnf> xkernel: so my main question would be, what exactly are you trying to accomplish?
+[21:47] <xkernel> cnf, like I said in the beginning; authentication with device as well as password like https://www.hidglobal.com/products/cards-and-credentials/identity-assurance/usb-tokens
+[21:48] <cnf> xkernel: those work by generating OTP
+[21:48] <cnf> not by having "a certificate"
+[21:49] <cnf> xkernel: do you have a smartphone?
+[21:49] <xkernel> cnf, not currently
+[21:49] <xkernel> cnf but will get one, what the solution you want to say??
+[21:49] <cnf> xkernel: TOTP (Time based One Time Password)
+[21:50] <cnf> smart phone generates a token, that is valid for 30 seconds, and one time use
+[21:50] <cnf> it's what my servers have
+[21:50] <xkernel> cnf,  which application will be installed on the smart phone to generate the password???
+[21:50] <cnf> several can do it
+[21:50] <cnf> the google authenticator app for iOS and android does it, but i prefer the Duo Security app on iOS or android myself
+[21:51] <cnf> https://play.google.com/store/apps/details?id=com.duosecurity.duomobile for android
+[21:51] <cnf> https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8 for ios
+[21:51] <cnf> there is a blackberry one as well
+[21:51] <OerHeks> i use yubikey, but those systems rely on internet.
+[21:51] <xkernel> cnf, is it secure enough to synchronize google authenticator app with the server? I mean is there any chance that another app match mine?
+[21:51] <cnf> xkernel: it also secures my VPN
+[21:51]  * dogbert2 kicks VBox right in da junk
+[21:52] <cnf> xkernel: there is no synchronize
+[21:52] <bazhang> dogbert2, stop that
+[21:52] <cnf> xkernel: google has nothing to do with it
+[21:52] <cnf> xkernel: it's just their app you use
+[21:52] <cnf> OerHeks: i use Duo services, but yeah it needs internet
+[21:52] <cnf> OerHeks: you can use the yubi key offline, if you know the key secret, though
+[21:52] <tf201> hi
+[21:52] <cnf> don how open they are
+[21:53] <OerHeks> well, i can run my own auth,
+[21:53] <cnf> yah
+[21:53] <cnf> xkernel: the TOTP is a well documented standard
+[21:53] <cnf> xkernel: google authenticator and duo security are just 2 apps that implement TOTP
+[21:54] <tf201> I've never used irc, where can I find help for an android device?
+[21:54] <cnf> OerHeks: have you looked at duo security? their service is pretty damn nice, and free up to 10 users
+[21:54] <bazhang> tf201, #android
+[21:54] <cnf> tf201: on #android, probably
+[21:55] <tf201> Thanks
+[21:55] <cnf> xkernel: and my VPN is secured by the same token
+[21:55] <tf201> and how can I achieve it with xchat?
+[21:56] <cnf> you type /join #ubuntu
+[21:56] <cnf> uhm
+[21:56] <bazhang> tf201, /join #android
+[21:56] <cnf> type /join #android
+[21:56] <xkernel> cnf, can this be used for disk decryption on boot ?
+[21:56] <cnf> :P
+[21:56] <tf201> thanks, I found alone;)
+[21:56] <cnf> xkernel: not directly, no
+[21:57] <cnf> xkernel: but that is an entirely different question
+[21:58] <cnf> xkernel: for THAT on a local machine, you could use a key on a usb stick
+[21:58] <xkernel> how cnf?
+[21:58] <cnf> or your login password
+[21:59] <fs242> Anyone can help me with this? dpkg: error: configuration error: /etc/dpkg/dpkg.cfg.d/multiarch:1: unknown option 'foreign-architecture'
+[21:59] <cnf> xkernel: what exactly are you trying to accomplish, though?
+=== ToBeFree is now known as matjohnson
+=== matjohnson is now known as ToBeFree
+[22:00] <xkernel> cnf both questions I asked, so now I knew about the login part, but what about the decryption on boot with USB ?
+[22:00] <cnf> meh, i don't much see the point, tbh. beyond playing
+[22:01] <cnf> you'd have to wrap the mount script, and have it read the usb key
+[22:10] <fs242> can someone help me figure out how to solve a problem with broken packages?
+[22:11] <sam113101> can I synch my ipod with rythmbox?
+=== morpheus is now known as Guest24691
+[22:15] <K350> I've made a fancy Command Line URL Shortener - enjoy :-)  http://nopaste.linux-dev.org/?77999
+[22:18] <kristenbb> hi, I'm having a problem logging into my computer. I have ubuntu 1204. I am 100% sure I didn't change my password, but I tried typing it 100 times, it's not working. I restarted the computer, I made sure I didn't have caps on or that the layout didn't change, I even tried logging in with ssh, but the password seems to have been changed. I am the only one using my computer. What can I do ?
+[22:18] <bekks> kristenbb: Boot a livecd, and reset your password.
+[22:19] <[FreeBSD]> kristenbb: try chrooting and using passwd command
+[22:19] <kristenbb> bekks: my drive is encrypted.
+[22:19] <bekks> kristenbb: Then you have to boot a livecd, decrypt your drive, and reset your password.
+[22:20] <kristenbb> bekks: ok. Could you please detail the steps to decrypt it ?
+[22:20] <bekks> kristenbb: I have no clue, since I am not using decryption myself due to lack of reasons for encryption :)
+[22:21] <kristenbb> I just checked 'encrypt home drive' when installing ubuntu, I didn't do anything special.
+[22:21] <bekks> kristenbb: Then you dont even need to decrypt it.
+[22:21] <bekks> kristenbb: The password hash isnt stored in your home.
+[22:22] <kristenbb> yes but I do want to get my home back.
+[22:23] <BillJobs> hey guys I have an old acer machine with windows 8 on it was thinking of doing a clean install of Ubuntu on it. Which version of Ubuntu should I go with & should I do 32 bit or 64? I think it has a dual core with only 3gb of ram.
+[22:23] <redlance> So...knowing how important it is to backup my stuff, I'm wondering how to back up my file server.  I know how to backup my data...but I want to backup all the configuration changes that I've made to Samba, Apache, Plex server, and my Squeezebox.  Is there a program to do this for me?  Will I run into trouble if I upgrade the OS, and then reinstall those 4 servers, and try to use my old config files?
+[22:24] <K1lleD> BillJobs:  what processor have this laptop. and with 3gb ram, i think 12.04 LTS, or 12.10
+[22:25] <bekks> BillJobs: If it is capable of 64bit, I'd go with that.
+[22:25] <chvx> does this partition scheme really suits my hardrive? http://content.hccfl.edu/pollock/aunix1/partitioning.htm second choice there
+=== muad_ is now known as l9
+=== _BJfreeman is now known as BJfreeman
+[22:27] <eljoest> Hi, I'm seeing very high cpu load of NetworkManager and wpa_supplicant as soon as the network manager service is started. Syslog contains tons of messages from iwl3945 about "Radio disabled by HW RF Kill Switch" (which is correct). Started with my update to 13.04 via 12.10 today. Anyone have an idea for a solution?
+[22:27] <seronis> chvx: my own preference is swap partition = 1.5-2.0 x RAM.   '/' gets everything else.   Do you have a need for anything more complex ?
+[22:29] <Pimpara1985> hi ppl
+[22:29] <q0_0p> anyone can help me out with getting to print working for lexmark Platinum pro905\/
+[22:29] <q0_0p> ?
+[22:30] <mojtaba> Hi, Does anybody know how can I extract multiple zip files with same password in a directory?
+[22:30] <chvx> seronis: not really ;D
+[22:30] <q0_0p> unable to find the PPD file on the internet
+[22:32] <mojtaba> anybody?
+[22:32] <kristenbb> so how can I reset my password without damaging my home folder ?
+[22:32] <ToBeFree> is it encrypted with that password?
+[22:33] <kristenbb> yes
+[22:33] <ToBeFree> I assume you need your password to decrypt it; if it would be possible to change the password of any encryption, that encryption would be useless
+[22:33] <ToBeFree> so it won't damage it, I assume, but it wouldn't give you any access
+[22:33] <kristenbb> Maybe only the logging password has been changed, but not the password for the encryption. How could I check that ?
+=== lifeboy_ is now known as lifeboy
+[22:36] <mojtaba> Hi, Does anybody know how can I extract multiple zip files with same password in a directory?
+[22:36] <mamece2> hello, i neet help formating a USB drive
+[22:36] <chvx> seronis: isnt risky to have only 2 partitions?
+[22:36] <Basil1x> Doing upgrade.  Asked to remove packages, I pressed d for details of packages to remove.  Now I cannot make it resume.
+[22:37] <q0_0p> mamece2, man mkfs
+[22:37] <q0_0p> mamece2, man fdisk
+[22:37] <yeats> mamece2: if you're looking for a gui program, try gparted
+[22:38] <mamece2> yeats: i tried gparted, it shows an error
+[22:38] <bekks> mamece2: Which one...?
+[22:38] <mamece2> yeats: i tried also disk utilyti
+[22:39] <mojtaba> Hi, Does anybody know how can I extract multiple zip files with same password in a directory?
+[22:39] <seronis> chvx: no more risky than a Windows user only having 1 partition and virtual memory (swap) being a normal file
+[22:39] <jrib> mojtaba: use a for loop
+[22:39] <mojtaba> jrib: Could you please help me more about it?
+[22:39] <mojtaba> I am a newbie
+[22:40] <jrib> mojtaba: here is an example of a basic for loop:   for file in *; do echo "$file"; done
+[22:40] <seronis> chvx: if you run services (like a web server) that have a risk of creating GiB of log files when an error occurs then having a mini partition where your logs go can make sense.. not many people require that
+[22:40] <PrototypeX29A> how do i configure the login menu where i can select the window manager? it appears that i cannot select awesome
+[22:40] <jrib> PrototypeX29A: how did you install awesome?
+[22:40] <seronis> and honestly to me that seems like a configuration problem in the logging itself
+[22:41] <mamece2> yeats: now working. this is making fun of me
+[22:41] <eljoest> to whom it may concern: The high cpu load is a regression: Bug #1178841
+[22:41] <ubottu> bug 1178841 in wpa (Ubuntu) "[regression] iwl3945 0000:04:00.0: Radio disabled by HW RF Kill switch - wpa_supplicant causes high cpu load - " [Undecided,Confirmed] https://launchpad.net/bugs/1178841
+[22:41] <PrototypeX29A> jrib: "sudo apt-get install awesome" i guess
+[22:41] <PrototypeX29A> it has to be some time ago, i guess
+[22:41] <jrib> PrototypeX29A: does /usr/share/xsessions/awesome.desktop exist?
+[22:42] <PrototypeX29A> yes, it does
+[22:43] <merpnderp> Anyone running Ubuntu on a 2011 macbook pro able to tell me how the trackpad feels on it?
+[22:43] <merpnderp> And if you were able to get the wifi working
+[22:43] <PrototypeX29A> jrib: the file looks ok to me as well
+[22:43] <chvx> seronis: why wouldnt i parttion why are there partition then?
+[22:44] <jrib> PrototypeX29A: at the login screen, you should have a circle or gear you can click to select the session. Do you see that?
+[22:44] <PrototypeX29A> jrib: i don't know what you are talking about
+[22:44] <jrib> PrototypeX29A: do you understand what I mean by login screen?
+[22:45] <PrototypeX29A> jrib: i think so, i have got a selection for several windowmanagers on the left side
+[22:45] <PrototypeX29A> including several variants of gnome, i3, ratpoison, but no awesome
+[22:45] <daJu> I have a problem with my wifi on asus zenbook prime ux31a I see wifi networks but it fail to connect to them. This page says that it should be fine https://help.ubuntu.com/community/AsusZenbookPrime (but it's not).
+[22:45] <kristenbb> so how is it possible that my password changed without me knowing, and how to get my stuff back please ?
+[22:46] <jrib> kristenbb: what password?
+[22:46] <kristenbb> the logging passowrd
+[22:46] <kristenbb> of ubuntu.
+[22:46] <jrib> kristenbb: you can reset it if you want.  It shouldn't change unless you change it
+[22:46] <jrib> !password | kristenbb
+[22:46] <ubottu> kristenbb: Forgot your password? See https://help.ubuntu.com/community/LostPassword What's the root password? See !sudo. Don't see *** in password prompts? That's normal. Sudo doesn't ask for your password? It remembers you for several minutes. Please use strong passwords, see https://help.ubuntu.com/community/StrongPasswords
+[22:46] <elky> can someone remind me of the "easy" way to add a bookmark to nautilus?
+[22:46] <jrib> PrototypeX29A: what ubuntu version?
+[22:47] <kristenbb> jrib: the problem I chose to encrypt home when I installed ubuntu, does that not make it more difficult ?
+[22:47] <PrototypeX29A> jrib: i just upgraded to 13.04
+[22:47] <jrib> elky: isn't it in the right-click context menu?
+[22:47] <jrib> kristenbb: then you need to remember your password
+[22:47] <jrib> kristenbb: or recall the passphrase that you were told to keep in a safe place
+[22:47] <kristenbb> jrib: well yes, and I do remember it, I'm 100% sure I'm typing it correctly.
+[22:47] <elky> jrib, nope. nor can i drag-drop. nor is there an add function on the list of bookmarks that gets opened when i go file->bookmarks
+[22:47] <PrototypeX29A> jrib: which also seems to have changed my wm to gnome3
+[22:48] <jrib> elky: 13.04?
+[22:48] <elky> jrib, yup
+=== Cyberspaceloa is now known as Cyberspacelurker
+[22:48] <kristenbb> kristenbb: well this I didn't do, but still, there should be a way...
+[22:48] <elky> jrib, i found how to do it a few weeks ago and apparently promptly forgot
+[22:48] <kristenbb> jrib: ^
+[22:48] <jrib> elky: on 12.10 I have a Bookmarks menu at the top and the accelerator is ctrl-d
+[22:49] <AndroUser> Hey anyone willing to Skype me and help me to install ubuntu 12.04 ON ubuntu
+[22:49] <mynameis1eleted> so.. I know ubuntu supports i386 and x86_64
+[22:49] <jrib> kristenbb: there is no way.  Only if you remember your password.  This is the whole point of encryption
+[22:49] <mynameis1eleted> I read about a new instruction set gcc and the kernel both support
+[22:49] <mynameis1eleted> x32... 32-bit instructions and word size for less waste of memory than 64-bit binaries, but hte full use of the 64-bit register set
+[22:49] <jrib> AndroUser: you should probably be more specific about what you mean by installing "ubuntu on ubuntu"
+[22:49] <Marcello> I need to talk to someone who can help me with b43.
+[22:49] <mynameis1eleted> does ubuntu have an x32 distro?
+[22:49] <Marcello>  I need to talk to someone who can help me with b43.
+[22:49] <jrib> !ask | Marcello
+[22:49] <ubottu> Marcello: Please don't ask to ask a question, simply ask the question (all on ONE line and in the channel, so that others can read and follow it easily). If anyone knows the answer they will most likely reply. :-) See also !patience
+[22:49] <elky> jrib, aha not even that, you now have to use the gear thingy. and only the gear thingy
+[22:50] <James_Epp> mynameis1eleted: Yes, look for a i386 build
+[22:50] <jrib> !wireless > Marcello
+[22:50] <ubottu> Marcello, please see my private message
+[22:50] <mynameis1eleted> or mixed x32/x86_64/i386 distro
+[22:50] <mynameis1eleted> not i386
+[22:50] <mynameis1eleted> x32
+[22:50] <elky> you can no longer drag stuff into the menu, nor can that bookmarks dialog add things
+[22:50] <jrib> elky: I see... I'm still on 12.10
+[22:50] <kristenbb> jrib: I do understand that, but as I said, I didn't change the password. I've seen other people complaining about similar things too on forums, with ssd drives. Maybe the encryption password was not changed, just the logging password ? How to check that ?
+[22:50] <James_Epp> mynameis1eleted: Perhaps I do not understand what you mean by x32
+[22:50] <mynameis1eleted> i386 binaries are slower than x86_64 binaries
+[22:50] <elky> jrib, cool, something to keep in mind then :)
+[22:50] <mynameis1eleted> x32 is slightly faster by 15-20%
+[22:50] <AndroUser> (AndroUser) Hey anyone willing to Skype me and help me to install ubuntu 12.04 ON ubuntu
+[22:50] <mynameis1eleted> and take less memory
+[22:50] <James_Epp> mynameis1eleted: I couldn't tell you, mate. Sorry.
+[22:51] <Marcello> I installed Ubuntu on a Dell Inspiron and I am no longer able to access the internet via ethernet or wireless. How can I fix this?
+[22:51] <mynameis1eleted> I see gcc libraries supporitng x32
+[22:51] <AndroUser> (AndroUser) Hey anyone willing to Skype me and help me to install ubuntu 12.04 ON windows 8 I meant
+[22:51] <mynameis1eleted> libx32ncurses5  is a seperate package from lib32ncurses5
+[22:51] <elky> jrib, you're right about ctrl+d though
+[22:51] <mong> AndroUser: by 'on', do you mean dual-boot?
+[22:51] <jrib> PrototypeX29A: well maybe lightdm needs to be restarted after you install awesome but if you installed awesome a long time ago, I assume that has happened.  You might want to check for open bugs in that case
+[22:51] <Marcello> I installed Ubuntu on a Dell Inspiron and I am no longer able to access the internet via ethernet or wireless. How can I fix this?
+[22:51] <elky> but it auto-adds the current location
+[22:52] <AndroUser> Yes mong I hate win 8 but some software I need
+[22:52] <mynameis1eleted> x32 also allows 64-bit pointers for large arrays that mgith need  >4GB ram
+[22:52] <PrototypeX29A> jrib: lightdm is the piece of software responsible for the login screen?
+[22:52] <mynameis1eleted> and big data to be mixed with 64
+[22:52] <jrib> PrototypeX29A: should be.  Check that it's running
+[22:52] <Marcello> Is someone going to help me with my internet question?
+[22:52] <PrototypeX29A> jrib: yes, it is
+[22:52] <jrib> !helpme | Marcello
+[22:52] <ubottu> Marcello: Avoid following your questions with a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !attitude
+[22:53] <Marcello> !helpe
+[22:53] <PrototypeX29A> jrib: it used to gdm, right? can i just go back?
+[22:53] <mynameis1eleted> I think gentoo was the first distro to have a full build in x32
+[22:53] <Marcello> Is that really a bot?
+[22:53] <jrib> PrototypeX29A: yeah, you can switch to gdm if you want.  Lightdm has been default for a few releases now though
+[22:53] <Marcello> !helpme
+[22:53] <ubottu> Avoid following your questions with a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !attitude
+[22:53] <AndroUser> Would you not mind skyping me mong to get dual boot ubuntu 12.04 and windows 8
+[22:53] <jrib> !dualboot | AndroUser
+[22:53] <ubottu> AndroUser: Dual boot instructions: x86/AMD64: https://help.ubuntu.com/community/DualBoot/Windows - Macs: https://help.ubuntu.com/community/MacBookPro https://help.ubuntu.com/community/YabootConfigurationForMacintoshPowerPCsDualBoot
+[22:54] <mong> AndroUser: sorry, skype and uefi are both out of my comfort zone
+[22:54] <Marcello> jrib: Do you know how to help me with this?
+[22:54] <chvx> seronis: why are there other partition schemes?
+[22:54] <AndroUser> Ok
+[22:54] <jrib> Marcello: no, only what's in the wiki link about wireless
+=== racedo` is now known as racedo
+[22:55] <seronis> chvx: historical reasons for when upgrades didnt go as smoothly as they do today so that peoples /home directories were more secure between reinstllations
+[22:56] <Marcello> jrib: I tried that already and it didn't work. Not only was it unclear but it was also filled with broken links to important downloads that they "said" would fix the problem.
+[22:56] <jrib> kristenbb: I doubt that would happen.  But you can reset the password like I said.  If you want to just try mounting the encrypted partition directly (like from a live cd), you can « /msg ubottu encrption » for instructions
+[22:56] <harris> hi
+[22:56] <seronis> chvx: for administrative types who like to switch between distroes and have simultaneous installs.  basically for  'not your average user' type uses
+[22:56] <Darkchaos> May a blinking Cursor while booting from USB indicate a damaged mbr?
+[22:56] <jrib> Marcello: last I checked there was the broadcom sta driver available from "hardware drivers" or whatever it's called now.  That's all I know.  Works fine on my macbook
+[22:57] <chvx> seronis: how about swap, i heard that you should partition it twice your RAM right?
+[22:57] <Marcello> jrib: Thanks for the help, I'll check it out. (ps. is typing someones name followed by a colon the way you ping somebody?)
+[22:58] <bekks> chvx: Thats wrong.
+[22:58] <bekks> chvx: Thats was a rule, around 20 years ago.
+[22:58] <chvx> bekks: haha ok :D
+[22:58] <jrib> Marcello: most clients will highlight your own nick, so including a persons name will tend to grab their attention
+[22:58] <bekks> chvx: Nowadays, you need 1x RAM = SWAP for hibernation.
+[22:58] <elky> Marcello, or a , but tab completion will append that automatically. if your first choice doesn't appear when you tab complete, hit tab another time and it'll give you other options
+[22:59] <chvx> bekks: 1x?
+[22:59] <seronis> chvx: instead of 2x

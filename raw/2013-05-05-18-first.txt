@@ -1,0 +1,263 @@
+[17:17] <rtnb> this is just the box on my hosting
+[17:17] <betrayd> rtnb: is why sudo runs it, sudo may have the correct path
+[17:18] <moppers> rtnb, are you sure it's ubuntu?
+[17:18] <frank_> @bekks it says Siano SMS1140 on the chip (i took i apart :)
+[17:18] <rtnb> no good point i just realized that
+=== leoquant is now known as Guest85379
+[17:18] <rtnb> ill get in touch with support
+[17:18] <cassien> sere: results are ra0     Ralink STA   ;   eth0 no wireless extansions      ;   lo     no wireless extensions
+[17:18] <moppers> rtnb, lsb_release -a
+[17:18] <rtnb> command not found
+[17:19] <moppers> rtnb, uname -a
+[17:19] <betrayd> or cat /etc/issue ?
+[17:19] <rtnb> hmm
+[17:19] <rtnb> nothing there seems to tell the distro
+[17:20] <rtnb> Linux host354.hostmonster.com 2.6.32-20130307.60.9.bh6.x86_64 #1 SMP Thu Mar 7 15:58:33 EST 2013 x86_64 x86_64 x86_64 GNU/Linux
+[17:20] <moppers> bh6?
+[17:20] <rtnb> idk
+[17:21] <chiluk> so I have a laptop with nvidia optimus graphics on it.  I just installed raring.  Then upgraded all packages.. Everything was working fine.  As soon as I install the nvidia binary driver, and reboot, X core dumps, and unity refuses to launch.. does anyone know about this?
+[17:21] <moppers> rtnb, if you type 'yum' is that command found?
+[17:21] <rtnb> CRITICAL:yum.cli:Config Error: Error accessing file for config file:///etc/yum.conf
+[17:22] <chiluk> is there a channel for X/unity problems?
+[17:22] <moppers> rtnb, you have yum: you 're fedora or centos or amazon linux or redhat or one of the other yum distros
+[17:22] <rtnb> ok im sorry i put this in the wrong place!
+=== MOHAMED is now known as Guest49260
+[17:22] <rtnb> thanks
+[17:23] <sere> cassien: check your logs and see if your getting an erro...also make sure you dhcpd is running
+[17:24] <rtnb> I am having another problem on my Ubuntu machine though..... half the time I try to bring up a website i get "server not found"
+[17:24] <rtnb> then after a few minutes it'll work
+[17:24] <rtnb> i'm on a wired connection, using 12.04 LTS
+=== nexus` is now known as transit441
+=== transit441 is now known as transit411
+=== transit411 is now known as transit441
+[17:27] <CarlFK> I need rarring's   /usr/bin/apt-add-repository  which is in http://packages.ubuntu.com/raring/all/software-properties-common/download   so I wget it, dpkg -i ...deb.. get  dependency problems - leaving unconfigured - is there a better way to do this ?
+[17:27] <agu10^_> okay at /var/www i can create dirs. but at /var/www/wildcard i can't! Why is this? wildcard is 775.
+[17:29] <o3u> johnjohn1011: where can i check ? MMNOX Wireless N USB Adapter (MX-W311MI)
+[17:31] <gustav> agu10^_: You don't own wildcard?
+[17:31] <betrayd> agu10^_:  have to, if you want to start making dirs
+[17:33] <agu10^_>  thanks
+[17:34] <quick-> Hi , how can i install new themes in ubuntu 12.04 LTS with gnome ? Please help.
+=== debsan_ is now known as debsan
+[17:35] <cloneG> BluesKaj: The experimental driver made the graphic environment crash too
+[17:36] <cloneG> BluesKaj: what is the linux-backports-modules-headers-precise-generic-pae:i386 for?
+[17:36] <jiffe1> there anyway to find out what is running in swap?
+[17:37] <cloneG> BluesKaj: what backported means?
+[17:37] <thomedy> im trying to set up a printer in 12.04
+[17:37] <thomedy> and when i goto printers in unity it doens't recognize my driver
+[17:38] <earl2> hi.  is there some kind of vnc or related remote desktop service configured by default on ubuntu?
+[17:38] <Walex2> thomedy: our psychic advisors are scrying to figure out which driver should be used and which printer you have :-)
+[17:39] <thomedy> tell chloe shes doing an amazing job im assuming shees your bos
+=== jack is now known as Guest93254
+[17:39] <thomedy> epson workforce 520 all in one printer
+[17:40] <thomedy> in google it said it should automaticcally
+=== koh is now known as RussellAlan
+[17:40] <thomedy> fin d the driver
+[17:40] <thomedy> im running 1204
+[17:41] <RussellAlan> Upgraded from 11.04 to 12.04 32bit... after my BIOS finishes, the screen starts going all crazy until LOGIN screen on ubuntu (so this passes up my grub menu)
+[17:41] <alexandros_c> I am running ubuntu 13.04 and my sound just stopped working, please help get my sound back
+[17:42] <oz7t> how can i get my colors on my screen back
+[17:42] <Xtreme> hey guys
+[17:42] <RussellAlan> hey Xtreme
+[17:42] <chilicuil> hi there, are you aware of any Movie mode in Ubuntu?, I'm running ubuntu raring (installed in an old netbook to let my niece see cartoons in youtube) and after a while the system locks itself, in my dev machine I run this code: http://paste.ubuntu.com/5636132/ , however I'd like to do it, the ubuntu classical way (unity)
+[17:42] <Xtreme> i have noticed that videos are not clear on ubuntu as they were on windows..
+[17:43] <Xtreme> .xvid
+[17:43] <Xtreme> i have vlc..
+[17:43] <Xtreme> what am i missing on?
+[17:43] <Guest93254> what is this
+[17:43] <betrayd> hey jack
+[17:44] <Guest93254> he betrayd
+[17:45] <oz7t> how can i get my colors on my screen back   It happend whwn i was going from 12.10 to 13.04
+[17:45] <cloneG> I am having a problem with nvidia packages.not activating driver,  only installing packages the x server fails to start. ubuntu 12.04 64 bit
+[17:45] <Xtreme> anyone
+[17:45] <cloneG> how could I fix this?
+[17:45] <Xtreme> ?
+[17:46] <Guest93254> tel me about installation
+[17:47] <betrayd> cloneG: time to look at xorg.0.log & .xsession-errors
+[17:47] <Guest93254> hi lioquant
+=== leoquant is now known as Guest46505
+[17:47] <RussellAlan> Upgraded from 11.04 to 12.04 32bit... after my BIOS finishes, the screen starts going all crazy until LOGIN screen on ubuntu (so this passes up my grub menu)
+[17:47] <RussellAlan> been reading places
+[17:47] <RussellAlan> but no situation is the same.
+[17:48] <schreber> Is there a "dummy" guide to setting up a LAMP server using Ubuntu so that it can mimic a Windows AD Server?
+[17:51] <Walex2> thomedy: have you tried checking what CUPS thinks its printers are? That it connecting to http://localhost:631/
+[17:52] <Walex2> thomedy: it would be found automatically if it is supported...
+[17:52] <cloneG> betrayd: I am in darrinh 's shoes but that fix didnt work for me: http://www.nvnews.net/vbulletin/showthread.php?t=114091&page=2
+[17:54] <SP0x> hello everybody
+[17:54] <michel71> hello
+[17:54] <thomedy> it was a stupid problem
+[17:54] <thomedy> i have a secure network
+[17:55] <thomedy> and i thought the printer had the passcode put in i fixed it im fixeing the whole situation already
+[17:55] <Walex2> thomedy: ahhhh
+[17:55] <frank_> hi bekks it says Siano SMS1140 on the chip (i took i apart :)
+[17:55] <cloneG> betrayd: and where can I find .x-sessions?
+[17:55] <thomedy> i made a small bash script that i put in bin and im making my first icon using a *.desktop file in launcher here pretty soon
+[17:55] <thomedy> im prety excited
+[17:55] <cloneG> betrayd: .xsession-errors
+[17:58] <michel71> in a bash script, how does one check if a program is already installed on the computer?
+[17:58] <Walex2> michel71: which program?
+[17:58] <Walex2> michel71: and installed in what way?
+[17:58] <michel71> gedit
+[17:59] <Walex2> michel71: uhmmmm one way is with the command 'which' or with 'type'. Another is to check whether the package containing the program is installed, like 'dpkg -S /usr/bin/gedit'
+[18:00] <Walex2> michel71: but I would be wary of checking for things like that. perhaps you are trying to solve the wrong problem
+=== benjick_ is now known as benjick
+[18:01] <SP0x> is there a keyboard shortcut for minimizing windows?
+[18:01] <SP0x> in ubuntu 13
+[18:01] <SP0x> or do i have to make one?
+[18:02] <Walex2> michel71: if you want replies except in very rare cases you should not msg people privately
+[18:08] <Gerowen> So how do I set the new "Files" application to show me hidden files?
+[18:09] <jesper85m> hi guys i was woundering how i know if i have drivers for my grafic card?
+[18:10] <Gerowen> Nevermind, got it
+[18:11] <SP0x> btw guys, what's the most secure ftpd?
+=== SP0x is now known as Sp0x
+[18:11] <zoktar> Can you rebind alt (tap) for unity command to something like alt+windowsbutton? alt messes alot of games up
+[18:13] <dino__> Good morning!   Have a small problem using screen as my shell.  It works great when I login using ssh (have nice access to multiple running screens, etc.)  But, when I attempt to SFTP into the machine, it get errors about response length.  My guess is that something in the config is causing screen to spit back the entire screen to the SSH client.  Any ideas how to fix this
+[18:13] <muelli> dino__: how did you configure screen being your shell?
+[18:13] <b1tchass_n1gger> i have trouble with UBUNTU 13.10
+[18:14] <zoktar> found it
+=== user__ is now known as eugene^
+[18:14] <b1tchass_n1gger> help me
+[18:14] <muelli> b1tchass_n1gger: #ubuntu+1
+[18:14] <b1tchass_n1gger> my CPU is 100% all the time
+[18:14] <eugene^> hi
+[18:14] <dino__> muelli:  set it as default shell in /etc/passwd
+[18:15] <nownot> I have a bash script that run a php script every 5 seconds that parses a twitter feed. I want this script to start when the computer starts and I have a few questions regarding this. Will having the bash script every 5 seconds have a factor on the performance of the machine, its basically a while with a sleep 5. How do I make it to where this scripts start upon system start?
+[18:15] <jesper85m> how do i find the swedish ubuntu channel?
+[18:15] <shankstaBytes> can some one tell me how to specify port when using "connect to server" and the protocol is sftp?
+[18:15] <OerHeks> !se
+[18:15] <ubottu> Svensk Ubuntu- och Kubuntustöd hittar du i #ubuntu-se resp. #kubuntu-se. Tack!
+[18:15] <shankstaBytes> i am really annoyed how the Gnome team keeps removing features
+[18:15] <muelli> dino__: hm. interesting. I don't think sftp should be affected by that. But I don't fully know. Can you pastebin the errors that you get?
+[18:16] <Walex2> nownot: that is a rather peculiar way to do it.
+[18:16] <Walex2> nownot: 'man crontab'
+[18:16] <anzenketh> Whenever I set a interface ifconfig -a shows that the interface was renamed.
+[18:16] <nownot> Walex2: Im open for suggestions
+[18:16] <muelli> nownot: hm. I think I would use a cronjob. For both, every five minutes and on boot. */5 * * * * and @reboot will help you
+[18:16] <nownot> Walex2: you can, from my reading, do a cronjob based on seconds … could be wrong on this
+[18:17] <muelli> shankstaBytes: like what?
+[18:17] <nownot> or maybe you can, don't know wtf i was looking at …
+[18:17] <shankstaBytes> muelli: if you dont know then you probably dont use those features
+[18:17] <nownot> http://www.thegeekstuff.com/2011/07/cron-every-5-minutes/ <-- Cron job cannot be used to schedule a job in seconds interval.
+[18:17] <shankstaBytes> lots of nautilus features were remove
+[18:17] <shankstaBytes> removed
+[18:17] <shankstaBytes> and they made 2 different menus
+[18:17] <shankstaBytes> its bad for Unity
+[18:18] <wilee-nilee> shankstaBytes, This is not ubuntu complaints but support.
+[18:18] <Walex2> nownot: what can do is to schedule a script every minute, and then the scripts does 11 repetitions every 5 seconds.
+[18:18] <Walex2> nownot: in that way you get the automatic running of CRON and the every-5-seconds that you want.
+[18:18] <nownot> agh, so the /11 will do a minute /11 so every 5 seconds
+[18:18] <nownot> gotcha coach, thanks!
+[18:19] <Walex2> nownot: something like 'for N in {1..11}; do SOMETHING; sleep 5; done' and you run that as a CROn job
+[18:19] <shankstaBytes> wilee-nilee: so can you answer my question?
+[18:19] <nownot> Walex2: ummm that part just really confused me
+[18:20] <bekks> for i in `seq 1 ... :)
+[18:20] <virus_ger> hey guys
+[18:20] <muelli> shankstaBytes: I invite you to discuss your matters on nautilus-list: https://mail.gnome.org/mailman/listinfo/nautilus-list
+[18:20] <nownot> Walex2: agh shit gotcha, thanks
+[18:20] <virus_ger> anybody got a link how i can install ubuntu + windows7 on the same harddrive?
+[18:21] <shankstaBytes> muelli: that was no my question
+[18:21] <shankstaBytes> can some one tell me how to specify port when using "connect to server" and the protocol is sftp?
+[18:21] <muelli> shankstaBytes: I'd expect sftp://foo:2222/
+[18:21] <bekks> shankstaBytes: sftp://ip:port/
+[18:21] <OerHeks> sftp user@address -p 443
+[18:22] <Walex2> virus_ger: there are very many "dual boot" pages, just do a web search with the obvious keywords
+[18:26] <prime_> morning all
+[18:26] <GodsFlaw> k so installed on two different drives only get blinking currsor on restart ideas?
+[18:27] <bekks> !nomodeset | GodsFlaw
+[18:27] <ubottu> GodsFlaw: A common kernel (boot)parameter is nomodeset, which is needed for some graphic cards that otherwise boot into a black screen or show corrupted splash screen. See http://ubuntuforums.org/showthread.php?t=1613132 on how to use this parameter
+[18:27] <prime_> Is this the place for a laptop question?
+[18:27] <Gerowen> Question: I've been using Google Chrome for a while, and starting after the upgrade to 13.04, if I use peppermint flash, flash videos lag horribley in fullscreen.  If I disable peppermint flash and use the flash from the repositories, flash videos play just fine, but random web page elements get garbled beyond usage, some of which don't even appear to use flash, like the photo uploader on Facebook.  Reference this screenshot: ht
+[18:27] <Gerowen> tp://ubuntuone.com/2iqiMSWp34auuHDocZSWgn
+[18:27] <Gerowen> http://ubuntuone.com/2iqiMSWp34auuHDocZSWgn
+[18:28] <Gerowen> However those same elements, using flash from the repos, work just fine in Firefox
+[18:28] <Gerowen> But Firefox still feels sluggish compared to Chrome.
+[18:28] <prime_> researched a bunch on the S76 Lemur, but can't find many actual reviews. Does anyone here have any hands on experience?
+[18:29] <XHEART24> iron man 3? english
+[18:29] <dakotawulfy>  Gerowen  i been checking out qupzilla seem to be fast works for a lot of things
+[18:30] <DJones> !piracy | XHEART24
+[18:30] <ubottu> XHEART24: piracy discussion and other questionably legal practices are not welcome in the Ubuntu channels. Please take this discussion elsewhere or abstain from it altogether. This includes linking to pirated software, music, and video. Also see !guidelines and !o4o
+[18:30] <XHEART24> ok.
+[18:31] <Sp0x> go to thepiratebay.com :D
+[18:32] <prime_> Does anyone have a suggestion for a small laptop that runs ubuntu flawlessly? STarting to think they don't exist...
+[18:32] <FlowRiser> prime_, of course they do
+[18:33] <OerHeks> !hcl
+[18:33] <ubottu> For lists of supported hardware on Ubuntu see https://wiki.ubuntu.com/HardwareSupport - To help debugging and improving hardware detection, see https://wiki.ubuntu.com/DebuggingHardwareDetection
+[18:33] <doomlord> wow, great to see the cintiq support
+[18:33] <doomlord> pleasantly surprised by that
+[18:33] <FlowRiser> prime_, take a look at the asus eeepc series, i have an older model and it runs ubuntu flawlessly
+[18:34] <prime_> OK Thank you very much - I'm new and keep reading about battery/fan/wifi issues on laptops...
+[18:35] <FlowRiser> prime_, I would argue that most of the laptops and pcs can work out of the box with ubuntu
+=== matt_ is now known as Guest91942
+[18:39] <habstinat> How can I share wifi from my laptop to my desktop through an ethernet cable?
+[18:40] <SwedeMike> habstinat: https://help.ubuntu.com/community/Internet/ConnectionSharing
+[18:43] <XHEART24> has anyone here conveted mp4 to avi?
+[18:44] <josefjindra> yes
+[18:44] <XHEART24> using ubuntu 12
+[18:46] <mizifih> XHEART24: You need to convert videos, is that it?
+[18:47] <XHEART24> yes
+[18:47] <XHEART24> i have a sony media player but it does not read mp4
+[18:47] <XHEART24> i want to transfer the video to a usb stick and see it on my media player, i do not have plasma yet
+[18:48] <mizifih> avidemux
+[18:48] <XHEART24> i only have ubuntu 12.04
+[18:48] <mizifih> XHEART24: avidemux?
+[18:48] <frosty> i think i've found a wierd bug :-), if i double click on a simple dropdown like the one in the example on http://w3schools.com/tags/tryit.asp?filename=tryhtml_select my screen turns black until i release, anyone else tried?
+[18:50] <Dr_willis> Hmm. weird media player that dosent support mp4
+[18:50] <XHEART24> i only have to download it? avidemux?
+[18:50] <Dr_willis> avidemux is in the repos yes.
+[18:50] <Dr_willis> !info avidemux
+[18:50] <ubottu> avidemux (source: avidemux): a free video editor - GTK version. In component multiverse, is optional. Version 1:2.5.4-0ubuntu13 (raring), package size 764 kB, installed size 1957 kB
+[18:50] <XHEART24> it is a sony media player it is not new
+[18:50] <mizifih> XHEART24: go to software/application center and search for it
+[18:50] <Dr_willis> you need to determine what file formats/codecs it can play.
+=== ubuntu is now known as Guest29223
+[18:51] <Dr_willis> it could be you just need to rename the video.mp4 to be video.avi
+[18:51] <XHEART24> i have not tried that
+[18:52] <nanvou> hellp
+[18:52] <mizifih> XHEART24: oh, yeah, mp4 and avi are containers
+[18:52] <nanvou> I'm trying to enable vino-server
+[18:52] <nanvou> by using "gsettings set org.gnome.Vino enabled true"
+[18:52] <mizifih> Dr_willis is right
+[18:52] <nanvou> but I get a "WARNING **: Command line `dbus-launch --autolaunch=bcd88addab015d57f51cd3e60000047e --binary-syntax --close-stderr' exited with non-zero exit status 1: Autolaunch error: X11 initialization failed."
+[18:52] <XHEART24> by changing from mp4 to avi will it increase in size?
+[18:53] <Dr_willis> if you can find a video it CAN play. you can see what codec its using
+[18:53] <mizifih> Dr_willis: I believe avidemux do not convert what doesn't need to be converted
+[18:53] <Dr_willis> ive been converting videos with avidemux all week... ;)
+[18:53] <nanvou> how do I do that ?
+[18:53] <mizifih> XHEART24: it depends on what you're going to do with the file, but he's saying just to change the extension
+[18:53] <Dr_willis> XHEART24,  just try changeing the name.
+[18:53] <XHEART24> ok thanks, you are so kind guys, take care
+[18:54] <tony> hay gud
+[18:54] <mizifih> XHEART24: wait
+[18:54] <XHEART24> yes?
+[18:54] <mizifih> XHEART24: that was a suggestion, trying to rename the filename (extension), but Avidemux can convert it for you
+[18:54] <mizifih> for sure
+[18:54] <brian____> Is it easy to change the 'waiting for network configuration' timeout?  I would prefer to have it set to 10 seconds instead of 120seconds..
+[18:54] <Dr_willis> arista can also convert and has dozens of presets
+[18:54] <nick14> shouldn't file give you a clue as to what type it is?
+=== Fudge is now known as Guest82390
+[18:55] <mizifih> nick14: kinda
+[18:55] <Dr_willis> if you can find a video it CAN play. you can see what codec its using, the vlc player can tell you exactly the specs of the working video
+[18:55] <mizifih> nick14: but mp4 files can contain a xvid video track, I believe
+[18:55] <mizifih> I don't know
+[18:55] <mizifih> video stuff is really crazy these days
+[18:55] <XHEART24> the video plays well on the pc but not on the media player
+[18:56] <XHEART24> thx for the help
+[18:56] <Dr_willis> XHEART24,  again.. find a video that plays on the player.. and then we can determine what format its using.
+[18:56] <mizifih> XHEART24: well... you'll have to convert it
+[18:56] <XHEART24> ok
+[18:56] <mizifih> AVI is not a video format
+[18:56] <mizifih> it's just a container
+[18:56] <Dr_willis> it might just need tobe called whatever.avi   instead of whatever.mp4
+[18:56] <Dr_willis> or it might have to be some specific codecs
+[18:57] <mizifih> Sony...
+[18:57] <mizifih> It's probablu AVC something
+[18:57] <mizifih> probably*
+[18:57] <mizifih> is it AVC... I had some trouble with my PSP back when I used it to play videos
+[18:57] <Dr_willis> hard to tell with sony these days.. the PSP i recall played mp4's but they had to be special encoded
+[18:57] <mizifih> avc
+[18:57] <mizifih> I think it was avc, if the name is right
+[18:57] <nick14> mizifih: right, just a container?
+[18:58] <mizifih> AVI, yeah
+[18:58] <mizifih> Dr_willis: say the word, LOL
+[18:58] <mizifih> Dr_willis: AVI just a container?
+[18:58] <Dr_willis> you could hit up google for the exact name/type/make of the player  and find its specs as to what it can play.
+[18:59] <CarlFK> apt-get install ssl-cert - that threw up some dialogs.  I want to see them again.  shouldn't apt-get purge ssl-cert; apt-get install ssl-cert do the same install ?

@@ -1,0 +1,773 @@
+[02:51] <ubuntu> i'm back didnt work sudo app/get update
+[02:52] <argument> i've got an issue with my network freezing while using bittorrent - my router actually stops responding when I ping it's IP. if I shutdown the computer *and* power off the router... then power the router back on and then power my computer back on, network comes back just fine
+[02:52] <NewtoUbuntu> Can any1 here tell me how to uninstall a game via the command line?
+=== swarm_ [n=swarm@216.255.212.18]  has joined #ubuntu
+[02:52] <argument> but if I *just* power off the router and power it back on
+=== chil [n=postman@h152.240.29.71.ip.alltel.net]  has joined #ubuntu
+[02:52] <argument> no amount of /etc/init.d/networking restart will actually unfreeze the network
+[02:52] <profoX`> ubuntu: you mean: sudo apt-get update && sudo apt-get upgrade
+[02:52] <profoX`> right?
+[02:52] <argument> i still can't ping my router's IP
+=== La_PaRCa [n=Sergio@toronto-HSE-ppp4300585.sympatico.ca]  has joined #ubuntu
+[02:52] <profoX`> Sarra_: so?
+[02:52] <james_xxx> i am using a linksys wusb54g v.4 wireless adapter in kubuntu 6.06.1. i have it working, however... my computer occasionally locks up when i am surfing the internet, and i have to reboot. also, if the computer is left idle for a periiod of several hours, it often locks up and has to be rebooted. i do not know if these issues are even connected to the use of this wireless adapter....
+[02:52] <swarm_> Does anyone know how to resume a torrent using the lynx torrent system?
+[02:52] <profoX`> Sarra_: have you posted it on pastebin.ca
+[02:52] <ubuntu> it says fatal server error no screens found
+[02:52] <argument> is there any possibility there might be some ROM settings or something getting screwed up? can I flush my network card somehow?
+[02:52] <james_xxx> i am looking at an ubuntu forum on the wusb54g wireless adapter (not the one i used to get mine working), and the person who wrote it has blacklisted some modules that i did not blacklist, so i am wondering if that might be an issue?
+=== wt8008 [n=doubleyo@adsl-71-141-231-160.dsl.snfc21.pacbell.net]  has joined #ubuntu
+[02:53] <argument> swarm_, torrents auto resume by default
+[02:53] <ubuntu> /usr/share/x11/fonts/cyrillic
+[02:53] <profoX`> ubuntu: yea it was a wrong package. did you try: sudo apt-get update && sudo apt-get upgrade
+[02:53] <argument> swarm, i just use btdownloadcurses, if the folder is there it first checks the files to see what's been downloaded then keeps downloading from there
+[02:53] <profoX`> ubuntu: that exact command?
+[02:53] <swarm_> k
+[02:53] <Jordan> I am new to IRC, is nobody responding to me because nobody knows how to help?
+[02:53] <argument> swarm_, the gui's have been rather unstable for me
+[02:54] <Sarra_> profoX`: I just did a few moments ago
+=== ablyss [n=ablyss@71.81.22.108]  has joined #ubuntu
+[02:54] <argument> Jordan, there could be any number of reasons: moral of the story is "present your problem and wait"
+[02:54] <swarm_> when using mininova, it gives u a www.mininova.org/get/32144
+[02:54] <profoX`> Sarra_: welll... post me the link? ;) so i can look at it.. that was the point of pastebin
+[02:54] <argument> Jordan, if it doesn't work, come back in a few hours
+[02:54] <bruenig> is there any significance to where you put the .exe's when you are using wine. Should you put them in the appropriate part of the .wine directory or does it matter?
+=== La_PaRCa [n=Sergio@toronto-HSE-ppp4300585.sympatico.ca]  has joined #ubuntu
+[02:54] <swarm_> how do u get a .torrent out of that?
+[02:54] <Sarra_> http://pastebin.ca/145474
+=== hetp [n=kevin@eth6067.sa.adsl.internode.on.net]  has joined #ubuntu
+=== Joseph [n=chatzill@cpc1-derb4-0-0-cust484.leic.cable.ntl.com]  has joined #ubuntu
+[02:54] <argument> swarm_, you download it
+[02:54] <profoX`> Sarra_: thanks
+[02:55] <Sarra_> Sure
+[02:55] <Joseph> orbin: I tried to use part 2 but the background went red and gave me an error
+[02:55] <bruenig> swarm, are you sure there is a torrent there. It may have been deleted
+=== user00265 [n=ryuji@pdpc/supporter/student/user00265]  has joined #ubuntu
+[02:55] <swarm_> brandon_, that was example
+=== disastorm [n=disastor@adsl-067-035-094-243.sip.mia.bellsouth.net]  has joined #ubuntu
+[02:56] <orbin> Joseph: are you restoring it after a windows install or something?
+[02:56] <Joseph> yes
+[02:56] <disastorm> does anyone know how to install firefox32 on 64-bit
+[02:56] <swarm_> http://www.mininova.org/get/337074
+[02:56] <swarm_> to be exact
+=== sproingie [n=chuck@64-121-2-59.c3-0.sfrn-ubr8.sfrn.ca.cable.rcn.com]  has joined #ubuntu
+[02:56] <orbin> Joseph: i'm deferring to the wiki: https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows
+=== user01 [n=windio01@c-71-205-205-87.hsd1.mi.comcast.net]  has joined #ubuntu
+[02:56] <bruenig> swarm_, when you click that link firefox should present you with a dialog asking you where to save it
+[02:56] <bruenig> it does for me
+[02:56] <Joseph> those instructions say i should know the number
+[02:56] <argument> disastorm, there are methods... you can install it into a 32 bit chroot jail iirc
+[02:56] <bruenig> if not, try right clicking on it and clicking save link as
+[02:56] <orbin> Joseph: looks like you just do /dev/hda3 if / is on that part.
+[02:57] <argument> disastorm, try the wiki/forums
+[02:57] <argument> disastorm, it's a common problem
+[02:57] <Joseph> but im at step 5
+[02:57] <Joseph> i am presented with:
+[02:57] <swarm_> bruenig, i am doing this via a ssh session
+[02:57] <Joseph> dev/discs/disc0/part1, dev/discs/disc0/part2, dev/discs/disc0/part3, dev/discs/disc0/part4 and dev/discs/disc0/part5
+[02:57] <Joseph> to choose from
+[02:57] <swarm_> where do i get bittorrenycurses?
+[02:57] <swarm_> torrent
+[02:57] <Flannel> swarm_: it's already installed, btdownloadcurses
+[02:58] <argument> disastorm, don't PM people wihtout permission
+[02:58] <orbin> Joseph: ah, choose part3 then, sorry.
+[02:58] <janubuntu> has anyone had problems with the updated xserver-xorg-core?
+[02:58] <argument> disastorm, besides, you never know, i might be walking out the door in 5 minutes and then if you depend on JUST me for your answer that's kinda lame
+=== chris__ [n=chris@londonderry-cuda3-24-51-50-218.lndnnh.adelphia.net]  has joined #ubuntu
+[02:58] <Flannel> janubuntu: see topic
+[02:58] <Joseph> definitely sure? :P
+=== cryptic^zazeem [n=zazeem@pool-64-222-229-234.port.east.verizon.net]  has joined #ubuntu
+[02:58] <swarm_> hmmm
+[02:58] <argument> janubuntu, like what?
+[02:58] <orbin> Joseph: grub itself enters the partition counting from zero ... the installer seems to refer counting from 1
+[02:58] <swarm_> that's the client lynx seems to use
+[02:58] <swarm_> ok, now....
+[02:58] <Joseph> yes it does
+[02:59] <Joseph> ok
+[02:59] <Joseph> so 3
+[02:59] <Joseph> thanks
+[02:59] <disastorm> what is the red msg text
+[02:59] <orbin> Joseph: quite.  good luck
+[02:59] <Joseph> =]
+[02:59] <swarm_> how do i download the .torrent file from btdownloadcurses at the command line?
+[02:59] <janubuntu> i get a no screens error in the xorg log
+[02:59] <swarm_> er
+[02:59] <swarm_> i mean
+[02:59] <swarm_> http://www.mininova.org/get/337074
+[02:59] <janubuntu> Flannel how do i do that?
+[02:59] <bruenig> swarm_, mininova has a weird setup whereby it wont allow you to download torrents from links. You have to actually go to its page and then click on it. It wants you to visit its site I suppose in  order to gain ad revenues. For instance, if you were to put that link up on another page and click on it. It wouldn't download the torrent it would automatically redirect you to a page where you click on a link to download it. That might
+[02:59] <orbin> janubuntu: what xserver-xorg-core version are you running?
+[02:59] <disastorm> hey has anyone here installed fire fox 32 bit on a 64 bit system
+[03:00] <user01> hi im going to visit my sister who is having problems with her buslink external cd drive.... i know i was able to burn wav files onto a cd the last time i was there...are there are recommended steps for troubleshooting?
+[03:00] <swarm_> hmm.
+[03:00] <swarm_> lame
+[03:00] <swarm_> :\
+=== DBO [n=DBO@unaffiliated/dbo]  has joined #ubuntu
+=== MTecknology [n=MTecknol@AdrianDHCP-44.216-16-86.iw.net]  has joined #ubuntu
+[03:00] <swarm_> can i transfer files using ssh?
+[03:00] <swarm_> from my computer to the host computer
+[03:00] <swarm_> or do i have to use ftp?
+[03:00] <eyequeue> swarm, sort of.  use scp
+[03:00] <swarm_> scp?
+[03:00] <janubuntu> orbin 1:1.02-0ubuntu10.4
+[03:00] <Jordan> I am trying to install Lilo from the Ubuntu liveCD ( I have already installed Ubuntu but can't boot into it without LILO ) I have chrooted into my Ubuntu installation and tried to apt-get install lilo but I can't get an internet within the chroot. Can I use apt-get normally from the liveCD to get a .deb file that I can install from within the chroot. I am trying to follow the instructions here http://www.ubuntuforums.org/showt
+[03:00] <Jordan> hread.php?t=198453
+=== ablyss [n=ablyss@71.81.22.108]  has left #ubuntu []
+[03:00] <user01> she says all the audio is garbled
+=== xsje [n=xsje@122-213.surfsnel.dsl.internl.net]  has joined #ubuntu
+[03:00] <eyequeue> swarm, the command name is all that differs, it uses ssh protocol
+=== jack_wyt [n=jack@221.221.163.228]  has joined #ubuntu
+[03:00] <user01> and it doesnt even burn in serpentine
+=== darich [n=trickyki@host86-141-89-223.range86-141.btcentralplus.com]  has joined #ubuntu
+[03:01] <argument> has anyone here had bittorrent lock up their network such that only a full powerdown/powerup of both router+computer will fix it?
+[03:01] <Jordan> argument: I have
+[03:01] <eyequeue> swarm, scp filename remotehost:/path/to/destination
+=== lowteck [i=pcfreak@gateway/tor/x-339ac15917c11413]  has joined #ubuntu
+[03:02] <janubuntu> orbin not sure that that is precisely right
+[03:02] <orbin> janubuntu: apt-cache policy xserver-xorg-core
+[03:02] <jerrdale> Well, I have recovered from the damage done by the update, that royally sucked!
+[03:02] <swarm_> hmmmmmm
+=== trpr_ [n=ftg2@24-117-208-37.cpe.cableone.net]  has joined #ubuntu
+[03:03] <orbin> janubuntu: which version is installed?
+[03:03] <argument> Jordan, and the corrollary of that being do you know how to fix it?
+=== tomasz27 [n=tomaszpw@c-71-57-57-209.hsd1.il.comcast.net]  has joined #Ubuntu
+=== w30 [n=kolklay@74.139.0.24]  has left #ubuntu ["Leaving"]
+[03:03] <Jordan> argument:  No, sorry
+[03:03] <jerrdale> yes, it can be fixed
+=== ablyss [n=ablyss@71.81.22.108]  has joined #ubuntu
+[03:03] <janubuntu> orbin just a sec have to switch to the problem pc brb
+[03:03] <swarm_> just bring up a > symbol
+=== dmsantam [n=dmsantam@60-240-4-40-nsw-pppoe.tpgi.com.au]  has joined #ubuntu
+[03:04] <user01> is there a general procedure to fix cd buring issues ?
+=== jerrdale [n=jerrdale@ppp-70-129-149-231.dsl.rcsntx.swbell.net]  has left #ubuntu ["Ex-Chat"]
+[03:04] <tomasz27> is there an update to the x server problem?
+=== Joseph [n=chatzill@cpc1-derb4-0-0-cust484.leic.cable.ntl.com]  has joined #ubuntu
+[03:04] <eyequeue> tomasz27, /topic, and yes
+[03:05] <tomasz27> cuz I see )ubuntu10.4
+=== eauxnguyen [n=owbr@oh-71-53-63-201.dhcp.embarqhsd.net]  has joined #ubuntu
+[03:05] <eyequeue> tomasz27, 10.4 is the fix
+=== beyond [n=beyond@201-1-179-189.dsl.telesp.net.br]  has joined #ubuntu
+[03:05] <tomasz27> so it is ok to update the OS?
+[03:05] <Joseph> orbin: I chose partition 3 and it continued. I then entered the following command line as it said:
+[03:05] <eyequeue> tomasz27, yes
+[03:05] <tomasz27> thank u
+[03:05] <Joseph> orbin: grub-install /dev/hda3
+[03:05] <bruenig> it is ok to install that update you say?
+[03:05] <user01> should i just try reinstalling ubuntu?
+[03:06] <tomasz27> yes, it is ok
+[03:06] <Joseph> orbin: it then told me about an error that could be ignored, then something about xfs-freeze (or something) and said that installation was complete
+[03:06] <janubuntu> orbin installed is 10.3 but says candidate is 10.4
+[03:06] <bruenig> ok, I am going to trust you on that
+=== bb|Gishnob [n=fake@CPE0050f2cf38bd-CM014390042162.cpe.net.cable.rogers.com]  has joined #ubuntu
+[03:06] <Joseph> orbin: i restarted and nothing happened
+[03:06] <orbin> janubuntu: apt-get upgrade
+=== Glutinous [n=steven@ppp170-52.lns1.per1.internode.on.net]  has joined #ubuntu
+[03:06] <orbin> janubuntu: put a sudo in front of that
+[03:06] <orbin> janubuntu: 10.3's the broken one
+=== blocky [n=blocky@d207-6-121-17.bchsia.telus.net]  has joined #ubuntu
+[03:07] <janubuntu> orbin ok ty veryu much
+[03:07] <swarm_> is there a ftp server enabled by default?
+[03:07] <user01> is there another channel i should be on for cd burning issues in ubuntu?
+[03:07] <dmsantam> swarm_, no
+=== beyond [n=beyond@201-1-179-189.dsl.telesp.net.br]  has joined #ubuntu
+[03:07] <FRET> what is the command to get the ubuntu version?
+[03:07] <swarm_> darn :(
+[03:07] <istealyermp3s> o.O
+=== bruenig [n=bruenig@ppp-70-242-99-93.dsl.rcsntx.swbell.net]  has left #ubuntu []
+[03:07] <istealyermp3s> fret
+[03:07] <swarm_> need to put a file from my ubuntu distro on another computer
+[03:07] <istealyermp3s> version of what ?
+[03:07] <istealyermp3s> uname -r
+[03:07] <istealyermp3s> try that
+[03:07] <istealyermp3s> or uname -a
+[03:07] <istealyermp3s> IO:
+[03:07] <istealyermp3s> O:
+[03:08] <FRET> istealyermp3s, that gives me the version of the kernel
+=== user01 [n=windio01@c-71-205-205-87.hsd1.mi.comcast.net]  has left #ubuntu []
+=== boubou [n=serpent9@AStDenis-105-1-47-18.w80-8.abo.wanadoo.fr]  has joined #ubuntu
+=== vapermonkey00 [n=dennis@64-83-217-49.dhcp.stcd.mn.charter.com]  has joined #ubuntu
+[03:08] <Joseph> orbin: can you help?
+[03:08] <istealyermp3s> do the second one
+[03:08] <dmsantam> FRET, cat /etc/lsb-release
+[03:08] <istealyermp3s> Linux dapper 2.6.15-26-386 #1 PREEMPT Thu Aug 3 02:52:00 UTC 2006 i686 GNU/Linux
+[03:08] <istealyermp3s> seee that ????
+[03:08] <istealyermp3s> im on version dapper
+=== boubou [n=serpent9@AStDenis-105-1-47-18.w80-8.abo.wanadoo.fr]  has left #ubuntu []
+[03:08] <istealyermp3s> which is ubuntu 6.06
+[03:08] <istealyermp3s> what do you get for unmae -a
+[03:08] <FRET> dmsantam, that's it, thx
+[03:08] <istealyermp3s> DISTRIB_ID=Ubuntu
+[03:08] <istealyermp3s> DISTRIB_RELEASE=6.06
+[03:08] <istealyermp3s> DISTRIB_CODENAME=dapper
+[03:08] <istealyermp3s> DISTRIB_DESCRIPTION="Ubuntu 6.06.1 LTS"
+[03:08] <istealyermp3s> o:
+[03:09] <istealyermp3s> or that
+[03:09] <istealyermp3s> nice dmsantam
+[03:09] <dmsantam> :)
+=== istealyermp3s makes note
+[03:09] <vapermonkey00> hey thanks for the help that worked (no screen)
+[03:09] <FRET> istealyermp3s, my output from uname -a is differnt
+[03:09] <orbin> Joseph: ok, i'm no expert, but i'm assuming that it's installing grub to the partition, but you need to overwrite the windows mbr
+=== bruenig [n=bruenig@ppp-70-242-99-93.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[03:09] <dmsantam> uname -a is for kernel version
+[03:09] <istealyermp3s> fret yes i know
+=== BrokenPipe [n=kwayman@10.181-62-69.ftth.swbr.surewest.net]  has joined #ubuntu
+[03:09] <dmsantam> a little different :)
+[03:09] <istealyermp3s> but it has the dapper in there
+=== sizzam [n=sizzam@c-71-207-99-88.hsd1.pa.comcast.net]  has joined #ubuntu
+[03:09] <istealyermp3s> dmsantam, yeah
+[03:09] <BrokenPipe> Is there a problem with the AMD64 Install CD? It just freezes on my system after it says it's loading the kernel.
+[03:09] <Joseph> orbin: how do i do that?
+[03:09] <istealyermp3s> but with ubuntu it still has the distro name there
+[03:09] <FRET> istealyermp3s, not here
+=== qch [n=QC@adsl-69-110-1-70.dsl.pltn13.pacbell.net]  has joined #ubuntu
+=== chrisbudden14 [n=chrisbud@host-84-9-54-72.bulldogdsl.com]  has joined #ubuntu
+[03:09] <dmsantam> nor here
+=== superjew9020 [n=jewboy@c-67-163-158-111.hsd1.pa.comcast.net]  has joined #ubuntu
+[03:10] <istealyermp3s> fret what exactly is your output of 'uname -a'
+[03:10] <orbin> Joseph: you have the install cd right?  can you use a browser now?  look at this section: https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows#head-d24e9ed91fd47ac6f436756da4a565afbe5762ec
+[03:10] <FRET> istealyermp3s, Linux FRET 2.6.15-26-386 #1 PREEMPT Thu Aug 3 02:52:00 UTC 2006 i686 GNU/Linux
+[03:10] <bruenig> it only gives kernel
+[03:10] <Joseph> ahh
+[03:10] <dmsantam> istealyermp3s, yours is not saying dapper
+[03:10] <superjew9020> how do i change default apps in ubuntu
+[03:10] <swarm_> good ftp server?
+[03:10] <Joseph> so i follow these steps?
+[03:10] <istealyermp3s> not uname -r
+[03:10] <dmsantam> it's saying your HOSTNAME is dapper
+[03:10] <istealyermp3s> uname -a
+[03:10] <Jordan> How can I get the LILO .deb file from apt-get
+[03:10] <istealyermp3s> oooooooooooo
+[03:10] <istealyermp3s> o yeh
+=== dmsantam slaps istealyermp3s
+[03:10] <dmsantam> ;)
+[03:10] <istealyermp3s> shit forgot its like that
+[03:10] <istealyermp3s> lol
+[03:10] <istealyermp3s> er
+=== VikJES [n=esauve@modemcable095.110-80-70.mc.videotron.ca]  has left #ubuntu []
+=== dartmolx [n=dartmolx@58.71.13.195]  has joined #ubuntu
+[03:10] <istealyermp3s> sh1t i emant
+[03:10] <istealyermp3s> ~_~
+=== qch [n=QC@adsl-69-110-1-70.dsl.pltn13.pacbell.net]  has left #ubuntu ["Leaving"]
+[03:10] <superjew9020> how do i change default apps in ubuntu?????????
+[03:10] <istealyermp3s> oops even
+[03:10] <dmsantam> it was a good effort anyway hehe
+[03:10] <orbin> Joseph: i'd try that, yes....just remember like it says, don't format the partitions or you'll lose the install
+=== d00by [n=Eubey@c-67-166-206-102.hsd1.tx.comcast.net]  has joined #ubuntu
+=== dmsantam goes to work
+=== Verithrax [n=brd@201-68-97-13.dsl.telesp.net.br]  has joined #ubuntu
+[03:11] <istealyermp3s> system > preferences > default applications superjew9020
+[03:11] <mainer> to wipe win from /mbr use a dos/windows boot-floppy or cd fdisk /mbr then install grub
+[03:11] <bruenig> superjew9020, you curse the gnome developers and deal with it
+[03:11] <eyequeue> superjew9020, you have some file, eifgt ckick on it and associate another app
+[03:11] <Verithrax> Hey, thanks for the help earlier.
+=== dravas [n=dravas@ppp-70-224-242-29.dsl.applwi.ameritech.net]  has joined #ubuntu
+[03:11] <istealyermp3s> or what eyequeue said
+[03:11] <janubuntu> orbin thank you worked like a charm very very much appreciated
+[03:11] <eyequeue> superjew9020, right click
+[03:11] <dravas> !nvidia
+[03:11] <ubotu> To install the Ati/NVidia drivers for your video card, see https://help.ubuntu.com/community/BinaryDriverHowto
+[03:11] <d00by> Hey I need help! the update for xorg trashed my install
+[03:11] <orbin> janubuntu: welcome
+[03:11] <bruenig> !xorgbugfix
+=== qch [n=QC@adsl-69-110-1-70.dsl.pltn13.pacbell.net]  has joined #ubuntu
+[03:11] <ubotu> The fixed xserver-xorg-core packages has been uploaded. It is now safe to upgrade the system. First make sure that your mirror have the new version, to do that please do "sudo apt-get update" than do "apt-cache policy xserver-xorg-core" and make sure candidate is version 1:1.0.2-0ubuntu10.4.
+[03:11] <eauxnguyen> tell eauxnguyen /sound
+[03:11] <istealyermp3s> right click > properties > open with tab > select preferred app
+[03:11] <eyequeue> d00by, /topic
+[03:12] <eauxnguyen> ok worth a try
+[03:12] <Joseph> orbin: are the partions in step 4 not already mounted if i have linux installed?
+[03:12] <d00by> eyequeue, you and your silly reading :)
+[03:12] <Joseph> orbin: if not, how do i mount them at the manual partition screen?
+[03:12] <Verithrax> Unfortunately, the new Xorg server crashed irretrievably after that, but going into restore mode and running dpkg-reconfigure xserver-xorg worked.
+[03:12] <eauxnguyen> any ideas on getting sound running on a thinkpad t20? worked using the ubuntu guide fix on 5.10 and now no worky on dapper
+[03:12] <tomasz27> does the update applies to a brand new download of the ISO as well?
+[03:12] <superjew9020> uhh where do i right clik
+=== eyequeue smokes d00by until he reads :)
+[03:13] <bruenig> superjew9020, on the file whose default app you want to change
+[03:13] <Jordan> How do I just get a .deb file from apt? As in to use on another machine without an internet connection.
+[03:13] <eyequeue> superjew9020, places > home filder, for example
+[03:13] <orbin> Joseph: i can't say for certain...but i think it should "mount" them for you ... it should have the diagram of partitions on the disk
+[03:13] <superjew9020> how do i make xmms my default mp3 player
+[03:13] <eyequeue> superjew9020, that app is called nautilus, and any place that is open you can do this
+=== funchords [n=robb@c-24-20-36-248.hsd1.mn.comcast.net]  has left #ubuntu []
+[03:13] <superjew9020> how do i make xmms my default mp3 player
+[03:14] <orbin> superjew9020: <istealyermp3s> right click > properties > open with tab > select preferred app
+[03:14] <istealyermp3s> O:
+[03:14] <eyequeue> superjew9020, click on an mp3, then associate xmms
+[03:14] <istealyermp3s> i got quoted!
+[03:14] <orbin> superjew9020: in nautilus
+[03:14] <superjew9020> will it do that to all of them
+[03:14] <istealyermp3s> yes
+[03:14] <istealyermp3s> for each extention it does that
+[03:14] <janubuntu> BlueEagle just wanted to say i found out what that usb1 is on tha pc
+[03:14] <Joseph> orbin: it has a list of the different partitions
+[03:14] <istealyermp3s> video files for instance:
+[03:14] <Joseph> orbin: and you can select each one and edit it
+[03:14] <janubuntu> BlueEagle i was just jan the other day
+[03:14] <istealyermp3s> avi // mkv // ogg // mp4 are all considered seperate
+[03:14] <istealyermp3s> :)
+[03:14] <eauxnguyen> any ideas on sound on a thinkpad? followed the ubuntu guide with no joy
+=== John[1]  [n=adam12@cpe-65-27-166-226.cinci.res.rr.com]  has joined #ubuntu
+[03:15] <istealyermp3s> eauxnguyen,
+[03:15] <istealyermp3s> first do you have a mixer of some sort ?
+[03:15] <orbin> Joseph: right...IIRC, when you go to the next step, there are checkboxes saying "format?"
+[03:15] <istealyermp3s> i prefer alsamixer
+[03:15] <swarm_> un-mute :P
+[03:15] <orbin> Joseph: uncheck them obviously
+=== Shoo-Shu [n=shoo@128.010.dsl.qld.iprimus.net.au]  has joined #ubuntu
+[03:15] <Joseph> orbin: well it gives you an option to format
+[03:15] <istealyermp3s> secondly did you put in support for the file u need to play... restriced codecs  for instance
+[03:15] <Joseph> orbin: there are other options too
+[03:15] <orbin> !sound > eauxnguyen
+[03:15] <Joseph> orbin: will one be to mount?
+[03:15] <BlueEagle> janubuntu: well, are you gonna tell me?
+[03:16] <orbin> Joseph: are you in the installer right now?
+=== eno is now known as eno-away
+=== d00by hopes that he read the post right
+=== superjew9020 [n=jewboy@c-67-163-158-111.hsd1.pa.comcast.net]  has left #ubuntu []
+[03:16] <janubuntu> BlueEagle it was a PC to PC network thing on the mothetrboard
+[03:16] <Joseph> orbin: no, i am having to switch between the installer and windows
+[03:16] <bruenig> jordan, you can download the .deb from here http://packages.ubuntu.com/, that has all of the packages in the repos. There probably is a way to do it with apt-get but I don't care to figure that out right now
+[03:16] <BlueEagle> janubuntu: o'rly? Well there you go. :)
+[03:16] <John[1] > Can someone tell me waht to add or comment out in the sources.list to get the latest and greatest update and fix my desktop not installing issue?
+[03:16] <FRET> good night all
+[03:17] <BlueEagle> ubotu: tell john[1]  about easysource
+[03:17] <janubuntu> BlueEagle at leats that puzzle is solved
+[03:17] <d00by> eyequeue, I LOVE YOU! YOU ARE MY NEW HERO!
+[03:17] <orbin> Joseph: http://ubuntuforums.org/showthread.php?t=76652
+[03:17] <BlueEagle> janubuntu: ;D
+[03:17] <eyequeue> d00by, groovy
+[03:17] <orbin> Joseph: you need to mount the partitions yourself (see post 8)
+=== d00by goes back to watching tv while reading ebay knowing full well hes not going to buy anything
+[03:17] <Joseph> orbin: ok thanks, ill take a look at that
+=== Tmob [n=total@species8472.borg.ch]  has joined #ubuntu
+=== rmd [n=jason@tor/session/external/x-197ccfc0e7eef1b9]  has joined #ubuntu
+=== poncho_1 [n=poncho@69.27.215.2]  has joined #ubuntu
+[03:18] <rmd> why does scienceblogs.com kill firefox?
+[03:18] <sethk> rmd, doesn't kill mine
+=== chris__ [n=chris@londonderry-cuda3-24-51-50-218.lndnnh.adelphia.net]  has joined #ubuntu
+[03:18] <rmd> of course
+=== xored [n=gasdasdf@i3ED6C0B2.versanet.de]  has joined #ubuntu
+[03:18] <rmd> god hates me
+[03:18] <profoX`> rmd: excessive flash maybe? it works fine here
+[03:18] <sethk> rmd, there have been several people tonight with firefox issues
+=== thompa [n=thom@c-69-180-208-122.hsd1.tn.comcast.net]  has joined #ubuntu
+[03:19] <sethk> rmd, not just you
+[03:19] <orbin> John[1] : deb http://archive.ubuntu.com/ubuntu dapper-updates main  has the update
+[03:19] <chris__> hi i built Xfce, how do i let gdm know about it so I can select it?
+[03:19] <sethk> rmd, getting segmentation violations
+[03:19] <eyequeue> anf flash and firefox have always been iffy for some people
+[03:19] <Flannel> chris__: it should already be in there, is it not?
+[03:19] <sethk> rmd, it's possible that I don't see it because I installed from mozilla.org instead of using the packages
+[03:19] <orbin> chris__: it should be in the sessions menu
+=== smbrow14 [n=stephen@pool-71-98-161-207.tampfl.dsl-w.verizon.net]  has joined #ubuntu
+[03:19] <eauxnguyen> <istealyermp3s> thanks, no mixer found. maybe that's the problem heh
+[03:19] <chris__> no its not there
+[03:19] <orbin> chris__: how did you install it?
+[03:19] <chris__> i built it in /home/chris/local
+[03:19] <Flannel> chris__: under session?
+[03:19] <profoX`> eyequeue: yea i think its because of aoss that people experience problems with firefox+flash
+[03:19] <profoX`> eyequeue: i'm going to test more tonight
+[03:20] <sethk> profoX`, I'm not sure that's really the story, but it is likely part of it
+[03:20] <thompa> i want to backup one dvd, is copy disc to disk image what i want to do?
+[03:20] <orbin> chris__: you built xfce from source?
+[03:20] <chris__> i used the installer to build it
+[03:20] <orbin> why not just grab it from apt?
+[03:20] <BlueEagle> john[1] : You're desktop is not "installing"?
+[03:20] <bruenig> aoss always made firefox crash when I used it for flash. It allowed me to have flash and another app with sound going at the same time. But after I watched the animation. It always crashed. I did away with it and now it doesn't crash. I can't have the mixing anymore but that is better than crashing
+[03:20] <profoX`> sethk: well epiphany worked fine, and i did aoss epiphany, and it crashed like it did on firefox today..
+[03:21] <sethk> BlueEagle, your,   you're means you are
+=== Dev05 [n=hernan@toronto-HSE-ppp4325754.sympatico.ca]  has joined #ubuntu
+[03:21] <azathoth> for some reason, sound stops working after a few hours in ubuntu...
+[03:21] <profoX`> bruenig: exactly! i found that out now
+=== smbrow14 [n=stephen@pool-71-98-161-207.tampfl.dsl-w.verizon.net]  has left #ubuntu []
+[03:21] <sethk> profoX`, that's interesting
+[03:21] <profoX`> sethk: yes, very
+[03:21] <BlueEagle> sethk: You are most right. Again it's 3:22 am here and I'm having a beer. :)
+[03:21] <azathoth> what can i use to find out whether it's a driver issue or what
+[03:21] <azathoth> ?
+[03:21] <sethk> profoX`, but I'm not certain that is the only thing making firefox crash
+[03:21] <profoX`> sethk: in combination with flash you mean?
+=== Weirdbro [n=Weirdbro@pool-141-152-252-232.phlapa.east.verizon.net]  has joined #ubuntu
+[03:22] <profoX`> well.. flash IS pretty dumb by design :)
+=== bruenig loves him some flash
+[03:22] <KenSentMe> azathoth: maybe there's an error message in /var/log/syslog
+[03:22] <chris__> should i have choosen a differnt directory when the installer asked other than the default of /home/chris/local ?
+=== Weirdbro [n=Weirdbro@pool-141-152-252-232.phlapa.east.verizon.net]  has left #ubuntu ["Ex-Chat"]
+[03:22] <sethk> profoX`, yes, there have been some problems reported with web sites that use the flash plugin
+[03:22] <bruenig> chris__, you should have done it via apt
+[03:22] <chris__> uhhh i was going after 4.4
+[03:22] <sethk> profoX`, I am using KDE so that may also explain why I see different things in some cases
+[03:22] <swarm_> ok, btdownloadcurses worked
+[03:23] <azathoth> hmmm... youtube video's play sound fine
+[03:23] <profoX`> sethk: kde is good :)
+[03:23] <swarm_> but it was at 80% before, now 8%
+[03:23] <swarm_> :\
+[03:23] <azathoth> but normal sounds (even default system sounds_ don' work... lemme check the log
+[03:23] <Flannel> swarm_: would the first one have been the torrent file downloading?
+[03:23] <sethk> chris__, you can add it to gdm, but it's a bit complicated
+=== cynikal [n=cynical@adsl-068-209-095-168.sip.gsp.bellsouth.net]  has joined #ubuntu
+=== jmh09 [n=jmh09@EV-ESR1-72-49-254-111.fuse.net]  has joined #ubuntu
+[03:23] <swarm_> Flannel, what do you mean?
+=== Rinchen [n=Rinchen@ubuntu/member/rinchen]  has joined #ubuntu
+[03:24] <azathoth> nothing in the log
+[03:24] <Jordan> Somebody has to know how to get a .deb file from apt, I can't believe it's that hard. Do I need to clarify my question?
+[03:24] <chris__> according to ubuntuguide.org (which i followed) "    *  finally to enable Xfce, you may need to enable it on the desktop manager (mark allow Xfce manage desktop)"
+[03:24] <chris__> not sure what that means lol
+[03:24] <Flannel> swarm_: the first 80% mightve been it downloading the torrent file
+[03:24] <bruenig> Jordan, doing sudo apt-get -d install whatever, will only download whatever. I don't know where it stores it but it downloads it somewhere
+[03:25] <sethk> chris__, that's assuming you installed the package.  you built it, so it's a bit more work than that for gdm to see it
+[03:25] <smo> bruenig: most likely /var/cache/apt/archives/
+[03:25] <Dev05> Jordan, when you download and intall deb packs, they are in /var/cache/apt/archives.
+[03:25] <swarm_> Flannel, nah, it was at 2.8gb of 3.2gb
+[03:25] <chris__> whats the apt package to get?
+[03:25] <Flannel> chris__: xubuntu-desktop
+[03:25] <bruenig> smo, you are correct sir
+[03:25] <Jordan> bruenig:  Dev05: Thanks.
+[03:25] <chris__> oh yeah.. duh
+[03:25] <chris__> hehe thanks
+[03:26] <chris__> guess ill just go that route, thanks :)
+[03:26] <chris__> im installing now
+[03:26] <orbin> chris__: or xfce4 if you want the streamlined option
+=== f_favila [n=f_favila@63.93.79.76]  has joined #ubuntu
+=== lavi [n=lavi@221.226.103.140]  has joined #ubuntu
+[03:28] <bruenig> is there any reason to keep all of those debs archived?
+[03:28] <azathoth> hmmm, totem says the sound is in use by another app
+=== Tanstaafl [n=conrad@146.229.186.153]  has joined #ubuntu
+[03:28] <azathoth> but there's nothign else using it
+=== Tanstaafl [n=conrad@146.229.186.153]  has left #ubuntu ["Leaving"]
+[03:28] <azathoth> how can i change engine so it can use multiple audio streams?
+[03:28] <azathoth> i'm in gnome btw
+[03:28] <sethk> bruenig, it's documentation of what's on your system
+=== digip1mp [i=digip1mp@202.69.238.166]  has joined #ubuntu
+[03:28] <bruenig> sethk, and that is important...
+[03:28] <bruenig> ?
+=== thanatos_ [n=thanatos@S010600095bee693d.vn.shawcable.net]  has joined #ubuntu
+=== danmorg [n=danmorg@c-65-97-28-193.hsd1.va.comcast.net]  has joined #ubuntu
+[03:29] <sethk> bruenig, you can certainly envision situations where you might need to know.
+[03:29] <sethk> bruenig, routinely, probably not.
+[03:29] <thanatos_> where is the .xinitrc file?
+[03:29] <sethk> bruenig, but if you find you have a problem that other people aren't having, the next step is to compare the state of your system to others
+=== jmac__ [n=jamie@adsl-074-229-056-205.sip.bct.bellsouth.net]  has joined #ubuntu
+[03:29] <sethk> thanatos_, usually in $HOME
+[03:29] <bruenig> perhaps, I always made a habit of apt-get cleaning
+[03:29] <sethk> thanatos_, I believe there is also a global one...
+[03:30] <danmorg> found my problem with ubuntu shutting down randomly: Aug 20 23:52:27 danpc kernel: [4295267.313000]  Critical temperature reached (-264 C), shutting down.
+[03:30] <bruenig> i don't know why
+[03:30] <baconbacon> bacon@laptop-bacon:~$ locate xinitrc
+[03:30] <baconbacon> /etc/X11/xinit/xinitrc
+[03:30] <sethk> thanatos_, yes, there is /etc/X11/xinit/xinitrc
+[03:30] <sethk> thanatos_, note, no dot in front of the global one
+[03:30] <danmorg> any ideas on how to get the kernel to ignore that?
+=== IsleVegan [n=secret@m590e36d0.tmodns.net]  has joined #ubuntu
+[03:31] <AdamKrier> danmorg: are you sure you are definitely not overheating?
+[03:31] <sethk> danmorg, you can ignore it, but are you sure you want to?
+=== boudahxl [n=boudahxl@modemcable182.200-81-70.mc.videotron.ca]  has joined #ubuntu
+=== lispy [n=dagit@198.145.244.130]  has joined #ubuntu
+=== keithhhhh [n=Administ@219.241.36.108]  has joined #ubuntu
+=== Aidamina [n=aa@cc247812-b.roden1.dr.home.nl]  has joined #ubuntu
+=== TheMafiaa [n=TheMafia@74.135.181.228]  has joined #ubuntu
+[03:32] <danmorg> sethk, never had a problem running windows.  besides, its a cheap pc i bought. eMachines.
+[03:32] <TheMafiaa> I want to install ubuntu on my new laptop, do I download the live cd and install from that?
+[03:32] <sethk> danmorg, meaning you don't care if it melts?
+[03:32] <lispy> i just found out some versions of ubuntu are still shipping darcs 1.0.5, but 1.0.5 has two rather serious bugs.  http://www.abridgegame.org/pipermail/darcs-users/2006-February/009694.html  who do i contact to let them know they should update the package?
+=== ircleuser [n=OcutKoch@12-215-95-126.client.mchsi.com]  has joined #ubuntu
+[03:32] <sethk> TheMafiaa, yes
+[03:32] <danmorg> ok.  you can quit laughing about eMachines now :)
+[03:32] <TheMafiaa> sethk, thanks
+[03:32] <bruenig> The Mafiaa, you need to download the live cd and burn it to disk
+[03:32] <danmorg> sethk, pretty much.  any ideas?
+[03:32] <ircleuser> Ubuntu is getting HUGE! I keep seeing it on Digg.com. It's becoming very popular!
+[03:33] <TheMafiaa> ircleuser, I am a very long time redhat/fedora user and I am taking the plunge because of all the good things I have heard
+[03:33] <sethk> danmorg, I believe you can turn it off with sysctl
+=== mikul [n=mikul@81-233-78-174-no73.tbcn.telia.com]  has joined #ubuntu
+[03:33] <sethk> ircleuser, it is, but you don't need to install packages you don't use
+=== Jbirk [n=Justin@adsl-67-124-196-31.dsl.sndg02.pacbell.net]  has joined #ubuntu
+[03:34] <ircleuser> Sethk: I don't mean huge as in "megabytes". Lol.
+=== wickers [n=jonathon@toronto-HSE-ppp4230657.sympatico.ca]  has joined #ubuntu
+=== eauxnguyen [n=owbr@oh-71-53-63-201.dhcp.embarqhsd.net]  has joined #ubuntu
+[03:34] <wickers> anyone here notice a slow down when moving from the default kernel to the i686 kernel?
+[03:35] <sethk> ircleuser, oh, you mean number of users.  I like it and I've used just about all the major distros
+[03:35] <John[1] > Okay, I got the source-o-matic list.  How can I get this on my ubuntu server?
+[03:35] <AdamKrier> wickers, no, nothing noticable
+[03:35] <sethk> wickers, I haven't personally but I've talked to several people who have
+[03:35] <sethk> wickers, what processor?
+[03:35] <AdamKrier> wickers, i didn't notice a speed-up either, though
+[03:35] <ircleuser> Sethk: When it comes time to upgrade from Dapper to Edgy Eft, will we be able to do that with Update Manger?
+[03:35] <wickers> Pentium M
+[03:35] <wickers> Centrino platform.
+[03:35] <ircleuser> *manager
+[03:36] <sethk> ircleuser, yes
+[03:36] <sethk> wickers, that's not the processor I've seen the issue with
+[03:36] <sethk> wickers, what, specifically, is slowing?
+[03:36] <wickers> what is?
+[03:36] <sethk> wickers, an amd processor
+[03:36] <wickers> Gnome, application startup times, UI interactions.
+=== ubuntu [n=ubuntu@0x503fe6af.bynxx10.adsl-dhcp.tele.dk]  has joined #ubuntu
+[03:36] <jmac__> Warning, Installed the xorg update and it killed X
+[03:37] <wickers> sethk... well you should not be using i686 for an amd processor.
+[03:37] <wickers> ;)
+[03:37] <jmac__> I had to roll back
+[03:37] <ircleuser> sethk: Cool
+[03:37] <sethk> wickers, that's odd.  when you boot the old, i386 kernel, it goes away?
+[03:37] <jmac__> known bug
+=== mduran [n=mduran@201.236.121.194]  has joined #ubuntu
+[03:37] <ircleuser> Does anyone know how to get Dapper running on an iMac G5?
+[03:37] <sethk> wickers, of course not, but there are compatibility claims from amd ...
+[03:37] <Jbirk> Se
+[03:37] <Jbirk> Download the Power PC version of it
+[03:37] <keithhhhh> Is there any software to connect to windows Remote Assistance
+[03:37] <keithhhhh> ?
+[03:37] <jmac__> gnome-rdp
+[03:37] <jmac__> or tsclient
+[03:37] <wickers> sethk, well i have not tied going back yet, but I've noticed that on two different installs it gets noticabily sluggish after swaping out the kernel.
+[03:37] <ircleuser> Jbirk: It doesn't work on iMac G5s as far as I know. Many people have had trouble with it.
+[03:37] <sethk> keithhhhh, not that I've come across
+[03:38] <Jbirk> Oh
+[03:38] <Jbirk> Ouch
+[03:38] <keithhhhh> sethk: oh man its an essential app for my friend transfering over
+[03:38] <Jbirk> Terminal Server Client 0.140
+[03:38] <Jbirk> www.rdesktop.org
+[03:39] <BlueEagle> !anyone
+[03:39] <ubotu> A large amount of the first questions asked in this channel start with "Does anyone/anybody..."  Why not ask your next question (the real one) and find out?
+[03:39] <sethk> keithhhhh, possibly you can run it under wine
+[03:39] <sethk> Jbirk, I don't think he means terminal server
+[03:39] <ubuntu> Hi there
+[03:39] <AdamKrier> what apps/libs are needed to play .mp4, if possible?
+[03:39] <keithhhhh> sethk: Ill mention it to him
+[03:39] <Jbirk> http://www.rdesktop.org/#status
+[03:39] <Jbirk> Awsome client
+[03:39] <mikul> how do i activate my network card, (eth0)?  is there anything like the command net-setup in ubuntu? or how do i do it? cause dhclient dosent work, just getting No DHCPOFFERS received
+[03:40] <Jbirk> it can do VNC
+=== rsk [n=ruskie@c83-250-221-61.bredband.comhem.se]  has joined #ubuntu
+[03:40] <ubuntu> I have a slight problem. I am trying to install Ubuntu on a RAID1 array on nForce 4 SATA, and during the partition part, the drives show up as seperate drives. What should I do?
+[03:40] <rsk> gah, where does one get gmake
+=== lispy [n=dagit@198.145.244.130]  has left #ubuntu ["ERC]
+[03:40] <Flannel> ubuntu: use the alternate ISO
+=== Corporal_Dirge [n=Dirge@67-51-130-4.dsl1.elk.ca.frontiernet.net]  has joined #ubuntu
+[03:40] <ircleuser> Is it possible to run Ubuntu on an iMac G5?
+[03:40] <sethk> rsk, make on linux is gmake
+[03:41] <rsk> sethk, ok but i dont have the command gmake
+=== ikaruga [n=uriavalo@ool-45758fae.dyn.optonline.net]  has left #ubuntu []
+[03:41] <sethk> rsk    ln -s /bin/make /bin/gmake
+[03:41] <IcemanV9> mikul: sudo ifup eth0
+[03:41] <rsk> and i need it for compile
+=== Jamminpotato [n=Jamminpo@ip68-230-214-64.rd.hr.cox.net]  has joined #ubuntu
+=== Epoch71 [n=epicepoc@ool-182e6859.dyn.optonline.net]  has joined #ubuntu
+[03:41] <Epoch71> hey, i have a problem
+[03:41] <sethk> rsk, sorry, ln /usr/bin/make /usr/bin/gmake
+[03:41] <Jbirk> YOu have to install the compiler tools
+[03:41] <Epoch71> i installed ubuntu a few days ago, it ran fine other than some wrestling with fglrx
+[03:41] <ubuntu> Flannel: The alternate iso? Does it have a name, or is that it's name?
+[03:41] <sethk> Jbirk, no, he needs it with the name gmake, he already has make
+[03:41] <Epoch71> i had fglrx installed and it was working fine, i'd rebooted it with those settings a few times
+[03:41] <Flannel> ubuntu: that is its name, it'll be downloadable from the same place you got the desktop iso
+[03:41] <rsk> alright
+=== prxq [n=prxq@C5d86.c.strato-dslnet.de]  has joined #ubuntu
+[03:42] <rsk> o/
+[03:42] <Epoch71> then it updated something and gdm stopped working
+[03:42] <Jbirk> sudo apt-get install build-essential
+[03:42] <sethk> Jbirk, that's not what he needs
+[03:42] <ubuntu> I got it with a magazine, but I'll find it. Thanks!
+[03:42] <sethk> Jbirk, you aren't listening
+=== default [n=thanatos@S010600095bee693d.vn.shawcable.net]  has joined #ubuntu
+[03:42] <Epoch71> gave me a no devices found/no screens error, i tried rebuilding xorg.conf with dexconf, no luck
+=== _tcc [n=_tcc@69-161-101-250.bflony.adelphia.net]  has joined #ubuntu
+[03:42] <_tcc> What is the name of the ncurses package?
+[03:42] <sethk> Epoch71, see topic for fix
+[03:42] <sethk> _tcc, ncurses, I think, let me check
+[03:42] <Epoch71> oh
+[03:42] <Epoch71> haha
+[03:42] <default> how do i stop gnome from starting at startup?
+=== snook353 [n=chemical@129.252.62.54]  has joined #ubuntu
+[03:43] <ubuntu> Flannel: Oh, do you mean the one with the text-based installer?
+[03:43] <Flannel> ubuntu: right
+[03:43] <Dev05> !tell Epoch71 about xorgbug
+[03:43] <Jbirk> sudo apt-get install gcc gmail
+=== red|rain [n=xquizit@d64-180-60-102.bchsia.telus.net]  has joined #ubuntu
+[03:43] <_tcc> I am trying to run airodump-ng and the damn thing just sits there.
+[03:43] <Jbirk> sorry I meant gmake
+[03:43] <ubuntu> Cool, then I have it! Thanks again!
+[03:43] <_tcc> It clears the terminal and does nothing.
+[03:43] <swarm_> bittorrentcurses for the win :)
+=== dredhammer [n=dredhamm@pool-71-247-59-14.nycmny.east.verizon.net]  has joined #ubuntu
+[03:43] <eauxnguyen> need sound help with streaming radio on my thinkpad. Sound works on video
+[03:43] <sethk> Jbirk, he has make already.  he needs the _name_ gmake
+[03:43] <mikul> IcemanV9, id dosent seam to work :S
+[03:43] <sethk> Jbirk, you aren't listening
+[03:44] <_tcc> sethk?
+=== judari_ [n=judah@ppp-69-223-79-137.dsl.dytnoh.ameritech.net]  has joined #ubuntu
+[03:44] <sethk> _tcc, hold on a second ...
+[03:44] <_tcc> ok
+[03:44] <John[1] > Where can I go to donload athe lastest ubuntu dapper server that has all the fixes on it, so I do not have to keep trying do and update to no avail?
+[03:44] <mikul> IcemanV9, getting NO DHCPOFFERS Received
+[03:44] <sethk> _tcc, libncurses5
+[03:44] <Jbirk> It is time for a movie and a nap.  I slept 4 hours last night, have been up 16 and haven't eaten since I woke up
+[03:44] <mikul> all the time
+[03:44] <sethk> _tcc, that's in breezy, but I don't believe it has changed in dapper
+[03:45] <BlueEagle> !info airodump-ng
+[03:45] <Epoch71> thanks, i'll go try that fix
+[03:45] <ubotu> Package airodump-ng does not exist in dapper
+[03:45] <avis> Jbirk, it happens.  we are linux users.  sleep well.
+[03:45] <IcemanV9> mikul: wireless or wired?
+[03:45] <mikul> IcemanV9, wired
+=== joeljkp [n=jjp@host-12-168-178-87.nctv.com]  has joined #ubuntu
+=== der0b [n=mds@c-24-218-106-50.hsd1.ma.comcast.net]  has joined #ubuntu
+[03:46] <default> how do i stop gnome from starting at startup?
+[03:46] <sethk> default, remove it from the things started for run level 2
+=== xange is now known as morbius
+=== gnomefreak [n=gnomefre@ubuntu/member/gnomefreak]  has joined #ubuntu
+=== Once [n=once@unaffiliated/Once]  has joined #ubuntu
+[03:46] <Once> !xorgbug > Once
+[03:47] <keithhhhh> my friend has a notebook with a broken cdrom and cant boot from USB,  any ideas how he can install ubuntu?
+[03:47] <IcemanV9> wired? hm. sudo ifdown eth0; sudo ifup eth0
+[03:47] <bruenig> !xorgbugfix > ONce
+[03:47] <eauxnguyen> aplay sees the card, the alsa mixer has nothing muted..
+[03:47] <eauxnguyen> still no sound
+[03:47] <default> how
+[03:47] <mikul> IcemanV9, i have a router with dhcp server, but i dont get any offers when i try to use dhclient or /etc/init.d/networking restart
+[03:48] <judari_> question: I would like to install Dapper on a system that has Suse and Windows on it. Will Dapper recognise those installations and allow you to setup another partition for Dapper? or does it just install over those os' ?
+=== Dysk [i=nat32@vsat-148-63-164-42.c189.t7.mrt.starband.net]  has joined #ubuntu
+[03:48] <Once> bruenig: Thank you
+=== marco666 [n=marco666@84-245-8-89.dsl.cambrium.nl]  has joined #ubuntu
+=== d4rky [n=d4rky@abwf157.neoplus.adsl.tpnet.pl]  has joined #ubuntu
+[03:48] <sethk> judari_, it will allow you to install without touching the existing partitions
+=== dudus [n=dudus@200.246.22.208]  has joined #ubuntu
+[03:49] <Flannel> judari_: use the alternate ISO, it'll give you more flexibility
+[03:49] <IcemanV9> mikul: i have the same setup as well. what did 'ifconfig' said? eth0, eth1 or whatever it said on your screen.
+=== morbius [n=xange@cpe-24-95-48-152.columbus.res.rr.com]  has left #ubuntu []
+[03:49] <eauxnguyen> tell eaxnguyen sound
+[03:49] <orbin> doesn't it depend if he has free space or not?
+=== morbius [n=xange@cpe-24-95-48-152.columbus.res.rr.com]  has joined #ubuntu
+=== Tobbz_ [n=Tobbz_@0x503e23c7.arcnxx12.adsl-dhcp.tele.dk]  has joined #ubuntu
+=== pydj [n=pydj@c-71-232-89-188.hsd1.ma.comcast.net]  has joined #ubuntu
+[03:49] <d4rky> one question - any old, warty warthog erotic wallpapers for perverted n00b?
+[03:50] <d4rky> ;p
+=== Jenga [n=jason@233.66.168.203.megaegg.ne.jp]  has joined #ubuntu
+[03:50] <default> how do i remove gnome from the things started for run level 2?
+[03:50] <Dysk> anyone know if there's an X application which will print out the keyboard events it receives?
+[03:50] <sethk> orbin, not exactly.  it will still give you the question about whether or not to overwrite
+[03:50] <Dysk> I'm trying to figure out what the scancodes are on my laptop keyboard.
+[03:50] <sethk> orbin, if you say no, and there is no space, of course the install stops
+=== keithhhhh [n=Administ@219.241.36.108]  has left #ubuntu []
+=== james_xxx [n=james@c-24-7-251-85.hsd1.in.comcast.net]  has joined #ubuntu
+[03:51] <sethk> orbin, but it doesn't automatically use space because there is no free space
+[03:51] <dredhammer> hello can anyone point in the right direction to complile the latest mimms 2.0.1
+[03:51] <natural20> bruening, do you remember my question from before? if so, am i asking the wrong questions - is it something not related to my browser?
+[03:51] <sethk> Dysk, run the xev app, put the cursor in its box, and type keys
+[03:51] <mikul> IcemanV9, ifconfig gives me eth0 and lo. eth0 have no ip because it dosent get any from dhclient
+[03:51] <pydj> Does Ubuntu's remote desktop work remotely?  I can get it to work when both computers are on the same network, but not from different states.  I may need some kind of remote desktop from other country soon, but how to do it?  There could be several computers on the same IP address that I'm trying to connect to.
+[03:51] <orbin> sethk: ah i see
+[03:51] <_tcc> What is a good way to control a "remote" Linux box graphically?
+[03:51] <_tcc> VNC sort of blows.
+[03:51] <Dysk> sethk, Thanks!
+[03:51] <judari_> thanks sethk, Flannel, which ISO?  I only have the Dapper cd someone gave me. If I use that disc (the live cd w/ install) how does it mess with the mbr?  I have grub on it that SusE installed. Will Dapper just add itself to it, or will it add it's own menu ?
+[03:51] <pydj> _tcc: same question here...
+=== Once [n=Once@unaffiliated/Once]  has joined #ubuntu
+[03:51] <_tcc> And by good, I mean, it WORKS................
+[03:52] <default> _tcc, webmin
+[03:52] <_tcc> pydj, we could use SSH X forwarding, but that's too much for what i want
+=== NkuMik1 [n=Mike@nr3-216-196-190-12.fuse.net]  has joined #ubuntu
+[03:52] <Flannel> judari_: the liveCD gives you less flexibility, you'll get better partitioning/control/etc with the alternate ISO, including not touching grub and allowing you to add it later, etc
+[03:52] <pydj> _tcc: how does that work?  I just need to control someone's desktop to save explanation time...
+=== charlie01 [n=charlie0@201.82.8.5]  has joined #ubuntu
+[03:52] <NkuMik1> Can someone help me get my internet connection up on ubuntu?
+[03:53] <pydj> NkuMik1: ask away...
+[03:53] <BlueEagle> ubotu: tell nkumik1 about anyone
+[03:53] <_tcc> I think you just edit the sshd config and launch a graphical application with the shell.
+=== snook353 [n=chemical@129.252.62.54]  has left #ubuntu []
+[03:53] <eauxnguyen> ubotu tell eauxnguyen about sound
+[03:53] <_tcc> Allow X forwarding.
+[03:53] <ryanakca> is the wiki down?
+[03:54] <rmd> ryanakca: always
+=== damian_ [n=damian@68.183.30.251]  has joined #ubuntu
+[03:54] <NkuMik1> I'm not sure what the problem is.. it recognizes my atheros wireless adapter it sees my wireless network I tell it to activate the ath0 and tell it to connect to my wireless network but it seems to do nothing.  The network thing in the top corner just stays at lo
+[03:54] <damian_> how do I upgrade to kernel 2.6.17?
+=== witless [n=witless@24.177.88.25]  has joined #ubuntu
+=== Epoch71 [n=epicepoc@ool-182e6859.dyn.optonline.net]  has joined #ubuntu
+[03:55] <_tcc> http://gentoo-wiki.com/HOWTO_X-forwarding
+[03:55] <pydj> _tcc: I'll have to look into it.  Might work...
+[03:55] <_tcc> pydj
+[03:55] <profoX`> damian_: why do you have to?
+[03:55] <_tcc> Yup.
+[03:55] <sethk> pydj, you can't control a desktop with an ssh connection
+[03:55] <profoX`> dapper doesn't supply .17
+[03:55] <witless> i guess i need to rebuild my nvidia driver after the xorg update today?
+[03:55] <profoX`> not by default anyway
+[03:55] <damian_> profoX: supposedly bcm43xx only works with 2.6.17 kernel
+[03:55] <profoX`> witless: I read so yes
+[03:55] <charlie01> where i can get maps from brazil for palm T|X??????????????///
+[03:55] <sethk> pydj, you can run applications from that machine onto another x display using ssh
+[03:55] <pydj> sethk: any other suggestoins?
+[03:55] <profoX`> damian_: broadcom? are you sure?
+[03:55] <judari_> Flannel, is there a particular name for this alternate iso ? or is just called "alternate iso" ? ;)
+[03:55] <profoX`> I thought it worked with .15 too
+[03:55] <_tcc> sethk, yeah that's what i mean
+[03:55] <profoX`> but I'm not sure..
+[03:55] <sethk> pydj, you want to have a desktop running on machine x but displayed on machine y?
+[03:56] <default> how do i remove gnome from the things started for run level 2?
+[03:56] <profoX`> judari_: Alternate installer? maybe :)
+[03:56] <charlie01> where i can get maps from brazil for palm T|X??????????????
+[03:56] <_tcc> use vnc for that
+[03:56] <damian_> profoX: well, they used to work, and now they stopped, and I asked someone in #wireless and he said you needed 2.6.17
+[03:56] <_tcc> vnc sucks
+[03:56] <Flannel> judari_: it's called he "alternate" iso
+[03:56] <sethk> pydj, or do you want the desktop displayed on the machine and also displayed on another box?
+[03:56] <Flannel> !tell judari_ about alternate
+[03:56] <profoX`> default: I think /etc/inittab ?
+[03:56] <default> k
+[03:56] <pydj> sethk: I want an ubuntu live CD on computer in china and ubuntu installed on my laptop-- controlling the remote computer's desktop and applications.
+[03:56] <natural20> so i can't load certain pages with opera, ff, or epiphany.  i know the pages work.  they are all pages that require login information.  any ideas?
+=== valehru [n=valehru@221.201.167.91]  has joined #ubuntu
+[03:56] <IcemanV9> NkuMik1: you need to change icon in the top panel from lo to ath0 by right-click
+=== cliffs [n=Miranda@S01060004e2eba3e4.cg.shawcable.net]  has joined #ubuntu
+[03:56] <witless> profoX`: thanks, didn't notice topic.  i'll check it out
+[03:56] <profoX`> default: no i misunderstood the question
+[03:56] <pydj> sethk: both computers with desktops.
+=== tpelton [n=tpelton@cpe-24-198-80-133.maine.res.rr.com]  has joined #ubuntu
+[03:56] <sethk> pydj, ok, you can use xdmcp for that
+[03:56] <NkuMik1> icemanv9: and then it will just work?
+[03:56] <profoX`> witless: np
+[03:57] <sethk> pydj, the desktop displayed on your box while the remote box is running
+[03:57] <sethk> pydj, but not displayed on the remote box
+[03:57] <IcemanV9> NkuMik1: then you'll see some activities in the little tiny monitor
+[03:57] <_tcc> Oh the X display manager
+[03:57] <sethk> _tcc, right, the X xdmcp capability is turned on in the display manager
+=== mhonn [n=mhoon@212.165.175.42]  has joined #ubuntu
+=== Casey_ [n=Casey@12-201-38-40.client.mchsi.com]  has joined #ubuntu
+[03:57] <tpelton> anyone have any thoughts on sound, my kde sound works
+[03:57] <NkuMik1> alright...
+[03:57] <tpelton> sound applications _dont_
+[03:57] <mhonn> hi..
+=== jzb [n=jzb@c-67-164-187-12.hsd1.co.comcast.net]  has joined #ubuntu
+=== bruenig thinks about sound in his sleep
+[03:57] <FliesLikeALap> you need to tell the applications to use the right audio output plugin probably
+[03:58] <judari_> thanks Flannel..
+[03:58] <sethk> tpelton, is artsd running?
+[03:58] <tpelton> yes
+[03:58] <IcemanV9> NkuMik1: i have ath0 card myself. it's a super card that makes me happy. :)
+[03:58] <tpelton> i tried stopping
+[03:58] <FliesLikeALap> what applications have you tried?
+[03:58] <pydj> sethk: I need it displayed on both computers... with IM chat going on at the same time...
+[03:58] <tpelton> stopping artsd
+=== jzb [n=jzb@c-67-164-187-12.hsd1.co.comcast.net]  has left #ubuntu ["All]
+=== bruenig [n=bruenig@ppp-70-242-99-93.dsl.rcsntx.swbell.net]  has left #ubuntu []
+[03:58] <judari_> Flannel, btw, have you heard the great lp "Flyin' The Flannel" ? If not, look it up .. :)
+[03:58] <wickers> arg
+[03:58] <tpelton> i have a flight sim, and kaffeine and amarok that dont work
+[03:58] <sethk> pydj, then you may be reduced to using vnc, which has awful performance
+[03:58] <tpelton> "test sound" does
+=== Tobbz_ [n=Tobbz_@0x503e23c7.arcnxx12.adsl-dhcp.tele.dk]  has joined #ubuntu
+[03:58] <tpelton> flight sim uses the alsa api
+[03:59] <sethk> tpelton, I didn't say to stop artsd, I asked if it is running
+[03:59] <tpelton> checked alsa mixer
+[03:59] <pydj> sethk: an alternative to gotomeeting type of thing... VNC works find on the internal network here... but I don't konw how to do it over the Internet.
+[03:59] <tpelton> it _was_ and _is_
+[03:59] <NkuMik1> icemanv9:  Im not too find of mine it seems it wasn't out of the box supported by most of the linux distros I tried without madwifi (i had trouble with that as well) anyways I will go try that thanks for your help
+[03:59] <_tcc> sethk, how do you enable that now?
+[03:59] <sethk> pydj, the same way.
+[03:59] <sethk> _tcc, xdmcp?  in the gdm.conf file
+[03:59] <pydj> sethk: it doesn't want to connect when I do it.
+[03:59] <mhonn> halo i'm newbie in ubuntu
+[03:59] <IcemanV9> NkuMik1: in my case, it "just works" out of the box.

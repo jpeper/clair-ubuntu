@@ -1,0 +1,342 @@
+[19:13] <ubukou> holstein, should i boot unity and go deactivate it from there?
+[19:13] <holstein> sometiems you can get newer ones from the site
+[19:13] <jonko> i don't get better when you reboot, the free encyclopedia
+[19:13] <holstein> ubukou: you can.. however you want... that will remever the driver as i am suggesting
+[19:14] <kartonschachtel> lmgi www.google.com
+[19:14] <kartonschachtel> http://tinyurl.com/ccuwpq
+[19:14] <tigrang> does anyone know where synclient settings get saved to? Im trying to do 'synclient PressureMotionMinZ=20' but get an error message. I can change other values though.
+[19:15] <ubukou> holstein, cheers i ll try
+[19:16] <campee> does ext4 have the journal_checksum option turned on in ubuntu 11.04 by default?
+[19:17] <MiO-NiCk> Ün ŠðLuTø ÅffëttuØsÔ ð Tuttõ ÏL ChðN ÐÏ • #ubuntu •
+[19:18] <Oer> !it | MiO-NiCk
+[19:18] <ubottu> MiO-NiCk: Vai su #ubuntu-it se vuoi parlare in italiano, in questo canale usiamo solo l'inglese. Grazie! (per entrare, scrivi « /join #ubuntu-it » senza virgolette)
+[19:18] <MiO-NiCk> CiðöÔøÔ Å TuTtI ALlA PrÔsŠiMð AmIcI Ði ¤•¤ #ubuntu ¤•¤ :D •ExO•SCRiPT•
+[19:19] <foormea> hey. i'm getting kinda confused over ubuntu's handling of init scripts. a while ago there was a mix between sysv-rc style and upstart style. but with 11.10 it looks like all scripts in /etc/init.d are sysv-rc style?
+[19:19] <kubanc> anyone knows what should be the problem. I randomly got error composite sync not supported when i would like to have split screen (LCD and TV) on my Dell notebook. I'm using ATI mobility radeon X1400
+[19:21] <vbb> ...
+=== vbb is now known as golfhacker
+[19:24] <petrov>  [95] Blogi i opowiadania
+[19:24] <petrov>  [450] Budownictwo: usługi, domy, hale
+[19:24] <petrov>  [159] Edukacja: szkoły, kursy, prace magisterskie
+[19:24] <petrov>  [83] Erotyka i seks
+[19:24] <petrov>  [167] Finanse: kredyty, windykacja, ubezpieczenia
+[19:24] <petrov>  [58] Fora dyskusyjne
+[19:24] <FloodBot1> petrov: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[19:25] <reisio> uhhhh, is it normal for the window manager to crash during an update? :p
+[19:25] <reisio> never seen that happen
+[19:26] <reisio> looks like all the panels and things died as well
+[19:28] <kartonschachtel> http://tinyurl.com/n3yjxs
+=== Monkeypaws is now known as jennnnnn
+[19:28] <oCean> kartonschachtel: don't post that sillyness here
+=== jennnnnn is now known as jennnnnnnnnnnnn
+[19:30] <kartonschachtel> http://tinyurl.com/n3yjxs
+=== jennnnnnnnnnnnn is now known as Monkeypaws
+[19:32] <oCean> kartonschachtel: don't post offtopic nonsense again
+=== Monkeypaws is now known as jennnnn
+[19:34] <oCean> !nickspam > jennnnn
+[19:34] <ubottu> jennnnn, please see my private message
+=== jennnnn is now known as Monkeypaws
+[19:38] <GiB_> How would I go about asking for support?
+[19:39] <zykotick9> !ask | GiB_
+[19:39] <ubottu> GiB_: Please don't ask to ask a question, simply ask the question (all on ONE line and in the channel, so that others can read and follow it easily). If anyone knows the answer they will most likely reply. :-) See also !patience
+[19:39] <EvilResistance> GiB_, you just ask your question to the channel :P
+[19:42] <francy> ciao a tuttiù
+[19:42] <francy> ciao a tutti
+[19:42] <zykotick9> !it | francy
+[19:42] <ubottu> francy: Vai su #ubuntu-it se vuoi parlare in italiano, in questo canale usiamo solo l'inglese. Grazie! (per entrare, scrivi « /join #ubuntu-it » senza virgolette)
+[19:43] <ubukou> anybody knows the proper way to remove the ati driver and re-enable the open source driver? i used   sudo apt-get remove --purge xorg-driver-fglrx fglrx* and it resulted in failure.. had to reanable  it so i could boot gui..
+[19:45] <zykotick9> ubukou: (just a guess), but after you remove the ATI driver, you probably have to move xorg.conf to a different name.
+[19:45] <ubukou> zykotick9, hmm you think xorg.conf was trying to load fglrx?
+[19:46] <zykotick9> ubukou: yes i do
+[19:46] <ubukou> zykotick9, any reconfigure commands?
+[19:47] <zykotick9> ubukou: just move it to a different name, xorg shouldn't be required for "open" drivers (ATI's open driver still relies on proprietary firmware - so i don't consider it open)
+[19:47] <GiB_> Understandable, I was just reading the rules and it said something about topics. Anyways, recently got my computer today, installed compiz via the terminal. Since then when I log in using the 3D version the I no longer have a side dock or functionallity of top bar. At this point, seeing as how I have no data on this system yet, I would like to revert it back to its fresh out the box state.
+[19:47] <damo22> does ubuntu 11.04 server auto mount usb drives?
+[19:48] <zykotick9> damo22: if you haven't install a GUI - then NO
+[19:48] <sudipta> chat.freenode.net
+[19:48] <damo22> i need a way to write some files to a full OS
+[19:48] <damo22> i have 8kb of free space
+[19:49] <damo22> can i write a c program that runs a command as root without the root password?
+[19:49] <ActionParsnip> damo22: uninstall unused kernels to free up space
+[19:49] <ActionParsnip> damo22: run it with sudo.
+[19:49] <ubukou> zykotick9, according to some folks over at #ati it does..
+[19:49] <damo22> i dont have access to an account with admin rights
+[19:50] <ubukou> zykotick9, ohhh sorry misread what you wrote...
+[19:50] <damo22> i just have console access to 8kb of space
+[19:50] <damo22> and a c compiler
+[19:50] <ubukou> zykotick9, according to them the open source dirver tho can support compiz and dual screens
+[19:50] <raj> can I locally mount a remote drive I have access to via ssh/sftp ?
+[19:50] <ubukou> zykotick9, any expirience on that ?
+[19:50] <raj> and is this a safe idea?
+[19:50] <ActionParsnip> damo22: you can add the command to the sudoers file, it will not need password for sudo (you may need to still be in the admin group)
+[19:50] <zykotick9> ubukou: no personal experience no, i avoid ATI
+[19:51] <selina2> hi
+[19:51] <FreeSunRide> Hacker wanted go ahead and ping me
+[19:51] <LjL> FreeSunRide: sorry?
+[19:52] <FreeSunRide> I need help to access by boyfrinds PC I think he is cheating on me
+[19:52] <tigrang> Ok so Using synclient -m 100 Im looking at the pressure of my finger. Looks like what I want the min to be to start moving cursor is around 20-25. I set PressureMotionMinZ to 1 and restarted. Doing synclient -l I can see it is set. Now when I do synclient -m 100 again and monitor as I move, it only moves after about 30 pressure.
+[19:52] <tigrang> ^ touchpad
+[19:52] <Oer> FreeSunRide, wrong channel, this is Ubuntu support.
+=== Trystam is now known as Tristam
+[19:52] <GiB_> How do I restore my computer to its out of the box state?
+[19:53] <zykotick9> GiB_: reinstall
+[19:53] <webnet> GiB_, reinstall
+[19:53] <LjL> FreeSunRide: that's offtopic for this channel, and probably for this whole network.
+[19:53] <webnet> zykotick9, haha beat me to it :P
+[19:53] <ActionParsnip> GiB_: could rename the hidden folders in $HOME
+[19:53] <sklo> question: am using SSH via putty to get to my "server" but only think i cant do ise use apt-get. When it asks me to install, am soposed to choose "Y" or "n", what ever i do it says "interrupted"
+[19:54] <FreeSunRide> Anyone that can help me for a bonus $
+[19:54] <oCean> FreeSunRide: please drop that discussion
+[19:54] <ActionParsnip> sklo: can you give the output of: sudo apt-get update    use a pastebin
+[19:55] <sudipta> <FreeSunRide>drop it.....this channel is for ubuntu
+[19:55] <LjL> sudipta: they're gone
+[19:55] <ubukou> zykotick9, ok thanks a lot .. take carte
+[19:56] <sudipta> ljl:yeah
+[19:57] <sklo> ActionParsnip: it goes without errors
+[19:58] <tigrang> ActionParsnip, doing synclient -m 1 and slowly increasing pressure, I see the cursor starts moving at 30+. In my /etc/X11/xorg.conf.d/10-synaptics.conf I have http://paste.ubuntu.com/828001/ I set the Min pressure to 1. Any idea
+[19:58] <ubukou> anyone knows how i can install radeon/mesa drivers ?
+=== Trystam is now known as Tristam
+[19:59] <grubbyone_> ok, I'm in a livecd, how do I copy the entire filesystem from /dev/sda?
+[19:59] <root_z> how i can fix cursor size with compiz enabled?
+[20:00] <heinz> grubbyone_: dd if=/def/sda of=youroutput.file
+[20:00] <Ashii> anyone know a tool to set/manipulate title, name, class of window?
+[20:00] <grubbyone_> heinz: that will copy the entire drive, I don't have that kind of space
+[20:00] <heinz> grubbyone_: more likely you need sda1, though
+[20:00] <grubbyone_> I want to just get the files
+[20:00] <grubbyone_> non of the unused space
+[20:00] <grubbyone_> none*
+[20:01] <DummyMode> which is the code name of ubuntu 11? maverik?
+[20:01] <sklo> ActionParsnip: solved, coding problem putty via ubuntu ;) ty
+[20:01] <xangua> !maverick | DummyMode
+[20:01] <ubottu> DummyMode: Ubuntu 10.10 (Maverick Meerkat) was the thirteenth release of Ubuntu. Download http://releases.ubuntu.com/10.10/ - Release Info: http://www.ubuntu.com/getubuntu/releasenotes/1010
+[20:01] <Slart> !11.10 | DummyMode
+[20:01] <ubottu> DummyMode: Ubuntu 11.10 (Oneiric Ocelot) is the current release of Ubuntu | Download http://releases.ubuntu.com/11.10/ - Release Info: http://www.ubuntu.com/getubuntu/releasenotes/1110
+[20:01] <grubbyone_> it's a LVM
+[20:01] <Sona__> hi people what is the easiest way to transfer files (ftp?) from a win7 pc onto ubuntu server over local network
+[20:02] <sudipta> <DummyMode>!11.04|Dummyboy
+=== vahid is now known as Guest13076
+[20:03] <root_z> how i can fix cursor size with compiz enabled?
+[20:05] <ona7O> hi. is there an good tutorial for using systemd instead of upstart?
+[20:05] <blitz> when I installed win using apt-get I got an error while processing winbind
+[20:05] <blitz> does anyone know about how to fix that issue? I'll post the log
+[20:08] <blitz> http://paste.ubuntu.com/828020/ this is the error
+[20:11] <ubukou> sudo apt-get install xserver-xorg-video-ati
+[20:11] <ubukou>   sudo apt-get install --reinstall libgl1-mesa-glx libgl1-mesa-dri xserver-xorg-core
+[20:12] <harhar> teach me ubuntu
+[20:12] <erika_> ciao
+[20:12] <ubukou> these commands will get me the opensounce drivers ?
+[20:12] <erika_> !list
+[20:12] <ubottu> This is not a file sharing channel (or network); be sure to read the channel topic. If you're looking for information about me, type « /msg ubottu !bot ». If you're looking for a channel, see « /msg ubottu !alis ».
+[20:12] <harhar> cum cum cum cum cum cum cum
+[20:12] <harhar> cum cum cum cum cum cum cum
+[20:12] <harhar> cum cum cum cum cum cum cum
+[20:13] <FloodBot1> harhar: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[20:13] <shovell> how can i remove a quick launch icon
+[20:13] <shovell> in ubuntu 11.10
+[20:14] <blitz> right click it shovell ?
+[20:15] <shovell> that gines properties
+[20:15] <ubukou> can anyone confim this? Vesa = generic driver  Mesa = opensource fglrx = binary?
+[20:15] <blitz> right click the icons in the actual quick launch area shovell
+[20:15] <mellifera> Vesa = generic driver, if your video card has got it
+[20:16] <blitz> should get the keep in launcher icon
+[20:16] <blitz> option*
+[20:16] <shovell> blitz yes it gives me launch or properties
+[20:16] <ubukou> mellifera, vesa is the driver that runs when you initialy install ubuntu then ?
+[20:17] <blitz> idk what to tell you then, I don't get either of those options, I get keep in launcher
+[20:17] <mellifera> ubukou: not sure. never checked
+[20:17] <distatica> Hi folks, I installed DenyHosts on my ubuntu server and now whenever I connect I get put in the deny.hosts file. I can remove myself from that file and login just fine but then disconnect and try again and it's blocked again. Any ideas why that might be?
+[20:18] <auronandace> ubukou: i think vesa only gets loaded as a fallback option if no other driver is used and if the card supports vesa
+[20:18] <mellifera> ubukou: probably either vesa or plain-vga for the beginning of install
+[20:18] <ubukou> auronandace, thats what i understand too...
+[20:19] <ubukou> anyone has compiz running with mesa ?
+[20:19] <dale__> How do you disable fast user switching? Configuration Editor does not work for this.
+[20:19] <ZynuiMaiche> Hello!  I have kind of an odd question...I'm trying to install the Java jdk on a USB using my netbook which has ubuntu on it, but I want the jdk to be usable for a Windows computer.  Is this possible?
+[20:20] <dRounse> iceroot: last night when i tried 12.04 it said something like "No UI configruation"
+=== guampa|2 is now known as guampa
+[20:21] <auronandace> ubukou: compiz requires 3d acceleration and mesa alone won't get you that
+[20:21] <mellifera> ubukou: at http://mesa3d.org, they say they are opensource
+[20:21] <dRounse> anyone know what "No UI configuration" means?
+[20:22] <root_z> how i can fix cursor size with compiz enabled?
+[20:22] <ubukou> mellifera, damn this is so confusing.. some people write that they have compiz running with opensource driver... could there be some other opensource driver that i am no aware of ?
+=== russf_ is now known as russf
+[20:23] <ZynuiMaiche> dRounse: what gave you that error?
+[20:23] <auronandace> ubukou: mesa works in conjuction with other opensource drivers (like nouvaux or radeon)
+[20:24] <dRounse> ZynuiMaiche: installing 12.04 on a gateway with a P$
+[20:24] <ubukou> so i should install both ?
+[20:24] <dRounse> p4*
+[20:24] <ZynuiMaiche> from a CD or a USB?
+[20:24] <mellifera> ubukou: maybe they mean opensource videocard driver? Some linux drivers aren't opensource. For example, for nvidia cards there is both an opensource and a non-opensource driver
+[20:24] <ubukou> auronandace, so i should install both ?
+[20:24] <auronandace> ubukou: both of what?
+=== mohammed is now known as Guest6785
+[20:24] <xangua> !pangolin | dRounse
+[20:24] <ubottu> dRounse: Ubuntu 12.04 LTS (Precise Pangolin) will be the sixteenth release of Ubuntu. Codename announcement here: http://www.markshuttleworth.com/archives/784 | Discussion and support in #ubuntu+1
+[20:25] <ubukou> auronandace, both libg11-mesa-dri         libg11-mesa-glx   and radeon driver...?
+[20:25] <auronandace> ubukou: yes, if you use a radeon card
+[20:25] <ZynuiMaiche> dRounse: sorry I'm not sure what you mean by a "P$"
+[20:26] <dRounse> ubottu: i tried with other distros someone told me last night that i should try 12.04 because they fixed a lot of things
+[20:26] <ubottu> dRounse: I am only a bot, please don't think I'm intelligent :)
+[20:26] <dale__> How do you disable fast user switching? Configuration Editor does not work for this.
+[20:26] <dRounse> ZynuiMaiche: sorry i meant P4
+[20:26] <ubukou> auronandace, ok i ll check it out... shouldnt the mesa driver install the radeon as a dependency?
+[20:26] <allure> I need a hand with iptables and squid. I have them on different boxes and I am forwarding port 80 on the gateway for 3128 on  que squid box. It works, but I can only see the gateway's IP on the log files. Relevant rules: http://pastebin.com/PhJFej6p  Could anyone give me a hand?
+[20:26] <tbocs> radeon ... ah ... that one got me. Is radeon driver already fixed?
+[20:26] <auronandace> ubukou: other way around
+[20:26] <ZynuiMaiche> sorry dude gotta go good luck though
+[20:27] <ubukou> auronandace, hmmm ..
+[20:27] <ubukou> auronandace, how can i check if i have radeon ?
+[20:27] <dRounse> im gonna update the BIOS
+[20:27] <tbocs> if you have another intel video card alongside, you can force using it ... in modprobe
+[20:28] <auronandace> ubukou: there is a way yes, but i'm not sure (i got a nvidia card)
+[20:28] <mellifera> ubukou: do you know what kind of video card you have?
+[20:28] <ubukou> auronandace, good choice :P
+[20:28] <tbocs> ubukou, lspci ...
+[20:28] <tbocs> ubukou, lspci is the command
+[20:28] <ubukou> mellifera, i got a R600 hd3850
+[20:28] <shovell> blitz i am sorry i am using the gnome desktop
+[20:28] <MonkeyDust> ubukou  type lshw -C display
+[20:28] <mellifera> ubukou: that soungs like a Radeon to me
+[20:29] <ubukou> mellifera, it is :)
+[20:29] <tbocs> mellifera, yea it's a radeon
+[20:29] <ubukou> mellifera, ohh im talking about a radeon package...
+[20:29] <tbocs> ubukou, do you have an intel alongside by chance?
+[20:29] <tbocs> ubukou, well try lspci | grep radeon
+[20:29] <ubukou> mellifera, hmmm intel ? onboard?
+[20:29] <ubukou> tbocs, intel onboard?
+[20:30] <tbocs> ubukou, some computers has intel graphics card and a dedicated card at the same time
+[20:30] <tbocs> right?
+[20:30] <ubukou> tbocs, lspci | grep radeon gives no output...
+[20:30] <tbocs> ubukou, then lspci | grep Radeon
+[20:30] <tbocs> it's case sensitive, lol
+[20:31] <ubukou> sudo lshw -C display | grep driver gives fglrx..
+[20:31] <ubukou> but i just purged it and installed mesa.
+[20:31] <tbocs> works on my computer with "R" in Radeon
+[20:31] <ubukou> havent rebooted yet.
+[20:31] <ubukou> "R"?
+[20:31] <ubukou> hhhh :P
+[20:31] <ubukou> ohhhh :P
+[20:32] <tbocs> ubukou, "Radeon"
+[20:32] <tbocs> yea
+[20:32] <tbocs> capitalized
+[20:32] <ubukou> r679pro
+[20:32] <ubukou> tbocs, R670PRO hd3850 ?
+[20:32] <tbocs> yeah .
+[20:32] <tbocs> that is a Radeon
+[20:32] <ubukou> tbocs, i didnt get the R the first time ..
+[20:32] <mellifera> ubukou: if you want to be sure you are using the radeon driver, you could specify that in your xorg config file (in /etc/x11)
+[20:33] <auronandace> ubukou: https://help.ubuntu.com/community/RadeonDriver
+[20:33] <cartoonbarsmars> can ubuntu be booted from a cd on a mac
+[20:33] <ubukou> auronandace, i have that tab open...
+[20:33] <acerimmer> !mac|cartoonbarsmars
+[20:33] <ubottu> cartoonbarsmars: For help on installing and using Ubuntu on a mac, see: https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+[20:33] <auronandace> ubukou: awesome, great minds think alike :)
+[20:33] <xangua> cartoonbarsmars: you have the instructions on ubuntu.com
+[20:33] <ubukou> auronandace, i just purged fglrx driver and moved to mesa...i ll reboot and see what happens...
+[20:34] <ubukou> auronandace, and your talking about your brain and ... whose? :P
+[20:34] <ubukou> auronandace, rebooting
+=== frankenstein is now known as signalpoint
+=== signalpoint is now known as frankenstein
+[20:34] <cartoonbarsmars> okay thanks, but i have a short time frame to doing something for somebody and i was wondering as far as booting from a cd goes, will i be able to do that just fine like on a toshiba
+[20:35] <mellifera> cartoonbarsmars: trying it wouldbe the fastest way to see if it boots
+[20:35] <tbocs> I don't know if flgrx will work. It doesn't work on my machine. you can try using the ATI proprietary driver
+=== raider_ is now known as karol
+=== karol is now known as guy
+=== guy is now known as fawkes1
+[20:36] <theadmin> tbocs: fglrx *is* the propertiary driver.
+[20:36] <theadmin> I... think
+[20:37] <theadmin> And yeah, I'm right
+[20:37] <ratcheer> theadmin: Yes, that is correct
+[20:37] <tbocs> thanks, theadmin ...
+[20:38] <raj> what's the package that pastebin's CL output?
+[20:38] <pirat> xcv
+[20:38] <raj> i have it and forget what it is
+[20:38] <pirat> xcv
+[20:38] <pirat> xcvx
+[20:38] <pirat> xvc
+[20:38] <pirat> xv
+[20:38] <FloodBot1> pirat: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[20:38] <mellifera> can windows tell the difference between a file written by linux using ntfs-3g and any normal windows/ntfs file?
+[20:38] <xangua> raj: pastebinit i believe
+[20:38] <raj> yeahh
+[20:38] <raj> thanks
+[20:39] <pirat> hello people ))
+[20:39] <zykotick9> mellifera: if it's a text file, yes.  The newlines are handled differently.
+[20:40] <mellifera> zykotick9: what if it's not a text file?
+[20:40] <zykotick9> mellifera: they "should" be the same
+[20:40] <pirat> how a you?
+[20:41] <zykotick9> pirat: do you have an ubuntu support question?
+[20:41] <theadmin> mellifera: Nah they're the same, but Windows doesn't like Unicode so if the name is, say, Cyrillic Windows might display it as some complete mess. Same goes for text file content.
+[20:43] <theadmin> raj: wgetpaste also works well.
+=== foobar_ is now known as Guest63529
+[20:44] <Guest63529> hello. When I turn on my laptop running Ubuntu it says *starting MTA
+[20:44] <Guest63529> Does that mean Mail transfer agent?
+[20:44] <mellifera> usually
+[20:44] <Guest63529> mellifera: I never installed any MTA
+[20:44] <ubukou> auronandace, seems like when ubuntu is about to start it turns off  both screens and it stays there .. only thing that make the gui boot is apt-get install fglrx*
+[20:44] <Guest63529> mellifera: how do I turn it off and why does it say now
+[20:44] <Guest63529> when it never said it before.
+[20:45] <TGIBT> I managed to install with nomodeset... I do get same problem with graphic driver when i just restart... Any solutions?
+[20:45] <mellifera> "sendmail" counts as a MTA, and it's sort of needed
+[20:45] <alexdevillx> Hi guys
+[20:45] <auronandace> ubukou: when you say gui are you refering to any specific desktop? or does it not even make it to lightdm?
+[20:46] <alexdevillx> I have a problem i dont know english well so can anybody give me an answer why i get this error  (voice_nitech_us_slt_arctic_hts) Error: HTS_Model_load_pdf: Failed to load header of pdfs.
+[20:47] <mellifera> alexdevillx: are you sure it's really a pdf file, and not just called ".pdf"?
+[20:47] <ubukou> auronandace, nope... :S
+[20:47] <r3d0ctob3r> Hi guys ! I have a problem with my "apt-get"... And a old proxy I got. I deleted it, clean my /etc/apt/apt.conf file... and the console keep saying I cannot connect to 127.0.0.1:8118. Nobody knows about it please ?
+[20:48] <ubukou> auronandace, it should at least crash trying to load lightdm right ? instead screens go out of range.
+[20:48] <auronandace> ubukou: so you can't even get to the login manager?
+[20:48] <zykotick9> mellifera: the error appears to be in connection with Festival, not PDFs
+[20:48] <ubukou> auronandace, right
+[20:48] <theadmin> r3d0ctob3r: Check the gnome's proxy settings as well as the $PROXY variable
+[20:48] <auronandace> ubukou: wow, thats bad
+[20:48] <ubukou> auronandace, https://wiki.ubuntu.com/X/Troubleshooting/FglrxInteferesWithRadeonDriver#Problem:%20%20Need%20to%20fully%20remove%20-fglrx%20and%20reinstall%20-ati%20from%20scratch check this out and tell me what you think
+[20:48] <auronandace> ubukou: seems like you're stuck with using fglrx
+[20:49] <mellifera> r3d0ctob3r: 127.0.0.1 should be your loopback interface, and should work on any port if your networking is configured correctly
+[20:49] <ubukou> auronandace, search for need to purge
+=== Arnold_ is now known as Arnold
+[20:49] <alexdevillx> mellifera its a TTS. Voice synth. I'm trying to make GlaDOS's voice
+[20:49] <r3d0ctob3r> I checked it. It is "direct connection to Internet", I apply this setting to the entire system with the butto
+[20:49] <r3d0ctob3r> button
+[20:50] <ubukou> alexdevillx, i have glados kernel running on my nexus .. is that the same :P :)
+[20:50] <theadmin> alexdevillx: Check http://glados.biringa.com , other than that I can't suggest anything which sounds even remotely similar
+[20:50] <mellifera> r3d0ctob3r: net packets for 127.0.0.1 should never leave your machine
+[20:50] <TGIBT> What to do after install with nomodeset, i dont what to do next
+[20:50] <alexdevillx> I had puted my text at quee
+[20:50] <theadmin> alexdevillx: The system is currently down, but it has instructions
+[20:50] <alexdevillx> I cant install
+[20:51] <alexdevillx> getting this hell error  it's really a pdf file, and not just called ".pdf"?
+[20:51] <iwoj> does anyone know how I could test my parallel port without hooking it up to a printer?
+[20:51] <alexdevillx> no no
+[20:51] <auronandace> ubukou: sorry i can't help
+[20:51] <TGIBT> What to do after install with nomodeset, i dont what to do next
+[20:52] <r3d0ctob3r> mellifera I know. But I seek for the why apt-get redirect my commands to localhost but I dont find it. Indeed, I do everything I know... I used to use privoxy before I had this problem
+[20:52] <ubukou> auronandace, im running compiz right now .. you should see how bad it looks..
+[20:52] <ubukou> auronandace, its ok ;)
+=== siric is now known as sitic|busy
+[20:52] <iwoj> gnome3 looks awesome.
+[20:52] <iwoj> any thoughts on testing a parallel port?
+[20:52] <alexdevillx> Ok, so i'll give a link with instructions http://glados.biringa.com/ go to the how the voice is generated. So i go (voice_nitech_us_slt_arctic_hts) in Festival through command prompt and at (SayText "I'm your master") a Error: HTS_Model_load_pdf: Failed to load header of pdfs.
+[20:53] <mellifera> iwoj: you have no printer?
+[20:53] <iwoj> mellifera: no printer : (
+[20:53] <iwoj> mellifera: I'm trying to test a home-made CNC machine.
+[20:54] <iwoj> mellifera: the problem could be the machine or the parallel port set-up.
+[20:54] <iwoj> mellifera: I need to test the port first.
+[20:54] <mellifera> iwoj: not too easy to test the port when you have nothing to test it with
+[20:54] <tigrang> Ok so Using synclient -m 100 Im looking at the pressure of my finger. Looks like what I want the min to be to start moving cursor is around 20-25. I set PressureMotionMinZ to 1 and restarted. Doing synclient -l I can see it is set. Now when I do synclient -m 100 again and monitor as I move, it only moves after 30+ pressure. What can I do?
+[20:55] <xj88> Hello all, and thanks to everyone who hangs out here, helping. I'm having some issues with a new install of 11.10. It installs without problem, but upon logging in, all I get is the desktop image and a cursor. Nothing else loads. I CTRL+ALT+F2'd my way into a terminal and upgraded all packages, so I should be completely up to date. Going into "Ubuntu 2D" works but isn't what I need. Any thoughts?
+[20:55] <alexdevillx> How to generate glados voice?
+[20:56] <TGIBT> Nvm, found it
+[20:56] <theadmin> xj88: You need your graphics driver
+[20:56] <lorenzo> hi, i am following this guide: https://help.ubuntu.com/community/Router to set my ubuntu machine as a router. One thing I do not understand: when I set the internal network interface (https://help.ubuntu.com/community/Router#Configuring_the_Internal_Network_Interfaces) what addresses should I put in? Thanks
+[20:56] <alexdevillx> theadmin, Hello There
+[20:56] <theadmin> alexdevillx: Uh, hi.
+[20:56] <xj88> theadmin: How to get it?
+[20:57] <alexdevillx> theadmin< Ok, so i'll give a link with instructions http://glados.biringa.com/ go to the how the voice is generated. So i go (voice_nitech_us_slt_arctic_hts) in Festival through command prompt and at (SayText "I'm your master") a Error: HTS_Model_load_pdf: Failed to load header of pdfs
+[20:57] <theadmin> xj88: Log in to unity2d and from there search for an app called "Hardware Drivers". Run that, it should find the appropriate ones.
+[20:57] <mellifera> lorenzo: your "inside" address, like (for example) 10.0.0.1
+[20:57] <xj88> theadmin: I'll give that a shot. Regardless of whether or not it works, thanks for helping. =)
+[20:58] <lorenzo> the one I get from iwconfig ath0 (ath0 is my internal network interface)
+[20:59] <theadmin> alexdevillx: I'm not familiar with speech synthesis honestly -- I just gave you a possible solution. I have no idea how to work it
+[20:59] <lorenzo> mellifera, I have an address for my cabled connection going to the outside (eth0), but I cannot see any address for ath0 which is my internal network interface
+[20:59] <r3d0ctob3r> I ask my question again : I installed Privoxy few weeks ago, then uninstalled it. It seems to change my network settings... When I run a "apt-get update", I'm said that He cant download from 127.0.0.1:8118 ; however I uninstalled this proxy server, I changed my setting from system preference (dirrect connection to internet), /etc/apt/apt.conf is empty . What is going wrong ?
+[20:59] <mellifera> lorenzo: if your outside interface is eth0, your inside interface would be eth1

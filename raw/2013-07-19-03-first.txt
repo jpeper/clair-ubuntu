@@ -1,0 +1,292 @@
+[02:30] <Wulframn> I'm using xfce
+[02:30] <dr_willis> I can see mate and cinnimon vananishing in the near future
+[02:30] <Taek> Problem with MATE is.. There don't have enough devs for how many distros they are working on
+[02:31] <dr_willis> manpower is always the  limiting factor these days it seems
+[02:32] <Taek> Well, they have maybe one dedicated dev per OS/Distro, and a few floaters..
+[02:32] <Taek> As awesome as it would be for them to stay up todate with the distros changes, they arn't able to.
+[02:32] <dr_willis> its really amazing how few devs are responsible for some of the major apps, and  tools out there.
+[02:33] <Taek> hmm, I wonder if I can install irssi-scripts
+[02:33] <dr_willis> most of the webcam drivers i hear are done by like a small group of people. 2-3?    with one guy doing most of them
+[02:33] <Taek> and use them while irssi is running.
+[02:33] <dr_willis> Ive swithed over to weechat in stead of irssi these days. ;)
+[02:33] <qin> Taek: You can just download them to #/.irssi
+[02:34] <Taek> ~/.irssi...
+[02:34] <qin> yup
+[02:34] <qin> to lazy to shift
+[02:34] <Taek> hahaha
+[02:35] <dr_willis> bbl.
+[02:35] <Taek> Nice
+[02:35] <Taek> nicklist screen
+[02:35] <Taek> works
+[02:35] <Taek> :D
+[02:35] <Taek> too used to mirc.
+[02:36] <qin> Taek: how it looks like with 15 hundreds of bots in channel?
+[02:36] <Taek> Now to get ubuntu running on my linksys router!
+[02:36] <Taek> Looks fine.
+[02:37] <qin> Taek: http://www.dd-wrt.com/wiki/index.php/Linksys
+[02:37] <Taek> It amazes me how developers can cram a linux distro onto a 8MB flash drive with everything they need to run the router.
+[02:37] <Taek> qin I already have DD-WRT on my linksys
+[02:38] <gabash> #Beginner
+[02:38] <Taek> but it's foobar! I may have to reflash it
+[02:38] <qin> Taek: why ubuntu would be better?
+[02:38] <Taek> Why Not, Ubuntu server, ubuntu Desktop, Ubuntu Router, Ubuntu Laptop, Ubuntu cellphone, ubuntu netbook, ubuntu tablet
+[02:38] <qin> gabash: You do not need # here..
+[02:38] <Taek> Ubuntu kids?!
+=== |_ocke2 is now known as |_ocke
+[02:39] <qin> Taek: Yeah, pity that ubuntu do not cook and stuff.
+[02:39] <Taek> get a smart programmer and engineering tech to build a system of robots ran on ubuntu.. sure you could
+[02:40] <Taek> I mean, I have a friend who's house is basically ran on ubuntu
+[02:40] <Taek> controls the light, they reprogrammed their fridge. alarm system, garage.
+[02:40] <Taek> out door water sprinkler system
+[02:41] <Taek> Also programmed with android/iOS to remote control it
+[02:41] <Taek> Pretty nifty stuff.
+[02:42] <Taek> Too bad he wouldn't wouldn't release the src !
+[02:42] <nimdAHK_> anyone here use teamviewer?
+[02:42] <Taek> I use.
+[02:42] <nimdAHK_> my "setup offline access" option is missing
+[02:42] <Taek> What good is using teamviewer in offline access mode?
+[02:42] <nimdAHK_> s/offline/unattended
+[02:43] <nimdAHK_> it's supposed to be under "connection"
+[02:43] <soni1877> how to get netgear g54 wireless adapter working on ubuntu 64bit?
+[02:43] <nimdAHK_> but the option is just not present, Taek
+[02:43] <Taek> which version?
+[02:43] <nimdAHK_> 8
+[02:44] <Taek> Installed or running as "run" mode?
+[02:44] <soni1877> it is connecting properly but internet speed drops to almost zero frequently
+[02:44] <nimdAHK_> installed
+[02:44] <nimdAHK_> with the daemon on
+[02:44] <Taek> let me install and atake a look
+[02:44] <Taek> I am normally using windows
+[02:45] <nimdAHK_> Taek: http://i.imgur.com/2FHVn7r.png
+[02:46] <nimdAHK_> (yes, I refreshed the password...)
+[02:46] <varunendra> soni1877, please show us pastebin link of "lspci -nnk | grep -iA2 net"
+[02:46] <dr_willis> soni1877:  check what chipset and module its using and check askubuntu.com  there may be some known isdues
+=== River_Rat is now known as RiverRat
+[02:48] <soni1877> http://pastebin.com/KbWFw2GP
+[02:49] <Taek> Extras -> Options -> Advance -> Advance Networking Settings (TeamViewer server) Configure
+[02:49] <Taek> should do the trick for you
+[02:50] <nimdAHK_> so I can't add it to my account?
+[02:50] <nimdAHK_> like I did with all my other machines?
+[02:50] <Taek> I assume after you cofigure it, you should beable to do so
+[02:51] <Taek> also note, since TeamViewer for (LOinux) runs in Wine - It might not actually have the ability to do it.
+[02:52] <Taek> Linux*
+[02:52] <nimdAHK_> Yeah I noticed the bundled wine
+[02:53] <nimdAHK_> it's just interesting that the option is completely removed without a mention on the internet
+[02:54] <Taek> that's what happens when a big company like teamviewer decide to go the lazy route and not actually make a linux specific software
+[02:54] <Taek> instead just use windows emulation
+[02:55] <soni1877> varunendra: http://pastebin.com/KbWFw2GP
+[02:55] <Taek> Honestly I am happy TeamViewer even works on linux through wine, the horrors you have to go through to get alot apps to run on it period is bad enough.
+[02:56] <Psil0cybin> Hey guys can someone help me I recently updated my computure through the update manager, and now when i try and boot into ubuntu i sometimes get a blackscreen or i get booted into the text only console, and cannot access the GUI. This only started happening after the update....and i have to restarted 3 or 5 times to get into the GUI
+[02:56] <Psil0cybin> how can i diagnose and fix this error
+[02:56] <Psil0cybin> or do i keep using the older kernal?
+[02:56] <Taek> Just my guess, but have you updated the video driver?
+[02:57] <Psil0cybin> I might have i updated everything it wanted to update
+[02:57] <Psil0cybin> Cederview i think is the driver that got updated
+[02:57] <Psil0cybin> but i tried reinstalling it, it worked for a few boots and now its doing it again
+[02:57] <Taek> Never heard of cederview.
+[02:57] <Psil0cybin> its for an acer aspire one
+[02:58] <Psil0cybin> one second let me go to the package manager
+[02:58] <Psil0cybin> and tell u exatly
+[02:58] <Taek> Intel Atom Processor?
+[02:58] <Psil0cybin> yes
+[02:58] <Taek> D250 ?
+[02:58] <Psil0cybin> D270-1628
+=== Psil0cybin is now known as Psil0Cybin
+[02:58] <Psil0Cybin> cedarview-drm
+[02:59] <Psil0Cybin> i think was the package
+[02:59] <Taek> If I remember correctly, in my Acer Aspire One (D250) it used an Intel based chipset for the video
+[02:59] <varunendra> soni1877, sorry, I missed that it was a usb device. We instead need to see "lsusb" (pastebin link again). Even better maybe if you post a detailed report following this post : http://ubuntuforums.org/showpost.php?p=12350385
+[02:59] <Psil0Cybin> To be honest i am not really sure :P I just know usually i allow every update, and nothing goes wrong, I am kinda new to Ubuntu thats why i want to learn how to diagnose it
+[02:59] <Psil0Cybin> but you think its the driver?
+[03:00] <Taek> It's a possiblity
+[03:00] <Taek> when you get access to the gui again, try checking with the Additionhal Drivers
+[03:00] <wilee-nilee> Psil0Cybin, Is it nvidia and did you load it from them?
+[03:00] <Psil0Cybin> its Intel i belive wilee-nilee and im in the GUI now
+[03:00] <Psil0Cybin> thats how i got in to talk to you guys
+[03:00] <Psil0Cybin> Yea
+[03:00] <Taek> I am pretty sure it's an intel based video chipset
+[03:01] <Psil0Cybin> I went to propietary drivers
+[03:01] <Psil0Cybin> i have both selected
+[03:01] <Psil0Cybin> drm driver for Intel GMA500
+[03:01] <Psil0Cybin> and Intel Cedarview graphics driver
+[03:01] <Taek> Only one should be activated
+[03:01] <Taek> Try the GMA500 Driver
+[03:01] <Psil0Cybin> so take off Intel Cedarview Graphical Driver
+[03:01] <Psil0Cybin> ?
+[03:01] <Psil0Cybin> like remove it
+[03:01] <Psil0Cybin> ?
+[03:01] <Taek> select the GMA500 Driver and click activate
+[03:01] <Taek> it will deactivate the other
+[03:01] <Psil0Cybin> they are both activated
+[03:02] <Psil0Cybin> i only see
+[03:02] <Psil0Cybin> remove for both
+[03:02] <Taek> then deselect the ceder one
+[03:02] <Taek> err Select the ceder driver and click deactivate
+[03:02] <Taek> and then restart the laptop, it should work fine after
+[03:02] <wilee-nilee> Psil0Cybin, might be relevant. http://askubuntu.com/questions/290515/how-to-install-intel-cedarview-drivers-on-ubuntu-12-10-or-13-04
+[03:02] <Psil0Cybin> okay :) thanks will try it now
+[03:02] <Psil0Cybin> Okay im going to book mark that site too :) incase that doesnt work
+[03:02] <Taek> :D
+[03:03] <Psil0Cybin> let me try it and ill let you guys know
+[03:03] <Rahoul> Hi, what is the proper syntax to add a whole subnet to a table using iproute? ip rule add 192.168.1.0/24 does not seem to work :)
+[03:03] <Psil0Cybin> i love this IRC channel :) the sexyest thing on the net
+[03:03] <Taek> :D
+[03:03] <Taek> used to use my acer aspire one for network drive bys
+[03:03] <Taek> :D
+[03:04] <Psil0Cybin> hahaah thats what this one is for
+[03:04] <Psil0Cybin> i just love how small it is
+[03:04] <Taek> Then my wife got ahold of it and burnt it out!
+[03:05] <Taek> wonder why byobu reports my CPU as 2x0.7GHz at some points.
+=== nimdAHK_ is now known as nimdAHK
+[03:07]  * Taek afk mode
+[03:08] <Rahoul> hello?
+[03:08] <Rahoul> :)
+[03:09] <Psil0Cybin> Okay Taek when i deactivated the Intel Cedarview graphix it deactivated everything so I am reactivating the drm driver for the Intel GMA500
+[03:16] <WACOMalt> Anyone in here familliar with qemu? I am getting terrible speeds on my windows guest and I assume it's due to the network settings in qemu. I havent changed anything fromt he default and although I get about 40Mbps upload on linux I get about 70Kbps on the windows guest
+[03:17] <Taek> Why use qemu?
+[03:17] <WACOMalt> because the server is headless
+[03:17] <Taek> Not that it really matters in your choice, jut curious.
+[03:17] <WACOMalt> and I was told it was the fastest
+[03:17] <deezed> hey guys! I cant connect to a wpa wireless connection if there is any special caracther here, like é or ó. Do you know what can I do?
+[03:17] <Taek> All my experiences with qemu have been horrible
+[03:17] <WACOMalt> the server is headless and qemu gives you a vnc server directly to control the VM with
+[03:17] <WACOMalt> it runs great aside from the network speed issue
+[03:18] <Taek> is it running on a dedicated server?
+[03:19] <Taek> FYI all my experiences with qemu have been on windows afaik.
+[03:21] <deezed>  hey everyone, I'm trying to connect here to a wireless wpa2 connection which the password has special characters like "é" but I'm not allowed to connect,. Do you know what can I do?
+[03:21] <Taek> Change the wifi password?
+[03:22] <deezed> I cant, its from my girlfriend's house, and her mate wont like it
+[03:22] <nimdAHK> sounds like you and the router are using different encodings
+[03:23] <Taek> ^
+[03:23] <deezed> nimdAHK: maybe...do you know how can I figure it out?
+[03:23] <Taek> First off, figure out what enconding you're using?
+[03:23] <Taek> I believe most routers use UTF-8 .
+[03:23] <nimdAHK> try a different network manager too
+[03:24] <Taek> Then again I am in U.S. so everything here is simplified.
+[03:24] <deezed> nimdAHK: like which one?
+[03:24] <nimdAHK> gotta catch 'em all?
+[03:24] <deezed> Taek: true
+[03:24] <nimdAHK> wicd maybe
+[03:24] <deezed> nimdAHK: ok, I'll try!
+[03:24] <deezed> nimdAHK: thanks
+[03:24] <nimdAHK> yw, good luck!
+[03:25] <ristra> hi, i am trying to get my wifi to work on 12.04
+[03:25] <Taek> Network Adapter Chipset?
+[03:25] <usr13> ristra: So what is the problem?
+[03:25] <ristra> at some point, I think I messed up my /etc/network/interfaces file
+[03:25] <Taek> Pastebin?
+[03:25] <ristra> it doesn't have a wlan on it
+[03:25] <ristra> okie, hold on, i ll pastebin it
+[03:26] <usr13> ristra: iwconfig  #What does that say?
+[03:26] <Taek> No wLan? add it?.
+[03:26] <ristra> usr13 it only list eth0 and lo
+[03:27] <Taek> Is it a PCI(e) or USB Adapter ristra
+[03:27] <usr13> What wifi device do you have?  ( lspci )
+[03:27] <ristra> Taek, yeap that is the idea but since I am very new (i cant stress the @very@ enough!) I was wondering if it add it on a specific position or something
+[03:27] <Taek> What brand is it ristra ?
+[03:27] <poz> so i have installed the lastest version of backports from here: http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/
+[03:27] <ristra> toshiba satellite c855
+[03:27] <usr13> ristra: Wait, what does iwconfig say?   iwconfig | pastebinit    #Show us URL
+[03:28] <poz> and now my usb wireless chip wont work
+[03:28] <varunendra> ristra, pastebin the report generated by wireless_script : http://ubuntuforums.org/showpost.php?p=12350385
+=== ken_ is now known as Guest58812
+[03:28] <ristra> http://pastebin.com/Fk1qLZzK here is my interfaces files
+[03:28] <poz> anyone have any ideas
+[03:28] <varunendra> that script will show almost everything (secure) wifi related. Everyone.
+[03:28] <poz> it is like ubuntu doesnt even see the usb wireless dongle
+[03:29] <varunendra> poz, do you have a wired connection now?
+[03:29] <kmyst> anybody able to help with some routing issues? trying to route three networks and running into an issue where i can only ping some things
+[03:29] <poz> i am using my laptops built in wireless card
+[03:30] <poz> the usb wireless card was working before i installed the backports
+[03:30] <poz> it is like the driver or somthing was over written and now it wont detect that it is plugged in
+[03:30] <ristra> http://pastebin.com/NTfLdeFt  has my interfaces file and the report from iwconfig
+[03:30] <varunendra> poz, we need to see "lsusb" and "nm-tool" output.
+[03:31] <poz> okay, one sec
+[03:31] <ristra> first question i guess is : can i just add wlan  to interfaces file?
+[03:31] <usr13> ristra: lspci | pastebinit  #send url
+[03:31] <Taek> Hopefully LSUSB sees it and can give us a chipset O.o
+[03:32] <ristra> usr13 here it is http://pastebin.com/XKiDSgm1
+[03:32] <ristra> the network controller is there
+[03:32] <poz> varunendra, here are the results of both commends: http://pastebin.com/1d97dT31
+[03:33] <Taek> Two wifi adapters
+[03:33] <Taek> One Atheros and another Realtek
+[03:33] <poz> this seems to be the usb wireless dongle Realtek Semiconductor Corp. RTL8192CU 802.11n WLAN Adapte
+[03:33] <Taek> Need to run a special driver for it
+[03:34] <Taek> well I consider it special;
+[03:34] <Taek> I forgot what it was called, but you need to run the bcwrapper?
+[03:34] <Taek> I think that's it
+[03:34] <soni1877> http://pastebin.com/e0xdrMM4
+[03:34] <Taek> oh wait, that's for broadcom
+[03:34] <soni1877> varunendra: http://pastebin.com/e0xdrMM4
+[03:35] <varunendra> poz, you are using WPA/WPA2 mixed mode in the router. Not always a problem but more than often it is. Try changing it to pure WPA2-PSK (AES) only. No TKIP, no mixed mode.
+[03:35] <usr13> ristra: 12.04?  Fully updated?
+[03:36] <ristra> usr13: it was a fresh install until I started trying to fix this issue
+[03:36] <ristra> I tried several different solutions I found online
+[03:36] <usr13> ristra: 12.04 Desktop?  Is it fully updated?
+[03:36] <poz> varunendra, this problem is independent of the router
+[03:36] <ristra> and I just run the updater so yet, fully updated
+[03:36] <poz> i can not get ubuntu to detect my usb wireless card
+[03:36] <ristra> 280+  updated modules
+[03:36] <usr13> ristra: sudo apt-get update && sudo apt-get upgrade
+[03:37] <ristra> ok, i ll run that, hold on
+[03:37] <ristra> and thanks by the way :)
+[03:38] <ristra> all is upgraded
+[03:38] <deezed> hey guys I'm trying to connect to my girlfriend's wireless network, but I can't! First I thought it was because the password had special characters, but its not. And the funniest part is that windows can connect!!!
+[03:38] <varunendra> soni1877, try - "sudo modprobe -rfv rtl8192cu" ..... then ......... "sudo modprobe -v rtl8192cu swenc=Y" . See if it improves the connectivity.
+[03:38] <deezed> do you know what can I do?
+[03:39] <Taek> deezed: what wireless encryption mode is it running in?.
+[03:39] <ristra> is it ok to change my /etc/network/interfaces to this: http://pastebin.com/uisvwSV1   ?
+[03:39] <deezed> Taek: wpa2
+[03:39] <varunendra> poz, for a detailed report : http://ubuntuforums.org/showpost.php?p=12350385
+[03:40] <Taek> wpa2?
+[03:40] <deezed> Taek: yes
+[03:42] <usr13> ristra: http://ubuntuforums.org/showthread.php?t=2005981
+[03:42] <deezed> Taek: is there maybe any driver I could install?
+[03:42] <Taek> deezed: does it return any errors? or just bad password?
+[03:43] <deezed> Taek: just connection failed
+[03:44] <usr13> deezed: iwlist <wifi-name-here> -scan
+[03:45] <Taek> deezed: I don't see why you would have an issue honestly
+[03:45] <ristra_> i broke it but I managed to get back hurra
+[03:45] <deezed> Taek: neither do I!!! thats the point. I cant figure it out
+[03:46] <usr13> deezed: scratch the -   just iwlist wifi-device-name scan
+[03:46] <Taek> shouldn't it be iwlist wifi-ssid scan?
+[03:47] <usr13> deezed: first do   iwconfig   and tell us what it says.
+[03:47] <deezed> usr13: ok, so now what do I do?
+[03:47] <deezed> the access point is not-associated
+[03:47] <usr13> deezed: Open a terminal and type   iwconfig   and hit enter
+[03:47] <Moonlightning> I think I broke my kernel. I have a half-installed kernel package and /boot is too full to do anything.
+[03:48] <poz> here is the results of the wireless script: http://pastebin.com/WYbu5xMe
+[03:48] <deezed> usr13: I did and dont know if there is something uncommon
+[03:48] <Moonlightning> I'm...pretty sure I don't need all these kernels. xP Is there something I can run to autoremove no longer needed kernel packages?
+[03:48] <poz> can some one help me find out what happend to wlan1?
+[03:48] <usr13> deezed: What is the essid of your AP?
+[03:48] <deezed> usr13: "casa do caralho"
+[03:49] <poz> it use to be my usb wireless dongle, but after I installed backports from here http://drvbp1.linux-foundation.org/~mcgrof/rel-html/backports/ it stoped working
+[03:49] <usr13> deezed: iwconfig wlan0 essid "casa do caralho"
+[03:49] <usr13> deezed: sudo iwconfig wlan0 essid "casa do caralho"
+[03:50] <deezed> usr13: ok
+[03:50] <deezed> now what?
+[03:51] <deezed> does anyone know what can I do next to access this wireless here?
+[03:52] <ristra_> http://pastebin.com/iiLH46bs  how do I know which wlan to add?  it is not recognizing wlan0
+[03:53] <wilee-nilee> Moonlightning, You have a boot partition?
+[03:53] <Moonlightning> Yes?
+[03:54] <wilee-nilee> Moonlightning, Ah generally not needed, however the ubuntu-tweak app has a janitor app that will clean up the extra kernels and other stuff.
+[03:55] <wilee-nilee> Moonlightning, Ubuntu tweak is in a PPA.
+[03:55] <Taek> Old kernels should be removable with apt-get auto-remove
+[03:55] <Taek> apt-get autoremove
+[03:55] <wilee-nilee> Not rue but can be done from the cli
+[03:55] <wilee-nilee> true*
+[03:55] <Moonlightning> I did autoremove
+[03:55] <Moonlightning> It didn't remove any of the kernels :(
+[03:56] <Taek> You can try with Ubuntu Tweak as wilee-nilee suggested.
+[03:56] <Moonlightning> I only have a CLI though
+[03:56] <wilee-nilee> Moonlightning, If you want a nice gui use the tweak, can be done from the terminal or synaptic as well.
+[03:57] <wilee-nilee> the tweak gets the configs as well, nice little app really
+[03:57] <Moonlightning> What's the name of the package?
+[03:57] <wilee-nilee> ubuntu tweak it is in a ppa
+[03:58] <wilee-nilee> http://ubuntu-tweak.com/ Or you can download the deb
+[03:59] <wilee-nilee> here is the ppa be sure to load the key use the read about installing to get the key with the load.
+[03:59] <wilee-nilee> https://launchpad.net/~tualatrix/+archive/ppa
+[03:59] <Moonlightning> Agh
+[03:59] <Moonlightning> Can't I just do it with apt-get? >.<
+[03:59] <Taek> Manually delete it okay :D

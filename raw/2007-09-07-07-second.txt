@@ -1,0 +1,859 @@
+=== gener1c [n=Generic@unaffiliated/gener1c]  has joined #ubuntu
+=== _gpg_ [n=_gpg_@82.249.186.4]  has joined #ubuntu
+[06:54] <Mexel> winbond: "rich@buters:-/Desktop$ sudo apt-get install build-essential ---> Reading package lists...Done ---> Building dependency tree --->Reading state information... Done ---> E: Couldn't find package build-essential"
+[06:54] <private_guy> sllik: I just runned lspci and couldn't find ndiswrapper, do you want to see the results of the Ispci?
+=== CraZy675 [n=nick@S010600179a9c5969.vf.shawcable.net]  has left #ubuntu []
+=== Carroarmato0 [n=christop@31.164-245-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[06:54] <_gpg_> how to install the latest xfce on ubuntu please (using feisty + gnome)
+[06:54] <Mexel> Jack_Sparrow: No jack
+[06:54] <helpneed> guys i need your help
+[06:54] <helpneed> please.....
+=== griznok [n=tootoo31@bzq-84-109-100-8.red.bezeqint.net]  has joined #ubuntu
+[06:54] <stefg> !please
+[06:54] <ubotu> Avoid your questions being followed by a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !patience
+[06:55] <stefg> !ask
+[06:55] <ubotu> Don't ask to ask a question. Just ask your question :)
+[06:55] <Kilroo> Vlet: Me too, the Mesa drivers are fine for my purposes for the most part (compositing is a little slow, but I have direct rendering working on my 9800 pro), but I'd kinda like to try out Regnum Online.
+[06:55] <Jack_Sparrow> Mexel: is there a copy of build essential in var/cache/apt/archives
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has left #ubuntu []
+[06:55] <ticked> helpneed:  refuses to connect what??
+[06:55] <Mexel> Jack_Sparrow: lemme check
+[06:55] <private_guy>  Avoid your questions being followed by a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !patience
+[06:55] <private_guy> <stefg> !ask
+[06:55] <private_guy> <ubotu> Don't ask to ask a question. Just ask your question :)
+[06:55] <private_guy> <Kilroo> Vlet: Me too, the Mesa drivers are fine for my purposes for the most part (compositing is a little slow, but I have direct rendering working on my 9800 pro), but I'd kinda like to try
+[06:55] <private_guy>  Avoid your questions being followed by a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !patience
+[06:55] <private_guy> <stefg> !ask
+[06:55] <private_guy> <ubotu> Don't ask to ask a question. Just ask your question :)
+=== x600 [n=x603@host-81-190-148-25.olsztyn.mm.pl]  has joined #ubuntu
+[06:55] <private_guy> <Kilroo> Vlet: Me too, the Mesa drivers are fine for my purposes for the most part (compositing is a little slow, but I have direct rendering working on my 9800 pro), but I'd kinda like to try
+[06:55] <bannerman> stefg: do you have any idea why the sudo log entry in auth.log would say "user=administrator"?
+[06:55] <Jack_Sparrow> private_guy: Stop
+[06:55] <lieter> hmm when i try to mount an iso as root with -o loop and -t iso9660 i get a permission denied error
+=== ylle [n=ylle@81-237-203-36-no38.tbcn.telia.com]  has joined #ubuntu
+[06:55] <bannerman> I'm logged in as myself (my username is jon), not administrator.
+[06:55] <helpneed> i try polog and write external check fail
+[06:55] <private_guy> Jack_Sparrow: Sorry that was by mistake, my computer is messed up :S
+[06:55] <ikonia> bannerman: grep jon /etc/passwd
+[06:56] <helpneed> what happen?
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has joined #ubuntu
+[06:56] <stefg> bannerman: administrator is ubuntus default group for sudo enabled users
+=== seanpcrowe [n=bert@host81-154-90-43.range81-154.btcentralplus.com]  has joined #ubuntu
+[06:56] <ikonia> bannerman: you'll probably find you've assigned the real name of "administrator" to the user account of jon
+[06:56] <bannerman> stefg: ah thanks
+[06:56] <ticked> helpneeded darn i was hoping it was something i actually had a clue about...sorry
+[06:56] <private_guy> stefg:  Avoid your questions being followed by a trail of "Please, help me", "Can nobody help me?", "I really need this!", and so on. This just contributes to making the channel unreadable. If you are not answered, ask again later; but see also !repeat and !patience
+[06:56] <private_guy> <stefg> !ask
+[06:56] <private_guy> <ubotu> Don't ask to ask a question. Just ask your question :)
+[06:56] <private_guy> <Kilroo> Vlet: Me too, the Mesa drivers are fine for my purposes for the most part (compositing is a little slow, but I have direct rendering working on my 9800 pro), but I'd kinda like to try
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has left #ubuntu []
+[06:56] <stefg> !ops
+[06:56] <ubotu> Help! Mez, LjL, elkbuntu, imbrandon, DBO, gnomefreak, Hobbsee, rob, ompaul, Madpilot, Burgundavia, Seveas, CarlK, crimsun, ajmitch, tritium, Nalioth, thoreauputic, apokryphos, tonyyarusso, PriceChild, Amaranth, jrib, jenda, nixternal, Myrtti, mneptok or Pici
+[06:56] <ikonia> private_guy: PLEASE stop that
+[06:56] <Mexel> Jack_Sparrow: there's "partial folder in there along with a lock thing
+=== osmosis_ [n=steven@63.139.86.3]  has joined #ubuntu
+=== raCkz0r [n=~@200.62.111.102]  has joined #ubuntu
+[06:56] <bannerman> ikonia: no, my real full name is assigned to my username
+[06:56] <winbond> in theme manager i only see full system themes, where can i install just the mouse icons???
+[06:56] <private_guy> Sorry again
+=== fop [n=fop@CPE-124-190-106-153.vic.bigpond.net.au]  has joined #ubuntu
+[06:56] <ylle> Hey, uh, is there any way to get the old X-chat? Like, without compiling.
+[06:56] <Carroarmato0> I need some help to enable an SD-card reader on a laptop of a friend.
+[06:56] <ikonia> bannerman: then stefg's explaination is probably spot on
+[06:57] <ylle> Like, the edgy eft version.
+=== aaragon [n=enigma@mciuser1.hmco.com]  has joined #ubuntu
+=== AncientRelic [n=chris@71-9-58-89.dhcp.mrba.ca.charter.com]  has joined #ubuntu
+[06:57] <Hobbsee> private_guy: ...
+=== alesan [n=alesan@pD9E58C62.dip0.t-ipconnect.de]  has joined #ubuntu
+[06:57] <heathen_> winbond: try using the go-to-folder button, place the cursor thems in there and try to use them
+[06:57] <ikonia> ylle: define old, version or none-gnome version
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has joined #ubuntu
+[06:57] <ylle> nongnome version.
+[06:57] <alesan> hi is there a tool to understand which CPU I have in my system?
+[06:57] <private_guy> stefg: I just runned lspci and couldn't find ndiswrapper, do you want to see the results of the Ispci?
+[06:57] <alesan> don't tell me /proc/cpuinfo
+[06:57] <Tomcat_> alesan: cat /proc/cpuinfo
+=== xadet3 [n=root@host81-153-254-161.range81-153.btcentralplus.com]  has joined #ubuntu
+[06:57] <bannerman> stefg: isn't the administrators group called "adm" though
+=== fop_ [n=fop@CPE-124-190-106-153.vic.bigpond.net.au]  has joined #ubuntu
+[06:57] <winbond> ylle: yeah , i need that too, the modded x-chat is stripped way too much
+=== Curs0r [n=doc@ip68-228-42-40.tc.ph.cox.net]  has joined #ubuntu
+[06:58] <Mexel> Jack_Sparrow: what if i tried sudo apt-get install the_whole_deb_name_thinger   ?
+=== stefg checks
+[06:58] <Tomcat_> alesan: then... screwdriver :)
+[06:58] <alesan> Tomcat_, I cannot understand if it's a core 2 duo or a p4 with HT
+=== al [n=al@marvin.largeone.net]  has joined #ubuntu
+[06:58] <helpneed> does anyone have an ideea about pppoe truble?
+[06:58] <alesan> the computer is open but I'd need to take away the heatsink etc
+[06:58] <al> Thought I'd pop back and say it turns out it's the desktop I have to configure, not twinview
+[06:58] <alesan> not so easy
+[06:58] <al> ok bai ^_^
+[06:58] <Jack_Sparrow> Mexel: copy the deb to that folder
+[06:59] <Mexel> Jack_Sparrow: the var/cache/apt/archives foldeR?
+=== chaky [n=chaky@unaffiliated/chaky]  has joined #ubuntu
+[06:59] <stefg> bannerman: the truth is: admin is the sudoers group
+[06:59] <helpneed> guys please
+[06:59] <ylle> Hum.
+[06:59] <Jack_Sparrow> Mexel: yes. copy build essientals to there
+=== elate [n=Elate@85.211.238.65]  has joined #ubuntu
+[06:59] <Mexel> Jack_Sparrow: ok let me try that, then what do i do  after that?
+[06:59] <ylle> I guess I'll have to go and download all those -dev packages and compile.
+[07:00] <private_guy> *Hi there guys, im having problems connecting to my Wireless ROuter! The wireless card is Belkin F5D70001 which is 100% supported on ubuntu, but when i click connect, it just says "COnnecting to Null" and does nothing, what shall i do ? :(
+[07:00] <bannerman> stefg: yeah, I'm a member of a group called admin... just wondering where the username "administrator" is coming from
+=== Elischa [n=rassihu@M3745P022.adsl.highway.telekom.at]  has joined #ubuntu
+=== eyec0n [n=eyec0n@c-67-181-22-41.hsd1.ca.comcast.net]  has joined #ubuntu
+[07:00] <ylle> I remember having a belkin wireless card once.
+[07:00] <winbond> heatxsink: where is the go to folder button? and which folder?
+[07:00] <ikonia> private_guy: stop, you've just asked that, people are responding to you
+[07:00] <Mexel> Jack_Sparrow: wdf.. "error: you do not have permissions to write to that folder" ...
+[07:00] <Jack_Sparrow> Mexel: try to do it again.
+[07:00] <stefg> bannerman: some windows user working on that box? :-)
+[07:00] <bruenig> bannerman, there shouldn't be a user adminstrator unless you made one
+[07:00] <ylle> I also remember snapping it in half.
+[07:00] <ylle> hum.
+=== maul555-linux_ [n=maul555@node170.17.251.72.1dial.com]  has joined #ubuntu
+[07:01] <Jack_Sparrow> Mexel: sudo  or gksudo if using gui or nautilus
+[07:01] <tek-ops> the answer is
+=== icecruncher [n=ice@222.123.128.142]  has left #ubuntu ["Leaving"]
+[07:01] <tek-ops> aptitude autoclean
+[07:01] <tek-ops> or even aptitude clean
+=== fop__ [n=fop@CPE-124-190-106-153.vic.bigpond.net.au]  has joined #ubuntu
+[07:01] <ylle> I've never used a belkin card that worked 100% for me.
+[07:01] <tek-ops> thanks
+=== tek-ops [n=mschenck@x4034fd73.ip.e-nt.net]  has left #ubuntu ["Leaving"]
+[07:01] <private_guy> ikonia: I only said it once :S
+[07:01] <heatxsink> winbond:  ?
+[07:01] <Mexel> Jack_Sparrow: you totally lost me there, i'm a new Ubuntu user xD
+[07:01] <fop__> can some1 point me in the direction of a good guide to enable xgl
+[07:01] <ylle> But then again, I've only used 3 of them.
+=== emmc [n=emmc@host7-5-dynamic.6-87-r.retail.telecomitalia.it]  has joined #ubuntu
+[07:02] <winbond> heatxsink: wrong nick, sry
+[07:02] <Jack_Sparrow> Mexel: Answer first.. what are you trying to compile
+[07:02] <arghh2D2> private_guy: read up on the howtos and patiently follow the instructions...i had a belkin wireless pcmcia card working under ubuntu once so dont get discouraged.
+[07:02] <helpneed>  i configured my pppoe connection and it works fine until i reboot then it refuse to make the connection,why?????????
+=== InfiL00p_Laptop [n=bowserj@S0106000c418bd9f7.vc.shawcable.net]  has joined #ubuntu
+=== InfiL00p_Laptop [n=bowserj@S0106000c418bd9f7.vc.shawcable.net]  has left #ubuntu ["Leaving"]
+[07:02] <private_guy> So can anybody solve my problem with my Wireless connecting error? :(
+[07:02] <Mexel> Jack_Sparrow: source for my game
+[07:02] <heatxsink> winbond:  all good I might be able to answer that question
+=== elvirolo2 [n=elvirolo@62.147.190.207]  has joined #ubuntu
+[07:02] <stefg> fop__: /j #ubuntu-effects
+[07:02] <Carroarmato0> I need support for enabling an internal SD-card reader on a friends laptop
+[07:02] <Mexel> Jack_Sparrow: Tremulous
+=== _vortex [i=d3tp0t8o@kritikal.v-o-r-t-e-x.net]  has joined #ubuntu
+=== VernonCole [n=wnvcole@64.161.38.157]  has joined #ubuntu
+[07:02] <ticked> helpneeded you gotta type sudo pon dsl-provider in terminal
+[07:02] <helpneed> yes
+[07:02] <Jack_Sparrow> Mexel: Why dont you just get it with synaptic
+[07:02] <elvirolo2> hi everyone
+[07:02] <helpneed> and nothing
+[07:02] <Mexel> Jack_Sparrow: no idea what it is? o.O
+[07:02] <Jack_Sparrow> Mexel: Sorry.. keep forgetting you dont have net
+=== Onyxyte [n=Onyxyte@r75-110-104-20.rmntcmtc01.rcmtnc.ab.dh.suddenlink.net]  has joined #Ubuntu
+[07:02] <private_guy> Is Belkin F5D7001 Supported on ubuntu because im having problems with it connecting to my router :(
+[07:03] <Mexel> Jack_Sparrow: not yet i don't
+[07:03] <Jack_Sparrow> Mexel: Since you are new... Let me start from the basic...  you can install software in a mumber of ways..
+=== PrometheusTheSec [n=quant@p57B9E65B.dip.t-dialin.net]  has joined #ubuntu
+=== halsteadj [n=chatzill@user254.hebco.com]  has joined #ubuntu
+[07:03] <Mexel> Jack_Sparrow: so i'm told. xFD
+[07:03] <helpneed> i have try polog and i read error external check fail
+=== nightfreak [n=odeiko@e178076148.adsl.alicedsl.de]  has left #ubuntu ["Ex-Chat"]
+=== VernonCole [n=wnvcole@64.161.38.157]  has left #ubuntu ["Ex-Chat"]
+[07:03] <eyec0n> ugh, I hate flash. I give up on it
+[07:03] <winbond> heatxsink: you know how to install mouse icons?
+=== jughead [n=jughead@kubuntu.roams.utk.edu]  has joined #ubuntu
+=== wasme [n=presley@128.189.220.134]  has joined #ubuntu
+[07:04] <Jack_Sparrow> Mexel: apt-get... aptitude.. or with a gui.. synaptic... system... admin...synaptic
+=== Decadent [n=variemai@194.219.214.249]  has joined #ubuntu
+[07:04] <winbond> eyec0n: what was wrong with ur flash?
+[07:04] <heatxsink> winbond:  which version of ubuntu?
+=== CraHan [n=CraHan@d51A5FC19.access.telenet.be]  has joined #ubuntu
+=== backpro [n=backpro@bzq-79-178-44-63.red.bezeqint.net]  has joined #ubuntu
+=== remco [n=remco@bas-flu-bbcs-dynip-194-063.vtx.ch]  has joined #ubuntu
+[07:04] <eyec0n> it crashes on movies everytime
+[07:04] <Mexel> Jack_Sparrow: ok Well synaptic is open
+[07:04] <helpneed> have an ideea?
+[07:04] <eyec0n> i've done everything
+=== schlangenbeschw [n=Juggler-@p57BD52ED.dip.t-dialin.net]  has joined #ubuntu
+=== ConstyXIV [n=Andrew@74-128-189-16.dhcp.insightbb.com]  has joined #ubuntu
+[07:04] <Frogzoo> Carroarmato0: can you tail -f /var/log/messages then insert the SD?
+[07:04] <Mexel> Jack_Sparrow: me thinks, system>admin>synaptic thinger
+[07:04] <winbond> heatxsink: feisty
+=== bryan [n=bryan@d36-55-212.home1.cgocable.net]  has joined #ubuntu
+[07:04] <Jack_Sparrow> Mexel: In my opinion, your first priority should be to get ubuntu online..
+[07:04] <ticked> helpneeded sorry thats beyond me
+[07:05] <eyec0n> installed just flash, download with firefox, try gnash, make sure theres not more than one flash decoder... nothing
+[07:05] <Mexel> Jack_Sparrow: Well i'd LOVE to.
+[07:05] <private_guy> Is Belkin F5D7001 Supported on ubuntu because im having problems with it connecting to my router :(
+=== SeveredCross [n=bojan@dhcp-129-64-131-19.dorm.brandeis.edu]  has joined #ubuntu
+[07:05] <Mexel> Jack_Sparrow: but don't know how, i think i installed the dricer for my modem.
+[07:05] <elvirolo2> i am trying to transfer 80 GB of data from my desktop computer to my laptop. I have already tried doing it using wifi and NFS, but it either gets very slow or just stops. I've been thinking of transferring the data via ethernet, as I have a Linksys WRT54G router. However, when i connect the laptop (192.168.1.103) to the router, it can"t ping the router itself (192.168.1.1) or the PC... why is that ?
+[07:05] <Vlet> private_guy: It seems no one knows how to help you at this time. You might be better off starting to search ubuntuforums
+=== wasme [n=presley@128.189.220.134]  has left #ubuntu ["Ex-Chat"]
+[07:05] <winbond> eyec0n: did it crash when hitting backpage or when watching?
+[07:05] <halsteadj> I know this is not the right IRC but I need some help.  Is their any GREP experts in here?  I need to know how to speed GREP up.  I want to search only the first line of 2500+ files for a text string.  Can anyone help or tell me where to look?
+=== private_guy [n=private_@212.35.89.237]  has left #ubuntu []
+[07:05] <eyec0n> when hitting backpage
+=== kidbuntu [n=kidbuntu@121.1.51.190]  has joined #ubuntu
+[07:05] <Carroarmato0> Frogzoo: hmm... i noticed I don't have any SD cards next to me... but thanks for the tip!
+[07:05] <kidbuntu> !deluge
+[07:05] <ubotu> deluge is a new Bittorrent client, created using Python and GTK+, intended to bring a native, full-featured client to !GTK environments such as GNOME and Xfce - See http://deluge-torrent.org/ for more information or http://download.deluge-torrent.org/stable/ubuntu/feisty/ for downloading.
+=== Gerrath [n=Gerrath_@unaffiliated/gerrath]  has joined #ubuntu
+=== schlangenbeschw [n=Juggler-@p57BD52ED.dip.t-dialin.net]  has left #ubuntu []
+=== wasme [n=presley@128.189.220.134]  has joined #ubuntu
+[07:05] <Jack_Sparrow> private_guy: A router is a router.. it dosent care what os you are running
+[07:05] <winbond> eyec0n: firefox?
+[07:06] <eyec0n> anything from mizilla
+[07:06] <eyec0n> mozilla
+[07:06] <sllik> I just installed the ubuntu server, and for some reason it can't read the data from the cdrom... any ideas?
+=== svolpe [n=Gerrath_@unaffiliated/gerrath]  has joined #ubuntu
+[07:06] <ikonia> sllik: what happens ?
+[07:06] <eyec0n> konqourer does it, galeon does it, mozilla does it, firefox does, etc, etc
+[07:06] <sllik> if I ls /media/cdrom there is nothing there
+=== osmosis_ is now known as osmosis
+[07:06] <Jack_Sparrow> Mexel: Find the modem by going to a terminal and typing dmesg | grep ttyS
+[07:06] <stefg> elvirolo2: tip #1: look at rsync for that job.  Your router might be set to not accept icmp
+[07:06] <Mexel> Jack_Sparrow: k
+=== z0r [i=z0r@194.204.125.213]  has joined #ubuntu
+[07:06] <winbond> eyec0n: i know the fix for it, it worked well for me , maybe it will work for you, the fix is for firefox
+[07:06] <ikonia> sllik: probably not mounted
+[07:07] <eyec0n> winbond, where at?
+=== osmosis_ [n=steven@cpe-76-80-127-252.socal.res.rr.com]  has joined #ubuntu
+=== Megaqwerty [n=megaqwer@unaffiliated/megaqwerty]  has joined #ubuntu
+[07:07] <winbond> eyec0n: hold a sec
+=== K4M3 [i=K4M3@I.have.fedora.in]  has joined #ubuntu
+[07:07] <jughead> I just installed kubuntu feisty and it installed the 2.6.20-16-generic kernel.  I have a P4 with hyperthreading and would like to install the i686 smp kernel.  Can I do that through the adept package manager?
+=== furenku [n=furenku@189.146.243.244]  has joined #ubuntu
+[07:07] <elvirolo2> stefg: ok thanks :)
+[07:07] <sllik> ikonia, if it weren't mounted would it still be in /media/cdrom?
+[07:07] <eyec0n> winbond, this things been driving me nuts I gotta restart everytime I wanna watch a new video on youtube :p
+=== Eo [n=loiret@gov91-1-82-234-91-6.fbx.proxad.net]  has joined #ubuntu
+=== olrrai [n=olrrai@host188.190-137-24.telecom.net.ar]  has joined #ubuntu
+[07:07] <Jack_Sparrow> Mexel: It should show up as ttyS5    or 1 or 2 or you get the idea
+[07:07] <Mexel> Jack_Sparrow: "bas: command not found"
+[07:07] <Megaqwerty> jughead: yes, it is listed under linux-image
+[07:07] <stefg> !generic | jughead
+[07:07] <ubotu> jughead: Background to the decision to replace -686, k7 and -smp kernels with -generic can be found here https://lists.ubuntu.com/archives/ubuntu-devel/2006-August/019983.html (the -386 kernel is still available if needed)
+[07:07] <Vlet> sllik: sudo mount /dev/cdrom perhaps
+[07:07] <ikonia> sllik: no - as there would be no data mounted on /media/cdrom
+=== spanks [n=spanks@c-68-84-18-144.hsd1.fl.comcast.net]  has joined #ubuntu
+=== Xyhthyx [n=Xyhthyx@adsl-64-237-203-108.prtc.net]  has joined #ubuntu
+[07:07] <Jowi> jughead, I think the generic is smp enabled already... (someone correct me if i'm wrong)
+[07:08] <Megaqwerty> jughead: oh, maybe not then
+=== kyle___ [n=salem@203.106.67.247]  has joined #ubuntu
+=== jussi01 [n=jussi@dyn3-82-128-184-60.psoas.suomi.net]  has joined #ubuntu
+[07:08] <Jack_Sparrow> Mexel: Did you cut and paste?
+[07:08] <stefg> jughead: no action to be taken, you're already running the optimal kernel
+[07:08] <eyec0n> it seems to work better with firefox2 than Granparadiso
+[07:08] <olrrai> hello, how to set xorg.conf to start session with 75hz (refresh rate) ?
+[07:08] <Sos``> where do i set rules for disconnecting an USB deviice?
+[07:08] <Mexel> Jack_Sparrow: ok wait, i types dmsg instead off dmesg, yes i got a bunch of numbers
+[07:08] <ylle> uh..
+[07:09] <Jowi> Sos``, /etc/udev/rules.d/
+[07:09] <Mexel> Jack_Sparrow: last line is numbers and something about my Conexant HSF modem
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has joined #ubuntu
+[07:09] <winbond> eyec0n: you need to edit /etc/firefox/firefoxrc as root and add this line export XLIB_SKIP_ARGB_VISUALS=1
+[07:09] <ylle> I think I found the uh, solution to my x-chat problem.
+[07:09] <Jack_Sparrow> Mexel: Already not good as many conexant are winmodems or soft modems...
+=== figmentj13 [n=joshua@c-24-99-206-64.hsd1.ga.comcast.net]  has joined #ubuntu
+=== fyrestrtr [n=burhan@pdpc/supporter/student/fyrestrtr]  has joined #ubuntu
+=== anklav [n=anklav@87.252.227.42]  has joined #ubuntu
+[07:10] <Mexel> Jack_Sparrow: right Well it's the only modem i got on there.
+[07:10] <sllik> Vlet, there is no cdrom in dev
+[07:10] <figmentj13> hello room
+[07:10] <Jack_Sparrow> Mexel: What number/port is it using
+[07:10] <ylle> just, go "sudo apt-get install xchat", and It'll work.
+=== x600 [n=x603@host-81-190-148-25.olsztyn.mm.pl]  has joined #ubuntu
+[07:10] <Mexel> Jack_Sparrow: lemme see
+[07:10] <Jack_Sparrow> Mexel: It should show up as ttyS5    or 1 or 2 or you get the idea
+[07:10] <sllik> ikonia, i got a cdrom in /media
+[07:10] <ylle> winbond: heysuo
+[07:10] <figmentj13> I just installed ubuntu
+[07:10] <ylle> *sup
+[07:10] <figmentj13> i need help
+[07:10] <ikonia> sllik: mega well done
+=== iang [n=iang@j249034.upc-j.chello.nl]  has joined #ubuntu
+[07:11] <Megaqwerty>  !ask | figmentj13
+[07:11] <ubotu> figmentj13: Don't ask to ask a question. Just ask your question :)
+[07:11] <Mexel> Jack_Sparrow: ttySHSFO
+=== weltmeister [n=georgi@180-113.orbital.evo.bg]  has joined #ubuntu
+[07:11] <Mexel> Jack_Sparrow: is the last line
+[07:11] <stefg> Mexel: are you trying to get ubuntu online over that modem? (sorry wasn't paying proper attention) . Jus a hint: most of the winmodems require the -386 kernels because the drivers cannot handel smp enabled kernels (which are default in ubuntu)
+[07:11] <figmentj13> um i am trying to make my win mobile 5 phone work
+=== iang [n=iang@j249034.upc-j.chello.nl]  has left #ubuntu []
+[07:11] <Mexel> stefg: yes i am
+=== teimu [i=teimu@r55h61.res.gatech.edu]  has joined #ubuntu
+[07:11] <jughead> thanks for the responses.  Just to be sure, is there a command to see if 2 CPUs are showing up?
+[07:11] <Mexel> stefg: but i'm be back in a few minutes
+[07:11] <Mexel> soryr
+[07:11] <sllik> ikonia, what?
+=== halsteadj [n=chatzill@user254.hebco.com]  has left #ubuntu []
+[07:11] <fyrestrtr> jughead: cat /proc/cpuinfo
+[07:11] <figmentj13> to sync
+[07:11] <ikonia> sllk you said you got a cdrom in /media
+[07:11] <winbond> eyec0n: "export XLIB_SKIP_ARGB_VISUALS=1" without the quotes, also check you xorg.conf and make sure its set to 24bit color
+[07:12] <sllik> ikonia, yeah, but there is nothing there!
+[07:12] <teimu> is there a way to make my vnc sessions with an ubuntu box use GDM, instead of X?
+[07:12] <ikonia> sllik: yes, because its not mounted
+=== panique [n=rechner@dslb-084-060-154-185.pools.arcor-ip.net]  has joined #ubuntu
+[07:12] <Jack_Sparrow> Mexel: Test in terminal using  sudo screen /dev/ttyS0  You should now be in a Modem terminal window so type "ATZ" then return It should respond with OK
+[07:12] <eyec0n> winbond, i'm retesting to see if it still crashes
+=== tarntow [n=jaxon@221.127.200.191]  has joined #ubuntu
+[07:12] <Jack_Sparrow> Mexel: I have never seen one come up as ttySHSFO
+=== way`away [i=OMG_SHOE@2017092159.rec.megazon.com.br]  has joined #ubuntu
+[07:12] <Megaqwerty> figmentj13: http://samiux.wordpress.com/2007/07/02/bluetooth-networking-with-windows-mobile-5-under-ubuntu-704/
+=== [BTF] LittleLamb [n=jeremy@pool-72-90-76-106.syrcny.fios.verizon.net]  has joined #ubuntu
+[07:12] <Megaqwerty> figmentj13: is that what you're looking for?
+=== Pevel [n=________@host-ip113-67.sycomp.pl]  has joined #ubuntu
+[07:13] <figmentj13> does anyone know how to sync a windows mobile 5 phone?
+=== lokpest [n=Bjorn_Od@d90-130-7-165.cust.tele2.se]  has joined #ubuntu
+[07:13] <sllik> ikonia, ok how do I know which device is the cd drive in dev?
+[07:13] <Megaqwerty> figmentj13: I just posted a link for you
+=== bravo_delta [n=pecan987@main-w.rtv5.cz]  has joined #ubuntu
+[07:13] <figmentj13> no
+[07:13] <ikonia> sllik: you can see if its mentioned in /etc/fstab
+[07:13] <Megaqwerty> figmentj13: I didn't?
+=== AFisch [n=holgi@p57AFD667.dip.t-dialin.net]  has joined #ubuntu
+=== peterkls [n=peter@user-387c7sl.cable.mindspring.com]  has joined #ubuntu
+[07:13] <zhanx> figmentj13, he did
+[07:13] <Vlet> teimu: perhaps this will help: http://www.movingtofreedom.org/2007/02/16/howto-remote-desktop-with-vnc-in-ubuntu-edgy-gnu-linux/
+[07:14] <Urilockz> sorry wine is inactive...
+[07:14] <Urilockz> wine has crashed and I can't close it, is there a way to terminate it? its slowing my pc down
+=== bullgr [n=bullgr@ppp54-180.adsl.forthnet.gr]  has joined #ubuntu
+[07:14] <fyrestrtr> Urilockz: kill the process from the terminal.
+[07:14] <Megaqwerty> Urilockz: killall wine ?
+[07:14] <Urilockz> how do I kill it
+[07:14] <eyec0n> winbond, that seems to fix it. No crashes and i've thrown about 15 different vids at it
+[07:14] <teimu> thanks Vlet. ill check that out
+[07:14] <jughead> thanks fyrestrtr it's all good - 2 CPUs are showing up
+[07:14] <figmentj13> ok i guess what i am trying to do is over usb
+[07:14] <Megaqwerty> figmentj13: ah, that would help to know ;)
+=== bullgr [n=bullgr@ppp54-180.adsl.forthnet.gr]  has left #ubuntu []
+[07:15] <figmentj13> sorry
+[07:15] <figmentj13> err
+[07:15] <eyec0n> thanks man that problems been bugging the shit out of me really bad
+=== CraHan [n=CraHan@d51A5FC19.access.telenet.be]  has left #ubuntu []
+[07:15] <Urilockz> urilockz@ICECREAM:~$ killall wine
+[07:15] <Urilockz> wine: no process killed
+[07:15] <arghh2D2> Urilockz: type in a terminal: killall wine
+=== lokpest [n=Bjorn_Od@d90-130-7-165.cust.tele2.se]  has left #ubuntu ["You]
+=== willdev [n=willdev@host86-142-167-172.range86-142.btcentralplus.com]  has joined #ubuntu
+[07:15] <winbond> eyec0n: good, that thing was driving me crazy too
+[07:15] <Urilockz> wait is wine desktop differant?
+=== Joanh [n=x3rus@201.220.132.138]  has joined #ubuntu
+[07:15] <sllik> ikonia, it's mentioned as scd0 but it's not in /dev
+[07:15] <Megaqwerty> Urilockz: type killall wi then press <TAB>
+[07:15] <Urilockz> I tried wine-desktop and it didn't work
+[07:15] <teimu> via ssh, id like for a certain user to always use a bash command line. this probably happens even when the use would login locally too, but i can't test that right now. is there a way to change the default shell?
+[07:16] <ikonia> sllik: thats interesting
+=== Ale88 [n=alessio@host156-193-dynamic.7-79-r.retail.telecomitalia.it]  has joined #ubuntu
+[07:16] <ikonia> sllik: possibly why its not mounted
+[07:16] <Ale88> hi
+[07:16] <Megaqwerty> Urilockz: it should autocomplete to whatever wine is running as
+[07:16] <Joanh> Hi, someone know an application to monitor the bandwidth at the lan, different that mrtg?
+[07:16] <nathan> how do I change the computer name on ubuntu?
+[07:16] <Jowi> sllik, "ls -la /dev/cdrom" doesn't point to the device?
+[07:16] <ikonia> sllik: have a look in dev and see if there are any sda/b/c/'s that look liekt he cdrom
+=== hmmm [n=Lovecand@89.241.59.5]  has joined #ubuntu
+=== way`away is now known as Tai
+[07:16] <Tai> Heya Johnny
+[07:16] <Tai> <3
+[07:16] <Megaqwerty> figmentj13: https://help.ubuntu.com/community/PortableDevices/WindowsMobile
+=== jonathan__ [n=jonathan@200.8.6.102]  has joined #ubuntu
+[07:16] <Frogzoo> Joanh: iftop maybe what you want - there's also cacti which is like mrtg
+[07:17] <sllik> Jowi, no
+[07:17] <Ale88> how to set the WPA ? do i need to install wpa_supplicant or somthing else?
+=== bobgill [n=bobgill@CPE000802b64568-CM0011e6c40b1f.cpe.net.cable.rogers.com]  has joined #ubuntu
+[07:17] <Joanh> thanks
+[07:17] <figmentj13> ok ill try that brb
+[07:17] <hmmm> yo tai :) <33
+[07:17] <bobgill> What is the default font in Gnome? for panels, etc.
+[07:17] <Tai> :p
+[07:17] <Urilockz> bah
+=== MdSalih [n=phelix@69.182.126.215]  has joined #ubuntu
+[07:17] <Urilockz> im just gonna log out
+[07:17] <arghh2D2> Urilockz:
+=== horza [n=phillip@17.147.100-84.rev.gaoland.net]  has left #ubuntu []
+[07:18] <kidbuntu> !skype
+=== some_ux [n=chatzill@bzq-88-154-20-170.red.bezeqint.net]  has joined #ubuntu
+[07:18] <ubotu> To install Skype on Ubuntu, see https://help.ubuntu.com/community/Skype - To record on Skype, check: https://wiki.ubuntu.com/SkypeRecordingHowto
+=== Gary [n=Gary@colchester-lug/pdpc.supporter.active.Gary]  has joined #Ubuntu
+=== dashgr [n=dashgr@pool-70-23-103-85.ny325.east.verizon.net]  has joined #ubuntu
+=== fredddy [n=freddy@p3E9E482D.dip0.t-ipconnect.de]  has joined #ubuntu
+[07:19] <dashgr> hi my hibernate and suspen doesn't seem to work, would anyone be able to hlp me with this?
+[07:19] <sllik> ikonia, no there is one that is called disk... not sure what it is though
+[07:20] <ikonia> sllik: thats very odd, looks like it can't see your cdrom
+=== Mexel [n=chatzill@host-209-214-104-3.bhm.bellsouth.net]  has joined #ubuntu
+=== kishan [n=kishan@CPE000c41b08927-CM001ac31584b4.cpe.net.cable.rogers.com]  has joined #ubuntu
+[07:20] <Mexel> Ok i'm back
+[07:20] <figmentj13> could we talk one on one
+[07:20] <Jack_Sparrow> Mexel: Im still confused about your modem..
+[07:20] <Joanh> Frogzoo, but that only listen on my eth0
+[07:21] <Mexel> Jack_Sparrow: that makes 2 of us
+=== kishan [n=kishan@CPE000c41b08927-CM001ac31584b4.cpe.net.cable.rogers.com]  has joined #ubuntu
+[07:21] <Joanh> I want to measure all the computers connect to the lan
+=== gatekeeper [n=gatekeep@219.254.164.135]  has joined #ubuntu
+[07:21] <Mexel> Jack_Sparrow: What do you need to know?
+[07:21] <Jack_Sparrow> Mexel: True hardware modems are not a problem
+=== jussi_ [n=jussi@dyn3-82-128-186-110.psoas.suomi.net]  has joined #ubuntu
+=== DevideZero [i=DivideZe@85.65.5.119.dynamic.barak-online.net]  has joined #ubuntu
+[07:21] <figmentj13> well i have never used linux b/f so I need a walk through
+[07:21] <sllik> ikonia, shit... I have a tape drive that i can see though, maybe it's conflicting with it?
+[07:21] <Jack_Sparrow> Mexel: Soft modems or Win modems are apain
+[07:21] <Mexel> Jack_Sparrow: i see ...
+[07:21] <dashgr> hi my hibernate and suspen doesn't seem to work, would anyone be able to hlp me with this?
+[07:21] <kidbuntu> !frostwire
+[07:21] <ubotu> frostwire is a totally open source version of Limewire.  For installation help, please see https://help.ubuntu.com/community/FrostWire
+=== K4M3 [i=K4M3@I.have.fedora.in]  has left #ubuntu []
+[07:21] <ikonia> sllik: that lagnauge isn't appropriate for thsi channel
+[07:22] <ikonia> sllik: is the tape drive ide ?
+=== harmental [n=ricardo@AGrenoble-152-1-14-189.w82-122.abo.wanadoo.fr]  has joined #ubuntu
+[07:22] <kishan> figmentj13, what do u need
+[07:22] <ikonia> or sata or what
+[07:22] <Mexel> Jack_Sparrow: ok so how  do i aqqire a good modem?
+=== idaho45 [n=idaho@190.75.104.119]  has joined #ubuntu
+[07:22] <bobgill> What is the default font in Gnome? for panels, etc.
+=== root__ [n=root@201.163.13.177]  has joined #ubuntu
+[07:22] <Jack_Sparrow> Mexel: Linux is rather dependent on the internet for downloads and updates and a modem will require some patience.
+=== JonJ [n=doublej@host-81-191-141-42.bluecom.no]  has joined #ubuntu
+[07:23] <kishan> u can cusyomize the font bobgill
+[07:23] <figmentj13> well i am trying to install a windows mobile 5 device to sync through usb
+[07:23] <root__> Hellow, can some one help me, i tried alot of tutoriels to put my broadcom 4318 to work and i cant...
+[07:23] <Mexel> Jack_Sparrow: I have loads of patience.
+[07:23] <sllik> ikonia, :), yeah the tape drive is ide
+[07:23] <Jack_Sparrow> Mexel: I have a couple here that work fine... is that a laptop or desktop unit
+[07:23] <olrrai> hello, how to set xorg.conf to start session with 75hz (refresh rate) ?
+=== gccfanboy [n=irfan@CPE0008c6e932b7-CM0012c90d1cc2.cpe.net.cable.rogers.com]  has joined #ubuntu
+[07:23] <Megaqwerty> figmentj13: that guide didn't work?
+[07:23] <Mexel> Jack_Sparrow: Desktop unit
+=== FransQ [n=frank@a82176.upc-a.chello.nl]  has joined #ubuntu
+[07:23] <figmentj13> im a noob
+[07:23] <bobgill> yes I did, I forgot what the default is :)
+[07:23] <ikonia> sllik: are there and scd letters in /dev
+=== jerichokb [n=jerichok@host81-153-62-20.range81-153.btcentralplus.com]  has joined #ubuntu
+[07:23] <Jack_Sparrow> Mexel: Do you have a friend with broadband internet access?
+[07:24] <dashgr> how do i ge the bot to help me again?
+=== root__ is now known as FofiN
+[07:24] <jerichokb> \join \ubuntu-uk
+[07:24] <jerichokb> oops
+[07:24] <figmentj13> so im not sure what to run to hash the comand
+[07:24] <Jack_Sparrow> Mexel: One sec while I check the make and model of the one I personally have used..
+=== Helzibah [n=Helzibah@81-86-253-99.dsl.pipex.com]  has joined #ubuntu
+=== winbond [n=winbond@c-76-99-13-234.hsd1.pa.comcast.net]  has joined #ubuntu
+[07:24] <Mexel> Jack_Sparrow: i have DSL at my parents house.
+[07:24] <Megaqwerty> figmentj13: Applications>Accessories>Terminal
+=== banditti [n=banditti@63-230-200-233.phnx.qwest.net]  has joined #ubuntu
+=== benkong2 [n=benkong2@cpe-024-163-044-128.nc.res.rr.com]  has joined #ubuntu
+=== jerichokb [n=jerichok@host81-153-62-20.range81-153.btcentralplus.com]  has left #ubuntu ["Leaving"]
+=== banditti [n=banditti@63-230-200-233.phnx.qwest.net]  has left #ubuntu ["Leaving"]
+[07:24] <DevideZero> wich linux dist support multimedia the best ( mms , wmv , mpg , avi , mp3 ,wma ) automaticly ( without i will need to install some codecs ) ?
+[07:24] <FofiN> Hellow, can some one help me, i tried alot of tutoriels to put my broadcom 4318 to work and i cant...
+[07:24] <sllik> ikonia, no, i did ls -la *scd* there was nothing found
+=== JonJ [n=doublej@host-81-191-141-42.bluecom.no]  has joined #ubuntu
+[07:24] <dashgr> !wireless | dashgr
+[07:25] <Eo> DevideZero, yes
+[07:25] <Eo> use mplayer
+[07:25] <benkong2> hey all why can I not stop KDM and all gui stuff by typing init 3 in a console logged in as root?
+[07:25] <figmentj13> got that up.... ok, im up to : Install the synce-dccm
+[07:25] <Jack_Sparrow> Mexel: Airlink ame003 will work  and was around $20us
+=== billiejoex [n=billiejo@ppp-210-42.21-151.libero.it]  has joined #ubuntu
+=== eyec0n is tired.
+=== Noodlesgc [n=noodles@c-24-3-37-216.hsd1.mn.comcast.net]  has joined #ubuntu
+[07:25] <DevideZero> Eo , it will play all of what i have listed ?
+[07:25] <eyec0n> bye everyone
+[07:26] <Mexel> Jack_Sparrow: ok i'll google it.
+=== kishan is now known as kishan_
+=== console_jockey [n=mark@adsl-68-124-176-70.dsl.pltn13.pacbell.net]  has joined #ubuntu
+=== kawa [n=kawa@86.125.237.234]  has joined #ubuntu
+[07:26] <console_jockey> !hostname
+[07:26] <ubotu> Use hostname <somehostname> to set the hostname, or to do it permanently: edit /etc/hostname  and /etc/hosts . WARNING! Make sure that your current hostname and /etc/hosts match, otherwise sudo may not work properly. Alternatively, use the gui at system>administration>networking on the "General" tab
+=== _xml_ is now known as xImortal
+=== Associat0r [n=Associat@d141229.upc-d.chello.nl]  has joined #ubuntu
+[07:26] <Sos``> hmm....
+[07:26] <Jowi> benkong2, because all runlevels start g/k/xdm
+=== boarderwinterman [n=boarder-@p508DCA55.dip.t-dialin.net]  has joined #ubuntu
+=== intox2 [n=rufus@host81-154-241-107.range81-154.btcentralplus.com]  has joined #ubuntu
+[07:27] <benkong2> Jowi; oh.... ok
+[07:27] <Jowi> benkong2, simply remove it in /etc/init.d/rc3.d
+=== edulix [n=edulix@154.31.218.87.dynamic.jazztel.es]  has joined #ubuntu
+[07:27] <Jack_Sparrow> Mexel: You might consider using your parents broadband for the updates.. burn to cd and carry it home
+[07:27] <Jack_Sparrow> FofiN: I used fwcutter and was very simple
+[07:27] <benkong2> cool thanks
+[07:27] <Sos``> i still don't know how to make rules for unplugging USB device :/
+[07:27] <Jack_Sparrow> Mexel: If they will let you have a partition on their system for ubuntu.. even better
+[07:27] <Mexel> Jack_Sparrow: right
+[07:27] <Jowi> benkong2, /etc/rc3.d i meant
+[07:27] <kishan_> how to register my nic here
+=== saschahl [n=sascha@dslb-084-056-175-120.pools.arcor-ip.net]  has joined #ubuntu
+[07:27] <Mexel> Jack_Sparrow: nah, doubtful
+[07:27] <Eo> DevideZerio, yes with "mplayer xxx.xxx -loop 0" its play all the file
+[07:27] <kishan_> !register
+[07:27] <ubotu> Information about registering your Freenode nick is at http://freenode.net/faq.shtml#contents-userregistration
+[07:27] <Noodlesgc> My wifi card Works!!
+=== nathan [n=nathan@63-228-96-146.tukw.qwest.net]  has joined #ubuntu
+[07:28] <Jack_Sparrow> Mexel: After I installed I burned var/cache/apt/archives to a cd so I never need to dl those 200 megs again..
+=== SilverSpace [n=SilverSp@78.134.157.230]  has joined #ubuntu
+[07:28] <Sos``> ubotu: /msg nickserv register [passwd]  [email]
+[07:28] <Mexel> Jack_Sparrow: WOA. ouch
+[07:28] <Mexel> Jack_Sparrow: Well where can i buy this modem?
+[07:28] <DevideZero> Eo , and microsoft stream with firefox ?
+[07:28] <edulix> hi
+[07:28] <edulix>  how can I listen to the audio embed to a jpeg image done with an hp (photosmart 735) camera?
+[07:28] <marnik> I have a problem, I installed Ubuntu, grub boots both windows and ubuntu, but when I spend the whole day at the office and i get home at night, the bootloader no longer works
+=== randy026 [n=randy026@70-58-155-80.eugn.qwest.net]  has joined #ubuntu
+[07:28] <Jack_Sparrow> Mexel: I got these at frys in calif
+[07:28] <marnik> i see "grub loading" for a fraction of a second and the pc keeps rebooting
+[07:29] <Mexel> Jack_Sparrow: never heard of it, I'm in Albama myself
+[07:29] <Sos``> marnik: run liveCD and type "grub-install" in terminal
+[07:29] <marnik> is it possible that windows xp overwrite a part of the bootloader or someting like that?
+[07:29] <FofiN> exit
+[07:29] <Jowi> edulix, the few cameras that have that function that I have tried actually create an mpeg out of the jpeg + wav
+[07:29] <Eo> DevideZero, I don't undestand, I'm a French little boy :p
+[07:29] <Sos``> marnik: yes it does
+[07:29] <arghh2D2> mexel, try best buy or circuit city and the like
+[07:29] <nathan> I have apache going and it works in that I can sometimes reach my website but usually it takes forever and then says timed out...
+[07:29] <Mexel> arghh2D2: Radioshak maybe?
+[07:29] <marnik> Sos``: but it has happened to me twice now, yesterday and today, I'm not planning on booting from the livecd everytime I boot, so I'm looking for the problem
+[07:29] <Sos``> can you tell me how to make a rule for unplugging a device :]
+[07:30] <codeshah> hey guys, I just installed apache2, but localhost doesnt work on my browser still ... also there is no /etc/apache2/httpd.conf (do I need this around?)
+[07:30] <Jack_Sparrow> Mexel: You should have no problem finding a hardware modem that will work.. you can check our wiki for hardware that will work so you can look for different models
+[07:30] <edulix> Jowi: so I had bad luck?
+[07:30] <Mexel> Jack_Sparrow: ok
+=== Elischa [n=rassihu@M3745P022.adsl.highway.telekom.at]  has joined #ubuntu
+[07:30] <Mexel> Jack_Sparrow: wqhats the wiki link xD
+[07:30] <arghh2D2> Mexel: better yet, order one online from a site like newegg.com ... even cheaper
+[07:30] <Jack_Sparrow> !hardware
+[07:30] <ubotu> For lists of supported hardware on Ubuntu see https://wiki.ubuntu.com/HardwareSupport
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has left #ubuntu ["Coming]
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has joined #ubuntu
+[07:30] <Sos``> marnik: windows antivirus is probably rtestoring the mbr
+[07:30] <Mexel> arghh2D2: Tigerdirect?
+[07:30] <arghh2D2> Mexel: not sure about radio shack
+[07:30] <Jowi> edulix, no, that's not what I meant. try to open it in totem or mplayer.
+=== bronze_0_1 [n=Lester@c-24-63-145-27.hsd1.ma.comcast.net]  has joined #ubuntu
+=== higa2 [n=centroso@89.128.28.36]  has joined #ubuntu
+[07:30] <nathan> I have apache going and it works in that I can sometimes reach my website but usually it takes forever and then says timed out... that's if I use my other computer. if I use the same computer as apache and do localhost, it works
+=== LinAsH [n=missmagu@86.68.18.26]  has joined #ubuntu
+[07:31] <edulix> ok I'll try
+[07:31] <marnik> Sos``: that might be the problem, but I don't have the antivirus password :/
+[07:31] <arghh2D2> Mexel: just be sure to check the site Jack_Sparrow just ubotu'd for you
+[07:31] <marnik> Sos``: thanks for the info, now I know where to start
+=== Jobias_ [n=jwleung@ohaton.cs.ualberta.ca]  has joined #ubuntu
+[07:31] <Jack_Sparrow> Mexel: One other option.. get a usb stick... set it up as persistent. run livecd in persistent mode on parents computer and save your archives to the usb
+[07:32] <marnik> is it possible to create an USB-drive to use as bootdevice? That way I can boot into linux using the USB stick
+=== bao [n=bao@pool-70-107-145-76.ny325.east.verizon.net]  has joined #ubuntu
+=== qwxyr [i=mattis@hurfmydurf.com]  has joined #ubuntu
+[07:32] <edulix> jowi: bingo
+[07:32] <qwxyr> is the table 'PREROUTING' in iptables usually there by defaulte, or do I need to do something?
+[07:32] <Jowi> edulix, :)
+=== kabtoffe [n=kbergstr@DCCXCIII.gprs.saunalahti.fi]  has joined #ubuntu
+[07:32] <sllik> ikonia, if I do mount /cdrom it says "Special device /dev/scd0 not found"
+[07:32] <Jack_Sparrow> marnik: yes
+=== mrkr [n=mrkr@p5085077E.dip0.t-ipconnect.de]  has joined #ubuntu
+=== JonJ [n=doublej@host-81-191-141-42.bluecom.no]  has joined #ubuntu
+[07:32] <gccfanboy> does anyone use alex file system on linux?
+=== bob_ [n=bob@home.sassenachqueen.co.uk]  has joined #ubuntu
+=== remi____ [n=reber@LNeuilly-152-21-126-73.w193-253.abo.wanadoo.fr]  has joined #ubuntu
+[07:32] <nathan> do I want totem-xine or totem-gstream for streaming videos?
+[07:32] <DevideZero> Eo , can you see this ? http://yes.walla.co.il/?w=1/7082/1156790
+[07:32] <remi____> hi all
+[07:32] <Mexel> Jack_Sparrow: the only hardware modem i found was this "Sagem Fast 800 Modem"
+[07:33] <Mexel> Jack_Sparrow: on that wiki
+[07:33] <Eo> DevideZero, okay
+[07:33] <marnik> Jack_Sparrow: would you know where to start?
+[07:33] <ikonia> sllk for some reason  your cdrom is not being seen by your system
+[07:33] <ikonia> sllik: check your syslog
+[07:33] <remi____> what is the most "finished" and "polished" light distro derived from ubuntu ?
+[07:33] <Jack_Sparrow> Mexel: I know that model of airlink works from personal experience...
+=== zarul [n=zarulsha@ubuntu/member/zarul]  has joined #ubuntu
+[07:33] <gener1c> jack is as free as a sparrow
+=== `LeOn75` [n=leon@ip-5-213.sn2.eutelia.it]  has joined #ubuntu
+[07:33] <Jack_Sparrow> marnik: I googled it and found linux on usb or something like that
+[07:34] <Eo> DevideZero, it is in Chinese and I do not speak Chinese
+[07:34] <gener1c> DSL?
+[07:34] <zarul> gosh...anyone had this error before  "E: Invalid record in the preferences file, no Package header
+[07:34] <zarul> "
+[07:34] <Mexel> Jack_Sparrow: Well i can't find anything on tigerdirect about the AirLink
+[07:34] <nathan> I have apache going and it works in that I can sometimes reach my website but usually it takes forever and then says timed out... that's if I use my other computer. if I use the same computer as apache and do localhost, it works
+=== guardian [n=Guardian@ANantes-252-1-23-222.w82-126.abo.wanadoo.fr]  has joined #ubuntu
+[07:34] <Jack_Sparrow> Mexel: let me see what I can find
+[07:34] <zarul> what
+=== qwxyr [i=mattis@hurfmydurf.com]  has left #ubuntu []
+[07:34] <Jowi> edulix, i really like that feature. looking at a pic and hearing the sounds is for me more alive than a movie. strange but nice.
+[07:34] <Mexel> Jack_Sparrow: Thanks ALot jack.
+=== kousotu [n=kousotu@adsl-68-79-2-50.dsl.emhril.ameritech.net]  has joined #Ubuntu
+[07:35] <edulix> =)
+[07:35] <zarul> tell me if you have the solution for that..google is not helping with that..
+[07:35] <DevideZero> someone can see this ? http://yes.walla.co.il/?w=1/7082/1156790
+[07:35] <edulix> Jowi: now I need to extract the sound to an external audio file.. do you know how to do that? note that only mplayer opened the file
+=== harmental [n=ricardo@AGrenoble-152-1-14-189.w82-122.abo.wanadoo.fr]  has joined #ubuntu
+[07:36] <Ward1983> someone said something to me but it scrolled out of range before i got here
+[07:36] <zarul> ok I solved the problem
+=== kronos [n=kronos@89.136.158.158]  has joined #ubuntu
+=== bullgard4 [n=detlef@p54BF1C33.dip0.t-ipconnect.de]  has joined #ubuntu
+[07:36] <Ward1983> are there chatlogs somewhere? (or can someone with a longer log check?)
+[07:36] <nathan> Ward1983: press page up
+[07:36] <Jowi> edulix, you can use mencoder for that
+[07:36] <Ward1983> nathan, thanx :-)
+=== Jobias_ [n=jwleung@ohaton.cs.ualberta.ca]  has joined #ubuntu
+[07:36] <Ward1983> nathan, lol nope doesnt help
+[07:36] <Ward1983> nathan, i mean really it scrolledo ut of the range
+=== RikkitProff [n=rikkit@77.50.89.24]  has joined #ubuntu
+[07:37] <nathan> Ward1983: what client you on?
+[07:37] <Ward1983> nathan, xchat
+[07:37] <Jowi> edulix, or mplayer -dumpaudio
+=== Trasher-G [n=trasher@osbk-4db59f46.pool.einsundeins.de]  has joined #ubuntu
+[07:37] <Jowi> edulix, i think....
+[07:37] <edulix> ok
+[07:37] <nathan> Ward1983: I use irssi so nothing scrolls out of my range I just press pgup... donno ask someone who uses xchat =]
+=== albert23 [n=albert@86.81.99.204]  has joined #ubuntu
+=== Ward1983 [n=ward@230.20-67-87.adsl-dyn.isp.belgacom.be]  has left #ubuntu ["Ik]
+=== Ward1983 [n=ward@230.20-67-87.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[07:38] <Ward1983> nathan, np
+[07:38] <Jack_Sparrow> Mexel: Pricewatch came up with several starting at $25
+[07:38] <Mexel> k lemme go there
+[07:38] <kronos> can anyone help me with a postfix,courier-imap,mysql,maildrop (for quota) setup? I can't figure out how to make maildrop to deliver to /home/vmail/<domain>/<user>/ instead of /home/vmail/Maildir file
+=== sorush20 [n=sorush20@87-194-253-240.bethere.co.uk]  has joined #ubuntu
+=== Madnis [n=matt@adsl-69-108-109-114.dsl.irvnca.pacbell.net]  has joined #ubuntu
+[07:38] <Ward1983> nathan, could you do ctrl-f Ward1983 ? :p
+=== Zta [n=stephan@port572.ds1-arc.adsl.cybercity.dk]  has joined #ubuntu
+[07:38] <kronos> and how the maildirsize file works for quota ?
+[07:38] <sllik> ikonia, yeah i checked, there is nothing there about it... thanks for your help anyways
+=== devesh [n=devesh@124.7.73.8]  has joined #ubuntu
+[07:39] <edulix> Jowi: thanks for all!
+[07:39] <thedash> is there any way to make the mail-notification plugin for Evolution to always display the 'new mail' icon if there are unread messages, instead of just the newest one ?
+[07:39] <Mexel> Jack_Sparrow: erm couldn't find anything related to "Airlink ame003" in pricewatch
+=== ahaller [n=ahaller@i5387D398.versanet.de]  has joined #ubuntu
+=== Jowi [n=johan@bgn92-4-82-238-212-88.fbx.proxad.net]  has left #ubuntu ["Leaving"]
+=== Jowi [n=johan@bgn92-4-82-238-212-88.fbx.proxad.net]  has joined #ubuntu
+[07:40] <Zta> My bluetooth isn't working.  I've jacked in my bluetooth CF card.  It's showing with "lshw" and "lspcmcia", but not with "hcitool dev" -- "hcitool scan" returns "Device is not available: No such device".  I've read  https://help.ubuntu.com/community/BluetoothSetup  but aparrently my device acts differently..?
+[07:40] <Jowi> note to self; ctrl-w does not remove the last word in xchat
+=== pyrak [n=pyrak@ip68-109-193-64.pv.oc.cox.net]  has joined #ubuntu
+=== jeg-vil-ikke [n=rob@p57A17939.dip.t-dialin.net]  has joined #ubuntu
+=== c01100011 [n=c0110001@155.33.109.129]  has joined #ubuntu
+=== codeshah [n=codeshah@S01060011092d0063.ed.shawcable.net]  has joined #ubuntu
+=== xsivmr [n=xsivmr@220-253-149-139.VIC.netspace.net.au]  has joined #ubuntu
+=== TheListener [n=matt@24-236-154-243.dhcp.aldl.mi.charter.com]  has joined #ubuntu
+[07:42] <c01100011> cross client lin-win video chat recommendations ?
+[07:43] <xsivmr> hi, i'm having trouble with running the 7.04 livecd, it just freezes. can anyone point me to a trouble shooter for working it out?
+=== hhp21 [n=jesse@bas16-toronto12-1088911112.dsl.bell.ca]  has joined #ubuntu
+[07:43] <Jack_Sparrow> Mexel: http://www.computer3g.com/estore/control/Computer3G/productdetails?id=69030
+=== hhp21 [n=jesse@bas16-toronto12-1088911112.dsl.bell.ca]  has left #ubuntu []
+=== hhp21 [n=jesse@bas16-toronto12-1088911112.dsl.bell.ca]  has joined #ubuntu
+=== higa2 [n=centroso@89.128.28.36]  has joined #ubuntu
+=== jeg-vil-ikke [n=rob@p57A17939.dip.t-dialin.net]  has joined #ubuntu
+[07:43] <Mexel> Jack_Sparrow: says Conexant o.O
+=== higa2 [n=centroso@89.128.28.36]  has left #ubuntu ["Ex-Chat"]
+[07:44] <Mexel> Jack_Sparrow: "Not Available"
+=== tobias_ [n=tobias@fvr.lightlink.com]  has joined #ubuntu
+[07:44] <codeshah> hey guys, do I need httpd.conf in /etc/apache2/ ? Mine is missing and I think thats causing problems ... when I start apache2 manually by going sudo apache2 it starts, but sudo /etc/init.d/apache2 start doesnt do anything
+=== libertomarargent [n=libertom@r190-64-221-100.dialup.adsl.anteldata.net.uy]  has joined #ubuntu
+=== beeew [n=chatzill@c-24-7-43-146.hsd1.ca.comcast.net]  has joined #ubuntu
+[07:44] <nathan> Ward1983: you can search by username or anything you want and it's easier than ctrl-f username =]
+=== Aviator [n=aviator@41.233.123.248]  has joined #ubuntu
+=== crownless [n=juho@dsl-olugw6-fe68dc00-12.dhcp.inet.fi]  has joined #ubuntu
+=== pupi120290 [n=philipp@dslb-088-068-037-115.pools.arcor-ip.net]  has joined #ubuntu
+[07:45] <Aviator> ok now i have the weirdest of problems
+=== kidbuntu [n=kidbuntu@121.1.51.190]  has joined #ubuntu
+[07:45] <kidbuntu> !jre
+[07:45] <ubotu> Sorry, I don't know anything about jre - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:45] <Jack_Sparrow> Mexel: I am still looking...
+=== Solsun [n=Miranda@ppp-69-221-6-116.dsl.toldoh.ameritech.net]  has left #ubuntu []
+=== vader1102 [n=vader@bas3-kitchener06-1096649605.dsl.bell.ca]  has joined #ubuntu
+[07:45] <Mexel> Jack_Sparrow:  ok
+[07:45] <pupi120290> hello^^ i have problem with my bootsplash. no bootsplash is shown. can anyone help me fix that?
+=== boadach [n=boadach@modemcable021.179-80-70.mc.videotron.ca]  has joined #ubuntu
+[07:45] <kidbuntu> !frostwire
+[07:45] <ubotu> frostwire is a totally open source version of Limewire.  For installation help, please see https://help.ubuntu.com/community/FrostWire
+=== PhilKC [i=PhilKC@freenode/staff/philkc]  has joined #Ubuntu
+[07:46] <hhp21> Guys, something's wrong with my update in 7.04.. the updates are rolling in and building up and I haven't been able to get any for about a week and a half now. I have the errors on pastebin if anyone wants to have a look.. I really would like to get my updates, so any help is appreciated! http://pastebin.org/1929
+[07:46] <Ward1983> nathan, lol ok, can you do me a favour and see who said what to me in your log? i just extended my log so this wont happen again
+=== lukas____ [n=lukas@gw-lsn.lieso-net.de]  has joined #ubuntu
+[07:46] <Mexel> Jack_Sparrow: How about this http://www.airlink101.com/products/aml056.html
+[07:47] <Jack_Sparrow> Mexel: From experience.. true analog external hardware modems will work.. find a supplier near you that will take it back if it dosent...
+[07:47] <Aviator> date is "Fri Sep  7 15:46:37 GMT+2 2007" but date -u is "Fri Sep  7 17:46:52 UTC 2007"? WTF
+=== tripp [n=tripp@24.67.64.190]  has joined #ubuntu
+[07:47] <winbond> !yomomma
+[07:47] <ubotu> Sorry, I don't know anything about yomomma - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:47] <Mexel> Jack_Sparrow: erm, ok xD
+=== Libila [n=irssi@ip68-101-243-103.sd.sd.cox.net]  has joined #ubuntu
+=== SKIN [n=SKIN@209-254-12-57.ip.mcleodusa.net]  has joined #ubuntu
+[07:47] <nathan> Ward1983: sorry I wasn't here when it happened lol =/ the first thing I heard you say was someone said something to you
+[07:47] <Jack_Sparrow> Mexel: Internals are in general not as sure of a bet
+[07:47] <Ward1983> nathan, lol damn
+[07:47] <pupi120290> hello^^ i have problem with my bootsplash. no bootsplash is shown. can anyone help me fix that?
+[07:47] <winbond> !bush
+[07:47] <ubotu> Sorry, I don't know anything about bush - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:47] <nathan> !tacos
+[07:47] <ubotu> Sorry, I don't know anything about tacos - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:48] <Mexel> Jack_Sparrow: so external True analog modems?
+[07:48] <vader1102> hhlp, sudo dpkg --configure -a
+=== wacky_coder [n=alex@86.123.209.10]  has joined #ubuntu
+[07:48] <hhp21> Guys, stop abusing poor ubotu :P
+[07:48] <winbond> !microsoft
+[07:48] <ubotu> For help with Microsoft Windows, please visit ##windows or your nearest mental health institute. See http://launchpad.net/distros/ubuntu/+bug/1 http://linux.oneandoneis2.org/LNW.htm and !equivalents
+[07:48] <vader1102> that is what that message is saying
+[07:48] <Ward1983> someone who's around for a few hours and got chatlogs?
+[07:48] <Noodlesgc> does anyone know of a good c/c++ ide?
+[07:48] <nathan> I have apache going and it works in that I can sometimes reach my website but usually it takes forever and then says timed out... that's if I use my other computer. if I use the same computer as apache and do localhost, it works
+=== wacky_coder [n=alex@86.123.209.10]  has left #ubuntu ["Ex-Chat"]
+[07:48] <hhp21> vader1102: When I do that, it processes something and then freezes the PC.
+=== weezy [n=none@pool-71-178-214-61.washdc.fios.verizon.net]  has joined #ubuntu
+[07:48] <pupi120290> Nooglesgc: Anjuta
+[07:48] <pupi120290> !anjuta
+[07:48] <ubotu> Sorry, I don't know anything about anjuta - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:49] <vader1102> ohhhhhh then that is above my knowledge.... sorry
+[07:49] <Libila> Just installed ubuntu and was installing asterisk when it said 'Media change: please insert the disk labele (disk) in the drive '/cdrom/' and press enter' How can I make it download from mirrors only?
+[07:49] <Jack_Sparrow> Mexel: The link on that internal doesnt give a chipset and I can almost assure you it will not work
+[07:49] <hhp21> vader1102: Thanks though :)
+[07:49] <pupi120290> hello^^ i have problem with my bootsplash. no bootsplash is shown. can anyone help me fix that?
+[07:49] <Mexel> Jack_Sparrow: ah ok
+[07:49] <Mexel> Jack_Sparrow: so i'll look ofr an external one.
+[07:49] <tripp> \server
+[07:49] <hhp21> !patience pupi120290
+=== c01100011 [n=c0110001@155.33.109.129]  has left #ubuntu ["Leaving"]
+=== tatters [n=test@ACC989A7.ipt.aol.com]  has joined #ubuntu
+[07:49] <winbond> !novell
+[07:49] <ubotu> Other !Linux distributions besides !Ubuntu include: Debian, Mepis (using !APT); RedHat, Fedora, SUSE, Mandriva (using !RPM); Gentoo, Slackware (using other packaging systems)
+=== c01100011 [n=c0110001@155.33.109.129]  has joined #ubuntu
+=== stefano [n=stefano@i5387A1B5.versanet.de]  has joined #ubuntu
+[07:49] <Jack_Sparrow> Mexel: Stick with external...serail.. not usb
+[07:49] <Jack_Sparrow> serial
+=== Bu1 [n=bulb@ip-160-218-169-62.eurotel.cz]  has joined #ubuntu
+[07:50] <pupi120290> !ubotu
+[07:50] <ubotu> I am ubotu, all-knowing infobot. You can browse my brain at http://ubotu.ubuntu-nl.org/factoids.cgi - Usage info: http://wiki.ubuntu.com/UbuntuBots
+[07:50] <stefano> eh yo
+[07:50] <stefano> :D
+[07:50] <Bu1> Hey
+[07:50] <Mexel> Jack_Sparrow: serial, got it
+=== gcostello [n=gcostell@212.195.160.152]  has joined #ubuntu
+[07:50] <tatters> Can I share swap partition if duel booting to linux distro or doo they both need their own swap space?
+[07:50] <Bu1> Can you help me with a problem ? :(
+[07:50] <nathan> duel booting ~ OS vs OS ?
+[07:50] <Zta> Can anyone help me configure bluetooth for "hcitool scan", please?
+[07:50] <Jack_Sparrow> Mexel: Consider a usb stick and persistent to get the bulk updates on your parents broadband
+[07:50] <Ward1983> !question
+[07:50] <ubotu> Don't ask to ask a question. Just ask your question :)
+[07:50] <kidbuntu> is there a way where i can download this to make a backup copy of it. /sun-java5-jre_1.5.0-11-1ubuntu2_all.deb. i just installed this via apt-get. or is it already in the computer where i could just copy it
+[07:51] <tatters> backtrack 2 and ubuntu
+=== jono [n=jono@ubuntu/member/jono]  has joined #ubuntu
+[07:51] <Mexel> Jack_Sparrow: right
+[07:51] <Ward1983> Bu1,
+[07:51] <Ward1983> http://192.168.2.3/fotoalbum/index.php?dir=
+[07:51] <tatters> slax and ubuntu I guess
+[07:51] <Bu1> I've installed Ubuntu 7.04 on my HP530 and I have a problem with resolution
+[07:51] <Ward1983> Bu1,
+[07:51] <nathan> my question is "is it ok to ask a question" =]
+[07:51] <Ward1983> !question
+[07:51] <Jack_Sparrow> kidbuntu: /var/cache/apt/archives
+[07:51] <ubotu> Don't ask to ask a question. Just ask your question :)
+=== PippoInzaghi [n=pippo@151.73.190.206]  has joined #ubuntu
+=== Kwitschibo_ is now known as Kwitschibo
+[07:51] <Ward1983> lo lwrong paste first :p
+[07:51] <PippoInzaghi> hi
+[07:51] <kidbuntu> Jack_Sparrow: thanks
+[07:51] <PippoInzaghi> :)
+[07:51] <pupi120290> !hi
+[07:51] <ubotu> Hi! Welcome to #ubuntu!
+[07:51] <Jack_Sparrow> np
+=== Spidey_ [n=dole@ip72-199-188-207.sd.sd.cox.net]  has joined #ubuntu
+[07:52] <Mexel> Jack_Sparrow: how about this one : http://www.tigerdirect.com/applications/SearchTools/item-details.asp?EdpNo=876414&CatId=564
+=== soneil [n=soneil@86.45.202.151]  has joined #ubuntu
+[07:52] <PippoInzaghi> hi how can I reboot via command line in Ubuntu?
+[07:52] <hhp21> PippoInzaghi: sudo reboot
+[07:52] <Spidey_> sudo reboot?
+[07:52] <pupi120290> sudo shutdown -r now
+[07:52] <CoasterMaster> PippoInzaghi: sudo shutdown -r now
+[07:52] <Ward1983> Bu1, which problem?
+[07:52] <PippoInzaghi> thank you
+[07:53] <pupi120290> welcome
+[07:53] <nathan> I have apache going and it works in that I can sometimes reach my website but usually it takes forever and then says timed out... that's if I use my other computer. if I use the same computer as apache and do localhost, it works
+[07:53] <hhp21> Guys, something's wrong with my update in 7.04.. the updates are rolling in and building up and I haven't been able to get any for about a week and a half now. I have the errors on pastebin if anyone wants to have a look.. I really would like to get my updates, so any help is appreciated! http://pastebin.org/1929
+=== nathan [n=nathan@63-228-96-146.tukw.qwest.net]  has joined #ubuntu
+=== wile_e8 [n=allan@c-69-254-135-33.hsd1.nm.comcast.net]  has joined #ubuntu
+=== orangetruck [n=ijlal@dhcp14542.odumvillage.unc.edu]  has joined #ubuntu
+[07:54] <SKIN> nathan what is your dns setup?
+=== nathan_ [n=nathan@63-228-96-146.tukw.qwest.net]  has joined #ubuntu
+[07:54] <Jack_Sparrow> Mexel:http://castle.pricewatch.com/s/search.asp?s=modem+external  27.48 incl shipping..
+=== lukas____ [n=lukas@gw-lsn.lieso-net.de]  has left #ubuntu ["Ex-Chat"]
+[07:54] <pupi120290> hhp21: try to run dpkg --configure -a
+=== kstr [n=kstr@d5153A74E.access.telenet.be]  has joined #ubuntu
+[07:54] <Spidey_> anyone in here know why i'm getting a '/dev/audio' device or resource busy prompt when i try running "saytime" ?
+=== mbudde [n=mbudde@0x57344dc2.boanxx21.adsl-dhcp.tele.dk]  has joined #ubuntu
+[07:55] <Bu1> Ubuntu thinks my max resolution is 1024x768 but I do have 1280x800 :)
+=== BOB_SLAYER [n=bob@87.113.87.88.plusnet.pte-ag2.dyn.plus.net]  has joined #ubuntu
+[07:55] <Jack_Sparrow> Mexel: Sorry wrong price..
+[07:55] <Mexel> Jack_Sparrow: lol
+[07:55] <Bu1> Where can i change it ?
+[07:55] <PriceChild> !fixres | Bu1
+[07:55] <ubotu> Bu1: The X Window System is the part of your system that's responsible for graphical output. To restart your X, type  sudo /etc/init.d/?dm restart  in a console - To fix screen resolution or other X problems: http://help.ubuntu.com/community/FixVideoResolutionHowto
+[07:55] <nathan_> ctrl-t is the best shortcut ever made in the history of computers
+[07:55] <BOB_SLAYER> ..
+=== jussi__ [n=jussi@dyn3-82-128-187-43.psoas.suomi.net]  has joined #ubuntu
+=== sllik [n=mike@67.69.130.50]  has joined #ubuntu
+[07:55] <BOB_SLAYER> .
+[07:55] <Jack_Sparrow> Mexel: Right price.. wrong modem... I still prefer to deal locally
+[07:56] <some_ux> How do i know if my board supports real hardware RAID ?
+[07:56] <Ward1983> Bu1, just to make sure: you checked the resolution window in the menu and the max resolution is lower then your real max resolution?
+[07:56] <Jack_Sparrow> !raid
+[07:56] <ubotu> Tips and tricks for RAID and LVM can be found on https://help.ubuntu.com/community/RaidConfigurationHowto and http://www.tldp.org/HOWTO/LVM-HOWTO
+[07:56] <Mexel> Jack_Sparrow: Well i guess it'll be a while before i figure what to get.
+[07:56] <olrrai> how to set xorg.conf to start session with 75hz (refresh rate) ?
+=== lysdexia [n=doug@74-141-20-124.dhcp.insightbb.com]  has joined #ubuntu
+[07:56] <pupi120290> !bootsplash
+[07:56] <ubotu> Sorry, I don't know anything about bootsplash - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+[07:56] <Jack_Sparrow> Mexel: Try some thrift shops... they show up here all the time or even craigs list
+[07:56] <pupi120290> !boot-splash
+[07:56] <ubotu> Sorry, I don't know anything about boot-splash - try searching on http://ubotu.ubuntu-nl.org/factoids.cgi
+=== vecnah [n=vecna@vecna.vecnix.net]  has joined #ubuntu
+[07:56] <Mexel> Jack_Sparrow: ok
+=== fredddy [n=freddy@p3E9E482D.dip0.t-ipconnect.de]  has joined #ubuntu
+=== tatters [n=test@ACC989A7.ipt.aol.com]  has left #ubuntu ["Kopete]
+[07:57] <pupi120290> hello^^ i have problem with my bootsplash. no bootsplash is shown. can anyone help me fix that?
+[07:57] <nathan_> anyone hiring computer related in seattle =] ?
+[07:57] <lysdexia> I'm having a bit of trouble configuring my atheros card as an ad-hoc network. (Fiesty)
+[07:57] <Mexel> brb
+[07:57] <hhp21> pupi120290: dpkg --configure -a freezes the computer. :S
+=== supamatt [n=matt@modemcable108.150-82-70.mc.videotron.ca]  has joined #ubuntu
+=== Bu1 [n=bulb@ip-160-218-169-62.eurotel.cz]  has left #ubuntu []
+=== stefano_ [n=stefano@i5387A9C0.versanet.de]  has joined #ubuntu
+[07:57] <lysdexia> I keep getting an "invalid argument" when I attempt to set the mode to ad-hoc with iwconfig
+=== no_gatez_fan [n=patrick@cpe-069-132-015-252.carolina.res.rr.com]  has joined #ubuntu
+[07:58] <some_ux> the help is quote  "This is *NOT* for people with new, blank hdds". I have new blank hdds
+=== vreer [n=vreer@vreer.net]  has joined #ubuntu
+=== AgreSor [n=Skorpija@agresor.ws]  has joined #ubuntu
+[07:58] <pupi120290> hhp21: oh... normally that works so now i dont now how to solve your problem
+[07:58] <DevideZero> how i can install wmv support for all the system ( all the players , and all the browsers ) ?
+[07:58] <hhp21> pupi120290: Doesn't seem anyone does :(
+=== IntuitiveNipple [n=TJ@alexandros.tjworld.net]  has joined #ubuntu
+[07:58] <Ward1983> lol i want to give Bu1 his answer adn he leaves haha
+=== Carroarmato0 [n=christop@31.164-245-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[07:58] <AgreSor> is there any posible way that I dont HAVE TO REBOOT system after Kernel Upgrade ?
+=== Carroarmato0 [n=christop@31.164-245-81.adsl-dyn.isp.belgacom.be]  has left #ubuntu []
+[07:58] <Ward1983> had the link ready and everything
+[07:58] <Mexel> Jack_Sparrow: Did you say you had a few jack?
+[07:58] <ticked> here i go Take2 for compiz-confusion woo hoo
+[07:58] <pupi120290> hhp21: same with me...
+[07:58] <some_ux> I found no help for people doing a clean install of ubuntu
+=== Leopard|AFK [n=Ted@a80-100-213-89.adsl.xs4all.nl]  has joined #ubuntu
+[07:58] <Jack_Sparrow> Mexel: YEs I have a couple..
+=== Carroarmato0 [n=christop@31.164-245-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+[07:58] <Mexel> Jack_Sparrow: I could buy off of you. xD
+=== savvas [i=forger@pdpc/supporter/base/savvas]  has joined #ubuntu
+=== x-spec-t [n=nwheeler@ubuntu/member/spec]  has joined #ubuntu
+[07:59] <Leopard|AFK> One question: What was the command (in your bash) to download a file?
+=== Uzume [n=Uzume@vbo91-2-82-239-206-15.fbx.proxad.net]  has joined #ubuntu
+[07:59] <savvas> what's ubuntu device database? do i have to reset it when I change my hardware?
+=== x-spec-t is now known as Spec
+[07:59] <Jack_Sparrow> Mexel: If you were local.. it wouldnt be a prob.. just hate to try things long distance.
+=== i3d [n=i3dmaste@unaffiliated/i3dmaster]  has joined #ubuntu
+[07:59] <Aviator> wget?
+[07:59] <Spidey_> wget
+[07:59] <Carroarmato0> Need some assistence with making an internal SD-card reader work
+[07:59] <Mexel> Jack_Sparrow: I'm in alabama
+[07:59] <ikonia> savvas: di bitgubg]
+[07:59] <ikonia> oops
+[07:59] <Jack_Sparrow> Calif
+[07:59] <stefano_> argh
+[07:59] <ikonia> savvas: do nothing
+[07:59] <stefano_> bler disconnect

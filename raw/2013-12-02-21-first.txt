@@ -1,0 +1,281 @@
+[20:21] <llutz> nsql: you should see the home-dir but not the contents with 750
+[20:22] <Badc0de> thanx Agd_Scorp
+[20:23] <nsql>  llutz, if I do ls /home/user, I can see all my files. I don,t know what I did wrong. what I did is to run 'chmod 750 $HOME' on the terminal,
+[20:23] <nsql> llutz, ls -al shows 'drwxr-x---' for the other accounts home directory
+[20:23] <llutz> nsql: you are "user"? sure you can see your own home then
+[20:24] <jhutchins> nsql: In order for you to see your own home directory, you need to be able to see the directories in /home/.  You should not be able to read the other users's directory or it's subdirectories.
+[20:25] <llutz> nsql: 'drwxr-x---' is 750. what are you trying to achieve?
+[20:25] <na36heno>  /exit
+[20:25] <nsql> llutz, I log in with the other user account and can still see other account,s home directory. do I need to reboot my pc?
+[20:25] <Hawkerz> sagotsky, which version of ubuntu is your system built on? lubuntu?
+[20:25] <llutz> nsql: you see the home-dirs but not the contents of other users home-dirs, right?
+[20:25] <seanz> Greetings, all. Anyone have any links to creating an Ubuntu packaging server?
+[20:25] <sagotsky> striaght up ubuntu.  I might have used server as the install media, but I can't remember.
+[20:25] <jhutchins> nsql: This is not Windows, the only reason to reboot is to either install a new kernel or check the root filesystem.
+[20:26] <jjavaholic> how might I diagnose why I can't send files to bluetooth devices?
+=== picca_ is now known as picca
+[20:28] <nsql> lltuzö jhutchins: let me try to explain it again, maybe I use wrong terminology. I have a user, say user1 and created a new user account called user2. on user1's command prompt I run 'chmod 750 $HOME' then logout and log in to user2. on user2's command prompt, when I run 'ls /home/user1' I can see the all directories, like /home/user1/Desktop and sub folders
+[20:29] <nsql> how can I prevent user2 to see any file, subdirectories under /home/user1 ?
+[20:29] <llutz> nsql: you shouldn't see the contents. what group owns /home/user1? and is user2 member of that group?
+[20:30] <Kartagis> nsql: chmod 700 /home/user1
+[20:30] <nsql> they are both administrative accounts
+[20:30] <nsql> I will try 700 now
+[20:31] <Hawkerz> sagotsky, can you show me your xmonad/xsession configs?
+[20:31] <llutz> nsql: "ls -ld /home/user1   && id user2"
+[20:31] <Hawkerz> sagotsky, just cat them over to pastebin again
+[20:31] <jhutchins> nsql: What does 'administrator account' mean in this context?
+[20:31] <sagotsky> Can do.
+[20:32] <knight221> Hello, Can someone recommand me on good code revision control for Ubuntu 10.04 LTS which have aslo windows clients?
+[20:33] <sagotsky> Hawkerz, http://paste.ubuntu.com/6511103/ that's xmonad, then .xsession, then ls from my .xsession.d.
+[20:33] <sagotsky> anything interesting in .xsession.d can be found in https://github.com/sagotsky/.dotfiles/tree/master/scripts
+[20:34] <sagotsky> I am deliberately killing notification-daemon and notify-osd.  Not sure if that could be related to the power manager segfaulting?
+[20:34] <rypervenche> knight221: git
+[20:34] <sagotsky> (I've been doing that for quite a while, so I don't think that's it, but it couldn't hurt to mention)
+[20:34] <renebarbosa> hey folks
+[20:35] <renebarbosa> someone here already watched it: www.youtube.com/watch?v=V5buFbuvWbk ?
+[20:35] <renebarbosa> ubuntu is being used in an awesome robotics project
+[20:35] <renebarbosa> :)
+[20:35] <rypervenche> knight221: https://www.atlassian.com/git/tutorial
+[20:35] <k1l> renebarbosa: that topic suits better into the offtopic channel: #ubuntu-offtopic we stick to technical support issues in here :)
+[20:36] <renebarbosa> k1l, okay
+[20:36] <jhutchins> nsql: The "execute" flag on a directory determines whether the directory listing can be read.  If a user is a member of a group that has x permissions then that user can list the contents.
+[20:37] <Hawkerz> sagotsky, https://gist.github.com/minhajuddin/2156485 <- this is an example I found (I don't really use xmonad, but I looked around a bit)
+[20:37] <jhutchins> nsql: Since there is no such thing as an "administrative account" in *nix, I'm presuming that you mean that they are in a group that has some special privileges.
+[20:37] <Hawkerz> sagotsky, it looks like you need to manually ensure that gnome-keyring-daemon, gnome-settings-daemon, and gnome-power-manager are all running (see the first file on that page)
+[20:38] <knight221> Does someone know if Ubuntu 10.04 LTS have a package for Perfoce server (https://apps.ubuntu.com/cat/applications/precise/perforce-version-management/)? if not does it possible to install it from the 12.04-13.10 package?
+[20:39] <sagotsky> Hawkerz, happy to give it a try.  I don't have a gnome-power-manager bin though.  Just reinstalled from apt.
+[20:40] <Hawkerz> sagotsky, the long and short of it though, is that power management, GSD, and gtk are not getting loaded
+[20:40] <Hawkerz> well, I'm not really sure if there is an equivalent or whatever
+[20:41] <sagotsky> That definitely gives me some stuff to try.  I'll see if I can figure out what replaces gnome-power-manager.  No change just running gnome-settings-daemon.
+[20:41] <kingplusplus> please how do know which partition my os is installed /dev/sb1 or 2
+[20:41] <sagotsky> Hawkerz, that was some fantastic support even if we didn't get to the bottom of it today.  I really appreciate it.
+[20:43] <Hawkerz> sagotsky, sure thing, there are a lot of random things being reported, but i mostly think it's power management
+[20:43] <Hawkerz> that was my first instinct
+[20:43] <Hawkerz> and googling seems to reaffirm it a bit anyway
+=== xubuntu is now known as Guest49079
+[20:43] <sagotsky> Cool
+[20:44] <sagotsky> That's dfeinitely something I can keep googling.  I don't often use this machine as a laptop so I haven't paid as much attention to power services as I should.
+[20:45] <Hawkerz> meh, power management sucks....I only ever get it to break things
+[20:45] <sagotsky> Heh
+[20:45] <kingplusplus> hello how can i delete stuff in my root?
+[20:46] <goose_> quit
+[20:46] <Hawkerz> sagotsky, the gist of what I saw online was that it could be any number of things from power management to graphics drivers to missing gtk2 libraries
+[20:47] <Hawkerz> evidently, 13.10 still has several known issues...have you used Mir at all?
+[20:47] <sagotsky> Interesting.  I was assuming it was something lower level than gtk2 since it was failing before I even got to X.
+[20:47] <sagotsky> Haven't tried it
+[20:47] <Hawkerz> oh, so you are trying to move away from gdm to x?
+[20:48] <sagotsky> I don't mind the login manager, I was just trying to rule out whether it was an xorg config problem
+[20:48] <mikodo> kingplusplus, in terminal <df -h>
+[20:48] <sagotsky> Not being able to type in ctrl-alt-f1 led me to believe the problem was happening outside of x
+[20:48] <Hawkerz> well, if you switched login managers that could easily be the cause
+[20:48] <sagotsky> haven't recently
+[20:49] <sagotsky> just restarted it a few times for debugging
+[20:49] <Hawkerz> sagotsky, but you were using GDM at some point and now you are not?
+[20:49] <sagotsky> I'm on lightdm right now
+[20:49] <Hawkerz> oh
+[20:49] <sagotsky> I think that's the default
+[20:49] <sagotsky> Not something I have strong opinions about so I don't pay it much attention
+[20:49] <Hawkerz> yes, it is...that's the important thing here
+[20:50] <sagotsky> ok
+[20:51] <Hawkerz> the login manager, if misconfigured, can break everything....
+[20:51] <sagotsky> it looks like I tried to tell it to autologin at some point
+[20:51] <sagotsky> my name is in there
+[20:51] <Hawkerz> it's only the USB keyboard that doesn't work, right? you can still ctrl+alt+f1 from the native keyboard?
+[20:51] <sagotsky> but I don't think that's ever worked
+[20:51] <sagotsky> correct
+[20:51] <FloodBot1> sagotsky: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+=== dziegler_off is now known as dziegler
+[20:52] <sagotsky> Hawkerz, the native keyboard works fine.  I haven't found anything it does wrong.  gnome-settings-daemon sometimes eats my xmodmap settings, but that's another matter.
+[20:54] <human_like> got the disk?
+[20:56] <sh0t> hi guys. I am trying to set up burpe suite to analyze som https traffic.vThe problem is that i cannot start it on the port 443 because it says the port is used already by some other serivece. I check with enstat but it doesn't say anything about the port 443.
+[20:56] <sh0t> How do i find out who is using that port?
+=== RTFM is now known as Guest66635
+[20:58] <llutz> sh0t: sudo lsof -i :443
+[20:58] <dissenter> I had a boyfriend once used to play the bongos on my ass
+[20:58] <Ilmen> I just converted my Ubuntu into EFI, and now boot-repair asks me "WinEFI detected. Do you want to activate [Backup and rename Windows EFI files]?"; what does this mean?
+[20:58] <dissenter> his name was Ubuntu
+[20:58] <dissenter> he was a black man black as the night
+[20:59] <niko> dissenter: if you continues to troll ...
+[20:59] <llutz> !ot | dissenter
+[20:59] <ubottu> dissenter: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[21:00] <sh0t> thanks llutz
+[21:01] <hatemachine1> hi all
+[21:01] <hatemachine1> hey, does anyone know if there is a stable version of ubuntu for MAC?
+=== dziegler is now known as dziegler_off
+[21:02] <Pricey> !mac
+[21:02] <ubottu> For help on installing and using Ubuntu on a mac, see: https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+[21:02] <geirha> sh0t: or sudo fuser -v 443/tcp
+[21:02] <sh0t> thanks geirha
+[21:03] <hatemachine1> thanks @pricey
+[21:03] <hatemachine1> !mac
+[21:03] <ubottu> For help on installing and using Ubuntu on a mac, see: https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+[21:06] <sh0t> mmm anyway if i run lsof or also fuser i don't findanything  on the port 443
+[21:06] <llormortis> *troll* https://fixubuntu.com/
+[21:06] <sh0t> but still burp says
+[21:06] <sh0t> to check whether some other serivce
+[21:06] <sh0t> is on that port
+[21:07] <Hawkerz> sagotsky, let me know if you have any luck...also dpkg -l | grep multiarch -- make sure you have the multiarch libs installed
+[21:11] <sagotsky> Hawkerz, will do.  TY again for all your t ime.  I have some stuff t o finish up today so it may not be till tomorrow till I can try everything
+[21:12] <aaronn23> !mac
+[21:12] <ubottu> For help on installing and using Ubuntu on a mac, see: https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+[21:12] <aaronn23> !pc
+[21:12] <lionprise> I am trying to install ubuntu Gnome, but it immediatly drops to busybox
+[21:13] <lionprise> the usb drive works on my laptop with UEFI, but not on my desktop with simple bios
+[21:15] <Hawkerz> sagotsky, as a final point, I don't actually think it's a problem with GTK, but I do think it is a problem with power management...still, hard to say
+=== Ajar is now known as Ajarm
+[21:16] <sagotsky> I think I agree.  I've had no noticeable errors from gtk - errors aside, everything runs smoothly and looks purty.  But there's a ton of power management stuff that doesn't work.  Like rebooting.
+[21:17] <juboba> how can I upgrade from 12.04 to 13.04 or 13.10? I'm running "update-manager -d" and it is offering 14.04.
+[21:17] <Sian> apt-get install ffmpeg asks me to install nvidia drivers when I do not own a nvidia card(obviously isntalling them means crashing at reboot), what can I do?some of the packages have xedgers in the name that most likely come from the zord-edgers ppa, but I already purged it, I even re-added it to purge it again but those packages keep appearing
+[21:18] <k1l> jubba: you need to update to 12.10 first.
+=== peter is now known as Guest80479
+[21:18] <k1l> jubba: set the release prompt to regular (from LTS). then it should say 12.10 for "update-manager"
+[21:18] <aebonyne> How do I get my computer to not shutdown when pressing the power button (I'd like it to either ask or sleep/hibernate)? Computer is a Surface Pro if it matters. I've disabled the settings to shutdown on power button press in the Gnome and XFCE power managers as well as in /etc/acpi/powerbtn.sh, which is as far as Googling the topic got me.
+[21:18] <juboba> k1l, how should I proceed?
+[21:19] <aebonyne> Sian: Installing drivers for hardware you don't have shouldn't cause problems...
+[21:19] <juboba> k1l, how do I change the release prompt?
+[21:19] <k1l> juboba: go to the systemsettings and then to updates and sources. then set the updates to regulear (3rd tab iirc)
+[21:19] <shanahan> are there any good alternatives to 'jockey-gtk'?  or the additional drivers window?  mine's a bit glitchy.
+[21:19] <Sian> aebonyne, but 1, it does, as it crashes my system at reboot. and 2, I have a 80GB hdd, I don't want to install more than necesary
+=== saliak_ is now known as saliak
+=== mickn_ is now known as mickn
+[21:20] <FloodBot1> !netsplit
+[21:20] <ubottu> netsplit is when two IRC servers of the same network (like freenode) disconnect from each other, so users on one server stop seeing users on the other. If this is happening now, just relax and enjoy the show. See http://en.wikipedia.org/wiki/Netsplit
+=== krankokat is now known as baordog_
+[21:21] <shanahan> woha
+[21:21] <Sian> not only that, but the other packages of the ppa aren't shown by my system, so nvidia drivers seem to be the only packages from there that are actually showing. NO idea why
+[21:21] <aebonyne> Sian: Saving space is a good reason. In general, you can avoid installing packages by postfixing their name with a minus sign in the apt-get install command: apt-get install ffmpeg nvidia-glx-
+[21:21] <juboba> k1l, would you recommend to upgrade to regular from LTS (this is my home computer, no server)
+[21:22] <aebonyne> Sian: If the package doesn't like that idea, it will show dependency errors.
+[21:22] <clynamen> I'm supposed to install watchdog kernel module or they are often already in the kernel ?
+[21:23] <Sian> aebonyne, it won't let me
+[21:23] <k1l> juboba: the non-lts are stable too.
+[21:23] <Sian> q
+[21:24] <Hawkerz> sagotsky, I think I know the problem
+[21:24] <sagotsky> Oh?
+[21:24] <juboba> k1l, ok so I have to 12.10 -> 13.04 -> 13.10 to get there?
+[21:24] <Hawkerz> sagotsky, I think you are encountering an error with ureadahead (if /var or /run are on their own partitions)
+[21:25] <Hawkerz> this thread seems to have some useful info on that: http://ubuntuforums.org/showthread.php?t=1423305
+[21:25] <Eagleman> Which ports need to be open to be able to connect to a NFS server?
+[21:25] <aebonyne> Sian: Odd. If you removed the repository and have updated since then... maybe try a clean so previously downloaded packages are gone, too? Really, I'm out of ideas.
+[21:26] <sagotsky> that's definitely a new one for me
+[21:26] <aebonyne> Sian: That's apt-get clean, deleted all downloaded packages. Saves space and forces apt to redownload packages, perhaps in your case from the right repository.
+[21:26] <Hawkerz> sagotsky, check the output of mount
+[21:26] <Sian> aebonyne, autoclean says there are 0 bytes to be freed
+[21:27] <Sian> aebonyne, it just ocurred to me, maybe is another ppa using zorg edgers packages?
+[21:28] <Eagleman> Which ports need to be open to be able to connect to a NFS server?
+[21:28] <aebonyne> clean deletes more stuff than autoclean, although it shouldn't actually affect whether stuff works.
+[21:28] <sagotsky> Hawkerz, here's mount http://paste.ubuntu.com/6511323/
+[21:29] <aebonyne> Possible, I was trying to see if there's a way to check what repo an archive comes from, but apt-cache show doesn't tell you.
+[21:30] <Hawkerz> sagotsky, looks like you're suffering from a problem with ureadahead, which runs during boot to speed up the boot process (but when /var is mounted on its own partition, apparently this breaks in some circumstances)
+[21:31] <sagotsky> Seems likely.  How exactly did you find that?  I would have reinstalled long before reaching that point.
+=== vladimir is now known as SerGiles
+[21:32] <aebonyne> Sian: Ah, apt-cache showpkg ffmpeg will tell you where it's getting the ffmpeg package from.
+[21:33] <SerGiles> hello, I have an issue with unity side bar, that is to say I cant scroll it with my mouse wheel in 13.10 like I could in 12.04. Is there a fix for this?
+[21:36] <Sian> aebonyne, this is what I get http://paste.ubuntu.com/6511357/, I am either looking at the wrong place or it's using official ubuntu repo
+[21:38] <odium> anyone familiar with the ubuntu 11.10 bug that arbritrarily ruins luks partitions?
+[21:38] <bekks> odium: 11.10 is out of support already.
+[21:38] <juboba> k1l, ok so I have to 12.10 -> 13.04 -> 13.10 to get there?
+[21:38] <Beldar> odium, Is this relevant in a supported release?
+[21:38] <odium> oh, I am running 13.10
+[21:39] <odium> but still lost my data
+[21:39] <odium> I stopped mounting this entier drive while I worked on a new ssd
+[21:39] <aebonyne> Sian: The top option is a PPA.
+[21:39] <Beldar> odium, Are you sure it was not user error, are you linking these loosely is the question?
+[21:39] <odium> and when I went back to mount it again, using time tested methods it is no longer a valid luks partition
+[21:39] <odium> I am not 100%
+[21:40] <odium> but it's either this that or the nsa
+[21:40] <odium> so I backed up the 1TB drive
+[21:40] <odium> but I am at a loss for recovering this one.
+[21:40] <Beldar> odium, Or user error be being backed up is the best answer in ythe end.
+[21:40] <aebonyne> Sian: "ppa.launchpad.net_rebuntu16_pcsx-reloaded-svn". The ffmpeg from the PPA is apparently depending on packages you don't want?
+[21:41] <odium> too bad the disk was full.
+[21:41] <aebonyne> ... probably indirectly because nothing there mentions nvidia.
+[21:41] <Beldar> odium, You can clone anything including encrypted partitions as long as you have the key file to get back in.
+[21:41] <odium> If I have other volumes with identical headers can I try to back up one of them and then apply their header to the disabled volume?
+[21:41] <Sian> aebonyne, the packages I don't want are the nvidia drivers. Well i'll have to use the normal pscx to aovid this
+[21:42] <Sian> thanks
+[21:42] <odium> Beldar, I have the key file and know the 20 digit password by heart
+[21:42] <aebonyne> Sian: Glad I was able to be somewhat helpful. gtg, bye
+[21:42] <odium> but I've googled and googled for an instructional.
+[21:42] <Hawkerz> sagotsky, I saw a weird error in one of your logs, right around the same place your usb stuff disconnected
+[21:42] <Beldar> odium, but do you have a clone/copy if it?
+[21:42] <odium> I used dd to make an image
+[21:43] <odium> what's a clone?
+[21:43] <Hawkerz> or connected, rather
+[21:43] <Beldar> odium, clone is a standard term it means what it means.
+[21:43] <odium> i copied just the partition to one image and the entire disk to another.
+[21:44] <Beldar> odium, All with dd?
+[21:44] <odium> yes
+[21:45] <odium> I want my movies back. :(
+[21:45] <Beldar> odium, Not sure to be honest any copying can have mistakes, dd is problematic if it does not save the original but just transfers it, if there is a mistake.
+[21:45] <nwzqqwr> rapbrain
+[21:46] <Beldar> odium, Best circumstances are a copy that can be confirmed to be good before the loss of the original.
+=== HeathHayle is now known as break613
+[21:47] <odium> Well, I understand the risk..
+[21:47] <odium> it's just 1TB of movies.
+[21:47] <kevin> what risk is that?
+=== kevin is now known as Guest35688
+[21:47] <odium> next time I will attempt to backup my stuff.
+[21:48] <odium> at the time, I didn't have enough space to backup a TB
+[21:48] <Beldar> Guest35688, What is your question referencing?
+[21:48] <Jordan_U> odium: Backing up the LUKS header is also usually a good idea.
+[21:48] <Guest35688> Guest35688 works just fine for me
+[21:48] <nwzqqwr> trying windowsXP
+[21:48] <odium> Jordan_U there is a backup
+[21:49] <odium> it's somewhere in /etc/ I think
+[21:49] <nwzqqwr> need audio software
+[21:49] <odium> just can't locate it again.
+[21:49] <aaronn23> hello guys. how does ubuntu works on mac?
+[21:49] <Guest35688> I was reference the first chat room sentence I logged in on
+[21:49] <Beldar> Guest35688, You are not including any context, please do so.
+[21:49] <nwzqqwr> rapbrains
+=== break613 is now known as HeathHayle
+[21:50] <xangua> !mac | aaronn23
+[21:50] <neighborlyfriend> how do I ssh into a local host server.  password was setup. Wouldn't ssh username@localhost work.  or is it ssh user@127.0.0.1:22    and is the :22 necessary?
+[21:50] <ubottu> aaronn23: For help on installing and using Ubuntu on a mac, see: https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+[21:50] <Jordan_U> odium: How did you backup the LUKS header?
+[21:50] <Beldar> and don't just randomly comment with knowledge of context Guest35688
+[21:50] <odium> uhh, I can't answer that.
+[21:50] <nwzqqwr> sh has to be the same version
+[21:50] <nwzqqwr> recompile from scratch
+[21:50] <Beldar> without*
+[21:51] <Jordan_U> odium: Why not?
+[21:51] <aaronn23> thank you @xangua @ubottu
+[21:51] <nwzqqwr> chech in to google check-in and "get da hook-up"
+[21:51] <Guest35688> I'm trying to setup Gnome-Dictionary so that I can use it offline
+[21:51] <Guest35688> any takers on that?
+[21:51] <odium> Jordan_U I don't remember doing it.
+[21:51] <odium> it's in /etc/lvm/archive I think
+[21:51] <nwzqqwr> did sacha conan baron get a shotgun to the head?
+[21:51] <odium> oh, that's not a header after all.
+[21:51] <Guest35688> That would be a good iea
+[21:51] <Guest35688> idea*
+[21:52] <SkyCaptain> Hey chan, I like the way Nautilus automatically mounts my external hard drives when I click on them. This is the only feature that still requires me to start up X on my server. Is there any way to maintain this same functionality without starting X and Nautilus?
+[21:52] <Beldar> !ot | nwzqqwr
+[21:52] <odium> sorry, Jordan_U that's just lvm data
+[21:52] <ubottu> nwzqqwr: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[21:52] <nwzqqwr> aarti
+[21:52] <jhutchins> SkyCaptain: Perhaps autofs would do what you're after.
+[21:53] <neighborlyfriend> what's the proper way to ssh into localhost. password was setup.
+[21:53] <nwzqqwr> ato everything
+[21:53] <nwzqqwr> auto everything
+[21:53] <nwzqqwr> cpuDan
+[21:53] <nwzqqwr> its all auto
+[21:53] <xangua> Guest35688: Stardic can do that, it can even store wiki articles if I remember; haven't used it in a long time
+[21:53] <SkyCaptain> hmm, I will look into that. Is it simple to just add fstab entries for every attached drive?
+[21:54] <Jordan_U> SkyCaptain: udisksctl mount --block-device  /dev/foo
+[21:54] <nwzqqwr> who is we?
+[21:54] <nwzqqwr> or who is controlling the netBSD algrithms
+[21:54] <neighborlyfriend> help. how do I ssh into local host properly with password?
+[21:55] <Jordan_U> neighborlyfriend: Why are you trying to ssh into localhost? "ssh username@localhos" should do it, but still why?
+[21:55] <nwzqqwr> Oldcoder
+[21:56] <neighborlyfriend> running debian on android non chroot along side openssh setup
+[21:57] <ikonia> neighborlyfriend: how is that anything to do with ubuntu ?
+[21:58] <NHR9K> i have nearly converted all of my family to linux but the last link is my uncle he is in love with win8 metro ui, is there a dm/de that will break his attachment to windoze?
+[21:58] <ikonia> NHR9K: it's called "windows"
+[21:59] <mrwappie> sup
+[21:59] <neighborlyfriend> i though it would all be debian right. ubuntu based on debian. it's a general terminal question on most linux's i figure.
+[21:59] <ikonia> neighborlyfriend: try #debian
+=== captain_ is now known as captainfixerpc14
+[21:59] <ikonia> neighborlyfriend: we only deal with ubuntu here, sorry
+[21:59] <neighborlyfriend> is there a bash irc

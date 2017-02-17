@@ -1,0 +1,7 @@
+../../guide.txt tmp-file 0 0
+../../raw/2011-08-17-08-first.txt 2011-08-17-08-first.txt.annotated.jkk 101 0
+../../raw/2013-08-30-11-first.txt 2013-08-30-11-first.txt.annotated.jkk 101 0
+../../raw/2013-07-10-23-first.txt 2013-07-10-23-first.txt.annotated.jkk 101 0
+../../raw/2013-10-11-07-first.txt 2013-10-11-07-first.txt.annotated.jkk 101 0
+../../raw/2013-01-11-13-first.txt 2013-01-11-13-first.txt.annotated.jkk 101 0
+../../raw/2013-10-04-12-first.txt 2013-10-04-12-first.txt.annotated.jkk 101 0

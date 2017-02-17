@@ -1,0 +1,384 @@
+[13:26] <sidd_mak> Myrtti : no only image but all kind of files
+[13:27] <llutz_> sidd_mak: photorec recovers more than photos, just a confusing name
+[13:27] <fishcooker> fahim are you alrite
+[13:27] <Myrtti> sidd_mak: yes, it might help. I cant remember if it can recover any files
+[13:28] <BluesKaj> Howdy all
+[13:29] <fahim> fishcooker nice to meet you. I'm very new here.
+[13:29] <sidd_mak> Myrtti xyzone llutz_ : thanks guys....
+[13:29] <phix> who else lkes robert kirkman's work on ubuntu?
+[13:29] <fahim> but not a very new ubuntu user.
+[13:30] <fishcooker> i dont think so fahim
+[13:31] <regf> sidd_mak: photorec is for recovering files from any filesystem, I don't know if it uses any FS information besides free space ; if you just want FAT undelete, testdisk may be a better option
+[13:31] <fahim> what do you think? fishcooker
+[13:31] <regf> sidd_mak: there is undelete option in advanced menu
+[13:34] <fahim> fishcooker are you there?
+[13:34] <fishcooker> yes
+[13:35] <knoppix> i have 3g  usb modem,  how unmount 3g modem cd driver
+[13:35] <deffrag> Hi! I'm using IDE/SATA to USB adapter which uses external power supply like - http://www.ebay.com/itm/USB-TO-IDE-SATA-S-SATA-Converter-CABLE-Adaptor-w-POWER-/220764567409? - I've connected 750GB HDD to the adapter but I'm not able to get it working on Ubuntu 12.04. dmesg, lsusb, fdisk -l logs: http://paste.ubuntu.com/1399099/ . How can I fix it please?
+[13:35] <Slart> knoppix: if it's a kernel driver you might be able to unload it using modprobe
+[13:36] <media-centre_> well i got it to execute
+[13:36] <media-centre_> but it still aint making the webcam load up
+[13:36] <llutz_> deffrag: according to your logs, it is detected. sudo mount /dev/sdb1 /mnt
+[13:37] <knoppix> Slart, ok . thank you.
+[13:37] <deffrag> llutz, Hi, I can see its detected and I tried that command but it asked for proper filesystem. I ran blkid and then gparted to get proper filesystem but it didn't help
+[13:38] <llutz_> deffrag: sudo fsck /dev/sdb1
+[13:38] <xyzone> deffrag, http://ubuntuforums.org/showthread.php?t=966321&page=2
+[13:39] <regf> deffrag: don't do any fsck!
+[13:39] <regf> deffrag: the disk isn't detected properly!
+[13:39] <deffrag> llutz, Forgot to give blkid log - http://paste.ubuntu.com/1399106/ . Why is there a need to check and repair fs using fsck?
+[13:40] <deffrag> regf, I haven't yet
+[13:40] <regf> deffrag: your USB interface is lying
+[13:40] <regf> deffrag: it says the disk has 4K logical sector size, while it should be 512 bytes
+[13:41] <deffrag> xyzone, Thanks, I'll go through that. regf : How so?
+[13:41] <fishcooker> i wanto mounting spesific partition
+[13:41] <fishcooker> as home
+[13:41] <fishcooker> rather than using single partition
+[13:41] <regf> deffrag: I don't know if there is any way to override it
+[13:41] <fishcooker> should i rsync /home folder manually to the new partition
+[13:44] <regf> deffrag: I guess you could modify partition table to fit if your partitions were 4k aligned, but they are not
+[13:44] <deffrag> regf, Possible. I tried another 2.5" HDD and it worked easily opening the file manager
+[13:44] <MonkeyDust> media-centre_ did the chmod trick help?
+[13:45] <deffrag> regf, I'm not sure what could have caused that issue to 750GB drive
+[13:45] <deffrag> It was working fine and is used as booting device on the desktop machine
+[13:46] <deffrag> booted fine on desktop in past, I mean
+[13:46] <oddie> is there a fix for the left menu bar to appear when in auto hide? I can press super and it appears, If I take off autohide it is fine?.. as soon as I click on hide through compiz-settings-manager it hides and mouse wont release it back. Any help?
+[13:47] <regf> deffrag: older hard drives may be detected properly by your USB adapter, never drives - 512k logical / 4k physical may be mangled to 4k logical / 4k phys.
+[13:47] <deffrag> llutz, regf : Sorry I forgot to mention that the /home on it is encrypted... is that causing the issue/
+[13:48] <regf> deffrag: your USB adapter is probably lying intentionally, they do it to make bigger drives than 2TB work on Windows
+[13:48] <deffrag> regf, Both the drive 2.5" are newer
+[13:48] <regf> deffrag: it's a trick to make 2TB+ drives accessible with msdos partition table
+[13:48] <deffrag> And the adapter is working fine for another new 2.5" drive
+[13:48] <deffrag> well
+[13:49] <Walther> Is the nvidia-experimental-310 going to be repackaged any time soon? It does not provide nvidia-current, causing bumblebee to uninstall
+[13:49] <regf> deffrag: it's probably working fine for drives with 512k log. / 512 k phys. sector size
+[13:49] <regf> deffrag: and it's probably lying for 512k log / 4 k phys
+[13:50] <regf> deffrag: either connect the drive directly without the USB adapter, or buy an adapter which doesn't mangle sector sizes
+[13:50] <deffrag> regf, sector size detected for first is 4096bytes and second working one is 512bytes
+[13:51] <Walther> !package nvidia-experimental-310
+[13:51] <deffrag> Okay
+[13:51] <phix> The plot thickens
+[13:51] <ActionParsnip> !info nvidia-experimental-310 | Walther
+[13:51] <ubottu> Walther: Package nvidia-experimental-310 does not exist in quantal
+[13:51] <regf> deffrag: yep, that's what I thought
+[13:51] <deffrag> regf, I'll try connecting it directly to laptop
+[13:51] <Walther> Ehh?
+[13:51] <subdesign> hey, can i combine Krusader splitted large file with windows Total Commander ?
+[13:51] <Walther> Anyway, who is maintaining that package?
+[13:51] <reels> Hi, sscanf() seems buggy in ubuntu LTS (10.04, 12.04). Test program works well on other systems apparently : http://ideone.com/bKiiwY  . Any idea why ? Thanks.
+[13:52] <Walther> It needs a rebuild; it doesn't provide 'nvidia-current', causing a big issue with bumblebee
+[13:52] <ActionParsnip> Walther: try http://packages.ubuntu.com
+[13:52] <deffrag> regf, Can encryption report wrong sector size to protect or something?
+[13:53] <llutz_> Walther: apt-cache show nvidia-current|grep -i maint
+[13:53] <media-centre_> what i cant understand is why of all the webcams does that one decide to not work
+[13:53] <media-centre_> i mean is it loyal to microshit
+[13:54] <xyzone> media-centre, because no drivers
+[13:54] <media-centre_> oh their are drivers
+[13:54] <ikonia> media-centre_: drop the language/attitude
+[13:54] <media-centre_> their just just for older kernals
+[13:54] <media-centre_> mind you thats an idea
+[13:55] <regf> deffrag: don't confuse encryption block with hard drive sector size
+[13:55] <media-centre_> cos im sure their are .so files in the drivers that ican just pick one of them to get it working
+[13:55] <phix> ikonia: drop the authoriterianess
+[13:55] <Ho> Join Server For Free CC /server IRC.Blackirc.org IRC.BLACKIRC.ORG
+[13:55] <Ho> Join Server For Free CC /server IRC.Blackirc.org IRC.BLACKIRC.ORG
+[13:55] <Ho> Join Server For Free CC /server IRC.Blackirc.org IRC.BLACKIRC.ORG
+[13:55] <regf> deffrag: two independent things
+[13:55] <FloodBot1> Ho: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[13:55] <phix> ho no
+[13:56] <deffrag> regf, do you mind if I pm you on the same?
+[13:57] <deffrag> Thanks
+[13:57] <ikonia> phix: the language is unacceptable,
+[13:58] <phix> ikonia: If you get offended by language you may as well not speak to anyone
+[13:58] <ikonia> phix: the channel has rules on offensive language, then include no cursing, that's why he was pulled up on it
+[13:59] <phix> ikonia: I wasn't offended
+[13:59] <ikonia> phix: it's not "my" rules, it's the channels, you're welcome to request discussion on it through the operators team
+[13:59] <phix> ok, lets discuss
+[13:59] <ikonia> phix: it doesn't matter if you are offended or not in that respect, the channels rules are no cursing, if you are not happy with those rules a.) raise it as a concern to the operators team b.) don't use the channel
+[13:59] <phix> ikonia: I prefer a over b
+[13:59] <phix> I like using this channel
+[13:59] <ikonia> phix: I'll pm you the email address of the ubuntu IRC council and you can send you concerns to them
+[13:59] <ikonia> phix: great, b is a bad option
+[14:00] <OerHeks> phix, stop it please.
+[14:00] <ikonia> phix: I'll pm you the email address to send your complaint
+[14:00] <phix> I Just dont like the idiotic rules that people apply to this channel
+[14:00] <phix> ikonia: thank you
+[14:00] <phix> OerHeks: ikonia and I are just discussing that
+[14:00] <phix> Quix0te: your input isnt required
+[14:00] <ikonia> and now it's done
+[14:01] <phix> OerHeks: even, sorry Quix0te, tab complete fail
+[14:01] <phix> awesome, much appreciated
+[14:01] <phix> in the mean time, any one need some ubuntu help?  I have 10 yrs of IT experience up my belt
+[14:02] <ActionParsnip> phix: 10 years of Ubuntu as well?
+[14:02]  * BluesKaj can't wait to see this :)
+=== notprawn is now known as prawnsalad
+[14:02] <phix> ActionParsnip: nope, 10 years of linux, redhat, mandrake, slackware, debian then ubuntu about 5 years ago
+[14:02] <Pici> !offtopic
+[14:02] <ubottu> #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[14:03] <rymate1234> lol
+=== regf_ is now known as regf
+[14:03] <ActionParsnip> phix: hehe mandrake, I started on mandrake :)
+[14:03] <worm> Does anyone know how to install skype on my x86_64 12.10 Ubuntu? apt-get shows that skype is not available.
+[14:03] <phix> ActionParsnip: I Only liked enlightenment in Mandrake
+[14:03] <OerHeks> worm, enable partner repo
+[14:03] <ActionParsnip> worm: grab the 64bit deb from skype's website
+[14:03] <ikonia> !skype | worm
+[14:03] <ubottu> worm: To install Skype on Ubuntu, see https://help.ubuntu.com/community/Skype - To record on Skype, check: https://wiki.ubuntu.com/SkypeRecordingHowto - Please use open protocols instead if you can, see !Ekiga
+[14:04] <xyzone> I started on ubuntu 5.10
+[14:04] <worm> Thanks a lot.
+[14:04] <phix> I started with a woody
+[14:04] <ActionParsnip> worm: wget -O skype_Ubuntu-current_amd64.deb http://www.skype.com/go/getskype-linux-beta-ubuntu-64
+[14:04] <phix> debian that is
+[14:05] <ActionParsnip> worm: sudo dpkg -i ./skype_Ubuntu-current_amd64.deb; sudo apt-get -f install
+[14:05] <phix> why use skype for?
+[14:05] <worm> ActionParsnip: I see. I'll try that.
+[14:05] <ActionParsnip> phix: chat to other skype users
+[14:05] <phix> skype is a service, asterisk is a full package
+[14:05] <phix> use asteriak
+[14:05] <phix> it is ubuntu too
+[14:05] <phix> skype is out of topic
+[14:05] <ActionParsnip> phix: to chat to skype users using voice?
+[14:06] <xyzone> I wonder why the 32-bit is still recommended
+[14:06] <phix> ActionParsnip: out of topic
+[14:06] <Pici> phix: stop it
+[14:06] <ActionParsnip> phix: its in the official ubuntu partner repo, so is supported
+[14:06] <phix> Pici: ? who are you?
+[14:06] <phix> ActionParsnip: nah asterisk is supported more though
+[14:06] <phix> by ubuntu and debian
+[14:06] <ikonia> phix: drop it please.
+[14:06] <ikonia> you're causing a problem
+[14:07] <Pici> phix: You're misleading users, and annoying the helpers.
+[14:07] <phix> ikonia: I am not causing a problem
+[14:07] <phix> I am a helper
+[14:07] <phix> Pici: I am helping
+[14:07] <ikonia> you're not helping, please slow down and think about what you are saying
+[14:07] <phix> ikonia: I am, asterisk is the full package, skype is just a service
+[14:07] <xDesu> I just hope whoever doesn't get the multiarch issue with x64 I experienced on 12.10.
+[14:07] <phix> you have no source control with skype
+[14:07] <ikonia> phix: yes, he ants to use skype
+[14:07] <phix> you do with asterisk
+[14:07] <ikonia> it's supported
+[14:08] <ikonia> you can offer suggestions for other packages, but please, don't make things up
+[14:08] <ActionParsnip> xDesu: in what package?
+[14:08] <phix> ikonia: hmmmm
+=== Zorro is now known as Guest17861
+[14:08] <phix> ikonia: I am making things up?
+[14:08] <xDesu> ActionParsnip, it was an issue with multiarch not being enabled on my system by default so I couldn't install skype.
+[14:08] <phix> ikonia: it is true though
+[14:08] <ActionParsnip> phix: this channel supports packages from teh official ubuntu repos. The partner repor IS an official repo, its just disabled by default
+[14:08] <ikonia> phix: when you said skype is "off topic"
+[14:09] <ActionParsnip> phix: as skype is in that repo, it is supported here. Clear enough?
+[14:09] <Guest17861> Hello
+[14:09] <xDesu> Guest17861, hi there.
+[14:09] <phix> ActionParsnip: ok it is supported, I am not arguing that, I am arguing that asterisk is the better choice, it is also supported and in the repo
+[14:10] <ActionParsnip> xDesu: if use 64bit in newer releases, it is enabled by default, your OS should puul in 32bit deps to satisfy thet deps
+[14:10] <Guest17861> how are you xdesu
+[14:10] <xDesu> Guest17861, you may want to change your name(if you don't know how "/nick <name>
+[14:10] <phix> ikonia: ah ok
+[14:10] <phix> ikonia: well ActionParsnip argued / debated another point
+[14:10] <ActionParsnip> phix: that's fine, but saying 'skype is out of topic' is incorrect, isn't it?
+[14:10] <Guest17861> Ace
+[14:10] <phix> ikonia: I agree now it is supported, I just looked it up :)
+[14:10] <xDesu> ActionParsnip, it wasn't enabled on my copy of 12.10, but don't worry I have long since resolved the issue.
+[14:10] <phix> ActionParsnip: yes, but it isn't the best choice
+[14:11] <ikonia> that's debatable
+[14:11] <ikonia> it's personal opnion
+[14:11] <ikonia> opinion
+[14:11] <ActionParsnip> xDesu: if you use apt-get it should work ok. aptitude doesn't play taht way
+[14:11] <phix> asterisk is far superior
+[14:11] <xDesu> ActionParsnip, I had to run
+[14:11] <ActionParsnip> phix: that's not the issue at hand. You said it's "out of topic", which is wrong. Isn't it
+[14:11] <phix> ikonia: really? is it a personal opionion that you can use asterisk as a full blown PBX? and have access to the source?
+[14:11] <ActionParsnip> phix: if it's ontopic, why say it's not?
+[14:12] <ikonia> phix: please stop now, I'm getting board
+[14:12] <Guest17861> can you speak german xdesu
+[14:12] <phix> ActionParsnip: I thought it wasnt as skype is very commerial
+[14:12] <ikonia> phix: the user wanted to connect to skype - he wanted the skype clients
+[14:12] <xDesu> ActionParsnip, I had to run "dpkg --add-architecture i386 && apt-get install ia32-libs" the issue has already been resolved though so don't worry about it.
+[14:12] <Pici> phix: asterisk is not a replacement for skype for someone who wants to chat to skype users.
+[14:12] <phix> ActionParsnip: I forget that ubuntu doesnt have the same values as debian
+[14:13] <Guest17861> Bye bye
+[14:13] <xDesu> Guest17861 #ubuntu-de
+[14:13] <Walther> ActionParsnip: created a bug about it https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-experimental-310/+bug/1085044
+[14:13] <ubottu> Launchpad bug 1085044 in nvidia-graphics-drivers-experimental-310 (Ubuntu) "nvidia-experimental-310 does not provide nvidia-current" [Undecided,New]
+[14:14] <ActionParsnip> Walther: good start :)
+[14:15] <xDesu> ActionParsnip, you seem to be in here quite a lot.
+[14:15] <ActionParsnip> xDesu: kinda :)
+=== zomGreg_ is now known as zomGreg
+[14:16] <xDesu> I hope to learn much from you master.
+[14:16] <ActionParsnip> xDesu: as you use the OS, you'll learn :)
+[14:17] <Tex_Nick>
+[14:17] <xDesu> I've already learned tons in my single year of actually using ubuntu(though I'm not on Debian for my laptop), but yea. Learn loads from other people's issues here.
+[14:17] <xDesu> I meant to say I am on Debian...
+[14:17] <ActionParsnip> xDesu: straight up
+[14:18] <xDesu> Straight up?
+[14:18] <ActionParsnip> xDesu: yes / I agree
+[14:18] <xDesu> Ahh, sorry the unexpected usage of "straight up" caught me a bit offguard.
+[14:22] <MadEchidna> Hey any X11 wizards here? I was using Ubuntu 11.10 32 bit and then a friend of mine talked me in to install 64 bit instead and it's been nothing but headaches
+[14:22] <MadEchidna> On a clean install, installing the AMD video driver from the software sources applet, without any special ppas or anything, didn't work
+[14:23] <MadEchidna> I was able to get it working after fudging around with x11 edgers for a few days, but yesterday I got a kernel update and no matter what I try I can't get the damn thing to work
+[14:23] <MadEchidna> I keep getting this error over and over
+[14:23] <MadEchidna> ERROR (dkms apport): kernel package linux-headers-3.7.0-4-generic is not supported
+[14:23] <MadEchidna> Error! Bad return status for module build on kernel: 3.7.0-4-generic (x86_64)
+[14:23] <khufu> are you sure it is a 64bit package?
+[14:24] <MadEchidna> khufu, what do you mean?
+[14:24] <khufu> well the linux-headers
+[14:24] <MadEchidna> I'm just install it like normal with apt, I didn't download a deb somewhere
+[14:24] <MadEchidna> how do I check?
+[14:24] <ActionParsnip> MadEchidna: ask in #ubuntu+1 for raring support
+[14:24] <MadEchidna> ?
+[14:24] <ActionParsnip> MadEchidna: 3.7 is the raring kernel
+[14:25] <Ace> guest17861
+[14:27] <MadEchidna> I meant 12.10 ActionParsnip
+[14:27] <MadEchidna> I don't know if that's the right channel
+[14:27] <jrib> MadEchidna: you need to explain where that kernel is coming from then
+[14:27] <Pici> MadEchidna: what does apt-cache policy linux-headers-3.7.0-4-generic say?
+[14:27] <Siebjee> Hi guys, i am having some issues with changing the default ulimit settings. Normally you add * - nofile 65535 to /ect/security/limits.conf and when you ssh to the server your openfiles (ulimit -n) will be at 65535. But for some reason i have to manually change it with ulimit -n 65535 in order to get the limit settings i want on my server. Is there a other way to achive this ?
+[14:28] <jrib> Siebjee: I think something needs to be added to pam, one sec
+[14:28] <MadEchidna> Pici, http://pastebin.ca/2258650
+[14:28] <MadEchidna> jrib, the default repos? I purged the PPAs I had
+[14:29] <Siebjee> jrib, i already added 'session require pam_limits.so' to the /etc/pam.d/common-session
+[14:30] <jrib> Siebjee: that should work afaik assuming you've defined the limits correctly
+[14:30] <RickZilla> I'm using a persistent Live USB of ubuntu 12.10. If I go ahead and install it to my HD, will it keep those settings that I've already made, or will it just be a fresh install?
+[14:30] <Pici> MadEchidna: That output says that you installed it from somewhere other than the default repos.  It looks like you disabled whatever source you installed it from.
+[14:31] <MadEchidna> Pici, okay so how do I go back to the default kernel?
+[14:31] <Siebjee> jrib, that didn't work for me. I used Ƽ* - nofile 65535' and '<username> - nofile 65535' both are not working
+[14:31] <MadEchidna> when I look at the 3.7 package in synaptic it even says "Ubuntu Kernel Team", I don't get where this would have just "come from"
+[14:31] <ikonia> MadEchidna: didn't you say you had the edgers repo
+[14:32] <ikonia> xorg-edger ?
+[14:32] <MadEchidna> I did, and then I ran a ppa-purge
+[14:32] <ikonia> right, so that's why the kernel is still there
+[14:32] <MadEchidna> I thought that ppa-purge took care of that
+[14:32] <MadEchidna> so do I just uninstall the package?
+[14:32] <jrib> Siebjee: let me try here
+[14:32] <ikonia> how can it, the kernel is runing and inuse
+[14:32] <Pici> MadEchidna: The safest way is to reboot to an older kernel and then remove that package.
+[14:32] <MadEchidna> oh
+[14:32] <MadEchidna> okay brb
+[14:34] <Kartagis> what package does it take to install KDE? kdebase-bin?
+[14:34] <jrib> Siebjee: actually my /etc/pam.d/sshd seems to already contain pam_limits by default
+[14:35] <ikonia> Kartagis: isn't that the package ?
+[14:35] <Siebjee> jrib: so does mine, but why isn't it working ?
+[14:35] <xDesu> Kartagis, if you just install kde that should automatically try to satisfy depndencies.
+[14:36] <RickZilla> I'm using a persistent Live USB of ubuntu 12.10. If I go ahead and install it to my HD, will it keep those settings that I've already made, or will it just be a fresh install?
+[14:36] <takitez> Kartagis: you want the full set? install kubuntu-desktop   or kde-plasma-desktop for basic kde
+[14:37] <Netfeed> is it possible to "upgrade sideways" from linux mint to ubuntu?
+[14:37] <ActionParsnip> RickZilla: fresh
+[14:37] <ActionParsnip> Netfeed: you'll need a reinstall
+[14:37] <Netfeed> bummer
+[14:37] <RickZilla> ActionParsnip: Thanks, is there a way to install otherwise?
+[14:37] <jrib> Siebjee: works fine for me, all I did was add "*               -    nofile            65535" to my /etc/security/limits.conf and then "ssh localhost".  Maybe pastebin your /etc/security/limits.conf?  I didn't even touch anything in /etc/pam.d/
+[14:37] <ActionParsnip> RickZilla: you could copy the contents of $HOME to an external storage and copy the data over once you get logged in
+[14:38] <DJones> Netfeed: Only by a fresh install, I'd backup /home and do a fresh install and then transfer the backup to the new install
+[14:38] <RickZilla> ActionParsnip: I'll look into that. Thanks for the support
+[14:38] <Netfeed> alright, i hoped it was possible as they use the same base, ah well, i've got something to do this weekend then
+[14:38] <dsa> hello
+[14:39] <Siebjee> jrib: http://pastebin.com/NBPskses there is my limits.conf
+[14:39] <RickZilla> Netfeed: I'm going back to ubuntu from LM also
+[14:39] <jrib> Siebjee: seems fine.  Are both changes being ignored?
+[14:39] <Siebjee> Yes
+[14:40] <Netfeed> RickZilla: same "problem"? :)
+[14:40] <jrib> Siebjee: you're sure there's nothing in your user's startup scripts changing the ulimit?
+[14:41] <RickZilla> Netfeed: LM just acts too much like Windows, and I already have that...when I need Linux, I like the ubuntu experience a little more
+[14:41] <Siebjee> jrib: only for the root user the ulimit is beeing changed as a temporary fix. But not for any other user. Only to check if they are correct or not and printing a message when they are not correct
+[14:41] <jrib> Siebjee: what ubuntu version?
+=== Upasna is now known as sweet_kid
+[14:42] <Netfeed> RickZilla: ah, i don't use cinnamon
+[14:42] <Siebjee> jrib: well its debian squeeze, but its similar to 12.04 and 11.10
+[14:42] <Siebjee> jrib: and the debian community aint responding to my request
+[14:42] <RickZilla> Netfeed: What problems were you having with LM?
+[14:43] <ActionParsnip> Siebjee: debian isn't supported here
+[14:43] <jrib> Siebjee: here's my paste since I already put it up: http://paste.ubuntu.com/1399660/ but you should ask #debian (use the oftc channel) since there may be some differences
+[14:43] <Netfeed> RickZilla: i guess i will have the same problem in ubuntu, but team fortress 2 crashes :)
+[14:43] <MadEchidna> Okay, I uninstalled the new kernel, and reinstalled fglrx and x11-core or whatever
+[14:43] <Siebjee> ActionParsnip: i know, but please work with me. I can work with ubuntu fixes and convert them to debian
+[14:43] <MadEchidna> and I think everything is working okay now, I have direct rendering and Unity runs
+[14:44] <MadEchidna> it feels little slower than before but I could just be imagining things
+[14:44] <Touhou11> Siebjee: Agreed, Ubuntu basically is a specific configuration of Debian after all
+[14:44] <MadEchidna> thanks for your help ikonia and Pici
+[14:44] <RickZilla> Does Amazon have some kind of deal with ubuntu? I noticed there was a sidebar button just for Amazon on the fresh ubuntu install
+[14:44] <Nvveen> Hey all. I reinstalled Ubuntu Quantal today, but I'm having an issue with executing scripts and executables locally. I have a bash script build.sh that I can only execute with "bash build.sh" instead of "./build.sh". I have all permissions set correctly and its executable bit has been also set
+[14:44] <Nvveen> In Precise, I didn't have anything like this issue
+[14:44] <ActionParsnip> RickZilla: you can disable that if you want
+[14:45] <xDesu> RickZilla I believe they do, but you can disable it.
+[14:45] <Touhou11> RickZilla: Canonical (who make Ubuntu) get money if you click and then buy through Amazon. Amazon don't "have a deal" as such, anyone can do Amazon referral links
+[14:45] <ActionParsnip> Nvveen: is the file executable?
+[14:45] <RickZilla> Got it
+[14:46] <MadEchidna> RickZilla, if you don't like the Amazon search results in Unity, you can disable it in the Privacy settings pane
+[14:46] <ActionParsnip> Nvveen: what is the ls -la ./build.sh     output (the .sh extension isn't needed in linux)
+[14:46] <Touhou11> RickZilla: There's bug reports to get similar Amazon enhancing features when searching in the terminal
+[14:46] <Nvveen> ActionParsnip, yes, all permissions have been set
+[14:46] <MadEchidna> just hit the ubuntu logo and type Privacy
+[14:46] <RickZilla> I was thinking that if I wanted Amazon advertising I'd just get a Kindle Fire
+[14:46] <MadEchidna> anyway thanks for the help guys I've got work to do now
+[14:46] <spm-Draget> The 32bit Version of Ubuntu 12.04 is recommended. Any rough guess how much more instability I should expect with ubuntu 12.04 64bit? Like, is this just 'a bit less well tested' or should I relly expect occasional problems?
+[14:46] <Nvveen> ActionParsnip, about the extension: It's so I myself know it's a bash script
+[14:46] <southern> hey guys
+[14:46] <ActionParsnip> spm-Draget: its not about stability
+[14:46] <Siebjee> jrib: your settings are the same as mine, it is kind of strange why it doesn't work.
+[14:47] <RickZilla> But, I don't mind supporting Canonical, so that wouldn't be a bad idea when I need to get something from Amazon anyway
+[14:47] <jrib> Siebjee: we're using different OS
+[14:47] <xDesu> Nvveen you can also state in the script what you wish yo run it with (e.x. #!/usr/bin/env bash)
+[14:47] <southern> I have an ubuntu server 10.04 and host lookup ignores the /etc/hosts file content
+[14:47] <ActionParsnip> Nvveen: is the top line in the file:   #!/bin/bash     ?
+[14:47] <Nvveen> -rwxr-xr-x 1 neal neal 179 Nov 29 01:19 build.sh
+[14:48] <southern> the nsswitch.conf file seems to OK
+[14:48] <KI4RO> My wife's system is still at 12.04.  Do I have to wake up something in the update manager to get her to 12.10 or will it eventually figure it out and take care of it itself?
+[14:48] <southern> hosts:          files dns
+[14:48] <Nvveen> ActionParsnip, yes. It's also not limited to just the bash script. The executable that is made in that build script (c++ compilation) isn't executable either
+[14:49] <spm-Draget> ActionParsnip: I am aware of some propetarian drivers and 64bit issues etc. But as for stability, I should expect about the same experience as in 32bit? Okay, thanks.
+[14:49] <zykotick9> KI4RO: by default LTS releases only update to other LTS releases, there is some way to change that... but i don't know it.
+[14:49] <KI4RO> zykes-: Thanks for the info
+[14:49] <Touhou11> RickZilla: Just need to be aware that anything you search for on your local computer gets sent to Amazon... hence the privacy concerns
+[14:49] <ActionParsnip> spm-Draget: yes both are equally stable. proprietary drivers are also 64bit
+[14:49] <KI4RO> zykotick9: Thanks
+[14:49] <Siebjee> jrib: gonna try if i can reproduce it on 12.04.1
+[14:49] <ActionParsnip> Nvveen: what is the output of:  lsb_release -sc
+[14:50] <media-centre>  a different problem
+[14:50] <xDesu> KI4RO http://www.omgubuntu.co.uk/2012/10/how-to-upgrade-ubuntu-12-04-to-ubuntu-12-10
+[14:50] <KI4RO> xDesu: Thanks
+[14:50] <Nvveen> ActionParsnip, quantal
+[14:50] <RickZilla> Touhoull: Is nothing sacred anymore? I thought that was the point of FOSS
+[14:50] <media-centre> 1394 firewire card
+[14:50] <media-centre> same problem dosent come up
+[14:50] <southern> PLS help
+[14:50] <Touhou11> RickZilla: A lot of us agree, it's reduced Ubuntu to basically adware software. Can always use Linux Mint
+[14:51] <Siebjee> jrib: same problem on 12.04.1
+[14:51] <jrib> Siebjee: i'm on 12.10, but I can test on 12.04.  One sec
+[14:51] <zykotick9> Touhou11: RickZilla and anything you type into Unity gets sent to canonical - who then shares it with facebooka and twitter :|
+[14:51] <xDesu> KI4R
+[14:51] <RickZilla> zykotick9: Even if I don't have an account there?
+[14:52] <Siebjee> jrib: the pam settings are okay, and i added the '*       -       nofile  65335' line to the limits.conf
+[14:52] <zykotick9> RickZilla: you have an account with canonical... if you use unity ;)
+[14:52] <RickZilla> true
+[14:52] <media-centre> so can any of you help with that instead
+[14:52] <RickZilla> I do like the ubuntu layout, so I can't argue with that
+[14:53] <jrib> Siebjee: did not seem to work on 12.04 :)
+[14:53] <media-centre> so can any of you help with that
+[14:53] <jrib> Siebjee: erm, one sec I made a typo
+[14:54] <jrib> Siebjee: works now :/
+[14:54] <opieng> Does Ubuntu work ok the Raspberry Pi?
+[14:54] <b0ot> Anyone know of an easy to setup cluster based instant messenging server on a private network (no internet access). I want essentially there to be one global set of users for N number of servers. I want the system to be able to work no matter what servers are online or even if the servers were seperated into two LANS each LAN would still work (obviously couldn't talk across the LANS if they werent connected but they could still provide services within thei
+[14:54] <b0ot> r own LAN)
+[14:54] <southern> Why my /etc/hosts file is not working on my Ubuntu 10.04?
+[14:54] <jrib> southern: be more specific
+[14:54] <Touhou11> southern: One second, just putting on my magic hat
+[14:54] <media-centre> none of you can help with my firewire problem
+[14:55] <media-centre> instead of thhat webcam problem
+[14:55] <Touhou11> media-centre: Never used firewire, isn't that only used on macs?
+[14:55] <media-centre> no
+[14:55] <media-centre> just more popular
+[14:55] <Siebjee> jrib: strange... it couldn't be the sudo access for multiple users right ?
+[14:55] <jrib> Siebjee: on your 12.04, does everything look the same: http://paste.ubuntu.com/1399800/
+[14:56] <southern> issuing 'host dummydomain' command returns with Host dummydomain not found: 3 (NXDOMAIN)
+[14:56] <edgy> Hi, I installed ubuntu and can't make my webcam work, I don't even have a /dev/video0 device
+[14:57] <southern> in /etc/hosts file there is 127.0.0.1 dummydomain record
+[14:57] <southern> in nsswitch.conf file there is hosts:          files dns line
+[14:58] <southern> I can't figure out the situation...
+[14:58] <jrib> Siebjee: I don't see how sudo would be related
+[14:58] <southern> the system is ubuntu server 10.04
+[14:58] <Nvveen> Oh for god's sake, now Nautilus keeps crashing when I open my Home-folder
+[14:59] <RickZilla> besides, I can only imagine what info that M$ is keeping
+[14:59] <Siebjee> jrib: you're output is kind of odd, and so it your grep statement
+[14:59] <jrib> southern: maybe host is behaving correctly?  Can you check what its documentation says it does?
+[14:59] <jrib> Siebjee: in what way?
+[14:59] <edgy> southern: what's your problem?

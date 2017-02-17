@@ -1,0 +1,291 @@
+[10:44] <lewwy> i can actually see what im doing
+[10:45] <REdz> helloyo, once ur burner is setup and u can mount and unmount it as a cdrom drive
+[10:45] <DarthV4der> hi
+[10:45] <REdz> then just use k3b with ur dvd tools
+[10:45] <helloyo> REdz, what do i set it up in?
+[10:45] <REdz> helloyo, make sure u can access it first
+=== Gatton [~jason@adsl-157-113-40.clt.bellsouth.net]  has joined #ubuntu
+[10:45] <REdz> lol helloyo read those websites i pasted
+[10:45] <lewwy> i also wub cedega
+[10:45] <helloyo> REdz, oh ok, sorry
+[10:46] <REdz> helloyo, it explains about usb , basically kernel support , and if u have warty or hoary u wont have to edit files like /etc/fstab
+=== maddler [~maddler@62-101-119-119.fastres.net]  has joined #ubuntu
+[10:46] <REdz> helloyo, check in /etc/fstab to see if the system made an entry for it also and in dmesg
+=== loren [loren@69-12-132-188.dsl.static.sonic.net]  has joined #ubuntu
+=== loren [loren@69-12-132-188.dsl.static.sonic.net]  has left #ubuntu []
+=== geoffroy_ [~geoffroy@m105.net81-67-147.noos.fr]  has joined #ubuntu
+[10:47] <geoffroy_> hello dudes
+[10:48] <Seveas> hi
+[10:48] <REdz> helloyo, dvdrtools udftools dvdplusrw, just do sudo apt-cache search dvd| more and have a loook
+[10:48] <geoffroy_> I just installed 5.04
+[10:48] <Seveas> geoffroy_, welcome aboard the Ubuntu ship then :)
+[10:49] <Daehlie> 5.04!@!@ You just said our word of the day!@!
+[10:49] <geoffroy_> thank you
+[10:49] <Daehlie> ding ding ding
+[10:49] <geoffroy_> but I was on 4.10 before
+[10:49] <helloyo> REdz, thanks a lot
+[10:49] <Seveas> :)
+[10:49] <Seveas> well, welcome on the hoary ship ;)
+[10:49] <geoffroy_> and i don't understand why the system is asking me a password for changing configuration etc...
+[10:49] <helloyo> REdz, just trying to get my brother to stop being a dick about windows detecting it straight away
+[10:49] <geoffroy_> is it not supposed to be the superuser pass ?
+[10:49] <Seveas> geoffroy_, no
+[10:49] <Seveas> it needs your password since ubuntu uses sudo
+[10:50] <geoffroy_> oh my god, I missed something
+[10:50] <eruin> geoffroy_: you _are_ the superuser, effectively speaking
+[10:50] <Seveas> geoffroy_, http://wiki.ubuntu.com/RootSudo
+[10:50] <Seveas> that'll explain a lot :)
+[10:50] <geoffroy_> ok thanks, I was searching this page
+[10:50] <REdz> helloyo, ye for sure its not very hard
+=== goli [~sunil@203.145.183.210]  has joined #ubuntu
+=== St0n3-C0l [~st0ne@202.69.61.196]  has joined #ubuntu
+[10:51] <lewwy> heh
+[10:51] <lewwy> helloyo: just tell him if he uses windows hes a communist
+[10:51] <Seveas> neh
+[10:51] <webmind> does anyone know if ubuntu/x.org has DRI support for the new or any ATI chipsets on the amd64 platform ?
+[10:51] <Seveas> more like a capitalist
+=== lewwy doesnt know what a capitalist is
+[10:52] <lewwy> hey, did anyone here see microsofts attempts to take down linux?
+[10:52] <lewwy> by saying it costs more etc etc?
+[10:52] <daniels> webmind: define 'new'
+[10:52] <Seveas> lewwy, they are right though in some cases
+[10:53] <REdz> lewwy, wats new
+[10:53] <REdz> they do it all the time
+[10:53] <helloyo> lewwy, he thinks that it takes ages for me to do anything, like add a new printer (easy as hell in ubuntu), but thats cos i'm constantly in a broken state on purpose
+[10:53] <Seveas> lewwy, they just forget to mention the "in some cases" part
+[10:53] <daniels> webmind: it supports up to 9200 out of the box, and we have the proprietary driver packaged, which supports all of them
+=== Cr1ck3t [~Cr1ck3t@host-63-238-55-190.apid.com]  has joined #ubuntu
+[10:53] <lewwy> hehe
+[10:53] <lewwy> thats the way to go helloyo
+=== Cr1ck3t is now known as {Cricket}
+[10:53] <webmind> daniels, 9250, 9550 or the 9600 ?
+[10:53] <lewwy> my bro gets on my nerves sometimes, but if i dont help him, i dont get my adsl fix :(
+=== {Cricket} [~Cr1ck3t@host-63-238-55-190.apid.com]  has left #ubuntu ["Leaving"]
+=== seb128_ [~seb128@ANancy-151-1-30-146.w83-196.abo.wanadoo.fr]  has joined #ubuntu
+[10:54] <St0n3-C0l> lol
+[10:54] <daniels> webmind: supports 9250 out of the box, 9550 and 9600 are supported by the proprietary driver
+=== hyphenated [~caleb@210-86-76-45.jetstream.xtra.co.nz]  has joined #ubuntu
+[10:54] <lewwy> argh this is getting on my nerves.  I installed farcry under windows and then gave the cd's back to my friend
+[10:55] <lewwy> and now i cant play it! :'(
+[10:55] <lewwy> (cedega)
+[10:55] <webmind> daniels, ok
+[10:55] <geoffroy_> okay, I missed something during the installation
+[10:55] <webmind> daniels, also on the amd64 then ?
+[10:55] <helloyo> REdz, i have been reading that site, and i still can't get anything happening
+[10:55] <geoffroy_> because my first user is not in the sudoers
+[10:55] <daniels> webmind: yeah
+[10:55] <webmind> cool :)
+[10:55] <REdz> ledi, ye u prob need no cd crack
+[10:55] <REdz> lewwy, ye u prob need no cd crack
+[10:56] <daniels> it would probably also work better if you actually bought the game
+[10:56] <geoffroy_> Should I have to reinstall ? or is there any solution without running installation again
+[10:56] <REdz> helloyo, did u check /etc/fstab and dmesg
+[10:56] <Seveas> geoffroy_, this has changed in hoary
+[10:56] <lewwy> its already cracked REdz
+[10:56] <geoffroy_> oh ?
+[10:56] <REdz> and is ur usb working helloyo
+[10:56] <REdz> lewwy, ok
+[10:56] <lewwy> i just run it, and it tries to init, and then dies
+[10:56] <helloyo> REdz, dmesg says that it found a removable scsi disk sda at scsi0
+[10:57] <lewwy> could the fact that im running it on RO filesystem affect it?
+[10:57] <REdz> helloyo, thats a good thing, wat about fstab
+[10:57] <helloyo> doesn't say anything about it
+[10:57] <REdz> lewwy, ye i read up on that at some places for diablo2
+[10:57] <REdz> not sure if its related
+[10:58] <lewwy> mmm
+[10:58] <lewwy> is captive-ntfs supposed to support r/w
+[10:58] <helloyo> REdz, no entry for it in fstab
+[10:58] <REdz> helloyo, well ye u prob need that in there first
+[10:59] <REdz> and install some of those tools and start up k3b after that
+[10:59] <geoffroy_> Can't I had my first user to sudoers ?
+[11:00] <Taliesin`> your first user (the one you create on install) is in sudoers
+[11:00] <geoffroy_> that is the problem
+[11:00] <Taliesin`> u dont want it in sudoers?
+[11:00] <geoffroy_> My first user, the one I created during install doesnt appear in sudoers file
+[11:01] <Taliesin`> oh buggery
+[11:01] <geoffroy_> Sorry, user geoffroy may not run sudo on
+[11:01] <lewwy> hey is there anyway i can possibly force an unmount of a cd drive?
+[11:01] <lewwy> heh
+[11:01] <lewwy> good one jeff
+[11:01] <Taliesin`> umount -f /mnt/cdrom0
+[11:01] <Taliesin`> -f forces
+[11:01] <Taliesin`> from the terminal ofcourse
+=== ermanox [~ermanox@adsl-63-204-132-93.dsl.snfc21.pacbell.net]  has joined #ubuntu
+[11:02] <lewwy> argh linux seems to pussy foot around the fact of unmounting cd drives
+[11:02] <lewwy> if its mounted and semi in use
+[11:02] <lewwy> you cant eject it
+[11:02] <Taliesin`> i never seem to have a problem
+[11:02] <lewwy> why can windows do this so easily?
+[11:03] <lewwy> no, im in the middle of a raven shield install
+[11:03] <lewwy> i ran cedega Setup.exe
+[11:03] <geoffroy_> Could you paste your file /etc/sudoers please ?
+[11:03] <Taliesin`> windows doesnt take control of the cdrom
+[11:03] <Taliesin`> linux appears to take control of it at a more hardware level
+[11:03] <lewwy> but...whats the benefit of that?
+[11:03] <Taliesin`> nfi, it just works for me
+[11:03] <lewwy> and why can't i just say "i really need that CD, emergency eject"
+[11:03] <Taliesin`> the only rare case i use umount -f is when i incorrectly burn a CD
+[11:03] <lewwy> yeh
+[11:04] <lewwy> but i got an install running off the CD
+[11:04] <lewwy> and it wont take it
+[11:06] <geoffroy_> Ok I think that it works
+[11:06] <geoffroy_> how can i config the pass for sudo ?
+[11:06] <geoffroy_> cuz he doesn't ask me the password
+=== hno73 [~hno73@henrik.gotadsl.co.uk]  has joined #ubuntu
+[11:06] <geoffroy_> if anyone could paste his file /etc/sudoers, I think it would help me
+[11:07] <Burgundavia> geoffroy_, what do you mean? not asking for password?
+[11:07] <Burgundavia> have you entered it within the last 15 minutes?
+=== pokute_ is now known as pokute
+[11:07] <geoffroy_> my first user wasn't in sudoers file
+=== pokute is now known as pokute_
+[11:07] <geoffroy_> so i wrote (with visudo) geoffroy ALL=(ALL)  ALL
+[11:07] <geoffroy_> so the pass isnt needed
+[11:07] <geoffroy_> as for root account.
+[11:08] <geoffroy_> I just want that when i want to change something in system configuration or anything else, it asks me a password
+=== Zaphod_ [~Agrajag@66-215-172-98.sb-eres.charterpipeline.net]  has joined #ubuntu
+=== runge [~runge@host-206-98.wetternet.net]  has joined #ubuntu
+[11:11] <runge> hi. I am having lots of problems with the screen resulution in ubuntu horay
+=== TiffOn [user@218.Red-217-126-197.pooles.rima-tde.net]  has joined #ubuntu
+[11:13] <runge> it is stuck at 800x600 I think. doesent help to change xorg.config. the xserver says that it will go to default resulution cause something cant handle hsync. xorgconfig dident help. xorgcfg dident show any apps, just started with background and nothing else
+[11:13] <dabaSlon_slp> runge, why horray;)
+[11:13] <runge> :)
+[11:13] <dabaSlon_slp> you changed teh resolution in conf?
+[11:14] <daniels> runge: do you have an intel desktop chipset?
+[11:14] <runge> yes, the change dident help
+[11:14] <geoffroy_> so, nobody wants to paste /etc/sudoers here ? :<
+[11:14] <runge> daniels, i810
+[11:14] <geoffroy_> it would help me, i think
+[11:14] <daniels> runge: it's a known bug in the intel driver, will be fixed this week
+[11:14] <daniels> and probably make it into hoary-updates at some stage
+[11:14] <runge> ah!
+[11:15] <Razor-X> hmmmm, anyone here use a trackball?
+[11:15] <runge> thanks, any way for me to monitor the development fo the bug?
+[11:15] <Razor-X> dabaSlon_slp: wow, you're up this late?
+[11:15] <lewwy> hey can i force cedega to release a cd-drive?
+[11:15] <lewwy> so i can unmount it?
+[11:16] <runge> lewwy, dont know, but you might be able to use the command "sudo eject"
+[11:16] <lewwy> nah
+[11:16] <lewwy> that ejects the bottom drive
+[11:16] <lewwy> i want to eject hdd, not hdc
+[11:17] <dabaSlon_slp> yup.half slp...
+[11:17] <dabaSlon_slp> ;)
+[11:17] <Razor-X> heh
+[11:17] <runge> lewwy, sudo eject /dev/hdd
+[11:17] <lewwy> because, raven shield is using the top cd drive for installing
+=== HetIsLarsje [~ljansen@dyn24-eesi.nbw.tue.nl]  has joined #ubuntu
+[11:17] <Razor-X> i'm doing Romeo and Juliet
+[11:17] <lewwy> umount: /media/cdrom0: device is busy
+[11:17] <Razor-X> when I go to college with math.... I won't have to do these stupid English essays >_<
+[11:18] <Razor-X> lewwy: not sure, but, isn't there a --force command in umount?
+[11:18] <kakalto> why are all the source downloads on transcoding.org broken?!
+[11:18] <Razor-X> check the man out
+=== yahalom [~yahalom@62.219.140.220]  has joined #ubuntu
+[11:18] <kakalto> not sure about the cvs tho
+[11:18] <yahalom> when i click logout, my gnome-sessions doesnt log out, any ideas?
+=== lkerscher_ [~lkerscher@p549FDCFD.dip.t-dialin.net]  has joined #ubuntu
+=== lewwy [~lewwy@CPE-60-231-144-139.qld.bigpond.net.au]  has left #ubuntu []
+=== Chameleon22 [~serg@60-240-132-6.tpgi.com.au]  has joined #ubuntu
+=== bcroq [~bertrand@bruz.freeskop.net]  has joined #ubuntu
+[11:22] <Q_Continuum> methinks netsplit.
+[11:23] <Q_Continuum> or just no talk.
+[11:23] <yahalom> i'm here
+[11:23] <Razor-X> both
+=== snowblink [~snowblink@wind.snowblink.co.uk]  has joined #ubuntu
+[11:23] <yahalom> Q_Continuum, then again its like 2am in the west coas
+=== St0n3-C0l [~st0ne@202.69.61.196]  has joined #ubuntu
+=== coddex{away} [~coddex@as-dialup-82-10-93.sgaice.ru]  has joined #ubuntu
+=== DarthV4der *weird*
+=== darkaudit [~bpack@pool-141-153-89-111.clrk.east.verizon.net]  has joined #ubuntu
+=== coddex{away} is now known as coddex
+=== jinty [~jinty@62-14-221-226.inversas.jazztel.es]  has joined #ubuntu
+[11:24] <Razor-X> DarthV4der: dude, Padme dies because of you!
+=== k40z [~k40zmotic@82.153.107.39]  has joined #ubuntu
+=== geoffroy_ [~geoffroy@m105.net81-67-147.noos.fr]  has joined #ubuntu
+[11:25] <DarthV4der> why do you say that?
+[11:25] <runge> Razor-X, we will always have Closer
+[11:26] <webmind> hmm, does anyone know if the Epson CX3650 is going to work out of the box ?
+=== coddex [~coddex@as-dialup-82-10-93.sgaice.ru]  has left #ubuntu [""]
+[11:26] <DarthV4der> Epson (craps???)
+[11:27] <yahalom> i get the following error on log in: Error activating XKB configuration.
+[11:27] <yahalom> anyone know what that is?
+[11:27] <Seveas> yahalom, is taht the complete error?
+[11:28] <webmind> DarthV4der, uhm.. epson usually has very good support in linux ?
+[11:29] <yahalom> Seveas, can i paste the complete error?
+[11:29] <Seveas> yahalom, use ubuntu.pastebin.com for that
+[11:29] <yahalom> Seveas, ok
+[11:29] <gaurav> runge: is ur monitor resloution prob solved?/
+[11:30] <yahalom> Seveas, http://ubuntu.pastebin.com/282574
+[11:30] <gaurav> ?/
+[11:31] <Seveas> yahalom, no messages before that?
+=== zeedo [~zeedo@www.bsrf.org.uk]  has joined #ubuntu
+[11:31] <yahalom> Seveas, no
+[11:31] <St0n3-C0l> hey
+[11:31] <yahalom> Seveas, maybe its cos i chose to use xorg.conf settings instead of gnome settings?
+[11:32] <St0n3-C0l> gaim 1.3.0 is in backports ??
+[11:33] <yahalom> Seveas, no idea?
+=== mz2 [~mz2@81.1.89.151]  has joined #ubuntu
+[11:34] <DarthV4der> s/good/bad/
+=== matteo [~matteo@tc102.univ-tours.fr]  has joined #ubuntu
+=== geoffroy_ [~geoffroy@m105.net81-67-147.noos.fr]  has joined #ubuntu
+[11:37] <geoffroy_> hey.
+[11:37] <geoffroy_> does anyone have a i560 (canon) installed on ubuntu ?
+[11:37] <geoffroy_> it seems like without turboprint drivers, it won't work
+=== oferw [~chatzilla@CBL217-132-128-185.bb.netvision.net.il]  has joined #ubuntu
+=== zxy [~ralph@host-84-9-32-87.bulldogdsl.com]  has joined #ubuntu
+=== zxy_ [~ralph@host-84-9-32-87.bulldogdsl.com]  has joined #ubuntu
+=== TexJoachim [~TexJoachi@p508BD25A.dip.t-dialin.net]  has joined #ubuntu
+=== coddex{away} [~coddex@as-dialup-82-10-93.sgaice.ru]  has joined #ubuntu
+=== desplesda [~desplesda@17.242.132.203.in-addr.wholesaledsl.net]  has joined #ubuntu
+=== Fator_Dee [~fatordee@adsl-85-217-17-57.kotinet.com]  has joined #ubuntu
+[11:43] <geoffroy_> with hoary, I can't manage anymore network interfaces ?
+=== joente [~joente@ehv01e.pixs.philips.com]  has joined #ubuntu
+[11:44] <geoffroy_> there was a small manager for interface configuration, where we could chose profiles for interfaces, it doesn't exist anymore ?
+=== coddex{away} [~coddex@as-dialup-82-10-93.sgaice.ru]  has left #ubuntu [""]
+[11:44] <Burgundavia> geoffroy_, it is there
+[11:45] <geoffroy_> oh ?
+[11:45] <Burgundavia> system-->admin-->networking
+=== jsgotangco [~jsg@202.57.71.236]  has joined #ubuntu
+[11:45] <geoffroy_> okay, but profiles have disapeared no ?
+[11:45] <Burgundavia> no idea
+=== Crasp [crasp@cartman.blackbyte.nl]  has joined #ubuntu
+[11:47] <Crasp> lo
+[11:47] <DarthV4der> ol
+=== gazeux_snake [~mocquiya@193.52.16.173]  has joined #ubuntu
+[11:47] <Crasp> i'm trying to build suphp using dpkg-buildpackage, but now i want it to use apache2 instead of apache1, how do i do that?
+=== corvix [~corvix@port-195-158-167-227.dynamic.qsc.de]  has joined #ubuntu
+=== _tester_ [~yz@216.238.203.178]  has joined #ubuntu
+=== weezer_ [~weezer@p54B8BC82.dip.t-dialin.net]  has joined #ubuntu
+[11:50] <geoffroy_> does anyone have a atheros wifi device ?
+[11:51] <corvix> anyone know about intel 855gm graphics chip and dri?
+[11:51] <corvix> im getting 4 kBytes additional video memory is required to enable DRI  in the xorg log
+=== rayde [~rayde@vs217.das.psu.edu]  has joined #ubuntu
+[11:52] <cyphase> corvix, add a 4kb memory stick then
+[11:52] <cyphase> ;)
+[11:52] <DarthV4der> ;)
+=== Shorty^ [~shorty@shorty.trancelab.org]  has joined #ubuntu
+[11:52] <geoffroy_> atheros chipset only works with madwifi drivers ?
+[11:53] <corvix> LOL
+[11:53] <corvix> its a shared mem system
+[11:53] <mjr> geoffroy_, yes
+[11:54] <mjr> geoffroy_, and those contain a nonfree component and are included in linux-modules-restricted
+[11:54] <corvix> any way of freeing up some more video memory? deactivating features or so?
+[11:54] <DarthV4der> mine is not
+[11:54] <Seveas> linux-restricted-modules that is
+[11:54] <mjr> corvix, perhaps try to use software mouse cursor instead of hardware cursor?
+=== verden01 [~verden@61.68.225.143]  has joined #ubuntu
+[11:54] <johnnybe1ak> hey guys is there a gtk2 app for editing id3 tags
+[11:54] <corvix> @darth ... you got 855gm runnig with dri in xorg?  but not shared?
+[11:54] <Shorty^> does ubuntu have mplayer ?
+[11:54] <corvix> thmmm ... option?
+[11:55] <DarthV4der> @_@
+[11:55] <DarthV4der> wtf question
+[11:55] <geoffroy_> ok mjr
+[11:55] <geoffroy_> thanks
+[11:55] <johnnybe1ak> Shorty: yeah
+=== verden01 [~verden@61.68.225.143]  has left #ubuntu ["Leaving"]
+[11:57] <geoffroy_> and does anyone know how to make a canon i560 working on unbuntu withou turboprint drivers ?
+[11:58] <Seveas> Shorty^, yes, in multiverse
+[11:59] <Shorty^> ah, ok :P
+[11:59] <Shorty^> anyone got a sources.list line for it?
+[11:59] <wdh> for multiverse?
+[11:59] <wdh> check the wiki\

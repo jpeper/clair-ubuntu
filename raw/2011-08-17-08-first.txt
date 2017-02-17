@@ -1,0 +1,237 @@
+[07:32] <dzup> i did a recursive gcon2ftool deal i mess everything in gnome in this i386 in maverick, how can i revert/restore all gnome values to defaults?
+[07:33] <HSarena> ok, thank U ;-)
+[07:33] <toluene> hi ! I have setup a ppa server. One of the .deb have problem so I unpack it with "ar", correct the code and pack it back with "ar", after that I replace the .deb in ppa and update "content-length" in the corresponding head file. However, my client got "size-mismatch", after issuing apt-get. What mistake have I made in the process ?
+[07:33] <urlin2u> ;-)
+[07:33] <gskelling> livingdaylight, once you can access the subsonic web interface, you can do everything from there. its like setting up a router
+[07:33] <gskelling> just click settings =P
+[07:34] <gskelling> you might need to login
+[07:36] <HSarena> hi.. i wanna login with unity mode but indicates this error
+=== fishwithapipe is now known as f|shy
+[07:37] <urlin2u> HSarena, there is a additional drivers app in the menu look if there is one waiting.
+[07:37] <HSarena> "It seem that you do not have hardware require to run Unity. Please choose Ubuntu Classic at the login screen and you will using the traditional environment"
+[07:38] <HSarena> urlin2u : i don't understand
+[07:38] <livingdaylight> gskellig, that's it I don't knwo how to access the subsonic we interface. I been lookng on their homepage but that isn't it
+=== deegee__ is now known as drussell
+[07:38] <dzup> how can i rebuild all my gnome settings? not just the ones in my $HOME but all the system wide gnome modifications i made and restore that to defaults without killing my system in the process (reinstall i386 maverick)?
+[07:39] <livingdaylight> *web
+[07:39] <urlin2u> HSarena, log into the classic you can choose it at login, in the menu is a application called additional drivers. You want to run a update and upgrade first though.
+[07:39] <dzup> or should i reinstall?
+[07:39] <gskelling> livingdaylight, typing http://localhost didn't work? or http://localhost:4040
+[07:39] <bazhang> dzup, got any ppa?
+[07:39] <gskelling> into firefox?
+[07:39] <livingdaylight> gskellig, my bad. Am I supposed to type that into a terminal?
+[07:40] <gskelling> no livingdaylight into firefox. It's a website
+[07:40] <flametai1> Hey guys, quick question, is there a difference between Wine and WineHQ? o.O WineHQ is just Wine's official site correct? Or is there actually another Wine called WineHQ? Was reading a forum and someone mentioned to try "WineHQ" but never clarified what they meant.
+[07:40] <bazhang> dzup, more importantly , got a separate /home partition?
+[07:40] <livingdaylight> gskellig, ok, lol
+[07:40] <gskelling> it's a website hosted on your computer.
+[07:40] <dzup> bazhang: no, i can put everything back but only if i can have gconf2 settings back to normal
+[07:40] <HSarena> Ooooh, i understand
+[07:40] <bazhang> flametai1, the channel #winehq
+[07:40] <livingdaylight> gskellig, ok, and now I'm invited to register an account, ok.. Seriously, I'm a noob, lol
+[07:41] <HSarena> urlin2u : there is 3 drivers
+[07:41] <HSarena> urlin2u : which one i have to install????
+[07:41] <urlin2u> HSarena, have you run a update and upgrade
+[07:41] <HSarena>  urlin2u : yes
+[07:41] <dzup> bazhang: then if i get everything back to defaults settings i promise you i will not ever do a recursive gconf2 deal :(
+[07:42] <HSarena>  urlin2u : just 1 hours ago
+[07:42] <urlin2u> HSarena, do any of them resemble your graphic card?
+[07:42] <filsuf> what's the shortcut for moving between TABS in KONSOLE?
+[07:42] <filsuf> alt-shift-arrow?
+[07:43] <gskelling> livingdaylight, I'm not familiar with newer versions of subsonic, when I installed it I just went to http://localhost:4040 and started setting it up
+[07:43] <HSarena>  urlin2u : there are 3 nvidia drivers
+[07:43] <gskelling> make an account if you want, I dunno up to you
+[07:43] <rethus1> how can i completly format a hdd on linux?
+[07:43] <rethus1> remove all data in secure way
+[07:43] <bazhang> rethus1, gparted live cd
+[07:44] <rethus1> it's a usb-hdd
+[07:44] <gskelling> fdisk!
+[07:44] <livingdaylight> gskellig, do you have to create a username or just the password (its what it seems) and there seems to be a default /var/music path set. But I change that to /home/username/Music ?
+[07:44] <urlin2u> HSarena, this is where I can't really help, so we are farther along though as far as important info others would probably need to help.
+[07:44] <Axlin> filsuf: Should be ctrl-shift-pgup/pgdown
+[07:44] <rethus1> fdisk only change partition-table... seems nbot to erase all given data on it
+[07:44] <bazhang> rethus1, its  a 60mb iso
+[07:44] <filsuf> Axlin: doesnt work
+[07:44] <Axlin> filsuf: Er, without shift, rather.
+[07:45] <filsuf> it used to work though
+[07:45] <filsuf> same shit
+[07:45] <bazhang> filsuf, no cursing
+[07:45] <HSarena> urlin2u : ok, thanks u, i think i can fix it ;-)
+[07:45] <filsuf> not for me
+[07:45] <bakytn> Hello! Please help me....where can I set up the default profile? I copied .gconf and .gnome2 to /etc/skel but it's not working...it's still loading from somewhere else
+[07:45] <urlin2u> HSarena, cool.
+[07:45] <stowoda> hi, my lower panel is auto hided and wont show up again.. How can i fix this?
+[07:45] <gskelling> livingdaylight, I can't remember, like I said I haven't used it in awhile. If you're at the web interface you're on the right track though. Remember the point of subsonic is to share your music with any computer in the world, so a username and password are a good idea to prevent any random stranger from getting to it
+[07:46] <dzup> bazhang: if i apt-get --purge gnome ...and the reinstall it will erase all those "custom" systemwide modifications i made erlier?
+[07:46] <gskelling> livingdaylight, if I remember their website is pretty helpful, they have a good FAQ section and some decent walkthroughs
+[07:46] <Axlin> filsuf: When you say "Konsole", are you referring to GNOME/Unity, or KDE?
+[07:46] <rww> Axlin: Konsole is the KDE terminal emulator
+[07:46] <pyarun> hey, need help with dir permessions..i have a parent dir P to whichi have given some recursive permissions which are applied to sub-dir s1. Now i create a new sub-dir s2, is there any way that child dir takes the permission of parent dir
+[07:46] <livingdaylight> gskellig, ok, thanks again for everything and pointing me in the right direction :D
+[07:46] <drussell> rethus1: try a command called "shred"
+[07:46] <bazhang> dzup, no, not sure what you modified however
+[07:47] <Axlin> filsuf: Thought so. You should be able to go into Settings->Shortcuts, to see what it's assigned to.
+[07:47] <rethus> how secure is erase th hdd on this way? Is there a way to restore the data?
+[07:47] <dzup> bazhang: you know a way to get defaults values back into gnome?
+=== gskelling is now known as Gskellig
+[07:48] <drussell> rethus: it's very secure
+[07:48] <rethus> or is it better to rewrite each sector of the hdd with dd if=/dev/zero /dev/sdb ?
+[07:48] <drussell> rethus: no, that's not very secure
+[07:48] <drussell> rethus: if you look up shred you'll see it overwrites the area multiple times
+[07:49] <drussell> rethus: making recovery nearly impossible
+[07:49] <stowoda> oh, :) this helped me, especially post #16: http://ubuntuforums.org/showthread.php?t=1201800&page=2
+[07:49] <rethus> shred is a cmd-commend?
+[07:49] <drussell> rethus: yes
+[07:50] <drussell> rethus: "man shred" for more info
+[07:50] <rethus> k, but seems this only works wor single files, not for a complete partition
+[07:52] <drussell> rethus: no, it works on partitions also
+[07:54] <bond007> goodmorning
+[07:54] <rethus> now i only need a hdd test-tool which return a nice report of hdd-health
+[07:54] <Gskellig> rethus, you can join my mission to get phoronix test utility working
+[07:54] <Gskellig> its a really good benchmarking and testing utility, but I can't get the gui to work =/
+[07:56] <rethus> Gskelling: sorry, have no time for that... i'm very busy and only search for a working tool
+[07:57] <bond007> is x2go availbale in the new ubunt 11.10 or is there one alternative??
+[07:57] <Gskellig> =P I know haha
+[07:57] <drussell> rethus: smartctl
+[07:57] <Gskellig> it was worth a shot
+[07:57] <Gskellig> it might work for you actually
+[07:57] <Gskellig> i cant figure out why it wont work for me
+=== tholl583xx is now known as tolland
+[07:59] <rethus> drussle: mhh this old hdd has no smart support :(
+[08:00] <jose__> Hi, which is the best backup software for ubuntu, i want save my actual ubuntu state, files is less important...
+[08:02] <drussell> rethus: then there's pretty much nothing you can do, apart from run a check for badblocks on a regular basis
+[08:05] <urlin2u> jose__, best is relative to any user, clonezilla will image the whole thing. You can also save a file of all installed apps and the source list, other methods as well, I use these.
+[08:07] <jose__> ok urlin2u, u know if clonezilla can write in ext4?
+[08:07] <jose__> i want my hdd image in other partition with ext4 format
+[08:08] <urlin2u> jose__, oh yes it packages to ntfs ext, and others.
+[08:09] <jose__> urlin2u, ok i will try that later, thx!
+[08:09] <urlin2u> jose__,  no problem .;-)
+[08:11] <ryry> hello
+[08:12] <ryry> anyone?
+[08:12] <urlin2u> nobody but us sleeping dogs
+[08:13] <ryry> lol
+[08:13] <rww> We're dogs now? I thought we were chickens.
+[08:13] <ryry> im a hefer
+[08:13] <urlin2u> cluckety cluck cluck
+[08:14] <atdprhs> Hello, I have installed Ubuntu on a seperate USB drive where I can take my OS wherever I go,  I was wondering if I can edit the grup boot menu on it so that when I plug the USB drive in any laptop, I don't have to see the operating systems on my laptop, what do I do?
+[08:14] <zabomber> hey guys
+[08:14] <zabomber> i need some help with WebDAV
+[08:14] <ryry> hey
+[08:14] <zabomber> http://pastebin.com/M0xLPULj
+[08:14] <zabomber> theres my apache config
+[08:14] <zabomber> no matter what i try
+[08:14] <urlin2u> atdprhs, remove the os-prober
+[08:14] <zabomber> i keep getting site not enabled for webdav
+[08:14] <zabomber> when i try cadaver into it
+[08:14] <urlin2u> in that install the external
+[08:14] <atdprhs> what do you mean urlin2u?
+[08:15] <overclucker> rww: i'm a chicken
+[08:15] <urlin2u> atdprhs, the os-prober is what searches for other OS's so in the external terminal sudo apt-get remove os-prober.
+[08:15] <ryry> anyon know the terminal command that updates everything.is it apt-get?
+[08:16] <zabomber> Could not access /dropbox/ (not WebDAV-enabled?):
+[08:16] <rww> ryry: sudo apt-get update && sudo apt-get upgrade
+[08:16] <ryry> thanks <rww>
+[08:16] <atdprhs> can I edit it manually?
+[08:17] <urlin2u> atdprhs, probably, but more risky, when all you have to do is reinstall t.
+[08:17] <urlin2u> it*
+[08:17] <atdprhs> urlin2u, I removed it
+[08:18] <urlin2u> atdprhs, now run sudo update-grub and that OS will only be in its grun menu
+[08:18] <urlin2u> grub*
+[08:19] <atdprhs> 4 images found
+[08:19] <atdprhs> can I edit their visible names?
+[08:19] <urlin2u> atdprhs, probably two kernel sets on that HD
+[08:19] <atdprhs> I updated the grub
+[08:19] <urlin2u> atdprhs, I know a command to remove the memory line and put it back if needed.
+[08:20] <urlin2u> atdprhs, generally having two kernels sets are advised
+[08:20] <atdprhs> it's ok to keep it there, but I want to rename the main one to Portable Ubuntu
+[08:20] <atdprhs> okayz
+[08:20] <urlin2u> atdprhs, Iam not familiar there.
+[08:21] <atdprhs> thank you urlin2u, is there anything else I should do?
+[08:21] <Halabund> why can't I *read* ubuntuforums.org pages without registering first?  it's so unnecessary, I don't want to post, just read
+[08:22] <urlin2u> atdprhs, here is a grub2 wiki . https://help.ubuntu.com/community/Grub2#Upgrading
+[08:22] <urlin2u> Halabund, old posts that may not be as relevent.
+[08:22] <Halabund> urlin2u, well, every time I google, I end up on a page like that
+[08:23] <atdprhs> thank you urlin2u
+[08:23] <urlin2u> Halabund, there were complaints of new users running wrong stuff I believe.
+[08:23] <Halabund> always end up readnig through google cache
+[08:23] <urlin2u> atdprhs, no problem enjoy .;-)
+[08:25] <absence> is it possible to have a bootable linux partition on a microsoft dynamic disk?
+[08:26] <dan_> how do i find out what version on ubuntu im running
+[08:26] <urlin2u> absence, http://www.techrepublic.com/blog/doityourself-it-guy/diy-can-i-dual-boot-linux-on-a-dynamic-disk/573
+[08:28] <dan_> nevermind its 10.04, anyone know how i can update distro to the latest one ?
+[08:28] <dan_> its not showing under the update manager
+[08:28] <a-skibbedy-bap> Is it possible to get Unity on the latest LTS release?
+[08:28] <Lasers> !version | dan_
+[08:28] <ubottu> dan_: To find out what version of Ubuntu you have, type « lsb_release -a » in a !shell - To know the available version of a package, « apt-cache policy <package> »
+[08:29] <dan_> a-skibbedy-bap, yeah, i had a message asking if i wanted to update to the latest distro
+[08:29] <LotusFeet> I'm trying to run a Totem Movie Player 2.32.0 playlist on startup but i cant figure out how to add the playlist to startup nor how to fullscreen the app (all i know is fullscreen hotkey is F11)
+[08:29] <a-skibbedy-bap> a-skibbedy-bap: What do you mean
+[08:29] <dan_> but i said ask me later, but i cant seem to find out how to get it back now
+[08:30] <absence> urlin2u: it says no is the "simple answer", do you know the details?
+[08:30] <dan_> but it said i mean^
+[08:30] <urlin2u> dan_, change the synaptic-settings-repositories-updates-normal
+[08:31] <urlin2u> absence, it basicaly says no.
+[08:31] <Halabund> What tex/latex packages do I need to install in Ubuntu to get scalable (non-bitmap) euler/concrete fonts, like here?  http://www.tug.dk/FontCatalogue/ccr/   In MiKTeX the default seems to be scalable fonts.
+[08:32] <dan_> urlin2u, thanks sorted it
+[08:32] <urlin2u> dan_, then run a update in the update manager should show the upgrade make sure you are fully upgraded
+[08:32] <rawfodog> What is GNOME Keyring: PKCS# Component ?
+[08:32] <rawfodog> It's in my start up
+[08:32] <absence> urlin2u: are there any other ways to install linux on a system with windows software raid?
+[08:32] <rawfodog> and I want to remove it. Will it mess up the OS ?
+[08:33] <absence> urlin2u: any way at all, i mean :)
+[08:33] <urlin2u> absence, not sure you could run a virtual, and a wubi probably works not sure there though, or a bootable external.
+[08:34] <dan_> urlin2u, its only showing version 10.10 for some reason :/
+=== bluemoon is now known as Guest62936
+[08:35] <auronandace> dan_: you can only update one release at a time
+[08:35] <urlin2u> dan_, the upgrades from 10.04 go release to release I believe,I always fresh install it is faster if you know how to et set up
+[08:35] <urlin2u> get*
+[08:35] <auronandace> dan_: it is much easier and cleaner to fresh install
+[08:36] <dan_> yeah ok ill just download the latest one and install that way
+[08:36] <somebears> hi :) I want to install a programm into /usr/local/bin instead of my home directory (default). But I dont have the permissions to do so. Should I istall it with sudo or change the permissions of /usr/local/bin
+[08:36] <dan_> thanks for the help anyway
+=== fr0sted is now known as fr0sted-bnc
+[08:36] <urlin2u> dan_, you can clone the lucid to in case you have problems.
+[08:36] <Razzeeyy> somebears sudo is the best solution
+[08:37] <Lasers> somebears: What program?
+[08:37] <somebears> Rezzeeyy: will I have problems with permissions later? like updates or changes in the config file
+[08:38] <somebears> razzeeyy*
+[08:38] <LotusFeet> I figured out the Totem Movie Player issue myself =P thanks for leaving it to me, learned more that wayu
+[08:39] <Lasers> somebears: "mkdir -p ~/bin && mv ~/lame-screensaver.bin ~/bin" -- That can work too. (or /usr/local/bin)
+[08:39] <Razzeeyy> somebears, depends on what tthe programm is do. But you always free to change permissions
+[08:40] <somebears> hmmm im just gonna try it :) thank you
+[08:40] <Razzeeyy> offtop: guys how to enter #openbox channel? it says that i'm needed to be invited
+[08:41] <urlin2u> Razzeeyy, I think you answer your own question.
+=== jsurfer_ is now known as jsurfer
+[08:42] <thebrasse> Hi! If I want to test this kernel: http://people.canonical.com/~lexical/bugs/lp791752/, I guess that I install the debs with dpkg. But how do I get back to the kerel I have installed now (the latest from the ubuntu repo)?
+[08:43] <Razzeeyy> urlin2u, :D but can i place question about openbox here? (in case it's not default part of ubuntu)
+[08:43] <Haematoma> Hey guys
+[08:43] <Haematoma> Anyone up?
+[08:43] <urlin2u> Razzeeyy, I don't care myself. ;-)
+[08:43] <Haematoma> I have issues with system slow down whenever moving or resizing windows
+[08:43] <Haematoma> I have an e5200 processor, which runs at a higher clock speed and has more l2 cache than my laptop
+[08:44] <Haematoma> yet my laptop performs better on ubuntu, no slowdowns while moving or resizing windows
+[08:44] <Razzeeyy> Haematome, i think you should look into compiz about that problem
+[08:44] <Razzeeyy> *Haematoma
+[08:44] <Haematoma> compiz?
+[08:44] <Sebo> Hi!
+[08:44] <Haematoma> isn't that a third party window manager?
+[08:44] <Sebo> Can you tell me how to make /etc/init/*.conf auto respawning job not to respawn if the main process ended while pre-stop is running?
+[08:45] <Haematoma> Razzeeyy, Isn't compiz a third party window manager?
+[08:46] <archman> hello
+[08:46] <Razzeeyy> i was having the same problems when moving windows when unity just came up. due to system monitor the problem was in compiz (about 20%) problem was fixed after update
+[08:46] <Razzeeyy> yes compiz is a window manager. default in unity
+[08:46] <Haematoma> ahh
+[08:46] <archman> i'm trying to use tuxonice to hibernate, but the built in stuff with pm-utils doesn't work, so i'm trying out "hibernate". what is the proper way to add "resume=...." to the grub.cfg?
+[08:46] <Haematoma> so how did you end up fixing it?
+[08:46] <Haematoma> restart?
+[08:46] <Haematoma> update?
+[08:47] <Razzeeyy> update
+[08:47] <Razzeeyy> fix came up with system update
+[08:47] <Razzeeyy> or google for it if it's not
+[08:49] <Razzeeyy> Guys I'm using openbox + trayer. Is there any way to prevent trayer minimize? Looked in openbox per-app settings but there is no such function. Anyone can give any good ideas?
+[08:49] <Haematoma> hmm, well notify-osd isn't functioning correctly, so I wonder if that has something to do with it
+[08:51] <archman> ok, fixed
+[08:51] <archman> does anyone know how to fix the menu which is used when the power button is pressed so it uses different stuff for hibernation?
+=== denny- is now known as denny
+[08:58] <MuNk> since i rebooted just now on 11.04, i can no longer access my private home directory, it keeps telling me i do not own it.. any suggestions?
+=== MuNk is now known as MuNk`

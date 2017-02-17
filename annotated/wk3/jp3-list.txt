@@ -1,0 +1,2 @@
+../../guide.txt tmp-file 0 0
+../../raw/2006-06-01-12-second.txt 2006-06-01-12-second.txt.annotated.jp 101 0

@@ -1,0 +1,381 @@
+[01:35] <cfhowlett> Gavilan3, yeah, well, no.  You want the candy, you gotta put in the work ...
+[01:36] <nearst> hihi.
+[01:37] <rahulsuman> Someone there?
+[01:37] <cfhowlett> rahulsuman, there were?
+[01:37] <fat> can i add another panel at the bottom (ubuntu 12.10)
+[01:37] <KromiX> hi
+[01:38] <KromiX> of course u can do anything u want
+[01:38] <cfhowlett> KromiX, greetings
+[01:38] <rahulsuman> cfhowlett: I am newbie to irc, any suggested channels?
+[01:39] <cfhowlett> rahulsuman, this is ubuntu support.  for general chit chat use #ubuntu-offtopic   Specific programs sometimes have  a channel, thus #gimp   or   #blender   Musician?  #linux-musicians ....
+[01:39] <fat> how can i add nother panel at the bottom??
+[01:39] <plaidcounty> is there a specific channel for wifi problems on 12.10?
+[01:40] <cfhowlett> !wifi|plaidcounty,
+[01:40] <ubottu> plaidcounty,: Wireless documentation, including how-to guides and troubleshooting information, can be found at https://help.ubuntu.com/community/WifiDocs
+[01:40] <cfhowlett> plaidcounty, best to ask here ...
+[01:41] <reverendp> How can I uninstall the steam launcher from the command line
+[01:42] <cfhowlett> reverendp, depends on how it was installed ...  try       sudo apt-get purge steam
+[01:42] <plaidcounty> my problem with my wifi is that it seems to stay connected according to the notification however nothing will connect.
+[01:42] <cfhowlett> plaidcounty, are you also running a wired connection?
+[01:42] <plaidcounty> Only way I've been able to keep a steady connection is to keep a constant ping going in a terminal
+[01:43] <plaidcounty> negative. I've in IRC on my android tablet right now.
+[01:43] <cfhowlett> plaidcounty, in  a terminal:   ping www.ubuntu.com
+[01:44] <plaidcounty> I rebuilt the realtek driver with the linux headers for the ASUS USB N-13 but still has the same problem of "quitting" without disconnecting
+=== paddymahoney is now known as Guest14096
+=== paddymahoney1 is now known as paddymahoney
+[01:44] <plaidcounty> cfhowlett: ping is started for www.ubuntu.com
+[01:45] <cfhowlett> plaidcounty, and I assume it sees ubuntu...
+[01:45] <plaidcounty> yes
+[01:45] <reverendp> cfhowlett hmm it says its not installed.  I installed it from terminal and it kept crashing.  I think I might have installed the 64 version.
+[01:45] <plaidcounty> jujube.canonical.com to be precise
+[01:45] <hfswhere> im looking at an osx hfs+ partition from ubuntu, where are the user files? /media/Macintosh HD/Users seems empty of music/documents etc
+[01:46] <cfhowlett> reverendp, something to look at ...
+[01:46] <hfswhere> ubuntu 11.10 live cd
+[01:47] <reverendp> cfhowlett i've tried remove also and still not installed but the launcher is.  The USC won't let me install the 32 till I remove the launcher
+[01:47] <cfhowlett> plaidcounty, my wifi experience is on Broadcom and I'm happy to say that's gotten a WHOLE lot easier over the years.  No working knowledge of realtek, but I would suspect fully updating your system and then rebuilding the driver should fix it.
+[01:48] <cfhowlett> reverendp, HOW exactly did you install?  Ubuntu software center or a different method?
+[01:48] <reverendp> cfhowlett no I used the terminal to install it
+[01:49] <cfhowlett> reverendp, apt-get steam.deb or dpkg -i?
+[01:49] <plaidcounty> cfhowlett: I was hoping the same, however I've reinstalled entire system twice with no luck and with two different wifi usb adapters. Other was linksys ae2500 (ndiswrapper from xp on 32bit for that one.)
+[01:50] <fat> where is the terminal's image file path (the black board)?
+[01:50] <cfhowlett> plaidcounty, try a different hotspot and see if the problem persists.  If yes, your driver/hardware is suspect.  If no, your current hotspot might have some routing/settings that are futzing your connection.
+[01:50] <reverendp> cfhowlett, I think dppkg -i
+[01:51] <k1l> fat: you can change that in the settings
+[01:51] <cfhowlett> reverendp, ahhh, well then.  sudo dpkg -r is what you want
+[01:51] <fat> k1l: i dont wnat to change it. i just want to find it
+[01:51] <plaidcounty> I'll try connecting to an android tether.
+[01:51] <k1l> fat: its not a image. its just a color
+=== kubuntu_ is now known as duckx0r
+[01:52] <cfhowlett> plaidcounty, clever.  I didn't even think of that
+[01:52] <fat> k1l: it is an image. it looks like this: http://cdn1.iconfinder.com/data/icons/stilllife/128x128/apps/gnome-terminal.png
+[01:53] <k1l> fat: ah sry. thought you ment the background from the terminal
+[01:53] <fat> k1l: nope. do u know where i can find it my file system?
+[01:53] <reverendp> cfhowlett, will try that thanks so much, I am still learning
+[01:53] <cfhowlett> reverendp, no worries
+[01:54] <yown> I am having trouble with the linux channel, and I wish to discuss distro options. Where is another place I can go to do so?
+[01:54] <rurufufuss> how does one run the disks program (for benchmarking harddrives) from the command line?
+[01:54] <fat> yown: #linux
+[01:54] <rurufufuss> 12.10 complains that running from the menu doesn't have proper permissions :/
+[01:54] <fat> yown: type /j linux
+[01:54] <duckx0r> I'm having trouble getting the live CD to mount. in both gparted and partitionmanager, "mount" is grayed out for all partitions. i also can't write to the live CD because it says read only file system. how do I mount with write access?
+[01:54] <k1l> fat: /usr/share/icons ?
+[01:54] <cfhowlett> !ot|yown would be good for that, but of course, favorably biased toward ubuntu
+[01:54] <ubottu> yown would be good for that, but of course, favorably biased toward ubuntu: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[01:54] <escott> rurufufuss, there are many different benchmarking tools. which one
+[01:54] <yown> fat That just forwards me to ##linux, which I said I was having trouble with
+[01:54] <k1l> fat or in ~/.icons
+[01:55] <cfhowlett> duckx0r, live system is a CDrom or USB
+[01:55] <rurufufuss> escott: never mind, found it, it was gnome-disks
+[01:55] <fat> k1l: in the /usr/share/icons is the terminal image there?
+[01:55] <cfhowlett> yown, www.distrowatch.com
+[01:55] <tidux> when can we expect a generic apk for "Ubuntu for Android"?
+[01:55] <yown> cfhowlett: So ubuntu-offtopic is a good place to discuss distro options?
+[01:55] <sam_> need to install Mavis beacon 20 on ubuntu 12.04 wine . the program installs nicely . it works verywell except that cursor blinks when i move the mouse http://pastebin.com/MvL823aY
+[01:55] <sam_> that was my log file
+[01:55] <cfhowlett> yown, start there ...
+[01:56] <duckx0r> cfhowlett, usb
+[01:56] <fat> k1l: no its not there.
+[01:56] <sam_> need to install Mavis beacon 20 on ubuntu 12.04 wine . the program installs nicely . it works verywell except that cursor blinks when i move the mouse http://pastebin.com/MvL823aY
+[01:56] <yown> cfhowlett: I do not find the information on that website very digestible, or useful for comparison to a novice like me
+[01:56] <tidux> sam_: stop spamming
+[01:57] <k1l> yown: that is all very offtopic here. so please stop that topic
+[01:57] <sam_> im not spaming im asking a question :( !!!!!
+[01:57] <cfhowlett> duckx0r, adding files to live system while it's booted?
+[01:57] <escott> tidux, never
+[01:57] <k1l> !patience > sam_
+[01:57] <ubottu> sam_, please see my private message
+[01:57] <fat> k1l: do u know
+[01:57] <tidux> escott: why not?
+[01:57] <duckx0r> cfhowlett, either that or copying files from one partition to another on the hard drive. i can't seem to mount anything with write access
+=== grep is now known as Guest61629
+[01:58] <tidux> It's just a chroot environment, right?
+[01:58] <k1l> !phone | tidux
+[01:58] <ubottu> tidux: Ubuntu for phone has been announced, see http://www.ubuntu.com/devices/phone to find out more and to sign up for progress updates. Discussion is in #ubuntu-phone
+[01:58] <cfhowlett> !chroot|duckx0r   is the command you want
+[01:58] <ubottu> duckx0r   is the command you want: A chroot is used to make programs believe that the directory they are running in is really the root directory. It can be used to stop programs accessing files outside of that directory, or for compiling 32bit applications in a 64bit environment - see https://help.ubuntu.com/community/BasicChroot
+[01:58] <k1l> fat: no. you gotta search for yourself if noone knows else
+[01:58] <fat> k1l: ok
+[01:58] <yown> k1I Gladly, just answer the question about where to go then please
+[01:59] <k1l> yown: you were shown several channels
+[01:59] <cfhowlett> yown, if no live discussion is available on irc, you should consider using the mailing list of which there are .... many.
+[02:00] <sam_> need to install Mavis beacon 20 on ubuntu 12.04 wine . the program installs nicely . it works verywell except that cursor blinks when i move the mouse http://pastebin.com/MvL823aY
+[02:00] <duckx0r> cfhowlett, how would i use chroot to mount with write access?
+[02:01] <cfhowlett> !wine|sam_,
+[02:01] <ubottu> sam_,: WINE is a compatibility layer for running Windows programs on GNU/Linux - More information: https://help.ubuntu.com/community/Wine - Search the !AppDB for application compatibility ratings - Join #winehq for application help - See !virtualizers for running Windows (or another OS) inside Ubuntu
+[02:01] <k1l> sam_: for wine support see the wine support :) they know best whats going on
+[02:01] <cfhowlett> yown, already advised you to see #linux.  best answer you'll get today.
+[02:02] <WBF> having an issue with compiling vamos: http://paste.ubuntu.com/5560386/
+[02:02] <sam_> err:richedit:ReadStyleSheet skipping optional destination  anybody knows what it means?
+[02:03] <escott> duckx0r, chroot wont do anything for your situation
+[02:03] <escott> duckx0r, what kind of filesystem are you trying to mount?
+[02:03] <duckx0r> escott, fat32 and ext3
+[02:04] <saloomi2012> Hello what does  System > Preferences > Startup Applications mean?
+[02:04] <cfhowlett> saloomi2012, what programs start automagically when you login
+[02:05] <saloomi2012> how do i know that?
+[02:05] <saloomi2012> cfhowlett
+=== kyza98_ is now known as KYZA
+[02:05] <rurufufuss> what possible reasons for copy speeds being really slow, while hard drive testing (i.e hdparm) shows everything is ok?
+[02:05] <cfhowlett> saloomi2012, see the startup applications?  Those.
+[02:05] <NathanWW> what version of ubuntu should i use to install on a panasonic toughbook cf-28, it has the intel intel 82830 video chipset, 364meg ram 600mhz P3 cpu. ? anyu recomendations
+[02:05] <saloomi2012> where would that be located i dont even know what System > Preferences > Startup Applications means cfhowlett
+[02:05] <rurufufuss> hdparm test shows that read speed is at 100mb/s, but cp (as shown in gcp) is going at 1.0mb/s..
+[02:05] <cfhowlett> NathanWW, lubuntu or xubuntu are lightweight distros optimized for older and low spec machines
+[02:06] <k1l> NathanWW: wich a big amount of luck Lubuntu will run
+[02:06] <mgolisch> rurufufuss: what are you copying? and to where?
+[02:06] <NathanWW> what about a netbook 10.10 ubuntu version?
+[02:06] <NathanWW> any thoughts there?
+[02:06] <k1l> NathanWW: but with that old cpu there will be some problems maybe. so no guarantee here.
+[02:06] <rurufufuss> mgolisch: from disk to ramdrive, from disk to same disk
+[02:06] <cfhowlett> NathanWW, I think 10.10 is no longer supported ...
+[02:06] <rurufufuss> mgolisch: both are very very slow
+[02:06] <fat> does any1 here use CAIRO DOCK?
+[02:06] <k1l> NathanWW: 10.10 is out of support.
+[02:07] <duckx0r> escott, i was able to figure out how to write to the live USB, so i'll just copy the files there and then copy them back to the hard drive after install
+[02:07] <saloomi2012> Hello what does  System > Preferences > Startup Applications mean and how to use it?
+=== dark3n is now known as dark3n|off
+[02:07] <nezZario> what's the next in line as far as 'unstableness' in ubuntu after lts ?
+[02:07] <cfhowlett> saloomi2012, use it to do what?
+[02:07] <NathanWW> bugger i can get debian lenny to run but the new version dropped support of my graphics chipset lol
+[02:07] <nezZario> sorry, mostly deal with debian, this guy installed ubuntu so I figure i'll try to get the ins & outs real quick..
+[02:07] <saloomi2012> what does it even mean cfhowlett?
+[02:07] <saloomi2012> is it like a terminal command or what?
+[02:07] <cfhowlett> saloomi2012, as stated, THOSE are the programs that start automatically at launch.
+[02:07] <mgolisch> rurufufuss: anything shows up in dmesg?
+[02:08] <rurufufuss> mgolisch: what do I do with dmesg?
+[02:08] <nearst> dmesg is like log
+[02:08] <saloomi2012> and how to modify those? cfhowlett
+[02:08] <ryebread761> Anyone here deal with Ubuntu on Macs?
+[02:08] <rurufufuss> there's quite a lot of stuff there in dmesg
+[02:08] <cfhowlett> saloomi2012, depends on your ubuntu version which is ....?
+[02:08] <mgolisch> rurufufuss: it displays logging messages from the kernel
+[02:08] <saloomi2012> cfhowlett 12.10
+[02:09] <fat> does any1 use cairo dock?
+[02:09] <rurufufuss> mgolisch: there's a lot of chrome-related messages there it seems
+[02:09] <mgolisch> rurufufuss: maybe pastebin the output of dmesg
+[02:09] <saloomi2012> so any idea how cfhowlett?
+[02:09] <rurufufuss> mgolisch: http://pastebin.com/TbmnQce1
+[02:09] <cfhowlett> saloomi2012, I'm on 12.4 xubuntu so mine differs from yours.  restate your question; I'm on 12.10.  I want program FOO to start automatically on login.  How do I set that up?
+[02:10] <cfhowlett> saloomi2012, and someone will help you with it.
+[02:10] <rurufufuss> the other thing, I tried using gnome-disks to benchmark it, but it keeps telling me that device/resource is busy
+[02:10] <nearst> why not trying todo do-release-upgrade :D
+[02:10] <saloomi2012> I'm on 12.10.  I want program FOO to start automatically on login.  How do I set that up?
+[02:11] <escott> saloomi2012, gnome-session-properties
+[02:11] <nearst> !patience | saloomi2012
+[02:11] <saloomi2012> escott where is that located?
+[02:11] <ubottu> saloomi2012: Don't feel ignored and repeat your question quickly; if nobody knows your answer, nobody will answer you. While you wait, try searching https://help.ubuntu.com or http://ubuntuforums.org or http://askubuntu.com/
+[02:12] <nezZario> uh, how the crap do I move off LTS ?
+[02:13] <cfhowlett> nezZario, install 12.10 you mean?
+[02:13] <escott> saloomi2012, /usr/bin
+[02:13] <rurufufuss> hmm, now that I look at dmesg, I see some "SATA link down", what could that mean?
+[02:13] <usr13> nezZario: Just change it on the update manager.
+[02:13] <plaidcounty> cfhowlett: no dice on the android tether. double checked, though, on my netbook with a broadcom chip on 12.10... works as expected with my router.
+[02:13] <nezZario> this is a server.
+[02:14] <mgolisch> rurufufuss: did you disconnect disks?
+[02:14] <nezZario> shouldn't I be able to change apt sources.list and just update uprgade dist-upgrade ?
+[02:14] <k1l> nezZario: set release prompt to not lts
+[02:14] <usr13> nezZario: edit /etc/update-manager/release-upgrades and set Prompt=normal
+[02:14] <k1l> nezZario: no dont do that
+[02:14] <rurufufuss> mgolisch: physically or software-wise? nope
+[02:15] <cfhowlett> plaidcounty, that suggests to my mind a setting issue on your box.  Sadly, I don't where to look though.  sorry.  ask again in channel.  you might want to make a text file of the problem and paste it so you don't have to re-type
+[02:15] <k1l> nezZario: use do-release-upgrade
+[02:15] <usr13> nezZario: But do you really want to move away from LTS on a server?
+[02:15] <mgolisch> rurufufuss: might be somekind of powermanagement stuff
+[02:15] <saloomi2012> where is the Terminal app located?
+[02:15] <rurufufuss> I just realised, that when going on "places" and looking at the devices, I can't mount anything
+[02:15] <nezZario> yeah, i'll give it a shot
+[02:15] <nezZario> it's a development server anyway
+[02:15] <mgolisch> rurufufuss: did you set anything like that?
+[02:15] <rurufufuss> mgolisch: hmm, lack of power?
+[02:15] <k1l> nezZario: and as a server admin you want to read the manuals and release notes :)
+[02:15] <rurufufuss> mgolisch: no idea, I did put in another 16GB of ram onto the CPU
+[02:15] <cfhowlett> k1l, you funny!
+[02:15] <rurufufuss> to 24GB now
+[02:15] <usr13> nezZario: Never mind, it was not a relevant question.  Sorry.
+[02:16] <mgolisch> rurufufuss: no more like suspending the channel because of no activity or such
+[02:16] <plaidcounty> cfhowlett: thanks. kind of thought that's where this was going :) Wish me luck!
+[02:16] <mgolisch> rurufufuss: is this a laptop? did you suspend it by any chance?
+[02:16] <rurufufuss> mgolisch: oh, I did suspend the computer
+[02:16] <cfhowlett> plaidcounty, best of luck!
+[02:16]  * k1l funny?
+[02:16] <mgolisch> rurufufuss: that is it then
+[02:16] <rurufufuss> the cause of the slow speeds you mean?
+[02:17] <rurufufuss> or the SATA link down
+[02:17] <cfhowlett> ki1 ... "as a server admin ..."
+[02:17] <mgolisch> rurufufuss: the links going down and up
+[02:17] <rurufufuss> ah right
+[02:17] <mgolisch> rurufufuss: might be related to the bad speed too
+[02:17] <mgolisch> rurufufuss: id just try rebooting
+[02:17] <rurufufuss> well, the bad speed happens when I reboot too I think
+[02:17] <mgolisch> but it usualy shouldnt cause problems like that
+[02:18] <rurufufuss> okay, gonna try reboot once more
+[02:18] <rurufufuss> thanks for being helpful btw
+[02:18] <saloomi2012> How to add the Terminal in startup application prefrences?
+[02:19] <gman529> Hey everyone
+[02:19] <cfhowlett> gman529, greetings
+[02:19] <gman529> I am having some trouble with ubuntu 12.04 that I just can't figure out
+[02:19] <escott> saloomi2012, run gnome-session-properties and add your terminal there
+[02:19] <jasunto> this is like watching paint dry
+[02:19] <nezZario> ok, yeah, i can't even find a single tutorial on how to upgrade debian without the use of gui and packages I don't even have .. :)
+[02:20] <saloomi2012> i know escott but where is the terminal located? to i just drag it?
+[02:20] <nezZario> i'm just going to change the apt source.list and do what I said, .. can't hurt
+[02:20] <escott> saloomi2012, type "which gnome-terminal"
+=== Emmanuel_Chanel_ is now known as Emmanuel_Chanel
+[02:20] <escott> saloomi2012, and it will give you the full path
+[02:20] <gman529> Anyone have any idea what would cause the mouse to stop working on the desktop landscape, but work on the unity and title bars
+[02:20] <gman529> right click and left click don't work
+[02:21] <cfhowlett> nezZario, before you do all that?  might want to check in #ubuntu-server
+[02:21] <gman529> also, they don't work on the any programs opened up
+[02:21] <gman529> I have googled and googled and I can't find shit
+[02:22] <k1l> nezZario: this isnt debian support.
+[02:22] <escott> gman529, nautilus isn't running or isn't drawing the desktop
+[02:22] <saloomi2012> escott to test that  do i relog ?
+[02:22] <Foxhoundz> How do I disable the suggested apps adware Ubuntu installs on my OS by default?
+[02:23] <krkelly> is there anyone who could help me with some openvpn issues?
+[02:23] <escott> gman529, if its not working in any applications but working for dragging windows then compiz is bugging out
+[02:23] <cfhowlett> !lens|Foxhoundz,
+[02:23] <gman529> hmm
+[02:23] <Foxhoundz> cfhowlett: ?
+[02:23] <gman529> what is really odd is this is a fresh install
+[02:24] <cfhowlett> Foxhoundz, you want to disable amazon lens.  thought there was a factoid ..
+[02:24] <rurufufuss> hmm, the slow copying speed is still there :(
+[02:24] <gman529> and it works in the ubuntu test desktop
+[02:25] <trism> !adlens | Foxhoundz
+[02:25] <ubottu> Foxhoundz: If you wish not to see "More Suggestions" from places like Amazon in your Ubuntu 12.10, simply remove the package unity-lens-shopping, or adjust your Privacy settings as shown here: http://goo.gl/kFO4u . Mark Shuttleworth's blog entry on this is at http://goo.gl/uF7zZ
+[02:26] <cfhowlett> gman529, different drivers are active on live boot if I'm not mistaken.  some kind of generic "mouse driver"
+[02:26] <cfhowlett> trism, thanks.
+[02:26] <nezZario> k1l: wouldn't that be like saying you can't ask about tcip because this isn't bsd support ?
+[02:26] <ikla> does unity work well with dual monitors?
+[02:26] <cfhowlett> Foxhoundz, or logout, choose a different Desktop Environment and log in.
+[02:26] <DJHenjin_> rsync is faster and more efficient than scp ove ssh via CLI right?
+[02:26] <k1l> nezZario: cmon
+[02:26] <cfhowlett> nezZario, regardless this ain
+[02:27] <cfhowlett> aint' debian support.
+[02:27] <gman529> cfhowlett, so all I would need to do is change xorg.conf and set the file to use the generic driver
+[02:27] <krkelly> is there anyone who could help me with some openvpn issues?
+[02:27] <k1l> nezZario: the upgrade process differs alot between debian and ubuntu. so ask the specific support
+[02:27] <cfhowlett> gman529, eloquent.  start there
+[02:28] <usr13> !topic | nezZario
+[02:28] <ubottu> nezZario: Please read the channel topic whenever you enter, as it contains important information. To view it at any time after joining, simply type /topic
+[02:28] <gman529> cfhowlet, I know linux, but this new ubuntu is really different and I haven't kept up
+[02:28] <cfhowlett> gman529, no worries.  we're ALL learning.
+[02:28] <gman529> cfhowlet, Thanks for the info thought.
+[02:29] <ikla> does unity work well with dual monitors?
+[02:29] <gman529> ikla, yes if you can get it working
+[02:29] <Tex_Nick> 21.10 gnome classic de ... i recently added a second monitor, no problems ... when i reboot, only the monitor without my panels is active ... the kludge i've come up with is to right-click on desktop & choose "change desktop background" then click the "all settings" tab & then Displays ... i then check "mirror displays" & apply ... the inactive monitor becomes active ... i then uncheck "mirror displays" and the second monitor remains ac
+[02:29] <Tex_Nick> tive ... i've googled and not found anything quite like this ... couls someone provide a more elegant solution ;-)
+[02:29] <k1l> gman529: there is no old desktop in unoty
+[02:29] <k1l> *unity
+[02:29] <mgolisch> rurufufuss: hm has it ever been faster?
+[02:29] <fbc_> cfhowlett, I think I figured this out. I'm supposed to be using the amd64+mac images
+[02:29] <k1l> gman529: so you cant place dektop icons on your desktop etc. (by default)
+[02:30] <ikla> gman529, I thought ubuntu didn't require me to get things working
+[02:30] <cfhowlett> fbc_, dern details!
+[02:30] <rurufufuss> mgolisch: yeah, after 12.10 for like one day, then I installed new rams, then it's super slow now
+[02:30] <cfhowlett> fbc_, but I should have asked ...
+[02:30] <gman529> ikla, the dual monitors does require some settings adjustment and possible driver selection
+[02:30] <rurufufuss> mgolisch: but then the ramdrive speed is super fast, so it can't be ram issue can it?
+[02:31] <gman529> ikla, but that has been something with linux for awhile
+[02:31] <ikla> once agazin I thought ubuntu licked your butt and did it all for you :)
+[02:31] <nearst> rurufufuss, http://www.cyberciti.biz/faq/check-ram-in-ubuntu/ :D
+[02:31] <ikla> I'll try it out and see
+[02:31] <gman529> k1l, but I could right click on desktop landscape on the test desktop and i get the menu
+[02:31] <tcstar> So, it seems as though thunderbird doesn't allow for custom servers for mail.. it wants either imap. or pop3. in the URL which I don't have on my server...  So, what's an alternative email client that's decent to run?
+[02:31] <gman529> k1l, once it's installed I get nothing
+[02:32] <nearst> tcstar, im use claw-mail or mutt.
+[02:32] <k1l> gman529: afaik its the regular behaviour in unity. i think you can set the oldschool behaviour anywhere but i dont know where
+[02:33] <k1l> gman529: i cant click on my desktop too
+[02:33] <rurufufuss> nearst: 24202 total mem, I'm assuming megabytes?
+[02:33] <rurufufuss> and around 23 gigs free
+[02:33] <Mathnerd314> so, I'm trying to use redshift with my Proview PLW2230WDBi. The main thing I'd like is a brightness control. Apparently DDCcontrol has been abandoned for many years. Is there a replacement? There's something called /sys/class/backlight but I don't see anything there.
+[02:33] <nezZario> nope prolly kilobytes
+[02:33] <gman529> can you click inside of programs
+[02:33] <nearst> rurufufuss, aw. chipset mobo ? or some kernel modules then
+[02:33] <k1l> gman529: yes
+[02:34] <tcstar> nearst -- thanks -- i'll take a look at those too..  installing Evolution right now
+[02:34] <escott> rurufufuss, you installed additional ram and your machine got slower?
+[02:34] <rurufufuss> nearst: hmm, it's an asrock h77, if that makes a difference. I might try removing the two new rams and see if this helps with anything
+[02:34] <gman529> k1l, I can't actually interact with programs with my mouse
+[02:34] <rurufufuss> escott: well, now that I think about it, yeah
+[02:34] <gman529> at all
+[02:34] <escott> rurufufuss, if that is the case can you run "dmesg | head -n 200" and paste it to paste.ubuntu.com
+[02:34] <gman529> except highlight
+[02:34] <rurufufuss> escott: doing that now
+[02:35] <k1l> gman529: ahh. ok. i missread that you only couldnt click on the desktop (wallpaper)
+[02:35] <rurufufuss> escott: http://paste.ubuntu.com/5560432/
+[02:35] <escott> k1l, yeah i read it the same way at first
+[02:36] <gman529> k1l: I'm going to try and set it back to the generic driver in the xorg.conf
+[02:36] <gman529> I really hate compiz and unity
+[02:36] <gman529> if the make it so difficult to work with
+[02:36] <escott> rurufufuss, looks like you may have an MTRR issue
+[02:37] <gman529> for example my desktop just locked and I can't click on the unlock button
+[02:37] <rurufufuss> escott: is that something solvable by googling, or do I need new hardware :(
+[02:37] <nearst> MTRR default type: uncachable
+[02:38] <rurufufuss> so I have to go to bios and do stuff?
+[02:38] <escott> rurufufuss, im not too familiar with them except that you can have issues with them. check beyond line 200 of dmesg to see if the kernel eventually finds a suitable way to program it, but usually the kernel won't struggle to find an MTRR program
+[02:39] <escott> rurufufuss, you might also check for a bios update or ask in a channel like ##hardware
+[02:39] <nearst> mtrr cleanup actually
+[02:39] <rurufufuss> ah, hmm
+[02:40] <escott> rurufufuss, also are you running 64bit? i cant tell from that dmesg
+[02:40] <rurufufuss> escott: 32bit
+[02:40] <escott> rurufufuss, it looks like you are running 32bit in which case i would suggest reinstalling a 64bit version
+[02:41] <rurufufuss> escott: I have to use 32bit, this linux box is solely used to compiling simulated iphone apps on opengl :/
+[02:41] <krkelly_> can someone help with openvpn on ubuntu?
+[02:42] <escott> rurufufuss, and why can't you do that from 64bit?
+[02:42] <nearst> maybe kernel reallocation.
+[02:42] <rurufufuss> escott: well, I'll have to install the 32 bit libraries and stuff, seems like a lot more hassle
+=== krkelly_ is now known as krkelly
+[02:43] <rurufufuss> I'm gonna try removing the two new rams first and see if that's truly the case though
+[02:44] <nearst> how much ram slot u have atm :D
+[02:44] <escott> he already left. i was going to ask him the same
+[02:44] <escott> oh well
+[02:45] <gman529> where is ubuntu's xorg.conf
+[02:45] <nearst> ive dont another spare for ram putting ram now. hehe
+[02:45] <cfhowlett> gman529, in terminal:  locate xorg.conf
+[02:45] <escott> gman529, it wont have one by default
+[02:45] <gman529> the one in /etc/X11/ doesn't have anything
+[02:45] <gman529> i did the locate xorg.conf
+[02:46] <nearst> new amd driver 13.1 not yet being support on xorg 1.13?
+[02:48] <DJHenjin_> iknonia, its Hunterdouglas here from earlier, you around?
+[02:50] <rurufufuss> hmm, after removing one of the rams, and starting up, I quickly tried to copy a file and it was faster, though still slow
+[02:50] <escott> rurufufuss, what are your stick sizes and what slots are they in
+[02:50] <rurufufuss> now the ram's in slot #1 and #3, but now copying 2 gigs to the memory  is going at 6.50 M/s
+[02:50] <escott> rurufufuss, and what version of DDR is this
+[02:51] <rurufufuss> DDR3, 8GB stick, at slots #1 and #3 now
+[02:51] <rurufufuss> it was slots #1, #2 and #3 (out of 4 possible slots before)
+[02:51] <escott> rurufufuss, and before it was?
+[02:51] <nearst> same model? or mix from any different freq?
+[02:51] <DJHenjin_> hmm, for some reason when i do service vsftpd restart  it tells me unknown process then apf start running
+[02:51] <rurufufuss> before it was at 1.31M/s
+[02:52] <rurufufuss> escott: I'm gonna try go back to the 1 stick of ram, and see how it goes
+[02:52] <escott> rurufufuss, i cant remember all the DDR slot matching rules, but having 3/4 slots full is decidedly odd
+[02:52] <rurufufuss> escott: well, the 4th one was dead on arrival, and I'm gonna return it today
+[02:52] <rurufufuss> just got it yesterday
+[02:53] <escott> rurufufuss, 6.5MB/s is along the lines of DDR3-800
+[02:53] <rurufufuss> ok, looks like copying 2 gigs of things is stuck at 6.5ghz
+[02:53] <rurufufuss> 6.5mb/s sorry
+[02:53] <rurufufuss> actually shouldn't ram be way faster than that?
+[02:53] <escott> rurufufuss, sorry misreading the table
+[02:53] <escott> rurufufuss, off by a factor of 100
+[02:53] <escott> :)
+[02:54] <rurufufuss> yeah, it's pretty slow aye
+[02:54] <rurufufuss> well, I'mm gonna try again and see
+[02:54] <escott> rurufufuss, i would worry that you did something that makes these unmatched in a way that is causing problems for theOS
+[02:55] <DJHenjin_> for some reason VSFTPD is not running, i am not seeing any errors when i run service vsftpd start  but it refuses to run
+[02:55] <nearst> try with default setting in bios and run in single mode
+[02:56] <mgolisch> DJHenjin_: checked its logfile?
+[02:56] <DJHenjin_> mgolisch:  not entirely sure where to look, /var/log/vsftpd.log ?
+[02:57] <tcstar> just found out my issue with my email is that my server (or something) is blocking me on port 25 (as i can't telnet to it)
+[02:57] <mgolisch> DJHenjin_: probably i dont have that installed
+[02:57] <szx> why does ubuntu not remember mouse pointer speed in settings?
+[02:57] <DJHenjin_> isnt there, hmm
+[02:58] <rurufufuss> yeah, it was definitely the extra ram
+[02:58] <rurufufuss> :(
+[02:58] <mgolisch> DJHenjin_: you run that service thing using sudo?
+[02:58] <escott> rurufufuss, you've done something to break the matching of the ram
+[02:58] <rurufufuss> escott: it's the same ram though, I think
+[02:59] <escott> rurufufuss, its always just easier to buy matched products and use them matched
+[02:59] <nearst> maybe ram freq u install
+[02:59] <leptone> hello trying to set up rotate cube on 12.04. each time i press Ctrl+Alt+Down my system crashes and i have to reboot. whats going on?
+[02:59] <DJHenjin_> mgolisch:  yes i did run it as sudo
+[02:59] <rurufufuss> nearst: is that a command?
+[02:59] <nearst> rurufufuss, eh.. no.. im mean your ram Mhz installed

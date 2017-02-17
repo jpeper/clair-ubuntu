@@ -1,0 +1,536 @@
+[10:36] <dlozarie> bazhang, could this issue possibly be solved by rebooting?
+[10:36] <thejranjan> sweetgum: sorry i dont
+[10:36] <rage> Just off hand, does anyone here know how to get the desktop icons to appear on the far right rather than the far left?
+[10:36] <sweetgum> Light-: I don't understand what it is to sort an already sorted list
+[10:36] <patric_> sweetgum, mom reading trhough
+[10:36] <sweetgum> patric_:thanks
+[10:37] <thejranjan> how to remove an item from applications>sound and video menu ???
+[10:37] <bazhang> dlozarie, hard to say; not a common occurrence
+[10:37] <apinunt> Flannel | koshari: OK, one last question. In Synaptics, under Software Sources - Authentication, I have only 2 keys, one for the CD image, and the other for Ubuntu Archive Automatic Signing Key dated 2004-09-12, Is that up to date? And is that all I should have?
+[10:37] <dlozarie> bazhang, I will try to reboot. :)
+[10:37] <fredmv> Light-:   So I told it to format the drive at ext3, and now it's on the "pending operations" area on the bottom.  I mean, it's 500 gb, so it'll take a little while?
+[10:37] <Light-> sweetgum: yeah, its kinda hard to explain. gtk objects have to be organised into vboxes and hboxes to be able to be moved around a window, unlike winforms when you juts drag and drop where you want something to go
+[10:37] <Light-> fredmv: click "apply"
+[10:37] <sweetgum> Light-: Bigbrother Survived The Fires!
+[10:38] <sweetgum> Light-: In reference to banned book burnings
+[10:38] <Light-> sweetgum: lol dont follow
+[10:38] <fredmv> Light-:     Thanks very much yet again.      This is what I get for staying up all night.  I'm usually not this braindead
+[10:38] <buzz124> anyone know if the ati drivers updated recently (on the repositories)?
+[10:38] <koshari> apinunt unless you have added aditional 3rd party repos, the default keys are all you would need, and even without the keys you would just get a warning
+[10:38] <Light-> fredmv: no problem :)
+[10:38] <patric_> sweetgum, i'm not shure. i do not any gtk programming, but that looks like a function to that you give a parameter
+[10:38] <sweetgum> Light-: heh, concept of being organized
+[10:39] <thejranjan> which is the best media player in ubuntu
+[10:39] <bazhang> sweetgum, please take chat to #ubuntu-offtopic
+[10:39] <icqnumber> The Filesystem item in Places menu has gone without any reason, but it is still displayed in Nautilus (places), how comes and howto fix that?
+[10:40] <apinunt> koshari: I was wondering because I use Main, restricted, universe, and multiverse, and thought each would require a key.
+[10:40] <sweetgum> sorry baz
+[10:41] <Light-> thejranjan: thats a bit offtopic, but i'd go with Smplayer as a Mplayer GUI since it has the best support for subtitles
+[10:41] <Le^stat> How do i get vncserver to startup in the login screen?
+[10:41] <Le^stat> i have searched all over
+[10:41] <Le^stat> help please
+[10:42] <Bighost> hi there
+[10:42] <patric_> Le^stat, modyfying startx script or write a gdm theme
+[10:42] <munipradeep> Hi all, I am using  Ubuntu Hardy. Bluetooth is not working properly.
+[10:42] <munipradeep> I am using LENOVA T61 laptop
+[10:43] <patric_> munipradeep, it think it does or du you think that thousands of sites for a standard are just bullshit:)
+[10:43] <bazhang> patric_, family friendly please
+[10:43] <patric_> sry
+[10:43] <Light-> munipradeep: define "not working properly"
+[10:44] <nantax> !ot
+[10:44] <ubottu> #ubuntu is the Ubuntu support channel, #ubuntu+1 supports the development version of Ubuntu and #ubuntu-offtopic is for random chatter. Welcome!
+[10:44] <munipradeep> Light: I mean, its not connecting from laptop to laptop
+[10:45] <munipradeep> Light: I am not able to send one file from one laptop to laptop
+[10:45] <henkpoley> Hi, I accidentally enabled "inverse screen rendering" with a hotkey. Anybody knows how to get back to normal?
+[10:45] <patric_> munipradeep, check the logfiles try to be more precise
+[10:45] <Light-> munipradeep: my laptop doesnt have bluetooth, but if I wanted to go laptop>laptop id create an ad-hoc wireless network with the wireless card instead of bluetooth
+[10:46] <pvh_sa|wrk> ah. my firefox problem was related to XUL.mfasl. yay for strace!!
+[10:48] <dlozarie> hi, all. I'm back. the terminal works fine now.
+[10:48] <Jokka[Tux]> Does ayone know if its possible to change workspace by clicking mouse and scrolling where ever i am on the desktop
+[10:48] <dlozarie> can i get some help on how to install windows drivers on Ubuntu using ndiswrapper?
+[10:48] <Jokka[Tux]> dlozarie, why not use linux drivers?
+[10:48] <dlozarie> jokka[tux], i usually just scroll on an empty space in the desktop and i can switch desktops
+[10:49] <dlozarie> jokka, my laptop's manufacturer does not offer linux drivers
+[10:49] <Jokka[Tux]> dlozarie, yeah thats what i do too but i would like it to work while running fullscreen things, like xchat
+[10:50] <dlozarie> jokka, oh. I'm sorry, I really don't know how to switch workspaces like that.
+[10:50] <Jokka[Tux]> dlozarie, im not even sure its possible.. but it would be handy
+[10:50] <Light-> dlozarie: the linux kernel usually comes with drivers for pretty much everything, was there a particular item of hardware that wasnt working?
+[10:51] <dlozarie> light-, well right now I can't hear any sound on my computer.
+[10:51] <gordonjcp> dlozarie: What exactly are you trying to do?
+[10:51] <dlozarie> gordonjcp, hold on. I'm checking if the problem still persists. :)
+[10:52] <Light-> dlozarie: sound is quite broken in 8.04. have you tried using a different mixer? (click volume control, then File>Change Device)
+[10:52] <dlozarie> light-, my speakers are playing now. looks like that no-sound issue was just some temporary glitch. thanks, guys.
+[10:52] <Kartagis> I love how ubuntu completes the command after sudo, even the switches like install
+[10:53] <Escuro> i love ubuntu at al
+[10:53] <Escuro> all
+[10:53] <dlozarie> imma hang around for a while and see if there are any problems I can help out with
+[10:53] <Kartagis> Escuro: gentoo didn't have this
+[10:53] <j2> i need some help, i deleted an old partition which had ubuntu on to make space for my new install but now i am getting a grub 22 error
+[10:54] <woden1> Why is it that when I use the Ubuntu Live CD my hard drive activity light blinks?  Is it writing stuff to my hard drive?
+[10:54] <Light-> j2: seems like you need to re-install grub
+[10:54] <dlozarie> woden1, that hard drive light blinks when your hard drive is active.
+[10:54] <j2> how do i do that Light
+[10:55] <Light-> j2: dont know off the top of my head :) try google
+[10:55] <dlozarie> I'm quite sure that the hard drive is invariably active whenever you use your computer
+[10:55] <koshari> dlozarie using compiz you could attach any binding to change desktop (providing its not already commited to another action)
+[10:56] <koshari> Light there plenty of wifi chipsets that dont work with linux native drivers
+[10:56] <woden1> dlozarie:  So the ubuntu live CD isn't touching my hard drive then?
+[10:56] <bazhang> !grub | j2
+[10:56] <ubottu> j2: grub is the default Ubuntu boot manager. Lost grub after installing windows: https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows - Making GRUB floppies & other GRUB howtos: https://help.ubuntu.com/community/GrubHowto
+[10:56] <bazhang> woden1, nay
+[10:56] <Light-> dlozarie: not using compiz, ctrl+alt+arrow changes desktop for me, although I cant remember if I set it to that or not
+[10:56] <garrett__> woden1: less it's scanning your partition table to setup mount points for you, probably not
+[10:57] <Light-> woden1: nope, although it may have automounted it so you can access it
+[10:57] <dlozarie> woden1, I really can't say for sure since I'm not much of an expert on those things, but I don't think your Live CD is writing anything to your hard drive.
+[10:57] <garrett__> woden1: but there's also a chance that your HD light is a general IDE bus light, so it's flickering because your cd's being used.
+[10:57] <dlozarie> If it is, I'm sure it's nothing major.
+[10:57] <JbCrash> anyone here using kiba dock? how i can install it?
+[10:57] <barbarella> j2:start ubuntu cd in recovery modes, there you will have an option to reinstall grub.
+[10:57] <Light-> JbCrash: are there no packages in Synaptic?
+[10:57] <fredmv> Light-, you still here man?
+[10:57] <dlozarie> light-, CTRL+ALT+arrow works for me. :)
+[10:58] <Light-> fredmv: yep
+[10:58] <Light-> dlozarie: :)
+[10:58] <JbCrash> Light-: let me check
+[10:58] <fredmv> Light-:  Well, the My Book is ext3 now.      Interestingly, the device is now under `/media/disk' and appears to only accept data if the user is root.     Any way to change that?
+[10:58] <dlozarie> fellas, are there any programs you would recommend to install on Ubuntu 8.04?
+[10:59] <icqnumber> The Filesystem item in Places menu has gone without any reason, but it is still displayed in Nautilus (places), how comes and howto fix that?
+[10:59] <Light-> fredmv "sudo chmod 777 /media/disk" then "sudo chown <your username> /media/disk"
+[10:59] <koshari> fredmv mount it manually from the fstab file
+[10:59] <Light-> or do what koshari said
+[11:00] <koshari> dlozarie what do you want to do? media, music?
+=== ogra_ is now known as ogra
+[11:00] <dlozarie> koshari, I'm not looking for anything in particular. Just looking to further enhance my already-five star Linux experience. :)
+[11:00] <JbCrash> anyone here using kiba dock? how i can install it?
+[11:01] <koshari> dlozarie bit hard to recommend packages if one doesnt know what you want to use it for
+[11:01] <dlozarie> koshari, I guess you're right. I'm just going to look around in the Add/Remove applications area. :)
+[11:01] <koshari> JbCrash isnt it in the repositorys? avant seems to have more support these days,
+[11:01] <Light-> JbCrash: http://www.kiba-dock.org/components/com_mambowiki/index.php?title=Installing_Kiba-Dock
+[11:01] <dlozarie> oh, and koshari, thanks for helping me out. :)
+[11:01] <koshari> dlozarie for the record i like VLC and amarok
+[11:02] <wolf__> to jest nie sprawiedliwe
+[11:02] <jatt> hdb: task_in_intr: status=0x51 { DriveReady SeekComplete Error }
+[11:02] <jatt> is my dvd broken?
+[11:02] <jatt> hdb: task_in_intr: error=0x04 { AbortedCommand }
+[11:02] <Light-> jatt: looks like it, or the drive
+[11:02] <Escuro> how can i install my usb dsl modem?
+[11:03] <dlozarie> how do I make Gmail notifier load on boot?
+[11:03] <garrett__> if it's the dvd, you can try polishing the disc with hairgell or toothpaste
+[11:03] <jatt> Escuro: should be detected automatically
+[11:03] <garrett__> then rinse it off
+[11:03] <garrett__> if it's a cdr/dvdr, be careful, though as if you get the top surface wet the disc's sort of toast.
+[11:03] <jatt> hairgel?
+[11:03] <jatt> he
+[11:03] <Escuro> jatt: no its not work
+[11:03] <buzz124> anyone know if new ati drivers were available the last few days?
+[11:03] <VanDyke> hairgel is not very good
+[11:03] <garrett__> jatt: yeah.  i've fixed tons of discs with hairgel, actually.
+[11:04] <dlozarie> hi all. Can anyone tell me how to make a certain program load on boot?
+[11:04] <VanDyke> the objective there is to be abrasive
+[11:04] <jatt> I think probably is the drive, since other dvds cause the same error sometimes
+[11:04] <garrett__> it worked better than toothpaste
+[11:04] <koshari> dlozarie add it to your sessions
+[11:04] <VanDyke> depends actually on the specific gel or paste
+[11:04] <JbCrash> Light-:  i need type sudo apt-get only rite.. my machine AMD 64
+[11:04] <abdoo> hi
+[11:04] <dlozarie> koshari, forgive me since I'm really new to all this linux stuff (only installed it yesterday). how do I add it to my sessions?
+[11:04] <VanDyke> those toothpastes with whitening and shit are kinda good
+[11:04] <Light-> JbCrash: "sudo apt-get install <packagename>"
+[11:04] <garrett__> VanDyke: the cheaper the better, i've noticed.  i keep a bottle of dial hairgel about for specifically that rason.
+[11:04] <abdoo> hi
+[11:05] <VanDyke> but nothing beats brasso
+[11:05] <Zbradsta> hey do ne of you guys knw y bzflag wont work on ubuntu 8.04
+[11:05] <garrett__> VanDyke: yeah.  but anything with granuals in it is bad news.
+[11:05] <Zbradsta> or is it jst my comp
+[11:05] <jatt> I never clean my dvds and cds probably that's why the drive broke
+[11:05] <koshari> dlozarie system>preferences>sessions
+[11:05] <Light-> dlozarie: system>preferences>sessions
+[11:05] <dlozarie> koshari, here it is. Thanks for the help!
+[11:05] <VanDyke> brasso still does the job in the most awesome way
+[11:05] <dlozarie> light-, I've found it already. Thanks! :)
+[11:05] <garrett__> jatt: if you wear glasses, you could try wetting a cuetip or something with lense cleaner and polishing the laser
+=== gbs is now known as fserve
+[11:06] <garrett__> jatt: i have to do that to my dvd drive ever so often
+[11:06] <koshari> VanDyke tooth paste is a little less abrasive than brasso,
+[11:06] <buzz124> simple question: anyone know if new ati drivers were available the last few days?
+[11:06] <VanDyke> koshari: true
+=== Zbradsta is now known as Brad7200
+[11:06] <dlozarie> uhm, what do I have to enter in the "command" area? I want to run Gmail Notifier on startup?
+[11:06] <Brad7200> ne 12
+[11:06] <Brad7200> ne 1
+[11:06] <garrett__> jatt: or just isoproyl alcohol
+[11:06] <VanDyke> well it depends really whether one wants to clean it or get rid of scratches
+[11:06] <buzz124> simple question: anyone know if new ati drivers were available the last few days (in the repos...)?
+[11:06] <Brad7200> can someone give me a hand
+[11:07] <VanDyke> if it's to clean it, then isopropyl alcohol
+[11:07] <koshari> garrett__   DONT use isopropol alcohol on polycarbonate, it waill make it bloom
+[11:07] <Light-> dlozarie: the command that you would type to start gmail-notifier
+[11:07] <garrett__> koshari: on the LASER. not the disc
+[11:07] <van> hello
+[11:07] <ActionParsnip> hey all
+[11:07] <VanDyke> hi ActionParsnip
+[11:07] <ghost> hey has anyone had any issues reinstalling firefox after purging it in hardy heron????????/
+[11:07] <Brad7200> any 1 help me
+[11:07] <Light-> dlozarie: not sure what it is, you can figure it out by going system>preferences>main menu, finding gmail notifier and seeing what command is run
+[11:07] <koshari> garrett__ ok yes, i jsut use metho on the lens,
+[11:07] <van> I am come from china
+[11:07] <jatt> hi come
+[11:08] <garrett__> koshari: yeah.  i usually juse use lense cleaner from my glasses
+[11:08] <ActionParsnip> is there a way in pidgin to block chanserv messages??
+[11:08] <garrett__> ActionParsnip: /ignore, usually
+[11:08] <koshari> ActionParsnip i was wondering this to
+[11:08] <dlozarie> light-, I've found it. it's gmail-notify. Thanks so much! :)
+[11:08] <ghost> ########## hey has anyone had any issues reinstalling firefox after purging it in hardy heron???????? ############
+[11:08] <ghost> ???
+[11:08] <ActionParsnip> garrett__: does that really work?
+[11:08] <garrett__> ghost: just reinstall it via synaptics?
+[11:08] <ghost> no go on that
+[11:08] <garrett__> ActionParsnip: it depends on your irc client
+[11:09] <Brad7200> hello?
+[11:09] <ghost> unmet deps
+[11:09] <ghost> apparently
+[11:09] <ghost> both ways
+[11:09] <koshari> garrett__ he mentioned pidgin
+[11:09] <Light-> ghost: why did you uninstall it to start with?
+[11:09] <ghost> and im using the standard repos
+[11:09] <ActionParsnip> garrett__: pidgin dude
+[11:09] <FloodBot3> ghost: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[11:09] <garrett__> ActionParsnip: but BX/ircii/irsi all work with /ignore
+[11:09] <ghost> tried both synaptic and through apt-gety
+[11:09] <ghost> tried both synaptic and through apt-get
+[11:09] <garrett__> ActionParsnip: ah.  yeah.  just add it to your block list, i'd guess.
+[11:09] <Brad7200> can ne1 help me
+[11:09] <ActionParsnip> true, i guess its just a "user" messaging me
+[11:10] <ActionParsnip> !ask | Brad7200
+[11:10] <ubottu> Brad7200: Please don't ask to ask a question, ask the question (all on ONE line, so others can read and follow it easily). If anyone knows the answer they will most likely answer. :-)
+[11:10] <Brad7200> i need help playin the game bzflag cus it wont run on my comp ubuntu 8.04
+[11:10] <ghost> awesome all just compile it manually as usually thank for your help guys all start another help server considering i write kernel code
+[11:10] <ghost> adios
+[11:10] <garrett__> ghost: well, less you provide some more information, no one's gonig to be able to help you -- and i rm'd the 8.04 ff3 build to install rc1 and then went back to ff3b5 without any issue using synaptics
+[11:10] <bring2> Brad7200, does it give an error? what doesn't work?
+[11:11] <ActionParsnip> garrett__: you are a genius
+[11:11] <Brad7200> it opens and then closes before the loading screen apears
+[11:11] <insomnia> is it usual for pst to crash when switching to tty?
+[11:11] <Brad7200> basicly the screen jst flashes
+[11:11] <Light-> Brad7200: run it in the terminal and see what gets outputted
+[11:11] <garrett__> ActionParsnip: welcome :P
+[11:11] <goudkov> hi guys, i'm getting "MD5 Hash NOT expected but found" in my log. what can be causing it? It's related to networking, but I can't find specifics.
+[11:11] <koshari> ActionParsnip how didi you do that
+[11:12] <ActionParsnip> koshari: do what?
+[11:12] <Brad7200> whats the command to run in terminal
+[11:12] <koshari> add to your block list
+[11:12] <ActionParsnip> koshari: in pidgin?
+[11:12] <garrett__> goudkov: my guess is that some app's getting an md5 hash for something that it's not expecting?
+[11:12] <koshari> yep
+[11:12] <Light-> Brad7200: dont know, you can find out by going system>preferences>main menu, finding the game and double clicking it
+[11:12] <goudkov> garrett__: [2307419.329331] MD5 Hash NOT expected but found (71.160.136.43, 1289)->(66.135.53.75, 25)
+[11:12] <ActionParsnip> koshari: bring up buddy list window
+[11:12] <dlozarie> friends, have you pledged to participate in Firefox Download day?
+[11:12] <goudkov> that seems like networking
+[11:13] <goudkov> not an app, but something in the kernel
+[11:13] <bring2> dlozarie, when exactly is the day?
+[11:13] <ActionParsnip> koshari: tools -> privacy
+[11:13] <webbi> guys I have a (maybe) stupid question...
+[11:13] <webbi> I jsut isntalled a new version of avr-gcc
+[11:13] <webbi> or just gcc
+[11:13] <dlozarie> bring2, they don't have an exact date yet but they'll inform those who pledged by email when an exact date is set. :)
+[11:13] <ActionParsnip> koshari: select block only the below and put chanserv in there
+[11:13] <garrett__> goudkov: did you bother to google it?
+=== saimon_ is now known as nameless`
+[11:13] <koshari> what was the user name you used?
+[11:13] <nameless`> bonjour
+[11:13] <nameless`> j'ai un soucis avec grub
+[11:13] <goudkov> garrett__: yep, nothing by headers for kernel
+[11:13] <webbi> figure out that I have avr-gcc in /usr/bin and avr4-gcc in /usr/local/bin
+[11:13] <nameless`> error 22 :(
+[11:14] <jatt> !fr
+[11:14] <ubottu> Ce canal est en anglais uniquement. Si vous avez besoin d'aide ou voulez discuter en francais, merci de rejoindre #ubuntu-fr ou #kubuntu-fr
+[11:14] <garrett__> goudkov: http://osdir.com/ml/network.quagga.user/2005-05/msg00126.html
+[11:14] <nameless`> ops
+[11:14] <ActionParsnip> koshari: chanserv, if you leave the room then rejoin you can copy and paste so you know you got it right
+[11:14] <koshari> ActionParsnip: chanserv blocked
+[11:14] <garrett__> goudkov: that's the first hit on google
+[11:14] <webbi> I made avr-gcc a symbolic link to avr4-gcc, but it appear to not work very well
+[11:14] <bring2> dlozarie, ahh well when it is released i will make sure to download it, might not do the whole pledging thing though :D
+[11:14] <nameless`> i've got an error message witrh grub
+[11:14] <webbi> should I do something to "update" that avr-gcc now point to avr4-gcc ?
+[11:14] <garrett__> goudkov: do you appen to be running quagga?
+[11:14] <mshanks> For some strange reason I have to boot ubuntu with acpi=off or it fails to load the hardware abstraction layer hald. How can I set it so it boots with acpi=off every time?
+[11:14] <nameless`> loading stage 1.5 and error 22
+[11:14] <ActionParsnip> wb koshari
+[11:14] <ActionParsnip> koshari: good?
+[11:14] <bring2> Brad7200, i think it's jut "bzflag"
+[11:15] <insomnia> is it usual for pst to crash when switching to tty?
+[11:15] <koshari> ActionParsnip *waves* i as wondering for a wile how to do that, i didnt think to go back to the buddy list
+[11:15] <Light-> mshanks: modify /etc/fstab
+[11:15] <Brad7200> it says
+[11:15] <Brad7200> X Error of failed request:  BadValue (integer parameter out of range for operation)
+[11:15] <Brad7200>   Major opcode of failed request:  135 (XFree86-VidModeExtension)
+[11:15] <Brad7200>   Minor opcode of failed request:  10 (XF86VidModeSwitchToMode)
+[11:15] <Brad7200>   Value in failed request:  0x1a6
+[11:15] <FloodBot3> Brad7200: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[11:15] <Brad7200>   Serial number of failed request:  148
+[11:15] <Light-> mshanks: actually, dont do that
+[11:15] <goudkov> garrett__: i saw that, but there is not reply to that post
+[11:15] <ActionParsnip> koshari: yeah as you are blocking a "buddy"
+[11:15] <garrett__> grouko: but anyhow, port 25's smtp
+[11:16] <garrett__> grouk: so whatever's causing that is doing something related to mail
+[11:16] <sweetgum> Guys
+[11:16] <sweetgum> Can someone make sense of this error to me "Gtk-WARNING **: Attempting to add a widget with type GtkVBox to a GtkWindow, but as a GtkBin subclass a GtkWindow can only contain one widget at a time; it already contains a widget of type GtkButton
+[11:16] <sweetgum> "
+[11:16] <Brad7200> Light: ive sent you the problem through private chat
+[11:16] <nameless`> what means error 22 with grub ?
+[11:17] <garrett__> groud: so 'netstat -ap | grep 25" and look for something connected to smtp somewhere -- that's probably where that message is coming from.
+[11:17] <Light-> mshanks: edit /boot/grub/menu.lst and add "acpi=off" after the name of your kernel
+[11:17] <ActionParsnip> nameless`:  http://www.neowin.net/forum/lofiversion/index.php/t405091.html
+[11:17] <Brad7200> hey light
+[11:17] <mshanks> ah cool thanks light
+[11:17] <mshanks> Wish I knew why I need it though. Is very annoying
+[11:18] <garrett__> sweetgum: your app is trying to add a widget (a vbox) to a window that only allows for one widget at a time.
+[11:18] <ActionParsnip> mshanks: if its a laptop it gives battery levels
+[11:18] <garrett__> sweetgum: and the window already contains a widget
+[11:19] <garrett__> sweetgum: specifically, a button.
+[11:19] <koshari> how do i kill a "man" in terminal
+[11:19] <garrett__> koshari: ctrl+c
+[11:19] <garrett__> koshari: or 'q'
+[11:19] <garrett__> koshari: well, q, actually
+[11:19] <garrett__> koshari: but it sort of depnds on what you've got man hooked into.  i use vim
+[11:19] <koshari> garrett__ cont c dont close a man output
+[11:19] <garrett__> koshari: then hit 'q'
+[11:20] <garrett__> koshari: or hit esc then type ':q'
+[11:20] <ActionParsnip> koshari: ps -ef | grep man
+[11:20] <ActionParsnip> yeah, hit q to exit it
+[11:20] <koshari> garrett_ q worked
+[11:20] <garrett__> koshari: or killall -9 man
+[11:20] <icqnumber> The Filesystem item in Places menu has gone without any reason, but it is still displayed in Nautilus (places), how comes and howto fix that?
+[11:27] <heinrich> va rog, exista cineva care vorbeshte romaneshte pe acest Chat?
+[11:27] <matthew_> Someone plz help...I am on Ubuntu 8.04 Hardy 32bit, I have in my driver DVD of Ultimate Edition 1.8 , I'd like to upgrade..How do I do this?!?
+[11:27] <matthew_> drive*
+[11:28] <icqnumber> The Filesystem item in Places menu has gone without any reason, but it is still displayed in Nautilus (places), how comes and howto fix that?
+[11:28] <ActionParsnip> matthew_: http://www.ubuntu.com/getubuntu/upgrading
+[11:28] <john__> i need flash for ubuntu ppc. i remember there being one... just forgot the name. i go to an online school which it's pages are displayed in flash and i'd like to be able to do some school work here.
+[11:28] <ActionParsnip> matthew_:  personally id do a clean install. less problems
+[11:29] <matthew_> I don't have enough space for clean install, I just wanna upgrade the system I'm running now
+[11:29] <ActionParsnip> john__: 32bit or 64bit?
+[11:29] <Light-> jhon__ : you could try installing gnash or swfdec
+[11:29] <john__> ActionParsnip: 32bit
+[11:29] <ActionParsnip> matthew_: follow that link
+[11:29] <ActionParsnip> john__: good, easier
+[11:29] <john__> Light: yeah that's the name of it! gnash. if it fails, i'll try swfdec
+=== Myrtti is now known as Myrtti_
+[11:30] <ActionParsnip> john__: yeah gnas or swdec is looking like the way to go
+[11:30] <loquitus_of_borg> Is it a common problem to NOT be able to get an externally connected DVI LCD monitor to work with a laptop loaded with Linux (I am running Ubuntu Edgy)???
+[11:30] <keram> hello
+[11:30] <ActionParsnip> or gplflash
+[11:30] <Light-> gnash still fails at some sites (like megaupload folders)
+=== Myrtti_ is now known as Myrtti
+[11:31] <keram> i have recently upgraded to hardy, but i am having problems with avahi
+[11:31] <Brad7200> hey guys im having a prob with the game bzflag its saying "X error" can anyone help
+[11:31] <Light-> loquitis_of_bord: if your laptops card nvidia: if not, then yes
+[11:31] <Light-> *is
+[11:31] <ActionParsnip> john__: http://ubuntuforums.org/showthread.php?t=32656
+[11:31] <keram> when i try to run ekiga i get the error 'ejuga: symbol lookup error: /usr/lib/libavahi-client.so.3 undefined symbol: dbus_watch_get_unix_fd'
+[11:31] <john__> Okay
+[11:32] <loquitus_of_borg> Light: you are saying NVIDIA is a problem or not a problem?
+[11:32] <Light-> loquitis_of_bord: NVIDIA makes configuring dual screens easy
+[11:33] <matthew_> If I boot off this disc, Ultimate Edition, and chose, Install or start it, will I be given a choice to keep my existing system and install the new one along side it?
+[11:33] <Light-> loquitis_of_borg: I previously had an ATI card and configuring dual screens was a nightmare. Dont know about other integrated chipsets though
+[11:33] <loquitus_of_borg> Light: ok... here's the thing. I connected my with LCD via the DVI connector and the bootup sequence shows but as soon as the NVIDIA logo and then X11's GUI comes up, the LCD goes black into sleep mode
+[11:33] <ActionParsnip> matthew_: I have no idea, I always clean install. Maybe someone else can advise
+[11:33] <matthew_> how can I make my system here upgrade via Terminal, using the DVD Disc in my drive?
+[11:34] <koshari> matthew whats the difference between ultimate and standard, just more packages installed?
+[11:34] <Light-> loquitis_of_borg: run "sudo nvidia-settings" from a terminal
+[11:34] <ActionParsnip> matthew_: did you check the link I gave you?
+[11:34] <Light-> matthew_: you need to add the disk in your dvd drive as a repository in Synaptic
+[11:34] <loquitus_of_borg> Light: run me through this please
+[11:34] <matthew_> Light-: how can I do that?
+[11:34] <Brad7200> what does x error mean
+[11:35] <Light-> matthew_: check the link that ActionParsnip gave you
+[11:35] <matthew_> Light-: I did, it is not helping very much..
+[11:35] <sweetgum> Garret_: Problem is- it's supposed to be a menu. How do I make the Window hold more widgets?
+[11:35] <Light-> loquitis: applications>accessories>terminal, type in "sudo nvidia-settings"
+[11:35] <john__> help
+[11:35] <john__> trying to install gnash
+[11:35] <john__> but it's an install-sh.sh file and i dont know how to instal it through here
+[11:35] <john__> i wanna do it through here
+[11:35] <loquitus_of_borg> Light: no I mean I have it running now... the nvidia-settings app... but what do I do in there?
+[11:35] <matthew_> Light-: how do I make my CD appear in the Synaptic so I can install from there?  / upgrade
+[11:35] <Light-> jjhon__: install from repo
+[11:36] <sweetgum> garrett_:﻿Problem is- it's supposed to be a menu. How do I make the Window hold more widgets?
+[11:36] <thefish> Matthai, sudo apt-cdrom add
+[11:36] <thefish> Matthai, sorry, meant for matthew_ :)
+[11:36] <Brad7200> does ne1 knw wat "x error" mean
+[11:36] <Light-> loquitis: did it start up in a tiny screen? if it did, drag the bottom right to make it bigger
+[11:36] <koshari> Brad7200 https://bugs.launchpad.net/ubuntu/+source/bzflag/+bug/162151
+[11:36] <ubottu> Launchpad bug 162151 in bzflag "bzflag crash at start" [Medium,New]
+[11:36] <ActionParsnip> !X | Brad7200
+[11:36] <ubottu> Brad7200: The X Window System is the part of your system that's responsible for graphical output. To restart your X, type « sudo /etc/init.d/?dm restart » in a console - To fix screen resolution or other X problems: http://help.ubuntu.com/community/FixVideoResolutionHowto
+[11:36] <john__> how do i do it from repo
+[11:36] <john__> i'm a little new
+[11:37] <Light-> loquitis: then click "X server display configuration" and its pretty much like windows from there
+[11:37] <mitchell> ever someone used ssh client from xp to ubuntu here?
+[11:37] <LupoBluAlfa> jo
+[11:37] <loquitus_of_borg> Light: not sure what you mean by "it" and tiny screen. I am right now at the point where the nvidia-settings GUI app is running on my laptop's own screen. my goal is to get it to show on the externally connected LCD screen via the DVI connector
+[11:37] <thefish> john__, you could just `sudo apt-get install gnash`
+[11:38] <Light-> loquitis: yeah when I start up nvidia-settings its window is tiny and you need to make it bigger to see anything
+[11:38] <thefish> john__, you may want to also install mozilla-plugin-gnash if you use firefox/mozila-based-browser
+[11:38] <loquitus_of_borg> Light: well, at least nvidia settings opened nicely for me. now what?
+[11:38] <thefish> mitchell, putty is good for that
+[11:38] <Light-> loquitis: click "Xserver Display COnfiguration" then "Configure..." then choose TwinView
+[11:38] <john__> E: Couldn't find package gnash
+[11:39] <thefish> mitchell, you can even do pubkey authentication with it
+[11:39] <dare> is there app to make macro, something like ghost control ( www.ghost-control.com ) for windows?
+[11:39] <teamcobra> john__: for the 10th time, upgrade from 5.10. that's why you can't find packages for _anything_
+[11:39] <loquitus_of_borg> Light: am I using some twilight zone version of this? I don't even have an Xserver Display Configuration section
+[11:39] <thefish> ah john__ you will need to enable the "universe" repo then
+[11:39] <teamcobra> and you're just confusing people that try to help
+[11:39] <john__> FUCK
+[11:39] <thefish> teamcobra, ah cool thanks :)
+[11:39] <Light-> loquitis: screenshot?
+[11:39] <teamcobra> thefish: yeh, told him that about 2 hrs ago
+[11:40] <teamcobra> bbiab
+[11:40] <ActionParsnip> john__: sudo apt-get install mozilla-plugin-gnash
+[11:40] <loquitus_of_borg> Light: how do I send it to you?
+[11:40] <john__> OKAY I'll get myself some god damn DAPPER, let me just get my last burned cd i was going to use for a ps1 game on my modded ps2. thanks. bye
+[11:40] <thefish> john__, not a bad idea...
+[11:40] <Light-> loquitis: you do have a NVIDIA card, and teh proprietry NVIDIA drivers installed, right?
+[11:40] <teamcobra> blech, and I told him how to upgrade w/o using a cd
+[11:40] <teamcobra> but meh ;p
+[11:40] <thefish> heh
+[11:40] <loquitus_of_borg> Light: I do not know... to be quite honest. I installed this last year and I think I used the NVIDIA drivers from their site. shall I send you a screenshot of my nvidia settings app?
+[11:41] <dlozarie> I'm back. :)
+[11:41] <Light-> loquitis: yes please. then go to system>administration>hardware drivers and check if the restricted drivers are in use
+[11:41] <mitchell> thefish: ok I managed to make it work problems solved im using winscp and secure client SSh! The two of them are workinh fine thks
+[11:41] <teamcobra> mitchell: putty is also a good client
+[11:41] <blabber> hi.. im trying to install a package, using apt-get.. i've made an entry in sources.list, but when I do an apt-get update, i get a gpg error, how can i fix this?
+[11:42] <dlozarie> Uhm, I have a question. Say I want to install a certain printer driver, and the CD that came with the software only provides Mac and Windows drivers. How do I go about installing my printer?
+[11:42] <loquitus_of_borg> Light: I am in edgy... where is "hardware drivers" here?
+[11:42] <mitchell> teamcobra: ok thks mate cheers
+[11:42] <thefish> mitchell, cool - ye scp command is a bit messy. If you want to use scp in a gui, check out winscp - very cool
+[11:42] <PastorBones> when denyhosts does a block, where does it store that info and how do I remove it?
+[11:42] <Light-> loquitis: uhh... dunno if it was in edgy to be honest... I know the tool is in Gutsy and Hardy, perhaps you would consider upgrading
+[11:42]  * teamcobra <3's gftp's ssh support, but yeh, that's not win32 ;)
+[11:42] <thefish> PastorBones, it is probably in hosts.deny
+[11:43] <chrismir> Is it possible with evolution to set weather to load html-mail images for folders seperatelly?
+[11:43] <blabber> i get a gpg error, how do i fix this?
+[11:43] <PastorBones> thank you
+[11:43] <thefish> PastorBones, but removing it from there will not help, you will need to whitelist the ip
+[11:43] <PastorBones> how do I do that?
+[11:43] <thefish> PastorBones, because next time it runs, it will see all the failures, and re-add it :)
+[11:43] <PastorBones> I'm blocked from my own site
+[11:44] <Light-> blabber: afaik you need a gpg key to access the repository you added. I cant remember how to retrieve one, check the site that gave you the link to teh repo
+[11:44] <PastorBones> well, I removed it already trying to fix the problem
+[11:44] <thefish> PastorBones, check the docs, i cant remember exactly, but its pretty easy
+[11:44] <VSpike> If I only have a single subnet, could my server be set as a gateway, and route to the internet via another gateway on the same subnet?
+[11:44] <Djluv5> hey anyone knows how to install compiz fusion
+[11:44] <teamcobra> pastor : blocking is a bad idea...... look into snort inline w/ drop rules
+[11:44] <Djluv5> thanks
+[11:44] <thefish> PastorBones, you have a serial connection?
+[11:44] <Light-> Djluv5: from the repositories...
+[11:44] <PastorBones> nope ssh
+[11:44] <dlozarie> http://paste.ubuntu.com/16555/
+[11:44] <loquitus_of_borg> Light:  short of upgrading this whole thing there must be a way to deal with this... I am using the driver 1.0-8776 according to nvidia-settings
+[11:44] <PastorBones> but I can't access the site
+[11:44] <PastorBones> other vhosts work, just not this one
+[11:44] <Light-> Djluv5: its already installed if you have 8.04
+[11:45] <thefish> PastorBones, you could "bounce" there
+[11:45] <Light-> loquitis: if there is, im unaware of it... sorry, see if someone else knows
+[11:45] <blabber> Light: I looked all over the place, the site doesn't say anything about gpg, i can't find it..
+[11:45] <thefish> PastorBones, get a free shell somewhere and use that
+[11:45] <blabber> the lines i added were:
+[11:45] <blabber> deb ftp://ftp.au.debian.org/debian stable main contrib non-free
+[11:45] <blabber> deb-src ftp://ftp.au.debian.org/debian stable main contrib non-free
+[11:45] <thefish> PastorBones, or get a trusted friend to do it for you
+[11:45] <dlozarie> guys, how do I install a printer when I don't have Linux drivers for it?
+[11:45] <thefish> PastorBones, of course, after that change the password and have the friend killed
+[11:45] <Light-> blabber: lolwut, those are the main debian repos, installing packages from them could break ubuntu
+[11:45] <teamcobra> pastor: need a shell for tonight?
+[11:46] <loquitus_of_borg> light: it seems to me the issue might just be that I am running an old ersion of the nvidia driver...
+[11:46] <PastorBones> my shell works, the site doesn't
+[11:46] <PastorBones> besides the terminal is in the other room
+[11:46] <teamcobra> ahh, cool
+[11:46] <thefish> PastorBones, your ip is blocked, getting another ip will let you in
+[11:46] <teamcobra> where is it blocked, iptables?
+[11:46] <thefish> PastorBones, ah ok important info that
+[11:46] <thefish> teamcobra, its hosts.deny
+[11:46] <teamcobra> ahhhhhh
+[11:46] <Light-> loquitis_of_borg: well, you could try updating the driver to teh latest on the nvidia site, however the easiest way by far is to install from the repos of a later version of Ubuntu (preferably 8.04)
+[11:47] <chrismir> I have some mailinglist letters which are in html with images. I've filtered the mails into there own folders. Can I make Evolution load the images automatically for this folder, but not for other folders?
+[11:47] <teamcobra> bbiab
+[11:47] <PastorBones> there's nothing in hosts.deny
+[11:47] <thefish> PastorBones, check hosts.*
+[11:47] <thefish> maybe you have hosts.blocked
+[11:47] <blabber> Light-: I'm installing a wifi driver madwifi..  nothing mentioned about gpg in the steps
+[11:47] <blabber> http://madwifi.org/wiki/UserDocs/Distro/Debian/MadWifi
+[11:47] <gtoo-dtoo> hi
+[11:47] <sweetgum> hi gtoo-dtoo
+[11:47] <loquitus_of_borg> Light: when you say upgrade, can I just goto synaptic and tell it to upgrade my whole system to 8.0.4 or is it a reinstall of the OS?
+[11:48] <Light-> blabber: a madwifi-tools is available in the ubuntu repositories
+[11:48] <PastorBones> only hosts.deny and hosts.allow...both are empty
+[11:48] <Light-> loquitis_of_borg: it is possible to do it that way, however I do not recommend it as it broke my system last time I tried. I recommend a fresh install
+[11:48] <PastorBones> others can get to the site, but I can't
+[11:48] <blabber> Light-, : yes, but I need to install madwifi itself first, by building it using m-a (module assistant)
+[11:49] <Light-> loquitis_of_borg: However, if you still want to try, edit /etc/apt/sources.list and replace all "edgy" lines with "hardy", save, then run "sudo apt-get update" then "sudo apt-get dist-upgrade"
+[11:49] <thefish> PastorBones, then its not denyhosts, unless you have a very interesting config
+[11:49] <thefish> PastorBones, ssh -vvv host will give you more detail as to why you cant get in
+[11:49] <Light-> blabber: thats a bit beyond me sorry :) anyone else know how to so this?
+[11:49] <dlozarie> is there a way to backup Ubuntu?
+[11:50] <dlozarie> I mean, like how you back up your files/system on Windows?
+[11:50] <loquitus_of_borg> Light: I know you mentioned updating the OS, but let's say I just updated the nvidia driver... which one should I get? iright now I have 1.0-8776, which came out in 2006 and is a IA32 one... there seems to be alot of x86 ones too... what is the difference?
+[11:50] <blabber> Light-, : I just need the gpg key, I just want to know where to get it..
+[11:50] <thefish> PastorBones, why you say "get to the site" do you mean browse some web pages, or log on with ssh?
+[11:51] <Light-> loquitis_of_borg: they pretty much mean the same thing (both 32-bit)
+[11:51] <erUSUL> Light-: loquitus_of_borg are you really advicing to do an upgrade not only through comman line (error prone) but skipping versions too??? edgy to hardy in one step !@#!@#
+[11:51] <koshari> dlozarie linux has native drivers for many printers
+[11:51] <Light-> erUSL: are you supposed to upgrade version to version?
+[11:51] <thefish> blabber, have you tried with gpg --search-keys ?
+[11:51] <erUSUL> !upgrade | loquitus_of_borg
+[11:51] <ubottu> loquitus_of_borg: For upgrading, see the instructions at https://help.ubuntu.com/community/UpgradeNotes
+[11:51] <dlozarie> koshari, okay. I will try to install my Canon printer later. Thank you. :-D
+[11:51] <Light-> erUSL: I was unaware of that :) thanks
+[11:52] <koshari> dlozarie my canon ip4300 has gitunprint linux drivers
+[11:52] <erUSUL> loquitus_of_borg: if it is not clear. *do* *not* *do* what Light-  said
+[11:52] <Djluv5> I have 8.04 but I can't have the fire effect
+[11:52] <Light-> Djluv5: install compizconfig settings manager
+[11:52] <Djluv5> am new to ubinto
+[11:52] <dlozarie> koshari, okay. the printer's not with me right now, I'll try installing it once I get it back. :)
+[11:52] <loquitus_of_borg> erUSUL: I did not get what you meant.,.. you saying I CAN upgrade to the latest "easily"?
+[11:52] <Djluv5> ubunto
+[11:52] <koshari> dlozarie for backing up i use a gparted live disc
+[11:53] <Djluv5> how do u install that
+[11:53] <blabber> thefish, : Thanks, that created a couple of files.. is that enough?
+[11:53] <Light-> !ccsm | Djluv5
+[11:53] <ubottu> Djluv5: ccsm is To enable advanced customization of desktop effects in Ubuntu 8.04 (Hardy), install 'compizconfig-settings-manager' or 'simple-ccsm'. If you install the latter, a new option will appear in your appearance properties - See also !compiz - Help in #compiz-fusion
+[11:53] <sweetgum> http://rafb.net/p/v8Uxdg60.html
+[11:53] <erUSUL> loquitus_of_borg: not in one step you have to do edgy>feisty>gutsy>hardy or a backup/reinstall
+[11:53] <sweetgum> can anyone tell me why my widget button refuses to show?
+[11:53] <PastorBones> thefish, I can telnet to the domain.com 80 get the index.php but my browser gives network timeout
+[11:54] <loquitus_of_borg> erUSUL: ok... I think I understand... so I can do this in 3 upgrade steps right? is it reasonably safe?
+[11:54] <PastorBones> but mail.domain.com works fine on my browser
+[11:54] <PastorBones> same port, same server
+[11:54] <blabber> hmm..
+[11:54] <icqnumber> !compiz
+[11:54] <ubottu> Compiz (compositing window manager) and XGL (X server architecture layered on top of OpenGL) - Howto at http://help.ubuntu.com/community/CompositeManager - help in #compiz-fusion
+[11:54] <Light-> loquitis_of_borg: that would take a long time and consume a lot of bandwidth in comparison to a fresh install of hardy
+[11:54] <blabber> thefish, : It still gives a gpg error..
+[11:54] <thefish> PastorBones, then your browser is the problem, have you tried using the ip address in your browser?
+[11:54] <thefish> blabber,  try  --recv-keys
+[11:54] <erUSUL> loquitus_of_borg: i can say that i did it back in the day when releases came out (i reinstalled gutsy to switch to 64 bits)
+[11:55] <PastorBones> yeah, takes me to mail.domain.com
+[11:55] <sweetgum> Light-: Can you help me understand how to make the window accept more then one widget?
+[11:56] <Light-> sweetgum: I have not played around with widgets, so not really sorry
+[11:56] <thefish> PastorBones, i think maybe you have dns issues then - so you have 2 apache vhosts on that box?
+[11:56] <blabber> thefish, : same..
+[11:56] <Djluv5> I have a webcam as well but there is no driver for it to work. It is bundle into my laptop
+[11:57] <thefish> blabber, i think you may need to now export the key from gpg, then use apt-key
+[11:57] <Light-> sweetgum: are you coding all that by hand? try using something like glade
+[11:57] <thefish> check out gpg --help etc... you are very close :)
+[11:58] <blabber> thanks, will try that
+=== tuna-fish is now known as tuna
+[11:58] <mgolisch> sweetgum: you need to place some container widgets on the window in which you then can place other widgets
+[11:59] <mgolisch> if you just add some widget like a button to the window it will fill the complete window
+[11:59] <mgolisch> just look at some examples
+[11:59] <mgolisch> or use glade
+[11:59] <mgolisch> :)
+[11:59] <dlozarie> koshari what exactly is a gparted live disc and how do I use that to back up my system? :)
+[11:59] <dlozarie> Okay, googling the gparted live disc part. :)

@@ -1,0 +1,275 @@
+[01:31] <puppy_parade> tomreyn, " freetype spu text error: Breaking unbreakable line" is all that appears, and that is only for VLC
+[01:31] <tomreyn> Sara: you can also install the 'file' package and run the 'file' command it provides on the file in question, this will give you a mostly reliable idea of what type of file it is.
+[01:31] <zykotick9> deper29: stuff yes, but what's in /etc/exports?
+[01:32] <gharz> anyone?
+[01:32] <tomreyn> puppy_parade: might be that you need to install !codecs
+[01:32] <gharz> !uefi
+[01:32] <tomreyn> !codecs > puppy_parade
+[01:32] <ubottu> puppy_parade, please see my private message
+[01:32] <msdaisy> gharz, yes. tons of people. Do you need a guide to dual boot?
+[01:33] <deper29> zykotick9: http://bpaste.net/show/64476/
+[01:33] <deper29> that is my exports
+[01:33] <intelikey> tomreyn  just out of curiousity </sp>  does file still ignore .extentions when determining file type ?
+[01:33] <Anonymous83n> hello
+[01:33] <gharz> msdaisy: yes please... i don't want to install ubuntu using virtualbox... :(
+[01:33] <puppy_parade> I have the restricted extras installed. Video works fine, for a while
+[01:34] <gharz> msdaisy: a wubi installed is preferred
+[01:34] <tomreyn> intelikey: i think it still ignores extensions and interprets magic bytes exlusively. but have not studied its source code.
+[01:34] <zykotick9> deper29: ya, just exporting /mnt/user instead of individual directories would be a LOT easier...
+=== YayWubs_ is now known as YayWubs
+[01:35] <Gwennifer> Is there a way to give myself write access to all system files? I'm really tired of having to give myself access every time :x
+[01:35] <zykotick9> deper29: you should be able to get to TV Music Movies Downloads Books though
+[01:35] <jrib> Gwennifer: what are you doing exactly that requires you to do that so often?
+[01:35] <deper29> zykotick9: the server is actually running unRAID, and so every time I make something in the web interface that is under /mnt/user it makes a new entry automatically
+[01:35] <tomreyn> puppy_parade: i think you may want to file a bug, since it's obscure enough that it's unlikely you'll find one here right now who knows the answer.
+[01:36] <Sara> thanks everyone vmware is working
+[01:36] <zykotick9> deper29: i have no idea what that is - and i'll be dropping out at this point.  best of luck.
+[01:36] <puppy_parade> I've had someone suggest it was flash and my Radeon drivers
+[01:36] <Gwennifer> jrib: My Intel graphics and monitor is poorly recognized on Ubuntu
+[01:36] <jrib> Gwennifer: go on...
+[01:36] <puppy_parade> this doesn't happen on my laptop, so I am inclined to blame it in AMD
+=== gavin is now known as gavinguo
+[01:36] <msdaisy> !wubi | gharz
+[01:36] <ubottu> gharz: Wubi is an Ubuntu installer for Windows users that allows you to install and uninstall Ubuntu like a Windows application, in a simple and safe way. http://wubi-installer.org/support.php and https://wiki.ubuntu.com/WubiGuide for troubleshooting. Please  file bugs at http://launchpad.net/wubi/+filebug. For Ubuntu Oneiric/11.10 http://releases.ubuntu.com/oneiric/wubi.exe
+[01:36] <deper29> zykotick9: it's linux is all it is.
+[01:36] <puppy_parade> and the Radeon drivers are still not usable.
+[01:37] <tomreyn> puppy_parade: it does sound like a driver issue to me. but i'm just guessing really.
+[01:37] <gharz> msdaisy: i already used wubi but i can't boot due to uefi issue with windows 8
+[01:37] <Gwennifer> jrib: I fixed the problem, sort of, but I still need write access and doing sudo <texteditor> gets really, really annoying really quickly
+[01:37] <zykotick9> deper29: and with that comment, i won't be seeing your posts further, good luck.
+[01:37] <puppy_parade> is there a way to reset it without logging out or rebooting?
+[01:37] <jrib> Gwennifer: you're not answering my question, so it's hard to suggest the best course of action for you.
+[01:38] <FloodBot1> !netsplit
+[01:38] <tomreyn> puppy_parade: closing and restarting the application is insufficient then?
+[01:39] <tomreyn> puppy_parade: look into the xrandr command to reset your video output.
+[01:40] <puppy_parade> right, I have to live with the viewable area getting a little smaller every time I want to watch a video
+[01:40] <puppy_parade> It's maddenning.
+[01:41] <tomreyn> puppy_parade: you can also try upgrading / downgrading drivers, and to try the open source ones (which can be a good option either in general or just to ensure it's indeed the driver that's at fault, not your hardware)
+[01:42] <puppy_parade> I upgraded to 12.10 for the oss drivers
+[01:42] <puppy_parade> and they were still unusable
+[01:42] <puppy_parade> I like being able to use all of my monitors
+[01:42] <intelikey> is there a free vmware ?
+[01:43] <puppy_parade> I think they have a free version, but virtual is a great way to get into VMs intelikey
+[01:43] <puppy_parade> *virtualbox
+[01:43] <intelikey> ty puppy_parade
+[01:45] <tomreyn> puppy_parade: radeon r300 drivers worked quite well for me on 12.04, including multi-monitor output.
+[01:45] <puppy_parade> I have a 7000 series card
+[01:46] <puppy_parade> support for them is still very rough
+=== msdaisy is now known as ms-daisy
+[01:50] <tomreyn> puppy_parade: then you may want a newer kernel, too
+[01:50] <kelvinella> very annoying, how come ubuntu wont do anything about it
+=== _JKL1234-_ is now known as NetSplitLover
+[01:51] <kelvinella> is there a way to disable screensaver while playing flash movie?
+[01:51] <puppy_parade> This card has been out nearly a year
+[01:52] <puppy_parade> I upraded to 12.10 for the newer kernel version, and it was still inadequate
+[01:52] <puppy_parade> I've done post release kernels before, and it's a pain
+[01:54] <jsbach> Are there any active mirrors for Ubuntu < 8.x?
+[01:55] <zykotick9> !eol | jsbach
+[01:55] <Flannel> jsbach: You realise those are all EOL and not supported (and many have major security holes) right?
+[01:55] <jrib> jsbach: all those versions are EOL and no longer supported.  Why not use a current, supported version?
+=== LikeLakers2 is now known as Guest89535
+=== rla is now known as Guest23901
+=== Jason is now known as Guest41832
+=== ikonia is now known as Guest53657
+[01:55] <ms-daisy> jsbach, http://old-releases.ubuntu.com/releases/
+[01:55] <tomreyn> puppy_parade: have you tried searching the web for an answer providing your very model name and a concise description of the major issue? i find this offten helps.
+[01:55] <jsbach> Flannel: Thanks for your input.
+[01:55] <jsbach> jrib: I have reasons.
+[01:55] <jsbach> ms-daisy: Thank you.
+[01:56] <Flannel> jsbach: old-releases will work fine.  It has mirrors and isos.  You just need to be aware of that fact first.
+[01:56] <jsbach> Flannel: Thanks again.
+[01:56] <tomreyn> puppy_parade: and so can reporting bugs, since chances are soemeone else reported it before, your bug report will be tagged a duplicate of that, and the other bug report has a workaround or fix in it.. that's part of why i suggested you file a bug.
+[01:56] <Ben64> jsbach: it also does not contain all the security fixes and could leave you vulnerable
+[01:56] <Tex_Nick> kelvinella : if you're using VLC there is an option to disable screensaver during playback
+[01:56] <Flannel> Ben64: He's aware, four times now.
+[01:57] <ms-daisy> The old releases are great for practicing attacks if that's what he's doing Flannel jsbach
+[01:57] <puppy_parade> who do I submit fglrx bugs to?
+[01:57] <raub> Quick nfs question: why am I being told rpc.statd is not being run? http://pastie.org/private/mdlvmbafdinijp4uotmvzg
+[01:57] <kelvinella> Tex_Nick, in ff or chrome
+[01:57] <tomreyn> puppy_parade: ati, i would guess
+[01:58] <kelvinella> Tex_Nick, and the option doesnt work in xubuntu
+[01:58] <Flannel> ms-daisy: Sure, but it's irresponsible to just hand it out without ensuring they're aware theyre getting unsupported (and potentially dangerous) software.
+[01:58] <raub> s/being run/running/
+[01:58] <Tex_Nick> kelvinella : sorry i thought you were playing flv files
+[01:58] <kelvinella> in xubuntu the screensaver just come on no matter what except i have to move the mouse once a while
+[01:58] <puppy_parade> I'm pretty sure ATI knows their drivers are crap
+=== tomaw is now known as 5EXAAG5WE
+[01:59] <ms-daisy> Last count 4 folks let him know Flannel ;) I was positing a valid reason for wanting them.
+[01:59] <tomreyn> kelvinella: try caffeine or file a bug with adobe about flash
+[01:59] <tomreyn> kelvinella: try caffeine or file a bug with adobe about flash
+=== AntORG_ is now known as AntORG
+[02:00] <Flannel> ms-daisy: There's plenty of valid reasons.  But usually its nice to make sure they respond (which is what I was waiting for) before handing it out.  He could've just as easily missed the rest of us and only seen the URL.  It only takes a few extra moments to have a proper conversation, and saves hours of headaches later.
+[02:04] <misterhe> im running ubuntu 12.04 and my computer wont resume from suspend. i hear the hdds spin up, and the fans running, but no power to my usb mouse/kb and no display
+=== 5EXAAG5WE is now known as tomaw
+=== mike is now known as Guest48683
+=== johan is now known as Guest36922
+[02:07] <marianne> Tex_Nick: I tried disabling the touchpad and still have the same issues with the pad and the mouse. any other suggestions?
+[02:08] <Guest48683> I have setup eth0 'shared to other computers' through network settings. However when a client tries to connect, the notifications show on and off repeatedly.. it works while it's connected but it immediately disconnects and reconnects. What might be the problem?
+=== g_byers is now known as g_byers[Away]
+[02:09] <ouyes> after install the nvidia driver, my window borders are all gone, where can I get mu window border back?
+[02:09] <ouyes> I am running ubuntu 12.10 amd64
+[02:09] <Tex_Nick> marianne : what version of linux are you running ... & what make & model is your laptop ?
+[02:10] <marianne> Tex_Nick: running 12.04 sony viao VGN-CS320J
+=== Sickki_ is now known as Sickki
+[02:10] <Tex_Nick> marianne : let me search a bit
+[02:11] <blackshirt> is apparmor just for confine aplication ?
+[02:11] <marianne> Tex_Nick: thank you
+[02:14] <She153> hmm
+[02:15] <tomreyn> in the philosophical or the carnivore sense?
+[02:16] <blackshirt> is apparmor just for confine aplication ?
+[02:16] <nibbler_> i have a hosted server, i installed 12.4 lts, the hoster (hetzner) has fast mirrors, but it seems he does not offer a Contents-amd64.gz or such, anyway apt-file update gives me: Ignoring source without Contents File:  http://mirror.hetzner.de/ubuntu/packages/dists/precise-backports/Contents-amd64.gz - any hint?
+[02:16] <She153> does anyone know how to remove ubuntu ?
+[02:16] <nibbler_> She153: just install whatever else you like
+[02:17] <ms-daisy> remove it from what She153 ?
+[02:17] <nibbler_> ...just don't want to switch everything to a new mirror.... makes sense to use the local one.
+[02:17] <tomreyn> blackshirt: its primary purpose is to reduce exploitability of bugs in certain applications
+[02:18] <tomreyn> !apparmor > blackshirt
+[02:18] <ubottu> blackshirt, please see my private message
+[02:22] <tomreyn> nibbler_: just tell them their mirror of this repository is incomplete
+[02:23] <She153> can someone help me remove ubuntu off this computer ?
+[02:23] <nibbler_> tomreyn: possibly the best solution....
+[02:23] <Sara> need to install vmware 7 on ubuntu 12.04. this is my error need a guide please
+[02:23] <Sara> http://www.mediafire.com/view/?12cycq00dflhc4c
+[02:23] <ms-daisy> how did you install it She153 ?  Is it a dual boot, is Ubuntu the only operating system on it, is it in a virtual machine, is it wubi?
+[02:23] <tomreyn> nibbler_: here's another mirror which shows this file should be there: http://mirrors.mit.edu/ubuntu/dists/precise-backports/
+[02:23] <nibbler_> She153: answering the questions people ask you might be a good first step
+[02:23] <nibbler_> tomreyn: thanks
+[02:24] <tomreyn> nibbler_: fwiw, i just confirmed the files ar emissing on hetzner mirrors
+[02:24] <Sara> its not wubi itsnot instlaled on windows
+[02:24] <She153> nibbler : im sorry i had to let the dogs out
+[02:24] <Frankko> steam related questions go in what #channel?
+[02:24] <tomreyn> #elsewhere
+[02:25] <Frankko> tomreyn: rude
+[02:25] <She153> ms-daisy: remove it from backtrack
+[02:25] <She153> and that dont work nibbler
+[02:25] <ms-daisy> wut? She153 you want to remove ubuntu from backtrack???
+[02:25] <She153> backtrack is a distro of ubuntu
+[02:26] <Sara> any idea how i can solve the error for http://www.mediafire.com/view/?12cycq00dflhc4c (vmware 7 on ubuntu 12.04)
+[02:26] <Frankko> tomreyn: i asked so i will not bother ubuntu developers and users, and it is a complete hassle to make run on anything other than ubuntu. Someone might be helpful
+[02:26] <She153> i want to put windows back on my pc
+[02:26] <ms-daisy> Yes She153 , correct. So how could you possibly remove the os that backtrack is built upon?
+[02:26] <Frankko> She153: noone is stopping you
+[02:26] <ms-daisy> so you want to remove backtrack and replace it with windows She153 ?
+[02:26] <She153> yes
+[02:26] <Tex_Nick> marianne : out of curiosity try hitting the escape key ... does that help
+[02:27] <She153> why do i keep getting smart ass answers ?
+[02:27] <tomreyn> !steam > Frankko
+[02:27] <ubottu> Frankko, please see my private message
+[02:27] <ms-daisy> She153, it's not smart-ass at all. The way you remove it is entirely dependent on how it was installed.
+[02:27] <tomreyn> Frankko: and i apologize.
+[02:27] <She153> i meant that for franko
+[02:28] <ms-daisy> You can put windows on the machine by using the windows install CDs. That will completely remove everything currently on the computer and replace it with a new windows installation She153
+[02:28] <She153> ok maybe i need to talk to someone who knows what backtrack is
+[02:28] <marianne> Tex_Nick: let me try
+[02:28] <She153> no it wont
+[02:28] <ms-daisy> I know what backtrack is.
+[02:28] <bazhang_> She153, its NOT supported here
+[02:28] <bazhang_> She153, go to the backtrack channel for support.
+[02:28] <Tex_Nick> marianne : You may have activated some accessibility options with a key-combination
+[02:28] <bazhang_> #backtrack-linux She153
+[02:28] <ms-daisy> to remove backtrack bazhang_ ?
+[02:28] <She153> i have a windows live cd , and have changed the bios
+[02:29] <She153> to boot from cd
+[02:29] <ms-daisy> Perfect, you're on your way She153
+[02:29] <nibbler_> She153: stop trolling
+[02:29] <bazhang_> She153, how does this relate to ubuntu support.  ##windows for windows install help
+[02:29] <She153> it keeps going back to backtrack
+[02:30] <marianne> Tex_Nick: seems ok for now... I'll keep an eye on it... next problem is the title bar on the windows doesn't have the exit resize or expand buttons
+[02:30] <bazhang_> She153, again, not an ubuntu issue.
+[02:30] <ms-daisy> figure out what the bios setting is to boot from the CD. If it's not working then you don't have a bootable CD She153
+=== Sickki_ is now known as Sickki
+[02:30] <rawr> test
+[02:30] <rawr> anyone here use a tomato router?
+[02:30] <She153> hmm i have installed that cd on other computers
+[02:30] <bazhang_> rawr, try #test
+[02:31] <bazhang_> !alis | rawr have a search for their channel
+[02:31] <ubottu> rawr have a search for their channel: alis is a services bot that can help you find channels. Read "/msg alis help list" for help and ask any questions about it in #freenode. Example usage: /msg alis list #ubuntu* or /msg alis list *http*
+[02:31] <rawr> I'm aware of a channel that exists I was asking if anyone here used it as their channel is dead
+[02:31] <rawr> thanks.
+[02:31] <bazhang_> rawr, try #ubuntu-offtopic
+[02:32] <Sara> I installed a package with txt extension.(install command :  sudo sh Desktop/VMware-Workstation-Full-7.0.0-203739.i386.txt ) it doesn't work how can i uninstall it?
+=== ericab_away is now known as ericab
+[02:33] <jrib> Sara: read documentation, ask author, read script
+[02:33] <Sara> where are these things?
+[02:34] <IdleOne> Sara: VMware-Workstation-Full-7.0.0-203739.i386.txt is a text file, not a package
+[02:34] <intelikey> sara    and  adding sudo to that command was your second mistake, and probably the biggest one.
+[02:34] <Tex_Nick> marianne : take a look at this ; http://askubuntu.com/questions/134172/window-title-bars-missing-occasionally-in-unity
+[02:34] <jrib> Sara: what do you mean?
+[02:34] <Sara> actually its not possible to open it with note pad or gedit
+=== NetSplitLover is now known as _JKL1234-_
+[02:34] <stiltzkin> Hey, anyone want to help me figure out why fglrx is failing all of the sudden? All I get when I boot now is commandline, no GUI (this includes recovery mode). Here's what I think is the relevant portion of /var/log/kern.log: http://paste.ubuntu.com/1441008/
+=== bazhang_ is now known as bazhang
+[02:35] <Sara> I extracted it using terminal sudo sh Desktop/VMware-Workstation-Full-7.0.0-203739.i386.txt
+[02:35] <jrib> Sara: when you run files like that, they could do absolutely anything they want to your system.  You should only do that with files you absolutely trust
+[02:35] <tomreyn> !vmware | Sara
+[02:35] <ubottu> Sara: VMWare is not available in the Ubuntu repositories. Consider using !QEmu or !VirtualBox as alternatives. Instructions for installing VMWare manually are at https://help.ubuntu.com/community/VMware
+[02:35] <Sara> and it asked for root privilage thats why i added sudo
+[02:35] <Tex_Nick> marianne : that's assuming you're runnint unity
+[02:35] <stiltzkin> For completeness, the output of uname -a is: Linux luna 3.5.0-18-generic #29-Ubuntu SMP Fri Oct 19 10:26:51 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+[02:36] <bazhang> stiltzkin, MINT?
+[02:36] <marianne> Tex_Nick: yes, unity... but I can't get the window to resize
+[02:37] <Tex_Nick> marianne : did you look at the link i posted above ... http://askubuntu.com/questions/134172/window-title-bars-missing-occasionally-in-unity
+[02:37] <marianne> Tex_Nick: yes, looking now
+[02:37] <Sara> tomreyn   doesn't say anything about uninstall process
+[02:38] <Tex_Nick> that will reset unity to default settings
+[02:39] <tomreyn> stiltzkin: first of all, install all available system updates. you are behind, and chances are this issue was since fixed.
+[02:39] <robertzaccour> hey yall
+[02:39] <tomreyn> stiltzkin: oh and what bazhang asked
+=== chiluk_away is now known as chiluk
+[02:40] <stiltzkin> No, I am not running Mint. And I am fully up to date, except this is not the latest version of Ubuntu - I attempted to upgrade and it failed
+[02:40] <robertzaccour> I was thinkin about somethin recently
+[02:40] <intelikey> howto "minimize" a window in full screen mode ?
+[02:40] <stiltzkin> All individual packages are updated however.
+[02:40] <robertzaccour> Never could figure out why its so much harder to forgive myself than it is someone else.
+[02:40] <tomreyn> stiltzkin: how did it fail? this would be something you should look into first of all.
+[02:41] <IdleOne> robertzaccour: How is this ubuntu support related?
+[02:42] <stiltzkin> If I remember correctly the updater itself crashed. It threw a lot of messages about conflicting packages (I apologize for not having specifics here, this was about a month ago) and having no way to recover the installation, I shut down the system. Now I'm just looking to see whether there's any way to get the GUI back or whether I just need to bite the bullet and reinstall.
+[02:42] <bazhang> stiltzkin, is that elementary OS?
+[02:43] <marianne_> Tex_Nick: can you resend the link please, my bird hit the power button and rebooted me
+[02:43] <stiltzkin> bazhang, what are you talking about
+[02:43] <bazhang> stiltzkin, the luna kernel
+[02:43] <stiltzkin> no, luna is my hostname
+[02:43] <tomreyn> luna would be the hostname, right
+[02:44] <tomreyn> it's not like it's part of the kernel version
+[02:44] <Tex_Nick> marianne : lol what happened to the bird ?
+[02:44] <stiltzkin> I would not be asking a question here unless it was ubuntu related.
+[02:44] <Tex_Nick> marianne_ : http://askubuntu.com/questions/134172/window-title-bars-missing-occasionally-in-unity
+[02:45] <marianne_> Tex_Nick: nothing... he's just being a tool... I took the tv remote away cuz he was eating the buttons
+[02:46] <tomreyn> stiltzkin: getting package conflicts fixed and installing the remaining updates can be a requirement to get your system back into a working state. you can use the "apt-get" command line utility to do it.
+[02:46] <tomreyn> !apt-get > stiltzkin
+[02:46] <ubottu> stiltzkin, please see my private message
+[02:47] <stiltzkin> ...why are you telling me how to use apt-get?
+[02:47] <tomreyn> stiltzkin: because i think you want to fix your package managemnet system and that you would probably have done so by now if you knew how to.
+[02:48] <stiltzkin> There is no problem with my packages though...
+[02:48] <stiltzkin> this is a driver proble
+[02:48] <tomreyn> stiltzkin: for a matter of fact, your kernel version is a couple patch levels behind, so at least you don't have the latest patches. which could be a cause of the issues you're running into.
+[02:49] <stiltzkin> Well yeah, it is...because as I said, the upgrade was not successful
+[02:49] <stiltzkin> I mean this is not a critical issue or anything, I can always reinstall. I'm really more just curious as to what happened and if it's easier to fix than to reinstall
+[02:50] <GMDynamics> Hello!
+[02:50] <Tex_Nick> marianne_ : the only thing in the link i provided of importance is ... in terminal type unity --reset ... this will reset unity to default settings ... the link tells warns you that preferences will be reset also
+[02:52] <tomreyn> hi GMDynamics
+[02:54] <GMDynamics> I'm really tired and accidentally ran sudo apt-get remove apt.
+[02:54] <DaemonicApathy> Awesome!
+[02:54] <Hajime> gmdynamics, thats no problem if you want remove it
+[02:55] <marianne_> Tex_Nick: I was in there setting some of the other fun things I like and the windows decorations go unchecked
+[02:55] <GMDynamics> http://images1.wikia.nocookie.net/__cb20120531003431/castleminerz/images/thumb/5/58/Disgusted_Oh_God_Why.png/1067px-Disgusted_Oh_God_Why.png
+[02:55] <stiltzkin> Yeah, the driver itself is segfaulting. I think it's reinstall time unfortunately.
+[02:55] <GMDynamics> @Hajime i was that sarcasm ? :D
+[02:55] <ms-daisy> GMDynamics, you can replace it with dpkg.
+[02:56] <marianne_> Tex_Nick: thank you again...
+[02:56] <zykotick9> GMDynamics: i assume you want apt back?  do you know if anything else was removed with it?  download the DEB for apt and use dpkg to install it... hopefully that works.
+[02:56] <DaemonicApathy> GMDynamics, did you want to know how to reinstall apt?
+[02:56] <GMDynamics> dpkg is failing for some weird reason
+[02:57] <Hajime> gmdynamics, you can fetch apt,and install it with dpkg
+[02:57] <DaemonicApathy> http://www.ehow.com/how_8141696_reinstall-apt-ubuntu.html <~ 4 easy steps
+[02:57] <GMDynamics> dpkg keeps failin
+[02:57] <zykotick9> GMDynamics: error?
+[02:57] <GMDynamics> SegFault
+[02:57] <She153> does anyone know anything that will burn iso's ?
+[02:58] <GMDynamics> I'm thinking Ill just backup my stuff and reinstall
+[02:58] <Neo31> hello folks, i need to install libqt4-webkit 31 bit on ubuntu 12.04 64 bit. is there a way to install it from the repository so it keeps updated or I have to install the deb manually!? thanks
+[02:58] <DaemonicApathy> She153: Ubuntu comes with Brasero.
+[02:58] <hualet> brasero
+[02:58] <Hajime> she153, a lot of tools was available, wodim, brasero,k3b ...
+[02:59] <bazhang> !burners > She153
+[02:59] <ubottu> She153, please see my private message

@@ -1,0 +1,311 @@
+[03:41] <Xlaits_> L3top: http://pastebin.com/afJTk1Tg
+[03:42] <bobweaver> hailey:  apt-cache policy dump b43 && apt-cache policy dump wl
+[03:42] <bobweaver> hailey:  get anything back ?
+[03:42] <blackmatrix_ny> LittleBallOfHate, yea you should have said that first
+[03:43] <waheed> hey guys, I need a sticky notes program like the one in windows seven that sticks "keep visible" to the desktop, I tried many from the software centre and all of them are trivia
+[03:43] <waheed> ??
+[03:43] <LittleBallOfHate> blackmatrix_ny: I know my shit though :)
+[03:43] <L3top> Xlaits_: sudo apt-get remove openjdk*
+[03:43] <hailey> bobweaver: nada
+[03:43] <Xlaits_> L3top: Purge?
+[03:44] <bobweaver> hailey:  sudo apt-get install b43-fwcutter && sudo apt-get install firmware-b43-installer && sudo modprobe b43 && sudo iwlist scan
+[03:44] <bobweaver> hailey:  do you have wireless ?
+[03:45] <L3top> Xlaits_: I am not sure. Lets do this instead... sudo apt-get -s remove --purge openjdk*          and pastebin the result. I want to see what all it wants to chunk out.  (-s will do a simulation)
+[03:46] <Psykus> where would I start trying to troubleshoot the display not turning off after an amount of idle time on a laptop? i have the power settings set to turn off the display after 5 minutes instead of using a screen saver, and it just makes the screen black but doesn't actually turn off the screen
+[03:47] <hailey> I seem to have wlan0 now.  Let me  see of there is anything I can do with it.
+=== Guest26432 is now known as Bogdaniel
+[03:47] <blocky> anyone know of a way to get win7-like resizing of windows to the left and right half of the screen, super key + left/right arrow?
+[03:47] <shaneo> hey guys whats a good app for pasting from teminal to ubuntu pastebin
+[03:47] <Xlaits_> L3top: Alright. I did the former. I'll do the latter now, just to be sure.
+[03:47] <LittleBallOfHate> blocky: that's the onlhy thing I miss from windows 7
+[03:47] <LittleBallOfHate> blocky: you figure it out, let me know
+[03:47] <wylde> blocky: ctrl+super+ left or right
+[03:47] <bobweaver> !info pastebinit > shaneo
+=== Bogdaniel is now known as Guest32270
+[03:47] <blocky> I've got the up and down set in keyboard shortcuts
+[03:47] <L3top> !pastebinit | shaneo
+[03:47] <ubottu> shaneo: pastebinit is the command-line equivalent of !pastebin - Command output, or other text can be redirected to pastebinit, which then reports an URL containing the output - To use pastebinit, install the « pastebinit » package from a package manager - Simple usage: command | pastebinit -b http://paste.ubuntu.com
+[03:47] <blocky> which is a start
+[03:47] <Xlaits_> L3top: Done, and done.
+[03:48] <shaneo> thanks L3
+[03:48] <shaneo> thanks L3top
+[03:48] <zig> what is the thing called at the left of the command line like… root@127.0.0.1:
+[03:48] <LittleBallOfHate> zig: prompt
+[03:48] <LittleBallOfHate> zig: PS1
+[03:48] <L3top> Xlaits_: lets move that tar.gz to /usr/share
+[03:49] <blocky> what on earth... the partition manager shows everything as a subfolder of /dev/mapper
+[03:49] <twig11> How can I add images to be shown in the default desktop backgrounds list in the Appearance settings? I found instructions saying to add an image to /usr/share/backgrounds, then navigate there from the Appearance settings app and select it, but it still doesn't show up in the selection of default backgrounds. What's the trick to getting an image included as a background which any user can choose from the defaults and have shown as the lightdm background as wel
+[03:49] <twig11> l?
+[03:50] <Xlaits_> L3top: Permission denied...
+[03:50] <LittleBallOfHate> Xlaits_: sudo?
+[03:50] <L3top> sudo
+[03:50] <Xlaits_> L3top: it would be helpful if I was using the command line...
+[03:51] <zig> well, when i log in as my new user, i dont have a promt, it just says $
+[03:51] <zig> is this normal?
+[03:51] <LittleBallOfHate> zig: make sure their shell is set the same as yours
+[03:51] <Xlaits_> L3top: Or knew the command for that period...
+[03:51] <LittleBallOfHate> zig: if you copied your rc file there
+[03:51] <L3top> What directory is it in currently Xlaits_
+[03:51] <jrib> zig: how did you create this user?
+[03:51] <Xlaits_> L3top: Downloads
+[03:51] <L3top> Perhaps we should move to pm so as to not flood the channel.
+[03:52] <zig> useradd zack
+[03:52] <jrib> zig: use adduser, not useradd
+[03:52] <Xlaits_> L3top: Yeah...
+[03:52] <LittleBallOfHate> zig: you missed lots of options
+[03:52] <blackmatrix_ny> LittleBallOfHate, sorry to break it to you but no you dont
+=== jsec[AFK] is now known as jsec
+[03:52] <LittleBallOfHate> blackmatrix_ny: you come up with something?
+[03:52] <LittleBallOfHate> blackmatrix_ny: I can admit being wrong
+[03:52] <jrib> !away > jsec
+[03:52] <ubottu> jsec, please see my private message
+[03:52] <zig> so should i deluser?
+[03:53] <jrib> zig: that would be the easy solution
+[03:53] <blackmatrix_ny> LittleBallOfHate, when I get the proper unix netstat
+[03:54] <zig> what options would you recommend i adduser with?
+[03:54] <jrib> zig: you don't need any options with adduser
+[03:55] <LittleBallOfHate> jrib: useradd
+[03:55] <jrib> LittleBallOfHate: ?
+[03:55] <LittleBallOfHate> jrib: he's creating a new user not adding to groups
+[03:55] <jrib> LittleBallOfHate: adduser creates a new user as well
+[03:55] <zig> oh wow, adduser is much nicer
+[03:55] <LittleBallOfHate> blah
+[03:56] <LittleBallOfHate> i like to make sure things are how I want them :)
+[03:56] <mohit> hi there. i need help. i have downloaded 12.04 twice, ripped the cd and tried to use it but eerytime, it turned out to be wubi. is anyone else finding a similar problem?
+[03:56] <zig> and that way also set my prompt up how i was used to
+[03:56] <zig> thanks
+[03:56] <wylde> mohit: uhhhh... if you don't wany wubi, boot from the cd?
+[03:56] <wylde> want*
+[03:57] <paulus68> I run 12.04 server with 2 nics, under vmware 1 nic is comming up automaticly the 2nd doesn't but can be launched manually how do I get the 2nd nic up automaticly?
+[03:57] <jrib> zig: one of the differences is that adduser will automatically copy the contents /etc/skel/ into your user's home
+[03:57] <footvilla> hey guys is there like a package that installs some sort of system monitor? that you can access remotely
+[03:57] <mohit> the problem is that i have tried to download the installer iso but when i brn a cd from it, it turns out to be wubi
+[03:57] <footvilla> to check on system health cpu
+[03:57] <footvilla> etc
+[03:57] <bobweaver> mohit:  I know that this might sound silly but what happens when you turn the computer on with the cd in the drive . if it goes too windows you have to boot you cd in the 1st order of boot or load the boot menu if you have one
+[03:57] <zig> yes, that was what i was looking for.
+[03:57] <zig> i have the alias, and the promt im used to. Thanks.
+[03:58] <wylde> mohit: all the install images have wubi on them.
+[03:58] <blocky> hmm okay same problem as before, grub-install /dev/mapper failed
+[03:58] <bobweaver> mohit:  all that can be done from the bios unless this is a mac ?
+[03:58] <blocky> Why is it not assigning regular drive numbering?
+[03:58] <Psykus> <Psykus> where would I start trying to troubleshoot the display not turning off after an amount of idle time on a laptop? i have the power settings set to turn off the display after 5 minutes instead of using a screen saver, and it just makes the screen black but doesn't actually turn off the screen
+[03:58] <twig11> How can I add images to be shown in the default desktop backgrounds list in the Appearance settings? I found instructions saying to add an image to /usr/share/backgrounds, then navigate there from the Appearance settings app and select it, but it still doesn't show up in the selection of default backgrounds. What's the trick to adding an image to the default set so any user can choose it and have it also show up as the lightdm background?
+[03:58] <mohit> ok. its not a mac. an acer runing on windows vista
+[03:58] <Psykus> figured this out by the way, xfce's power manager wasn't working correctly
+[03:59] <Psykus> had to set the monitor settings in the screensaver menu instead
+[03:59] <mohit> woud you have an idea, why the boot freezes when i try to use the cd?
+[03:59] <bobweaver> mohit:  have you checked the md5sum ?
+[03:59] <wylde> mohit: reboot with the cd in the drive. If it doesn't load from the cd you'll have to edit bios settings, or possibly hit f12 while the bios loads.
+[03:59]  * paulus68 I hate vista
+[04:01] <mohit> i checked the bios and it is set to boot from cd as the first preference.
+[04:01] <hariom> I want to run my python script which has module import from the non standard location python (so python won't work but /opt/mylib/bin/python). I want to run this every 24 hours and any output of this should go to /var/log/myscript.log file. What should be the content of the cron script and where to keep it
+[04:01] <Wildbat> is there a tools for tidying up indent for php/html ?
+[04:01] <hariom> * 23 * * * /opt/mylib/bin/python /home/user/myscript.py > /var/log/myscript.log 2>&1       Is this correct?
+[04:02] <paulus68> mohit: does the cd work on another pc/laptop
+[04:02] <mohit> however i have not checked md5sum. how should i do that? i am trying to get back into ubuntu installed on my computer after installing vista
+[04:02] <bobweaver> !md5sum | mohit
+[04:02] <ubottu> mohit: To verify your Ubuntu ISO image (or other files for which an MD5 checksum is provided), see http://help.ubuntu.com/community/HowToMD5SUM or http://www.linuxquestions.org/linux/answers/LQ_ISO/Checking_the_md5sum_in_Windows
+[04:02] <mohit> paul, dont have another comp to work on.
+[04:03] <dr_willis> i was thinking the ccd had some sort of 'verify' item in its boot menus.. but that checks  the md5's of  the files. not the whole iso
+[04:04] <hailey> After reboot, the BCM4311 works.  For some reason, I have to use CLI commands to connect, but it works.  Thanks all
+[04:04] <mohit> will be back after checking md5s. thanks guys!
+[04:04] <bobweaver> np hailey  enjoy
+[04:04] <paulus68> mohit: ok if you burn another iso for instance server version, does it allow you to install server edition just a thought
+[04:05] <paulus68> I run 12.04 server with 2 nics, under vmware 1 nic is comming up automaticly the 2nd doesn't but can be launched manually how do I get the 2nd nic up automaticly?
+[04:05] <mohit> think no harm in trying. will try that as well. right now downloading from alternate source as well
+[04:06] <dr_willis> paulus68:  quick fix.. put command in rc.local to  set it up. ;)
+=== jd is now known as Guest97419
+[04:06] <paulus68> dr_willis: how do you do this?
+[04:07] <dr_willis> paulus68:  look at /etc/rc.local  its a script that gets ran at the end of the boot  process.
+[04:07] <dr_willis> after all the other services start
+[04:07] <simonp> hi all. why network upgrade from lucid to precise is still not possible? http://changelogs.ubuntu.com/meta-release-lts still don't have precise...
+[04:07] <Guest97419> updated 12.04 now am stuck in "low graphics" mode and any selection I pick goes to *checking battery state"  how do I get back to booting the os
+[04:08] <blocky> does anyone know why the livecd creates a partition called /cow?
+[04:08] <Guest97419> * you can response to "JD"
+[04:09] <dr_willis> blocky:  cant say ive noticed that.
+[04:09] <blocky> it's a filesystem called /cow which is mounted as /
+[04:09] <blocky> in the filesystem
+[04:09]  * Xlaits_ looks confused
+[04:09] <blocky> something weird is going on with my system, I can't seem to get a bootloader installed
+[04:09] <Guest97419> updated 12.04 now am stuck in "low graphics" mode and any selection I pick goes to *checking battery state"  how do I get back to booting the os
+[04:10] <dr_willis> Guest97419:  you mean you can boot to the desktop. but its in low gfx mode?
+[04:10] <bobweaver> Guest97419:  what is you gfx card ?
+[04:10] <paulus68> dr_willis: what do I enter there?
+[04:11] <dr_willis> paulus68: whatever commands you need to configure what it is you are trying to configure.
+[04:11] <Guest97419> can not get to desktop...do not know gfx card...sony vaio...pentium 4
+[04:11] <hnsz> Hello. I'm having a slight problem. I have no windows just what is in them. Also I haave a problem with certain flash videos. They have undiscernable video with only the basic colours. Others are fine. I don see how the two things are related but they started at the same time.
+[04:11] <dr_willis> How can it be in 'low graphics mode;' if its snot getting to the desktop....
+[04:11] <Guest97419> It starts up to "Ubuntu" and logo buttons
+[04:11] <bobweaver> Guest97419:  are you looking at that computer can you talk here and type stuff on that one ?
+[04:12] <bobweaver> Guest97419:  how many operating systems are installed on this computer ?
+[04:12] <Guest97419> then goes to low graphics mode...am on separate pc...can't access anyting but black screen
+[04:12] <dr_willis> hnsz:  if you mean you  have no window borders/decoration - thats a sign that compiz crashed..  try 'compiz --replace' in a terminal if  you  can
+[04:12] <Guest97419> only one os...PP 12.04
+[04:12] <bobweaver> Guest97419:  press ctrl+alt+f1
+[04:12] <bobweaver> Guest97419:  sign in
+[04:13] <paulus68> dr_willis: so basicly when I add there the command to bring the eth1 card up I will be good to go ?
+[04:13] <dr_willis> paulus68:  yes. be sure its befor that last exit command in the file. and dont start anything that will take over the shell, or start things in the background. (common mistakes i see people make in here)
+[04:14] <Guest97419> okay will try...be back soon
+[04:14] <user1> hi, how to isntall bugzilla3 in ubuntu 10.04 server LTS, pls help me...
+[04:14] <paulus68> dr_willis: just entering the things to bring the eth1 up and that's it
+[04:15] <dr_willis> user1:  if its not in the repos. or a PPA. use the source.
+[04:15]  * paulus68 **** never to old to learn**** thanks dr_Willis
+[04:15] <Guest97419> woo hoo
+[04:15] <Guest97419> that worked!
+[04:15] <Guest97419> thanks!
+[04:15] <bobweaver> Guest97419:  np you need to fix you gfx driver thou
+[04:16] <user1> dr_willis, can u send me the link how to install bugzilla3
+[04:16] <bobweaver> you can install bugzilla unser dev tools on mozilla
+[04:16] <dr_willis> user1:  nope.. ive never used it.. the stndard routine is. check the repos.. check for  ppas or if all else fails resouirt to using the source for apps not in the repos.ppas
+[04:17] <kameron> can someone help me with some basic drive mounting? I'm having a problem accessing the mounted drive by anyone except root.
+[04:17] <Guest97419> ok bob...will do that...i know how to do that...not the cnl/alt/f1 thingy...but woo hoo anyway
+[04:17] <dr_willis> kameron:  what filesystem is the FS in question
+[04:17] <bobweaver> Guest97419:  glade too see that you are happy :)
+[04:17] <kameron> dr_willis, ext4.
+[04:18] <dr_willis> kameron:  then you need to set the proper ownersshiop or  permissions on the files   and dirs you  want the users to  access.
+[04:18] <Guest97419> had the power go out yesterday and mucked up all the computers...lost a modem...had to fix win7 ip address...router settings...and it was a pain...but this...this is easy
+[04:18] <paulus68> dr_willis: small question do I just enter ifconfig with all the parameters or would the syntax be different?
+[04:18] <mohit> Guys MD5s are matching. trying different instances but have a feeling that there is something fundamentally wrong with what i might be doing!!
+[04:19] <kameron> dr_willis, i have a drive that's completely blank and users can't create a directory or do anything. i'll paste my fstab for you to see.
+[04:19] <dr_willis> paulus68:  same as you would use in the shell. since rc.local is ran as a shell script
+[04:19] <kameron> dr_willis, http://paste.ubuntu.com/966145/
+[04:19] <paulus68> dr_willis: but no need to add sudo I presume just to be sure
+[04:19] <dr_willis> kameron:  you set permissions/ownership  on the mountpoint after you  mount it.. that  sets the permissions for the 'root' of the drive. OR make a directory and chown/chmod that. and let theusers access tghat dir
+[04:19] <Guest97419> btw...do you suppose the outage or the update messed up the graphics?
+[04:19] <dr_willis> paulus68:  rc.local  IS ran by the system.. so  its  allready  ran as root
+[04:19] <bobweaver> mohit:  please explain too me like I ma a 7 yr old how you are trying too do this . (sometimes I act like a 7yr old) :)
+[04:20] <kameron> dr_willis, all my drives i can access just fine except for the ext4 drive mounted to "StoreSwap"
+[04:20] <dr_willis> kameron:  it all depoends on the filesystem in use and the ownership/modes/permissions of the drives filesystemjs
+[04:20] <Guest97419> thanks bob  thanks much
+[04:20] <dr_willis> kameron:  the other drives are what filesystem?
+[04:21] <kameron> dr_willis, ext4 and ntfs
+[04:21] <dr_willis> ntfs - is setable at mounttime - because it does NOT support the normal linux  permissions.
+[04:21] <dr_willis> thats the only  way to set the permissions.ownership on ntfs.
+[04:21] <mohit> i downloaded the iso file "ubuntu-11.04-desktop-i386.iso" burned it to a dvd successfully and am trying to boot from dvd (have set it as first preference in bios). the boot just freezes. i have done this with 4 dvds now.
+[04:22] <dr_willis> for normal linuxx filesystems you normally follow the standard permission 'rules'
+[04:22] <bobweaver> mohit:  where does it frezze ?
+[04:22] <kameron> mohit try adding option "nomodeset" when you boot.
+[04:23] <dr_willis> mohit:  you  are burning a cd image to  a dvd disk: no  cd disks? why not try a usb flash:
+[04:23] <bobweaver> mohit: meaning .... do you get a spash screen anything or does it just go to windo z ?
+[04:23] <kameron> dr_willis, i see what i did wrong. i didn't set permissions of the folder it's being mounted to. it's working now. thanks!
+[04:23] <dr_willis> mohit:  how did you burn it to  disk
+[04:23] <dr_willis> kameron:  the permissions of the 'folder' after its mounted.. is a reflection of the permissions of the root of  the drive.  BEFOr  the mount.. the permissions dont matter.
+[04:24] <kameron> dr_willis, that was my problem
+[04:24] <mohit> after getting through bios.it dosnt go to windows. a "_" in the top left corner of the screen just flashes as the dvd tries hard to read. after a while, as i eject th dvd, the boot quickly jumps to windows.
+[04:25] <dr_willis> i always just make a directory called 'UsersStorage' on the root of  the drive and chown/chmod  that.. the useres dont need to  see the LOST+FOUND directory :)
+[04:25] <mohit> i used imgburn for one and cdburnerxp another time on a different pc
+[04:25] <bobweaver> mohit:  what kind of computer is this ?
+[04:26] <L3top> did you check the md5sum mohit?
+[04:26] <dr_willis> mohit:  id try a usb boot. and test out  those disks on a differnt pc.  Ive  heard of  mixxed results burning the cd iso  image to a blank  DVD also.,
+[04:26] <mohit> i tried burning a CD as well. exactly the same result.
+[04:26] <mohit> acer aspire 6930
+[04:26] <dr_willis> bbl.
+[04:26] <mohit> ok. let me try a usb boot
+=== peps is now known as Guest49748
+[04:30] <worm> I have a small problem on ssh.
+[04:31] <hnsz> How can I invoke a fsck?
+[04:31] <worm> I used ssh to connect to another's computer, but the wall command cannot show him any information.
+[04:31] <worm> I want to tell him something by a pop-up window, but how?
+[04:32] <bobweaver> worm:  notify-send "this is a message about foo "
+[04:32] <hnsz> that's cute :)
+[04:34] <wylde> !fsck | hnsz
+[04:34] <ubottu> hnsz: fsck is the FileSystem ChecKer, which runs automatically when you boot if you didn't shutdown cleanly. Type "man fsck" for information on running it manually. The command "sudo touch /forcefsck && sudo shutdown -r now" will force a reboot and a filesystem check; "sudo touch /fastboot" will skip a filesystem check at next reboot
+[04:35] <aaas> i cant ping my windows machines from ubuntu or my dd-wrt router, any ideas?
+[04:35] <hnsz> wylde: Thanks
+[04:35] <wylde> hnsz: np
+[04:35] <worm> aaas: Any error message? Type ifconfig to see your network status.
+[04:36] <aaas> worm network is fine, i can get out to internet on all boxes
+[04:36] <aaas> worm ping error is "destination host unreachable"
+[04:36] <aaas> worm firewall disabled on both sides
+[04:37] <worm> aaas: That means you might have the wrong ip address of them.
+[04:37] <bobweaver> aaas: are you on wifi ?
+[04:37] <aaas> worm bobweaver no
+[04:37] <aaas> not on wifi
+[04:37] <aaas> windows machines can ping each other
+[04:37] <aaas> dd-wrt sets static ips of all machines
+[04:37] <aaas> cant ping by hostname or ip
+[04:37] <bobweaver> are the other  machines up ?
+[04:38] <aaas> bobweaver yes
+[04:38] <worm> aaas: can you paste your ifconfig here?
+[04:38] <bobweaver> aaas:  what does traceroute do ?
+[04:38] <aaas> bobweaver traceroute to where?
+[04:38] <aaas> worm one sec
+[04:39] <bobweaver> to the other machines aaas
+[04:39] <violinappren> worm:  before calling notify-send, you have to: export DISPLAY="0.0"
+[04:39] <violinappren> worm: correction:  it's :0.0 not 0.0
+[04:39] <aaas> bobweaver unknown host
+[04:39] <aaas> bobweaver ill try from the router
+[04:39] <hnsz> I have not windows. Reboots don't work.
+[04:40] <aaas> bobweaver same from routers
+[04:40] <hnsz> I do have the unitybar and the menubar
+[04:40] <bobweaver> aaas try angry ip scanner ?
+[04:41] <aaas> angry ip scanner?
+[04:41] <aaas> worm http://pastebin.com/0T6S2MfX
+[04:42] <blocky> okay now I've done something really bad
+[04:42] <worm> aaas try ping 192.168.1.255 -b
+[04:42] <blocky> I changed a bios setting from SATA enhanced to SATA compatible and now when I power on the machine it just says Express Gate
+[04:42] <blocky> caps lock doesn't even work
+[04:43] <aaas> worm works
+[04:43] <hnsz> blocky: bios reset?
+[04:43] <wylde> blocky: can you get back into bios to fix it? If not you're going to have to reset the bios :)
+[04:43] <blocky> no, can't even get to bios
+[04:43] <worm> aaas: Have you received some "DUP"?
+[04:43] <hnsz> blocky: check your motherboard manual :)
+[04:43] <aaas> worm "dup"?
+[04:43] <blocky> what the hell asus, not cool
+[04:44] <wylde> blocky: yep, what hnsz said
+[04:44] <worm> aaas: something like time **ms (DUP!) or duplicates.
+[04:44] <wylde> blocky: just because you CAN change a bios option, doesn't mean you should! lol >.<
+[04:45] <aaas> worm no
+[04:45] <worm> aaas try arp.
+[04:45] <blocky> wylde I don't think it's supposed to lock up
+[04:45] <worm> aaas:  it will show you the ip address and the mac address of the computers connected to yours.
+[04:45] <aaas> worm windows machines show (incomplete) for hwtyp hwaddress flag amsk
+[04:46] <worm> aaas then arping the ip address of the router and the windows machine.,
+[04:46] <wylde> blocky: I would imagine not
+[04:47] <rychusj> does anyone have any advice on how to fix a duplicate source.list entry?
+[04:47] <worm> aaas: If everything works well, the reply of them included a broadcast and a lot of unicasts.
+[04:47] <aaas> worm shows same info as 'arp' alone
+=== Guest32270 is now known as Bogdaniel
+[04:47] <bobweaver> rychusj:  sudo apt-get --fix-broken update
+=== Bogdaniel is now known as Guest98362
+[04:48] <rychusj> bobweaver: tried it and still getting the same message
+[04:49] <worm> aaas: How many broadcasts?
+[04:49] <aaas> worm how do i know
+[04:50] <worm> aaas: is that arping but not arp?
+[04:50] <blocky> motherboard manual doesn't address this problem
+[04:50] <hnsz> blocky: Which motherboard?
+[04:50] <blocky> asus p5q pro
+[04:50] <wylde> blocky: look for "bios reset"
+[04:50] <bobweaver> rychusj:  could you use paste.ubuntu.com and paste the error that you are getting and also    cat /etc/apt/source.list
+[04:51] <aaas> worm ah ok sorry, from router i get nothing
+[04:51] <worm> aaas: at the end you can see the broadcasts and responds .(After you typed ^C)
+[04:52] <aaas> worm 65 broadcasts
+[04:52] <worm> aaas: no respond?
+[04:52] <aaas> worm no, same from router #2
+[04:52] <worm> aaas: can you try to ping those things again?
+[04:52] <aaas> worm same with ubuntu machine
+[04:53] <hnsz> blocky: you know what a jumper is?
+[04:53] <aaas> worm from ubuntu -> windows #1 ('destination host unreachable'
+[04:54] <aaas> worm same with router #1 and #2
+[04:54] <aaas> worm routers -> ubuntu ping fine
+[04:54] <blocky> hnsz, yeah I found it, back in bios now, thanks
+[04:54] <hnsz> blocky: On the bottom you have two pci slots, right to those slot are three little pins on pin 1 and 2 there is a jumper. You have to put the jumper on pin 2 and 3 and then back on pin 1 2 again
+[04:54] <rhizmoe> what can i use for arin lookups? like whois -a used to be
+[04:55] <worm> aaas how about 192.168.1.151 and 192.168.1.1?
+[04:55] <aaas> worm windows #1 to #2 ping fine
+[04:55] <aaas> worm what about them?
+[04:55] <blocky> I think there is some sort of RAID I was not aware of here
+[04:56] <rychusj> bobweaver: http://paste.ubuntu.com/966172/
+[04:56] <rychusj> bobweaver: is cat/etc/apt/source.list a terminal command?  not sure how to get to that
+[04:57] <hnsz> blocky: Itś scary isn it :p
+[04:57] <blocky> I have no clue what is happening with this system
+[04:57] <bobweaver> rychusj:  yes it is but there is a space like   cat   /ect/apt/sources.list
+[04:57] <blocky> hnsz, yeah I was panicked
+[04:57] <blocky> I've installed grub to two locations so far, still can't get linux to boot
+[04:58] <blocky> seem to have found a disk that boots windows though
+[04:58] <worm> aaas: I am not sure what's up then... So sorry. Can anyone else help aaas?
+=== torm3nt is now known as Oddman
+[04:58] <aaas> its ok worm thanks for trying...it might be dd-wrt..the fact that i can do windows to windows and ubuntu to routers seems like it's not a perticular machine
+=== James is now known as Guest33870

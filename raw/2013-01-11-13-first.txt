@@ -1,0 +1,179 @@
+[12:22] <asdf321> oops
+[12:22] <asdf321> that's the paste though
+=== Albastos is now known as Albastos|off
+[12:22] <Johnnie> bekks: Menu for choosing installed systems
+[12:22] <craigbass1976> dr_willis, I was thinking teamviewer, but not sure if you can just go leaving that unattended for long periods.
+[12:24] <wizrd> nabblet: you could also check this one out: http://freedns.afraid.org/
+[12:24] <bekks> Johnnie: Did you change the boot order to actually boot from your CD?
+[12:24] <typhlosion> i didn't understand how to get that channel
+=== aydin__ is now known as aydin
+[12:25] <typhlosion> you can do it manually by pressing f12 on boot
+[12:25] <hdd> good day yall, how can i made a route stay after a shutdown/reboot, i put "up ip route add network/mask via ip_gw src my_ip" but does not work. im working with ubuntu 11.04 (i know is no longer support, im working on it)
+[12:25] <bekks> typhlosion: You have to join the server irc.spotchat.org and then join #linuxmint-help
+[12:26] <challenger> yippe B)
+[12:26] <challenger> it worked
+[12:26] <Slart> hdd: this looks promisigin
+[12:26] <Slart> hdd: http://www.ubuntugeek.com/howto-add-permanent-static-routes-in-ubuntu.html
+[12:27] <Johnnie> bekks: Yes. Other images are istalled automatically.
+[12:27] <bekks> Johnnie: Then I'd say something went wrong with burning the CD.
+=== janis is now known as Guest41470
+[12:27] <dr_willis> craigbass1976:  you will eventually want to use ssh. :)   You can even ssh in from your phone
+[12:28] <hdd> Slart: didnt work either i try same site yesterday
+[12:28] <Slart> hdd: oh... no errors? just didn't work?
+=== Guest41470 is now known as bakape
+[12:29] <SUN1985> :/list
+[12:29] <killer> i can't connect to ad hoc wifi created by my friend /....though i can join others
+[12:30] <MonkeyDust> challenger  for future reference: did you export to .ova and import that in vmplayer?
+[12:30] <hdd> Slart: if i call either one from a console, both works, but in a reboot, from the interfaces file... not
+[12:30] <Johnnie> bekks: Maybe it is so. Thank you.
+[12:31] <nabblet> Fudge: i am using afraid.org (mooo.com seems to be based on it) - works fine :)
+[12:32] <challenger>   MonkeyDust , not yet, still installing
+[12:35] <killer> can't connect to ad hoc network ubuntu
+[12:35] <challenger> ? can i ask about teamviewer?
+[12:35] <killer> created by win 7
+[12:35] <challenger> in ubuntu teamviewer isn't detecting my cam
+[12:36] <dr_willis> challenger:  do other apps see the cam? such as 'cheese' ?
+=== mns` is now known as Guest74412
+=== Guest74412 is now known as mns``
+[12:36] <ichat> here is a kind of strange question... - my system  intel  sandybridge celeron  would not  halt anymore   so to fix it i tried,  to update to  kernel-ppa/mainline   linux  3.7.1-amd64  witch somehow didnt work for my intel grafix... BUT after i  do   apt-get-purge linux-image-3.7  (so reverted back to my main kernel)  the shotwon issue seams away....  how can i troubleshoot,
+[12:36] <challenger> dr_willis: yup guvcview, cheese
+[12:36] <nlsthzn> za
+[12:37] <challenger> and how can i detect my cam inside vbox?
+[12:37] <challenger> it works fine on cheese and other cam apps
+[12:37] <MonkeyDust> challenger  it's probably a USB device, check the vbox USB settings
+[12:38] <challenger> MonkeyDust,  it is attached to my laptop . (lenovo)
+[12:38] <challenger> inbuilt cam
+[12:38] <dr_willis> challenger:   You are running teamviewer in vbox?
+[12:39] <ichat> challenger:  - no matter, its still a usb cam...
+[12:39] <MonkeyDust> challenger  my integrated webcam is identiefied as a USB device, too
+[12:39] <challenger> i tried inside  vbox outside vbox  . cam doesnt work . specially for teamviewer
+[12:39] <freakynl> Hi, is there an installer for installing ubuntu server on usb and have it load to ram? (Mainly concerned syslog etc. will write so much flash blocks die on the stick)
+[12:39] <challenger> and inside vbox cam doesn't work for any app
+[12:40] <bekks> !usb | freakynl
+[12:40] <ubottu> freakynl: For information about installing Ubuntu from USB flash drives, see https://help.ubuntu.com/community/Installation/FromUSBStick - For a persistent live USB install, see: https://wiki.ubuntu.com/LiveUsbPendrivePersistent
+[12:40] <dr_willis> freakynl:   You are worried about a 32gb usb flash drive burning out?
+[12:40] <challenger> ichat, MonkeyDust : thanks for the info
+[12:40] <ichat> challenger do a  sudo lsusb  find your webcam id... and than forward the device in your  vbux  usb  settings... it may require the  nonfree  extention...
+[12:41] <dr_willis> freakynl:    You can do a full install onto a usb flah drive.  ive ran that way for months on end. :) never managed to  break one.
+[12:41] <freakynl> 13:40 < dr_willis> freakynl:   You are worried about a 32gb usb flash drive burning out?
+[12:41] <challenger> ichat , Bus 002 Device 003: ID 04f2:b1c1 Chicony Electronics Co., Ltd
+[12:41]  * Ajira soupir de déception
+[12:41] <freakynl> dr_willis: no I'm afraid a cheap-ass 2 or 4GB USB stick will wear out after a gazillion syslog writes :P
+[12:42] <ichat> challnger  so forward the device to your  vbox...
+[12:42] <MonkeyDust> !fr| Ajira
+[12:42] <ubottu> Ajira: Nous sommes désolés, mais ce canal est en anglais uniquement. Si vous avez besoin d'aide ou voulez discuter en français, veuillez taper /join #ubuntu-fr ou /join #ubuntu-qc. Merci.
+[12:42] <challenger>  yeah it is listed in usb list
+[12:42] <freakynl> hmm not sure how I pasted that, didn't even touch the mouse haha
+[12:42] <Ajira> sorry MonkeyDust wrong channel X)
+[12:42] <challenger> and works  for cheese
+[12:42] <raven_> ubuntu 12.10 + vsftpd: i am trying to setup a sftp server with virtual users they access all on the same folder  but i cannot connect by any reason need please
+[12:42] <freakynl> and it would be running for years (~4-5 or so) :)
+[12:43] <ichat> challger you mean it works for cheese install inside the virtual machine or cheese on the host
+[12:43] <challenger> ichat: how ? X) :P
+[12:43] <dr_willis> Hmm.. is vsftp a 'sftp' server?  i thoght ssh could do sftp wthout any other services
+[12:43] <ee12096> Francisco silva
+[12:43] <challenger> cheese on the host
+[12:44] <freakynl> raven_: don't you mean ftps? sftp is a whole other protocol than ftp and comes from ssh
+[12:44] <ichat> challernger so  read up on how to forward usb devices to clients  on virtualbox
+[12:44] <freakynl> ftps however is just regular FTP with a SSL layer, similar to http vs https
+[12:44] <raven_> freakynl, i need any "secure ftp" service
+[12:44] <ichat> aka just coppy paste to google...
+[12:45] <dr_willis> raven_:  ssh and sftp would be the way to go i imagine. a ftp server  is rarely needed these days i find.
+[12:45] <challenger> ichat : )   lemme try this one too, i'm facing this one prob from 6 months cudn't get any solution , even tried mint , fedora
+[12:45] <raven_> dr_willis, yes sftp would be nice but how to setup - what do i need for that?
+[12:46] <dr_willis> raven_:  install the ssh server.. and it should work i belive
+[12:46] <ichat> dr_willis:  sft gets quite some overhead on large files... but than again  id use dav
+[12:46] <raven_> dr_willis, i need to work with virtual users they all have access to the same subfolder and have no access to shell
+[12:46] <dr_willis> I use ssh/sftp from my android pone.
+[12:47] <dr_willis> raven_:  i imagine its doable. I never need to do that.
+[12:47] <raven_> dr_willis, and i need any idea how
+[12:47] <dr_willis> not sure why that would need 'virtual users'
+[12:47] <dr_willis> sounds like normal 'groups' could do that.
+[12:48] <dr_willis> theres all sorts of books and guides on ssh/sftp  most of which ive never needed to read. ;)
+[12:48] <freakynl> raven_: http://howto.gumph.org/content/setup-virtual-users-and-directories-in-vsftpd/ (for debian, but ubuntu is debian based so shouldn't matter much)
+[12:49] <dr_willis> Night all.. bed time for the Dr.
+[12:49] <raven_> freakynl, i set up a vsftpd server already but i cannot connect to it
+[12:49] <freakynl> raven_: please post output on pastebin or something: 'netstat -ntl; iptables -L -v -n'
+[12:50] <raven_> freakynl, first i have to find any verbose messages..... my client only tells me about connection errors
+[12:51] <freakynl> run that on the vsftpd server ^
+=== deu is now known as d3u
+[12:59] <gener1c> which ftpd is the most secure (empiricly)
+[13:00] <gener1c> talking just about the ones in the repos
+[13:01] <bekks> gener1c: It all depends on the security measures taken by the admin.
+[13:01] <zolidznake> bytetrial: :
+[13:03] <bytetrial> hi, hows it going
+[13:06] <nlsthzn> third times a charm perhaps - o/ all I need assistance setting up dual monitors, one running of discreet gfx (Radeon) and the other screen running of onboard Intel
+[13:06] <nlsthzn> the screen on the radeon card working well, the intel card not.  It only works when I go to a tty and then the Radeon goes blank
+[13:07] <bytetrial> hi, hows it going
+[13:07] <multimedia> Hello
+[13:07] <bytetrial> hi, hows it going
+[13:07] <riderplus> hi. i have no sound in tv-maxe
+[13:08] <riderplus> i
+[13:08] <riderplus> i'm on 13.04
+[13:08] <riderplus> i have installed a bunch of codecs so far
+[13:08] <MonkeyDust> riderplus  #ubuntu+1
+[13:10] <nearst> hello
+=== cryptfu_ is now known as Guest44129
+=== Albastos|off is now known as Albastos
+[13:20] <TomyLobo> dr_willis, did you reply something to "how about kdesudo su otheruser -c ..."? i had to leave on short notice and now it scrolled off the tiny tiny default log size of xchat
+=== linuxthefish` is now known as linuxthefish
+[13:21] <gener1c> bekks: and the quality of the code
+=== Albastos is now known as Albastos|off
+[13:24] <Median> So I'm trying to install Ubuntu on my ASUS UX32A, but the installer/ubuntu refuses to start. It successfully loads all modules and such, but gets stuck at "Starting.." just before it was going to start Ubuntu. Any ideas?
+[13:25] <TomyLobo> can "kdesudo su otheruser -c /home/otheruser/one_of_his_programs" harm me?
+[13:26] <TomyLobo> can "kdesudo -- su otheruser -c /home/otheruser/one_of_his_programs" harm me?
+[13:27] <dcherniv> TomyLobo, yes
+[13:27] <jrib> TomyLobo: why don't you use sudo -u instead of using su like that?
+[13:30] <TomyLobo> jrib, that definitely gives the program access to my files
+[13:30] <jrib> TomyLobo: what do you mean?
+[13:30] <TomyLobo> at least that's what dr_willis indicated earlier
+[13:31] <TomyLobo> basically the program is some proprietary shit i dont trust and i set up a user for it
+[13:31] <jrib> TomyLobo: it runs the command as the user you specify
+[13:32] <TomyLobo> so it has a nice box to act in while the rest of my system, including my home folder, is safe from it
+[13:32] <jrib> TomyLobo: the difference between doing « sudo -u user command » and « su -c command user » is that in the first case you use the fact you have sudo powers to run as the other user and in the second case you actually need to be able to login as user
+[13:33] <TomyLobo> jrib, su does not ask for a password if run as root :)
+[13:33] <jrib> TomyLobo: correct
+[13:33] <TomyLobo> hence the kdesudo before it
+[13:34] <jrib> TomyLobo: what program is this anyway?
+[13:35] <vtghii> hi does zeitgeist send information to canonincal?
+[13:35] <OerHeks> vtghii, no
+[13:36] <Eagleman> Is it possible to show the dns cache and look who requested it by IP?
+[13:37] <jpds> Eagleman: No.
+[13:37] <jpds> Eagleman: Only way would be to log every request.
+[13:42] <TomyLobo> jrib, doesnt matter
+[13:43] <jrib> TomyLobo: ok... just trying to give you better advice...
+[13:43] <TomyLobo> i dont trust it but a bunch of people do, so i'm stuck with having to install it
+[13:43]  * jrib guesses skype
+=== kent is now known as Guest27969
+[13:44] <iLogical> http://paste2.org/p/2730912 I am using encryption, I tried to use boot repair to see if it would reinstall grub correctly so that I could use it after windows. I couldn't install windows first because when I do even when leaving empty space in no partition the ubuntu installer only sees one 1 TB partition.
+[13:44] <iLogical> I t's not booting anymore
+[13:44] <iLogical> it gets into a loop of reseting
+[13:44] <Eagleman> jpds, i should be able to tcpdump on the dns server to see which dns requests are made in realtime right?
+[13:45] <Eagleman> something like:  tcpdump -i eth0 host 172.16.30.2
+[13:47] <jpds> Eagleman: Yep.
+=== Albastos|off is now known as Albastos
+[13:47] <Eagleman> tcpdump -vvv -s 0 -l port 53    how do i filter for an specific ip address?
+=== er is now known as Guest74792
+[13:49] <Third3ye> Still having problems getting audio over HDMI to work... I've got Intel HDA integrated soundcard and NVIDIA 6800M GT graphics card
+[13:50] <Third3ye> Extra info from alsa-info.sh are here, if it helps... http://pastebin.com/ddMeUQ32
+=== slank_away is now known as slank
+=== doctorpepper_ is now known as doctorpepper
+[13:53] <llutz> Eagleman: src/dst 4.3.2.1
+=== slank is now known as slank_away
+=== slank_away is now known as slank
+[13:56] <challenger> guys .
+[13:56] <challenger> again in trouble
+[13:56] <Third3ye> Welcome to the club
+[13:56] <challenger> i'm trying to install extension pack to vbox
+[13:56] <challenger> getting following error
+[13:56] <challenger> http://imagebin.org/242500
+[13:58] <challenger> hlwwwwww
+[13:58] <jaesii> challenger: did you download the linux-headers?
+[13:58] <challenger> ? :(
+[13:58] <challenger> linux-headers? for what?
+[13:59] <jaesii> that error also says that extension pack is for version 4.1 and you have 4.2
+[13:59] <challenger> ohh
+[13:59] <jaesii> sudo apt-get install linux-headers
+[13:59] <jaesii> you need them for the extension pack
+[13:59] <challenger> jaesii : thank you :) . lemme try this
+[13:59] <ajfd> morning!

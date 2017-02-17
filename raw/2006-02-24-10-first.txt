@@ -1,0 +1,431 @@
+[09:46] <fangorious> fabian: although the mailing list and ubuntuforums.org would probably get more visibility
+=== Aiwiz [n=Aiwiz@ezerelis.lt]  has joined #ubuntu
+=== SaLoMoN__ [n=SaLoMoN@p54A8B9CE.dip0.t-ipconnect.de]  has joined #ubuntu
+[09:46] <fabian> ok, so I had a 5.04 installed without a problem, I burned a new 5.10 and tried to install it. I have windows on /dev/hda1 which I didn't touch, and /, /boot and swap I re-formatted
+=== zenrox [n=zenrox@71.115.198.118]  has joined #ubuntu
+[09:47] <fabian> however i also have a primary /dev/hda3 in fat16 I didn't even know I had, and it gives me errors on that partition
+[09:47] <fabian> after formatting the first three
+[09:47] <krz> ubuntu doesnt have sshd??
+[09:47] <krz> in /etc/init.d/ ?
+[09:47] <maihem> I think I have a bug, but it may just be a misconfiguration. I set the Gamma of my screen in the xorg configuration, and now all the GTK widget backgrounds and all the icons are pale. Is there a way to configure gtk to assume a gamma of 1.0 (since the X server is performing the adjustment), the font rendering already assumes a gamma of 1.0 (which is why I set my X server to adjust).
+=== bsdfreak_ [n=bsdfreak@64-30-212-39.dsl.linkline.com]  has left #ubuntu ["Ex-Chat"]
+[09:47] <fangorious> krz: openssh-server might be the package name
+[09:48] <fabian> partman says "A bug was discovered!". When I say "ignore" (/dev/hda3 shouldn't be used for linux, apriori), it starts installing the packages, but then it crashes in the middle of the base system installation
+=== SaLoMoN__ is now known as SaLoMoN
+[09:48] <fabian> that is strange because gentoo and breezy installed without a problem
+=== OculusAquilae [n=bastian@p548D0957.dip0.t-ipconnect.de]  has joined #ubuntu
+[09:49] <fabian> (and now of course grub is broken so windows and linux won't load anymore ;-)
+[09:49] <fangorious> fabian: breezy is 5.10
+[09:49] <fabian> fangorious, the 5.04 i meant
+=== Fujitsu [n=Fujitsu@c211-28-183-112.eburwd7.vic.optusnet.com.au]  has joined #ubuntu
+=== lucas_ [n=lucas@p50906BF1.dip.t-dialin.net]  has joined #ubuntu
+[09:50] <fangorious> fabian: hm, you probably boot the livecd to restore grub. or you could boot the windows (2k or xp) cd to run fixmbr and fixboot to get windows booting
+[09:51] <pinkpanther> how do I manually uninstall something?
+[09:51] <wastrel> what are you uninstalling
+[09:51] <fabian> fangorious, do you have any pointer to instructions?
+[09:51] <pinkpanther> Berkeley DB
+[09:51] <fangorious> fabian: but as to the original problem, of the mystery partition, maybe boot a live cd to see what's on it, and delete it if it's stuff you don't care about
+[09:51] <wastrel> how did you install it?
+[09:51] <fangorious> fabian: instructions for which suggestion?
+[09:51] <pinkpanther> through make
+[09:51] <graveson> system hanging when booting up ,tried to reconfigure x-server but no change i have the breezy version of ubuntu
+[09:51] <pinkpanther> I did make uninstall
+=== Tomcat_ [n=Tomcat@p54A1C404.dip0.t-ipconnect.de]  has joined #ubuntu
+[09:52] <pinkpanther> but it didn't remove it
+[09:52] <fabian> fangorious, the less dangerous one? :-)
+[09:52] <wastrel> heh
+[09:52] <wastrel> well that was my idea
+[09:52] <wastrel> pinkpanther:  there's no other uninstall targets in the makefile?
+[09:52] <fangorious> fabian: if you can download the livecd and burn a copy, I would boot off that
+=== eliphas_ [n=eliphas_@host-84-9-255-148.bulldogdsl.com]  has joined #ubuntu
+[09:52] <tuxcicles> graveson, where is it hanging at?
+[09:53] <krz> fangorious how do i get sshd to start?
+[09:53] <fabian> fangorious, ok... do you think it could have anything to do with the fact that I tried to install a x86 on an amd64?
+=== yuri_ [n=yuri@CPE00119552786e-CM014270032311.cpe.net.cable.rogers.com]  has joined #ubuntu
+[09:53] <fangorious> fabian: then you can mount the hda3 partition (mkdir /mnt/hda3 && mount /dev/hda3 /mnt/hda3) to see what's on it
+[09:53] <fangorious> fabian: possible, but i wouldn't think so. why didn't you use the the x86_64 iso?
+[09:53] <krz> how do i get sshd to start in ubuntu?
+[09:54] <fabian> fangorious, I had too many problems with compilation of new software
+[09:54] <fangorious> krz: sudo invoke-rc.d ssh start
+[09:54] <yuri_> I have a logitech keyboard with volume buttons when i use the volume buttons it turns down the "Master" sliders. I'd like it to turn down the "PCM" sliders. any advice?
+[09:54] <pinkpanther> uninstall:
+[09:54] <pinkpanther> 	-cd $(bindir) && $(rm) -f $(PROGS)
+[09:54] <pinkpanther> 	-cd $(includedir) && $(rm) -f db.h db_185.h db_cxx.h
+[09:54] <pinkpanther> 	-cd $(libdir) && $(rm) -f $(libdb) $(libcxx) $(libso_target) $(libso) \
+[09:54] <pinkpanther> 	    $(libjso) $(libjso_target) $(libtso) $(libtso_target)
+[09:54] <pinkpanther> 	-cd $(docdir) && $(rm) -rf *
+[09:54] <fangorious> fabian: well, x86_64 is supposed to be fully 32 bit compatible
+=== TrevorP [n=trevorp@137.166.127.161]  has joined #ubuntu
+[09:55] <pinkpanther> for some reason that part of the makefile didn't uninstall properly
+[09:55] <tritium> pinkpanther: don't paste, please
+[09:55] <wastrel> pinkpanther:  i assume you were superuser when you ran it?
+[09:55] <pinkpanther> sorry
+[09:55] <pinkpanther> yes
+[09:55] <fabian> fangorious, I know I have to do some magic stuff to run in 32-bit mode and to get firefox plugins working and to get sun java etc
+[09:55] <fabian> fangorious, but it will be easier to have it working directly :-)
+[09:55] <maihem> fabian, is it a laptop? It could be a suspect partition, otherwise, it could be a recovery image for the original system.
+=== JQ [n=jquinn@c211-30-161-35.blktn3.nsw.optusnet.com.au]  has joined #ubuntu
+[09:55] <fabian> maihem, yeah, laptop
+[09:56] <tuxcicles> i was hanging up at bootup, and it turned out it was due to my buggy usb epson printer - i unplugged it and reset it  and walla - back to normal
+[09:56] <maihem> s/suspect/sespend/
+[09:56] <fangorious> fabian: i haven't messed with x86_64 very much
+=== Cryptid [n=melchey@202.63.116.26]  has joined #ubuntu
+[09:56] <maihem> s/sespend/suspend/ -- buggering hell
+[09:56] <fabian> maihem, the recovery partition I deleted to install linux on it :-)
+[09:56] <fabian> maihem : besides, it's only 8MB
+[09:57] <Cryptid> Some one please help me get and install intel 915 motherboard graphic Drivers!!!
+=== jnoon [i=jnoon@c-24-4-132-114.hsd1.ca.comcast.net]  has joined #ubuntu
+=== krz_ [n=krz@202.162.29.16]  has joined #ubuntu
+[09:57] <fangorious> fabian: can you download/burn a livecd image to boot off of?
+[09:57] <fabian> fangorious, on another computer, yes
+[09:57] <yuri_> I have a logitech keyboard with volume buttons when i use the volume buttons it turns down the "Master" sliders. I'd like it to turn down the "PCM" sliders. any advice?
+[09:57] <jnoon> when you use a shebang like "#!/usr/bin/env ruby", how does it figure out which ruby to use if there were one version in /usr/bin and one in /usr/local/bin?  how would you change which one its using?
+=== jaklo [n=laurent@AToulouse-252-1-27-197.w83-193.abo.wanadoo.fr]  has joined #ubuntu
+[09:57] <krz_> fangorious, i get * Starting OpenBSD Secure Shell server...                               [fail]
+=== stjepan [n=stjepan@83-131-28-80.adsl.net.t-com.hr]  has joined #ubuntu
+[09:57] <stjepan> hi
+=== SoNiX [n=kvirc@202.183.115.23]  has joined #ubuntu
+[09:58] <krz_> invoke-rc.d: initscript ssh, action "start" failed.
+[09:58] <maihem> jnoon, when you use env, it does exactly the same thing as `which ruby`
+[09:58] <krz_> why?
+[09:58] <wastrel> jnoon:  i believe it uses the one that it finds first on the path
+[09:58] <jnoon> oh ok
+[09:58] <fangorious> fabian: that's probably your best bet. you can check out the contents of that partition that way. then re-run the install choosing to delete it if it's disposable
+[09:58] <ChunkAhoy> fangorious: i get pages and pages of errors with sudo make menuconfig.       firsts lines of errors seems to be missing .h libraries than alot of compiling errors due to the missing libraries i guess.           scripts/basic/fixdep.c:105:23: sys/types.h: No such file or directory
+=== topyli [n=juha@dsl-hkigw3-fe23de00-139.dhcp.inet.fi]  has joined #ubuntu
+[09:59] <ChunkAhoy> i installed all gcc packages and its still the same
+[09:59] <fabian> fangorious, ok... do you think windows could need it to start up? I wouldn't think so but you never know
+=== Tadej`Certanc [n=universe@infinity.unixrulz.net]  has joined #ubuntu
+[09:59] <krz_> fangorious, im krz, btw. with the sshd problem
+[09:59] <maihem> ChunkAhoy: install libc6-dev package
+[10:00] <fangorious> fabian: i doubt it but
+=== zebraFusion [n=zF@ip68-231-196-244.oc.oc.cox.net]  has joined #ubuntu
+[10:00] <ChunkAhoy> ah,  thank you maihem,   i'll do that  :)
+[10:00] <zebraFusion> 5. Another bug in the driver... And for video, there is a bug with xv, so we want to start "gstreamer-properties" and tell it not to use xv for video. (This is the same as starting "Multimedia Systems Selector", a Preferences application that is currently hidden in your menu system)
+[10:00] <fabian> ok
+[10:00] <zebraFusion> what does that mean, someone
+[10:00] <fabian> fangorious, thanks for you help
+[10:00] <Cryptid> i just bought a XFX nvidia Graphic card and i already have Ubuntu Installed when i insert the card and start Ubuntu i get some Xorg erro so how do fix this error????
+[10:00] <fangorious> fabian: good luck
+[10:00] <fabian> :-)
+[10:00] <fangorious> krz, i'm trying to locate which logfile sshd logs to
+=== RememberPOL [n=pol@adsl-64-108-201-5.dsl.chcgil.ameritech.net]  has joined #ubuntu
+[10:01] <RememberPOL> Why isn't Mozilla Firefox v1.5x in the Ubuntu repository?
+[10:02] <maihem> Cryptid: you can try opening /etc/X11/xorg.conf using your favourite text editor (via sudo), searching for "nvidia" and replacing it with "nv". Then run "sudo /etc/init.d/gdm restart"
+[10:02] <fangorious> zebraFusion: it means there's a bug in the driver which prevents you from using a certain video output mode
+[10:02] <ploom> mm - can ext3 filesystem become fragmentated too??
+[10:02] <krz_> fangorious, ok
+[10:02] <maihem> RememberPOL: it is in Dapper. It was released after Breezy, so that's why it's not in there.
+=== exxylan [n=exxylan@p54A29191.dip0.t-ipconnect.de]  has joined #ubuntu
+[10:03] <RememberPOL> maihem: Yes but why not allow current Breezy users be able to upgrade to it?
+[10:03] <zebraFusion> fangorious, but it says to do something and I have no idea what
+[10:03] <zebraFusion> so we want to start "gstreamer-properties" and tell it not to use xv for video. (This is the same as starting "Multimedia Systems Selector", a Preferences application that is currently hidden in your menu system)
+[10:03] <wastrel> RememberPOL:  because breezy was frozen before 1.5 was released
+[10:03] <fangorious> zebraFusion: on the menubar at the top of your screen you'll see "System", which has a "Preferences" sub-menu, which in turn has a "Multimedia Systems Selector" item which lets you specify the video output mode
+[10:03] <zebraFusion> what does that mean
+=== dolmans [n=simon@221.221.202.167]  has joined #ubuntu
+[10:03] <Cryptid> maihem, oh! so i just have to just open xorg.conf and edit it using gedit and find the word nvidia and replace it with nv??? do i have to replace all nvidias with nv???
+[10:04] <maihem> RememberPOL: because whole new versions cmoe out once every siz months, so on average you only have to wait for three.
+[10:04] <RememberPOL> I thought new Ubuntu versions were to feature complete new software packages and system features not just upgraded versions of the same package that could just as well be available using the Update Manager?
+[10:04] <zebraFusion> fangorious, if you read the paragraph it says it's currently hidden in your menu system.
+[10:04] <maihem> Cryptid: ah, gedit is not going to work in this case. try sudo nano /etc/X11/xorg.conf
+[10:04] <RememberPOL> maihem: But okay thank you. I will follow the wiki:FirefoxNewVersion instructions.
+[10:04] <fangorious> zebraFusion: the program started by that menu item is 'gstreamer-properties', which you can also start by typing that into a terminal (Applications->Accessories->Terminal)
+[10:04] <maihem> Cryptid: There is probably only one occurrence of "nvidia". It will be in the "Driver" section.
+[10:05] <fangorious> zebraFusion: Are you running dapper or breezy (it shows up for me in breezy)
+[10:05] <zebraFusion> fangorious, dapper.
+[10:05] <krz> fangorious found anything? :)
+=== thegladiator [n=thegladi@202.83.62.192]  has joined #ubuntu
+[10:05] <fangorious> zebraFusion: Applications->Accessories->Alacarte Menu Editor, you can enable it in there
+[10:05] <zebraFusion> fangorious, thanks, I got it by running the terminal command
+[10:05] <fangorious> krz: not yet
+[10:06] <thegladiator> how do I see my upstatus
+=== namaste [n=cdisque@dslc-082-082-067-163.pools.arcor-ip.net]  has joined #ubuntu
+[10:06] <thegladiator> ?
+=== execve [n=bann3d@125.22.32.15]  has joined #ubuntu
+=== RememberPOL [n=pol@adsl-64-108-201-5.dsl.chcgil.ameritech.net]  has left #ubuntu []
+=== mae [n=mae@Host-000d612e3040.dhcp.csub.edu]  has joined #ubuntu
+=== vivid [n=vivid@c-67-160-125-239.hsd1.wa.comcast.net]  has joined #ubuntu
+[10:06] <wastrel> fangorious, krz: /var/log/auth.log will record ssh logins...
+[10:07] <Cryptid> maihem, ok so this will surely fix the problem rite and if there is ne problem can i switch back to my onboard graphic?????and do u have ne idea bout intel 915 mobo graphic drivers????
+[10:07] <fangorious> wastrel: yeah, but it doesn't record the server starting/stopping, and any error messages during startup
+[10:07] <fangorious> thegladiator: you mean uptime? run 'uptime' in a terminal
+[10:08] <maihem> Cryptid: It is possible that it won't fix the problem. If the opensource nvidia driver (nv) doesn't support your graphics card it won't work.
+[10:08] <tritium> Cryptid: did you disable the onboard video in BIOS?
+[10:08] <Cryptid> maihem, i got a XFX 6600 256mb DDR card do u have ne idea if it is supported
+[10:08] <maihem> Cryptid: BTW, if it already says "nv" and not "nvidia", then installing the nvidia binary packages may help (this would set the driver to "nvidia").
+=== OmegaAlpha [n=christop@69-168-246-71.bflony.adelphia.net]  has joined #ubuntu
+[10:09] <maihem> Cryptid: I don't know.
+[10:09] <fangorious> brb
+[10:09] <wastrel> fangorious:  it shows startup & such on my system
+[10:09] <stjepan> do you know any gtk replacements for kpowersave?
+[10:09] <thelsdj> hrm whats the command to see what code a key on keyboard sends?
+[10:09] <graveson> system hanging when booting up into x,tried to reconfigure x-server no luck any ideas
+[10:09] <Cryptid> tritium,,,  ??? noboard graphics of my mobo (D915) u talking bout,,, i have no idea i have check it out now
+=== xophEr [n=xopher@a84-230-124-206.elisa-laajakaista.fi]  has joined #ubuntu
+[10:10] <maihem> Repeating an earlier question, in case anybody has joined that knows:  I think I have a bug, but it may just be a misconfiguration. I set the Gamma of my screen in the xorg configuration, and now all the GTK widget backgrounds and all the icons are pale. Is there a way to configure gtk to assume a gamma of 1.0 (since the X server is performing the adjustment), the font rendering already assumes a gamma of 1.0 (which is wh
+[10:10] <maihem> y I set my X server to adjust).
+[10:11] <krz_> fangorious, when you said: sudo invoke-rc.d ssh start. you also meant for me to put my password and username?
+[10:11] <krz_> im already logged in as root btw
+[10:11] <maihem> GTK seems to be assuming a gamma of 2.2, giving me an effective gamma of 4.84 :/
+[10:11] <maihem> I mean 0.4545454545...
+[10:11] <wastrel> what's gamma?
+=== zphinx [i=zphinx@2001:618:400:0:0:0:d571:3ca2]  has joined #ubuntu
+[10:12] <maihem> wastrel: gamma curve. It is where 50 percent grey is not halfway between black and white. So you software has to send brighter pixels (except fo black and white) to the monitor.
+[10:13] <krz_> all i need to do is start sshd. why the heck is it so difficult to do
+=== l3v3rag3 [n=fsd@johnflynn.force9.co.uk]  has joined #ubuntu
+=== TomaszD_ [n=Tomasz@ajb15.neoplus.adsl.tpnet.pl]  has joined #ubuntu
+[10:13] <maihem> I suspect that GTK themes, and icons have been set up by people with gamma 2.2 displays. So when drawn on gamma 1.0, it's too bright.
+=== benplaut [n=benplaut@cpe-70-95-146-177.hawaii.res.rr.com]  has joined #ubuntu
+[10:14] <Corsair> is there any real harm to a HD if a pc's bios cant see its full size?
+=== benplaut_ [n=benplaut@cpe-70-95-146-177.hawaii.res.rr.com]  has joined #ubuntu
+[10:14] <fangorious> krz: sudo should only need your password
+=== Mythri1 [n=luke@216-210-228-4.atgi.net]  has joined #ubuntu
+=== theD3viL [n=geek@BSN-77-90-27.dsl.siol.net]  has joined #ubuntu
+[10:14] <maihem> most PC monitors have gamma 2.2. Mine now has gamma 1.0 since the X server is adjusting all pixels. This removes irritating colour artifacts from around text when using subpixel rendering for extra smooth fonts.
+[10:14] <Mythri1> are there any programs out there that automatically traverse a directory tree and delete duplicate files?
+[10:15] <fangorious> krz: and the default config should have sshd launching at boot
+[10:15] <krz_> fangorious, maybe its already running. how do i check if this is the case?
+=== mae [n=mae@Host-000d612e3040.dhcp.csub.edu]  has joined #ubuntu
+[10:16] <wastrel> krz_:  ssh localhost
+[10:16] <krz_> wastrel, i get The authenticity of host 'localhost (127.0.0.1)' can't be established.
+[10:16] <krz_> RSA key fingerprint is d1:97:cb:2e:dc:27:a9:db:9e:db:5d:01:87:cb:35:12.
+[10:16] <fangorious> krz_: that means it's running
+[10:16] <krz_> hm
+[10:17] <fangorious> krz: but you don't have the server's host key in ~/.ssh/known_hosts
+=== Hobbsee [n=Hobbsee@CPE-144-136-113-76.nsw.bigpond.net.au]  has joined #ubuntu
+[10:17] <Corsair> how do i see what drives are available
+[10:17] <fangorious> krz: it should ask if you want to add it in those cases
+[10:17] <Corsair> not nessecarily mounted, just are there
+=== Hobbsee [n=Hobbsee@CPE-144-136-113-76.nsw.bigpond.net.au]  has left #ubuntu ["So]
+[10:18] <krz> fangorious what im trying to do, is use WinSCP to connect a windows box to my linux box
+[10:18] <carthik> How do I get apt-get install the suggested and recommended packages for a package I request to be installed? Can I make it ask me if I want to install the suggested and recommended packages too?
+[10:18] <fangorious> krz: well you seem to have sshd running on your linux box now
+[10:18] <Corsair> can anyone help? ;x
+[10:18] <Mythri1> are there any programs out there that remove specific characters from filenames?
+=== zphinx [i=zphinx@2001:618:400:0:0:0:d571:3ca2]  has joined #ubuntu
+[10:18] <Mythri1> in an entire directory that is
+=== samitheberber [n=stb@dsl-062-241-237-120.lohjanpuhelin.fi]  has joined #ubuntu
+[10:19] <krz> fangorious just to verify. ssh is on port 22 right?
+[10:19] <carthik> Mythri1, there are renamers, search for rename in name and description in synaptic and you will find some
+[10:19] <OmegaAlpha> i cant believe i still cant enable my direct rendering.  mesa is still showing up and not ATI
+[10:19] <SaLoMoN> yeah krz
+[10:19] <fangorious> krz: yep
+=== No1Viking [i=micke@h-83-140-104-3.ip.cust.port80.se]  has joined #ubuntu
+=== Hoxzer [n=niko@a80-186-169-248.elisa-laajakaista.fi]  has joined #ubuntu
+[10:20] <fangorious> Corsair: 'sudo fdisk -l /dev/hda' will show all the partitions on the first ide/ata hard drive
+[10:20] <graveson> how do i reconfigure networking
+=== Toma- [n=haste@203-59-108-9.dyn.iinet.net.au]  has joined #ubuntu
+[10:20] <fangorious> Corsair: i'm not sure how to get a list of attached drives though
+[10:21] <benplaut> anyone here play shogo?
+=== LattePiu [n=LattePiu@62.48.119.130]  has joined #ubuntu
+[10:21] <LattePiu> here, there's a nice shogo one: http://s1.bitefight.it/c.php?uid=27557
+[10:22] <Corsair> i just installed a second Hd
+=== mache [n=mache@mirceamitu.b.astral.ro]  has joined #ubuntu
+[10:22] <fangorious> Corsair: ata?
+[10:22] <Madpilot> !mount
+[10:22] <ubotu> rumour has it, mount is the command to add partitions to your filesystem - for full instructions see https://wiki.ubuntu.com/InstallingANewHardDrive For mounting windows partitions, see !windowsdrives or http://tinyurl.com/bly9f
+=== notos [i=notos@red-corp-201.143.23.181.telnor.net]  has joined #ubuntu
+[10:22] <Madpilot> Corsair: see the bot ^^^
+[10:22] <Corsair> yea
+[10:22] <Corsair> i dont think its formated
+=== lord_crow [n=pfabrega@OL95-50.fibertel.com.ar]  has joined #ubuntu
+[10:22] <fangorious> Corsair: same cable as the existing one?
+[10:22] <lord_crow> hi all
+[10:22] <fangorious> caw
+[10:22] <LattePiu> oh my got I ve just seen something of amazing :O http://s1.bitefight.it/c.php?uid=27557
+[10:22] <carthik> Corsair: hal-device-manager
+[10:23] <Corsair> ?
+[10:23] <carthik> How do I get apt-get install the suggested and recommended packages for a package I request to be installed? Can I make it ask me if I want to install the suggested and recommended packages too?
+[10:24] <fangorious> Corsair: who was that '?' to?
+[10:24] <OmegaAlpha> whats shogo?
+[10:24] <LattePiu> this: http://s1.bitefight.it/c.php?uid=27557
+[10:24] <Corsair> ok, new question
+[10:25] <Corsair> im using the PC with ubuntu for a NAS server
+=== LattePiu [n=LattePiu@62.48.119.130]  has left #ubuntu []
+[10:25] <Corsair> i want the drive to be able to store information from other os's
+[10:25] <Corsair> what format should i choose for the drive?
+=== Hoxzer_ [n=niko@a80-186-169-248.elisa-laajakaista.fi]  has joined #ubuntu
+[10:26] <fangorious> Corsair: if it's going to be accessed over the network I would use ext3
+[10:26] <Corsair> will other os's still be ok to store data onto it?
+[10:26] <OmegaAlpha> Corsair, FAT32
+[10:26] <fangorious> Corsair: then just share it with samba for windows machines, and nfs for linux machines
+[10:26] <notos> its posible to upgrade from debian sarge to Ubuntu 5.10 ?
+[10:27] <Corsair> its not letting me format it as fat32
+=== ChaKy [n=chaky@lns02-0826.dsl.iskon.hr]  has joined #ubuntu
+[10:27] <mache> !windowsdrives
+[10:27] <ubotu> windowsdrives is, like, https://wiki.ubuntu.com/AutomaticallyMountMSWindowsPartitions or see http://tinyurl.com/bly9f
+[10:27] <elkbuntu> Corsair, why would you want fat32?
+[10:27] <fangorious> Corsair: as long as they understand the protocol you share it with, they don't care what FS type it has
+[10:27] <Corsair> ok
+=== nick01 [n=nick01@home-07031.b.astral.ro]  has joined #ubuntu
+[10:27] <fangorious> Corsair: what OSs are you sharing it to?
+[10:27] <ChunkAhoy> if i have to use ./configure --with-oss=yes --with-cards=hda-intel --with-kernel=/usr/src/linux-source-2.6.12        to configure my kernel but i cant use ./configure, how can i do the equivalent using    make menuconfig    ??
+[10:27] <Corsair> XP home, pro, 98
+=== MaDeY [n=mircx@202.170.56.252]  has joined #ubuntu
+=== nick01 [n=nick01@home-07031.b.astral.ro]  has left #ubuntu ["Leaving"]
+[10:28] <fangorious> Corsair: just set it up with ext3 and share it with samba
+[10:28] <Toma-> ChunkAhoy, what are you trying to build?
+=== kung [n=kung@207.44.180.3]  has joined #ubuntu
+[10:28] <ChunkAhoy> im following the steps on this web site to install alsa on my Asus z63a laptop         http://wingware.com/support/asus_z63a_ubuntu_5.10
+[10:29] <fangorious> Corsair: you can configure the shares with System->Administration->Shared Folders
+[10:29] <Corsair> yea, i know
+[10:29] <Corsair> i got samba to share a file earlier, but it didnt want to let me write to it
+[10:29] <graveson> can anyone help ,just installed ubuntu breezy and cannot get to boot it up ,just hangs when logging onto the system from x windows
+=== aaronshaf [n=aaronsha@71-38-231-131.slkc.qwest.net]  has joined #Ubuntu
+[10:30] <fangorious> graveson: after gdm starts, do you have to make a login attempt for it to hang?
+[10:30] <ChunkAhoy> im trying to build linux-source-2.6.12
+[10:30] <Toma-> ChunkAhoy, what is in the alsa directory that you just untarred? use pastebin
+[10:30] <Toma-> !pastebin
+[10:30] <ubotu> pastebin is, like, a site where you can post large texts and screenshots so you don't flood the channel. You can find it at http://paste.ubuntu-nl.org - Install webboard for easy pasting from the gnome taskbar :)
+=== TH4cK3rX [i=TH4cK3rX@200.175.151.240.adsl.gvt.net.br]  has joined #ubuntu
+[10:31] <ChunkAhoy> i havent started with the alsa drivers yet,  im only trying to configure my kernel so that it can suport my alsa drivers
+[10:31] <Toma-> ChunkAhoy, well youre certainly not following this guide.
+[10:32] <tritium> ChunkAhoy: do you need extremely new alsa source, or why are you going through all of that effort?
+[10:32] <ChunkAhoy> ??
+[10:32] <Toma-> ChunkAhoy, you dont need to build a kernel.
+[10:32] <ChunkAhoy> thats what it says    lol   :)
+[10:32] <Toma-> ChunkAhoy, are you READING this guide? or just copy and pasting the commands?
+[10:32] <ChunkAhoy> i am reading it
+[10:33] <Toma-> there is no step where you build a kernel.
+[10:33] <ChunkAhoy> the problem is i dont really understand everything so i do all the commands he did
+[10:34] <tritium> ChunkAhoy: you really shouldn't do that
+[10:34] <Toma-> *sigh*
+=== zphinx [i=zphinx@2001:618:400:0:0:0:d571:3ca2]  has joined #ubuntu
+=== chrome_ [n=chrome@f1f01-0052.din.or.jp]  has joined #ubuntu
+=== chrome_ is now known as chromebuntu
+[10:35] <OmegaAlpha> benplaut, whats shogo? a vampire game?
+[10:35] <ChunkAhoy> can you help me understand why hes using that command then ?       ./configure --with-oss=yes --with-cards=hda-intel --with-kernel=/usr/src/linux-source-2.6.12
+=== chromebuntu dist-upgrades to dapper!
+=== zphinx [i=zphinx@2001:618:400:0:0:0:d571:3ca2]  has left #ubuntu ["Lmnar"]
+=== minglunlee [n=minglunl@140.116.72.192]  has joined #ubuntu
+[10:35] <Toma-> ChunkAhoy, thats the command to compile alsa.
+[10:36] <graveson> fangorius : yes i have to make a login attempt for it to hang
+[10:36] <ChunkAhoy> oh damn,  ok
+[10:36] <ChunkAhoy> think i got it now
+=== zim [n=zim@zimonline.demon.co.uk]  has joined #ubuntu
+[10:36] <ChunkAhoy> but i'll go to bed smarter....   if i ever go to bed
+[10:36] <fangorious> graveson: after booting, but before trying to login, hit <control>+<alt>+<f1> to get a console, and try logging in there
+[10:37] <ChunkAhoy> i was trying this whole configuration thing on the kernel
+[10:37] <chromebuntu> hmm, jp.archive.ubuntu.com points to some server in the UK ... but so does *.archive... how ... annoying :)
+[10:37] <OmegaAlpha> whats alsa?
+[10:37] <ChunkAhoy> thank you for your help
+[10:37] <fangorious> OmegaAlpha: advanced linux sound architecture
+[10:37] <graveson> fangorius : i can boot into recocery mode and get a prompt ,let me try control-alt-f1
+=== mode/#ubuntu [+o tritium]  by ChanServ
+=== klaym [n=isometsa@a81-197-202-14.elisa-laajakaista.fi]  has joined #ubuntu
+[10:39] <fangorious> graveson: i'm just wondering if there's something about the particular user account, since reconfiguring X didn't help you.
+[10:39] <OmegaAlpha> fangorious, is that to add higher quality sounds or just a package of new ones?
+=== R34p3r [n=R34p3r@84.219.3.71]  has joined #ubuntu
+=== R34p3r [n=R34p3r@84.219.3.71]  has left #ubuntu ["Leaving"]
+[10:40] <graveson> fangorius : what is the default root password.when i installed ,i was not asked what the root passord would be .The reason being maybe i should create another user or login as root and see if that works
+[10:40] <ablomen> graveson: same as your first user account
+[10:41] <Madpilot> !tell graveson about sudo
+[10:41] <fangorious> OmegaAlpha: it's the code in the kernel that interfaces with the sound hardware
+[10:41] <dr-slizer> graveson: There is no root password, use sudo. If you want to set a root password, run sudo passwd
+=== drewbie42 [n=drew@dhcp-jmh-34.oriel.ox.ac.uk]  has joined #ubuntu
+[10:41] <Corsair> how do i make it so I can write to the samba share
+[10:41] <graveson> fangorius : control-alt-f1 works
+[10:41] <Madpilot> graveson: see the URL the bot just sent you
+[10:41] <mcphail> graveson: paste the result from ls -l ~/.ICEauthority
+[10:41] <OmegaAlpha> fangorious, oh why was chunk having to mess with that for
+=== mode/#ubuntu [-o tritium]  by tritium
+[10:42] <fangorious> Corsair: in the Shared Folders app, select a share and click Properties, then uncheck the read-only checkbox
+=== tritium is now known as tritium_away
+[10:42] <fangorious> OmegaAlpha: don't know, maybe he wanted a newer version that what is provided
+[10:42] <fangorious> graveson: after getting to the console, can you log in with the same account that hangs X?
+[10:42] <Corsair> it is unchecked
+[10:43] <graveson> yes i can ,i am logged in now
+[10:43] <fangorious> Corsair: hm, is the share in the / partition?
+[10:43] <mcphail> graveson: paste the result from ls -l ~/.ICEauthority
+[10:43] <fangorious> graveson: ^^
+[10:43] <Corsair> im sharing /nas
+[10:43] <Cryptid> !intel
+[10:43] <ubotu> Some people juggle geese. Try searching at http://ubuntu.cc.com.au/, Cryptid
+[10:44] <Cryptid> !915
+[10:44] <ubotu> I don't know, try searching at http://ubuntu.cc.com.au/, Cryptid
+=== beaz [n=beaz@e178069027.adsl.alicedsl.de]  has joined #ubuntu
+[10:44] <graveson> mcphail : i cannot paste it because i am on 2 different pc's ,is there anything in particular you would like to know
+[10:44] <fangorious> Corsair: is /nas a separate disk/partition from /? (run 'mount' in a terminal to check)
+[10:44] <mcphail> graveson: owner/group
+[10:44] <graveson> mcphail : -rw-------
+[10:44] <mcphail> graveson: if they are root, that is your problem
+[10:45] <Corsair> its /dev/hdc1 mounted to /dev
+=== orangehaw [n=bauke@h246196.upc-h.chello.nl]  has joined #ubuntu
+[10:45] <fangorious> Corsair: mounted to /dev?
+[10:45] <graveson> mcphail : i am not sure i understand ,can you explain please
+[10:45] <Corsair> er /nas lol
+[10:45] <Corsair> im getting tired ~.~
+[10:46] <mcphail> graveson: does the command i mentioned above produce the word "root" anywhere?
+[10:46] <fangorious> Corsair: does it say 'ro' or 'rw' in the output from mount on the line with /nas?
+[10:46] <ablomen> Corsair: what are the permisions of the /nas folder?
+=== jdub_ [n=jdub@ppp121-112.static.internode.on.net]  has joined #ubuntu
+=== TheRabbit [n=andrew@adsl-70-228-135-139.dsl.akrnoh.ameritech.net]  has joined #ubuntu
+[10:46] <fangorious> graveson: <perms> <owner> <group> <date> <filename>
+[10:47] <Corsair> /dev/hdc1 on /nas type ext3 (rw)
+=== TheRabbit [n=andrew@adsl-70-228-135-139.dsl.akrnoh.ameritech.net]  has left #ubuntu ["Leaving"]
+=== TH4cK3rX [i=TH4cK3rX@200.175.151.240.adsl.gvt.net.br]  has left #ubuntu []
+[10:47] <graveson> mcphail : the owner and group is my user name
+[10:47] <mcphail> graveson: ok, then that isn;t the problem
+[10:47] <Corsair> how do i check the permissions on /nas
+[10:47] <ablomen> Corsair: and what about folder permissions? (try "ls -l" on the / folder)
+[10:47] <fangorious> Corsair: ls -ld /nas
+[10:48] <Corsair> drwxr-xr-x  3 root root 4096 2006-02-19 04:30 /nas
+=== QuarkPup [n=QuarkPup@udp032482uds.hawaiiantel.net]  has joined #ubuntu
+[10:48] <ablomen> Corsair: yeah the folder isnt writable for other people then the onwer of the folder
+[10:49] <Corsair> how i fix dat
+[10:49] <Corsair> lol
+=== asterX_ba [n=francy@host184-76.pool876.interbusiness.it]  has joined #ubuntu
+[10:49] <asterX_ba> hello guys!
+[10:49] <graveson> mcphail : any ideas ?
+[10:49] <fangorious> Corsair: the quickest way would be 'sudo chmod +w /nas'
+=== emuzesto [n=einar@181.84-48-51.nextgentel.com]  has joined #ubuntu
+[10:49] <OmegaAlpha> heh i dont understand this Bite Fightgame whatso ever
+[10:49] <ablomen> Corsair: you can use "sudo chmod 777 /nas"
+[10:50] <mcphail> graveson: not really. When it hangs, can you get back to a terminal with Ctrl-Alt-F2?
+[10:50] <graveson> mcphail : no at that time i cannot do that
+[10:50] <asterX_ba> how may I play WMV files on Firefox (Ubuntu) ?
+[10:50] <fangorious> graveson: try 'sudo adduser fred' and 'sudo passwd fred', then hit <control>+<alt>+<f7> and log in as fred
+=== namaste [n=namaste@dslc-082-082-067-163.pools.arcor-ip.net]  has joined #ubuntu
+[10:50] <fangorious> assuming you don't already have a user named fred
+=== dibblego [n=tmorris@dsl-202-173-178-172.qld.westnet.com.au]  has joined #ubuntu
+[10:52] <graveson> fangorious : ok hang on
+[10:52] <fangorious> Corsair: assuming all the users on your linux box are in the 'users' group, you could also make the share writeable to the 'users' group, the 'chgrp users /nas' and 'chmod 775 /nas'
+=== pappan [n=ppadman@bgepxyout-02.asiapac.hp.net]  has joined #ubuntu
+[10:52] <dibblego> I've just installed the NVidia driver - it's playing up a bit, oh well - what's the next step to have a dual display? I fiddle with xorg.conf, but is there a wiki entry for it?
+[10:52] <pappan> how do i configure ubuntu to use dhcp ?
+[10:52] <ablomen> Corsair: true thats more secure then "chmod 777"
+=== jdub_ [n=jdub@ppp121-112.static.internode.on.net]  has left #ubuntu []
+=== ReX_ [n=mario@200.54.6.238]  has joined #ubuntu
+[10:53] <fangorious> pappan: it should use dhcp by default, but you can go to System->Administration->Networking
+[10:53] <Corsair> Samba is still shareing files after i removed them from the shared folders thing
+=== cassidy [n=cassidy@133.174-200-80.adsl.skynet.be]  has joined #ubuntu
+[10:54] <fangorious> Corsair: 'sudo invoke-rc.d samba restart' might clear that up
+=== jnoon [i=jnoon@c-24-4-132-114.hsd1.ca.comcast.net]  has joined #ubuntu
+[10:54] <Corsair> it corrected 1 problem
+[10:54] <fangorious> pappan: in the Connections tab of "Network settings' select an interface, click on Properties, and set Configuration to DHCP
+[10:55] <pappan> fangorious: thanks
+[10:55] <Corsair> its still shareing 1 other file i dont want it to
+[10:55] <pappan> i got it up
+=== goodtimes [n=goodtime@ip70-162-131-154.ph.ph.cox.net]  has joined #ubuntu
+[10:55] <graveson> fangorious: same thing ,the whole system locks up
+=== ProfessorChaos [n=jmioph@c-24-7-127-192.hsd1.ca.comcast.net]  has joined #ubuntu
+[10:56] <mcphail> graveson: can you ssh into the box?
+[10:56] <fangorious> graveson: next time you boot, you could check /var/log/Xorg.0.log
+[10:56] <fangorious> Corsair: you can always check /etc/samba/smb.conf (text file) to hand edit the samba settings
+[10:56] <graveson> mcphail: not at that point ,this is the first time after installing that i am trying to boot up
+[10:56] <Corsair> wow, using VNC makes my ethernet card transfer lots of information ;x
+[10:57] <fangorious> lol
+[10:57] <graveson> fangorious : ok i will try login again to shell and look at that log
+=== teddy_ [n=teddy@dyn-83-157-239-94.ppp.tiscali.fr]  has joined #ubuntu
+[10:57] <fangorious> well, it's long past my bed time. 'nite all, and good luck
+=== fangorious [n=fangorio@cpe-66-25-38-48.houston.res.rr.com]  has left #ubuntu ["Ex-Chat"]
+=== Kwitschibo [n=STFU@85.16.80.103]  has joined #ubuntu
+=== pappan_ [n=pappan@bgepxyout-01.asiapac.hp.net]  has joined #ubuntu
+[10:58] <pappan_> hi
+=== MetaMorfoziS [n=sajt@dsl5402AF35.pool.t-online.hu]  has joined #ubuntu
+[10:59] <pappan_> i logged in from ubuntu :)
+=== holycow [n=a@mail.wjsgroup.com]  has joined #ubuntu
+[10:59] <mcphail> pappan_: congratulations. First time?
+[10:59] <pappan_> yes using network for first time
+[10:59] <pappan_> network thru ubuntu :)

@@ -1,0 +1,226 @@
+=== danielb is now known as Guest19237
+[10:18] <neta> histo: in the link u gave me, you see the pic under "Identifying if the computer boots the Ubuntu DVD in EFI mode", the black screen above the purple one- that is what i have when i try to install fron usb
+=== ingrid_ is now known as Bella_
+[10:19] <arun> I installed ubuntu 13.04 server on my laptop. Now what package should I install to get my thinkpad keys and suspend to work ?
+[10:19] <MonkeyDust> Gracen  better ask in #android or ##android
+[10:20] <neta> histo: but this lead me to a black screen. if i want to enter the bios menu i need to do that before
+[10:20] <histo> neta: at the bottom of that screen does what does it say?
+[10:20] <eur33r> How do I DDoS from a VPS?
+[10:21] <Gracen> <MonkeyDust> thank you
+[10:21] <histo> eur33r: not here
+[10:21] <MonkeyDust> eur33r  wrong channel
+[10:21] <eur33r> histo: where?
+[10:21] <histo> neta: I believe you press 'e' to edit the currently selected line then you can append nomodeset to the end
+[10:21] <histo> !topic > eur33r
+[10:21] <ubottu> eur33r, please see my private message
+[10:22] <neta> histo: i'll try this now
+[10:22] <histo> neta: if it's not 'e' it says right at the bottom I believe
+[10:22] <neta> histo: i'll restart the computer. tnx a lot for the patiance with me!!
+[10:23] <histo> neta: np
+[10:24] <histo> neta: I have to get some sleep, but basically on that black screen you can edit the currently selected line and append nomodeset
+[10:24] <histo> neta: others should be able to help. Just make sure you explain it's a UEFI based install and the black screen vs. the purple one.
+[10:25] <eur33r> How do I DDoS from a VPS?
+[10:25] <jrib> eur33r: that's not on-topic here
+[10:25] <histo> !topic | eur33r
+[10:25] <ubottu> eur33r: Please read the channel topic whenever you enter, as it contains important information. To view it at any time after joining, simply type /topic
+[10:25] <burg> dr_willis, sorry for my delay. i am using ext4
+[10:25] <eur33r>  Official Ubuntu Support Channel
+[10:26] <eur33r> it is on topic
+[10:26] <eur33r> it is relatedt o ubuntu
+[10:26] <burg> jrib, http://codepad.org/Tnocm50e - this is the output of mount
+[10:26] <jrib> eur33r: questionably legal activities are not on-topic.  Move on.
+[10:26] <histo> eur33r: How is ddos'ng a VPS related to ubuntu support channel?
+[10:26] <arun> I installed ubuntu 13.04 server on my laptop. Now what package(s) should I install to get my thinkpad keys and suspend to work ?
+[10:26] <histo> eur33r: and what'd the VPS ever do to you.
+[10:26] <MonkeyDust> eur33r  please don't spam the channel with nonsense
+=== andrex is now known as andrex|off
+[10:26] <eur33r> histo: DDoSing from a Ubuntu server
+[10:27] <histo> Oh man I was gong to http://lmgtfy.com/?q=how+to+ddos
+[10:27] <eur33r> I have
+[10:27] <eur33r> but Google doesn't display anythign
+[10:27] <jrib> eur33r: there's no discussion here.  DDoSing is not on-topic.  I'll have to ban you if you don't stop
+[10:27] <eur33r> jrib: WELL that IS very WEIRD
+[10:27]  * histo knows where this is heading
+[10:28] <eur33r> good bye
+[10:29] <jrib> burg: what kind of file is /projects/clients/client0/web1 ?
+[10:29] <burg> jrib, is a directory actually
+[10:30] <nathanbz> how do i make a folder in /var/run that doesn't get deleted on restart ?
+[10:30] <jrib> burg: ls -ld /projects /projects/clients /projects/clients/client0 /projects/clients/client0/web1
+[10:31] <burg> jrib, http://codepad.org/7zNe5BFr
+[10:31] <histo> nathanbz: why?
+[10:32] <burg> jrib, and ls -la /projects/clients/client0/web1 is http://codepad.org/em5LgBeg
+[10:33] <nathanbz> i'm trying to put a pid file in there
+[10:33] <nathanbz> ed2013-08-30 10:32:42 ERROR: pid 2738: could not open pid file as /var/run/pgpool.pid. reason: Permission denied
+[10:33] <nathanbz> and that doesn't work
+[10:34] <histo> nathanbz: why are you trying to put a pid file there?
+[10:34] <jrib> burg: so does the ACL get set correctly on children of that directory?  How about parents?
+[10:35] <nathanbz> where else do you put them ?
+[10:36] <burg> jrib, i only get that error message. that is the location of a web server's projects managed by ispconfig, actually what i am trying to do is give full access to one user i will be using with samba
+[10:36] <ItsMeLenny> what are other usb commands that can be run in terminal to get information on the device?
+[10:36] <jrib> burg: if you drop the recursive flag and pass a child of that directory, does it work ok?  What about a parent?
+[10:37] <burg> jrib, sudo setfacl -m u:ultra:rwx /projects works
+[10:38] <burg> jrib, sudo setfacl -m u:ultra:rwx /projects/clients/client0/web1/web also works
+[10:38] <burg> so the problems seems to be at /projects/clients/client0/web1
+[10:39] <jrib> burg: are there siblings of web1?
+[10:40] <nathanbz> it looks like i need a startup script to mkdir in /var/run
+=== BTCOxygen|1 is now known as BTCOxygen
+[10:40] <njuergens> burg, have you tried to check for the 'immutable' attribute via lsattr?
+[10:40] <njuergens> ispconfig uses the flag in its default config
+[10:40] <burg> jrib, only a symlink to web1
+[10:41] <burg> njuergens, i haven't. how do i check it?
+[10:41] <jrib> burg: lsattr /path/to/file
+[10:42] <Yu-Yu> Hi, folks.
+[10:44] <burg> njuergens, jrib, http://codepad.org/gPEjqXXW - doesn't seem to be immutable. but not sure
+[10:44] <histo> burg: not it's not
+[10:44] <jrib> burg: run it one directory up
+[10:44] <jrib> burg: (or use -d)
+[10:45] <burg> jrib, one up has i flag
+[10:45] <jrib> burg: then that's the reason.  Good catch, njuergens.  Now you must figure out /why/
+[10:46] <Yu-Yu> sepero: Hi again.
+[10:46] <burg> jrib, i suppose i can remove the immutable flag, but the new projects will also have it, right?
+[10:46] <njuergens> burg, that is something you can control via ispconfig settings
+[10:47] <burg> njuergens, i am trying to find that setting, but with no success
+[10:47] <njuergens> ok let me look, one sec :-)
+[10:47] <mikubuntu> don't know what to do with this laptop -- it won't boot -- only goes to this screen msg, can anybody make any sense of it? sorry the image is not very clear :: http://imagebin.org/269196
+[10:47] <sepero> Yu-Yu: hi
+[10:47] <sepero>  :)
+[10:48] <Yu-Yu> sepero: They changed the behaviour one switches layouts. And they didn't ask or take care. Could not catch that until booted GNOME shell.
+[10:48] <No-one> mikubuntu: strange. Did it work before?
+[10:49] <njuergens> burg, what language is your ispconfig admin menu?
+[10:49] <burg> njuergens, english
+[10:50] <mikubuntu> No-one: it worked until it didn't ... lol. i don't know, it belongs to my friends son. it supposedly had ubuntu on it and just stopped working (of course i don't know what he might have messed with). but now i can't get it to boot at all.
+[10:51] <njuergens> burg, system->server config-><your server>->web->permissions
+[10:51] <njuergens> there you find 'Make web folders immutable (extended attributes)'
+[10:52] <burg> njuergens, thanks. let me check with a new website. until then, chattr -i /path/to/folder to remove the i flag?
+[10:55] <burg> seems to be working. njuergens and jrib , thank you
+[10:55] <Dr_Willis> mikubuntu:   the filesystem, or disk has gotten currupted.. given the # of times you have posted the questiin. You could have just typed the errors into a pastebin. :) and more people may have looked at it. ;P
+[10:55] <Dr_Willis>  / is not getting mounted. so the other stuff /dev/ /sys/ and /proc/ also fail to mount
+[10:56] <Dr_Willis> id start with a live cd, and fsck the drives/filesystems. then try boot-repair to see if grub can get fixed.
+[10:56] <Dr_Willis> its possible the UUID has just changed.
+=== andrex|off is now known as andrex
+[11:00] <mikubuntu> Dr_Willis: but i can't use the livecd because i can't get it to boot -- is there some other way via term?
+[11:03] <mikubuntu> gotta run the dog out ... arrrrrgh
+[11:15] <aneesh_> Hi , I am getting some error when i tried to install eclipse. Just now I have installed tomcat 6 on my machine after that eclipse got closed and not opening
+[11:15] <aneesh_> http://paste.ubuntu.com/
+[11:17] <mikubuntu> Dr_Willis: do you think it might take a boot and nuke, and then maybe accept booting from livecd? just occured to me?
+[11:17] <rfete> ciao
+[11:17] <rfete> !list
+[11:17] <ubottu> rfete: No warez here! This is not a file sharing channel (or network); read the channel topic. If you're looking for information about me, type « /msg ubottu !bot ». If you're looking for a channel, see « /msg ubottu !alis ».
+[11:18] <Dr_Willis> mikubuntu:  if the thing is not booting from cd. then i have to wonder if your cd/usb is correct. or the bios is booting the wrong device
+[11:18] <aneesh_> Hi , I am getting some error when i tried to install eclipse. Just now I have installed tomcat 6 on my machine after that eclipse got closed and not opening http://paste.ubuntu.com/6043717/
+[11:19] <mikubuntu> Dr_Willis: i definitely set the boot order to cd. that particular bios doesn't offer a way to completely disable the hdd, only move it down the list.
+[11:19] <ikonia> mikubuntu: got a PPA enabled by anychance.....
+[11:19] <ikonia> mikubuntu: looks like a package version conflict
+[11:20] <Dr_Willis> mikubuntu:  if you definatly have the cd first.. then that would suggest that the cd was burnt badly and being ignored.
+[11:20] <ikonia> mikubuntu: sorry, that was meant for aneesh_
+[11:20] <ikonia> not you
+[11:20] <Dr_Willis> ikonia:  ;) i was wondering if i was confused ;P
+[11:20] <ikonia> aneesh_: do you have any PPA's on your system, it certainly looks like something has created a conflict
+[11:21] <ikonia> Dr_Willis: no, I was just wrong, read the wrong line for the wrong nick
+[11:21] <aneesh_> yes
+[11:21] <Dr_Willis> heh - i got weechat where it colorized the name/nicks and their text the same  now. :)
+[11:21] <ikonia> aneesh_: ok, so that's a very very likely reason for the cause
+[11:21] <mikubuntu> Dr_Willis: hmmmm ... so cfhowlett told me to do an md5sum the other day and it checked out -- but you're suggesting the actual burn might be bad?
+[11:21] <Dr_Willis> mikubuntu:  its very possible the actual BURN to the CD is bad. yes.
+[11:21] <ikonia> Dr_Willis: sadly I'm on a green console like the matrix due to lack of terminal emmulation on the machine I'm using ssh on
+[11:22] <Monday> what do i type to install xfce so that i can test it out, then what do i type to remove it after without removing the xfce stuff for lubuntu
+[11:22] <Dr_Willis> I tend to boot from USB mikubuntu  much easer
+[11:22] <mikubuntu> Dr_Willis: i tried usb also, wouldn't boot from that either
+[11:22] <Dr_Willis> ikonia:  :) I finally got rid of my old Serial-terminals ;)   Oh the good old days
+[11:22] <aneesh_> but before installing apache tomcat6 my eclipse installtion is working  fine ikonia
+[11:23] <Dr_Willis> mikubuntu:  try a simple distro like tiny-core linux make a bootable usb of that. see if it boots on other machines then test on yours.. Its likely your machine is being a pain and not wnating to boot from anything else.
+[11:23] <Yu-Yu> sepero: Hi again.
+[11:23] <mikubuntu> Dr_Willis: ok, thx
+[11:23] <Dr_Willis> mikubuntu:  if you want to go hard core on it. :) remove the HD. plug it in a USB enclosuer and  try to fix it from a differnt pc. or boot that pc with a cd/usb and plug the enclosure in
+[11:24] <sepero> Yu-Yu: hey  :)
+[11:24] <Dr_Willis> $20 for a Universial HD -> usb adaptor - is Money that was well spent by me in the last year.
+[11:24] <aneesh_> ikonia this is the list of ppa which i have in my machine http://paste.ubuntu.com/6043738/ please tell which one i have to remove
+[11:24] <mikubuntu> Dr_Willis: ok, will try something :P
+[11:24] <nathanbz> anyone know how to change permissions in an upstart script ?
+[11:24] <Yu-Yu> sepero: They broke my awesome xsession that it didn't work until I found what's the problem. Also, they surprisingly changed layout switching to Super+Space. Why, ever?…
+[11:25] <ikonia> aneesh_: I'd suggest using none unless you have confidence that the person who maintains it has a clue about what he's doing
+[11:25] <Yu-Yu> sepero: And until I got in a full GNOME Shell, I couldn't ever get they did the change.
+[11:26] <nathanbz>  exec /bin/chown pgpool:root /var/run/pgpool <- doesn't seem to work :(
+[11:26] <Yu-Yu> sepero: Of course, you can say I still can use Windows 8 or Mac, yah.
+[11:26] <sepero> Yu-Yu: Do you want to change the layout switching hotkey?
+[11:26] <BluesKaj> 'Morning all
+[11:26] <aneesh_> ok ikonia thanks for your suggestion . I will check it out.
+[11:27] <Yu-Yu> sepero: I did want. And I told you.
+[11:27] <sepero> Yu-Yu: Well, I think you did a good job then
+[11:29] <Yu-Yu> sepero: I don't think someone should do this work after another update.
+[11:29] <sepero> Yu-Yu: Me either. It's just not right
+[11:31] <Yu-Yu> sepero: It's just why I prefer to test things before they get to regular users. And that's why I'm on 13.10. Now you see?
+[11:32] <sepero> Yu-Yu: I see, but I say you will still like 12.04 better. In the end, you will want a system that just works easy
+[11:33] <Monday> what do i type to install xfce so that i can test it out, then what do i type to remove it after without removing the xfce stuff for lubuntu
+[11:33] <jrib> !xubuntu | Monday
+[11:33] <ubottu> Monday: Xubuntu is Ubuntu with Xfce as the desktop environment. More info at http://www.xubuntu.org/ - To install from Ubuntu: « sudo apt-get install xubuntu-desktop » - Join #xubuntu for support - See also: !Ubuntu and !Xubuntu-Channels
+[11:33] <sepero> Yu-Yu: That's why you will make the right choice and go with 12.04
+[11:34] <sepero> Yu-Yu: You will be happy
+[11:34] <Monday> jrib, how would i remove it
+[11:35] <sepero> Monday: the package to install is xubuntu-desktop
+[11:35] <Dr_Willis> its harder to remove then install. ;)
+[11:35] <Yu-Yu> sepero: Why not everyone use 12.04 so, tell me?
+[11:35] <Dr_Willis> thats the curse of 'meta-packages'
+[11:36] <jrib> Monday: apt-get remove the package
+[11:36] <sepero> Yu-Yu: Because they are confused  ;)
+[11:36] <Dr_Willis> removeing xubuntu-desktop wont automatically remove all teh stuff the meta package installed.. unless theres been some changes ive missed.
+[11:36] <jrib> Monday: you can use autoremove afterwards to remove any packages you don't need
+[11:37] <Dr_Willis> Monday:  cleanest way to 'test' would be just to try xubuntu  live cd in virtualbox.
+[11:37] <Monday> sudo  apt-get autoremove xubuntu-desktop ?
+[11:37] <Yu-Yu> sepero: Are you using 12.04?
+[11:37] <sepero> Yu-Yu: yes, I am
+[11:37] <jrib> Monday: no.  apt-get remove xubuntu-desktop && apt-get autoremove
+[11:38] <jrib> Monday: maybe apt-get remove --auto-remove xubuntu-desktop, but I've never used this form
+[11:39] <Dr_Willis> err.. I just did a 'apt-get remove kubuntu-desktop' then 'apt-get autoremove' and it dident remove anything with autoremove
+[11:39] <jrib> Dr_Willis: depends on how kubuntu-desktop was installed
+[11:39] <Dr_Willis> with apt-get install kubuntu-desktop   as far as i rember. ;)
+[11:40] <sepero> $ cat /etc/lsb-release
+[11:40] <sepero> DISTRIB_ID=Ubuntu
+[11:40] <sepero> DISTRIB_RELEASE=12.04
+[11:40] <Dr_Willis> wonder if the fact ive upgraded  this box a few rel4eases has got it confused.
+[11:40] <FloodBot1> sepero: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[11:40] <sepero> Yu-Yu: ^^
+[11:41] <Yu-Yu> sepero: Just to keep warm and dry?
+[11:42] <Dr_Willis> night all..
+[11:42] <Yu-Yu> Mew, Dr_Willis.
+[11:42] <sepero> Yu-Yu: Yeah  :(
+[11:43] <sepero> Dr_Willis: night you
+[11:43] <Yu-Yu> sepero: So be it.
+[11:43] <sepero> jrib: you can see what packages you installed when in the dpkg log
+[11:43] <Monday> jrib, how do i install the desktop without the suggested packages
+[11:44] <eur33r> Monday: simple
+[11:44] <sepero> jrib: /var/log/dpkg.log
+[11:44] <eur33r> KiSM: hi
+[11:44] <eur33r> marcellux: hi
+[11:44] <arun> what the equivalent of alsamixer for pulseaudio ?
+[11:45] <eur33r> arvindeep: hi
+[11:45] <eur33r> lemao: hi
+[11:45] <eur33r> FunnyLookinHat: hi
+[11:45] <bazhang> eur33r, stop that
+[11:45] <eur33r> bazhang: hi
+[11:45] <newhoa> I'm using an AMD FX-6100 and don't think Turbo Core/Boost/Whatever is working. I tried to check cpufreq-aperf but it all comes back "offline". Turns out checking /var/log/boot.log shows "Loading cpufreq kernel modules... [fail]". I can't find any info on how to get them to load.
+[11:46] <eur33r> ronbeing: mornin'
+[11:46] <eur33r> bazhang: I was only saying hi
+[11:46] <bazhang> eur33r, stop greeting people here
+[11:46] <ronbeing> Hey
+[11:46] <eur33r> Why?
+[11:46] <bazhang> eur33r, well stop it
+[11:46] <eur33r> Why?
+[11:46] <FloodBot1> eur33r: Please don't flood; use http://paste.ubuntu.com to paste; don't use Enter as punctuation.
+[11:46] <bazhang> eur33r, its a support channel thats why.
+[11:46] <eur33r> bazhang: nobody is talking
+[11:46] <eur33r> so
+[11:47] <MonkeyDust> eur33r  please drop the random comments and keep the channel clear for support
+[11:47] <bazhang> !ot | eur33r
+[11:47] <ubottu> eur33r: #ubuntu is the Ubuntu support channel, for all Ubuntu-related support questions. Please use #ubuntu-offtopic for other topics (though our !guidelines apply there too). Thanks!
+[11:47] <eur33r> !fi | bazhang
+[11:47] <ubottu> bazhang: Tämä kanava on tarkoitettu vain englanninkieliselle keskustelulle. Jos haluat suomenkielistä apua (K)ubuntun ongelmiin, liity kanavalle #ubuntu-fi / #kubuntu-fi :-)
+[11:47] <eur33r> ok
+[11:50] <marcellux> hi. I've got a problem. when I connect my laptop to my tv via HDMI nothing happens. any ideas?
+[11:54] <marianne> What sound cards does everyone use. I bought a Frailty Sound Blaster and I can't get it to play. I want 5.1 sound and I ended up using the on board sound. Any suggestions for thouse of you that have upgraded sound cards. I'm on 12.04
+[11:57] <sepero> marianne: I wish I could help. I'm on a Asus laptop
+[11:58] <Yu-Yu> marianne: Does it get detected correctly, ever?
+[11:58] <cablop> hello, people
+[11:59] <BluesKaj> marianne, your SB card has a history of problems , unfortunately the maker hasn't provided a decent driver for it .
+[11:59] <marianne> Yu-Yu: yes, you can choose it in Alsamixer
+[11:59] <cablop> mmm, my question is, what are the recommended permissions for a directory to be served with apache, i need to have access to the files i'm serving and at the same time i need for apache to access the files, but i need to restrict the files to other users

@@ -1,0 +1,557 @@
+[02:46] <Seveas> windows and osx have their strong points too
+[02:46] <pmjdebruijn> Well OS X anyway...
+[02:46] <Linforcer> xDI
+[02:46] <dos000> Seveas, hornsby_ http://pastebin.kaarsemaker.net/68
+[02:46] <Linforcer> pmjdebruijn: mij thoughts
+[02:46] <Seveas> dos000, ahm you are using the us mirror
+[02:47] <Seveas> dos000, that mirror is broken
+[02:47] <Seveas> dos000: To switch to a working mirror type the following:  sudo sed -e 's/us.archive/archive/' -i /etc/apt/sources.list && sudo apt-get update
+[02:47] <pmjdebruijn> Windows and Strong Points don't go well in the same sentance...
+[02:47] <hornsby_> dos000, Seveas said everything :)
+[02:47] <delire> pmjdebruijn: OT but having tried OSX I found i dislike it nearly as much as win32.
+[02:48] <hornsby_> dos000, I would also uncomment the universe rep.
+[02:48] <pmjdebruijn> delire: hmmm but it still has some strong points...
+[02:48] <delire> pmjdebruijn: some yes
+=== mode/#ubuntu [+o Seveas]  by ChanServ
+=== zeedo is now known as zeedo-8139
+=== mode/#ubuntu [-b slak!*@*]  by Seveas
+=== r4ndy- is now known as r4ndy
+=== mxpxpod [~BryanForb@wuw-ojr3gmca.dybb.com]  has joined #ubuntu
+[02:49] <dos000> Seveas, i still get the same error . i also did the update.
+[02:49] <pmjdebruijn> delire: i mean i still have nightmares about the '95 / '98 days... when sysadmins still needed to wair platemail...
+[02:49] <Seveas> dos000, hmm, can you try: apt-get install mozilla-firefox-locale-en-gb
+[02:50] <delire> pmjdebruijn: win98 was the last win32 OS i really used, so i'm very out of touch with what the company offers now.
+[02:50] <dos000> Seveas, it depens on thesaurus !
+[02:50] <Seveas> dos000, on both
+[02:51] <hornsby_> dos000, apt-get install openoffice.org-thesaurus-en-us
+[02:51] <Seveas> dos000, but generally, when you try to install a dependency that cannot be installed you get a more helpful error message
+[02:51] <hornsby_> dos000, have you uncomment the rep universe ?
+=== Oberone [debian-tor@947ad456b7dba536.session.tor]  has joined #ubuntu
+[02:51] <dos000> openoffice.org-thesaurus-en-us depends on  mozilla-firefox-locale-en-gb  ... looks like there is a cyclic dependency here !
+=== d3bian [~d3bian@164M36.oasis.mediatti.net]  has left #ubuntu []
+[02:51] <pmjdebruijn> delire: well Windows 2000 / XP aren't *that* bad... especially 2k was nice and stable...
+[02:51] <delire> pmjdebruijn: right.
+[02:52] <delire> dos000: you did apt-get update first?
+[02:52] <dos000> hornsby_, i am trying to avoid universe
+[02:52] <dos000> delire, yes
+[02:52] <Seveas> dos000, apt can handle cyclic dependencies
+[02:52] <Seveas> dos000, have you removed openoffice.org?
+[02:53] <delire> dos000: note you can apt-get install two or more packages at the same time. this can sometimes resolve dependencies not satisfied by apt automagically.
+[02:53] <dos000> Seveas, not yet .. i can do that tho. as i said this a fresh install.
+[02:53] <Seveas> dos000, well, you should *not* remove it, i was just checking
+[02:53] <Seveas> dos000, hmm, can you try: apt-get install mozilla-firefox-locale-en-gb openoffice-thesaurus-en-us
+[02:54] <hornsby_> try to apt-get install openoffice.org-thesaurus-en-us mozilla-firefox-locale-en-gb
+[02:54] <hornsby_> :D
+[02:54] <Seveas> hornsby_, beat ya :p
+[02:54] <dos000> Seveas, i tried install both on cmd line .. and .. it looks like it works !
+[02:54] <delire> dos000: as i said, this is often a good thing to try before harsher methods
+[02:54] <hornsby_> Seveas, great minds ... :)
+[02:54] <eruin> I'm trolling d3bian in a pm :P
+[02:54] <Seveas> dos000, nice, and now try to install the language-support package again :)
+[02:54] <eruin> it's great fun
+[02:54] <eruin> ;>
+[02:55] <Phreakazoid> hornsby_, your nickname is a suburb near me.. how odd
+[02:55] <Seveas> eruin, don't. Or at least keep it to yourself...
+[02:55] <delire> eruin: you know what they say about trolls and feeding.
+[02:55] <hornsby_> Phreakazoid, it is not my nick, it is my name :9
+[02:55] <Phreakazoid> yeah?
+[02:55] <hornsby_> yep
+[02:55] <Phreakazoid> well there is a place named after you then
+[02:55] <dos000> Seveas, i get "language-support-en is already the newest version"
+[02:55] <hornsby_> hehe :)
+=== lamp_ [~la@dsl-084-056-147-181.arcor-ip.net]  has joined #ubuntu
+[02:56] <Phreakazoid> except the place Hornsby here was named after someone called "Horne"
+[02:56] <Seveas> dos000, well, then you're done :)
+[02:56] <hornsby_> Phreakazoid,  thanks for the info :)
+=== Ironfrost [~adsfkjask@82-36-124-129.cable.ubr04.king.blueyonder.co.uk]  has joined #ubuntu
+[02:56] <dos000> Seveas, thanks !
+=== mode/#ubuntu [-o Seveas]  by Seveas
+[02:56] <hornsby_> Phreakazoid, where is that place ?
+[02:56] <jind_> How can I get apt-get to ignore missing / faulty MD5Sums?
+[02:57] <Seveas> jind_, by using a correct server
+[02:57] <Phreakazoid> hornsby_, its a suburb of Sydney, Australia
+=== synd [~synd@h84.32.55.139.ip.alltel.net]  has joined #ubuntu
+[02:57] <hornsby_> nice :)
+[02:57] <Seveas> the us.archive server is faulty
+=== Ironfrost [~adsfkjask@82-36-124-129.cable.ubr04.king.blueyonder.co.uk]  has left #ubuntu []
+=== rommer [~rommer@203-219-130-10-qld.tpgi.com.au]  has joined #ubuntu
+[02:57] <Seveas> jind_, and you really really really shouldn't ignore md5sum mismatches, they're there for a very good reason...
+=== niran [~niran@cpe-67-10-213-51.houston.res.rr.com]  has joined #ubuntu
+[02:57] <hornsby_> jind_, sudo sed -e 's/us.archive/archive/' -i /etc/apt/sources.list && sudo apt-get update
+=== topyli [~juha@ktlpc219.edu.helsinki.fi]  has left #ubuntu []
+[02:58] <Seveas> hornsby_, copycat :p
+[02:58] <hornsby_> :P
+[02:58] <jind_> I know. But in this case it's just some unofficial repos
+[02:58] <hornsby_> info as fast as possible :)
+=== bigfoot1 [~hideseek@FLH1Aba218.fko.mesh.ad.jp]  has joined #ubuntu
+[02:58] <hornsby_> Seveas, sorry :P
+=== AlwaysModest [~bryan@68-115-133-221.dhcp.hckr.nc.charter.com]  has joined #ubuntu
+[02:58] <Seveas> jind_, marillat?
+[02:59] <jind_> hornsby_, what does that mean?
+[02:59] <jind_> What does it do?
+[02:59] <Seveas> you should not use that anyway..
+[02:59] <Seveas> jind_, but manually downloading and installing the .debs can help you
+[02:59] <jind_> I installed the repos from www.ubuntuguide.org
+[02:59] <Seveas> jind_, ubuntuguide is bad
+[02:59] <jind_> Hm, alright
+[02:59] <Seveas> and should not be used
+=== bhilton [~bhilton@nlsngabas01-pool8-a206.nlsnga.tds.net]  has joined #ubuntu
+=== CruNcher [~lulu_lol@dsl-084-058-142-073.arcor-ip.net]  has joined #ubuntu
+=== grunt [~grunt@82.171.249.229]  has joined #ubuntu
+[03:00] <delire> jind_: s/something/newthing is a substitution. the UNIX program sed performs this using the command above on the file sources.list which contains a list of package repositories for use by apt.
+[03:00] <CruNcher> hi got a question http://people.ubuntu.com/~scott/software/sources-ui.png <- is this allready available ?
+=== podge [~podge@adsl-143-75.swiftdsl.com.au]  has left #ubuntu ["Leaving"]
+[03:00] <jind_> Alright. Do you have a alternative page to get good repos?
+=== Mez [~Mez@82-36-228-130.cable.ubr01.perr.blueyonder.co.uk]  has joined #ubuntu
+[03:01] <Seveas> CruNcher, looks like the synaptic dialog for editing repositories...
+[03:01] <Seveas> jind_, all official Ubuntu repositories are listed at http://pastebin.kaarsemaker.net/38
+[03:01] <delire> the ubuntuguide should be updated to include this
+[03:02] <Seveas> the Ubuntuguide person doesn't cooperate with others
+[03:02] <jind_> thanks a lot. I didn't know ubuntuguide.org is bad. But I have had a some problems with missing dependencies and such from there
+=== Mez [~Mez@82-36-228-130.cable.ubr01.perr.blueyonder.co.uk]  has joined #ubuntu
+[03:02] <haller> XDMCP is too much for me.. can i start a gnome session per bash with ssh?
+[03:02] <jind_> I'll take a look at that last link
+=== Efwis [~Efwis@colo-02-172.dsl.netins.net]  has joined #ubuntu
+[03:02] <mjr> haller, yes, just run gnome-session
+[03:03] <delire> Seveas: it should be a wiki
+[03:03] <delire> s/wiki/"public wiki"
+[03:03] <Seveas> delire, indeed
+=== rover_dan [~daniel@222.212.41.14]  has joined #ubuntu
+[03:04] <CruNcher> Seveas thx
+=== desplesda [~desplesda@CPE-143-238-232-160.vic.bigpond.net.au]  has joined #ubuntu
+[03:05] <CruNcher> useing Kubuntu thats why i didn't realized it it seems ;P
+[03:05] <delire> hehe yes. does Kubuntu have 'KPackage'?
+=== delire found that to be an excellent interface to the apt suite in another distribution.
+=== E-bola [~bola@0x55514ef3.adsl.cybercity.dk]  has joined #ubuntu
+[03:06] <BurgerMann> does anyone know a consoleprog that scales jpegs fast and efficient?.. this digital camera age kills me when I have to scale photos :s
+[03:06] <Seveas> delire, yes
+[03:06] <Seveas> BurgerMann, convert
+[03:06] <Seveas> part of imagemagick
+=== E-bola [~bola@0x55514ef3.adsl.cybercity.dk]  has left #ubuntu []
+[03:06] <delire> BurgerMann: ImageMagick
+[03:06] <Seveas> BurgerMann, i used that to convert 100's of photos in one command
+[03:06] <BurgerMann> Oh... I'll have a look.. thx =)
+=== Yvonne [~fsck@cn-sdm-cr02-0077.dial.kabelfoon.nl]  has joined #ubuntu
+[03:06] <BurgerMann> Seveas, sweeet!
+[03:07] <delire> BurgerMann: convert, display and others are part of the IM set of tools.
+[03:07] <delire> .. all fantastic
+[03:07] <Seveas> indeed
+[03:07] <Seveas> ImageMagick rocks
+[03:07] <delire> truly.
+=== bigfoot1 [~hideseek@FLH1Aba218.fko.mesh.ad.jp]  has joined #ubuntu
+[03:07] <Efwis> question, what is a good choice for a fax program for Ubuntu?
+=== Sionide [~dragon@cpc4-hem12-6-0-cust227.lutn.cable.ntl.com]  has joined #ubuntu
+=== delire barely ever sends faxes
+[03:08] <delire> Efwis: apt-cache search fax gnome
+[03:09] <delire> ok, just drop the 'gnome' ;)
+[03:09] <Efwis> I did that, there are 2 listed efax and hylafax
+[03:09] <delire> apt-cache show efax
+=== MrMinit [~MrMinit@171.80-203-115.nextgentel.com]  has joined #ubuntu
+[03:09] <bigfoot1> can anyone tell me how to use a perl (.pl) script? I want to import my firefox bookmarks to del.icio.us
+[03:09] <bigfoot1> http://www.hybernaut.com/bdv/delicious-import.html
+=== Mez [~Mez@82-36-228-130.cable.ubr01.perr.blueyonder.co.uk]  has joined #ubuntu
+[03:10] <Seveas> bigfoot1, perl -w filename.pl
+[03:10] <delire> perl script.pl?
+[03:10] <bigfoot1> delire, Seveas thank you.
+[03:10] <delire> yes, the -w switch
+=== toran [~me@d12-49.rt-bras.clm.centurytel.net]  has joined #ubuntu
+[03:10] <Seveas> ALWAYS use the -w switch
+[03:10] <delire> yes, wise.
+=== omni_lonnie [~lonnie@leepcL-080.sub-l.lee.net]  has joined #ubuntu
+[03:10] <bigfoot1> what's -w?
+[03:11] <delire> Efwis: if you don't mind using KDE applications, check out kfax
+[03:11] <Seveas> bigfoot1, it will generate warnings when the perl programmer does icky stuff
+[03:11] <bigfoot1> and this script requires "requires XML::LibXML (tested with 1.56) and HTML::Parser (tested with 3.26)." where do i get these? Do i already have these?
+=== jinty [~jinty@78.Red-213-96-3.pooles.rima-tde.net]  has joined #ubuntu
+[03:11] <Seveas> apart from using perl, which is icky by definition :)
+[03:11] <delire> hehe, rise Python, Lord of Snakes
+=== chrissturm [~chris@83-65-247-211.dynamic.xdsl-line.inode.at]  has joined #ubuntu
+[03:12] <Efwis> will it work with gnome?? i didn't think that would work on it
+[03:12] <bigfoot1> where do i get the two pre-requisites?
+[03:12] <Seveas> bigfoot1, aptitude install libxml-libxml-perl
+[03:12] <bigfoot1> efwis, are you talking about this delicious script?
+[03:12] <chrissturm> hey, how can i configure xchat to automatically identify with nickserv? :)
+[03:12] <Efwis> norm_, i'm talking fax
+[03:12] <bigfoot1> Seveas, delire why is perl icky?
+[03:12] <Seveas> chrissturm, see the xchat docs :)
+=== ryan_ [~ryan@222.65.241.74]  has joined #ubuntu
+[03:12] <bigfoot1> why do yo think so, anyway?
+[03:12] <Efwis> damn auto-complete
+[03:12] <ryan_> hi,all
+=== mhz [~mhz@mhz.fan.moinmoin]  has joined #ubuntu
+[03:13] <mhz> #join squirrelmail
+=== r0bby__ [~rob@cpe-204-210-133-115.hvc.res.rr.com]  has joined #ubuntu
+[03:13] <Seveas> bigfoot1, aptitude install libhtml-parser-perl
+[03:13] <chrissturm> seveas: any more concrete hint?
+=== telemaco [~telemaco@231.Red-81-35-232.pooles.rima-tde.net]  has joined #ubuntu
+[03:13] <delire> bigfoot1: it's not very human readable and uses many 'magic' characters that can get you into a real jam when using inside other programming contexts, like other scripts.
+[03:13] <bigfoot1> how did you know the exact filenames? have you installed them yourself?
+=== Mez [~Mez@82-36-228-130.cable.ubr01.perr.blueyonder.co.uk]  has joined #ubuntu
+[03:13] <Seveas> chrissturm, menu x-chat -> server list
+[03:14] <Seveas> pick a server
+[03:14] <Seveas> choose edit server
+[03:14] <Seveas> and put ns identify YOUR_PASSWORD in the connect command box
+[03:14] <bigfoot1> interesting i ran "aptitude install libxml-libxml-perl" without the sudo. i thought i would have needed to do sudo with it.
+[03:14] <bigfoot1> oh right. the error message was at the end.
+[03:14] <bigfoot1> 8)
+[03:14] <delire> hehe
+[03:14] <mhz> bigfoot1, :)
+[03:14] <Kamping_Kaiser> has anyone got the backports mirrors working?
+[03:14] <Seveas> bigfoot1, apt-cache search libxml | grep perl :)
+=== mz2 [~mz2@81-1-66-209.homechoice.co.uk]  has joined #ubuntu
+[03:15] <bigfoot1> Seveas, The following packages are not AUTHENTICATED:
+[03:15] <bigfoot1>   libxml-libxml-common-perl libxml-namespacesupport-perl libxml-libxml-perl
+[03:15] <bigfoot1>   libxml-sax-perl
+[03:15] <bigfoot1> . is this ok?
+[03:15] <Seveas> bigfoot1, what delire said. Plus perl uses really weird things like () not being mandatory etc...
+=== chrissturm [~chris@83-65-247-211.dynamic.xdsl-line.inode.at]  has joined #ubuntu
+[03:15] <Seveas> bigfoot1, no
+[03:15] <chrissturm> wohoo
+=== Mez [~Mez@82-36-228-130.cable.ubr01.perr.blueyonder.co.uk]  has joined #ubuntu
+[03:15] <bigfoot1> it needs to be authenticated?
+[03:15] <Seveas> bigfoot1, stop using backports/other non-offical repos :)
+[03:15] <bigfoot1> Seveas,  i just ran the command you gave me.
+[03:15] <chrissturm> i just had to enter my password into the nickserv password field :)
+=== albacker [~eni@217.24.240.8]  has joined #ubuntu
+[03:16] <bigfoot1> isn't authentication just like those certificates that pop up when browsing the web?
+[03:16] <Seveas> bigfoot1, if you use the official repositories, you will not get this error
+[03:16] <bigfoot1> so are these 2 files absent from the official repo's?
+[03:17] <Seveas> bigfoot1, no
+[03:17] <delire> i doubt it
+=== rover_dan [~daniel@222.212.41.14]  has joined #ubuntu
+[03:17] <chrissturm> i have an ati 9700 with fglrx drivers, how can i use tv out? i would like to watch a movie on tvout while having my desktop on my primary monitor. is that possible?
+[03:17] <bigfoot1> Seveas, do you use some sort of online bookmark manager? what do you recommend?
+[03:17] <Seveas> i only use official repos and could find them :)
+[03:17] <bigfoot1> have you heard of del.icio.us?
+[03:17] <chrissturm> del.icio.us is great!
+[03:17] <bigfoot1> could find what?
+=== AlfaWolph [yri@cpe-24-165-197-17.midsouth.res.rr.com]  has joined #ubuntu
+=== SnakeBite [~SnakeBite@84.242.143.67]  has joined #ubuntu
+[03:17] <Seveas> bigfoot1, i use no online bookmark manager
+[03:17] <bigfoot1> chrissturm, how do you import your firefox bookmarks into it?
+[03:17] <delire> chrissturm: see the option "NoTV" in /etc/X11/xorg.conf
+[03:17] <Seveas> i only use official repos and could find them :) <-- the 2 packages you asked about
+=== tekkah [~tekk@209.213.64.215]  has joined #ubuntu
+[03:18] <bigfoot1> oh, so you did find them in the official repos. then why did i get the error?
+[03:18] <delire> chrissturm: you might also want to consider backing up your xorg.conf and generating the file using fglrxconfig
+=== zerokills [~zerokills@12-214-110-179.client.mchsi.com]  has joined #ubuntu
+=== rover_dan [~daniel@222.212.41.14]  has joined #ubuntu
+[03:18] <delire> chrissturm: this process will supply you with an option to define TV out settings.
+[03:18] <chrissturm> delire: and what player do i use then?
+[03:18] <Seveas> bigfoot1, because you use non-official repositories...
+[03:18] <bigfoot1> huh? really?
+[03:18] <bigfoot1> I have the official ones on.
+[03:19] <Seveas> bigfoot1, i cannot see another option...
+[03:19] <bigfoot1> okay, let me check synaptic.
+[03:19] <Seveas> bigfoot1, can you paste your sources.list on pastebin.kaarsemaker.net
+=== exwindowsuser [~exwindows@65.173.12.54]  has joined #ubuntu
+[03:19] <delire> chrissturm: you mean video player? all should be fine.
+[03:19] <bigfoot1> Seveas, how do i get the sources.list?
+=== eruin [~eruin@eruin.user]  has left #ubuntu ["Leaving"]
+=== eruin [~eruin@eruin.user]  has joined #ubuntu
+[03:19] <Seveas> bigfoot1, gedit /etc/apt/sources.list
+[03:20] <chrissturm> delire: thx
+=== hornsby [~hornsby@c54.lanhovi.ton.tut.fi]  has joined #ubuntu
+=== delire notes that future iterations of Ubuntu plan to ship with a GUI X configurator, like Mepis, Mandrake, SUSE and others.
+[03:20] <delire> chrissturm: np
+[03:20] <bigfoot1> Seveas, http://pastebin.kaarsemaker.net/69
+=== AgentM [~agentm@p548E0849.dip0.t-ipconnect.de]  has joined #ubuntu
+[03:21] <mz2> how do i make dmix work with polypaudio?
+[03:21] <chrissturm> i think breezy is going to be a rocking release
+=== mgalvin [~mgalvin@host-66-202-95-170.spr.choiceone.net]  has joined #ubuntu
+[03:21] <mz2> seems to work fine with all apps that use the alsa interface
+[03:21] <haller> mjr: gnome-session says "(gnome-session:7354): Gtk-WARNING **: cannot open display:"
+[03:21] <delire> chrissturm: sure looks to be, with the Summer of Code bounties.
+=== mgalvin [~mgalvin@host-66-202-95-170.spr.choiceone.net]  has left #ubuntu ["Leaving"]
+[03:21] <CruNcher> Kpackage doesn't accepts my root password
+[03:22] <delire> mz2: that's one for crimsun
+[03:22] <Seveas> bigfoot1, your sources.list is f*ed up massively :)
+[03:22] <delire> CruNcher: odd.
+[03:22] <bigfoot1> what's wrong, Seveas ?
+[03:22] <mjr> haller, you don't have the X display set correctly, possibly because ssh's X forwarding isn't enabled (ssh -X)
+[03:22] <bigfoot1> Seveas, how do i fix it?
+[03:22] <Seveas> bigfoot1, use the one at pastebin.kaarsemaker.net 38 and add the java repository to it
+[03:22] <Seveas> ow and massively is overexxagerated :)
+=== telemaco [~telemaco@145.Red-83-33-188.pooles.rima-tde.net]  has joined #ubuntu
+[03:23] <mz2> oh right, i think i got it now
+[03:23] <CruNcher> yeah with kynaptic it works
+[03:23] <reka> a little off-topic but: does sarge have the quirks hoary seems to have? (low default res, sound problems)
+[03:23] <haller> mir: i am on a windows box here. is X forwarding an issue. or do i need x11 as a client for that?
+=== thisfred [~thisfred@a80-127-80-154.adsl.xs4all.nl]  has joined #ubuntu
+[03:23] <CruNcher> but with kpackage it doesn't :(
+[03:24] <Seveas> haller, you really should look into freenx
+[03:24] <bigfoot1> seveas, okay, i've copied it. do i just paste it into the sources.list? erasing my current list?
+[03:24] <CruNcher> bug ?
+[03:24] <Seveas> bigfoot1, yes
+[03:24] <Seveas> bigfoot1, sudo gedit /etc/apt/sources.list
+[03:24] <Seveas> otherwise you cannot save it :)
+[03:24] <bigfoot1> Seveas, and how do i add the java repository, as you said?
+[03:24] <Seveas> add this line: deb http://ubuntu.tower-net.de/ubuntu/ hoary java
+=== AceMan [~me@81-178-150-135.dsl.pipex.com]  has joined #ubuntu
+[03:25] <delire> CruNcher: i have no idea why that would happen.
+[03:25] <CruNcher> it say su authentification failed
+[03:25] <mjr> haller, you need an X server for your windows, and to enable X forwarding from your ssh client
+[03:25] <CruNcher> Entschuldigung
+[03:25] <CruNcher> lol
+[03:25] <haller> ok
+[03:25] <haller> thx
+[03:25] <bigfoot1> Seveas, that's strange. another gedit window popped up. it didn't use my old window. but when i didn't have the sudo command (read-only), it used my old window.
+[03:25] <CruNcher> aren't su and sudo different handled on ubuntu ?
+[03:26] <nalioth_zZzZzZzZ> haller: why not use vnc?
+[03:26] <Seveas> CruNcher, everywhere, not just on Ubuntu, simply because they are different :)
+=== delire notes Linux Format magazine has a great article about Xen and virtualisation.
+[03:26] <CruNcher> ok so thats the problem then
+[03:26] <CruNcher> :D
+[03:26] <bigfoot1> seveas, all right. all done.
+=== familie [~familie@ip51cf5930.direct-adsl.nl]  has joined #ubuntu
+[03:26] <Seveas> bigfoot1, nice
+[03:26] <CruNcher> it should use sudo for ubuntu hehe
+[03:26] <Seveas> now do apt-get update
+[03:26] <delire> CruNcher: sudo is defined by the su in a file called /etc/sudoers
+[03:26] <Seveas> and retry installing
+=== TiffOn [user@218.Red-217-126-197.pooles.rima-tde.net]  has joined #ubuntu
+[03:27] <haller> nalioth_zZzZzZzZ: i want to but cant start gnome / vino from ssh..
+=== nalioth_zZzZzZzZ is now known as nalioth
+[03:27] <bigfoot1> seveas, can i delete the "source" repos?
+[03:27] <chrissturm> is there a way to get automount to work with the breezy 2.6.12 kernel?
+[03:27] <bigfoot1> Seveas,  I'm not a developer.
+=== gK_Angel [Gravy@cpc2-duns3-5-0-cust137.lutn.cable.ntl.com]  has joined #Ubuntu
+[03:27] <delire> s/"sudo is"/"sudo rules are"
+=== familie [~familie@ip51cf5930.direct-adsl.nl]  has left #ubuntu ["Ik]
+[03:27] <nalioth> haller: really? hmm
+[03:28] <haller> nalioth: or i dont know how to do it. do you?
+[03:28] <delire> bigfoot1: it's no problem to comment out the sources repository
+=== ccc [~ccc@c-ac0f70d5.015-28-6c6b7010.cust.bredbandsbolaget.se]  has joined #ubuntu
+=== ivoks [~ivoks@194.152.245.14]  has joined #ubuntu
+[03:28] <CruNcher> thx delire :)
+[03:28] <nalioth> haller: i'm lookin
+[03:28] <delire> CruNcher: had me worried ;)
+[03:28] <nalioth> haller: you WILL need an xserver of some sort for x-forwarding
+[03:28] <Seveas> bigfoot1, yes you can
+[03:28] <delire> CruNcher: are you using KDE or Gnome there?
+[03:28] <Seveas> but they don't hurt :)
+[03:28] <CruNcher> KDE
+[03:28] <bigfoot1> comment out? that's not the same as removing them in synaptic, is it?
+=== marin [~marin@222.Red-217-126-246.pooles.rima-tde.net]  has joined #ubuntu
+[03:29] <delire> CruNcher: ahah, then you'll benefit with the integration anyway.
+[03:29] <bigfoot1> Seveas, will i ever need the sources repos?
+[03:29] <Seveas> bigfoot1, no you won't probably :)
+[03:29] <delire> CruNcher: KDE has a very cool suite of integrated administration apps.
+[03:29] <bigfoot1> do you need them?
+[03:29] <nalioth> bigfoot1: anything in a text file with a # in front of the line, is called "commented out" and is ignored by the programs using that text file
+[03:29] <nalioth> bigfoot1: i recommend you comment them out, because you might need them sometime
+[03:30] <bigfoot1> nalioth, hello. nice to hear from you again. thank you for  "commenting in". in what kind of circumstances do you think one needs the source repos?
+[03:30] <delire> bigfoot1: it's good to get into the habit of commenting out that which you don't need. leave yourself little commented notes (comments) also.
+[03:30] <nalioth> bigfoot1: and in any case, they are not doing any harm in the txt file, since they are only used when you ask apt t0 build from source
+[03:31] <bigfoot1> when is it necessary to build from source?
+[03:31] <nalioth> bigfoot1: there are some binaries (esp on amd64 and ppc arches) not available. so on those platforms, building from deb-src archives gets you a 'home-rolled' ubuntu packaged binary
+[03:32] <bigfoot1> nalioth, but if i'm on a x86, then the sources repos are useless?
+=== cmg_ [~cmg@151-204.tfn.com]  has joined #ubuntu
+[03:33] <delire> bigfoot1: barely necessary. having them in there will only slow down your apt-get update time, very slightly.
+[03:33] <delire> bigfoot1: but there's no need to take those sources repos out of there altogether
+=== haller is now known as haller_afk
+[03:34] <nalioth> bigfoot1: they are probably not gonna be needed by an x86 user, but comment them out for insurance
+[03:34] <nalioth> bigfoot1: even uncommented, as i said, they are not used unless you request a source build using apt
+[03:35] <bigfoot1> okay.
+[03:35] <bigfoot1> i'll put the pound sign in front of them.
+[03:36] <ryan_> the default ubuntu can't play mp3?
+=== spiderworm [~spiderwor@70.58.125.120]  has joined #ubuntu
+[03:36] <nalioth> ryan_: www.ubuntulinux.org/wiki/RestrictedFormats
+[03:37] <delire> bigfoot1: is "the pound sign" the same as '#'
+[03:37] <nalioth>  delire in the USA, yes
+[03:37] <ryan_> thank you nalioth
+[03:37] <bigfoot1> yes delire . 8-)
+=== delire thinks ubuntu needs a metapackage for all the non-free 'multimedia' codecs.
+=== rayde [~rayde@vs217.das.psu.edu]  has joined #ubuntu
+[03:38] <delire> nalioth: ahah, i know little about america :0
+[03:38] <nalioth> delire: make one
+[03:38] <bigfoot1> I didn't mean the currency symbol. 8-)
+[03:38] <delire> nalioth: i have one. perhaps i should submit it.
+=== adnans [~adnans@noterik2.demon.nl]  has joined #ubuntu
+[03:38] <nalioth> delire: yes, metapackages i would think are not so closely inspected (i mean, what are they but pointers to other pkgs, right?)
+=== AlfaWolph [yri@cpe-24-165-197-17.midsouth.res.rr.com]  has joined #ubuntu
+[03:39] <delire> nalioth: yes. i have made a few for debian, though am unfamiliar with the ubuntu process, where submission and maintenance is concerned.
+[03:40] <delire> nalioth: eg if a package name changes, the metapackage must too. this is where 'maintenance' comes in..
+[03:40] <nalioth> delire: you can go to the wiki and sign up to be a dev
+[03:40] <nalioth> delire: and you can be the maintainer of the metapkg
+[03:40] <delire> nalioth: mayhaps. i want to see where m.shuttleworth goes with breezy first.
+[03:40] <delire> nalioth: tempting.
+=== bronson_ [~bronson@node-40240852.sjc.onnet.us.uu.net]  has joined #ubuntu
+[03:41] <stevegriff> is there a site where I can search what packages are available for ubuntu users?
+[03:41] <nalioth> delire: if you are a dev (no matter what sort) you have influence in the direction of breezy (and sinister squirrel, and rowdy rabbit, and so on)
+[03:41] <nalioth> stevegriff: packages.ubuntu.com, i believe
+[03:41] <stevegriff> thanks nagesh
+[03:41] <bigfoot1> stevegriff, what about synaptic?
+[03:41] <delire> nalioth: hehe you're joking, they are the forthcoming version names ?
+[03:41] <pmjdebruijn> nalioth: meritocrasy?
+[03:41] <stevegriff> nalioth even :D
+=== coulix [~greg@203-217-16-111.dyn.iinet.net.au]  has joined #ubuntu
+[03:42] <nalioth> delire: i made them up
+=== nouser [~nouser@200.23.53.1]  has joined #ubuntu
+[03:42] <coulix> is there a fix for the totem error under ati driver ? i have to use mplayer :/
+[03:42] <nalioth> pmjdebruijn: whatever works
+[03:42] <delire> nalioth: you can go to the wiki and sign up to be a brand-imager ;)
+=== nouser [~nouser@200.23.53.1]  has left #ubuntu ["Leaving"]
+=== Guybrush|Numb [~franz@host35-185.pool62211.interbusiness.it]  has joined #ubuntu
+[03:42] <stevegriff> ahhh cool apache2 is there
+[03:42] <nalioth> delire: me in marketing?
+=== nouser_ [~nouser@200.23.53.1]  has joined #ubuntu
+=== nouser_ [~nouser@200.23.53.1]  has left #ubuntu ["Leaving"]
+=== cmg_ [~cmg@151-204.tfn.com]  has left #ubuntu ["Leaving"]
+[03:43] <stevegriff> I'm moving from Gentoo to ubuntu but with my desktop I need some server stuff
+[03:43] <wijnand> is there a recommended method to resize a windows (ntfs) partition before installing ubuntu? i'm trying to set it up on a friends machine
+[03:43] <delire> nalioth: "sinister squirrel" has an edge, you have to admit.
+=== lpb-Anonymous [~anonymous@p54B6C231.dip.t-dialin.net]  has joined #ubuntu
+[03:43] <nalioth> delire: eats other distros nuts
+=== lpb-Anonymous [~anonymous@p54B6C231.dip.t-dialin.net]  has left #ubuntu ["Verlassend"]
+[03:43] <delire> wijnand: do it from windows land AFAIK
+[03:43] <delire> nalioth: there you have it. now go forth and market with ferocity.
+[03:44] <nalioth> wijnand: use partition magic from windoze, or wipe the system and start clean
+[03:44] <stevegriff> does Ubuntu ask you what file format you want your partitions formatted in?
+[03:44] <coulix> yes
+[03:44] <wijnand> nalioth: PM costs lots of money though, doesn't it?
+[03:44] <nalioth> stevegriff: ext3 mostly
+=== zelurxunil [~drh@tradersdata.com]  has joined #ubuntu
+[03:44] <wijnand> nalioth: starting over is never a bad idea for windos though ;)
+[03:44] <nalioth> wijnand: yes it is a commercial product
+[03:44] <wijnand> stevegriff: yup
+[03:45] <bigfoot1> is there a way i could remotely (and securely) connect to my home ubuntu PC from a Windows PC at work?
+=== __Ace__ [~love@h55l211.delphi.afb.lu.se]  has joined #ubuntu
+[03:45] <wijnand> stevegriff: ext3 by default but reiserfs and others are available
+[03:45] <mjr> wijnand, the free way is "ntfsresize", dunno about reliability though
+[03:45] <delire> wijnand: start over, or back up and take the risk (if you can't afford PM).
+[03:45] <hornsby> wijnand, the partition manager from ubuntu worked great for me, resized a partition ntfs, moved data ...
+[03:45] <nalioth> wijnand: please don't ask me what to do with windoze.. .. (i'll tell ya every time to wave bye-bye)
+[03:45] <bigfoot1> i'd like to, for instance, browse my hard drive.
+[03:45] <mjr> bigfoot1, ssh; install ssh server and putty for the windows box
+[03:45] <nalioth> bigfoot1: vnc over ssh
+[03:45] <mjr> (ssh server for the ubu box)
+[03:45] <delire> wijnand: what do you use win32 for currently?
+[03:45] <wijnand> nalioth: that's my normal strategy too :)
+[03:45] <nalioth> wijnand: just keep in mind re hornsby that ntfs writing is still considered 'unstable' under linux
+[03:46] <stevegriff> wijnand - thanks. I've used reiserfs for the last couple of years but I'm just wondering if there's better filesystems on the horizon
+=== mz2 [~mz2@81-1-66-209.homechoice.co.uk]  has joined #ubuntu
+[03:46] <wijnand> delire: it's a friend who wants to migrate to linux in time... dualboot is the way to begin :)
+=== ahal [HydraIRC@a5f7657a61670b1b.session.tor]  has joined #ubuntu
+[03:46] <wijnand> nalioth: yeah i know
+[03:46] <hornsby> nalioth, true but it worked well for me few times
+[03:46] <mjr> nalioth, ntfs writing and ntfs resizing are somewhat different things though
+[03:46] <delire> wijnand: right..
+[03:46] <thenuke> bigfoot1: ssh?
+=== black13 [~black13@68-112-59-190.dhcp.dntn.tx.charter.com]  has joined #ubuntu
+[03:47] <thenuke> bigfoot1: if you really cant live without the x-windows then use that VNC
+[03:47] <nalioth> wijnand: then clean your friends HD, reinstall winduhs (using fat32 filessystem (for easier file sharing on the box)) and go from there
+=== kafeine [~kori@212.39.73.142]  has joined #ubuntu
+[03:47] <wijnand> yeah i suppose that's the easiest thing to do
+[03:47] <thenuke> bigfoot1: but vnc might need much upload power from your connection
+[03:47] <bigfoot1> so on the windows pc at work, i can browse thru my home ubuntu pc via the Network World (or something like that) icon on the windows desktop?
+[03:47] <wijnand> i never make just one partition on any harddisk, just to make moving files around easier
+[03:47] <nalioth> wijnand: i build/service/etc boxen, and i never install windoze on ntfs
+[03:48] <ahal> howdy.. any iptables gurus here, i need to block *.prima.net.ar someone is messing with my server, how do i find out what iprange to block?
+=== nouser_ [~nouser@200.23.53.1]  has joined #ubuntu
+[03:48] <thenuke> bigfoot1: with 800x600x16 it took about 600Kb/sec
+=== vie [~vie@202.65.230.106]  has joined #ubuntu
+[03:48] <wijnand> ok well thanks everyone, i'll get to work on it :D
+[03:48] <nalioth> bigfoot1: not so simple, (cuz windoze doesnt allow simplicity) but yes you can log in and browse from work
+[03:48] <spiderworm> those dame argentines, always messing with other people's boxes
+=== nouser_ [~nouser@200.23.53.1]  has joined #ubuntu
+=== nouser_ [~nouser@200.23.53.1]  has left #ubuntu ["Leaving"]
+[03:48] <bigfoot1> oh i see, you mean that using VNC will make the remote computer act as if you are stantding in front of the faraway computer, right?
+[03:49] <pfp> ahal: use 'whois i.p.add.ress' (not IRC /whois :)
+[03:49] <nalioth> ahal: at a terminal type "host whatever.prima.net.ar" and you should get a dns number
+[03:49] <delire> ahal: i'd use nslookup
+=== nouser_ [~nouser@200.23.53.1]  has joined #ubuntu
+[03:49] <nalioth> bigfoot1: yes
+=== nouser_ [~nouser@200.23.53.1]  has left #ubuntu ["Leaving"]
+=== jasoncohen [~jason@pcp0011382713pcs.ebrnsw01.nj.comcast.net]  has joined #ubuntu
+=== NotThomMay [~thom@shutt.demon.co.uk]  has joined #ubuntu
+[03:49] <ahal> whois prima.net.ar
+[03:49] <ahal> This TLD has no whois server, but you can access the whois database at
+[03:49] <ahal> http://www.nic.ar/
+[03:50] <jasoncohen> is there a list of packages not available in the amd64 port of hoary? I noticed that flashplayer and mplayer aren't
+[03:50] <ahal> ill try that then :)
+=== mindspin [~mindspin@p54B2C1A7.dip.t-dialin.net]  has joined #ubuntu
+[03:50] <bigfoot1> ahal, how did you know that someone is messing with your server? what do you mean by "my server"? you running a website or something?
+=== Kyynara [~pate@hki2-6-2-ad.hoasnet.inet.fi]  has joined #ubuntu
+[03:50] <ahal> yepp webserver logs... upto 500M traffick a day
+[03:51] <ahal> 500M should amount to the whole months traffick
+[03:51] <bigfoot1> what was he doing then?
+=== xam0x [~xamox@24-236-180-212.dhcp.mrqt.mi.charter.com]  has joined #ubuntu
+[03:51] <mindspin> ahal did you have a look at /var/log/auth.log ?
+[03:51] <pfp> ahal: using the whois command w/ raw IP address might get you a usable IP range
+[03:51] <bigfoot1> maybe he was doing some offline browsing by downloading your whole website, ahal ?
+=== Rockett17 [~srockett@CPE0011097dafa9-CM00e06f1b4b12.cpe.net.cable.rogers.com]  has joined #ubuntu
+[03:51] <xam0x> How do I get DVD's to play with the latest release? I have libdvd installed but it's still complaining that I don't have Decryption support on xine, totem, etc.
+[03:52] <bigfoot1> if not, why then would he get 500M from your server?
+[03:52] <jasoncohen> xam0x, you have libdvdcss2 installed?
+[03:52] <delire> xam0x libdvdcss
+=== islander [~islander@ip68-100-40-251.dc.dc.cox.net]  has joined #ubuntu
+[03:52] <nalioth> bigfoot1: there are programs that monitor your network and can tell you if anyone is trying to access your box
+=== pimp [~pimp@200-126-77-78.bk5-dsl.surnet.cl]  has joined #ubuntu
+[03:52] <ahal> repeated requests.. and i dont have a total of 500M stuff there
+[03:52] <bigfoot1> by access, nalioth, do you mean "hacking"?
+[03:52] <nalioth> xam0x: libdvdcss
+[03:52] <xam0x> nope, thx
+[03:52] <bigfoot1> is there anything wrong with accessing? don't we all access boxes when we go to any website?
+[03:53] <islander> Does anybody knows where can I get Alienware themes for linux
+[03:53] <nalioth> bigfoot1: yes i mean 'cracking'
+[03:53] <xam0x> Where is a package for that
+[03:53] <delire> ahal i use 'watch -d netstat -tupa'
+[03:53] <bigfoot1> what is to crack?
+=== marcin_ant [~marcin@www.e-dev.tele2.pl]  has joined #ubuntu
+[03:53] <bigfoot1> does ahal have some credit card numbers on his box or something?
+[03:53] <nalioth> bigfoot1: nothing wrong with legitimate access, but probing for holes/older unpatched software, etc, is not cool
+[03:53] <nalioth> xam0x: universe or multiverse
+[03:53] <delire> bigfoot1: 'cracking' relates to the breaking or decoding of keys used in a digital security context.
+=== lessshaste [~lesshaste@3ec34a729d12479a.session.tor]  has joined #ubuntu
+[03:54] <bigfoot1> you mean someone can find out about your holes?
+[03:54] <lessshaste> If you go to http://www.apple.com/itunes/store/ and click on one of today's top songs does it work for anybody here?
+[03:54] <nalioth> bigfoot1: would you want your box to be operated by someone else?
+[03:54] <ahal> bigfoot1: just some fucking recipes
+[03:54] <bigfoot1> nalioth, no.
+[03:54] <mindspin> check your server with nessus
+[03:54] <islander> Hello, fellows, Does anybody knows where can I  get Alienware theme for linux ubuntu
+[03:54] <nalioth> bigfoot1: these crackers are looking for unpatched windoze boxen to infect
+[03:54] <lessshaste> I get "itms is not a registered protocol"
+[03:54] <bigfoot1> ahal, why then would someone want to get those recipes? there are thousands of howto's on sexual intercourse on the net.
+[03:55] <mindspin> install chkrootkit or something similiar to have a look wether your machine is "cracked"
+[03:55] <bigfoot1> 8-)
+[03:55] <nalioth> bigfoot1: and in ahals case, who knows what they're doing
+[03:55] <bigfoot1> nalioth, but if ahal's box is ubuntu, it's safe, right?
+[03:55] <delire> mindspin ahal i use 'tiger' to detect for rootkits and evidence of other exploits.
+=== ninwa [~joey@d14-69-38-157.try.wideopenwest.com]  has joined #ubuntu
+[03:55] <delire> bigfoot1: yes, very in the relative scheme of things.
+=== optik [~optik@81-178-46-38.dsl.pipex.com]  has joined #ubuntu
+[03:55] <ahal> bigfoot1: i dont care why, i just want to block them as they are clearly fucking with me
+=== nouser_ [~nouser@200.23.53.1]  has joined #ubuntu
+[03:56] <jasoncohen> does anyone here use the amd64 port?
+[03:56] <optik> i fif.....
+=== bryanf [~BryanForb@wuw-ojr3gmca.dybb.com]  has joined #ubuntu
+[03:56] <delire> ahal if you have a firewall just build a rule. i use shorewall for this.
+[03:56] <nalioth> bigfoot1: a default install of ubuntu is considered 'safe', but we don't know what ahal has added/changed
+[03:56] <stevegriff> ok, vmware - is there a ubuntu package for this or do I have to install it myself? there's no record of it on packages.ubuntu.com
+[03:57] <bigfoot1> nalioth, what changes/additions would make ubuntu less safe?
+[03:57] <nalioth> jasoncohen: no, but i might be able to help (don't know pkgs, tho)
+[03:57] <mindspin> and what scripts are running, cgi-bin can be harmful
+[03:57] <vie> hiiiiiiiiiiiiii
+[03:57] <nalioth> ahal: i have a fix for you, give me a minute
+[03:57] <optik> did*
+[03:57] <optik> but not for long
+[03:57] <optik> couldnt stand the lack of packages
+[03:57] <ahal> i have my own firewall rules that are safe.. they keep hitting my webserver port 80, with repeated requests leeching my bandwidht
+[03:57] <mindspin> inproper apache cconfiguration
+[03:57] <mindspin> and the well known php holes
+[03:57] <nalioth> bigfoot1: adding insecure pkgs, configuring secure pkgs in an insecure manner
+=== olivier_ [~olivier@AGrenoble-152-1-14-199.w82-122.abo.wanadoo.fr]  has joined #ubuntu
+[03:58] <ahal> maybe mod_rewrite could block *.some.net ?
+[03:58] <mindspin> drop instead of reject limits traffic too
+[03:58] <delire> yes
+[03:58] <nalioth> ahal: here is a good article on what you are wantin to know
+[03:58] <pfp> i'd block their ip range, doing a reverse dns on _all_ clients would be kinda expensive imo..
+[03:58] <nalioth> ahal: http://software.newsforge.com/article.pl?sid=05/05/09/1846213&tid=78&tid=130
+[03:59] <jasoncohen> nalioth, i asked in #debian if the performance increase was worth it and i was told it was but it seems the amd64 ports are missing quite a few packages I use often. debian doesn't have OO ported yet, and ubuntu doesn't have mplayer
+[03:59] <nalioth> jasoncohen: are you familiar with apt-gets capabilitys?
+[03:59] <jasoncohen> yes
+[03:59] <thenuke> jasoncohen: uff, if mplayer is not in ubuntus repos, it does not prevent you from adding some extra repos
+[03:59] <mindspin> blocking complete ip-ranges can cost you a lot of customers if you running a site for business purposes
+[03:59] <nalioth> jasoncohen: unfortunately, you (amd64) and I (ppc) are redheaded stepchildren

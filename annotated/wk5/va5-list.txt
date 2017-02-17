@@ -1,0 +1,4 @@
+../../guide.txt tmp-file 0 0
+../../raw/2007-08-19-01-first.txt 2007-08-19-01-first.txt.annotated.va 101 0
+../../raw/2012-05-20-16-first.txt 2012-05-20-16-first.txt.annotated.va 101 0
+../../raw/2013-09-12-11-first.txt 2013-09-12-11-first.txt.annotated.va 101 0

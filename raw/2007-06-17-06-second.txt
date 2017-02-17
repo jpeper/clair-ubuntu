@@ -1,0 +1,864 @@
+[05:53] <niuq> sn0: mmm i think i just download it a package, from deluge's site or something, it worked well for a while, but suddenly it crashed
+[05:53] <Gnea> astomper: only if they share the same subnet mask
+[05:53] <Trixsey> sn0, but it does :(
+[05:53] <nathalie> I am quite totally screwed up.
+[05:53] <mc44> nuked_omen: why not? works with vlc too
+[05:53] <Trixsey> Where can I find more information about the package "eclipse" for Feisty?
+[05:53] <sn0> niuq was it a .deb file ?
+[05:53] <niuq> sn0: not sure if it is in the repositories
+[05:54] <kazim59> nuked_omen: I don't know.. I mean.... these developers are genius.. lol
+[05:54] <sn0> Trixsey see http://packages.ubuntu.com/feisty/devel/eclipse
+=== jeayese [n=jase@c211-28-157-235.eburwd2.vic.optusnet.com.au]  has joined #ubuntu
+[05:54] <niuq> sn0: yes it was a .deb
+[05:54] <sn0> niuq i dont believe it is, search shows nothing anyways
+[05:54] <nuked_omen> mc44: i just thought mplayer wasn't that smart
+[05:54] <Gnea> heh
+[05:54] <niuq> sn0: deluge-torrent_0.5.0-0~getdeb1_i386.deb
+[05:54] <sn0> niuq ok so because you installed a deb, this is no problem :-) so sudo aptitude purge deluge, then reinstall the deb file as before
+[05:54] <niuq> sn0: there it is
+[05:54] <Gnea> nuked_omen: you don't really know until you try ;)
+[05:54] <Trixsey> it recommends GCJ, ok
+[05:55] <niuq> sn0: ok ok i will
+[05:55] <Trixsey> sn0, then why does it include GCJ when I type "sudo apt-get install eclipse"?
+=== ianian [n=ian@host86-132-225-57.range86-132.btcentralplus.com]  has joined #ubuntu
+=== ubuntu [n=ubuntu64@197.Red-80-59-135.staticIP.rima-tde.net]  has joined #ubuntu
+[05:55] <ubuntu> !freenx
+[05:55] <ubotu> FreeNX is advanced remote desktop technology. For more information and install instructions, see https://help.ubuntu.com/community/FreeNX
+=== nuked_omen is now known as Azul
+=== ubuntu [n=ubuntu64@197.Red-80-59-135.staticIP.rima-tde.net]  has left #ubuntu []
+[05:55] <xampik> what is defauld font in Ubuntu ????????? name
+[05:55] <ianian> anyone know what the plugins sub-directory under the Mozilla installation directory is for 7.04?
+[05:56] <astomper> Gnea, ok thx
+[05:56] <Trixsey> gcj4.1-base
+[05:56] <Trixsey> etc
+[05:56] <Trixsey> lots of packages
+[05:56] <robdeman> hey how can I tell which audio hardware my machine has? I know its nVida onboard stuff...
+[05:56] <sn0> Trixsey im not sure, have you tried in synaptic? and check that gcj is not enabled/ticket
+[05:56] <kazim59> nuked_omen: where are you???
+[05:56] <sn0> ticked*
+=== elate [n=Elate@85-210-252-54.dsl.pipex.com]  has joined #ubuntu
+[05:56] <robdeman> im recompiling ALSA and neet to tell ALSA which driver it should build...
+[05:56] <Trixsey> sn0, yes.. it wants gcj then as well
+[05:56] <niuq> sn0: ok i just tried and appears a message Error: a later version is already installed
+=== habeeb [n=habeeb@athedsl-02797.home.otenet.gr]  has joined #ubuntu
+=== dopira [n=ben@pool-71-173-168-221.hrbgpa.east.verizon.net]  has joined #ubuntu
+=== thomax__ [n=thomas@217-148-244-182.happymany.net]  has joined #ubuntu
+[05:56] <kazim59> Gnea: there is no sound... mplayer file.iso gives no sound
+=== darkmarby [n=intutor@c-68-81-122-170.hsd1.nj.comcast.net]  has left #ubuntu []
+[05:56] <Azul> kazim59: i'm here
+[05:56] <habeeb> !gutsy > habeeb
+[05:56] <Trixsey> sn0, although it specifically says on that site, that it is a recommended package
+=== juan [n=juan@201.208.182.113]  has joined #ubuntu
+[05:56] <niuq> sn0: when i was trying to install the .deb package
+[05:57] <Trixsey> sn0, is there no --ignore-recommends or something?
+[05:57] <rem_> nathalie start a terminal (goto Applications, Accessories, Terminal) then type in /usr/bin/kino this will start kino, and keeps the terminal open in the background, you should be able to see in the terminal what happens when it freezes ..paste it here, or in http://paste.ubuntu-nl.org (and paste the link here..) to get help ..
+[05:57] <ianian> anyone know what the plugins sub-directory under the Mozilla installation directory is for 7.04?
+[05:57] <sn0> Trixsey indeed, that is strange - hopefully someone more enlightened is awake :)
+[05:57] <Gnea> kazim59: what about with vlc or totem instead of mplayer?
+[05:57] <kazim59> Azul: there's no sound when I did mplayer file.iso
+=== jeayese [n=jase@c211-28-157-235.eburwd2.vic.optusnet.com.au]  has left #ubuntu []
+=== erUSUL [n=erUSUL@111.Red-81-38-66.dynamicIP.rima-tde.net]  has joined #ubuntu
+=== harmental [n=ricardo@AGrenoble-152-1-101-166.w86-206.abo.wanadoo.fr]  has joined #ubuntu
+[05:57] <kazim59> Gnea: lemme try
+=== livingdaylight [n=conrad@77-99-138-99.cable.ubr03.camd.blueyonder.co.uk]  has joined #ubuntu
+=== _TomB [n=tomb@AC8D053B.ipt.aol.com]  has joined #ubuntu
+=== marcel__ [n=marcel@cust-02-D536.adsl.scarlet.nl]  has joined #ubuntu
+[05:57] <Azul> kazim59: there can be many causes for that
+[05:58] <Azul> kazim59: do you get sound off of other players?
+=== _MPS_ [n=MPS@87.193.42.29]  has joined #ubuntu
+[05:58] <ianian> anyone know what the plugins sub-directory under the Mozilla installation directory is for 7.04?
+[05:58] <Bassetts> my azureus keeps crashing and i have no idea why
+[05:58] <Trixsey> sn0, I've had this problem before too.. but I gave up at some point.. have been trying for 4-5 hours to get it working without gcj lol
+=== Carnage` [n=carnage@ppp-124.121.105.195.revip2.asianet.co.th]  has joined #ubuntu
+[05:58] <Azul> Bassetts: mine does too
+[05:58] <kazim59> Azul: oh yes I do.. and my DVD plays perfect...
+[05:58] <Trixsey> Azureus is crashing because it's not supported by GCJ
+=== bronze--- [n=peder@static226-137.adsl.no]  has joined #ubuntu
+[05:58] <Azul> Bassetts: i think 7.04 and java don't get along
+[05:58] <kazim59> Azul: but I don't want to watch it on a notebook :)
+[05:58] <Trixsey> Yet the Ubuntu people forces GCJ with Azureus
+=== rbxx [n=rene@212-41-105-90.adsl.solnet.ch]  has joined #ubuntu
+[05:58] <Bassetts> Azul, it worked yesterday
+[05:59] <marcel__> hi, anyone know how to edit the kde lost & found entries?
+[05:59] <bronze---> Totem movie player crashes every time I try to open a .m3u
+[05:59] <Trixsey> Download the Azureus pre-compiled binaries
+[05:59] <Trixsey> they are like 10 times more stable
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has left #ubuntu ["Coming]
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has joined #ubuntu
+=== HymnToLife [n=fkraiem@unaffiliated/hymntolife]  has joined #ubuntu
+=== ianian [n=ian@host86-132-225-57.range86-132.btcentralplus.com]  has left #ubuntu []
+=== egoless [n=chatzill@87.240.15.38]  has joined #ubuntu
+=== Jeev is now known as Jeeva
+[05:59] <Frogzoo> azureus on feisty is fine with sun's java
+[05:59] <Azul> Bassetts: mine loads and the main windows shows for about half a second then it just quits itself
+=== Rictoo [n=rictoo@unaffiliated/rictoo]  has joined #ubuntu
+[05:59] <Rictoo> How do I update a specific application with apt-get?
+[05:59] <Trixsey> Frogzoo, yeah but it comes with GCJ if you install it via apt/aptitude
+[05:59] <Bassetts> same Azul
+[05:59] <Azul> kazim59: try and look for an audio error in mplayer's output
+[05:59] <HOT> sudo apt-get install specificapplication
+=== TmsK [n=swoop@157.Red-83-57-212.dynamicIP.rima-tde.net]  has joined #ubuntu
+[06:00] <Azul> Bassetts: i also tried to use a java applet in firefox and the whole thing crashes
+[06:00] <Rictoo> HOT: really? -\
+[06:00] <kazim59> Azul: No audio stream found -> no sound
+[06:00] <niuq> sn0: mmm i am downloading the package with apt-get, i hope it works
+=== nomasteryoda [n=nomaster@ip72-210-64-240.mc.at.cox.net]  has joined #ubuntu
+=== Rictoo [n=rictoo@unaffiliated/rictoo]  has left #ubuntu []
+=== nathalie [n=nathalie@M927P024.adsl.highway.telekom.at]  has joined #ubuntu
+[06:00] <kazim59> Azul: it finds no stream actually...
+=== BigToe [n=tehbigto@cpc1-hatf3-0-0-cust104.lutn.cable.ntl.com]  has joined #ubuntu
+=== Ranpha1 [n=Ranpha@hlm-n-73ed.adsl.wanadoo.nl]  has joined #ubuntu
+=== ID_ [n=heidi@AStrasbourg-157-1-7-248.w90-40.abo.wanadoo.fr]  has joined #ubuntu
+[06:01] <HOT> yes ,it will check what version you are on, if it detects an update it will ask if you want it
+[06:01] <Azul> kazim59: the stream might not be supported by mplayer
+[06:01] <niuq> sn0: still doesn't starts
+[06:01] <Azul> kazim59: did you download the codecs for mplayer?
+[06:01] <kazim59> Azul: there must be some way to make make this iso behave like a dvd .. .and then ask mplayer to play the dvd
+=== Tigge_ [n=tigge@bacchus.olf.sgsnet.se]  has joined #ubuntu
+=== pilfer [n=pilfer@c-24-147-118-121.hsd1.ma.comcast.net]  has joined #ubuntu
+[06:01] <Azul> kazim59: never tried it
+[06:01] <kazim59> Azul: well... the DVD is playing perfectly.. so I must have the codecs... right?
+[06:01] <mc44> !iso | kazim59
+[06:01] <ubotu> kazim59: To mount an ISO disc image, type  sudo mount -o loop <ISO-filename> <mountpoint>  - There is a list of useful cd image conversion tools at http://wiki.linuxquestions.org/wiki/CD_Image_Conversion - Always verify the ISO using !MD5 before !burning.
+=== gMirc [n=smike@bbservice185.mmpnet205.tnp.pl]  has joined #ubuntu
+[06:02] <kazim59> ok... dinner time!
+[06:02] <pH> hi, i need help to makes the bluetooth work on my laptop
+[06:02] <Tom47> nathalie: rem _ answred while you were absent ....  nathalie start a terminal (goto Applications, Accessories, Terminal) then type in /usr/bin/kino this will start kino, and keeps the terminal open in the background, you should be able to see in the terminal what happens when it freezes ..paste it here, or in http://paste.ubuntu-nl.org (and paste the link here..) to get help ..
+[06:03] <Azul> kazim59: i'm not really sure, google?
+[06:03] <niuq> http://paste.ubuntu-nl.org/25982/ i am having that problem with deluge!
+[06:03] <nathalie> Tom47: Thank you. I'll try this. Sorry, I have to learn even how to irc... :-(
+[06:03] <pH> how can i detect my integrated bluetooth card ?
+[06:04] <sn0> niuq if you already had a version installed, it would need to be purged removed to remove settings
+[06:04] <sn0> so reinstalling without doing that may make no difference unfortunately
+[06:04] <bronze---> Totem movie player crashes every time I try to open a .m3u. What can I do?P
+[06:04] <niuq> sn0: yeah i actually did it, then i used sudo apt-get install deluge-torrent, and worked, but im still unable to start the program
+[06:05] <Frogzoo> bronze---: use vlc?
+=== wpgmb [n=marcel@S010600095b20fbc2.wp.shawcable.net]  has joined #ubuntu
+[06:05] <spikeb> open it with something else bronze---, maybe rhythmbox
+[06:05] <sn0> Trixsey can i ask whyy you dont want gcj?
+[06:05] <egoless> Hi, how can I make flash in Firefox use russian symbols?
+[06:05] <sn0> niuq im sorry i dont know what else to try, maybe check the deluge website/forum and ubuntuforums for more info
+[06:05] <sivik> will ISO Master run iso's?
+[06:06] <Trixsey> sn0, Azureus isn't fully compatible with GCJ, which is why it crashes for so many people (including me)
+[06:06] <wpgmb> does Edubuntu always use Lilo? I don't remember seeing an option for Grub.
+[06:06] <niuq> sn0: ok thx man
+[06:06] <spikeb> azureus in universe is generally a bad package.
+[06:06] <nathalie> (kino:28565): Gnome-CRITICAL **: gnome_program_get_app_id: assertion `program != NULL' failed
+[06:06] <Trixsey> sn0, I've also experienced various compatibility issues, as GCJ is not 100% compatible with Java...
+[06:06] <Trixsey> sn0, aside from Azureus that is
+[06:07] <nathalie> It plays about one frame pro sec, then freezes and needs to be killed.
+[06:07] <Frogzoo> wpgmb: don't use edubuntu myself, but I'd assume it uses grub as default
+[06:07] <sn0> Trixsey do you have java-gcj-compat installed ?
+[06:07] <wpgmb> Frogzoo: nope - it gave me Lilo
+[06:07] <sn0> maybe try just apt-get remove java-gcj-compat
+[06:07] <Azul> it's not azureus that's bad, it's java
+[06:07] <Tom47> wpgmb has always used grub here .... you may get better assist in #edubuntu
+[06:07] <robdeman> folks: cat /proc/asound/cards  gives "cat: /proc/asound/cards: No such file or directory" ... what is asound.. maybe I removed it?
+[06:07] <Frogzoo> wpgmb: yes, if you're doing raid or lvm or things
+[06:08] <wpgmb> Frogzoo: Must be it - used LVM
+[06:08] <Trixsey> sn0, I had when I had the compatibility issues yes.. now I removed GCJ for good
+=== Trini_Man [n=aj_2@206-248-186-217.dsl.teksavvy.com]  has joined #ubuntu
+[06:08] <wpgmb> Frogzoo: thanks
+=== bone43 [n=tony@c-67-170-55-63.hsd1.wa.comcast.net]  has joined #ubuntu
+[06:08] <Trini_Man> hi everyone
+=== Kitar|st [i=Kitarist@BSN-95-200-36.dial-up.dsl.siol.net]  has joined #Ubuntu
+[06:08] <Trixsey> sn0, and yes, I had that specific package too
+[06:09] <bone43> Good morning
+=== RetLaw [n=RetLaw@082-146-105-224.dyn.adsl.xs4all.be]  has joined #ubuntu
+=== d1138 [n=d1138@e176246130.adsl.alicedsl.de]  has joined #ubuntu
+=== Trini_Man [n=aj_2@206-248-186-217.dsl.teksavvy.com]  has joined #ubuntu
+[06:10] <Trini_Man> i have now installed 7.04
+[06:10] <Trini_Man> Dell Inspiron E1505 X server error
+=== manolete [n=manolo@84.123.131.116.dyn.user.ono.com]  has joined #ubuntu
+[06:10] <Trini_Man> ATI card
+=== manolete [n=manolo@84.123.131.116.dyn.user.ono.com]  has left #ubuntu ["Leaving"]
+[06:10] <Trini_Man> can someone help ?
+[06:10] <nathalie> Tom47: do you read me on the subchannel?
+=== d1138_ [n=d1138@e179204125.adsl.alicedsl.de]  has joined #ubuntu
+=== SR71-Blackbird [n=Nirvana@202.166.213.237]  has joined #ubuntu
+[06:10] <Tom47> nathalie hi
+[06:11] <Trini_Man> Dell Inspiron E1505 X server error   i have ATI card can someone help me
+=== Inetfreaks [n=sebi@p50910940.dip0.t-ipconnect.de]  has joined #ubuntu
+[06:11] <Trini_Man> it works on 6.06 and not on 7.04
+=== Me2resh [n=Me2resh@217.52.31.188]  has joined #ubuntu
+=== ffm [n=nobody@wikipedia/firefoxman]  has joined #ubuntu
+[06:11] <bone43> Trini_Man: do have a gui?
+=== predaeus_ [n=predaeus@chello212186005030.401.14.vie.surfer.at]  has joined #ubuntu
+[06:11] <Trini_Man> no GUI
+[06:11] <ffm> How do I format /media/SD CARD?
+[06:11] <Gnea> Trini_Man: you need to explain the problem if you want anyone to help
+=== RxDx [i=LINUX@201-74-147-218-sj.cpe.vivax.com.br]  has joined #ubuntu
+[06:11] <nathalie> Tom47: I clicked on your name to open a subchannel, but do not see there anything. I do not even know if <nick>: sends an "orange" message ?
+=== Panthress [n=Jacquila@ool-44c1c2b5.dyn.optonline.net]  has joined #ubuntu
+[06:12] <Trini_Man> Gnea : ok i did a fresh install of 7.04 on my dell and i get a X server error
+[06:12] <ffm> How do I format /media/SD CARD?
+[06:12] <Tom47> nathalie
+[06:12] <Gnea> Trini_Man: did it just show up in the mail? was ubuntu pre-installed? did X work or did it arrive broken?
+[06:12] <bone43> Trini_Man: bare with me i am lagging really bad here!
+[06:12] <Tom47> nathalie see how it works
+[06:12] <egoless> What can I make to use russian symbols in flash in Firefox?
+[06:12] <eljak> Trini_Man: when you do starttx what errors do you get  ?
+=== White-Demon [n=White-De@CBL217-132-98-164.bb.netvision.net.il]  has joined #ubuntu
+[06:12] <Gnea> Trini_Man: aaah... why the reinstall?
+[06:12] <ffm> egoless, Go to #firefox
+=== Toth [n=a-chevil@88.140.189.244]  has joined #ubuntu
+[06:12] <Trini_Man> Gnea : no i did not buy the ubunut Dells
+[06:12] <nathalie> Tom47. I listen
+[06:13] <Trini_Man> Gnea : it had windows on it
+[06:13] <ffm> How do I format /media/SD CARD?
+[06:13] <Tom47> nathalie i cannot help you with yr specific problem i was simply conveying a message to you while you were absent
+[06:13] <egoless> ffm thanks!
+[06:13] <Gnea> Trini_Man: do you still have the restore partition on it?
+[06:13] <ffm> egoless, np
+[06:13] <White-Demon> anyone knows how to run an online game?
+=== FarrisG [n=FarrisGo@pool-71-164-160-207.dllstx.fios.verizon.net]  has joined #ubuntu
+[06:13] <Trini_Man> Gnea : i want to put ubuntu on my laptop
+=== NineTails [n=ninetail@adsl-68-88-66-92.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[06:13] <Gnea> Trini_Man: do you still have the restore partition on it?
+[06:13] <Tom47> nathali did you do whan em_ suggested?
+[06:14] <Trini_Man> Gnea : yes
+=== levander [i=cponder@user-1121lss.dsl.mindspring.com]  has joined #ubuntu
+=== eriefisher [n=dan@XPLR-TS-11-TOR-72-45-79-86.barrettxplore.com]  has joined #ubuntu
+[06:14] <nathalie> Tom47: Ok thanks anyway :-)
+=== Gnea hates it when people won't answer a simple question
+[06:14] <Trini_Man> Gnea : why ?
+[06:14] <Tom47> nathalie did you do what rem_ suggested?
+[06:14] <levander> Is there a command line command to make you computer hibernate?
+[06:14] <nathalie> mom
+=== egoless [n=chatzill@87.240.15.38]  has left #ubuntu []
+[06:14] <Trini_Man> Gnea : yes
+[06:15] <nathalie> Tom47: Yes I did, I posted it here into.
+=== Hydr0p0nX [i=Hydro@dsl017-120-131.bhm1.dsl.speakeasy.net]  has joined #ubuntu
+[06:15] <novato_br> how can I get setting playback with line command  of alsamixer ?
+[06:15] <Gnea> Trini_Man: just making sure (i used to work for Dell, there isn't much about the E1505 that i don't know, other than i don't own one)
+[06:15] <bone43> Trini_Man: what card?
+[06:15] <etm1> ffm:  use your digital camera to format your sd card.
+[06:15] <nathalie> Tom47: I thought that was your answer, I did not recognize rem_ as a nick :-(
+[06:15] <ffm> etm1, It is a microSD, and my camera will not formatt it.
+[06:16] <Gnea> Trini_Man: did you install the livecd already or is the X error occuring after the install?
+=== rustalot [n=harry@bas9-toronto12-1177580520.dsl.bell.ca]  has joined #ubuntu
+=== lusepuster [n=thoeger@t62.astro.ku.dk]  has joined #ubuntu
+[06:16] <Trini_Man> bone43 : ATI Radeon X1400
+[06:16] <White-Demon> anyone?
+[06:16] <bullgard4> What is meant with 'mixer tracks' in Gnome main menu System > Preferences > Sound > (Sound preferences tool) > General > Default Mixer Tracks?
+[06:16] <Gnea> !anyone
+[06:16] <ubotu> A large amount of the first questions asked in this channel start with "Does anyone/anybody..."  Why not ask your next question (the real one) and find out?
+[06:17] <mc44> Trini_Man: you need to install the fglrx driver
+[06:17] <rustalot> Can someone help me with gnuplot? I'm having trouble graphing from an external data file
+[06:17] <Trini_Man> Gnea:  adter install
+[06:17] <nathalie> nathalie: ls -al
+[06:17] <bone43> Trini_Man did you try this http://ubuntuforums.org/showthread.php?t=414194
+[06:17] <acid-trip> ok
+[06:17] <White-Demon> does anyone knows how to run an online game?
+[06:17] <Trini_Man> mc44: so after i sintall that it weill work ?
+[06:17] <sn0> Trixsey sorry bloddy fones ;)
+=== HOT [n=olid@82-69-88-239.dsl.in-addr.zen.co.uk]  has left #ubuntu []
+[06:17] <acid-trip> if i have a second hard drive installed on the secondary ide cable
+=== delliott [n=openmrs@85-210-54-145.dsl.pipex.com]  has joined #ubuntu
+[06:17] <acid-trip> what mount point would that be?
+=== _superh`away_ is now known as _SuPeRhOmEm_
+[06:17] <sn0> well i cant think of anything else sorry, maybe check ubuntuforums for gcj/azureus/eclipse
+[06:17] <Gnea> Trini_Man: sounds like X just needs to be reconfigured then
+[06:18] <nathalie> Sorry have to go now, thanks for trying to help!
+[06:18] <sn0> personally i use rtorrent/torrentflux or opera's torrent client
+[06:18] <Trini_Man> mc44 , Gnea: thanks going to install that now
+=== Toma- [n=e17@124-168-77-114.dyn.iinet.net.au]  has joined #ubuntu
+=== finley_ [n=lloyd@mtngprs4.mtn.co.za]  has joined #ubuntu
+[06:18] <huzz> use azureus :p
+=== nathalie [n=nathalie@M927P024.adsl.highway.telekom.at]  has joined #ubuntu
+=== jns [n=jens@p57B0781D.dip.t-dialin.net]  has joined #ubuntu
+[06:18] <White-Demon> -.-
+=== delcoyote_ [n=delcoyot@89.100.46.132]  has joined #ubuntu
+[06:18] <lymeca> Anyone have experience using full disk encryption with RAID and paravitualisation?
+[06:18] <Trixsey> sn0, yeah but I'm one of those annoying people that don't buy a new car when it's not working.. but try to fix it.. (I know it's not a fully comparable scenario, but you get the point)
+=== Heme [n=chatzill@adsl-82-141-74-219.kotinet.com]  has joined #ubuntu
+[06:19] <sn0> :-) indeed
+[06:19] <lusepuster> Has anyone else experienced or heard about sound problems occuring after the latest kernel update on a lenovoo 3000 series? It stopped turning off internal speakers when earphones plugged in.
+=== carlos|t41 [n=carlos@ctjones.gotadsl.co.uk]  has joined #ubuntu
+=== Perdente [n=chatzill@75-132-33-28.dhcp.stls.mo.charter.com]  has joined #ubuntu
+=== finley_ [n=lloyd@mtngprs4.mtn.co.za]  has left #ubuntu ["Ex-Chat"]
+=== Mr_Pan [n=marcopan@host92-21-dynamic.6-87-r.retail.telecomitalia.it]  has joined #ubuntu
+[06:20] <acid-trip> i have a secondary hard drive hooked up to my secondary cd rom ide cable
+[06:20] <acid-trip> what /dev would that be listed as?
+=== Malifice [n=lt@lab75-1-81-57-255-122.fbx.proxad.net]  has joined #ubuntu
+[06:21] <bone43> lusepuster: yes I saw it in the forums but dont no the fix
+=== Malifice [n=lt@lab75-1-81-57-255-122.fbx.proxad.net]  has left #ubuntu ["Ex-Chat"]
+=== pony333 [n=pony333@dslb-084-060-018-107.pools.arcor-ip.net]  has joined #ubuntu
+[06:21] <Frogzoo> acid-trip: master or slave? and if you didn't anticipate this question, check the jumpers
+=== Bonjour [n=William@S0106001731d55e7d.cg.shawcable.net]  has joined #ubuntu
+[06:22] <acid-trip> Frogzoo, slave
+[06:22] <lusepuster> bone43: do you know if a bug has been reported? It's an annoying regres
+=== PanzerMKZ [i=Panzer@05-120.136.popsite.net]  has joined #ubuntu
+[06:22] <acid-trip> Frogzoo, i know when i had bsd installed it was /dev/hd3s1
+[06:22] <Bonjour> is there a program that will let me view a 600MB image when I only have 1GB of ram?
+[06:22] <acid-trip> but i know that ubutnu don't use those type of mounts
+=== f1nley [n=lloyd@mtngprs4.mtn.co.za]  has joined #ubuntu
+=== brk3 [n=brk3@86.42.6.48]  has joined #ubuntu
+[06:23] <Bassetts> azureus in the repos is broken
+[06:23] <Frogzoo> acid-trip: /dev/hdd in a sane world
+[06:23] <acid-trip> thank you
+=== yoyovoe [n=yoyovoe@222.240.65.148]  has joined #ubuntu
+[06:23] <bone43> lusepuster: no i dont you could search the forums Im sure it there
+[06:23] <Gnea> Bonjour: how much swap do you have?
+=== f1nley [n=lloyd@mtngprs4.mtn.co.za]  has joined #ubuntu
+[06:23] <brk3> when creating a grub splash image as in ubuntuguide.org, do you have to convert it to low res 640x480 or can it be any res?
+=== WorldDomination [n=Jay@cable-87-244-132-92.upc.chello.be]  has joined #ubuntu
+[06:23] <Bonjour> about 2.something gigs
+=== thomax [n=thomas@217-148-244-182.happymany.net]  has joined #ubuntu
+=== truescot [n=truescot@62.212.129.230]  has joined #ubuntu
+[06:23] <Gnea> Bonjour: try feh
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+[06:24] <lusepuster> bone43: yep I could, just don't really have the time for it by now; maybe I'll take a look at it when exam's over...
+[06:24] <Heme> just tried to install ubuntu 7.04 (alternative version) and it stuck on 85% at some "installed brltty" part. after like 20mins of that I booted. should I've waited some more or is there just some problem with the installation?
+=== obsethryl [n=cball@unaffiliated/obsethryl]  has joined #ubuntu
+=== theconartist [n=tca@72.24.15.37]  has joined #ubuntu
+=== mykil [n=mykil@c-71-226-155-62.hsd1.ga.comcast.net]  has joined #ubuntu
+[06:25] <penguin42> Heme: Hmm that's an interesting place to fail - what have you got plugged into your machine?
+=== andre_pl [n=andre@bas8-london14-1242504225.dsl.bell.ca]  has joined #ubuntu
+[06:25] <bone43> lusepuster: good luck!
+[06:25] <Heme> nothing special, mouse, keyboard, monitor and stuff :P
+=== alecjw [n=alecjw@86.25.59.50]  has joined #ubuntu
+[06:25] <Gnea> penguin42: disconnect all of the 'stuff'
+[06:25] <mykil> omg I've never seen so many people in a channel
+[06:25] <Gnea> oops
+[06:25] <ceil420> how can you tell if a process is still running if you know it's PID number?
+[06:25] <Gnea> Heme: disconnect all of the 'stuff'
+[06:25] <Gnea> penguin42: sorry :)
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+[06:26] <penguin42> Heme: Normal mouse/keyboard - not one that does anything funky?  Anything odd about the machine?
+=== ke4nt [n=viny1@rrcs-67-79-234-86.sw.biz.rr.com]  has joined #ubuntu
+[06:26] <Heme> only thing that is a bit 'out of place' is my modem that I've plugged in with usb
+[06:26] <ant-> ceil420: ps -e
+[06:26] <f1nley> ceil420: ps aux | grep PIDNUMBER
+=== SS2 [n=nova@port-195-158-180-143.dynamic.qsc.de]  has joined #ubuntu
+[06:26] <Heme> unplugged everything else 'stuff' already
+[06:26] <penguin42> Heme: Pull the modem
+[06:26] <Gnea> Heme: only things to have connected are: ac adapter, keyboard, mouse, speakers, internet
+[06:26] <ceil420> :o
+[06:26] <ceil420> thanks
+[06:26] <cjae> hey how do I do scrolling marqee??? like in windows??
+=== tannerld [n=tanner@adsl-068-209-251-067.sip.asm.bellsouth.net]  has joined #ubuntu
+[06:26] <Gnea> Heme: disconnect the modem and try again
+=== Megaqwerty [n=megaqwer@ip72-197-252-143.sd.sd.cox.net]  has joined #ubuntu
+=== jeayese [n=jase@c211-28-157-235.eburwd2.vic.optusnet.com.au]  has joined #ubuntu
+[06:26] <premier_> Hi, when my computer returns from suspend it won't display the screen, just black... is this fglrx related?
+[06:27] <Gnea> cjae: stop using so many question marks.
+[06:27] <bronze---> When I try to stream an internet radio (execute listen.m3u), totem crashes and VLC can't load it. I can't stream!!
+[06:27] <penguin42> Heme: I think *brltty* would live on a serial port; so the modem is the most likely thing to confuse it
+=== kekZpriester [n=luc@DSL01.83.171.176.27.ip-pool.NEFkom.net]  has joined #ubuntu
+=== octopus [n=octopus@W350a.w.pppool.de]  has joined #ubuntu
+[06:27] <Heme> oki, I'll try that in a few hours when I got the chance, thanks for help
+[06:27] <mage> bronze---: what does beep do?
+=== jeayese [n=jase@c211-28-157-235.eburwd2.vic.optusnet.com.au]  has joined #ubuntu
+[06:28] <bronze---> what's beep?
+[06:28] <mage> bronze---: also, url please ;)
+[06:28] <bronze---> 2 sec
+[06:28] <bone43> which beep?
+[06:28] <mage> thx
+[06:28] <Gnea> bronze---: try using xmms
+[06:28] <mage> beep-media-player im thinking is the package name
+=== Truth[tv]  [n=truth@user-0cevebb.cable.mindspring.com]  has joined #ubuntu
+=== Gnea is listening to streaming radio with xmms right now
+[06:28] <Gnea> works perfectly
+[06:28] <bronze---> http://dab.no:8080/
+[06:28] <Bonjour> how do I get a list of running processes from the terminal?
+=== Nutubuntu [i=8feba550@c-24-23-155-42.hsd1.mn.comcast.net]  has joined #ubuntu
+[06:28] <Megaqwerty> Bonjour: ps | aux
+[06:28] <nox-Hand> Gnea: On a Neo1973? Or just on your PC ;)
+=== HorizonXP [n=HorizonX@CPE001217163e0b-CM000a739a2880.cpe.net.cable.rogers.com]  has joined #Ubuntu
+[06:29] <HorizonXP> hey guys
+[06:29] <HorizonXP> i need alittle help with Samba
+=== |-David-| [n=david@CPE-65-30-150-155.wi.res.rr.com]  has joined #ubuntu
+[06:29] <HorizonXP> i have my Ubuntu desktop running Feisty, and sharing a folder
+[06:29] <Martinp23> How can I see which processes are using my network?  gnome-system-monitor reports >90% use, but I'm not really using anything online... :S
+[06:29] <Megaqwerty>  Bonjour: or if you want to see CPU load, etc. you can use 'top'
+[06:29] <HorizonXP> on my Ubuntu laptop, i'm running WinXP in VMWare, and it can see the folder
+=== Mr_Jam [n=jam@190.140.5.142]  has joined #ubuntu
+[06:29] <|-David-|> Anyone know a good DVD player for Ubuntu?
+=== bruenig [n=bruenig@ppp-70-242-99-70.dsl.rcsntx.swbell.net]  has joined #ubuntu
+[06:29] <bronze---> Try listening to this: http://www.nordicradio.no/lytte.m3u (download the file and execute).
+[06:30] <Gnea> nox-Hand: on an LG CDMA lol
+[06:30] <Gnea> nox-Hand: no, on my PC ;)
+[06:30] <Johto> Megaqwerty: you mean ps aux :)
+[06:30] <HorizonXP> but when I try to double click on it, i get: ---------------------------
+[06:30] <HorizonXP> XPATEL-ULX server (Samba, Ubuntu) (192.168.1.104)
+[06:30] <HorizonXP> ---------------------------
+[06:30] <HorizonXP> \\192.168.1.104\Documents is not accessible. You might not have permission to use this network resource. Contact the administrator of this server to find out if you have access permissions.
+[06:30] <HorizonXP> Network access is denied.
+[06:30] <HorizonXP> ---------------------------
+[06:30] <nox-Hand> Gnea: Right ;-) ((  I use good old Music Player Daemon ))
+[06:30] <HorizonXP> OK
+[06:30] <HorizonXP> ---------------------------
+[06:30] <lusepuster> bone43: thanks, I'm gonna need that *shiver*
+[06:30] <Johto> Megaqwerty: example "ps aux | grep foobar"
+[06:30] <Megaqwerty> Johto: Blah, yeah
+[06:30] <jeayese> please someone help me fix my problem
+[06:30] <Gnea> !pastebin | HorizonXP
+[06:30] <ubotu> HorizonXP: pastebin is a service to post large texts so you don't flood the channel. The Ubuntu pastebin is at http://paste.ubuntu-nl.org (make sure you give us the URL for your paste - see also the #ubuntu channel topic)
+[06:30] <Johto> Megaqwerty: :)
+[06:30] <Megaqwerty> Bonjour: I meant ps aux
+[06:30] <|-David-|> Anyone know a good DVD player for Ubuntu?
+[06:30] <HorizonXP> Gnea: Sorry, i didn't think it'd be so big
+=== Truth[tv]  [n=truth@user-0cevebb.cable.mindspring.com]  has left #ubuntu ["Ex-Chat"]
+[06:31] <HorizonXP> Gnea: I would've used Pastebin otherwise
+[06:31] <Gnea> jeayese: can't fix what's not there.
+[06:31] <nox-Hand> Oh, crap yes! That's gotta be made for the Moko! An MPD app (client) that can control MPD. So over wireless you can control your media server!
+=== Truth[tv]  [n=truth@user-0cevebb.cable.mindspring.com]  has joined #ubuntu
+[06:31] <Gnea> HorizonXP: it's not too late.
+[06:31] <nox-Hand> If it's not being made, I will have to learn to code to make one :]
+[06:31] <HorizonXP> so any ideas?
+[06:31] <jeayese> why is this coming up all the time?
+[06:31] <jeayese> Xlib:  extension "XFree86-DRI" missing on display ":1.0".
+[06:31] <jeayese> direct rendering: No
+[06:31] <jeayese> beryl works
+=== shawoho [n=super@200.25.155.10]  has joined #ubuntu
+[06:31] <Johto> |-David-|:  install mplayer and then google ubuntu packages for "smplayer" ..smplayer is NICE frontend for mplayer
+[06:31] <bronze---> Gnea: Are you he?
+[06:31] <bronze---> here*
+[06:31] <Johto> |-David-|: or use the xine
+[06:31] <nox-Hand> Wait, what channel am I in? xDD
+=== Spee_Der [n=n1gke@ip68-14-29-148.ri.ri.cox.net]  has joined #ubuntu
+[06:32] <Gnea> bronze---: yes
+[06:32] <bronze---> Gnea try this: Try listening to this: http://www.nordicradio.no/lytte.m3u (download the file and execute).
+=== f1nley [n=lloyd@mtngprs4.mtn.co.za]  has left #ubuntu ["Ex-Chat"]
+[06:32] <Johto> nox-Hand: you are on "Microsoft Vista - Channel" :)
+=== BUsher [n=family@S01060050bf9ad414.cc.shawcable.net]  has joined #ubuntu
+=== strep [n=strep@84-50-38-168-dsl.krw.estpak.ee]  has joined #ubuntu
+[06:32] <bronze---> /who nox-hand
+=== mahrellon [n=mahrello@c-580f72d5.013-2012-76786a1.cust.bredbandsbolaget.se]  has joined #ubuntu
+=== AzMoo_ [n=matt@unaffiliated/azmoo]  has joined #ubuntu
+[06:32] <nox-Hand> Johto: I know I am on #ubuntu, I just normally have #openmoko on Window 9, so I got confused ;)
+[06:32] <HorizonXP> So here's the error I get: http://paste.ubuntu-nl.org/25992/
+[06:32] <bronze---> I hate non-mirc clients :P
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+[06:32] <nox-Hand> bronze---: /me nox-Hand
+=== aem [n=aem@dslb-084-057-188-018.pools.arcor-ip.net]  has joined #ubuntu
+[06:33] <mahrellon> Hey. Anyone have time for a quick question? What does ~ stand for? Is it /home or?
+[06:33] <HorizonXP> Can anyone help with Samba
+[06:33] <bronze---> XD
+[06:33] <Johto> nox-Hand: ahahh
+[06:33] <Gnea> bronze---: the server doesn't respond for me
+=== nexous [n=chatzill@plns-216-222-238-26-pppoe.dsl.plns.epix.net]  has joined #ubuntu
+[06:33] <bronze---> can you give me another link to test?
+[06:33] <Gnea> says it's connected but never passes any data
+[06:33] <novato_br> my friend have a trouble with playback sound
+[06:33] <Johto> bronze---: try /wii somenick
+[06:33] <Gnea> bronze---: you should install streamtuner and use that
+[06:33] <bronze---> /ww johto
+[06:33] <nexous> Hi, does nano allow html hex codes (#191919) in syntax highlighting in the file .nanorc?
+[06:33] <bronze---> /wii johto
+[06:34] <HorizonXP> /wii HorizonXP
+[06:34] <bronze---> nah
+=== psst [n=joe@213-152-59-139.dsl.eclipse.net.uk]  has joined #ubuntu
+[06:34] <Johto> bronze---: what client are you using=
+[06:34] <Johto> ?
+=== lo4fer [n=me@c-69-251-248-134.hsd1.md.comcast.net]  has joined #ubuntu
+[06:34] <bronze---> ubuntu standard - gaim
+[06:34] <jeayese> why is this coming up all the time?
+[06:34] <Spee_Der> !xephem
+[06:34] <ubotu> Sorry, I don't know anything about xephem - try searching on http://bots.ubuntulinux.nl/factoids.cgi
+[06:34] <bronze---> or...
+[06:34] <jeayese> Xlib:  extension "XFree86-DRI" missing on display ":1.0".
+[06:34] <jeayese> direct rendering: No
+[06:34] <jeayese> beryl works
+[06:34] <bronze---> yeah gaim
+[06:34] <shawoho> are there problems with ubuntu repos?
+[06:34] <Gnea> gaim is not an standard irc client :)
+[06:34] <Johto> bronze---: meh..install xchat (xchat-Gnome client)
+[06:34] <Gnea> irssi+screen
+[06:35] <Gnea> the only decent irc client
+[06:35] <Johto> gaim is IM client, not IRC
+[06:35] <novato_br> the pc of him is playing the songs, but he is not hearing it
+[06:35] <mage> irssi is really lazy with reconnecting :*
+[06:35] <bronze---> mirc is decent!
+[06:35] <lo4fer> Hi folks. Wifi radar can see the my wireless network so I know the card is at least partly functional, but how do I actually configure the connection? In network tools there's only loopback, eth0, and eth1
+[06:35] <Gnea> Johto: gaim supports the IRC protocol.
+[06:35] <novato_br> he got the mixer, and it's all ok
+[06:35] <Johto> Gnea: yah, i have ssh+screen+irssi combo on my server, this ubuntu desktop i use xchat
+=== penguin42 wonders if there is anything gaim doesn't support
+[06:35] <mage> lo4fer: I've been using a "network-admin" command
+[06:35] <Nutubuntu> I've been having trouble burning an iso image. The image file is about 695MB, and it looks like my burner thinks my CDs (which are marked 700MB) will only hold 650. How do I correct this? I've pastebinned the log at http://paste.ubuntu-nl.org/25994/ -- see lines 53-54 and 76
+[06:35] <Johto> Gnea: yeah i know but still..mehg
+[06:35] <Johto> meh
+[06:35] <Gnea> !wireless | lo4fer
+[06:35] <ubotu> lo4fer: Wireless documentation can be found at https://help.ubuntu.com/community/WifiDocs
+=== Sandokan [n=wimmer@p5B0DD086.dip.t-dialin.net]  has joined #ubuntu
+=== roland [n=roland@86.107.24.144]  has joined #ubuntu
+[06:36] <mahrellon> I'll ask again. Does ~ stand for my home dir or what is it? lol
+[06:36] <Nutubuntu> mahrellon-  yes
+[06:36] <lo4fer> !make me a sandwich
+[06:36] <Johto> Mandorallen: ?
+=== Zdra_ is now known as Zdra
+[06:36] <mage> lo4fer: also my wifi card is eth1 :)
+[06:36] <mahrellon> Nutubuntu: Cheers m8 =)
+[06:36] <Mandorallen> hello?
+[06:36] <roland> anyone please knows how to save my window maker desktop ? i have all applets in place and i want them all back when i restart X
+[06:36] <Johto> Mandorallen: yes, if you do "ls ~/" it points to your home dir
+=== haggard [n=opera@c-67-167-228-39.hsd1.il.comcast.net]  has left #ubuntu []
+[06:36] <Gnea> Johto: i use the ssh from anywhere, uses less resources
+=== Spee_Der [n=n1gke@ip68-14-29-148.ri.ri.cox.net]  has left #ubuntu []
+[06:36] <Johto> ~ <--- homedir
+[06:36] <lo4fer> thanks guys i'll glook into thowse
+=== minerale [i=achille@about/cooking/alfredo/Minerale]  has joined #ubuntu
+[06:37] <minerale> how much swap should I have on a server that has 512mb/ram
+[06:37] <Johto> Gnea: well, yeah, but i like to use graphical clients too  :)
+=== White-Demon [n=White-De@CBL217-132-98-164.bb.netvision.net.il]  has left #ubuntu ["Leaving"]
+[06:37] <Nutubuntu> minerale,  rule of thumb is 1.5X RAM, IIRC
+=== JP [n=J-P@dyn-62-56-93-121.dslaccess.co.uk]  has joined #ubuntu
+[06:37] <bronze---> Anyone know of a m3u/pls file I can download to test streaming
+[06:37] <Johto> minerale: consider 1-1% times the RAM
+[06:37] <jeayese> hey I need some help.. I am about to give up intirly on ubuntu but I dont want to, All i want to do is run Half-life 2 on ubuntu.. is that to much to ask? Now I have my gfx card setup which is an ATI Radeon 9600 but I am getting the following error: "Xlib:  extension "XFree86-DRI" missing on display ":1.0". direct rendering: No" this is letting down my gameplay and making the games very choppy.. Please someone help!
+[06:37] <Johto> minerale: 1-1 times
+[06:37] <Gnea> bronze---: streamtuner doesn't work?
+=== \x6e\x65\x72\x64 [n=gaucho@201-66-175-97.smace701.dsl.brasiltelecom.net.br]  has joined #ubuntu
+=== alexseif [n=vador@84.36.131.90]  has joined #ubuntu
+=== warfaren^ [n=warfaren@c213-89-134-201.bredband.comhem.se]  has joined #ubuntu
+=== neversfelde|mobi [n=neversfe@nrbg-4db44021.pool.einsundeins.de]  has joined #ubuntu
+=== lo4fer [n=me@c-69-251-248-134.hsd1.md.comcast.net]  has left #ubuntu []
+[06:38] <JP> hey guys simple noob question, installing my wacom, where do i find input device?
+[06:38] <coldsteal> i need a way to check the version of a package something with lees output than apt-cache show
+[06:38] <Gnea> !wacom | JP
+[06:38] <ubotu> Sorry, I don't know anything about wacom - try searching on http://bots.ubuntulinux.nl/factoids.cgi
+[06:38] <Gnea> oops
+=== thomax_ [n=thomas@217-148-244-187.happymany.net]  has joined #ubuntu
+[06:38] <Gnea> grrr
+=== _Ahti [n=_Ahti@220-245-220-231-act-pppoe.tpgi.com.au]  has joined #ubuntu
+[06:38] <Megaqwerty> jeayese: I don't know very much about that issue, but give me the output of glxinfo | grep direct
+=== CueBall [n=chris@ool-457aa668.dyn.optonline.net]  has joined #ubuntu
+=== cables [n=caleb@216-15-119-176.c3-0.nwt-ubr2.sbo-nwt.ma.cable.rcn.com]  has joined #ubuntu
+[06:39] <jeayese> ok
+=== gawkos [n=gawkos@net55.tepsalan.pl]  has joined #ubuntu
+=== leonel [n=leo@212.Red-81-37-116.dynamicIP.rima-tde.net]  has joined #ubuntu
+[06:39] <cables> How can I mount something so that it is owned by a user, not root?
+=== stephen` [i=stephen@62.162.224.62]  has joined #ubuntu
+=== stephen` [i=stephen@62.162.224.62]  has left #ubuntu []
+[06:39] <bronze---> Gnea: Didn't see your tip until now.
+[06:39] <jeayese> I get: Xlib:  extension "XFree86-DRI" missing on display ":1.0".
+[06:39] <jeayese> direct rendering: No
+=== joevandyk [n=joevandy@c-67-165-117-60.hsd1.wa.comcast.net]  has joined #ubuntu
+[06:39] <etm1> how i can mount lvm2 partition on ubuntu livecd (feisty)?
+[06:39] <JP> Gnea, I already installed sudo apt-get install wacom-tools
+=== nitro4ce [n=lucas@OL139-188.fibertel.com.ar]  has joined #ubuntu
+[06:39] <JP> Gnea, oh, wacom directory (hits self)
+=== JP goes to look
+[06:39] <Gnea> JP: it's going to be /dev/input/something
+[06:39] <nitro4ce> how do i start the AdvanceMame GUI?
+[06:39] <Megaqwerty> jeayese: Well, then GLX isn't enabled
+=== jtmoney [i=jtmoney@ip72-196-124-106.ga.at.cox.net]  has joined #ubuntu
+=== Icehawk78 [n=Icehawk7@WS-ESR1-72-49-94-131.fuse.net]  has joined #ubuntu
+[06:39] <jeayese> how do i fix that then?
+[06:40] <Megaqwerty> jeayese: What Graphics Card do you have?
+=== crdlb [n=crdlb@unaffiliated/crdlb]  has joined #ubuntu
+[06:40] <roland> how do i save wmaker desktop with my applets
+[06:40] <jeayese> how do I enable GLX
+[06:40] <penguin42> etm1: try doing a pvdisplay and see if it finds any of it
+[06:40] <mage> etm1: might need to install lvm
+[06:40] <jeayese> ATI Radeon 9600
+=== spasticteapot [n=j0e@66-188-130-15.dhcp.mdsn.wi.charter.com]  has joined #ubuntu
+[06:40] <Icehawk78> Is there a method of upgrading with distribution of Ubuntu is installed?
+=== mister_roboto [n=jrk@24-136-22-252.hnc-bsr1.chi-hnc.il.cable.rcn.com]  has joined #ubuntu
+[06:40] <Megaqwerty> jeayese: okay, I use nVidia so hold on a minute while I figure it out.
+[06:40] <cables> !upgrade | Icehawk78
+[06:40] <ubotu> Icehawk78: For upgrading, see the instructions at https://help.ubuntu.com/community/UpgradeNotes
+[06:40] <Johto> Icehawk78: what do you mean?
+[06:40] <jeayese> ok
+[06:40] <Nutubuntu> JP, there's a how-to at http://ubuntuforums.org/showthread.php?t=25151
+[06:40] <jeayese> thanks a million for helping
+[06:41] <JP> Nutubuntu, i am there, but i am too noob to follow it
+[06:41] <Megaqwerty> jeayese: you're welcome
+[06:41] <nitro4ce> how do i start the AdvanceMame GUI?
+[06:41] <Nutubuntu> JP, at which point do you get lost?
+=== roland [n=roland@86.107.24.144]  has left #ubuntu []
+[06:41] <JP> Nutubuntu, got to the edit part, found the wacom file, and i have ... an icon I can't access, i'm guessing i need to edit within shell ?
+=== splinta [n=splinta@dialin-207-112-29-230.tor.primus.ca]  has joined #ubuntu
+[06:41] <Johto> ah, this ubuntu is soo much easier than 8 yaers ago when i first started using linux..it was slackware 3.* something :)
+[06:41] <Icehawk78> Johto - the link sent shows how to, but I was looking into going from Edgy Eft to Feisty Fawn.
+=== truescot [n=truescot@62.212.129.230]  has joined #ubuntu
+[06:42] <Megaqwerty> jeayese: okay, it should be really simple. Open up a terminal.
+[06:42] <JP> Nutubuntu,  part 3
+[06:42] <jeayese> yup
+[06:42] <jeayese> done
+=== carlesoriol [n=carlesor@252.Red-80-37-184.staticIP.rima-tde.net]  has joined #ubuntu
+[06:42] <Megaqwerty> jeayese: type sudo restriced-manager
+=== strabes [n=alex@ip68-108-31-178.lv.lv.cox.net]  has joined #ubuntu
+[06:42] <cables> !gksudo | Megaqwerty, jeayese
+[06:42] <ubotu> Megaqwerty, jeayese: If you need to run graphical applications as root, use  gksudo , as it will set up the environment more appropriately. Avoid ever using  sudo <GUI-application>  See http://psychocats.net/ubuntu/graphicalsudo for more info
+=== michal_ [n=michal@dui122.internetdsl.tpnet.pl]  has joined #ubuntu
+[06:42] <Johto> Icehawk78: yes, you nromally do distribution upgrade in debian like distros using "apt-get dist-upgrade" but you should do it "the ubuntu way" ..read that tutorial to be sure :)
+[06:43] <Nutubuntu> JP, you're saying you don't have the rights to edit the file -- am I understanding you properly?
+[06:43] <Megaqwerty> cables: sudo has always worked for me if running from a terminal.
+[06:43] <Megaqwerty> cables: oh
+[06:43] <jeayese> uh
+[06:43] <jeayese> sudo: restriced-manager: command not found
+=== palomer [n=palomer@bas3-montreal02-1096679665.dsl.bell.ca]  has joined #ubuntu
+[06:43] <bronze---> Gnea: The problem was obviously the broken lytte.m3u file. I read on the internet that the radio has server issues.
+=== killown [i=killown@unaffiliated/killown]  has joined #ubuntu
+[06:43] <Megaqwerty> jeayese: I should have asked what version of Ubuntu you are running :-\
+=== ianian [n=ian@host86-132-225-57.range86-132.btcentralplus.com]  has joined #ubuntu
+[06:43] <JP> Nutubuntu, nope, i navigated to /dev/input and found file called wacom
+[06:43] <mage> jeayese: spelling ;)
+=== chump [n=chump@bas1-sherbrooke40-1128761250.dsl.bell.ca]  has joined #ubuntu
+=== Icehawk78 [n=Icehawk7@WS-ESR1-72-49-94-131.fuse.net]  has left #ubuntu []
+=== ekiczek [n=ekiczek@dsl18.mtplvtsc.sover.net]  has joined #ubuntu
+[06:43] <mage> kyle@kyle-laptop:~$ sudo restricted-manager
+[06:43] <jeayese> fiesty something
+=== cBau [n=cbau@HSI-KBW-091-089-075-142.hsi2.kabelbw.de]  has joined #ubuntu
+[06:44] <etm1> penguin42: mage: thanks now i got it :)
+[06:44] <JP> Nutubuntu, but can't edit it, maybe i need to download a gui text editor
+[06:44] <heroin> jeayese: still here
+[06:44] <ianian> does any1 know how to set permissions so i can delete a file pks??
+[06:44] <gordonjcp> ianian: it needs to be writable
+[06:44] <jeayese> ok
+[06:44] <Megaqwerty> jeayese: gksudo restricted-manager
+[06:44] <ianian> yah
+=== MikeInSandy [n=mike@c-67-166-68-133.hsd1.ut.comcast.net]  has joined #ubuntu
+[06:44] <jeayese> yeah
+=== wangxiaoye [n=wangxiao@221.221.27.41]  has joined #ubuntu
+=== KDDI [n=Yagami@bb219-74-133-224.singnet.com.sg]  has joined #ubuntu
+[06:44] <mage> the _dir_ needs to be writable ;)
+[06:44] <jeayese> it poped up
+[06:44] <Nutubuntu> JP, the third step is talking about editing xorg.conf
+[06:44] <ianian> how do i do that?
+[06:44] <JP> Nutubuntu, aha, i do not have permissions yet
+=== qnyc [n=qnyc@unaffiliated/astro76]  has joined #ubuntu
+[06:44] <IntuitiveNipple> ianian: Did you try savetheWorld 's option?
+=== qeed [n=qeed@adsl-210-20-47.mco.bellsouth.net]  has joined #ubuntu
+[06:45] <mage> chmod is the permissions futzing command
+[06:45] <ianian> ??
+[06:45] <KDDI> hello, i gt a qns
+[06:45] <ianian> lol
+=== HorizonXP [n=HorizonX@CPE001217163e0b-CM000a739a2880.cpe.net.cable.rogers.com]  has left #Ubuntu []
+[06:45] <mage> !chmod
+[06:45] <ubotu> The files and directories on an Ubuntu system are organized according to a standard, see http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard - file permissions are explained at https://help.ubuntu.com/community/FilePermissions - All filenames and directory names (and many other things) are case sensitive in Linux
+[06:45] <jeayese> Restriceted devices.
+[06:45] <Megaqwerty> jeayese: okay now put a check next to the ati driver
+[06:45] <JP> Nutubuntu, xorg.conf?
+[06:45] <cody_penguin> since i cant remove the recent opened files in totem,i guess i have to uninstall totem and reinstall it again
+[06:45] <jeayese> there already is.
+[06:45] <shawoho> GPG error of dapper-updates.  I got a BADSIG message
+[06:45] <mage> wtf
+[06:45] <mage> that factoid is useless
+[06:45] <jeayese> its enabled
+[06:45] <MikeInSandy> Can anyone help..I just installed Fiesty a few weeks ago, and now my programs are freezing and greying out
+=== mathieu2 [n=mathieu2@wnpgmb02dc1-180-143.dynamic.mts.net]  has joined #ubuntu
+[06:45] <ianian> its simple
+[06:45] <KDDI> is only diff with xbuntu is only the desktop environment?
+[06:45] <mage> !contact
+[06:45] <ubotu> Sorry, I don't know anything about contact - try searching on http://bots.ubuntulinux.nl/factoids.cgi
+=== radutyu1 [i=radutyu@86.120.138.108]  has joined #ubuntu
+[06:45] <Megaqwerty> jeayese: dang...okay pastebin your /etc/X11/xorg.conf
+[06:45] <PurpZeY_> KDDI: Yes.
+[06:45] <jeayese> uh.......
+[06:45] <jeayese> ok
+[06:46] <Nutubuntu> JP, /etc/X11/xorg.conf
+[06:46] <ianian> its a java installation file in a folder called "1" on my desktop and i need to delete it
+[06:46] <KDDI> cos i using wubi to install xubuntu
+=== cooloney [n=cooloney@220.232.79.227]  has joined #ubuntu
+[06:46] <truescot> can anyone give any pointers on getting a pptp vpn connection to work on ubuntu 7.04? i have checked all over google but none of the things i find seam to help
+[06:46] <MikeInSandy> Every program ....Firefox, VLC, Democracy
+[06:46] <jeayese> one sec
+[06:46] <KDDI> what is the recommend space need to install ubuntu in winxp
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+=== passe-partout [n=cogito@ABordeaux-156-1-53-98.w86-217.abo.wanadoo.fr]  has joined #ubuntu
+=== ztar [n=ztar@84-217-154-81.tn.glocalnet.net]  has joined #ubuntu
+[06:47] <shawoho> are there problems with dapper-updates repos? I got GPG error:BADSIG
+[06:47] <jeayese> here you go: http://paste.ubuntu-nl.org/25996/
+=== CheshireViking [n=Interdic@unaffiliated/cheshireviking]  has joined #ubuntu
+[06:47] <JP> Nutubuntu, aha got it, in there, now, i'll see if i can follow from here! thanks
+[06:47] <mage> KDDI: I need 3-4 gigs for stuffs
+[06:47] <IntuitiveNipple> ianian: Is it still the jre-1.6.0_01 dir?
+[06:47] <Nutubuntu> y/w JP
+[06:47] <KDDI> so i have to set aside 6gb?
+[06:47] <ianian> yeh
+=== ogra [n=ogra@ubuntu/member/ogra]  has joined #ubuntu
+=== brettnem_ [n=brett@user-387oe7p.cable.mindspring.com]  has joined #ubuntu
+=== jose [n=jose@pool-71-113-61-197.sttlwa.dsl-w.verizon.net]  has joined #ubuntu
+[06:47] <IntuitiveNipple> ianian: Do this: sudo chown -R ian:ian /home/ian/Desktop/jre-1.6.0_01
+[06:47] <ianian> my username is ian
+[06:47] <KDDI> ok thx
+[06:48] <mage> KDDI: the live cd has 1.9gigs uncompressed. 6gigs is a good amount if you're going to include /home in that calculation
+[06:48] <jeayese> did you get it mega?
+=== shawoho [n=super@200.25.155.10]  has left #ubuntu []
+[06:48] <IntuitiveNipple> ianian: Then try deleting the folder and it's contents. The only reason it would then stop you is *if* some process is using a file in there, or you have a browser window open to it
+[06:48] <KDDI> oh.. cos i dl both xubuntu and ubuntu
+[06:48] <KDDI> i figuring how to install with wubi
+[06:48] <Megaqwerty> jeayese: yeah
+=== FliesLikeABrick [n=Ryan@about/rpi/rawdor]  has joined #ubuntu
+[06:48] <ianian> no such file directory!
+[06:48] <jeayese> ok
+[06:48] <PurpZeY_> KDDI: That is unnecessary they are the same
+[06:48] <ianian> lol
+[06:49] <PurpZeY_> KDDI: Only difference is the window manager which you can download as you wish
+=== Zdra [n=zdra@180.35-243-81.adsl-dyn.isp.belgacom.be]  has joined #ubuntu
+=== largo24 [n=someone@node64-250-171.sunline.net]  has left #ubuntu []
+[06:49] <ianian> maybie ian with a capital i?
+[06:49] <mage> KDDI: if you install xubuntu and want gnome, its apt-get install gnome-desktop.
+[06:49] <KDDI> oh.. i wasted their bandwidth
+[06:49] <KDDI> apt get?
+=== ChiFLiiiii [n=asda@175.Red-81-36-216.dynamicIP.rima-tde.net]  has joined #ubuntu
+[06:49] <PurpZeY_> Alternatively, apt get install ubuntu-desktop
+[06:49] <KDDI> can i switch anything i wan?
+[06:50] <ianian> nop
+=== morpheusdreams [n=morpheus@82.13.249.187]  has joined #ubuntu
+[06:50] <IntuitiveNipple> ianian: So correct the command so it is applied to the correct directory name - I'm just guessing!
+[06:50] <KDDI> which is more cool?
+[06:50] <cables> KDDI: actually, try "ubuntu-desktop" instead of gnome-desktop.
+=== DJ-_- [n=r00t@unaffiliated/samad909]  has joined #ubuntu
+[06:50] <mage> woopsies
+[06:50] <morpheusdreams> good evening, could omeone give me a hand with PHP?
+[06:50] <KDDI> erm hw?
+[06:50] <cables> KDDI: it's a matter of opinion.
+[06:50] <mage> KDDI: since you downloaded both, may as well try both desktop environments
+[06:50] <ChiFLiiiii> hi all
+[06:50] <Megaqwerty> jeayese: I'm sorry I actually have to leave :( but try the "Instructions for 6.10 (Edgy)" section here: https://help.ubuntu.com/community/BinaryDriverHowto/ATI
+[06:50] <KDDI> cos i seen xcf.. ss very nice
+[06:50] <mage> actually I downloaded all three at varying locations :)
+[06:50] <PurpZeY_> mage: That's true but now he has two entire file systems.
+[06:51] <cables> KDDI: Kubuntu has a slightly more complex UI, but it's more advanced. Gnome is simpler and easier. XFCE is fast and uses less RAM.
+[06:51] <Nutubuntu> morpheusdreams,  I think there's a #php chan
+[06:51] <twikesh> morpheusdreams: try asking in ##php, this is the Ubuntu support channel
+[06:51] <jeayese> awwwwwwwwwww
+[06:51] <jeayese> ok
+[06:51] <jeayese> thanks anyways
+=== k1gwb [n=k1gwb@ip68-103-141-134.ks.ok.cox.net]  has joined #ubuntu
+[06:51] <Megaqwerty> jeayese: good luck
+[06:51] <ChiFLiiiii> Im new to ubuntu and im wondering if there is any good good irc client
+=== Megaqwerty [n=megaqwer@ip72-197-252-143.sd.sd.cox.net]  has left #ubuntu []
+[06:51] <mage> PurpZeY_: ah, so he installed both to his hd?
+=== bronze--- [n=peder@static226-137.adsl.no]  has left #ubuntu []
+[06:51] <ianian> ok
+[06:51] <morpheusdreams> twikesh, Nutubuntu thanks and apologises :)
+[06:51] <ianian> lol
+[06:51] <cables> KDDI: I mean KDE, not Kubuntu. Kubuntu uses KDE, Ubuntu uses GNOME, and Xubuntu uses XFCE>
+[06:51] <cables> .
+[06:51] <ianian> done
+[06:51] <jason357> Is there a PCMCIA 801.11G wifi card that Ubuntu would detect, setup, and support WPA during install?
+[06:51] <KDDI> hmmm. i wan a switch like to try txt base
+[06:51] <IntuitiveNipple> Finally! :)
+[06:51] <KDDI> oh
+[06:51] <cables> ChiFLiiiii: try XChat, it's the best.
+=== unreal [n=unreal@unaffiliated/unreal]  has joined #ubuntu
+[06:51] <PurpZeY_> mage: not yet, but I believe he said he downloaded both images, which means he may get hung-up and install both completely.
+[06:51] <k1gwb> I'm having trouble installing Ubuntu to my laptop from a USB flash drive (cdrom drive broken)
+[06:51] <ianian> thanks nipple lol
+[06:52] <jason357> I have had so much trouble getting wifi to work, I am ready to just buy a new one that "just works"
+[06:52] <IntuitiveNipple> Grrr  hehehe
+=== namelesss [n=nameless@ip-8.net-81-220-244.rev.numericable.fr]  has joined #ubuntu
+[06:52] <ianian> lol
+[06:52] <namelesss> bonjour
+[06:52] <IntuitiveNipple> Gods save is from the little angels hehehe
+[06:52] <namelesss> j'ai un soucis
+[06:52] <ChiFLiiiii> cables: xchat supports multi servers ?
+[06:52] <namelesss> je viens de tout formater
+[06:52] <Nutubuntu> ChiFLiiiii,  sure
+[06:52] <ChiFLiiiii> and ident port
+[06:52] <ChiFLiiiii> ?
+[06:52] <namelesss> j'etais sous edgy
+[06:52] <cables> ChiFLiiiii: pretty much any IRC client does.
+[06:52] <twikesh> !fr | namelesss
+[06:52] <ubotu> namelesss: Allez a #ubuntu-fr ou #kubuntu-fr pour de l'aide et de la discussion en francais.
+[06:52] <jeayese> brb
+[06:52] <ianian> you got any tips on how i can install java in a simple way?
+[06:52] <namelesss> et l je viens de passer sous feisty
+[06:52] <ianian> lol
+[06:52] <cables> ChiFLiiiii: just try it, you'll like it.
+[06:52] <mage> k1gwb: whats the problem?
+[06:53] <IntuitiveNipple> ianian... What version of ubuntu? Feisty?
+[06:53] <namelesss> mais avant j'tais en 1600*kkchose maintenant le choix s'arr^ete en 1280
+[06:53] <cables> ianian: open a terminal and type this: < sudo aptitude install sun-java6-plugin > and you're done.
+[06:53] <namelesss> ah sure
+[06:53] <namelesss> sorry
+=== cBau [n=cbau@HSI-KBW-091-089-075-142.hsi2.kabelbw.de]  has left #ubuntu []
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+[06:53] <ianian> newest 7.04
+[06:53] <heroin> i have an AMD k6 300mhz processor which architech is that i386?
+[06:53] <ianian> think its called fiesty
+=== x0qa [n=heath@c-71-207-245-33.hsd1.al.comcast.net]  has joined #ubuntu
+[06:53] <Nutubuntu> heroin,  i386
+[06:53] <mage> ack
+[06:53] <k1gwb> mage: well the laptop isn't booting off the thumb drive... I guess I should try it on my desktop to isolate the problem though
+=== nlmbp-- [n=nico@rke75-5-82-230-124-212.fbx.proxad.net]  has joined #ubuntu
+[06:53] <KDDI> so there is kde gnome xfce
+[06:53] <cables> ianian: did you get my message with the command to install?
+[06:53] <KDDI> winxp consider kde?
+[06:53] <ianian> yh
+=== josep is now known as EA3FYN
+=== palomer [n=palomer@bas3-montreal02-1096679665.dsl.bell.ca]  has left #ubuntu ["Leaving"]
+=== alta [n=dfvgtg@host86-131-64-97.range86-131.btcentralplus.com]  has joined #ubuntu
+[06:54] <ianian> ill try that
+[06:54] <Nutubuntu> I've been having trouble burning an iso image. The image file is about 695MB, and it looks like my burner thinks my CDs (which are marked 700MB) will only hold 650. How do I correct this? I've pastebinned the log at http://paste.ubuntu-nl.org/25994/ -- see lines 53-54 and 76
+[06:54] <ianian> were goin lol
+[06:54] <cables> KDDI: A common misconception is that KDE is the most windows-like. However, all of them are VERY customizable.
+[06:54] <mage> k1gwb: so the laptop actually has that feature?
+[06:54] <cables> What are the right arguments for mount so that any user can read/write to the mounted folder?
+[06:54] <mage> also, am I missing field day?
+[06:54] <ianian> tks cables
+[06:54] <IntuitiveNipple> ianian: Feisty... yes. Do 'sudo apt-get install sun-java6-jre sun-java6-plugin'
+[06:54] <KDDI> hmmm ic
+=== Carb0n [n=mahi@59.88.67.179]  has joined #ubuntu
+[06:54] <ianian> yup
+[06:54] <ianian> fnx
+[06:55] <cables> IntuitiveNipple: APT handles dependencies, no need for the jre bit.
+=== Martinp23 [n=Martinp2@wikimedia/Martinp23]  has joined #ubuntu
+[06:55] <KDDI> can i ask what is the diff between unix and linux?
+[06:55] <KDDI> =x
+[06:55] <cables> KDDI: Linux is basically a free clone of Unix
+=== peepingtom [n=tom@bas3-london14-1096787887.dsl.bell.ca]  has joined #ubuntu
+[06:55] <PurpZeY_> KDDI: Linux is based on unix.
+[06:55] <gnomefreak> -plugin grabbs -jre -bin and a few other things
+[06:55] <IntuitiveNipple> cables: I'm trying to ensure ian understands most of what is happening, rather than hiding dependencies
+=== caballo [n=caballo@cm156173.red.mundo-r.com]  has joined #ubuntu
+[06:55] <k1gwb> mage: one of the boot order choices is "removable devices"
+[06:55] <gnomefreak> IntuitiveNipple: it doesnt hide them
+[06:56] <ChiFLiiiii> Another question about ubuntu. I dont know how to check if my SLI is activated i posted on forums but i never got a answer
+[06:56] <cables> IntuitiveNipple: i think apt-get makes it fairly obvious what it's downloading when it asks you if you want to install additional dependencies
+[06:56] <JP> Nutubuntu, how do i save this file with permissions?
+[06:56] <_raphael_> is it possible to run windows vista in xen in ubuntu?
+=== caballo [n=caballo@cm156173.red.mundo-r.com]  has joined #ubuntu
+=== nicklas [n=nicklas@81-237-244-147-no52.tbcn.telia.com]  has joined #ubuntu
+[06:56] <KDDI> so many helpers here, cool community
+=== forngren [n=forngren@212.112.60.218]  has joined #ubuntu
+[06:56] <IntuitiveNipple> gnomefreak: It does in the sense that if you give the use a command that relies on dependencies they may not appreciate all the packages they are installing
+=== forngren [n=forngren@212.112.60.218]  has left #ubuntu []
+[06:57] <IntuitiveNipple> cables: The way Ian's been going so far today I'd rely on being explicit :D
+[06:57] <Nutubuntu> JP, sorry - I don't understand what you're asking. Were you able to read but not write xorg.conf? (I'm guessing ...)
+=== splinta [n=splinta@dialin-207-112-29-230.tor.primus.ca]  has left #ubuntu ["Leaving"]
+=== forngren [n=forngren@212.112.60.218]  has joined #ubuntu
+[06:57] <gnomefreak> IntuitiveNipple: sudo apt-get install sun-java6-plugin will show EVERYTHING it needs to install
+[06:57] <cables> IntuitiveNipple: ah, ok.
+=== bigglouie2007 [n=chance@c-67-166-80-113.hsd1.or.comcast.net]  has joined #ubuntu
+[06:57] <JP> Nutubuntu, I can read it, and edit it, but cannot save it due to permissions
+[06:57] <ianian> ummm
+[06:57] <IntuitiveNipple> gnomefreak: Let's not split hairs, eh? I know full well but I'm trying to ensure Ian understands explicitly
+[06:58] <Nutubuntu> JP, which editor are you using?
+[06:58] <Carb0n> JP, where's the location of the said file?
+[06:58] <IntuitiveNipple> ianian: How you getting on?
+[06:58] <ianian> it came up with a package info thingy...do i just coles that coz i carnt do nefing ith it
+=== jeayese [n=jase@c211-28-157-235.eburwd2.vic.optusnet.com.au]  has joined #ubuntu
+=== k1gwb [n=k1gwb@ip68-103-141-134.ks.ok.cox.net]  has left #ubuntu []
+[06:58] <PurpZeY_> Carb0n: xorg.conf
+[06:58] <JP> Nutubuntu, gedit
+[06:58] <ianian> close*
+[06:58] <jeayese> hey I need some help.. I am about to give up intirly on ubuntu but I dont want to, All i want to do is run Half-life 2 on ubuntu.. is that to much to ask? Now I have my gfx card setup which is an ATI Radeon 9600 but I am getting the following error: "Xlib:  extension "XFree86-DRI" missing on display ":1.0". direct rendering: No" this is letting down my gameplay and making the games very choppy.. Please someone help!
+[06:58] <JP> Carb0n,  It is in /etc/X11
+[06:58] <Nutubuntu> JP, "gksudo gedit /etc/X11/xorg.conf"
+[06:58] <IntuitiveNipple> ianian: Read it!
+[06:58] <Carb0n> PurpZey_: might require "sudoedit"
+=== jleino [n=jleino@a91-152-175-184.elisa-laajakaista.fi]  has joined #ubuntu
+[06:58] <Nutubuntu> JP - without the "" marks
+[06:58] <cables> IntuitiveNipple: excuse me while i sudo apt-get install eclipse eclipse-pydev ant ant-optional antlr bicyclerepair...
+[06:58] <cables> :)
+=== Johto [n=pete@dsl-kpobrasgw1-fedefa00-25.dhcp.inet.fi]  has joined #ubuntu
+=== mode/#ubuntu [+o Hobbsee]  by ChanServ
+[06:59] <ChiFLiiiii> Another question about ubuntu. I dont know how to check if my SLI is activated .i got nvidia drivers installed properly
+=== mode/#ubuntu [-b keks_!*@*!#ubuntu-read-topic]  by Hobbsee
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has left #ubuntu ["Coming]
+=== Bhaal [i=bhaal@freenode/staff/bhaal]  has joined #ubuntu
+=== mode/#ubuntu [-b keks_!*@*]  by Hobbsee
+[06:59] <ianian> its only the T&C tho
+=== mode/#ubuntu [-b keks_!*@*]  by Hobbsee
+[06:59] <IntuitiveNipple> cables: No need to be facetious
+=== Xorlev [n=raven@unaffiliated/xorlev]  has joined #ubuntu
+[06:59] <IntuitiveNipple> ianian: ok, so accept/dismiss and let it continue :)
+=== hoarycripple [n=hoarycri@c-71-192-52-164.hsd1.ma.comcast.net]  has joined #ubuntu
+=== mode/#ubuntu [-o Hobbsee]  by ChanServ

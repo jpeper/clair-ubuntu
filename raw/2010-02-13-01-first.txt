@@ -1,0 +1,418 @@
+[00:24] <privateabstract> ardchoille: few extra characters than aptitude purge :p
+[00:24] <heretic9> hello, anyone happen to know how would I get or change an pin code with bluetooth -> mobile at shell only linux inst?
+[00:25] <sabgenton> I want to push windows printer drivers where is the default samba share location to put them
+[00:25] <sabgenton>  /usr/share/cups/drv/ ?
+[00:25] <Flannel> heretic9: /etc/bluetooth/hcid.conf has a way to set a pin.  I'm not really sure what you were asking though.
+[00:25] <heretic9> no, it's not functional
+[00:26] <heretic9> I got hcid.conf in place and set..
+[00:26] <Guest23591> Hi, How do I make ubuntu only use one kernel, so my booting to windows by default doesn't get messed up
+[00:26] <heretic9> unless you know someway to rehash/load it
+[00:26]  * jp-- is still unpacking and installing...
+=== Guest23591 is now known as cjae
+=== Strife1989 is now known as Strife89
+[00:28] <cjae> Hi, How do I make ubuntu only use one kernel, so my booting to windows by default doesn't get messed up. sorry for posting more than once but changed my nick
+[00:28] <Trek> cjae: you can remove the old kernel headers and stuff, i don't know the exact files you'd need to remove though
+[00:29] <cjae> Trek: yes I know but I am not the primary user of this system, I put ubuntu on other ppls system so they will never know how to do that
+[00:30] <Trek> cjae: in order to remove kernels you need to remove packages, if others are using Ubuntu, and you are the admin, you'll have to go remove the packages
+[00:30] <Trek> cjae: or provide instructions ot others
+[00:31] <dadoun> salut
+[00:31] <cjae> Trek: I just thought the might be option to only use one kernel and upgrading it instead of getting multiples
+[00:32] <cjae> upgrading = applying security patches
+[00:33] <ambersean> hey guys, my neigbhors are installing 9.04, because we know it works, 9.10 didnt.  anyways, in the livecd i want to move their files over onto my usb hard drive.  but the livecd doesnt find my hard drive.  actually it sort of finds it but won't mount it.  maybe its a security thing?
+[00:33] <ambersean> if i go into gparted, i can find my usb hard drive, but its not mounted.
+[00:34] <ambersean> i think its a security thing?
+[00:34] <jp--> Seveas is all installed sucessfully, I am now gonna reboot
+[00:34] <jp--> :S
+[00:35] <arand> cjae: Nope kernels are separate versions, to allow for fallback.
+[00:35] <suhail> what command do i type on terminal to get yum
+[00:36] <cjae> arand: ok so what if I have four kernel entries and keep it at that, will I get more than 4 kernels including the recovery kernels
+=== jesse is now known as Guest52382
+=== Guest52382 is now known as Brainsturbator
+[00:37] <cjae> arand: or is that only if I upgrade the distro version 9.04 to 9.10
+[00:37] <ambersean> its a permission thing.  how can i get around the permissions to mount this drive?
+[00:37] <heretic9> so, anyone know how do you set an pin code at shell for mobile phone over bluetooth?
+[00:37] <Brainsturbator> can someone help me with something? I cracked my monitor and its all rainbowy at the bottom, is there a way to change it to display my desktop ABOVE that part thats rainbowy? :P
+[00:39] <arand> cjae: Every now and again a new kernel version is released, at that point you'll have to remove the old one to keep it at 4 entries, i don't know if there are any automated ways to do that, I know I've seen old kernel being uninstalled automatically, but I don't know the procedure in that...
+[00:39] <plitter> is there a way to have an image in the virtual consoles?
+[00:40] <plitter> like a small pic in down right corner?
+[00:40] <jleeperry> How do I convert .wma files to .mp3 files?
+[00:40] <cjae> what about using windows boot loader have an option for ubuntu
+[00:41] <plitter> jleeperry: http://ubuntuforums.org/showthread.php?t=37793
+=== jacquesdptd is now known as jacquesdupontd
+[00:45] <Brainsturbator> can someone help me with something? I cracked my monitor and its all rainbowy at the bottom, is there a way to change it to display my desktop ABOVE that part thats rainbowy? :P
+[00:46] <robb> Brainsturbator: this isn't #hardware
+[00:46] <Brainsturbator> well it doesnt ahve to do with hardware
+[00:46] <Brainsturbator> i dont think
+[00:46] <Brainsturbator> more of display settings?
+[00:46] <robb> if the screen is cracked, then it's probably broken
+[00:46] <robb> the matrix
+[00:46] <BHoward> wow sorry brain I dont know of any settings do that
+[00:46] <robb> or vacuum tube
+[00:46] <ahmedaak88> im new to linux is there a way to learn all the aspects in linux a book you can recommend to me
+[00:47] <BHoward> ill look around, who knows it may be possible
+[00:47] <privateabstract> ahmedaak88: If you're using Ubuntu -> http://www.amazon.co.uk/Official-Ubuntu-Book-Benjamin-Mako/dp/0132435942
+[00:47] <jp--> Seveas, it won't boot. Says it didn't find the root device :/
+[00:47] <BHoward> I had an update come through one time that did that to my screen on accident so it is possible
+[00:47] <robb> i doubt there's a way to make a screen only use 1/2 or such
+[00:47] <jp--> and it's the same device...
+[00:48] <jp--> same kernel
+[00:48] <Brainsturbator> well i dont want to change the area it displays... Kinda like Full screen and Widescreen works
+[00:48] <ahmedaak88> ty
+[00:49] <kthomas_vh> I have a new 9.10 install
+[00:49] <privateabstract> Brainsturbator: you can't do it, you'd have to change the graphics card
+[00:49] <`mOOse`> anybody use identd - if so which do you use?
+[00:49] <kthomas_vh> via vncserver,  I'm getting "gnome unable to determine the session we are in"
+[00:51] <kotsu> Anyone have luck getting screenbuffer to work under Karmic?
+[00:52] <kotsu> I just get a black screen when I CTRL+ALT F7
+[00:52] <kotsu> I mean CTRL+ALT F1
+[00:52] <kotsu> brb
+[00:53] <robb> ctrl alt f1 is first terminal
+[00:54] <robb> ctrl alt f7 is the X terminal
+[00:55] <kotsu> Right robb.. but after enable framebuffer I don't get anything.
+[00:55] <kotsu> I googled and found people with the same problem.
+[00:55] <kotsu> Wondering if anyone else is able to get it working under Karmic.
+[00:55] <Trek> perhaps it was removed kotsu
+[00:56] <Trek> or perhaps support for it was removed, kotsu
+[00:56] <kotsu> Oh that would completely suck if they removed framebuffer.
+[00:56] <kotsu> Certainly that can't be the case. :(
+[00:57] <qwertyjustin> hey guys ive started ubuntu, but it only starts with command line screen
+[00:57] <qwertyjustin> is there  a "win" command, to make the gui load up?
+[00:57] <blakkheim> qwertyjustin: sounds perfect
+[00:57] <cant> get the volume button back on the task bar   in 9.10
+[00:57] <kotsu> xstart qwerty
+[00:57] <robb> qwertyjustin: xstart
+[00:57] <robb> cant, in control panel
+[00:58] <epifanio> hi All
+[00:58] <epifanio> please, can you help me to know the name of my ethernet hardware ?
+[00:58] <snoopy> Can I install linux on a mexican computer? lol
+[00:58] <cant> dont know where it is
+[00:59] <aztek[tum]> if i run rsync /path1 /path2 that should just rsync and quit right?
+[00:59] <blakkheim> snoopy: you can install linux on a toaster
+[00:59] <kotsu> I tried configuring framebuffer under karmic as per these instructions: http://lab.frontseed.com/tags/karmic-koala
+[00:59] <snoopy> okay well
+[00:59] <ZykoticK9> epifanio, "lspci | grep -i ethernet"
+[00:59] <FHFHS> Hi
+[00:59] <qwertyjustin> thanks guys
+[00:59] <tt5786> hey guys i am trying to install msttcorefonts  using sudo apt-get install msttcorefonts  and i get the following error E: Package msttcorefonts has no installation candidate
+[00:59] <qiyong> what is the input method now?
+[00:59] <qiyong> the pkg name
+[00:59] <snoopy> i installed linux on a mexican computer and i set everything up but it went to a blank black screen insted of going to the desktop
+[00:59] <qiyong> it is not scim now
+[01:00] <qiyong> what is its name?
+[01:00] <kotsu> I'm using anthy Japanese
+[01:00] <epifanio> ZykoticK9: thanks!
+[01:00] <cant> how do I get to the control panel
+[01:00] <Meddy> Siema ktoś PL? Potrzebuje pomocy...
+[01:00] <FHFHS> ppl,need help. My mic works only firs ~5 minutes after the boot, then it just dies. What can it be?
+[01:00] <snoopy> anyone
+[01:01] <Meddy> I need help. How to get mp3 files from windows?
+[01:01] <ZykoticK9> tt5786, do you have a package ttf-mscorefonts-installer ?  not-sure you will.
+[01:01] <Meddy> I'm new in ubuntu
+[01:01] <kotsu> Your MP3 files on a different machine?
+[01:01] <kotsu> Or different drive?
+[01:01] <tt5786> i have no idear
+[01:01] <jp--> guys... how can I find out the name that will get the filesystem partition of a usb flash drive? I've tried using sda1, sdb1, sdc1... but can't get it to boot using exec, after a dist-upgrade--- btw, it didn't upgrade the kernel :/
+[01:01] <Meddy> difften f=drive...
+[01:01] <Meddy> i think
+[01:01] <robb> think?
+[01:01] <Meddy> i'm booting ubuntu from pendrive
+[01:01] <Trek> Meddy: mount the windows drive in Ubuntu, find where you stored it
+[01:02] <jp--> it's the same one that was on 8.04, I did a dist-upgrade from 8.04 to 9.04, it shows,  "Begin: Waiting for root file system
+[01:02] <Trek> Meddy: mount the windows drive in Ubuntu, find where you stored the MP3s
+[01:02] <jp--> any help would be appreciated
+[01:02] <kotsu> Yup
+[01:02] <tt5786> i dont think so zykotick9
+[01:02] <cant> Wherre is the control panel in ubuntu 9.10
+[01:02] <kotsu> Meddy should be under your "places" dropdown.
+[01:02] <Meddy> wait...
+[01:03] <FHFHS> ppl,need help. My mic works only firs ~5 minutes after the boot, then it just dies. What can it be?
+[01:03] <JStoone> cant, what control panel do you mean?
+[01:03] <rambo298> iceroot you still there?
+[01:03] <plitter> is there a guide to change the appearance of the virtual consoles? maybe pics of a small penguin down in the right corner?
+[01:04] <kotsu> plitter.. you able to get framebuffer working?
+[01:04] <plitter> yes
+[01:04] <kotsu> Under karmic?
+[01:04] <plitter> yes
+[01:04] <kotsu> It's killing me,.
+[01:04] <JStoone> FHFHS, have you tried to right click the "volume" button and then "Sound Preferences" ?
+[01:04] <plitter> if u mean to change resolution?
+[01:04] <kotsu> Yes.
+[01:04] <tt5786> any one know how to install msttcorefonts
+[01:04] <kotsu> Virtual console
+[01:04] <rambo298> anyone know how to get around an authentication failed repetitive message on boot? i mistakenly deleted the pam.d directory
+[01:04] <kotsu> I tried this guide no worky.
+[01:04] <kotsu> http://lab.frontseed.com/tags/karmic-koala
+[01:04] <cant> JStoone  the control panel to get my volume button back on the taskbar\
+[01:04] <qiyong> kotsu, what's the frame above anthy?
+[01:05] <plitter> kotsu: http://ubuntuforums.org/showthread.php?p=8817976#post8817976
+[01:05] <autoclesis> what 's the best PC for ubuntu
+[01:05] <JStoone> cant, let me check one sec.
+[01:05] <plitter> kotsu: try this
+[01:05] <Trek> !best | autoclesis
+[01:05] <ubottu> autoclesis: Usually, there is no single "best" application to perform a given task. It's up to you to choose, depending on your preferences, features you require, and other factors. Do NOT take polls in the channel. If you insist on getting people's opinions, ask BestBot in #ubuntu-bots.
+[01:05] <Trek> autoclesis: same thing applies
+[01:05] <Trek> autoclesis: there's no one "best" computer for ubuntu
+[01:05] <jp--> it's s GTP partition table...
+[01:05] <rambo298> any takers on authentication errors?
+[01:06] <plitter> kotsu: please comment if it worked or didnt, cause i am going to sleep soon:P
+[01:06] <kotsu> Oh. Sorry.
+[01:06] <kotsu> Missed the link.
+[01:06] <kotsu> One moment...
+[01:06] <Meddy> How to get the files from windows, I'm booting ubuntu form pendrive, I can't see files like in windows
+[01:06] <plitter> np
+[01:06] <FHFHS> JStoone Yeah, sure. Everything shows work just fine. But after 5 minutes, mic dies, but i didnt touch anything, and all prefferencess are the same
+[01:06] <autoclesis> if you were buying a computer just for ubuntu
+[01:07] <JStoone> cant, have you tried right clicking and then "Add to Panel..."
+[01:07] <Trek> autoclesis: i'd create a computer from custom parts
+[01:07] <rambo298> can i repair ubuntu somehow so pam (authentication) gets reinstalled?
+[01:07] <JStoone> FHFHS, that really sounds wierd.. have you tried to update your hardware?
+[01:07] <plitter> kotsu: meant in the forum:)
+[01:07] <cant> there is a remove from panel but no add to panel
+[01:07] <kotsu> plitter.. thanks for the link.  I'll give this a try.
+[01:08] <ZykoticK9> tt5786, it should be "sudo apt-get install ttf-mscorefonts-installer"
+[01:08] <FHFHS> JStoone,  hardware? I have a laptop, i cant change my soundcard here
+[01:08] <cant> ok, found the add to but volume isnt on it
+[01:08] <plitter> kotsu: np, hope it works:) i spent a lot time getting it to work on mine:P
+[01:08] <kotsu> Roger that plitter.
+[01:08] <autoclesis> thanks trek but if you were just going to get a dell or vaio or whatever
+[01:10] <Trek> autoclesis: not a dell :P
+[01:10] <JStoone> FHFHS, What I mean is going to 'system-administration-hardware drives'
+[01:10] <autoclesis> hehe
+[01:10] <autoclesis> well that's one down
+[01:10] <autoclesis> i've got debian on a compaq and it's perfect
+[01:10] <JStoone> FHFHS, drivers*
+[01:11] <autoclesis> i'll just choose at random
+[01:11] <Trek> autoclesis, i say "not a dell" because their hardware dies EASY
+[01:11] <kotsu> plitter.. made the changes.. rebooting.  wish me luck.
+[01:11] <tt5786> how can i install msttcorefonts
+[01:11] <Trek> tt5786, isn't there a package for it>
+[01:11] <autoclesis> thanks trek. seriously
+[01:11] <cant> Can someone help me get the volume button back on my taskbar... It was there and I accidently deleted it..
+[01:11] <JStoone> FHFHS, read this topic http://forum.skype.com/index.php?showtopic=57685.   and read sveterv_'s post.
+[01:11] <FHFHS> JStoone, will do
+[01:11] <FHFHS> thx
+[01:11] <JStoone> FHFHS, I assume it's the skype bug?
+[01:11] <tt5786> i cant find
+[01:11] <autoclesis> compaq presario is okay for ubuntu 9.10?
+[01:11] <FHFHS> JStoone yes
+[01:12] <Trek> autoclesis, I use 9.04, so I wouldn't know about 9.10
+[01:12] <tt5786> i can not find it
+[01:12] <Concretesledge> ok folks, im installing UBUNTU dual boot with win7, im at the partitioning guide, should i just move the little curser backword to 20gb  for ubuntu, and install.... will that work, or should i go back into windows, create a free space partition, and then do it?
+[01:12] <pH_> m trying to access a folder that is shared on my windows network with samba
+[01:12] <pH_> but when i double click it, i got an permission fail
+[01:12] <pH_> how to fix that?
+[01:12] <ZykoticK9> tt5786, did you try "sudo apt-get install ttf-mscorefonts-installer" ?
+[01:12] <heretic9> anyone here who has been able to pair cellphone with bluetooth on shell?
+[01:12] <autoclesis> should i use 9.04 instead?
+[01:12] <tt5786> i will now
+[01:12] <Concretesledge> autoclesis 9.10 is good.
+[01:12] <autoclesis> thanks concrete
+[01:12] <snoopy> 9.04 is better than 9.10 is you ask me :D
+[01:12] <autoclesis> okay, one last dumb question
+[01:12] <autoclesis> hehe snoopy
+[01:12] <ZykoticK9> snoopy, +1
+[01:13] <Trek> lol snoopy, +10
+[01:13] <snoopy> i had to many probs with 9.10
+[01:13] <autoclesis> how do i get linux onto the PC without using windows to download the new op sys
+[01:13] <autoclesis> disks ?
+[01:13] <autoclesis> i know, dumb q
+[01:13] <Concretesledge> ive had nothing but less problems with 9.10
+[01:13] <Trek> autoclesis: you can order an ubuntu CD
+[01:13] <autoclesis> i used disks for freespire after wiping window 2000s
+[01:14] <tt5786> its installing thanks
+=== WaterRatj[A] is now known as WaterRatj
+=== jay is now known as Guest37707
+[01:15] <autoclesis>  http://www.amazon.com/Introduction-video-DVD-Training-Reference-commands/dp/B0018KUB6Y/ref=sr_1_3?ie=UTF8&s=software&qid=1266020676&sr=8-3
+[01:15] <autoclesis> like that?
+[01:15] <JStoone> FHFHS, tell me if it works, alright?
+=== nikolam_ is now known as nikolam
+[01:15] <FHFHS> JStoone sure. sounds right so long. I wil ltry to fix it ))) Thx
+[01:15] <cant> How Do I get the volume button back on the taskbar??  Where is the Control Panel??
+[01:16] <ZykoticK9> cant, did you happen to remove pulse audio?
+[01:16] <cant> not that I am aware
+[01:16] <Guest37707> i have dual booted ubuntu 9.10 with ubuntu 7.10 and i cant arrow down to the other os
+[01:16] <ZykoticK9> cant, k - just checking
+=== biella_ is now known as biella
+[01:17] <cant> I have dual boot with windows xp     and ubuntu 9.10  Had the volume button on the taskbar but del it by accident
+[01:17] <seanamber> guys, i was running with bad memory for a while, and i have reason to believe that my packages got a bit messed up.  isnt there a way to go through my packages and my disk to fix the errors?
+[01:17] <JStoone> FHFHS, No problem, just trying to help as good as I can. How experienced are you in these kind of environments?
+[01:18] <piero> Is there a apt-accelerator? Something that opens multiple connections to download the same file (reason: in my shared internet connection I need to open 3 or 4 connections to have good download rate due to competition with other computers)
+=== Rune is now known as Rewn
+[01:18] <JStoone> seanamber, have you tried to "sudo apt-get update"? and then use the Update-Manager?
+[01:19] <blakkheim> piero: why use update manager when you can just aptitude full-upgrade?
+[01:19] <blakkheim> JStoone: sorry that was for you
+[01:19] <FHFHS> JStoone, hmm...not at all ))) but i'm learning ;)
+[01:20] <seanamber> jstoone, yeah, it says everythings alright
+[01:20] <piero> blakkheim, I think that is not an answer to me..
+[01:20] <cant> How Do I get the volume button back on the taskbar??  Where is the Control Panel??
+[01:20] <jp--> any ideas?
+[01:20] <jp--> :(
+[01:20] <piero> I'm asking about an accelerator
+[01:20] <blakkheim> piero: see what i said right after it
+[01:21] <piero> blakkheim, it's not easy to me. I need to translate what your words..
+[01:21] <JStoone> blakkheim, dunno, sorry a little new myself trying to be helpfull *laugh*
+[01:21] <seanamber> jstoone, yeah it does everything alright and says there are no updates, but when it updated the last time it gave an error
+[01:21] <jp--> Imma try to boot the kernel with kexec using the UUID of the ext3 partition of the flash drive
+[01:21] <seanamber> jstoone, i bet some of my old packages got messed up, i remember there being a way to go through and check everything?
+[01:21] <ZykoticK9> piero, i've never heard of any sort of apt-accelerator before - just choosing a closer/faster mirror.  Best of luck man.
+[01:22] <jp--> did not work.
+[01:22] <jp--> omg.
+[01:22] <jp--> :'(
+[01:22] <JStoone> seanamber, is there some specific apps that does not work correctly? If there are witch?
+[01:22] <cant> How Do I get the volume button back on the taskbar??  Where is the Control Panel??  So    nobody can help me???
+[01:22] <JStoone> cant, I'm looking (:
+[01:23] <blakkheim> !repeat | cant
+[01:23] <ubottu> cant: Don't feel ignored and repeat your question quickly; if nobody knows your answer, nobody will answer you. You can search https://help.ubuntu.com or http://ubuntuforums.org while you wait.
+[01:23] <ZykoticK9> cant, there isn't really a "control panel" anymore.  typically the volume just shows up - do you see a network icon?
+[01:23] <cant> no,  no network either
+[01:24] <cant> but obviously it too works
+[01:24] <seanamber> jstoone, actually things seem to be working :-), i just got nervous when i saw that error on the last update
+[01:24] <`mOOse`> anybody use identd - if so which do you use?
+[01:24] <seanamber> jstoone, E: linux-image-2.6.31-19-generic: subprocess installed post-installation script returned error exit status 2
+[01:24] <cant> thanks JStoone.. I thought you forgot me
+[01:25] <JStoone> seanamber, well errors are some bitches but they are only dangerous when they slap you the second time (;
+[01:26] <JStoone> cant, no, no, no, not leaving you behind (:
+[01:27] <v3rr3z> Hi
+[01:27] <v3rr3z> I was wondering if you can move Ubuntu to another HDD without having to reinstall.
+[01:28] <JStoone> cant, try hitting F11 and then hit it again, sometimes that works ? (:
+[01:28] <tbrock> hey guys, i'bve got 2 hard drives, one brand new and blank, the other with stuff on it, they are the same exact type and size and I want to make a raid 1 out of them for a mirror
+[01:29] <tbrock> is there a way to create a broken raid 1
+[01:29] <cant> JStoone   didnt work
+[01:29] <tbrock> move the files to the new drive
+[01:29] <tbrock> then add the second disk to the raid
+[01:29] <Alestan> Hey all, I got this error message trying to boot a system with super grub disk:  'error: Kernel doesn't contain suitable architecture'
+[01:30] <Alestan> I think the image might have ubuntu 64bit installed instead of 32bit... Is that the case?
+[01:30] <heretic9> is anyone here who has been able to pair cellphone with bluetooth on shell?
+[01:30] <robb> so, ubuntu just can't do dual display with vesa and nv drivers
+[01:31] <ZykoticK9> cant, try right clicking on an empty part of your panel - Add to Panel and select Notification Area and see if that brings it back
+[01:32] <heretic9> there's million guides.. only got the issue on pairing the phone. just dropping me incorrect pin.
+[01:32] <v3rr3z> Could you move Ubuntu By simply putting the files into another HDD Partition?
+[01:32] <meowbuntu> hi
+[01:32] <meowbuntu> hi
+[01:33] <Trek> !hi | meowbuntu
+[01:33] <ubottu> meowbuntu: Hi! Welcome to #ubuntu! Feel free to ask questions and help people out. The channel guidelines are at https://wiki.ubuntu.com/IRC/Guidelines . Enjoy your stay!
+[01:33] <Guest101010> hi
+[01:33] <meowbuntu> i am wondering if there is a later version of openoffice. i have 3.1 atm
+[01:33] <ZykoticK9> v3rr3z, reinstalling is your best bet, BUT you could theoretically try using dd or a livecd like clonezilla to move an installed system to another computer - you might run into issues with hardware trying this mind you, best of luck.
+[01:33] <meowbuntu> Trek, yes i'm frequent here thanks though
+[01:34] <v3rr3z> Thanks
+[01:34] <nfv> hola atodos
+[01:34] <v3rr3z> How do you uninstall Ubuntu.. Just del the partition?
+[01:34] <mengu> hi. how can i remove a resolution that's in the output of xrandr?
+[01:34] <nfv> tengo un problema con mi disco duro me pueden colaborar?
+[01:34] <^kub^> !es nfv
+[01:34] <ZykoticK9> v3rr3z, you don't uninstall it as you suggested, just install whatever you want overtop
+[01:34] <meowbuntu> v3rr3z, thats easy put cd in and install it
+[01:34] <nfv> gracias
+[01:35] <meowbuntu> v3rr3z, how new are you to ubuntu and linux
+[01:35] <qwertyjustin> hey guys, xstart in the command line at startup doesnt work?
+[01:35] <Alestan> v3rr3z a fresh install can be imaged onto something else with more luck than an already configured system.
+[01:36] <qwertyjustin> any ideas
+[01:36] <v3rr3z> I need to move HDDs is the issuse.. The one I have Ubuntu on .. Is getting alot of Bad Sector errors.
+[01:36] <meowbuntu> v3rr3z, y do you want to uninstall ubuntu
+[01:36] <nfv> lo que sucede es que estoy tratando de instalar otra distro en mi pc, iba a mirar las particiones que tiene, y cuando lo miro me dice que no tiene particiones
+[01:36] <v3rr3z> Also.. Seems to be running slow.
+[01:36] <ZykoticK9> qwertyjustin, the command is "startx"
+[01:36] <blakkheim> !es
+[01:36] <ubottu> En la mayoría de canales de Ubuntu se habla sólo en inglés. Si busca ayuda en español o charlar entra en el canal #ubuntu-es. Escribe "/join #ubuntu-es" (sin comillas) y dale a enter.
+[01:36] <meowbuntu> v3rr3z, how new are you to ubuntu and linux
+[01:36] <nfv> tambien trate de arreglarlo por un live cd el hirens boot, pero lo pongo en la unidad, reuinicio y no lo toma, lo salta y entra de una vez a buntu
+[01:36] <v3rr3z> Less then a hour.
+[01:36] <v3rr3z> xD!
+[01:37] <v3rr3z> I am dual booting windows 7 and Ubuntu
+[01:37] <meowbuntu> ok can i pm you
+[01:37] <meowbuntu> ^ v3
+[01:37] <meowbuntu> v3rr3z, ok can i pm you
+[01:37] <`mOOse`> verb3k, that's what clonezilla can do
+[01:37] <v3rr3z> Indeed
+[01:37] <`mOOse`> actually ghost is better at it actually
+[01:38] <qwertyjustin> cheers
+[01:38] <mengu> hi. how can i remove a resolution that's in the output of xrandr?
+[01:38] <mengu> i'd like to remove these:
+[01:38] <mengu>    1280x1024_74.90   59.9
+[01:38] <mengu>    1280x1024_59.90   59.9
+[01:39] <happyface> This PCs ubuntu installation is slow. Is there an easy way to reset everything just like a format, or is it better to actually reformat?
+[01:39] <JStoone> cant, AHA! are you still there?
+[01:40] <jp--> thanks for the help anyway. I'm installing Ubuntu 9.04 now.
+[01:41] <`mOOse`> happyface, there is a pgm that will return ubuntu back to a "fresh install" state
+[01:41] <TheLastDodo> A quick question... does Karmic Koala still use the xorg.conf to tweak things such as supported resolutions and the like, or has that functionality been moved?
+[01:42] <robb> has anyone gotten a second card working with vesa driver as asecondary display?
+[01:42] <seanbrystone> moose you got a link for that pgm?
+[01:42] <`mOOse`> I think it's called computer janitor - look in synaptic
+[01:42] <seanbrystone> k
+[01:42] <jrib> !fixres > TheLastDodo
+[01:42] <ubottu> TheLastDodo, please see my private message
+[01:43] <Amaranth> robb: you can't do that, only one card gets its vesa tables mapped
+[01:43] <JStoone> TheLastDodo, Yes it is still here. Go to "/etc/X11/xorg.conf"
+[01:43] <robb> Amaranth: first card is agp geforce2ti using nv driver
+[01:43] <Amaranth> robb: but the primary card is also the one that gets mapped
+[01:43] <robb> oho
+[01:44] <robb> so no way to get vesa + some other card, working
+[01:45] <robb> Amaranth: ?
+[01:45] <Amaranth> robb: no, they both need to have a proper driver
+[01:45] <robb> that would confirm what my google-fu is sensing
+[01:45] <robb> ok
+[01:45] <Lx3> I want to have two window managers how do I do that?
+[01:46] <racecar56> i'm using KDE 4.3.2 with a fresh install of kubuntu 9.10, and pidgin refuses to go inside of the indicator applet
+[01:46] <Amaranth> Lx3: that is not possible unless you have two separate screens setup in Xorg (setup in the way that makes it so you can't drag windows between them)
+[01:46] <robb> Amaranth: no where on web could confirm this for me
+[01:46] <robb> thanks for helping answer :)
+[01:47] <Lx3> Amaranth i dont want them at the same time different window for different manager
+[01:47] <methods2> what happened to all the pulse audio configuration tools ?
+[01:47] <methods2> the gui appears to be custom now
+[01:47] <Amaranth> Lx3: err, you can't have a different one for each window
+[01:47] <Amaranth> Lx3: you can quit one and start another but they cannot be running at the same time
+[01:48] <Lx3> thats what i want
+[01:48] <JStoone> Hi, how do I get my Apache server "online" and not only local?
+[01:48] <Lx3> my windows of choice are Gnome (default) moblin (secondary)
+[01:48] <mengu> JStoone: you mean i can't remove the resolutions? but i have added them?
+[01:48] <snoopy> my ubuntu got a virus
+[01:48] <racecar56> snoopy: how'd you get a virus??
+[01:49] <snoopy> it keeps telling me to update
+[01:49] <Lx3> snoopy: how??
+[01:49] <snoopy> and i dont want too
+[01:49] <`mOOse`> lol
+[01:49] <`mOOse`> dang viruses!
+[01:49] <snoopy> }:
+[01:49] <racecar56> snoopy: it's a setting that makes it do that
+[01:49] <racecar56> snoopy: i wish the ubuntu developers wouldn't have made it like that, it reminds me of Windows
+[01:49] <JStoone> mengu, Sorry? what is your problem?
+[01:49] <Lx3> Amaranth: any ideas??
+[01:50] <mengu> i want to remove a resolution that's in the output of xrandr.
+[01:50] <mengu> i have added them but i added wrong
+[01:50] <Amaranth> Lx3: for that you should have a session option at the login screen
+[01:50] <mengu> one is working good, others don't.
+[01:50] <Amaranth> Lx3: you can't change desktop environments without logging out though
+[01:50] <JStoone> mengu, ohm.. let me take a loo
+[01:51] <mengu> JStoone: i added them with gtf
+[01:51] <JStoone> mengu, aha...
+[01:52] <Lx3> i am totally ok with logging out, that is what i want, but how do I install the moblin eviorment so I can choose?
+[01:52] <racecar56> Lx3: make a file in /usr/share/xsessions called moblin.desktop
+=== WaterRatj is now known as WaterRatj[A]
+[01:53] <racecar56> Lx3: then put the contents of some other file in /usr/share/xsessions into it
+[01:53] <racecar56> Lx3: and modify them to work with it
+[01:53] <snoopy> i tired install linux on a mexican computer
+[01:53] <JStoone> mengu, sorry I cannot help..
+[01:53] <snoopy> and it didnt work
+[01:54] <snoopy> it installs and all but insted of going to the desktop it goes to a blackscreen
+[01:54] <JStoone> mengu, are you running dual screen?
+[01:54] <mengu> i don't know what is dual screen
+=== JimmyJ|zz is now known as JimmyJ
+[01:55] <JStoone> mengu, two monitors?
+[01:55] <mengu> JStoone: nope.
+[01:55] <mengu> one old 17" crt
+[01:56] <JStoone> mengu, so does this fault cause any harm to your screen? Is it misplaced or ?
+[01:57] <mengu> JStoone
+[01:57] <JStoone> mengu, yes?
+[01:57] <mengu> nope.
+[01:57] <mengu>    1440x900_59.90   59.9*
+[01:57] <mengu>    1280x1024_74.90   59.9
+[01:57] <mengu>    1280x1024_59.90   59.9
+[01:57] <FloodBot4> mengu: Please don't flood, use http://paste.ubuntu.com to paste, don't use Enter as punctuation.
+[01:57] <mengu> the only one that works is 1440
+[01:57] <mengu> i have added the other two wrong.
+[01:57] <mengu> i am currently using 1440 and i have no problem.
+[01:57] <mengu> the problem is i cannot add another 1280 while these two are there
+[01:58] <blakkheim> !enter | mengu
+[01:58] <ubottu> mengu: Please try to keep your questions/responses on one line - don't use the "Enter" key as punctuation!
+[01:59] <JStoone> mengu, oh, well.. I have no good trubleshoots, have you looked in your  xorg.conf and searched for something to delete?

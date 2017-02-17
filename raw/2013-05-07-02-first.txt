@@ -1,0 +1,247 @@
+[01:20] <eoss> Dr_Willis: Where can I sign up to let KMART know what's in my $home directory?
+[01:21] <Belial> eoss, richard, is that you?
+[01:21] <Dr_Willis> eoss:  please go troll somewhere else.
+[01:21]  * wilee-nilee starts a fund for adult diapers for eoss
+[01:22] <johnjohn1011> compdoc: thanks.
+[01:22] <eoss> wilee-nilee: You should check out www.Amazon.com©, I hear they have great deals on adult diapers
+[01:23] <ThePiousPriest> Screw it, just bought this
+[01:23] <ThePiousPriest> http://www.amazon.com/Rosewill-Wireless-Adapter-802-11a-RNWD-N9003PCe/dp/B009VKON0S
+[01:23] <ThePiousPriest> been supported since kernel 2.6
+[01:23] <eoss> Amazon.com ©, what a great place to shop, am I right ThePiousPriest ?
+[01:24] <ThePiousPriest> do I sense sarcasm?
+[01:24] <computer88> how can u tell what version of wine you have
+[01:25] <tgm4883> jrib, well, it was a good effort
+[01:25] <Dr_Willis> computer88:  try wine --version     perhaps?
+[01:25] <johnjohn1011> ThePiousPriest: congrats, i hope it works wonderful in ubunut
+[01:26] <ThePiousPriest> I hope so, otherwise I will rage hard lol
+[01:26] <Dr_Willis> ThePiousPriest:  i find it funny that people use wifi cards.. then the antannas are normally positioned in such bad spots.. behind a metal case. right up to a wall, often sitting way down low on the floor.
+[01:26] <ThePiousPriest> I can't move my tower, router is downstairs and people would get pissed if I ran cabling
+[01:26] <ThePiousPriest> too lazy to run through the walls
+[01:27] <ThePiousPriest> If I was, I would run cat 6 to future proof
+[01:27] <Dr_Willis> if the router is right below or above you . you might need to rearange your antannas a bit for best signal.
+[01:27] <computer88> shouldnt wine 1.5.29  be just as good or better than 1.5.13
+[01:27] <ThePiousPriest> yeah, it's almost right below me
+[01:27] <Dr_Willis> computer88:  normally thats the case.. newer vesions have more bug fixs and other features..
+[01:27] <ThePiousPriest> After finishing my Net+, Linux + is my next stop
+[01:28] <Dr_Willis> ThePiousPriest:  You might want to angle the antannsas so  the are parallwl to the floor a bit.  and if the router has an antanna . allign them that way also
+[01:28] <computer88> ubuntu 12 percise with wine has a platinum rating for office 2010(installer) but ringtail with 1.5.29 has no rating for office
+[01:29] <Dr_Willis> because no one has rated it yet perhaps computer88 .
+[01:29] <jrib> computer88: I think those ratings are submitted by users so no one has gotten to it probably
+[01:29] <jrib> computer88: it's your time to shine ;)
+[01:29] <computer88> should i use the ubuntu 12 instead of 13 for my M$ office
+[01:30] <Dr_Willis> best would be to use Libreoffice computer88
+[01:30] <ThePiousPriest> Anyone have their Linux+?
+[01:30] <computer88> ubuntu 13 has only games mainly with at rating at wine.org
+[01:30] <Dr_Willis> i saw some mention of a differnt office suite the other day.. but  i dont use that stuff much
+[01:30] <johnjohn1011> computer88 i don't think it matters for wine which version
+[01:31] <computer88> hmm
+[01:31] <tgm4883> ThePiousPriest, I think the LPI 1 and 2 are looked on better
+[01:31] <wilee-nilee> computer88, If you want full use of word use windows.
+[01:31] <tgm4883> ThePiousPriest, probably behind the redhat certs
+[01:31] <computer88> looking for support : P
+=== ubuntu is now known as Guest61039
+[01:32] <ThePiousPriest> I think the option that I have is after taking the Linux+ exam, you can send your results for LPI-1 I think?
+[01:32] <ThePiousPriest> hold on, lemme check CompTIA
+[01:32] <IdleOne> How is this Ubuntu related ThePiousPriest ?
+[01:32] <ThePiousPriest> I was thinking general Linux related, but if you want me to take it elsewhere, so be it
+[01:33] <IdleOne> ThePiousPriest: We keep this channel Ubuntu support only.
+[01:33] <IdleOne> we try at least
+[01:34] <tabsterleir> Where is the general Linux chat channel?
+[01:34] <ThePiousPriest> Very well
+[01:34] <tabsterleir> Is it just #linux?
+[01:34] <computer88> whers the wine channel?
+[01:34] <zykotick9> tabsterleir: on freenode try ##linux
+[01:34] <betrayd> double hash iirc
+[01:34] <Dr_Willis> !wine
+[01:34] <ubottu> WINE is a compatibility layer for running Windows programs on GNU/Linux - More information: https://help.ubuntu.com/community/Wine - Search the !AppDB for application compatibility ratings - Join #winehq for application help - See !virtualizers for running Windows (or another OS) inside Ubuntu
+[01:34] <tabsterleir> Righto, ty
+[01:34] <zykotick9> computer88: #winehq
+[01:34] <betrayd> tabsterleir: shields up
+[01:35] <computer88> yea
+[01:35] <computer88> thanks
+=== Guest61039 is now known as kuruba
+[01:36] <tabsterleir> Actually, I do have a supportish question: I've got a new ASUS lappie on the way today which I know for a fact will have Secure Boot enabled. Do I need to disable that to install Ubuntu or is it good either way?
+[01:37] <wilee-nilee> !uefi > tabsterleir
+[01:37] <ubottu> tabsterleir, please see my private message
+[01:37] <bray90820> how would i remove a password on my samba printer
+[01:37] <tabsterleir> Thanks :)
+=== lonewolf is now known as Guest23202
+[01:42] <Tuxiscool> Hiya. Is it possible to use the 'dig' command to determine *all* A records from a given name server?
+[01:43] <acoleman1981> hello everyone
+[01:43] <ThePiousPriest> try dig@server name A?
+[01:43] <ThePiousPriest> I just did dig ubuntu.com a
+[01:50] <shape> Dr_Willis: Hey, you here?
+[01:50] <Dr_Willis> yep. for a little bit at least
+[01:52] <shape> Dr_Willis: It's a quick thing anywya. My setup is : 80GB HDD with 2 partitions 1 windows 7 1 ubuntu. And I want to move everything to a new bigger  HDD, clone everything. I've tried Clonezilla and it breaks my windows install and can't recover it. Do you know any other cloning software?
+[01:52] <Dr_Willis> you could alwyas use a live cd and 'dd' then resize the partions
+[01:53] <shape> Dr_Willis: any links to that? I'm afraid to use DD :(
+[01:53] <Dr_Willis> dd if=/dev/sda of=/dev/sdb bs=4m               then when done..  use gparted to tweak the new hd.
+[01:54] <Dr_Willis> ive done that in the past to 'clone' a 8gb usb flash install of ubuntu onto a HD.
+=== dominic_ is now known as mdih
+[01:54] <shape> Dr_Willis: so that just clones sda to sdb drive to drive and then i'd just have to resize with gparted?
+[01:54] <Dr_Willis> yep. or make a new partion for the unused space.
+[01:54] <shape> Dr_Willis: what is the bs for?
+[01:54] <Dr_Willis> which is what i was doing.
+[01:54] <Dr_Willis> block size.
+[01:55] <Dr_Willis> otherwise dd will be very slow
+[01:55] <shape> Dr_Willis: why 4m?
+[01:55] <computer88> how can i update wine from the commandline
+[01:55] <shape> Dr_Willis: I see
+[01:55] <Dr_Willis> 4M for 4 meg.
+[01:55] <Dr_Willis> computer88:  sudo apt-get update, sudo apt-get upgrade   upgrades the system to the latest thats in the repos
+[01:56] <computer88> ty ty
+[01:56] <shape> Dr_Willis: thing is clonezilla already has a drive to drive thing, but I didnt use it because I wanted the partitions to be one after the other and not all over the place. I guess that doesn't really matter right?
+[01:56] <Dr_Willis> all over the place?  i dont see how they would be all over the place
+[01:57] <shape> Dr_Willis: well the unpartitioned space, that im resizing into the new ones, would be on a different part of the platter
+[01:57] <shape> Dr_Willis: which would slow it down a bit since it has to jump, etc.
+[01:58] <ezio> i keep getting an error while setting up https://help.ubuntu.com/community/Kerberos
+[01:58] <computer88> still have 1.5.29 need 1.5.6
+[01:58] <ezio> root@s:~# dpkg-reconfigure krb5-kdc
+[01:58] <ezio> krb5kdc: Configuration file does not specify default realm, attempting to retrieve default realm
+[02:01] <shape> Dr_Willis: btw, thanks a lot for the dd command
+[02:02] <shape> Dr_Willis: dd if=/dev/sda of=/dev/sdb bs=4m  the first is the source (sda) and second one is where im cloning to correct ?
+[02:04] <Gautam> Hi all. I'm on 12.04, updated. I have the latest "adobe-flashplugin" installed; however Firefox and Chromium are still unable to play flash. The files are
+[02:04] <Gautam> listed in about:plugins
+[02:05] <utfans05> Gautam, is firefox giving you a prompt to install additional addons when you try to play flash?
+[02:06] <Gautam> utfans05: Yeah
+[02:06] <utfans05> Gautam, go ahead and try to add them from within firefox
+[02:06] <Dr_Willis> shape:  if (input file) of (output file)
+[02:06] <Gautam> utfans05: Doesmt work
+[02:06] <shape> Dr_Willis: good thing I asked, because my original hdd is not sda, phew
+[02:07] <Gautam> Says no suitable plugins found
+[02:07] <wilee-nilee> Gautam, Generally we install the restricted-extras to get codecs
+[02:07] <Dr_Willis> dd has sort of unique syntax compared to many apps. ;)
+[02:08] <utfans05> guatam, thats exactly what i was about to say, the other think you can do is install flashplugin-installer
+[02:08] <Dr_Willis> brb. seeig if new kernelk fixed my sound
+[02:08] <shape> wilee-nilee: do you log channels?
+[02:08] <wilee-nilee> shape, Not really.
+[02:08] <hpuser4466> Can't get WiFi to connect.  Chipset Cisco Aironet Wireless 802.11b
+[02:09] <akashj87> Gautam, may be see http://askubuntu.com/questions/196017/adobe-flash-player-is-not-working-in-12-04
+[02:09] <hpuser4466> << IBM Thinkpad T41
+[02:09] <wilee-nilee> I just rarely leave lol
+[02:09] <Gautam> thanks akashj87
+[02:10] <pliz> hi all! upgraded from 12.10 to 13.04 on macbook pro 6.2 and suspend and shutdown stopped working. anyone seen something like that?
+[02:10] <shape> wilee-nilee: the reason is I saw you in the windows channel yesterday and I wanted to know what Stryyker recommended me to use for cloning instead of Clonezilla
+[02:10] <shape> wilee-nilee: It should be 20 hours ago or so
+[02:10] <wilee-nilee> shape, Acronis I believe
+[02:11] <wilee-nilee> shape, What release of W7 do you have?
+[02:11] <shape> wilee-nilee: that was just for partition alignment not for cloning, it had 3 nouns or something
+[02:11] <shape> wilee-nilee: ultimate
+[02:11] <wilee-nilee> shape, Heh, I use the onboard imager myself it has never failed.
+[02:12] <shape> wilee-nilee: WOW, nvm he JUST replied, wtf
+[02:12] <wilee-nilee> ah easeus
+[02:13] <wilee-nilee> shape, You can image windows 7 from the backup options
+[02:13] <shape> wilee-nilee: and then restore that image with the windows DVD correct?
+[02:14] <wilee-nilee> shape, Yep, it will not clone the linux is all.
+[02:14] <shape> wilee-nilee: but if I want to restore it to a fresh partition, will that work? As in if I create an image on some separate HDD, how will it restore it, I have to give it a new partition ,or leave unpartitioned space, etc.?
+[02:15] <wilee-nilee> shape, Yes, I transfered my W8 from a spinning HD to a SSD with it.
+[02:15] <Gautam> utfans05: flashplugin-installer did the trick! thanks!
+[02:15] <shape> wilee-nilee: and it will fix the mrb automatically, etc.?
+[02:15] <utfans05> Gautam, your welcome
+[02:16] <wilee-nilee> shape, It does not save the mbr, but all you have to do put the clone of ubuntu after and run a update-grub or reload the mbr, which is pretty easy.
+[02:17] <wilee-nilee> shape,Just don't go all OCD on that 63 2048 space preceding the sda1 partition.
+[02:17] <wilee-nilee> ;)
+[02:17] <russ5811> Hi. Can anyone tell me how to disable keyring after auto login in 13.04? Thanks
+[02:18] <shape> wilee-nilee: what i mean is, when i restore the windows image, it will also restore it;s own mbr with it's own windows bootloader, etc. right? As in it will be fully functional doing the image way.
+[02:18] <wilee-nilee> shape, I believe it just loads the image not the mbr, but that isan easy fix as well.
+[02:19] <wilee-nilee> bootrec.exe /fixmbr from the booted recovery or install disc cli
+[02:19] <shape> wilee-nilee: yeah, but yesterday those didn't work. So what I was asking is windows does something EXTRA to make sure the loaded image will damn work, right?
+[02:20] <wilee-nilee> shape, Honestly from watching you, you just messed with the wrong things and tried to recover a bricked partition that you bricked.
+[02:21] <wilee-nilee> user error in other words
+[02:21] <shape> wilee-nilee: I tried cloning it again today, even with the default clonezilla settings and with no partitioned second drive, just the windows and it did the same.
+[02:22] <wilee-nilee> shape, I was not there, all I can say I have never had clonezilla fail.
+[02:22] <pliz> excuse me,  no one with suspend shutdown problems?
+[02:22] <shape> wilee-nilee: however as we speak i just decided to clone disk by disk (not partition by partition) and then just resize with gparted
+=== ubuntu is now known as Guest65189
+[02:23] <utfans05> russ5811, try this http://www.noob2geek.com/how-to/how-to-disable-gnome-keyring-in-ubuntu-10-04/
+[02:23] <wilee-nilee> shape, I would not resize widows with gparted myself, it has an excellent partitioner.
+[02:23] <wilee-nilee> for itself
+[02:23] <utfans05> russ5811, its all based off the same thing so that same process should work
+[02:24] <wilee-nilee> shape, They here is do not resize until you have run it and defragged...etc.
+[02:24] <shape> wilee-nilee: really? what is it called?
+[02:24] <wilee-nilee> shape, Disk manager I think, runs in admin.
+[02:25] <shape> wilee-nilee: wow, disk manager can rezise now? sweet. So what you meant above was just to defrag first and then resize, correct?
+[02:26] <wilee-nilee> shape, I would do the transfer, amke sure it boots, it may want to run a auto-chkdsk, and then resize with the onboard.
+[02:26] <wilee-nilee> make*
+[02:27] <shape> wilee-nilee: What about the ubuntu partition, there is no defragging to be done because of the ext4 correct? I can just resize with gparted
+[02:27] <wilee-nilee> shape, How full is that windows partition?
+[02:28] <a> a
+[02:28] <wilee-nilee> shape, Correct no defragg with linux.
+=== a is now known as Guest1800
+[02:28] <shape> wilee-nilee: 95% full, but moving it to a bigger one of course. Clonezilla already gave it 50GB more with the disk to disk clone.
+[02:29] <wilee-nilee> shape, Ah, that is to full no wonder you have had problems.
+[02:29] <ubuntu__> Guten Tag!
+[02:29] <shape> wilee-nilee: why do you say that? would it matter?
+[02:30] <wilee-nilee> shape, It does matter with ntfs, and exen ext tyoe parttions, but people will argue both sides, personally I never go above 50%
+[02:30] <wilee-nilee> I have big externals though
+[02:32] <shape> wilee-nilee: I see, oh well, now it's disk to disk, and it's almost done. Hopefully everything will work, and if not i'll have to do the windows image thing.
+[02:32] <shape> wilee-nilee: also wanted to thank you for taking the time and helping me. Much appreciated.
+[02:32] <russ5811> thanks utfans05
+[02:32] <benzrf> hello! I'm on raring and when I tap alt-tab briefly it switches to my previous window, even if it was in the same application.
+[02:32] <benzrf> how can I make it so that it will _always_ go between applications?
+[02:33] <horrorxstory> hey
+[02:33] <wilee-nilee> shape, I would pull out some of that extra stuff to a external and run some cleaning tools and make sure it is fully defragged if it were me, maybe even a chkdsk. I have found windows does need maintenance in general, much more then linux.
+[02:34] <horrorxstory> windows just annoys every fiber of my being
+[02:35] <wilee-nilee> I rarely use it except for word in writing grad papers, but keep it in perfect condition.
+[02:35] <horrorxstory> i completely removed that partition last night
+[02:35] <horrorxstory> since i can run office on wine
+[02:36] <wilee-nilee> horribly yes
+[02:36] <horrorxstory> lol mine runs smooth
+[02:36] <wilee-nilee> I would use libreoffice first
+[02:36] <horrorxstory> so does spotify which im very confused about
+[02:36] <shape> wilee-nilee: but for grad papers, if not libreoffice, why not just run it in a vm and not care about housekeeping it so much
+[02:36] <horrorxstory> this is true
+[02:37] <horrorxstory> so my webcam isnt working though
+[02:38] <wilee-nilee> shape, I don't like vm's I want to OS's I have installed to run at full throttle. the maintence is not that much really if you do it, not wait till its broke. Most of which can be put on a schedule.
+[02:38] <Xenolithic> Evening, folks. Is there a way to make it so new windows don't take focus away from the window I'm currently in? I looked around on askubuntu and such, but none of the suggested fixes seemed to do anything.
+[02:39] <horrorxstory> hey
+[02:39] <horrorxstory> =
+[02:41] <benzrf> I'm on raring and when I tap alt-tab briefly it switches to my previous window, even if it was  in the same application.
+[02:41] <benzrf> how can I make it so that it will _always_ go between applications?
+[02:41] <shape> wilee-nilee: I see, I wanted to quite using windows for good and try to get games to run in VM running windows, do you have any experience with that, will I lose lots of performance?
+[02:42] <wilee-nilee> shape, I suppose it depends on your hardware really and what you are happy with.
+=== root is now known as Guest52848
+[02:43] <wilee-nilee> my computer ren=boot in less than a minute and I have 4 OS's so I'm cruising all of them at times.
+[02:43] <wilee-nilee> reboots*
+[02:44] <wilee-nilee> I do have a vm of XP it deserves being there, lol
+[02:45] <shape> wilee-nilee: btw clonezilla just finished the disk to disk clone and I have all the other space unallocated, With ubuntu and gparted i know there won't be a problem expanding the partition but for windows to expand it do you recommend like you said earlier to use disk manager?
+[02:48] <wilee-nilee> shape, First I don't use clonezilla that way I save the image to a external then reload it, I have seen another have problems that way, it may have been you. But see if it boots and resize it with its partitioner. If you had saved that with packets you could have a partition already there and not have to resize using clonezilla.
+[02:48] <shape> wilee-nilee: it did boot, all was fine, it's like the old HDD, and it just has the extra space unallocted.
+[02:49] <ezio> raaaaaaaaaaaaaage ... kerberos is messing with my head
+[02:49] <wilee-nilee> shape, Cool, the onboard has a resize option I think it will allow you to expand it into the unallocated.
+[02:49] <shape> wilee-nilee: I never resized with clonezilla. It was a weird thing that happened, clonezilla said there will be new partitions with no unallocated space but now I see it lied and all the extra space is unallocated.
+[02:50] <shape> wilee-nilee: yep
+[02:50] <wilee-nilee> shape, I meant using clonezilla, it is designed when saving in packages to be put in an equal or larger partition.
+[02:50] <shape> wilee-nilee: btw, does it matter if I defrag first and then expand or I can defrag after expanding. It shouldnt matter right, since the expansion will just be seen as empty space.
+[02:51] <wilee-nilee> shape, I doubt that disc is fully defraggable that full.
+[02:51] <makara> software-centre won't open with an invalid ppa in the sources list
+[02:51] <ezio> how can i reinstall all the default stuff in a package and have it overwrite all the configs, etc
+[02:51] <shape> wilee-nilee: yeah, it only has 1GB left rofl
+[02:52] <wilee-nilee> shape, resize with a couple of hail maries.
+[02:52] <wilee-nilee> ;)
+[02:52] <shape> wilee-nilee: yeah im giving it double of what it has now
+[02:52] <makara> ezio, in synaptic find the package and say remove completely
+[02:52] <ezio> how do i do it with apt-get
+[02:52] <makara> don't know
+[02:53] <wilee-nilee> makara, Sounds more like a broken upgrade.
+[02:53] <shape> wilee-nilee: is the 50% space available partition thing you mentioned earlier valid for ext4 as well?
+[02:53] <makara> wilee-nilee, what is command to autofix?
+[02:54] <wilee-nilee> shape, That is just my default, I have extensive external HD space so I pretty much just have the OS's on the HD.
+[02:54] <makara> ezio, apt-get purge
+[02:54] <makara> ezio, man apt-get
+[02:54] <veryhappy> hey guys, where would i have to ask questions about nvidia related graphics card stuff?
+[02:55] <wilee-nilee> shape, I have seen 70 % is about the most you want, but many will argue both sides on this, I just go the low end and have externals so I don't lose anything ever.
+[02:55] <ezio> makara, thanks
+[02:55] <shape> wilee-nilee: I can't extend volume with disk management btw there is no unallocated space on the right of partition (and extend volume is greyed out)
+[02:55] <utfans05> veryhappy, what questions do you have?
+[02:57] <shape> wilee-nilee: so I guess gparted it is :(
+[02:57] <veryhappy> utfans05: well, they removed the overscan setting in the nvidia control center and that's why i can't control the position of my hdmi picture anymore, i'm clueless what to do now.
+[02:57] <wilee-nilee> shape, You have to have an unallocated to expand it, I would resize the linux leaving the unallocated for the windows resize.
+[02:57] <wilee-nilee> resize the linux with gparted, windows can't do it.
+[02:57] <shape> wilee-nilee: http://answers.microsoft.com/en-us/windows/forum/windows_vista-performance/extend-volume-greyed-out-disk-management-windows/a56eae24-8d07-4956-9430-b2e79686af3a
+[02:57] <utfans05> veryhappy, what driver are you currently running?
+[02:58] <veryhappy> nvidia-current
+[02:58] <veryhappy> utfans05: nvidia-current
+[02:58] <wilee-nilee> shape, That is an extended you made in ubuntu with a logical ubuntu partition right?
+[02:58] <shape> wilee-nilee: yes
+[02:59] <utfans05> veryhappy, try doing the info in the 2nd post from this link http://www.pclinuxos.com/forum/index.php?topic=106650.0
