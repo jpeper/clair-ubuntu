@@ -2,6 +2,7 @@
 
 import argparse
 import glob
+import sys
 
 def read_file(filename):
     # Determine offset
@@ -16,13 +17,14 @@ def read_file(filename):
     return ans
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='A tool to combine mturk annotations.')
-    parser.add_argument('directory', help='Directory containing files to combine')
-    args = parser.parse_args()
+###    parser = argparse.ArgumentParser(description='A tool to combine mturk annotations.')
+###    parser.add_argument('directory', help='Directory containing files to combine')
+###    args = parser.parse_args()
 
     all_data = {}
     links = {}
-    for name in glob.glob(args.directory +"/*"):
+###    for name in glob.glob(args.directory +"/*"):
+    for name in sys.argv[1:]:
         data = read_file(name)
         for key in data:
             all_data[key] = all_data.get(key, 0) + data[key]
