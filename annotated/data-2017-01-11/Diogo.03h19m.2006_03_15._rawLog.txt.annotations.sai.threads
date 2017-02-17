@@ -1,0 +1,45 @@
+[03:19] <Diogo> Any GRUB gurus around?!
+[03:20] <jetscreamer> Diogo: #grub
+[03:20] <Diogo> jetscreamer, Thanks! :o)
+[03:20] <Diogo> jetscreamer, Hmmm... Even if my GRUB question is ubuntu-specific?!
+[03:21] <jetscreamer> Diogo: can't hurt to just ask in both channels
+[03:21] <Diogo> jetscreamer, Here we go, then: I'd like to 'lock' my 'recovery mode' entries, but they are inside the AUTOMAGIC section and I wouldn't like to hurt automagic, so how do I proceed?
+[03:21] <jetscreamer> dumbot
+[03:22] <jetscreamer> Diogo: you could just copy the ones and put them below the magic line
+[03:23] <Diogo> jetscreamer, Do you mean copying the line blocks of those sections and re-insert them below with the lock line included?
+[03:24] <jetscreamer> Diogo: lock line? i mean copy , title to boot,  each section you want to preserve against automagic, and paste below ethe 'end debian automagic' or whatever it says in ubuntu
+[03:26] <Diogo> jetscreamer, Ok, and then I add the 'lock' line right below the 'initrd' line, right? Will these new blocks overwrite the automagic ones?
+[03:27] <jetscreamer> Diogo: what lock line
+[03:27] <jetscreamer> you don't need a lock line, just anything under where it says end debian magic won't be touched
+[03:27] <Diogo> jetscreamer, To have an entry locked in grub, I need the 'lock' line right below the 'initrd' line, afaik...
+[03:27] <Diogo> jetscreamer, I want them password-locked.
+[03:27] <jetscreamer> Diogo: ahhh
+[03:28] <Diogo> jetscreamer, :o)
+[03:28] <Diogo> jetscreamer, And I'd like it to be set as automagically-compliant as possible. ;o)
+[03:28] <jetscreamer> Diogo: i never did passwd in grub. i thought you didn't want the automagic to touch it, like having a failsafe.
+[03:29] <Diogo> jetscreamer, Oh, no. Well, you just need the "password" line set and then add lines with 'lock' right below 'initrd'. I just didn't want to hurt the automagic system.
+[03:30] <jetscreamer> Diogo: it will be overwritten unless you add it to the auto stuff above, or cp one below the line
+[03:30] <Diogo> jetscreamer, Yeah, I was wondering if the auto stuff would solve this problem...
+[03:33] <natalie> I recently loaded a copy of 5.10 on my PC and it freezes whenever I get to the login screen.  I can't even hit CTRL+ALT+F1 to get a terminal
+[03:34] <natalie> Install
+[03:35] <Diogo> natalie, What if you boot in 'recovery mode'?
+[03:35] <natalie> I can boot i to recovery mode, but I'm fairly new to linux, so I'm not really sure what to do.
+[03:36] <Diogo> natalie, Then it could be something related to X. Do you guys think natalie should 'sudo dpkg-reconfigure x-server'?
+[03:36] <brenner> Diogo: she should have got a bluescreen.  but it's worth a shot
+[03:38] <Diogo> natalie, brenner, Sorry it's 'xserver-xorg' the name of the package.
+[03:38] <Gau> Is there a way to repair a HD using an Ubuntu LiveCD?
+[03:39] <natalie> Diogo: Will there be anything in particular that I will need to do after that, or will it fix itself?  (Sorry I'm really new)
+[03:40] <Diogo> natalie, I really don't know, but I'm hoping it will fix itself.
+[03:40] <natalie> Diogo, Brenner, Thanks for the help I will give it a try.
+[03:45] <Jhair> Diogo: that would not work
+[03:46] <Diogo> Jhair, Hmmm... How sad I am... :'(
+[03:46] <elkbuntu> Diogo, although based on debian, ubuntu isnt quite the same. what would be the point if it was ;)
+[03:47] <Diogo> elkbuntu, I know, I know. I'd just like to migrate a system to Ubuntu. Is there another way of doing this?
+[03:49] <elkbuntu> Diogo, my guess would be: backup important info (eg, home, www ...) install ubuntu, put important info into relevent places
+[03:49] <jetscreamer> no you need a good line for it in fstab.. you don't put the actual mount command
+[03:49] <Diogo> elkbuntu, Yeah, do it the traditional way. :o) No problem! Just wanted to know if there was an almost-automagic way to do it.
+[03:50] <jetscreamer> !fstab
+[03:50] <elkbuntu> Diogo, google around, you never know what people have managed to do, but it seems nobody in here knows of that way yet
+[03:51] <Diogo> elkbuntu, Ok, thanks!
+[03:53] <chmod775> is there any VPN software for ubuntu ?
+[03:53] <chmod775> How do I download it
