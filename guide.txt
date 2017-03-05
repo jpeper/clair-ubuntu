@@ -55,7 +55,8 @@ Social messages
 
 
 Question is repeated
---- Link the repeat to the original ask.
+--- Link the repeat to the original ask (e.g. if asked three times, the second
+--- and third would both link to the first).
 
 
 Message Responds to Multiple Previous Messages
