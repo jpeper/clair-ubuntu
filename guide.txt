@@ -48,10 +48,10 @@ Social messages
     [03:53] <chmod775> is there any VPN software for ubuntu ?
     [03:53] <jind> love your nick
     
---- Link these together, but treat them as a separate conversation, not linked
---- to the technical discussion. Similarly for off-topic digressions. Above,
---- <samatman_>'s comment would be linked to the previous two, but <jind>'s
---- comment would not be linked to <chmod775>'s.
+--- In the first case, <samatman_>'s comment would be linked to the previous
+--- two, but <jind>'s comment would not be linked to <chmod775>'s. The
+--- reasoning is that side comments like these are not part of the technical
+--- conversation, but rather form their own, separate conversation.
 
 
 Question is repeated
