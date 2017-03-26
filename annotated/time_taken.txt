@@ -3,6 +3,7 @@
 0:45 2008-04-30-08-first.txt.annotated.jkk
 1:30 2011-04-28-09-first.txt.annotated.jkk
 2:20 2013-12-02-21-first.txt.annotated.jkk
+3:55 2006-08-23-03-first.txt.annotated.jkk
 -unk 2012-11-24-20-first.txt.annotated.jkk
 -unk 2012-05-04-04-first.txt.annotated.jkk
 -unk 2010-02-13-01-first.txt.annotated.jkk
@@ -17,7 +18,6 @@
 -:-- 2008-04-20-09-first.txt.annotated.jkk
 -:-- 2007-09-07-07-second.txt.annotated.jkk
 -:-- 2007-01-19-07-first.txt.annotated.jkk
--:-- 2006-08-23-03-first.txt.annotated.jkk
 
 -:-- 2006-06-01-12-second.txt.annotated.jp
 -:-- 2006-06-05-12-second.txt.annotated.jp
