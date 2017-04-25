@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
 
+# For the definition of the metric, see https://en.wikipedia.org/wiki/Variation_of_information
+
 from __future__ import print_function
 
 import argparse
-import logging
+import math
 import sys
 
 def read_clusters(filename):
     ans = {}
-    cfile = "all"
+    cfile = ""
     for line in open(filename):
         if ':' in line:
             cfile = ':'.join(line.split(':')[:-1])
             line = line.split(":")[-1]
         cluster = {int(v) for v in line.split()}
-        ans.setdefault(cfile, []).add(cluster)
+        ans.setdefault(cfile, []).append(cluster)
     return ans
 
 if __name__ == '__main__':
@@ -27,38 +29,46 @@ if __name__ == '__main__':
     gold = read_clusters(args.gold)
 
     scores = {}
-    total_points = 0
+    points = {}
     # Output only in one or the other
     for filename in auto:
+        for cluster in auto[filename]:
+            points.setdefault(filename, set()).update(cluster)
         if filename not in gold:
-            scores[filename] = 0
-            total_points += sum([len(v) for v in auto[filename]])
+            scores[filename] = 0.0
     for filename in gold:
+        for cluster in gold[filename]:
+            points.setdefault(filename, set()).update(cluster)
         if filename not in auto:
-            scores[filename] = 0
-            total_points += sum([len(v) for v in gold[filename]])
+            scores[filename] = 0.0
+
+    total_points = 0
+    for filename in points:
+        total_points += len(points[filename])
+
+    # Files with both
     for filename in gold:
         if filename in auto:
+            scores[filename] = 0.0
+            for cluster_g in gold[filename]:
+                for cluster_a in auto[filename]:
+                    p = len(cluster_g)
+                    q = len(cluster_a)
+                    r = len(cluster_a.intersection(cluster_g))
+                    if r != 0:
+                        to_add = - (r / total_points) * (math.log(r / p, 2) + math.log(r / q, 2))
+                        scores[filename] += to_add
 
-    # Simple, but slow implementation (should use a disjoint-set)
-    clusters = []
-    for line in sys.stdin:
-        parts = line.strip().split()
-        nums = set([int(p) for p in parts if p != '-'])
+    max_score = math.log(total_points, 2)
+    print('Worst score:', max_score, 'Total items:', total_points)
+    print("VI, Normalised-VI, Filename (if given)")
 
-        to_merge = []
-        for i, cluster in enumerate(clusters):
-            if len(cluster.intersection(nums)) > 0:
-                to_merge.append(i)
+    total = 0
+    for filename in scores:
+        max_score = math.log(len(points[filename]), 2)
+        total += scores[filename]
+        print(scores[filename], scores[filename] / max_score, filename)
 
-        # If we found no intersection, create a new set
-        to_merge.sort(reverse=True)
-        merged = set()
-        for i in to_merge:
-            merged.update(clusters[i])
-            clusters.pop(i)
-        merged.update(nums)
-        clusters.append(merged)
-
-    for cluster in clusters:
-        print(" ".join([str(v) for v in cluster]))
+    if len(scores) > 1:
+        max_score = math.log(total_points, 2)
+        print(total, total / max_score, 'all files combined')
