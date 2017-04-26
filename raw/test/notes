@@ -1,0 +1,15 @@
+Chosen by:
+1 - Filter out all hours that are in the max or min 5% for users, messages, or addressing
+2 - Randomly select 10 hours
+3 - For busy hours, keep the first 100 messgaes, for quiet hours, add messages from the following hour to get up to 100
+
+All 0 ubuntu/2015/11/2015-11-26.txt:10am u:16 m:54 %:37.03703703703704
+All 0 ubuntu/2015/06/2015-06-12.txt:20am u:19 m:83 %:34.93975903614458
+All 0 ubuntu/2015/09/2015-09-25.txt:19am u:25 m:108 %:46.2962962962963
+All 0 ubuntu/2015/04/2015-04-19.txt:18am u:17 m:182 %:41.20879120879121
+All 0 ubuntu/2015/10/2015-10-19.txt:16am u:23 m:156 %:53.84615384615385
+All 0 ubuntu/2015/01/2015-01-20.txt:04am u:13 m:157 %:54.77707006369427
+All 0 ubuntu/2015/08/2015-08-10.txt:08am u:15 m:118 %:27.966101694915253
+All 0 ubuntu/2015/12/2015-12-28.txt:16am u:13 m:71 %:33.80281690140845
+All 0 ubuntu/2015/02/2015-02-04.txt:15am u:16 m:83 %:36.144578313253014
+All 0 ubuntu/2015/10/2015-10-14.txt:21am u:15 m:155 %:25.806451612903224
