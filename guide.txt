@@ -31,7 +31,10 @@ above it.
   >> Now press 'u' to undo all links for this line
   >> Hide the help information at the bottom by typing 'h'
 
-Do not do it yet, but you can move between files in your list with / and \. Any
+To search for text, type a '/' and the text you want to search for. Press ENTER
+and then n or p to go to the next or previous occurrence.
+
+Do not do it yet, but you can move between files in your list with '.' and ','. Any
 annotations will be saved when you change files, and recovered when you return.
 To quit, type 'q'.
 

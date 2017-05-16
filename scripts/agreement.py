@@ -45,9 +45,9 @@ if __name__ == '__main__':
 
     # Harmonic mean of the two values for how many we had in common
     common = len(pairs0.intersection(pairs1))
-    val0 = common / len(pairs0)
-    val1 = common / len(pairs1)
+    val0 = 100 * common / len(pairs0)
+    val1 = 100 * common / len(pairs1)
     f1 = 2 * val0 * val1 / (val0 + val1)
 
-    print("F1", 100 * f1)
-    print("Kappa", kappa)
+    print("F1    {:.2f}   from {:.2f} {:.2f}".format(f1, val0, val1))
+    print("Kappa {:.3f}".format(kappa))

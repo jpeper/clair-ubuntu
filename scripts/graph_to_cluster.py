@@ -22,6 +22,7 @@ if __name__ == '__main__':
                 to_merge.append(i)
 
         # If we found no intersection, create a new set
+        # This sort is needed to have the pop below work correctly
         to_merge.sort(reverse=True)
         merged = set()
         for i in to_merge:
