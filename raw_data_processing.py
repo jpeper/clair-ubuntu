@@ -1,4 +1,5 @@
 import re
+import sys
 import operator
 import pdb
 import numpy
@@ -11,7 +12,7 @@ from sklearn.cluster import SpectralClustering
 from sklearn.cluster import MeanShift
 from sklearn.preprocessing import normalize
 
-input_file = "ubuntu_medium_sample.txt"
+
 
 class Post(object):    
     # constructor
@@ -188,7 +189,7 @@ def tokenize(message):
 	split_message = message.split()
 	return split_message
 
-def clustering(entries_list):
+def kmeans_clustering(entries_list):
 
 	# determine number of clusters
 	k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
@@ -240,9 +241,9 @@ def clustering(entries_list):
 		print ("_"*100)
 
 
-'''
+
 # MEAN SHIFT
-def clustering(entries_list):
+def mshift_clustering(entries_list):
 
 	# determine number of clusters
 	#k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
@@ -286,11 +287,11 @@ def clustering(entries_list):
 				print (message_list[j])
 		print ("\nCLUSTER " + str(i))
 		print ("_"*100)
-'''
 
-'''
+
+
 # SPECTRAL CLUSTERING
-def clustering(entries_list):
+def spectral_clustering(entries_list):
 
 	# determine number of clusters
 	k = int(input("Number of messsages = " + str(len(entries)) + ". How many clusters would you like? Enter value in range (0," + str(len(entries)) + "]\n"))
@@ -321,37 +322,10 @@ def clustering(entries_list):
 				print (message_list[j])
 		print ("\nCLUSTER ", i)
 		print ("_"*100, "\n")
-'''
-
-	
-
-'''
-	kmeans.fit(bin_matrix)
-
-	dist = euclidean(bin_matrix[2,:], bin_matrix[3,:])
-	
-
-	centroids = kmeans.cluster_centers_
-	labels = kmeans.labels_
-
-	for i in range(k):
-		min_dist = 1000000000;
-		min_index = 0;
-
-		print ("\n"*2, "\nMESSAGES IN CLUSTER",i,':')
-		for j in range(len(message_list)):
-			if (labels[j] == i):
-				if (euclidean(bin_matrix[j], centroids[i]) < min_dist):
-					min_dist = euclidean(bin_matrix[j], centroids[i]) 
-					min_index = j
-				print (message_list[j])
-		print ("\nCLUSTER " + str(i) + " MEDOID:\n" + message_list[min_index])
-		print ("_"*100)
-	'''
 
 
 # INPUT FILE
-myfile = open(input_file, 'r')
+myfile = open(sys.argv[1], 'r')
 file_processing(myfile)
 
 # run annotation function if requested
@@ -360,10 +334,13 @@ if do_annotation == 'yes':
 	annotate(entries)
 
 # run clustering fuction if requested
-do_clustering = input ("Would you like to do clustering? (yes/no)\n")
-if do_clustering == 'yes':
-	clustering(entries)
-
+do_clustering = input ("Perform clustering? (no/kmeans/spectral/meanshift)\n")
+if do_clustering == 'kmeans':
+	kmeans_clustering(entries)
+if do_clustering == 'spectral':
+    spectral_clustering(entries)
+if do_clustering == 'meanshift':
+    mshift_clustering(entries)
 
 
 
