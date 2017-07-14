@@ -1,0 +1,200 @@
+[20:16] <balance> *i mean kate
+[20:17] <zerowaitstate> k1l: he needs a -a on the tee command, in order to append
+[20:17] <k1l> Guest34450: right, you need "-a" for tee to append. i forgot that
+[20:18] <job-home> hi
+[20:18] <daftykins> hi
+[20:18] <k1l> zerowaitstate: thanks
+[20:19] <Guest34450> k1l, thanks that did the trick, thanks man!
+[20:21] <zerowaitstate> sortkwik: cd to untarred source tree, "sudo auto-apt run ./configure", then do "make && sudo checkinstall". That helps deal with the dependency hell that comes with building C stuff from source.
+[20:22] <zerowaitstate> sortkwik: before that will work though, you need to "sudo apt-get install auto-apt build-essential checkinstall"
+[20:22] <sortkwik> zerowaitstate: so run "checkinstall" after I run "make"?
+[20:22] <sortkwik> Got it
+[20:22] <zerowaitstate> sortkwik: then "sudo auto-apt update && sudo auto-apt updatedb && sudo auto-apt update-local"
+[20:22] <zerowaitstate> sortkwik: then do the cd to untarred...
+[20:24] <sortkwik> zerowaitstate: Already ran "./congifure" and now installing said programs you stated earlier then I will run "make" and then "checkinstall"
+[20:24] <zerowaitstate> sortkwik: so ./configure didn't produce errors?
+[20:24] <sortkwik> zerowaitstate: None
+[20:25] <zerowaitstate> sortkwik: k. usually when compiling from source on debian, you often are missing "-dev" packages, which contain the header files (.h) for libraries you are compiling against
+[20:25] <sortkwik> This will be my first compiled program from source code, I'm excited.
+[20:25] <dickGraySon> so what is this about
+[20:25] <zerowaitstate> sortkwik: auto-apt is designed to automatically fetch the necessary -dev packages during the ./configure step
+[20:26] <sortkwik> zerowaitstate: We'll see how it pans out and go from there. Would the errors have been glaring in all the scrolling text? I didn't see anything.
+[20:26] <zerowaitstate> sortkwik: however, if ./configure isn't producing errors, then means auto-apt isn't necessary
+[20:26] <zerowaitstate> sortkwik: yeah, it will fail loudly
+[20:26] <dickGraySon> \r
+[20:26] <SpyderSnake> ciao
+[20:26] <sortkwik> zerowaitstate: Awesome, no loud fails then.
+[20:26] <SpyderSnake> !list
+[20:26] <ubottu> SpyderSnake: No warez here! This is not a file sharing channel (or network); read the channel topic. If you're looking for information about me, type « /msg ubottu !bot ». If you're looking for a channel, see « /msg ubottu !alis ».
+[20:27] <dickGraySon> any1 know how to run a command remotely
+[20:27] <dickGraySon> using ssh
+=== robcsi_ is now known as robcsi
+[20:27] <sortkwik> zerowaitstate: I'll let you know how it goes, it looks like it might take awhile.
+[20:27] <gull> Hi guy, i've got some really annoying (not)bug happening to my laptop.
+[20:27] <gull> i have a xmodmap config file which i use to redefine some buttons, but when i replug my usb mouse it looks like xmodmad reserts its config, so i have to run it again with my own config
+[20:28] <gull> what exactly happens when i plug my usb mouse?
+[20:28] <zerowaitstate> sortkwik: on a generic linux system, make install directly copies the necessary files to the default install location (this is normally set up by configure, and it is normally under /usr/local by default). However, checkinstall analyzes the locations where the "make install" script is trying to copy stuff and instead makes a .deb package out of it
+[20:28] <dickGraySon> remote command via ssh in background?
+[20:28] <k1l> dickGraySon: use screen
+[20:28] <Pici> or tmux
+[20:29] <zerowaitstate> sortkwik: if you don't use checkinstall, and do it the generic linux way, you have to keep the source around, so you can run "make uninstall" later to remove the software. the deb package makes that unnecessary, as you can use dpkg or other tools to remove it
+[20:29] <brother_> hi all, somebody help me doing this from command line
+[20:29] <brother_> I want to replace multiple empty lines with just one blank line, recursively in all the files in a directory, and they have to keep their filenames
+[20:29] <sortkwik> zerowaitstate: That makes sense, sort of. Still a bit of a newb at this but we're all here to learn!!
+[20:29] <reisio> brother_: what's the one blank line for?
+[20:30] <sortkwik> Slow mo compiling right now. I don't have a super speedy machine. (=
+[20:30] <brother_> reisio to keep it organized
+[20:30] <brother_> not to remove them all
+[20:30] <dickGraySon> @
+[20:31] <zerowaitstate> sortkwik: as I learned on freenode a day or two ago, you can apparently do something like "make -j 2" to run multiple build tasks in parallel, but you have to be careful when you use it
+[20:31] <reisio> brother_: uniq would do it, though it'd also remove other duplicate consecutive lines
+[20:31] <zerowaitstate> sortkwik: compiling is CPU bound, so the more cores you can use, the faster you will get done
+[20:31] <reisio> brother_: another way: perl -0pe 's/\n\n+/\n\n/g'
+[20:32] <brother_> aha reisio, and how can I apply that to all the files in the directory, and they keep their original name after the removal of the blank lines?
+[20:34] <reisio> brother_: how big are these files?
+[20:35] <sortkwik> zerowaitstate: Yeah, I have 4 cores but not a super speedy cores. toshiba satellite radius 11
+[20:35] <reisio> brother_: I'd probably do something like: mkdir ../cleaned; ls | while IFS='' read -r item; do uniq "$item" > ../cleaned/"$item"; done
+[20:35] <brother_> reisio they vary from 4 KB to 150 KB in some cases, but norm is 30 kb let's say
+[20:35] <reisio> brother_: okay, so tiny
+[20:35] <sortkwik> zerowaitstate: My monitor shows all 4 cores are chugging away.
+[20:35] <s1dr0> hola a toc from italy
+[20:35] <reisio> brother_: fine to make a duplicated 'cleaned' dir, then
+[20:35] <zerowaitstate> sortkwik: well, never mind then
+[20:35] <reisio> if they were huge files, you'd have to modify them and delete the original basically simultaneously, which you have to be more careful about
+[20:35] <reisio> copying to another dir is simpler, and requires less care :)
+[20:36] <reisio> brother_: what's nice about that loop is you just make the ls output what you want, if there are exceptions
+[20:36] <reisio> brother_: so "ls | while IFS=''..." could be instead "ls | egrep -iv 'not wanted|also not wanted' | while IFS=''..."
+[20:37] <reisio> lots of other ways you could do it, though
+[20:37] <sortkwik> zerowaitstate: Yeah, I am not going to try any parallel builds.
+[20:40] <brother_> reisio but in that expresion, where do you refer to the files inside the directory?
+[20:40] <reisio> brother_: 'ls'
+[20:40] <reisio> you'd run it from in the dir
+[20:41] <reisio> if the output of 'ls' is all the files you want to process, and nothing more, then it's good to go
+[20:41] <reisio> mkdir ../cleaned; ls | while IFS='' read -r item; do uniq "$item" > ../cleaned/"$item"; done
+=== jtrucks_ is now known as jtrucks
+[20:44] <brother_> ok reisio I would try what you suggest, thanks for your interest
+[20:45] <aivi> Good morning all
+[20:45] <reisio> mornin'
+[20:45] <gull> any ideas what happens behind the scene when initializing usb mouse?
+[20:46] <reisio> brother_: this would also work, but is way less cautious :p -> perl -i -0pe 's/\n\n+/\n\n/g' *
+[20:46] <reisio> gull: ?
+[20:46] <gull> reisio: my xmodmap resets my custom setting to default
+[20:46] <brother_> aha, yes I will try that too, making sure I have a back up before, thanks reisio
+[20:51] <gull> Or whats the proper way to redefining keys in linux
+[20:51] <reisio> xmodmap is okay
+[20:51] <GodFather> \d
+[20:52] <reisio> GodFather: you're a delicious pepper
+[20:53] <gull> there must something a lever higher, cause autorunnig "xmodmap .xmodmap" on login dosent help
+[20:53] <gull> i have to type that manually in terminal
+[20:54] <gull> feels like something overpowering xmodmaps behavior
+[20:54] <korne> hello
+[20:55] <jancoow> Hello, could someone help me fix a broken package of python3?
+[20:55] <jancoow> i'm on ubuntu server and i can't reinstall it for some reason
+[20:55] <jancoow> The threading module is missing
+=== m_wynn is now known as incompletebreads
+[20:57] <daftykins> share a pastebin of what package management processes error, so someone can assist - jancoow
+=== incompletebreads is now known as m_wynn
+[20:58] <eb0t> i dont knwo what to install ...ubuntu gentoo or archlinux
+[20:59] <k1l> eb0t: ubuntu. for all other answers #ubuntu is obviously wrong
+[20:59] <eb0t> hmm
+[20:59]  * eb0t slaps his thigh
+[21:08] <jancoow>  daftykins: https://jancokock.me/f/83ccf
+[21:08] <regum> hi everyone, why doesn't ssh work if the host computer hasn't logged in?
+[21:08] <regum> how can i fix this?
+[21:08] <daftykins> jancoow: i meant to the channel really and not me, i know nothing about python :)
+[21:09] <daftykins> regum: sounds like an issue that's come about through upgrading.
+[21:09] <regum> daftykins, what do you mean'
+[21:09] <k1l> regum: can you give more details?
+[21:10] <regum> yeah
+[21:10] <regum> I have a raspberry pi 2, and it boots as root
+[21:10] <regum> i can't ssh into it until I log in as a user
+[21:10] <regum> it says 'connection refused'
+[21:10] <blakdog> Do the ubuntu lts versions able to run as a live cd ?
+[21:11] <bekks> regum: Because the root accoutn is disabled in Ubuntu, by default.
+[21:11] <daftykins> blakdog: run as live for testing, yes
+[21:11] <regum> which is really inconvenient, as it means I have to plug a keyboard every time I turn it on
+[21:11] <blakdog> thanks
+[21:11] <daftykins> regum: so reconfigure SSHd
+[21:11] <jancoow> daftykins: oh haha sorry
+[21:11] <regum> how can i do that?
+[21:12] <regum> what should I change?
+[21:12] <jancoow> https://jancokock.me/f/83ccf someone can help me reinstalling python3?
+[21:12] <jancoow> its broken
+[21:12] <k1l> regum: ask in #ubuntu-arm if that sort of setup is common on that arm image. its not on pc
+[21:12] <regum> ok, I'll try there
+[21:12] <regum> thanks
+[21:12] <daftykins> jancoow: also i meant to pastebin what happens when you try "sudo apt-get install --reinstall <pythonpackage>" :)
+[21:12] <regum> there's noone there
+[21:12] <regum> I just remembered I sked a while ago and there have been no answers
+[21:12] <regum> it's always kinda dead
+[21:12] <daftykins> regum: sure you didn't typo the channel?
+[21:13] <daftykins> heh, figures.
+[21:13] <regum> I mean, there are people, but they seem to be afk
+[21:13] <regum> or just ignoring the channel
+[21:13] <daftykins> you can't say they're not there in 5 seconds of joining
+[21:14] <regum> it's been close to 10 min now
+[21:14] <regum> and it's always kinda empty, it's not my first visit
+[21:14] <daftykins> and i guess your issue is mission critical :)
+[21:14] <k1l> regum: welcome to irc
+[21:14] <daftykins> regum: so to be sure, you're ssh'ing as username@host when you try after the Pi boots up?
+[21:15] <regum> no, just ssh hostname
+[21:15] <regum> the users have the same name
+[21:15] <regum> that way it's less of a hassle
+[21:15] <daftykins> ok so it's not trying root@ to begin with, that's good
+[21:16] <daftykins> it's possible SSHd isn't even running until your user logs in then
+[21:16] <regum> is there any way i can set it up so that it logs into my user at boot time?
+[21:16] <regum> yeah, it's probably something like that
+[21:16] <regum> because after I log in it works perfectly
+[21:16] <bekks> regum: Ensure your raspi isnt in sleep mode or something, and wakes up only upon the user logging in.
+[21:16] <k1l> regum: is it encrypted?
+[21:17] <regum> it isn't encrypted
+[21:17] <regum> and it isn0t in sleep mode
+[21:17] <bekks> How do you know, if you arent logged in? :)
+[21:17] <regum> I can work on it as root without logging in if it's connected to a display
+[21:17] <regum> I connected a display before to check
+[21:17] <daftykins> check SSHd is configured to run at boot
+[21:17] <bekks> ah :)
+[21:17] <regum> that's how I know
+[21:18] <regum> how can I check that?
+[21:18] <k1l> i still dont understand what the issue is
+[21:18] <daftykins> don't know.
+[21:18] <daftykins> it's a weird Pi image for ARM so all of my usual bets are off
+[21:18] <daftykins> what about that boot text file from last time?
+[21:18] <regum> k1l, my pi boots as root, and it refuses ssh connection until i log into it from the same pi
+[21:18] <daftykins> does it mention SSHd?
+[21:19] <k1l> regum: no. it boots as nothing.
+[21:19] <regum> i don't think it did
+[21:19] <regum> I'll check
+[21:20] <k1l> regum: seems you are mixing loging in and the base system running.
+[21:20] <regum> dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootwait single
+[21:20] <regum> this is what it says
+[21:20] <bindi> Can anyone point me to an up to date guide for running a program (irssi) in a jail?
+[21:20] <jancoow> daftyskins: well that's the problem, no errors lol
+[21:21] <regum> I just added 'single' to that file, so that it wouldn't start the gui
+=== wook is now known as Guest10242
+[21:21] <jancoow> daftyskins: but i can't use pip3 or easy install because all of these packages are using threading and i have NO idea why this package is gone
+[21:21] <daftykins> jancoow: i wonder if this is the bad build i heard about on the bug site
+[21:21] <jancoow> yes it is
+[21:21] <daftykins> and that bug doesn't have an answer yet?
+[21:21] <regum> can't I add some sort of script at boot time that inputs 3 commands?
+[21:21] <regum> exit
+[21:21] <regum> username
+[21:21] <regum> passwrd
+[21:22] <regum> that logs me in
+[21:22] <daftykins> not really.
+[21:22] <k1l> regum: well, you boot into single user mode then. that is not loading the regular system then
+[21:22] <k1l> regum: so better use text.
+[21:22] <daftykins> ah yeah regum did that yesterday
+[21:22] <jancoow> last time i asked it here also because "python.h" was missing. Then someone helped me downgrading some stuff to get it extally updated. Since then the module threading is missing for some reason
+[21:22] <daftykins> i did suggest text but you did single instead, mmm
+[21:22] <daftykins> so there you go.
+[21:22] <daftykins> k1l: good catch!
+[21:22] <regum> but i can't use grubs
+[21:22] <regum> that's why
+[21:23] <daftykins> put text into the boot text file instead
+[21:23] <k1l> regum: so there you need to talk to the guys that made that image
+[21:23] <Silentloud> how do i enable firewall
+[21:23] <regum> the image boots into text
+=== roo_ is now known as roo
+[21:23] <daftykins> !ufw | Silentloud
+[21:23] <ubottu> Silentloud: Ubuntu, like any other Linux distribution, has built-in firewall capabilities. The firewall is managed using the 'ufw' command - see https://help.ubuntu.com/community/UFW | GUI frontends such as gufw and ufw-kde also exist. | An alternative to ufw is the 'iptables' command - See https://help.ubuntu.com/community/IptablesHowTo

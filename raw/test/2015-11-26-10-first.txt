@@ -1,0 +1,200 @@
+[08:14] <leeyaa> i need to start a service with ionice setting. on centos there is a NICELEVEL variable at /etc/rc.d/init.d/functions is there something similar for ubuntu ?
+[08:15] <leeyaa> can i just edit the init.d script and add nice level from there ?
+=== L235_ is now known as L235
+[08:16] <barnex> leeyaa: http://upstart.ubuntu.com/wiki/Stanzas#nice I think this
+[08:17] <leeyaa> barnex: i need ionie
+[08:17] <leeyaa> ionice*
+=== Iacobus is now known as Guest4184
+[08:19] <barnex> leeyaa: oh ok, seems like here is some advice how to work around lack of stanza: https://bugs.launchpad.net/upstart/+bug/1082645
+[08:19] <ubottu> Launchpad bug 1082645 in upstart "Add support for ionice stanza" [Wishlist,Triaged]
+=== CaPta1n_m0nK3YnU is now known as CaPtn_m0nK3YnU
+=== CaPtn_m0nK3YnU is now known as CaPtn_m0nK3YnUtZ
+[08:20] <bingo> i want to be  a linux  admin  ,,,, what should i do ?
+[08:20] <barnex> bingo: get a job administrating linux boxes
+[08:20] <leeyaa> barnex: not sure how this will work. do i include the extra file or something ?
+[08:21] <barnex> leeyaa: dunno, maybe someone else knows.
+[08:22] <barnex> bingo: just look what they are looking for in jobs offers, sometimes it's as easy as 'knows some linux', sometimes certificates and/or formal education is required
+=== _Dumle29 is now known as Dumle29
+[08:23] <barnex> bingo: I started as a code monkey, but we had no admin at the time and my work sort of went that direction, since everyone was linux-clueless, learned random stuff like db replication, heartbeat and rack servers on my way up from apache virtual machine running drupal
+=== neurotus is now known as Guest3895
+=== jason is now known as Guest51582
+=== ara is now known as Guest26179
+=== michael__ is now known as Guest3036
+[08:35] <OerHeks>
+[08:36] <asad__> Hi. I want to disable all the output that appears before the ubuntu splash screen. How can I do that?
+=== Caelum_ is now known as Caelum
+=== shinenelson_ is now known as shinenelson
+=== Kamilion|ZNC is now known as Kamilion
+[08:43] <rogger_h> guys, there is a way to tell my old server to redirect all data to the new server?
+=== crane_ is now known as crane
+=== UKn0Meh is now known as TootInDaaPoopChu
+=== dunk_ is now known as dunk
+[08:45] <clorisu> ah crap. i was changing all my passwords with randomly generated keepassx strings and the program crashed before i saved it. does anyone know if it stores a temp file or anything? otherwise im locked out from the accounts
+=== TootInDaaPoopChu is now known as TootInDaPoopChut
+[08:45] <asad__> how do I get rid of all the messages that appear before the ubuntu splash screen appears?
+=== TootInDaPoopChut is now known as LubeThePoopChute
+=== jason is now known as Guest94461
+=== regedit_ is now known as regedit
+=== LubeThePoopChute is now known as HerpTheDerpyOrca
+[08:53] <C00nHunter> niggers?
+[08:53] <C00nHunter> any niggers use Grav in Ubuntu ?
+[08:54] <barnex>  how to get banned 101
+[08:54] <C00nHunter> a Content Management System [CMS]
+=== kerdel is now known as VenomByte
+[08:54] <VenomByte> anyone need help?
+[08:55] <kloeri> C00nHunter: drop the stupidity
+[08:55] <Old_Dog> I've been told that I do.
+[08:55] <Old_Dog> need help, that is
+[08:56] <C00nHunter> NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGG
+[08:56] <OerHeks> !ops
+[08:56] <ubottu> Help! Channel emergency! (ONLY use this trigger in emergencies) - Pici, Myrtti, jrib, Amaranth, tonyyarusso, Nalioth, lamont, CarlK, elky, mneptok, PriceChild, Tm_T, jpds, ikonia, Flannel, genii, wgrant, stdin, h00k, IdleOne, nhandler, Jordan_U, popey, Corey, ocean, cprofitt, djones, Madpilot, gnomefreak, lhavelund, k1l, rww, phunyguy, bazhang
+[08:56] <C00nHunter> ERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS N
+[08:56] <C00nHunter> IGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERS NIGGERSNIGGERS
+[08:58] <VenomByte> omg that guy
+[08:58] <Old_Dog> that sort of thing happen often here?
+[08:59] <niyaz> hi
+[08:59] <VenomByte> Old_Dog: never seen that before lol
+[08:59] <VenomByte> niyaz: hi
+[09:00] <Old_Dog> hope to never see it again. heh
+[09:00] <Old_Dog> clear
+[09:00] <VenomByte> Old_Dog: lame
+[09:00] <VenomByte> Old_Dog: u need help?
+[09:00] <Old_Dog> yeah
+[09:00] <Old_Dog> for sure
+[09:01] <VenomByte> Old_Dog: with?
+[09:01] <Old_Dog> with? oh, need help you mean?
+[09:01] <VenomByte> Old_Dog: I was asking if you needed any help :)
+=== olaf is now known as Guest45805
+[09:03] <Old_Dog> Just would like to be able to move my panel off the monitor it insists on being on, onto the other monitor.  Mate DE
+[09:03] <Old_Dog> Seems to be a Mate issue.  Does the same thing on LinuxMint.
+[09:04] <Old_Dog> Not a terribly important issue, just would like to have it where I want it.
+[09:06] <VenomByte> Old_Dog: I don't use Mate DE, can't help you sorry
+=== erry_ is now known as erry
+[09:07] <VenomByte> Old_Dog: I mostly use cinnamon, unity, gnome-shell and some other stuff
+[09:07] <Old_Dog> no problem
+[09:07] <Old_Dog> thanks anyway
+=== Sargun_ is now known as Sargun
+[09:08] <dangermouse> How do I replace a nameserver entry, without restarting networking/interface? Updating /etc/network/interface is easy enough, but how do "sync" the change with resolvconf and then /etc/resolv.conf, ensuring to only replace the old ip with the new?
+=== root is now known as Guest71810
+=== mg is now known as Guest73696
+[09:15] <SCHAAP137> should i get nVidia or AMD GPU? and why?
+=== morfin60 is now known as morfin
+[09:16] <Old_Dog> nVidia  I would say.  Fewer compatibility issues.
+[09:17] <Old_Dog> or better linux support from nVidia, I guess is the way I should have said that.
+[09:18] <Old_Dog> wow! lots of folks coming and going.  Not staying very long.  seems strange.
+=== Thaurwyl1h is now known as Thaurwylth
+=== Guest39890 is now known as ZeeNoodley
+=== root4 is now known as hitsuzen
+=== RyanKnack_ is now known as RyanKnack
+=== it is now known as Guest51006
+[09:36] <Guest51006> hello
+[09:36] <trijntje> hi there
+[09:41] <eminent> hi, i am a noob, having trouble connecting to a wifi network that uses WPA2 Enterprize auth when i connect with my iphone, im asked for a username and password. then im presented with a digital certificate. i choose trust and thats it. phone is connected im trying to connect to the same network from kali linux , i provided the required information(uname and passwd) and kept the certificate field empty, i skipped the ca cert part becau
+[09:42] <zero> hi
+=== zero is now known as Guest78405
+[09:42] <eminent> hello
+[09:42] <Guest78405> hello
+[09:44] <trijntje> eminent: your message got truncated after "i skipped the ca cert"
+[09:48] <qu4nt1n> !s ncis new orleans
+[09:48] <ubottu> qu4nt1n: I am only a bot, please don't think I'm intelligent :)
+=== himanshu is now known as Guest21241
+[10:03] <e66> I have a package myserver-23 installed. But I pushed myserver-22 in the tip of apt server. Now if i install myserver following an apt-get update it doesnt' install version 22. It says still in the newest version.
+[10:04] <k1l> e66: apt-cache policy <packagename>
+[10:04] <jundat95> oh
+[10:04] <jundat95> hello
+[10:06] <trijntje> a lot of people saying hello today ;)
+[10:08] <e66> k1l:  in the output I see something like this, http://dpaste.com/1BQW9YE
+[10:09] <k1l> e66: apt will always take the highest version number if its not pinned. you can either use apt-get install package:versionnumber   or use pinning to restrict it to a version
+[10:10] <e66> how to use the pinning?
+[10:10] <e66> k1l: ?
+[10:11] <k1l> !pinning
+[10:11] <ubottu> pinning is an advanced feature that APT can use to prefer particular packages over others. See https://help.ubuntu.com/community/PinningHowto
+[10:11] <k1l> e66: ^
+[10:15] <hesher> dunno if this is the place for this but, netflix on xubuntu? (im new to this)
+[10:16] <Skyrider> Anyone here knows a good (free) bandwidth monitor for mysql?
+[10:17] <mcphail> hesher: install chrome, and netflix will work
+[10:19] <hesher> oh thanks. Did you type my name or is there a reply function?
+[10:21] <mcphail> hesher: just type the first couple of characters in a name then press "tab" to complete. The IRC client will highlight messages with your own nick
+[10:22] <hesher> mcphail, neat thx
+[10:25] <Skyrider> no one?
+=== mc68030_ is now known as mc68030
+=== pesari_ is now known as pesari
+[10:33] <VenomByte> Skyrider: sup?
+[10:33] <Skyrider> I'm looking for a bandwidth monitor for mysql ^^.
+[10:34] <VenomByte> Skyrider: mytop? :D
+[10:34] <Skyrider> web, preferred.
+[10:35] <Skyrider> Like awstats, generating daily usage.
+[10:36] <VenomByte> Skyrider: did you lookup for new relic? and maybe this can be something? http://www.monitor.us/
+[10:36] <VenomByte> Skyrider: I don't use any monitor myself
+=== neurotus is now known as Guest77656
+[10:38] <Skyrider> I'll have a looky, thanks.
+[10:39] <tanulo3> szevasztok cigányok
+[10:40] <jatt> igen
+[10:41] <Skyrider> VenomByte: Do you see any 'mysql' monitor feature on the site? :o
+[10:41] <Skyrider> As I can't appear to find any.
+[10:42] <nitish> In default ubuntu ui how can I switch/add a new workspace? ctrl+alt+up/down (like gnome-shell) is not working.
+=== mosene_ is now known as mosene
+[10:44] <jiggerypokery> hello, when I shutdown I get the following error; Error getting authority: Error initializing authority: Could not connect: No such file or directory (g-io-error-quark, 1)
+=== tallsam is now known as Guest3589
+[10:45] <jiggerypokery> I've googled around and it looks like the issue is to do with /dev/sdb2 not unmounting correctly
+[10:45] <jiggerypokery> this happens to be my boot volume, ext2 on an ssd
+[10:46] <VenomByte> Skyrider: I'm pretty sure new relic has
+[10:46] <nitish> How can I change/add workspace in 14.04?
+[10:46] <cap0> nitish: i think workspaces are disabled by default in unity now. you can enable them in unity-tweak-tool (I think)
+[10:46] <jiggerypokery> From journalctl -xb >>>> systemd-fsck[686]: /dev/sdb2 was not cleanly unmounted, check forced.
+[10:46] <VenomByte> nitish: u can use ubuntu tweak or compiz setting manager for this
+[10:47] <jiggerypokery> On startup I always boot into emergency mode
+[10:47] <jiggerypokery> ubuntu itself seems to operate correctly but not being able to cleanly shutdown is clearly a problem
+[10:47] <nitish> cap0: & VenomByte: Where in ubuntu-tweak?
+[10:47] <jiggerypokery> can anyone help?
+[10:49] <nitish> there is no on/off setting in ubuntu-tweak for workspace.
+=== sk_ is now known as Guest54970
+[10:50] <cap0> nitish: that's probably it, and there should be a setting to adjust the number of workspaces too somewhere. I'm on Ubuntu-Gnome, so I don't have unity-tweak-tool installed
+[10:52] <nitish> cap0: is gnome better than unity?
+[10:52] <nitish> cap0: I've also gnome installed, not like that much.
+[10:54] <Arunangshu> Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+[10:54] <gerep> Hello good people. I have an id_rsa.pub key with permission 0600 ( I think that is the correct one ) and I'm trying to add it to my ssh-agent like this: ssh-add ~/.ssh/id_rsa.pub but it asks for password but when I created it, I didn't define any password
+[10:54] <gerep> What am I doing wrong?
+[10:55] <gerep> To make a test I created another key but the same problem happens
+=== Fuchs_ is now known as Fuchs
+[10:58] <nitish> In gnome transparancy in terminal is not working. Is this a bug? Or how can I fix this?
+[10:59] <Arunangshu>  Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+=== Guest73696 is now known as mg-
+=== jamesstupidly is now known as jamesstnaley
+=== jamesstnaley is now known as jamesstanley
+[11:01] <shredding> if i do sudo apt-add-repository ppa:brightbox/ruby-ng in 14.04 i receive "sudo: apt-add-repository: command not found"
+[11:01] <shredding> how's that?
+[11:01] <anto> Hi guys, my Lenovo ThinkPad X61s's wifi seems to be disabled most of the time, showing "Wifi disabled by hardware switch". The only option for a "hardware switch" seems to be the 'Fn' + F2 key combination, which does not seem to have any effect on this disabled status, from within Ubuntu 14.04. What could be a possible fix?
+[11:02] <nitish> anto: Do you have dual boot?
+[11:02] <Arunangshu>  Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+[11:03] <anto> Yes, windows xp, but not functional
+[11:04] <anto> nitish, I tried one option which suggested resetting the bios, but that seems to work only for the first boot.
+[11:05] <nitish> anto: wifi and bluetooth effects in the dual boot. If you want to use them without problem then don't turn it off in other os.
+[11:06] <anto> okay
+[11:06] <anto> nitish, Thank You!
+[11:06] <kostkon> !elementary | Arunangshu
+[11:06] <ubottu> Arunangshu: Elementary OS is an Ubuntu derivative which is supported in their IRC channel #elementary on irc.freenode.net - http://elementaryos.org/ for more information on this distribution.
+[11:07] <gerep> shredding: https://duckduckgo.com/?q=sudo%3A+apt-add-repository%3A+command+not+found&t=canonical first result
+[11:07] <Arunangshu>  Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+[11:08] <killall> Sorry, user someone is not allowed to execute '/usr/local/bin/script.sh" as someone on server1
+[11:08] <killall> how do i fix this?
+[11:09] <anto> nitish, Man! There was a wifi switch! While all the time till now till my last Ubuntu update, it worked out of the box even though the switch was in OFF position!
+[11:09] <anto> nitish, http://demongin.org/blog/816/ - seems I'm not the only one! :D
+[11:09] <anto> nitish, Thanks a lot for the help man!
+[11:09] <anto> nitish++
+[11:09] <nitish> anto: most welcome.
+=== goosblabla is now known as goosfraba
+[11:12] <gerep> killall: give us some background
+[11:13] <gerep> killall: what we can say is that the user doesn't have permission to execute that file, that's all
+[11:13] <seckin> hello everyone. I make a custom  CD. Everything is okey. I burn CD. I can boot from CD and install it. But I use dd,cp or rsync clone USB stick I can't boot it. Could you help me?
+=== Chappie-san2 is now known as Chappie-san
+[11:19] <hateball> seckin: is the partition marked bootable on the usb?
+=== tolecnal_ is now known as tolecnal
+[11:26] <Arunangshu>  Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+=== rich is now known as Guest13370
+[11:27]  * TheHawk 
+=== jacekn_ is now known as jacekn
+[11:34] <vooze> Hi, I just compiled my own kernel and it all works great. But when I run apt-get upgrade it tries to replace it with ubuntu one. How can I stop that?
+[11:36] <Arunangshu>  Patching WiFi adaptor on Ubuntu it worked while patching it on elementary OS it doesn't why and how to solve it
+[11:36] <Arunangshu> Please help
+[11:37] <cfhowlett> Arunangshu, elementary is not ubuntu and is not supported here.

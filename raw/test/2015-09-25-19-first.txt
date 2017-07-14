@@ -1,0 +1,200 @@
+[18:22] <CreativeWolf> genii, did that, same error messages with iptables -L
+[18:22] <genii> CreativeWolf: I'm fresh out of ideas on it right now
+[18:22] <CreativeWolf> genii, Thanks though! :)
+[18:23] <CreativeWolf> genii, I think I might take a backup and get back to 14.04. Been running in to one too many issues with 15.04 not just on this box, on another one as well.
+[18:23] <MonkeyDust> fred1807  no, but you can type all the commands in one lie, with ; in between
+[18:23] <MonkeyDust> line*
+[18:24] <MonkeyDust> fred1807  or maybe with a script
+[18:25] <C_minus> What's the most comprehensive backup I can do without making a complete image of my Ubuntu partition?
+[18:26] <C_minus> Is there a command to view a list of everything I've installed?
+[18:26] <MonkeyDust> C_minus  rsync - a --progress ~ [from] [to]
+[18:27] <lagbox> dpkg -l | grep ii    maybe
+[18:27] <MonkeyDust> C_minus  rsync -a --progress ~ [from] [to]
+[18:29] <fred1807> how do I use the GUI file manager with sudo powers?
+[18:29] <MonkeyDust> fred1807  if you have to ask, you shouldnt do it
+[18:30] <hexagonSun_> every time I turn my computer on, I have to configure my resolution and monitor underscan, how can I make it so it works "for ever"?
+[18:31] <fred1807> MonkeyDust:  I am navigating trought the files of a SD card , it is a raspberry system, andI want to recover it
+[18:31] <fred1807> MonkeyDust: Root files
+[18:31] <C_minus> Why do people say it's easier/better to begin with Win7 and then install Ubuntu?
+[18:31] <C_minus> (rather than the other way round)?
+[18:31] <Finetundar> C_minus: because, 7 will override grub
+[18:31] <MonkeyDust> C_minus  because windows ruins the grub menu
+[18:32] <Finetundar> C_minus: Trust me, I've done it too many times
+[18:32] <C_minus> But then can't I just run the Ubuntu installer stick and hit "repair"?
+[18:32] <genii> C_minus: Windows only wants it's own bootloader to be installed and doesn't play nice with other ones
+[18:32] <k1l_> C_minus: the windows install will override all bootloaders and doesnt care about other OS
+[18:32] <MonkeyDust> C_minus  yes, you can repair it, if you like to fix things
+[18:33] <k1l_> C_minus: of course you can. but its kind of doubled work.
+[18:33] <k1l_> C_minus: and windows wants to sit in the first partitions in most times.
+[18:33] <MonkeyDust> some people actually like to break and fix things
+[18:33] <C_minus> So it's actually pretty easy - just more work/sitting around waiting for progress bars to fill up?
+=== kpease_ is now known as kpease
+[18:33] <Finetundar> C_minus: no
+[18:34] <C_minus> what else do you have to do besides running the Ubuntu rpair stick then? Because that sounds pretty easy
+[18:34] <Finetundar> C_minus: Unless things have changed there's a lot of terminal work required to restore grub
+[18:34] <k1l_> C_minus: the easiest way is to install windows and then ubuntu. the other ways do work but need more work. that is way most guides and people say: do it the easy way
+[18:35] <k1l_> Finetundar: there is boot-repair which helps out in most cases.
+[18:36] <Finetundar> k1l_: never had any luck with that
+[18:37] <C_minus> what kind of things in terminal? if I need to run the Win7 bootloader repair tool, will that mess up the Ubuntu bootloader/GRUB?
+[18:39] <Finetundar> C_minus: almost guranteed. I have a bunch of guides bookmarked on my computer at home. But why do you want to install windows after installing ubuntu?
+[18:40] <MonkeyDust> C_minus  https://help.ubuntu.com/community/RecoveringUbuntuAfterInstallingWindows?action=show&redirect=RestoreGrub
+[18:40] <k1l_> C_minus: you are making that a lot more complicated than it should be
+[18:40] <Finetundar> ^^
+[18:41] <C_minus> I already have Win7 and Ubuntu. But Ubuntu needs to gro, Win7 needs to shrink. Guides said maybe have to repair Win7 bootloader after this process: http://www.howtogeek.com/howto/windows-vista/using-gparted-to-resize-your-windows-vista-partition/ https://help.ubuntu.com/community/HowtoResizeWindowsPartitions#Windows_Vista_and_Windows_7
+[18:41] <akik> C_minus: if you write grub to the start of your linux partition, you can dd it to a file and then later in windows add it to windows boot loader with bcdedit
+[18:41] <Finetundar> C_minus: so use gparted on a live image to reallocate space
+[18:41] <mariano1_> Hi all, I am using a JAVA program in Ubuntu which displays a lot of messages in the command line. A couple of second after starting the program, the messages are displayed and compiz'sCPU usage raises to more than 100%. Is it normal? Should the compiz process use so much CPU? Or is the problem that my JAVA program displays to much messages in the terminal? When I don't run the JAVA program, then I have no CPU usage problems.
+[18:42] <Finetundar> MonkeyDust: I think that's the best guide on that topic that I've seen
+[18:43] <rockstar_> anybody knows what is the lubuntu minimalist size after installation?
+[18:43] <MonkeyDust> Finetundar  "if all else fails, join #ubuntu"
+[18:43] <C_minus> K1l and Finetundar: I'm just saying: that howtogeek page was talking about "Unless you are very lucky, you’ll be greeted with this horrible error message saying “Windows Failed to start.
+[18:43] <Finetundar> C_minus: link
+[18:43] <C_minus> http://www.howtogeek.com/howto/windows-vista/using-gparted-to-resize-your-windows-vista-partition/
+[18:43] <Finetundar> MonkeyDust: well it usually helps
+[18:44] <C_minus> [19:41] see also, link
+=== kpease is now known as kpease_
+[18:44] <Finetundar> C_minus: that article is old. Things have changed
+[18:44] <C_minus> Oh yeah?
+[18:45] <Finetundar> C_minus: published in '07.
+[18:45] <Finetundar> Very much out of date
+[18:45] <MonkeyDust> C_minus  "Published 08/8/07"
+[18:45] <C_minus> I just like to be cautious, read up about all the worst things that can happen after these awkward partitioning shannanigans.
+[18:45] <Finetundar> C_minus: ubuntu is much more agreeable now
+[18:47] <MonkeyDust> 2007... that's... how many releases ago?
+[18:47] <k1l_> the first ones
+[18:47] <Finetundar> MonkeyDust: 8 I think
+[18:47] <Finetundar> actually no, more like 16 since there's around 2 per year
+[18:48] <lagbox> 16
+[18:48] <C_minus> OK didn't see that. But the Ubuntu one from 2012 https://help.ubuntu.com/community/HowtoResizeWindowsPartitions#Windows_Vista_and_Windows_7 talks about "If you find you cannot boot into Windows, this guide on recovering Windows may help." and suggests the same as howtogeek - which would cause me problems with GRUB...
+[18:50] <parapan> MonkeyDust: ratrace: that page doesn't say anything about changing the root password
+[18:50] <C_minus> And in turn, this is proposed as the solution to those GRUB problems: https://help.ubuntu.com/community/Boot-Repair
+[18:50] <Finetundar> C_minus: that's in the event that something goes wrong. More likely thatn not everything will be ok.
+=== nathanleclaire_ is now known as nathanleclaire
+=== sakozdqqhytuagqn is now known as bygfusgldetqkjid
+=== bygfusgldetqkjid is now known as TomyLobo
+=== kpease_ is now known as kpease
+[18:50] <MonkeyDust> parapan  remind me?
+[18:51] <parapan> MonkeyDust: login to ubuntu 10.04 server , lost credentials ...
+[18:52] <parapan> MonkeyDust: the prompter I have sais: Ubuntu server login ......username ........than asks for password ......
+[18:52] <MonkeyDust> parapan  yes, it says something about the user password, i'm not sure about the root password
+[18:52] <C_minus> Just for conversation's sake then: if one uses the Win7 boot-repair, the problems for GRUB are the same as if Win7 had been installed AFTER Ubuntu?
+[18:52] <genii> Yep
+[18:52] <Finetundar> C_minus: yes
+[18:52] <parapan> MonkeyDust: I do not have a user@server prompter ...I do not know the user also ...
+[18:53] <MonkeyDust> parapan  then i don't know
+[18:53] <parapan> MonkeyDust: k...looks like I'll have to re-install ...i wanter to avoid this ....
+[18:53] <C_minus> So one ought to follow the instructions for restoring the Ubuntu bootloader, GRUB (which you say can be complicated, but this site says just run the wizard: https://help.ubuntu.com/community/Boot-Repair)
+[18:54] <k1l_> C_minus: the windows "repair" will always wipe all other bootloaders and will not boot other OSs. because of "we have the monopoly"
+=== TheEternalAbyss is now known as Guest44026
+[18:54] <akik> k1l_: windows boot loader can boot grub
+[18:54] <k1l_> since windows8?
+[18:54] <C_minus> Thanks MonkeyDust, Finetundar, k1l and the others. You#ve been very helpful for understanding this topic better.
+[18:54] <Finetundar> C_minus: You really have nothing to loose if this is a fresh install. Just go for it
+[18:54] <akik> k1l_: earlier too
+[18:54] <Finetundar> C_minus: np
+[18:54] <k1l_> akik: oh.
+[18:55] <C_minus> See you later
+[18:55] <Finetundar> C_minus: see ya!
+[18:55] <akik> k1l_: it's just you copy the mbr 512 bytes into a file and add it to windows boot loader with bcdedit
+[18:55] <k1l_> akik: ah, so with manual work
+[18:55] <akik> computer work :)
+[19:08] <sweb> is there any option for increase inode limit for partion during installation ? reserve block or etc ...
+=== frdmn is now known as frdmn_
+[19:10] <Rimann> just executed a script to fix a broken installation. Now what?
+[19:12] <Rimann> error message: a failure occurred attempting to install .NET framework 4
+[19:12] <SCHAAP137> sounds like WINE
+[19:12] <b-yeezi> Hi All
+[19:12] <SCHAAP137> greetings, b-yeezi
+[19:12] <Finetundar> b-yeezi: hello there
+[19:13] <Finetundar> Rimann: yeah, perhaps re-run the wine .NET 4 installer?
+[19:13] <Rimann> SCHAAPI137 WINE does this often? installation was going well until workspaces froze my pc and I had to reboot
+[19:13] <Rimann> Finetundar reinstall WINE?
+[19:13] <b-yeezi> I've been banging my head on this issue for a while and can't seem to find an answer
+[19:13] <Finetundar> Rimann: no, no, just the .NET 4 component
+[19:14] <b-yeezi> PPTP VPN is not working on 15.04
+[19:14] <Rimann> Finetundar thanks, im an Ubuntu noob, will seek instruction on web. Unless you want to refer me or tell me how
+=== frdmn_ is now known as frdmn
+[19:16] <Finetundar> Rimann: I'll help out. Just a sec
+[19:16] <Rimann> Finetundar: thanks
+[19:17] <parapan> MonkeyDust: it works .....one have to use the passwd root command
+[19:18] <Finetundar> Rimann: so do you know how to operate winetricks?
+[19:18] <Uhtred> Needing help installing Ubuntu on Dell XPS 13 (9343) Developers Edition. After install I am not able to boot to the new install.
+[19:18] <Rimann> Finetundar: no never used Wine before this
+[19:18]  * m3n3chm0 nasZ
+[19:18] <reisio> Uhtred: what're you able to do?
+[19:20] <Uhtred> After following a few sites and this one in particular (http://hgdev.co/installing-ubuntu-15-04-on-the-dell-xps-13-9343-2015-a-complete-guide-update/) I am still only getting to "No bootable device found."
+[19:21] <Finetundra> Rimann: so open a terminal and type" winetricks --gui"
+[19:21] <Rimann> Uhtred: are you able to get into BIOS? I have to specifically command my pc to boot Ubuntu due to some changes i made in the boot order while installing.
+[19:21] <Rimann> Fintundra: ok
+[19:22] <Uhtred> Rimann: I do have access to the BIOS.
+[19:22] <Finetundra> Rimann: is it up?
+[19:23] <Rimann> Finetundra yes it warned me about being in 64 bit
+[19:23] <Rimann> but its up
+[19:23] <Finetundra> eh, doesn't matter
+[19:24] <Finetundra> so, tick Select default wineprefix cand click ok
+[19:24] <MannyLNJ> I'm trying to setup a PPPTP VPN comnnection into my home network. When I try to add the connection it's greyed out
+[19:24] <Rimann> Uhtred try looking in your boot options, sorry thats all the help I can give you. Its how i do mine and im new to this
+[19:25] <Rimann> Finetundra ok complete
+[19:25] <Uhtred> Rimann: I have tried to set the UEFI to the grub but it will not allow me to apply the change. I have full admin control of the BIOS as well.
+[19:25] <Finetundra> ok now tick install a windows dll or component and click ok
+[19:26] <Rimann> done
+[19:27] <Finetundra> now go tick the box that says dotnet40 and click ok and then follow all the instructions it throws up. It may provide warnings but ignore those
+[19:28] <Rimann> error this package does not work on 64 bit package: should I just reinstall wine on a 32 bit package?
+[19:28] <Finetundra> Rimann: yeah
+[19:28] <Rimann> Finetundra thank you I will do that and hopefully it will resolve the problem
+[19:29] <Finetundra> Rimann: the 32 bit version of wine usually works much better than the 64 bit.
+[19:30] <CarlFK> system settings, time and date, clock, [x] time in other locations, Choose Locations....  Where are those stored?
+[19:31] <Rimann> Finetundra: awesome good to know
+[19:31] <garle> hi
+[19:31] <Finetundra> Rimann:  WINEARCH=win32 WINEPREFIX=/home/<yourusername>/.wine/
+[19:31] <CarlFK> I can't add any.  if it is a text file I'll just add a text file.
+[19:31] <Finetundra> Rimann: that;ll wipe and replace the 64 bit prefix
+[19:31] <b-yeezi> I just figured it out. ufw was blocking the vpn
+[19:32] <Finetundra> Rimann: run in terminal
+[19:33] <quants_> guys im wanting to improve security on my system, any advice?
+[19:34] <SCHAAP137> in which aspects quants_ ?
+[19:34] <Rimann> Finetundra: Nice thats  much simpler than what I was just about to try
+[19:34] <Finetundra> Rimann: :)
+[19:34] <quants_> SCHAAP137 i want to ensure im safe while online
+[19:34] <SCHAAP137> quants_: in a software sense?
+[19:36] <Finetundra> Rimann: you'll find that you can have more than one wineprefix and different versions per prefix. It can get crazy
+[19:36] <Bashing-om> !virus | quants_
+[19:36] <ubottu> quants_: Antivirus is something you don't need on !Linux, except where files are then passed to Windows computers (perhaps using Samba). See https://help.ubuntu.com/community/Antivirus
+[19:37] <quants_> <Bashing-om> why dont i need protection?
+[19:37] <wileee> quants, your question is rather vague, safe is your definition, you're the safe factor in the end, https://wiki.ubuntu.com/BasicSecurity
+[19:39] <Bashing-om> quants_: If this is a stand-alone system. uninx is a cloased system and nothing can get to the 'root' of the system unless YOU do something that is ILL advised . Presently there are no known viruses in the wild that will effect linux .
+[19:39] <Bashing-om> closed*
+[19:40] <Uhtred> Needing help installing Ubuntu on Dell XPS 13 (9343) Developers Edition. After install I am not able to boot to the new install. After following a few sites and this one in particular (http://hgdev.co/installing-ubuntu-15-04-on-the-dell-xps-13-9343-2015-a-complete-guide-update/) I am still only getting to "No bootable device found."
+[19:40] <SCHAAP137> Uhtred: have you tried entering the UEFI boot menu? there might be an entry for Ubuntu in there
+[19:41] <quants_> <Bashing-om> i am using Ubunto 14.04 lts
+[19:41] <nicomachus> I thought the XPS 13 came with it preinstalled?
+[19:41] <Uhtred> SCHAAP137: I have and I am not able to apply the change so it is lost as soon as I exit the BIOS.
+[19:42] <Bashing-om> quants_: The distro and release makes no difference so long as it has continued support . If this is a stand-alone system you have nothing to fear .
+[19:42] <SCHAAP137> Uhtred: similar issue is described here: http://en.community.dell.com/techcenter/os-applications/f/4613/t/19631468
+[19:43] <SCHAAP137> about not being able to change UEFI boot order
+[19:43] <quants_> <Bashing-om> stand alone??
+[19:43] <SCHAAP137> Uhtred: it could be that "Secure Boot" is playing a part in this
+[19:44] <Uhtred> SCHAAP137: I have checked that as well and it is disabled. It was disabled by default since this Laptop came with Ubuntu installed on it.]
+[19:44] <SCHAAP137> ah okay
+[19:44] <Bashing-om> quants_: This system is not  part of a larger LAN or working in a server environment. ( linux can be a carrier to Windows of a virus ) .
+[19:45] <quants_> <Bashing-om> no, its a personal laptop
+[19:46] <MannyLNJ> Any CLI tools to help me figure out why my VPN won't connect?
+[19:46] <SCHAAP137> Uhtred: https://help.ubuntu.com/community/Boot-Repair
+[19:46] <SCHAAP137> maybe this could work
+[19:47] <Uhtred> SCHAAP137: Thanks, I will give these a shot and come back with my results.
+[19:47] <SCHAAP137> Uhtred: read the link i sent you, i got it from there
+[19:47] <Bashing-om> quants_: Then, you have nothing to worry about, and nothing to do . Until such time as you open the system up to the outside world what is impemented on the system ( all ports closed by default ) nothing will get to the operating system .
+[19:48] <michele_> http://xdcc_CANCEL_X1443117480
+[19:48] <reisio> cute
+[19:49] <SCHAAP137> that looks like a script failing
+[19:49] <arooni> how do i bind a bash script to a particular hot key ?  (ubuntu 14.04)
+[19:52] <SCHAAP137> quants_: just keep your packages and system up to date
+[19:52] <SCHAAP137> it checks for updates automatically, it's easy
+[19:54] <quants_> <Bashing-om> thanks for the information, can you tell me how to hide myself online, hide my ip address
+[19:54] <quants_> <SCHAAP137> thanks
+[19:55] <BadDream> hmmm such issues
+[19:56] <akik> quants_: you can hide your ip address by not connecting anywhere :)
+[19:56] <SCHAAP137> haha, true
+[19:56] <akik> also tor, vpn
+[19:56] <SCHAAP137> it's the network that makes the machine unsafe
+[19:56] <surfer> whats the best way to consume DMT?

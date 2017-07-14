@@ -1,0 +1,200 @@
+[07:06] <syntroPi> how can i edit the favorites shortcuts in gnome3?
+=== leo__ is now known as leoliu
+[07:09] <wileee> syntroPi, In what way, you can add and remove apps?
+[07:10] <aruns> Hanumaan : Jai Hanuman, Namaskar Hanumaan Ji. Koti Koti Pranam
+[07:10] <eipi-1_> adios
+[07:12] <syntroPi> wileee, i want to edit existing app launchers in the favorites panel
+[07:13] <rainbowwarrior> Woo Hoo I am now dual booting windows 10 and Ubuntu 15.04 , thank you , i forgot to disable secure boot and found some other settings in my bios i needed to change and now all works fine :)
+[07:13] <mike_1960> good deal
+[07:13] <wileee> syntroPi, Can you be more exact?
+[07:14] <mike_1960> good deal rainbowwarrior
+[07:14] <aruns> There is a problem implementing installation , can you guess about this : xargs -a ~/packages sudo apt-get install --reinstall >  http://paste.ubuntu.com/12045252/   , Further I have explained on this thread : http://ubuntuforums.org/showthread.php?t=2289974
+[07:14] <mike_1960> secure boot
+[07:15] <rainbowwarrior> mike_1960 yep
+[07:16] <mike_1960> anything good has to take some work
+[07:20] <syntroPi> wileee, i just got an answer in #gnome: the favorites panel references .desktop files from  ~/.local/share/applications and if not from there then from /usr/share/applications: it seems they have to be modified manually to edit the Exec=... command which launches the app
+[07:20] <wileee> cool, carry on
+[07:21] <aruns> Wilee, daftykins : There is a problem implementing installation , can you guess about this : xargs -a ~/packages sudo apt-get install --reinstall >  http://paste.ubuntu.com/12045252/   , Further I have explained on this thread : http://ubuntuforums.org/showthread.php?t=2289974
+=== erwin_ is now known as easyOnMe
+[07:22] <wileee> if I knew I would have answered you
+[07:22] <aruns> Ok fine
+[07:25] <Ben64> aruns: obviously ~/packages isn't right
+[07:25] <syntroPi> wileee, thanks maybe my question was not formed clearly enough, im in need for some coffee :) the gui way seems to be alacarte btw (though im fine with editing files manually myself).
+[07:26] <wileee> syntroPi, Not a problem, you got the help, it's all good. ;)
+[07:27] <easyOnMe> hello everyone is there a way I can move the pop up menu bar on the left of ubuntu to be placed down at the bottom
+[07:28] <aruns> Ben64 : How were you able to reach on conclusion that packages are not right?
+[07:28] <Ben64> aruns: by reading your pastebin
+[07:29] <aruns> Ben64 : that i know,  but you may have read some statements through which you have reached that conclusion, Any pointers?
+[07:29] <rainbowwarrior> who ever it was i spoke to about hp 4507 and Ubuntu 15.04 , i can confirm that the printer works fine in ubuntu 15.04 using hplip-3.15.7
+[07:30] <Ben64> aruns: i mean, did you even look at what you pastebinned? look at lines 6-15
+[07:30] <aruns> Unable to locate package src=http://182.79.218.37
+[07:30] <aruns> E: Couldn't find any package by regex 'src=http://182.79.218.37:8080/webadmin/de
+[07:30] <aruns> Ben64 : to me problems seems here
+[07:31] <cfhowlett> !webadmin | aruns, and it references webadmin?
+[07:32] <aruns> cfhowlett : I have no clue on this, can you help me with pointers how to fix that
+[07:32] <rainbowwarrior> !msi keyboard light controller
+[07:32] <ubottu> rainbowwarrior: I am only a bot, please don't think I'm intelligent :)
+[07:33] <Ben64> aruns: are you serious? let me ask you a question. why are you trying to install a package named "frameborder=0><"
+[07:34] <easyOnMe> hello everyone is there a way I can move the pop up menu bar on the left of ubuntu to be placed down at the bottom
+[07:34] <aruns> cfhowlett, Ben64 : i tried pinging 182.79.218.37 manually and it requires permission. I think i am going nut, I dont noticed it due to fatigue to deal with this problem for very long time
+[07:35] <Ben64> aruns: how is installing packages related to pinging an ip
+[07:35] <wileee> easyOnMe, Only if you roll the to the left one turn
+[07:35] <wileee> monitor*
+[07:36] <easyOnMe> wileee: wow that was funny man
+[07:36] <easyOnMe> but seriously is there a way to do what I wish
+[07:36] <wileee> used to be a hack, nothing out there
+[07:37] <wileee> was not a joke, but the reality of the desktop ;)
+[07:39] <cfhowlett> aruns, I've read all your pastes.  this http://paste.ubuntu.com/12045252/ lines 6 - 15 are clearly in error.  I'd suggest you stop and take a nap.  then reinstall a clean ubuntu.  something is clearly very well scrambled which renders your system untrustworthy.  IMHO.
+[07:39] <wileee> easyOnMe, Probably would be popular if there was a easy way, I suspect.
+[07:40] <aruns> cfhowlett: Can i fix this system, Is it beyond repair?
+[07:41] <cfhowlett> aruns, fix = reinstall from a clean, verified .iso
+[07:42] <aruns> cfhowlett : I know thats the last option, what I am trying is to learn how to fix this system, Is it impossible? or information in our hand is not sufficient to address this problem.
+[07:43] <aruns> cfhowlett : Fresh install is the quick way to get out of problem but what remains buried is unsolved problem.
+[07:43] <aruns> cfhowlett: I appreciate leads provided by you.
+[07:44] <easyOnMe> cfhowlett: hello
+[07:44] <easyOnMe> cfhowlett: is there a way I can move the pop up menu bar on the left of ubuntu to be placed down at the bottom
+[07:45] <wileee> Both of you easyOnMe and aruns have both just random;y addresses help, do not do that
+[07:45] <wileee> this is free volunteer help, we are not obligated to help
+[07:46] <cfhowlett> aruns as I understand it, you deleted several pieces of ubuntu-core while chasing the shiny python version.  that alone is enough to destabilize your system.  then the reinstall of ubunut-desktop failed with some very questionable errors pointing towards ? sources? install script?                Short answer: Ive NO idea what your system is doing, haven't seen this particular mix of fail before, thus my (sanity saving) suggestion to clean reinstall.  B
+[07:46] <cfhowlett> UT ... YMMV
+[07:46] <aruns> wileee : what yo intend to say from that statement? Any offence done by me
+[07:46] <cfhowlett> easyOnMe, no idea.  sorry.  UbuntuStudio here so I've literally never used unity.
+[07:47] <easyOnMe> cfhowlett: thanks
+[07:47] <easyOnMe> you are cool man
+[07:47] <cfhowlett> easyOnMe, too cool for school :)
+[07:47] <aruns> cfhowlett : Thanks for peeking into the problem, Would do that as last resort
+[07:47] <easyOnMe> wileee: and for your info please do not sound like a grumpy old man
+[07:47] <cfhowlett> aruns, happy2help!
+[07:48] <easyOnMe> relax the people I asked for help are the people I know about
+[07:48] <aruns> cfhowlett : Thanks buddy
+=== stefa664 is now known as trias
+[07:48] <easyOnMe> cfhowlett: hahaha
+[07:48]  * cfhowlett is himself a grumpy old man and proud of it.
+[07:48] <easyOnMe> yeah
+[07:48] <easyOnMe> how are you doing man
+[07:50] <wileee> I'm not happy unless I'm not chasing those kids off my lawn
+[07:50]  * cfhowlett passes a chilled PBR to wilee
+[07:50] <wileee> heh
+[07:51] <easyOnMe> cfhowlett: what is ubuntu studio is it also another brand of ubuntu os
+=== trias is now known as Trias
+[07:51] <cfhowlett> !studio | easyOnMe
+[07:51] <ubottu> easyOnMe: UbuntuStudio is a collection of packages for the artist who wishes to use Ubuntu as their Digital Audio Workstation. It contains all the best Audio/Visual components from the Ubuntu repositories. For more info and install instructions, join #ubuntustudio or see http://ubuntustudio.org
+[07:51] <easyOnMe> cfhowlett: thanks
+[07:51] <cfhowlett> easyOnMe, it is an official ubuntu flavor for multimedia production.  Much fun!
+[07:52] <easyOnMe> cfhowlett: does it it have any of those animation software similar to flash and flash actionscript
+[07:52] <easyOnMe> of adobe
+[07:52] <Sebsebsebb> Hi wireless worked when enableing the proprietary Broadcom drivers in additional drivers on a 15.04 Live USB, but in my install it's not working and I can't just enable it either. So what to do? Maybe I can Ethernet it and try and download from repos myself or something,
+[07:53] <cfhowlett> easyOnMe, plenty.  blender, inkscape for starters.  you can add those to your plain vanilla ubuntu or go to UStudio
+[07:53] <wileee> !broadcom | Sebsebsebb The wiki has an offline
+[07:53] <ubottu> Sebsebsebb The wiki has an offline: Help with Broadcom bcm43xx can be found at https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx
+=== Blaster is now known as Guest5957
+[07:54] <easyOnMe> cfhowlett: UStudio what does it have... I only want to do simple animation stuff just like what I did in flash of adobe what is its counterpart in USTudio
+[07:55] <easyOnMe> cfhowlett: blender is just way to high up there because it is already using 3D images and I have no exposure to that I only want to do 2D animation
+[07:56] <cfhowlett> easyOnMe, krita, gimp, pencil, mypaint, >>> synfig studio <<<
+[07:56] <cfhowlett> synfig specifically for 2d anim
+[07:58] <Sebsebsebb> Saying that there's another driver as well that it says isn't working and can't just enable
+[07:58] <easyOnMe> cfhowlett: ok I heard of those and I am currently using them except for krita, is it also free just like synfig studio
+[07:58] <cfhowlett> all free!
+[07:59] <cfhowlett> !krita
+[07:59] <cfhowlett> easyOnMe, krita can be used for animation but is primarily for digital painting.
+[07:59] <easyOnMe> cfhowlett: but synfig studio is not regularly being updated right
+[08:00] <cfhowlett> easyOnMe, check it:  http://www.osalt.com/
+[08:00] <mka> hi
+[08:00] <easyOnMe> cfhowlett: oh ok have you used krita before what about inkscape have you used it too
+[08:00] <mka> how can i open gconf editor on ubuntu 15.04?
+[08:01] <cfhowlett> easyOnMe, tried krita, more familiar with gimp and actually developed a tiny bit of skill with inkscape.  My snowman rocks!
+[08:01] <easyOnMe> cfhowlett: lol but is it also possible to animate thinks created in inkscape usng inkscape
+[08:02] <easyOnMe> I have used inkscape and gimp very often
+[08:02] <easyOnMe> for web design projects
+[08:02] <easyOnMe> as I am more into open source
+[08:02] <easyOnMe> I was just curious whether it is possible to create something like .gif file for those objects created in inkscape using inkscape
+[08:03] <cfhowlett> easyOnMe, continue discussion in #ubuntustudio       more expert eyes
+[08:03] <syntroPi> mka there is dconf-editor preinstalled (another conf system) but no gconf-editor, you would have to install that
+[08:03] <easyOnMe> cfhowlett: ok thanks no problme
+[08:03] <speedy__> hi
+[08:04] <syntroPi> mka most of gnome3 apps use dconf though
+[08:04] <syntroPi> gconf was gnome2 -ish
+[08:04] <mka> syntroPi: ah i thanks, im installing gconf-editor i will check dconf too if what i want to configure is not working with gconf thanks
+[08:08] <aruns> Can someone suggest how to take back up of "nano ~/package"
+[08:08] <aruns> I want to create another copy of same file
+[08:09] <Ben64> aruns: that file is no good
+[08:09] <aruns> ok so end solution remains open, install afresh !
+[08:10] <Ben64> yep, and next time be more careful with what you run
+[08:11] <aruns> Ya mistakes are best teachers to make us learn, Will be cautious with system
+[08:12] <aruns> it has devastated my system beyond repair, I have tried hard to learn and solve this problem but to no rescue I am failure by all means
+[08:13] <mrsmart> Whata day!
+[08:15] <cfhowlett> aruns, for future reference: apt-get -s purge python returns http://paste.ubuntu.com/12046583/              the "-s" means sandbox means not running the command.  seeing a list like this *should* cause one to think twice about whatever s/he is about to do.
+[08:18] <khangeek> hi i am unable to install zenoss pn aws ec2 instance after running zenoss install script it is showing my private ip of ec2 instance:8080 but i am unable to access the dashboard of zenoss and also  the 8080 port is not running in netstat command
+[08:19] <aruns> khangeek : give output of netstat
+=== mudo_ is now known as mudo
+=== aruns is now known as indistylo
+[08:24] <syntroPi> im trying to make a channels.conf with w_scan but it always seems to freeze on a specific transponder: how can i find out where the problem lays?
+[08:28] <khangeek> @aruns netstat -ntlp
+[08:30] <Nakul> Hi
+[08:31] <Nakul> I have recently upgraded from 12.04 LTS to 14.04 LTS and I am not able to login to my desktop
+[08:31] <Ben64> what does it do when you try
+[08:31] <Nakul> It blinks and then back to login screen
+[08:31] <Nakul> I am able to login using Terminal TTY
+[08:31] <Nakul> so my username and Password is also correct
+[08:32] <Nakul> I have tried all the methods as provided to resolve this issue on http://askubuntu.com/
+[08:32] <Nakul> nothing worked
+[08:32] <zzarr> Nakul: try sudo chmod -R ug+rwx /home/[username]
+[08:32] <zzarr> if you haven't already
+[08:32] <Nakul> done that
+[08:32] <Nakul> not working
+[08:33] <Ben64> can you log into guest
+[08:33] <zzarr> okey, tried this sudo apt-get install ubuntu-session ?
+[08:33] <Nakul> yes
+[08:33] <Nakul> not working
+[08:34] <khangeek> @Nakul apt-get update and apt-get upgrade then apt-get install gdm and select gdm as default display manager and restart gdm service and try to login
+[08:34] <Nakul> @khangeek I tried all that
+[08:34] <Nakul> not working
+[08:34] <zzarr> are /home on a separate partition?
+[08:34] <Nakul> i dont know
+[08:35] <Nakul> it was working for 12.04 lts
+[08:35] <khangeek> please anyone answer my question unable to install zenoss on aws ec2 instance?
+[08:35] <Ben64> if guest isn't working could be a graphics driver problem
+[08:35] <Nakul> guest is not working
+[08:35] <Ben64> khangeek: what is zenoss, where did you get it
+[08:35] <Ben64> Nakul: yeah i know, thats why i said that
+=== dooferlad_ is now known as dooferlad
+[08:36] <zzarr> Nakul, can you pastebin your /etc/fstab?
+[08:37] <popey> Nakul: i would be inclined to "sudo apt-get update && sudo apt-get install ubuntu-desktop" and see if it installs anything that was missing. (I suspect it will)
+[08:37] <khangeek> @Ben64 zenoss is a server monitoing tool based on snmp protocl
+[08:37] <popey> Nakul: eek, mistake, should be "sudo apt-get update && sudo apt-get install ubuntu-desktop^" <- note tha ^
+[08:37] <Nakul> I tried it like 2-3 times does not work
+[08:38] <khangeek> <Ben64> u got
+[08:38] <Nakul> not tried that
+[08:38] <popey> Nakul: with the ^? You need that
+[08:38] <Nakul> i will check on it
+[08:38] <cfhowlett> khangeek, ask #ubuntu-server or #networking ?
+[08:38] <Ben64> khangeek: you missed the second half of the question
+[08:39] <syntroPi> !pastebinit | Nakul
+[08:39] <ubottu> Nakul: pastebinit is the command-line equivalent of !pastebin - Command output, or other text can be redirected to pastebinit, which then reports an URL containing the output - To use pastebinit, install the « pastebinit » package from a package manager - Simple usage: command | pastebinit -b http://paste.ubuntu.com
+[08:39] <khangeek> @ben64 what
+[08:40] <Ben64> <Ben64> khangeek: what is zenoss, where did you get it
+[08:40] <Nakul> thanks ..i will try and let you all know
+[08:44] <khangeek> hi all unable to install the zenoss core on ubuntu 14 on an aws ec2 instance   i followed this link but 8080 port is not running http://idroot.net/tutorials/how-to-install-zenoss-on-ubuntu-14-04/
+[08:45] <Ben64> khangeek: you've still not answered my question fully
+[08:45] <khangeek> zenoss is snmp based monitroing server BEN64
+[08:46] <Ben64> yes thats the same half you answered before
+[08:46] <Ben64> now answer the other half
+[08:46] <khangeek> i already updated before only
+[08:46] <khangeek> u know zenoss installation on ubutu 14
+[08:46] <Ben64> you need to answer the question
+[08:47] <khangeek> which question ben64?
+[08:47] <khangeek> pls tell me
+[08:47] <Ben64> <Ben64> khangeek: what is zenoss, where did you get it
+[08:47] <Ben64> for the third time
+[08:48] <syntroPi> is there a more modern alternative to w_scan for dvb-c usb sticks? it worked on ubuntu 14.10 but for some reason it freezes on 15.04
+[08:48] <khangeek> how many times should i tell you zenoss is an opensource mnitrong server u can download from zenoss site
+[08:48] <Ben64> you didn't say where you got it
+[08:48] <khangeek> ben64
+[08:48] <khangeek> http://idroot.net/tutorials/how-to-install-zenoss-on-ubuntu-14-04/    ben64 here..i got it
+[08:48] <Ben64> so get support from there, that is not an ubuntu package
+[08:49] <khangeek>  hi all unable to install the zenoss core on ubuntu 14 on an aws ec2 instance   i followed this link but 8080 port is not running http://idroot.net/tutorials/how-to-install-zenoss-on-ubuntu-14-04/
+=== hacker_ is now known as om
+[08:49] <Ben64> khangeek: that is not an ubuntu package, get support from that site and/or the developer
+[08:49] <indistylo> khangeek : Don't flood with message
+[08:50] <indistylo> The package you are asking is off-topic from ubuntu
+[08:50] <cfhowlett> khangeek, as stated: NOT ubuntu NOT supported here.  http://www.zenoss.org/      for assistance.

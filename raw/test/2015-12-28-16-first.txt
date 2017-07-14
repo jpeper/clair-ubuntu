@@ -1,0 +1,200 @@
+[14:52] <Zeaal> i dont have the partitions anymore just the 48 gb unallocated space
+=== ___owl0 is now known as owl0
+[14:54] <Zeaal> when i right click on D it doesnt allow me to click "Extend volume"... -.-
+[14:54] <Zeaal> when i right click on D it doesnt allow me to click "Extend volume"... -.-
+[14:58] <RickyB98> hello :-) i flashed my pendrive with ubuntu 14.04.3 desktop and tried to boot my old computer from it. it hangs with a blinking dash in the top left corner of the screen.. what could that be due to?
+[15:01] <iGeni> when adding multiple ip number to interface is this the correct way https://dpaste.de/AZno
+[15:02] <iGeni> repeating the sdns search and nameservers
+[15:02] <BluesKaj> RickyB98:  first of all , which OS on the old pc?
+[15:02] <RickyB98> windows xp
+[15:02] <RickyB98> but i'm booting from bios
+[15:03] <cfhowlett> lubuntu or xubuntu or that machine RickyB98
+[15:03] <RickyB98> could you rephrase that please?
+[15:03] <BluesKaj> RickyB98:  you need a bootable image on your usb stick, not a copy of your desktop
+[15:03] <cfhowlett> RickyB98, old machine.  try lubuntu or xubuntu
+[15:03] <RickyB98> of course BluesKaj
+[15:03] <RickyB98> i used dd on mac to flash it
+[15:04] <RickyB98> cfhowlett, right, but why isn't it working? what's missing on the machine that stops it form running?
+[15:04] <BluesKaj> flash ?
+[15:04] <RickyB98> i mean..
+[15:04] <RickyB98> i made the usb bootable basically
+[15:06] <SchrodingersScat> It can be worth reimaging the drive, sometimes it doesn't always take.
+[15:06] <BluesKaj> RickyB98:  did you set the usb as first in the boot sequence in your bios?
+[15:07] <RickyB98> it didn't appear in the boot sequence, but it did appear in the bootable drives when pressed F11 (that is, select boot drive or sth)
+[15:13] <RickyB98> BluesKaj, are you still there?
+[15:13] <BluesKaj> RickyB98:  windows xp hmm, seems it might be a hardware problem like graphics unable to boot the image
+[15:14] <BluesKaj> you mifgt want to try a lighter version
+[15:14] <BluesKaj> RickyB98:  like xubuntu
+[15:14] <BluesKaj> !xubuntu
+[15:14] <ubottu> Xubuntu is Ubuntu with !Xfce as the desktop environment. More info at http://xubuntu.org/ - To install the Xubuntu environment from Ubuntu: « sudo apt-get install xubuntu-desktop^ » - Join #xubuntu for support - See also: !xubuntu-channels
+[15:15] <RickyB98> BluesKaj, what about ubuntu server?
+[15:16] <BluesKaj> !ubuntu-server
+[15:16] <ubottu> Ubuntu Server Edition is a release of Ubuntu designed especially for server environments, including a server specific !kernel and no !GUI. The install CD contains many server applications. Current !LTS version is !Trusty (Trusty Tahr 14.04) - More info: http://www.ubuntu.com/products/whatisubuntu/serveredition - Guide: https://help.ubuntu.com/lts/serverguide - Support in #ubuntu-server
+[15:17] <RickyB98> i know what ubuntu-server is
+[15:17] <RickyB98> i mean is it light enough?
+[15:17] <BluesKaj> depends on your hardware
+[15:18] <lotuspsychje> RickyB98: https://help.ubuntu.com/community/Installation/SystemRequirements
+[15:18] <BluesKaj> try it and find out :-)
+[15:18] <lotuspsychje> 192 ram for server, sounds good
+[15:19] <RickyB98> its ram is 3 gb
+=== metalcamp_ is now known as metalcamp
+[15:28] <sw0rdfish> is there a ubuntu laptop edition .iso file for installation
+[15:28] <lotuspsychje> sw0rdfish: you mean netbook edition?
+[15:28] <sw0rdfish> is that the same thing LockeAnarchist
+[15:28] <sw0rdfish> lotuspsychje *
+[15:29] <lotuspsychje> sw0rdfish: you can use regular ubuntu desktop iso now for laptops
+[15:29] <sw0rdfish> I have an old laptop and was just taking a look at the sys requirements earlier
+[15:29] <lotuspsychje> sw0rdfish: if its old i would reccomend lubuntu/xubuntu
+[15:29] <sw0rdfish> with 1GB of ram ... I will see if I can add 1 more GB to it or something
+[15:30] <lotuspsychje> sw0rdfish: lubuntu would do fine with 1gig ram mate
+[15:44] <aotea> I've been having issues with Nvidia drivers 340 & 352, suffered random crashes where the screen would go black and I'd be back to a SDDM login screen, Kern.log said GPU fell off the bus. So now been on nouveau drivers for two days. No crash like it. I was told to run a memtest before submitting this as a bug, but can't for the life of me run it. Can't I just assume it is indeed the Nvidia drivers that are at fault or could it still be
+[15:44] <aotea> faulty ram?
+[15:46] <lotuspsychje> aotea: ubuntu version?
+[15:46] <aotea> lotuspsychje, 15.10
+[15:46] <lotuspsychje> aotea: did you try LTS already?
+[15:47] <aotea> lotuspsychje, I did not, seeing as Plasma 5 is not available for it. Or is it enough to run it on live usb?
+[15:47] <sw0rdfish> oh
+[15:47] <sw0rdfish> I see
+[15:48] <lotuspsychje> aotea: as troubles on pc arise, its good to test multiple situations and versions, to make sure where the problem lays exactly
+[15:49] <lotuspsychje> aotea: i would clean install to an LTS version and try if you getting crashes there also
+[15:50] <lotuspsychje> aotea: i remember you tried all nvidia drivers and nouveau also right?
+[15:50] <aotea> lotuspsychje, yes, 304 legacy and nouveau both run stable, while 340 and 352 crashes at random
+[15:51] <lotuspsychje> aotea: you sure you have nvidia-prime installed when using 340 or 352 right?
+=== sid is now known as Guest3615
+[15:52] <Guest3615> hi alle zusammen
+[15:52] <lotuspsychje> !de | Guest3615
+[15:53] <ubottu> Guest3615: In den meisten Ubuntu-Kanälen wird nur Englisch gesprochen. Für deutschsprachige Hilfe besuche bitte #ubuntu-de, #kubuntu-de, #edubuntu-de oder #ubuntu-at. Einfach "/join #ubuntu-de" eingeben. Danke für Dein Verständnis!
+[15:53] <aotea> lotuspsychje, yes, tried first with bumblebee, purged that and installed prime instead. also installing 352 seem to include nvidia-prime, but yes I've tried prime, and looked around the nvidia-settings.
+[15:53] <Guest3615> danke
+[15:53] <Guest3615> stimmt....
+[15:53] <lotuspsychje> aotea: hmmm maybe its a bad leftover from bumblebee? did you try nvidia-prime on a clean install?
+[15:54] <amr> hey, i've got a version of libvpx1 installed from when i did installed some intel drivers, but i want to install wine which wants livpx1:i386... any ideas if i can have two versions coexist?
+[15:54] <Guest3615> join ubuntu-de
+[15:54] <Guest3615> join #ubuntu-de
+[15:54] <lotuspsychje> amr: ubuntu version plz?
+[15:55] <amr> 14.04
+[15:55] <lotuspsychje> Guest3615: /join...
+[15:55] <lotuspsychje> !info libvpx1 trusty
+[15:55] <ubottu> libvpx1 (source: libvpx): VP8 video codec (shared library). In component main, is optional. Version 1.3.0-2 (trusty), package size 505 kB, installed size 1651 kB
+[15:55] <lotuspsychje> amr: this would be the version reccomended
+[15:56] <aotea> lotuspsychje, well, no I didn't try that. Guess there is nothing left but doing that and or the LTS...
+[15:56] <amr> im not sure what youre saying... i should figure out how to install 1.3.0-2 outside of apt-get ?
+[15:56] <amr> and then wine will use that..?
+=== terminus is now known as Guest67080
+[15:57] <lotuspsychje> aotea: yeah i would really reccomend clean install LTS or 15.10 + nvidia-340 + nvidia-prime + performance mode enabled
+[15:57] <sw0rdfish> lotuspsychje yeah ok, can't find the old laptop RAM I had lying around somewhere... so i think i will go for lubuntu with the 1GB old laptop that I have :D
+[15:57] <sw0rdfish> should i get 14.04 or ?
+[15:57] <lotuspsychje> sw0rdfish: that will do smooth mate
+[15:57] <sw0rdfish> 15.10?
+[15:57] <lotuspsychje> sw0rdfish: LTS is very reccomended in most cases, but thats up to you
+[15:58] <sw0rdfish> yep
+[15:58] <mcphail> amr: if you are using software from the default repos, the dependencies should be handled automatically (if not, it is a bug and should be reported). If you are using software from PPAs or other sources, you are on your own, I'm afraid. Generally, :i386 and :amd64 versions can coexist happily
+[15:58] <sw0rdfish> lotuspsychje I'll got 14.04 and then when I upgrade to the next LTS does it upgrade from 14.04 to 15.10 and then to the new LTS or?
+[15:58] <amr> sorta kinda not what i asked. i have the libvpx1 from when i compiled a version manually or intel video drivers
+[15:58] <amr> im aware i could remove that or overwrite it with the one from the repo
+[15:58] <lotuspsychje> sw0rdfish: 15.10 is not lts
+=== Guest3615 is now known as sid
+[15:59] <lotuspsychje> sw0rdfish: if you choose 14.04 you will be able to upgrade to 16.04 in april
+=== sid is now known as Guest3178
+[15:59] <mcphail> amr: If you've compiled and installed your own version of a package, it is up to you to manage that. The package manager may well overwrite your files or break in some other way
+=== [UPA]Stefan is now known as Tronsha
+[16:00] <lotuspsychje> mcphail: +1
+[16:00] <sw0rdfish> lotuspsychje nice
+[16:00] <amr> thanks i sorta knew that. i was looking for some "oh yeah you totally might need 2 versions of <x> thing, heres how you do it:"
+[16:00] <lotuspsychje> sw0rdfish: in some cases xubuntu performs very well on older laptops too, maybe try both?
+[16:01] <mcphail> amr: If you can, make sure you set the prefix for self-compiled libs to "/usr/local". The package manager will not touch anything there. Of course, your compiled libs make break existing packages
+[16:01] <lotuspsychje> amr: mixing package versions is mostly not a good idea
+[16:01] <amr> ah, awesome
+[16:01] <amr> thats def useful, thanks mcphail
+[16:01] <amr> lotuspsychje: yea i knew that too :)
+[16:01] <amr> needs must
+[16:02] <sw0rdfish> I suppose this is the latest LTS version / the file that I'm looking for "lubuntu-14.04.3-desktop-i386.iso"
+[16:02] <lotuspsychje> sw0rdfish: correct
+[16:02] <sw0rdfish> lotuspsychje well which one is prettier xubuntu or lubuntu :D
+[16:02] <lotuspsychje> sw0rdfish: if your old laptop is 32bit
+[16:02] <sw0rdfish> yes its 32bit buddy :)
+[16:02] <lotuspsychje> sw0rdfish: thats also a choosable flavor
+[16:03] <lotuspsychje> sw0rdfish: they both have another feeling
+[16:03] <mcphail> amr: if you need a special lib for an individual app, considet sticking the lib somewhere outside the usual path and call the particular app with "LD_LIBRARY_PATH=/path/to/your/special/lib/directory ./appname"
+[16:03] <sw0rdfish> lotuspsychje so, both have a different feeling ?
+[16:03] <mcphail> amr: an alternative is the "LD_PRELOAD" variable which allows you to override specific libs
+[16:03] <amr> youre a star
+[16:04] <amr> literally exactly what i was hoping existed
+[16:04] <amr> thanks
+[16:04] <lotuspsychje> sw0rdfish: yes, check screenshots on the official site
+[16:04] <mcphail> amr: np. Good luck
+[16:04] <DoXiD> Any ideas why $1 is empty: echo "wham" | awk "{gsub(\"%passwd%\", \"$1\")}1" testfile.txt
+[16:05] <DoXiD> Shouldn't that contain the first input from stdin, aka "wham"?
+[16:05] <lotuspsychje> DoXiD: maybe the ##programming guys can get you out of this?
+[16:05] <DoXiD> lotuspsychje: I'll give it a go, cheers
+[16:06] <sw0rdfish> yep yep
+[16:06] <sw0rdfish> I'm checking out xubuntu review
+=== Test is now known as Guest50603
+[16:06] <Guest50603> Hi
+[16:15] <nd_> hi
+[16:26] <YamakasY> erm does 15.10 doesn't recognize reboot anymore ?
+[16:26] <ikonia> it does
+[16:27] <YamakasY> mhh than upstart is removed
+[16:27] <ikonia> upstart was removed 2 releases ago
+[16:27] <ikonia> systemd is the replacement
+[16:27] <YamakasY> in 14.10 ?
+[16:27] <ikonia> you said 15.10
+[16:27] <YamakasY> yeah true
+[16:27] <YamakasY> ikonia: you said 2 releases ago
+[16:28] <YamakasY> which is 14.10 ?
+[16:28] <ikonia> 15.10 / 15.04
+[16:28] <YamakasY> but how does it recognize reboot now ?
+[16:28] <YamakasY> ikonia: that is one release ;)
+[16:30] <GFXDude> I'm trying to issue an "apt-get -y upgrade" via an upgrade.sh for my package. All is well, and "yes" is selected for each prompt, up until I reach this: https://gist.githubusercontent.com/GFXDude2010/46f1c9bfc890abead6c7/raw/388b5b6853ddb6e3aacda6a240850836e6e20d5b/gistfile1.txt
+[16:30] <GFXDude> It's prompting to overwrite sudoers
+=== troll is now known as Guest37468
+[16:31] <GFXDude> Is there a way I can automate the selection of No/0 for that prompt?
+[16:31] <ikonia> GFXDude: answer file
+[16:31] <GFXDude> Will google
+=== Guest37468 is now known as fUrYcaT
+[16:33] <lettuce45> hi, I want to encrypt my hdd (not an external one): what if I create a partition, encrypt it to luks+ext4, make a backup of my os and all installed apps there and then get rid of the old non encrypted partition?
+[16:34] <lettuce45> would that work?
+[16:37] <indira> hola
+[16:38] <YamakasY> mhh okay but what is the way now to reboot a machine in 15.x ?
+[16:38] <YamakasY> and shutdown ?
+[16:38] <YamakasY> can't find it
+[16:39] <ikonia> still thre
+[16:39] <ikonia> there
+[16:39] <YamakasY> not in sbin
+[16:41] <YamakasY> ikonia: can you be more precise ?
+[16:42] <ikonia> it's on my 15.10 install, but I'm not on it, so I can't confirm the path for you
+[16:42] <YamakasY> ok, this is an upgrade
+[16:42] <YamakasY> I see it there tho /usr/lib/klibc/bin/reboot
+[16:42] <YamakasY> which seem to work
+[16:44] <GFXDude> ikonia, can the answer file be used in conjunction with the -y parameter? As in, the sudoer prompt is the only one that isn't answered properly via the -y. If I feed in a < answers.txt file, with a single line that reads "N" (no quotes), will it default to using the -y answer, and then if that doesn't work, look to the input file for the proper answer?
+[16:44] <GFXDude> Or will I need to not use the -y parameter, and just provide an answer to all prompts in the answers.txt
+[16:45] <ikonia> GFXDude: don't know, I'd have to check, I don't have an example to hand
+[16:45] <GFXDude> Ok, I'll try it both ways.
+[16:50] <jrcharney> hi everyone. trying to get a nextwindow touchscreen working using nwfermi/evdev drivers. seems to be working somewhat OK but when i click somewhere, the pc acts as if i've dragged my finger between the previous location and the current location. calibration is accurate but i cant stop this "dragging" - any ideas?
+[16:52] <jrcharney> i also compiled and installed a nextwindow Xorg driver...but X insists on using evdev driver.. is there a way to force it to use the driver i just compiled? tried making a config file in /usr/share/X11/xorg.conf.d but no avail.
+=== nikhil_ is now known as Guest46061
+=== Guest46061 is now known as anj7
+[17:13] <manuela> gmail
+[17:15] <brian> yo yo yo yo y oha
+[17:15] <brian> hey guys
+=== brian is now known as Guest75912
+=== alb is now known as Guest16044
+[17:18] <Guest16044> lista
+[17:19] <seeeb> hi guys, after an update that screwed up my virtualized machines, I need to downgrade my qemu packages. Currently for example I have qemu-kvm_1.0+noroms-0ubuntu14.26_amd64.deb  and I'd like to downgrade to qemu-kvm_1.0+noroms-0ubuntu14.23_amd64.deb where do I find it?
+[17:20] <Guest16044> buongiorno
+[17:20] <compdoc> seeeb, I use qemu. What happened?
+[17:21] <seeeb> in dec 21 my ubuntu host upgraded several libs, all was fine guests were up. Today I've restarted the host and none of the guests were up
+[17:22] <compdoc> can you start them manually?
+[17:22] <seeeb> they are not even listed
+[17:22] <seeeb> kvm-ok says :  INFO: /dev/kvm exists
+[17:22] <compdoc> seeeb, you use virt-manager
+[17:23] <seeeb> yeah virt-manager is there but empty
+[17:24] <seeeb> the log  /var/log/libvirt/libvirtd.log says at the end:  qemuCapsExtractVersion:1408 : internal error Cannot find suitable emulator for x86_64
+[17:24] <compdoc> seeeb, you may have to reconnect virt-manager. Ive installed all the updates, but havent seen the problem. But Im on 14.04
+[17:24] <seeeb> ah you are in 14 ...
+[17:24] <seeeb> my host is not in 14
+[17:25] <seeeb> maybe that hurts
+[17:25] <seeeb> so I either try to downgrade qemu or upgrade the host
+[17:29] <seeeb> the host is in ubuntu 12.04
+[17:30] <seeeb> compdoc: by chance do you have any host that is with ubuntu 12.04running well with updated qemu?
+=== owl0 is now known as ___owl0

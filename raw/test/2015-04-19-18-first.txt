@@ -1,0 +1,200 @@
+[16:54] <Kolbe15> could I have a list of the staff
+[16:55] <Guest40228> I just found the solution. I can manually switch the output device in pavucontrol but it seems as if it doesn't switch automatically
+[16:55] <Kolbe15> or people in power
+[16:55] <bazhang> Kolbe15, look in #freenode NOT here
+[16:56] <OerHeks> Kolbe15, https://help.ubuntu.com/community/InternetRelayChat#Operators
+=== ripthejacker is now known as akhil
+[17:02] <Broli> .
+[17:04] <OerHeks> lnr fix your connection please
+=== norm is now known as Guest30664
+[17:14] <smallmouse> hi all i have an external disc which i cannot see on file manager on ubuntu is there any command i can use to see if it is even connected via usb, i can hear the dis wirring so there is power there it is an external hard drive thanks
+[17:15] <ioria> smallmouse,  lsusb, dmesg | tail
+[17:15] <OerHeks> smallmouse, it should show up with 'lsusb' else see if fdisk shows anything >   sudo fdisk -l
+[17:15] <OerHeks> it would be handy if you knew the partitiontype
+=== ph is now known as Guest86454
+[17:17] <smallmouse> OerHeks: not sure I think it was windows, i see http://pastebin.com/XWuBQcbY but not sure which one it is
+[17:18] <ioria> smallmouse,  that's not lsusb
+[17:19] <smallmouse> ioria: http://pastebin.com/d22M1PUV
+=== homelesspirate is now known as PaulP
+[17:19] <jones_> Hello
+=== PaulP is now known as homelesspirate
+[17:20] <ioria> smallmouse,  what is your external usb disk ?
+[17:21] <OerHeks> sdb i guess, gpt
+[17:21] <smallmouse> ioria: it is a wester digital
+[17:22] <OerHeks> smallmouse, is this a hdd inserted in an external casing from a machine ? i wonder about the cryptswap1
+[17:23] <smallmouse> OerHeks: yes HDD external casing, may have security on this but i cant recall, just want to wipe it
+[17:23] <ioria> smallmouse,  did you connect the disk via hub ?
+[17:24] <smallmouse> ioria: no hub but via casing yes,
+[17:24] <bodo_> hi guys. how can i personalize my ubuntu unity? to be more fun? like effects and more stuff?
+[17:24] <OerHeks> small install gparted, unmount the drive sdb and wipe it
+[17:24] <psusi> smallmouse, open the disks utility and see if it sees it
+[17:24] <OerHeks> bodo_, take a look at unity-tweak
+[17:24] <OerHeks> !info unity-tweak
+[17:24] <ubottu> Package unity-tweak does not exist in utopic
+[17:25] <OerHeks> !info unity-tweak-tool
+[17:25] <ubottu> unity-tweak-tool (source: unity-tweak-tool): configuration tool for the Unity desktop environment. In component universe, is optional. Version 0.0.6ubuntu2 (utopic), package size 325 kB, installed size 2550 kB
+[17:26] <ioria> smallmouse,  i'll try a direct connection in the pc and i'll use a double usb cable, just to be sure
+[17:26] <smallmouse> psusi: does not see it on disc utility
+[17:27] <_X_C_V_B_> I get this while trying to play me and my shadow: ./bin/meandmyshadow-debian-64: error while loading shared libraries: libarchive.so.2: cannot open shared object file: No such file or directory
+[17:27] <ioria> smallmouse,  what is dmesg | less soon after plugging the disk ?
+[17:28] <smallmouse> ioria: I only have a laptop but yes have a double USB to help with the power.. you think it is a power thing ?
+[17:28] <rabaprodev> Hi, is there other open source imaging/cloning software except clonezilla?
+[17:28] <ioria> smallmouse,  mine was :-)
+[17:28] <Voyage_> need a video editing tool that can cut some parts of a .mov file, delete audio, put a watermark on top of video.
+=== Yukkii is now known as Dhs92
+[17:30] <OerHeks> _X_C_V_B_, how did you install that game? i see the ppa is old ppa:odamite/meandmyshadow-stable
+[17:31] <smallmouse> ioria: what ever dmeseg | less does it appears to have kicked off the disck
+[17:31] <smallmouse> ioria: I can now see it in my explorer thanks
+[17:31] <_X_C_V_B_> OerHeks:http://sourceforge.net/projects/meandmyshadow/?source=typ_redirect <-- from here
+[17:31] <ioria> smallmouse, ^_^
+[17:32] <ioria> smallmouse, remember to set permissions
+[17:32] <smallmouse> ioria: do i just format the whole disk ? it looks like it was a windows recovery
+[17:32] <ioria> smallmouse, if  ya wanna to get rid of it, ys
+[17:32] <smallmouse> ioria: there are a number of partitions on this, shall i delete them first ?
+[17:33] <ioria> smallmouse, i don't know what  you want to do ....
+[17:33] <ome> oi
+[17:33] <smallmouse> ioria: just need it to store stuff... ext4 or NFTS ?
+[17:34] <Guest86454> excuz me smallmouse but what's your problem maibe i can help you ??
+[17:34] <ioria> smallmouse, well, ntfs does not support permissions...
+[17:34] <smallmouse> ioria: its only for some photos and videos nothing sensitive etc
+[17:34] <ioria> smallmouse, yes, but you think to interchange with a win machine ?
+[17:35] <smallmouse> ioria: but the disc can be connected to my tv to play etc so prob win compatible is best, they still have some control of the world
+[17:35] <Guest86454> if you want to access your disk must be formated  ntfs 3G
+[17:35] <OerHeks> _X_C_V_B_, yeah,, i get a bunch of errors too, about libsdl-gfx
+[17:35] <ioria> smallmouse, so, go for fat or ntfs
+[17:35] <smallmouse> ioria: thank you for your time, much appreciated
+[17:36] <ioria> smallmouse, np
+[17:36] <Guest86454> ok
+[17:38] <OerHeks> _X_C_V_B_, just found a fresh ppa, hold on, i'll test it. https://launchpad.net/~upubuntu-com/+archive/ubuntu/games
+[17:40] <OerHeks> _X_C_V_B_, that gives a lot of issues too, bad luck , seems like a nice game > Depends: libarchive12  but it is not installable
+[17:40] <OerHeks>  Depends: libsdl-gfx1.2-4 (>=2.0.22) but it is not installable
+[17:40] <_X_C_V_B_> OerHeks: i'm going try install the windows version though wine
+[17:40] <_X_C_V_B_> I played on a windows machine before
+=== dm7freek is now known as macfreek
+[17:43] <_X_C_V_B_> OerHeks: works tough wine
+[17:43] <OerHeks> _X_C_V_B_, good, have fun :-)
+[17:50] <iampoz> hi everyone, I am new to making scripts and would like to make a fairly simple one. I am wondering if anyone could help or if it is off topic for here. shell or even awk would be fine.
+[17:50] <yoosi> _X_C_V_B_: what are you trying to install?
+[17:50] <_X_C_V_B_> yoosi: me and my shadow
+[17:50] <EriC^^> iampoz: script to do what?
+[17:50] <_X_C_V_B_> I got it working
+[17:51] <sysop2> I need to run a perl script to make my touchscreen work,  where do I configure it to run right as lightdm does, it requires  x to be running so I cant put it in rc.local.
+[17:52] <sysop2> that way I can use my touchscreen to login with.
+[17:52] <iampoz> the goal of the script would be, for example: take the first text (csv file) of each line and then run a command that makes a file with that name
+[17:53] <EriC^^> iampoz: first text of each line? can you give a sample of the line?
+[17:53] <EriC^^> is the only thing on the line the filename?
+[17:53] <iampoz> AAA,BBB,CCC ; first text of the line is AAA
+[17:55] <SchrodingersScat> iampoz: echo "AAA,BBB,CCC" | cut -d , -f1
+[17:56] <EriC^^> iampoz: for i in $(sed 's/,/\n/g' /path/to/file); do touch $i;done
+[17:56] <EriC^^> SchrodingersScat: that will only take the first column of every line
+[17:56] <MonkeyDust> iampoz  there's also #bash and #ubuntu-app-devel
+[17:57] <konam> am i the only one experiencing EXTREME memery leak from firefox 37 ubuntu 14.04?
+[17:57] <konam> memory*
+[17:58] <iampoz> EriC^^, I will try that
+[17:58] <TheNumb> konam: disable all the extensions and try again.
+[17:58] <SchrodingersScat> EriC^^: thought that was the point, oh well.
+[17:59] <ioria> iampoz i'll do a little c prog that fread each line and then calls system touch to create the file in a loop
+[17:59] <EriC^^> iampoz: use for i in $(sed 's/,/\n/g' /path/to/file); do touch "$i"; done
+[17:59] <EriC^^> in case it has spaces in the filename
+[17:59] <konam> that kind of would beat the point of firefox wouldn't it? :)  TheNumb
+[17:59] <konam> I'll just go back to 34
+[18:00] <TheNumb> konam: one of the extensions might be buggy.
+[18:00] <sysop2> konam, whenever I run chrome and firefox my swap starts filling up, I have to activate a swap file and then swapoff the partition and then swapon it and then swapoff the swapfile.
+[18:01] <sysop2> that will clear out the swap for awhile till it starts building back again.
+[18:01] <iampoz> SchrodingersScat, that was the point. you were right. Just not sure how to change "AAA,BBB,CCC" into the input file, I guess if I am in the directory, I just need to put the file name so I will try that.
+[18:01] <konam> sysop2 i don't use swap partitions
+[18:01] <sysop2> its been happening for years across many different versions.
+[18:01] <sysop2> you dont use swap at all?
+[18:02] <sysop2> or do you use a swap file?
+[18:02] <EriC^^> iampoz: if you use SchrodingersScat command it will only take AAA from the first line, and ignore BBB and CCC
+[18:02] <konam> i never have issues with memor + firefox, just started happening on this version sysop2
+[18:02] <konam> sysop2 no, i don't use swap at all, i used to but saw that the benefits were minimal
+[18:03] <iampoz> EriC^^, sorry that I was not more clear, that is what I want. I ran yours and it worked, but it also made files with names from BBB and CCC
+[18:03] <sysop2> if you have enough ram your are right,  but I still use them, I guess out of tradition lol
+[18:03] <konam> sysop2 if there were any benefits at all. i haven't missed it, everything has kept running smoothly
+[18:03] <EriC^^> iampoz: oh ok
+[18:03] <konam> sysop2 yes, i used to do it out of tradition too haha
+[18:04] <SchrodingersScat> EriC^^ / iampoz: would sed 's/,.*//g' work?  would remove everything after the first comma, yeah?
+[18:04] <Bashing-om> sysop2: One can do away with swap if one has enough ram installed to meet their needs, and do not ever intend to hebernate . I run with 4 Gigs and a very small swap partition - just in case .
+[18:05] <EriC^^> iampoz: for i in $(cut -d, -f1 /path/to/file); do touch "$i"; done
+=== z_ is now known as Guest85802
+[18:06] <sysop2> yea I never hibernate either, I should stop using the swap part since I upgrade ram, but oh well. the tradition continues.
+[18:06] <ikonia> there is nothing wrong with using a swap partition
+[18:06] <iampoz> EriC^^, yes, that worked
+[18:06] <ikonia> even if you have a lot of ram
+[18:06] <ikonia> it can still be helpful
+[18:07] <konam> ikonia yeah, there's nothing wrong with using one
+[18:07] <Bashing-om> ikonia: sysop2 ^^ aggreed, is cheap insurance .
+[18:07] <ikonia> not even insurance, it can help your system run, even with a lot of ram
+[18:08] <konam> sysop2 when my pc doubled as media center i didn't hibernate much either. changed my setup and now i do it a lot
+[18:09] <Bashing-om> ikonia: OK, I am in a learning mode .. as I understand it, swap is not even touched till there are ram usage contraints ?
+[18:09] <ikonia> Bashing-om: no, thats not true
+[18:09] <ikonia> Bashing-om: the system will swap out pages if things like the program is sleeping allowing for better ram usage for living programs
+[18:09] <BZWingZero> I have a samba share set up on my linux server, being accessed from my windows desktop. Files created on the share in windows are given the wrong permissions: 770. I need help getting newly created files to have 774 permissions.
+[18:09] <ikonia> swap is not just used as an overflow buffer
+[18:10] <BZWingZero> I have already configured my samba.conf, but it seems to be ignored
+[18:10] <daftykins> BZWingZero: use the samba share declaration to force default perms
+[18:10] <BZWingZero> daftykins, they're being ignored
+[18:10] <daftykins> your values must be wrong
+[18:10] <Bashing-om> ikonia: Noted ! Thanks for the instruction .
+[18:10] <daftykins> double check them with testparm
+[18:10] <daftykins> BZWingZero: bear in mind in the conf, i think they need to be written as 0774
+[18:10] <ikonia> Bashing-om: there is more to it than that, but thats just a high level summary
+[18:11] <BZWingZero> daftykins, http://pastebin.com/vbzLved3 current relevant config from testparm
+[18:12] <daftykins> lol path removed
+[18:12] <Bashing-om> ikonia: Good place to start the thought process, though . I have yet to ever know enough .
+[18:12] <daftykins> oh noes i don't know your local share
+[18:13] <BZWingZero> considering this will end up being a web-root...
+[18:13] <daftykins> oh no you're not one of those web devs that copies and pastes are you?
+[18:13] <BZWingZero> (either way, path is irrelevant for the problem, its functioning properly)
+[18:13] <daftykins> BZWingZero: so the Windows client is being used via guest?
+[18:13] <BZWingZero> correct
+[18:14] <daftykins> to which query?
+[18:14] <sysop2> I need to run a perl script to make my touchscreen work,  where do I configure it to run right as lightdm starts, it requires  x to be running so I cant put it in rc.local.
+[18:14] <BZWingZero> windows has mapped the share via guest.
+[18:14] <daftykins> valid users and guest seems a contradiction to me
+[18:14] <BZWingZero> I think
+[18:15] <BZWingZero> smbstatus shows the correct username
+[18:15] <BZWingZero> but turning off guest access prevents from connecting.
+[18:16] <daftykins> only as that's how you've authed with the samba host most likely
+[18:16] <daftykins> you would have to disconnect the share, remove it from the Windows user accounts' cache then retry
+[18:17] <daftykins> what ubuntu is running on the host end?
+[18:17] <BZWingZero> lts 14.04.2
+[18:17] <BZWingZero> server
+[18:17] <ehsan> salam
+[18:18] <daftykins> ok let me just check out the configs on the hosts i deal with
+[18:18] <BZWingZero> take your time. I appreciate the help. Spent 6 hours fruitlessly googling yesteday on this problem.
+[18:19] <daftykins> BZWingZero: first off, keep a copy of your current /etc/samba/smb.conf then and we'll mess with it :D
+[18:19] <BZWingZero> Something else that makes me go "huh". If I change my create mask and force create mode to 0777, newly created files get all permissions EXCEPT global read.
+[18:19] <BZWingZero> which is what I need
+[18:20] <EriC^^> BZWingZero: oh hey :)
+[18:20] <daftykins> so i take it the use case here is web dev work?
+[18:20] <EriC^^> BZWingZero: daftykins will get you all set i'm sure ;)
+[18:20] <BZWingZero> daftykins, for now. I built a linux server to learn. Web is my day job, figured I might as well start with learning how to config a webserver
+[18:20] <BZWingZero> EriC^^, ty for your help yesterday :)
+[18:20] <EriC^^> np :)
+[18:21] <daftykins> ooh am i making 3 a crowd? was there some input on this one yesterday?
+[18:21] <BZWingZero> daftykins, we ran into a brick wall a few times. Not much success.
+[18:21] <EriC^^> daftykins: no, i was trying to help him, i don't know anything about samba though
+[18:22] <daftykins> BZWingZero: so as default the apache2 doc root is /var/www/html, what've you done to handle file ownership in there?
+[18:22] <daftykins> i tend to create a web site management group, then add my user and www-data to it
+[18:22] <BZWingZero> I'm using nginx. I have a user account with full access to the folder.
+[18:22] <daftykins> right but you can't really have your user own the path and nginx run as a different user
+[18:23] <daftykins> so i do the above then have the doc root owned by www-data:mygroup
+[18:24] <daftykins> BZWingZero: just as an example this is the config i have for someone - http://paste.ubuntu.com/10852300/
+[18:25] <daftykins> i make use of the Windows user accounts on the clients to auth directly with the samba host, i create the users then set their smb passwords with smbpasswd
+[18:25] <BZWingZero> I suspect its a user account issue, and not actually a samba.conf issue. And I know next to nothing about linux user accounts
+[18:27] <daftykins> righty-o, well first step you'll want to disconnect the mapped drive on your Windows host, then run "control userpasswords2" and check the advanced tab -> manage passwords for any stored passes for that host. Probably nothing there though since guest is in use
+[18:27] <BZWingZero> The windows network drive mapping is dead
+[18:29] <_jay> issues on upgrade 12.04-14.04- currently I have no desktop icons. They start to load, but is seems like it crashes when generating jgeg or pdf previews? Folder icons are there already at first login.
+=== dm7freek is now known as macfreek
+[18:31] <daftykins> BZWingZero: as in removed?
+[18:32] <BZWingZero> yes. The windows computer has no trace of the mapped share.
+[18:33] <wafflejock> BZWingZero, regular linux user accounts aren't really very complicated, /etc/passwd has all the users and their login shell, /etc/group has the group listings, you can use the "groups" command to see groups for the logged in user or "groups username" to see groups for a particular user... so a user can be in many groups, each path (file/directory) has two parts to the ownership the user and the group, then it has the permissions
+[18:33] <wafflejock>  which control read/write/execute for the paths user, group, and anyone else (other)
+[18:33] <BZWingZero> wafflejock, so a lot less granualr than windows accounts.
+[18:33] <wafflejock> BZWingZero, unless you install some access control list (ACL) stuff it's really a little less sophisticated than windows permissions
+[18:34] <wafflejock> but I'm not really privvy to the samba problems, I do use VirtualBox for running dev environments but I just use the virtual box shared folder settings and it's linux in linux
+[18:34] <daftykins> BZWingZero: so right now does your Linux user match your Windows username?
+[18:35] <BZWingZero> daftykins, at the moment yes. I can create a new account on either if needed.
+[18:35] <daftykins> nah that's ideal

@@ -1,0 +1,200 @@
+[15:22] <PanV> No configuration or local? I shouldnt move around the menus..
+[15:23] <daftykins> none.
+[15:23] <PanV> I chose ok.
+[15:23] <PanV> System mail name?
+[15:23] <daftykins> steelbrain: you should look into prime though, likely it runs as the intel mainly but you can still open a program that'll make use of the nvidia
+[15:23] <proycon> Is there no nvidia-xconfig anymore in 15.10 ??
+[15:23] <daftykins> PanV: doesn't matter, as i've already said
+[15:23] <PanV> I hope I don't get screwed up
+[15:24] <spoonman_> genii: is that link talking about disconnecting one of the SATA drives?  nothing is plugged into either SAS port
+[15:24] <steelbrain> daftykins: I am not sure if that's possible, because when I change between the GPUs I have to restart to make it work, even a logout doesn't do that
+[15:24] <syntroPi> Zetta, you could try something like "sudo apt-get install i965-va-driver vainfo " and then invoke "vainfo" to see which video decoding is accellerated
+[15:24] <daftykins> PanV: you're in a live session, nothing you do will even last after reboot :)
+[15:24] <PanV> let me copy paste the paste link
+[15:24] <PanV> http://paste.ubuntu.com/12862056/
+[15:24] <daftykins> steelbrain: that's for permanent switching, just read up and try :)
+[15:24] <genii> spoonman_: SAS and SATA use the same plugs, you can't really tell them apart by physically looking at the cables. Just try the other plug
+[15:24] <PanV> daftykins: I know, I was just afraid if it af- oh wait I am not mounted
+[15:25] <genii> ( if there's only two)
+[15:25] <spoonman_> genii: ok.  i can read on the MOBO where they say SATA0 SATA1 (have plugs), SAS0, SAS1 (no plugs)
+[15:25] <daftykins> PanV: probably just need to fsck your disk then.
+[15:25] <PanV> And by that you mean.. :P
+[15:25] <daftykins> i literally mean, fsck.
+[15:26] <MonkeyDust> PanV  fsck = file system check
+[15:26] <daftykins> so keep the disk unmounted, then "fsck /dev/sdx#" where that's a partition on your system
+[15:26] <daftykins> "sudo parted -l" to list them
+[15:26] <PanV> Ok
+[15:26] <daftykins> you want to check what is your / partition, likely /dev/sda1
+[15:27] <daftykins> i'll bbl
+[15:27] <PanV> fdisk -l it?
+[15:27] <PanV> ?
+[15:27] <PanV> oops
+[15:28] <PanV> wait a minute.
+[15:29] <PanV> http://paste.ubuntu.com/12862122/ My partition is like 100 GB, what is my partition?
+[15:29] <auronandace> PanV: sda5
+[15:30] <PanV> fsck /dev/sda5/?
+[15:30] <Johne> can someone tell me how to find all files with a leading whitespace? google is failing me.
+[15:32] <spoonman_> lotuspsychje: i cannot disable fastboot on this thing.  it only has "minimal," "thorough," and "auto" for options
+[15:33] <PanV> That's the command? fsck /dev/sda5/
+[15:33] <lotuspsychje> spoonman_: something must be still blocking in bios mate, its the symptons of a fastboot enabled i think
+[15:34] <lotuspsychje> spoonman_: maybe the ##hardware guys might know wich to disable
+[15:34] <spoonman_> cool, thanks
+[15:34] <spoonman_> genii: in the bios, SAS RAID controller is also "Disabled"
+[15:34] <lotuspsychje> spoonman_: if you find a pdf manual for your mobo, i wan take a look for you
+=== Blaster is now known as Guest61841
+[15:35] <lotuspsychje> !uefi | spoonman_ you might find usefull info here aswell
+[15:35] <ubottu> spoonman_ you might find usefull info here aswell: UEFI is a specification that defines a software interface between an operating system and platform firmware. It is meant as a replacement for the BIOS. For information on how to set up and install Ubuntu and its derivatives on UEFI machines please read https://help.ubuntu.com/community/UEFI
+[15:35] <spoonman_> luckily, i disabled the UEFI stuff and am legacy booting  :)
+[15:36] <lotuspsychje> spoonman_: it mentions fastboot also
+[15:36] <maddawg2> oops i messed up lol
+[15:36] <lotuspsychje> spoonman_: some system have also an intel thing to block new Os install, i keep forgetting its name
+[15:37] <maddawg2> i accidentally did this:  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/community/xUbuntu_15.04/ /' >> /etc/apt/sources.list.d/owncloud.list"
+[15:37] <maddawg2> but i dont know how to reverse it
+[15:37] <maddawg2> i added the wrong version
+[15:37] <spoonman_> interesting
+[15:37] <maddawg2> what is the proper way to reverse the above command
+[15:37] <maddawg2> can i just delete /etc/apt/sources.list.d/owncloud.list?
+[15:39] <k1l_> maddawg2: yes
+[15:39] <maddawg2> k1l_, thanks
+[15:39] <k1l_> maddawg2: and be more careful in the future with commands that need sudo rights :)
+[15:39] <maddawg2> lol thanks ;-P
+[15:39] <maddawg2> i know
+[15:39] <maddawg2> just grabbed the wrong version
+[15:39] <maddawg2> mesant to get 14.04
+[15:40] <k1l_> maddawg2: well stop
+[15:40] <Kai_> please could someone pastebin the /etc/cups/cupsd.conf files
+[15:40] <Kai_> http://paste.ubuntu.com
+[15:40] <k1l_> maddawg2: open that with nano "sudo nano /etc/apt/sources.list.d/owncloud.list" and then change the 15.04 to a 14.04.then ctrl+o, ctrl+x to safe
+[15:42] <lotuspsychje> Kai_: http://paste.ubuntu.com/12862277/
+[15:42] <Kai_> thanks lotuspsychje
+[15:42] <maddawg2> thanks k1l_ i actually ended up deleting owncloud.list and readded the correct one
+[15:43] <PanV> That's it, I will simply blow up my PC!
+[15:47] <spoonman_> genii: starting over; setting it to UEFI, enabling secureboot, etc.
+[15:47] <lotuspsychje> spoonman_: whats your motherboard type please
+[15:47] <spoonman_> lemme look
+[15:48] <spoonman_> i just got this equipment assigned to me
+[15:48] <RubyDZ> Hey daftykins, hope you're still around ... I just got 2 Passes on the memtest ...
+[15:49] <daftykins> RubyDZ: and still no sign of anything errors wise huh? (they come up as big red lines so it's not easy to miss)
+[15:49] <RubyDZ> daftykins: Nope, no errors
+[15:49] <genii> spoonman_: I guess just keep us posted
+[15:49] <spoonman_> lotuspsychje: i do not know how to tell :( i'm only in the bios lemme see if i can catch it rolling across the screen
+[15:49] <daftykins> RubyDZ: try booting your live session again with nomodeset then
+[15:49] <daftykins> !nomodeset
+[15:49] <ubottu> A common kernel (boot)parameter is nomodeset, which is needed for some graphic cards that otherwise boot into a black screen or show corrupted splash screen. See http://ubuntuforums.org/showthread.php?t=1613132 on how to use this parameter
+[15:50] <lotuspsychje> spoonman_: whats the dell type again
+[15:51] <spoonman_> precision tower 7910
+[15:55] <RubyDZ> daftykins: not really sure how I should go about following the instructions in that link, I don't have Windows on the laptop I'm trying to reinstall Ubuntu on ....
+[15:56] <uupz> hey
+[15:56] <daftykins> RubyDZ: i don't know how you got that you'd need windows for anything, "nomodeset" is a parameter you add by booting to the menu then pressing F6 and selecting nomodeset :)
+[15:57] <RubyDZ> daftykins: So now I reboot, and open BIOS and press F6?
+[15:57] <spoonman_> one thing i don't get is, where do i install the bootloader?  i have /dev/sda1 set to "biosgrub" or i can choose /dev/sda
+[15:57] <RubyDZ> I'm still on the memtest screen BTW
+[15:57] <daftykins> RubyDZ: no F6 is on the menu when you boot ubuntu from your flash drive or DVD
+[15:58] <RubyDZ> daftykins: So from the Installer Boot Menu, right? Just before it freezes on me
+[15:58] <daftykins> RubyDZ: you see a little logo at the bottom, press a key and it gives you a language menu - then you will be offered to press F6 for advanced options
+[15:58] <daftykins> yep
+[15:58] <daftykins> spoonman_: main /dev/sda should be fine
+[15:58] <RubyDZ> daftykins: K will try now
+[15:59] <bos_gpc> foo
+[15:59] <daftykins> bar?
+[15:59] <lotuspsychje> spoonman_: can you check intel active management in bios
+[16:00] <spoonman_> lotuspsychje: sure one sec
+=== zach is now known as Guest49209
+[16:00] <lotuspsychje> spoonman_: http://binar.pl/p/precision-t7910/precision-t7910-owner_manual_en-us.pdf
+[16:01] <PanV> daftykins: Are you here?
+[16:01] <DrDamnit> I just fat fingered a monumental fubar moment: I chown'd /var/ to www-data. Since I am setting up Ubuntu 12 LTS, and it's not in production, I have two options... go through and re-assign ownship and permissions or reinstall. What's the better option? (I already have 4 hours of work into this thing).
+[16:02] <daftykins> PanV: yes.
+[16:02] <spoonman_> perfect
+[16:02] <k1l_> PanV: just ask a detailed question and others can see if they can help
+[16:02] <spoonman_> thanks lotuspsychje - am checking that in bios now
+[16:02] <daftykins> DrDamnit: start again
+[16:02] <PanV> So.. What command should I do now after knowing that my partition is /dev/sda5/?
+[16:03] <DrDamnit> daftykins, yeah... I was hoping someone had a github script to un-fuck this, but that's what I figured I would have to do.
+[16:03] <lotuspsychje> spoonman_: play with some settings till you can install ubuntu
+[16:03] <RubyDZ> daftykins: Didn't get it the way you said, but I went to Help on the Installer Boot Menu, and when I press F6 it says: This kernel requires an x86-64 CPU, but only detected an i686 CPU. Unable to boot - please use a kernel appropriate for your CPU
+[16:03] <PanV> DrDamnit: Language.
+[16:03] <RubyDZ> daftykins: I'm guessing I've downloaded the wrong version of Ubuntu? I got the 64-bit one ... I should've gotten 32-bit, right?
+[16:03] <daftykins> RubyDZ: ah so it's that your system is too old for 64-bit :) you will need to download the 32-bit version and try again
+[16:03] <Guest49209> Hey guys I wanted to ask, is Ubunto Mate a good distro for a noobie ?
+[16:03] <DrDamnit> Apologies. Couldn't think of a G-rated version of what I did.
+[16:04] <DrDamnit> thanks everyone. Off to re-install.
+[16:04] <daftykins> RubyDZ: however, 15.10 will be out in a few days, so if you have 15.04 there you might want to just wait / grab the 15.10 media
+[16:04] <daftykins> Guest49209: sure
+[16:04] <PanV> brb
+[16:05] <RubyDZ> daftykins: Hmmm. How many days is that? 'Cause I right now want to have Ubuntu on this old netbook to have a backup for if my Windows 10 upgrade backfires on my day-to-day usage laptop ...
+[16:05] <spoonman_> thanks for the help, lotuspsychje
+[16:05] <lotuspsychje> spoonman_: np, hope it helps
+[16:06] <lotuspsychje> spoonman_: try fastboot:minimal uefi:disabled and atm disabled
+[16:06] <spoonman_> lotuspsychje: what's atm
+[16:06] <Guest49209> Thanks for the response, and to what distro should I go for further experience ?
+[16:07] <lotuspsychje> spoonman_: that intel active management
+[16:07] <spoonman_> i couldn't find that in the bios manual.  wonder if it's not installed
+[16:07] <daftykins> RubyDZ: well you could install it from a disc today then update to final when it goes final before the end of the month - i think on an old netbook you'll want to pick lubuntu though, not standard ubuntu
+[16:08] <RubyDZ> daftykins: I had Ubuntu on it earlier, why should I pick lubuntu and what's the difference
+[16:08] <daftykins> lubuntu is lighter and will run with less resources
+[16:08] <RubyDZ> daftykins: K thanks
+[16:08] <daftykins> so it'll be easier to deal with on a horrid netbook that is fit for burial at sea :)
+[16:09] <RubyDZ> It's not a horrid netbook xD It's a 2010/2011 model and perfectly fine except needs a battery and charger replacement xD
+[16:09] <daftykins> all netbooks were horrid on their day of creation :)
+[16:10] <RubyDZ> daftykins: Haha yeah I guess so
+[16:15] <hamza_> hi, anyway i can disable ubuntu's unity-screen-panel from controling my resolution? it seems to add offset whenever it finds two display with different sizes, i.e it applies this resolution to a 28" monitor to make it "seamless" with my old 26": 1920x1080+0+41
+[16:15] <RubyDZ> Guys, I came across something called MacBuntu, anyone have an idea what that is? Seems to be a mix of hackintosh/linux?
+[16:16] <compdoc> doesnt sound official
+[16:17] <daftykins> RubyDZ: probably just an ubuntu with a skin or theme to make it look like a mac
+[16:17] <daftykins> can't think of anything worse :)
+[16:17] <baizon> RubyDZ: it is what it sounds like
+[16:17] <hamza_> display with unusual resolutions cannot be manipulated with xrandr
+[16:17] <MonkeyDust> RubyDZ  macbuntu is not supported here
+[16:17] <baizon> RubyDZ: elementary os is much better then this to be honest
+[16:18] <MonkeyDust> RubyDZ  baizon but elementaty is also not supported here
+[16:18] <MonkeyDust> elementary*
+[16:18] <RubyDZ> baizon MonkeyDust K, I just was asking, out of curiosity. I think I'm sticking with Ubuntu
+[16:19] <RubyDZ> MonkeyDust what about lubuntu is that also not supported here?
+[16:21] <MonkeyDust> RubyDZ  well... LXDE is simply a different DE
+[16:21] <fabio_> Hello fellows! I need a little help. I want to run a script after the wifi has been connected to a network. How can i accomplish that? I'm running 14.04 LTS
+[16:22] <MonkeyDust> fabio_  scripting is more for #bash
+[16:23] <genii> fabio_: You could do a post-up directive in /etc/network/interfaces for the wlan0 ( or other applicable device)
+[16:23] <qstrahl> Hey I'm noticing something is overwriting my .Xresources settings each login, trying to pinpoint where it's coming from... thought I found the relevant settings in dconf-editor but they still seem to be wrong when I log in, even after I changed them.
+[16:24] <qstrahl> The relevant settings are the xft* settings in com.canonical.unity-greeter (I think)
+[16:24] <fabio_> genii, hi. that could be a good solution yes
+[16:24] <ioria> fabio_, http://askubuntu.com/questions/13963/call-script-after-connecting-to-a-wireless-network
+[16:24] <qstrahl> If anyone could offer some insight on the matter I'd repay them in most valuable appreciation :P
+[16:25] <RubyDZ> daftykins: just a Q about lubuntu, my understanding is that since it requires fewer resources, that will mean my netbook will run faster than usual, right? Also, is Google Chrome supported?
+[16:26] <MonkeyDust> RubyDZ  Google chrome os is not supported here
+=== armyriad2 is now known as armyriad
+[16:26] <qstrahl> RubyDZ, I assume you are asking about Google Chrome the browser in which case yes it is available to you
+[16:27] <RubyDZ> MonkeyDust Dude why do you seem to be picking on me all the time today? I meant the browser!!
+[16:27] <RubyDZ> qstrahl thanks
+[16:27] <daftykins> RubyDZ: yes and yes
+[16:27] <qstrahl> RubyDZ, Also the difference with lubuntu is likely not that huge but yes they do put a focus on using less resources in general... you are more likely to get less bloat on your disk than a "faster" experience though
+[16:27] <daftykins> MonkeyDust: can you maybe realise chrome is a browser and stop enforcing rules pointlessly?
+[16:27] <RubyDZ> daftykins qstrahl thanks guys
+[16:27] <qstrahl> Now now daftykins
+[16:28] <qstrahl> Any time, RubyDZ :D
+=== jasoniumh_ is now known as jasoniumh
+=== Motoservo_ is now known as Motoservo
+=== lolmac is now known as Guest19741
+[16:29] <MonkeyDust> RubyDZ  didnt mean to offend
+[16:31] <qstrahl> Now kiss
+[16:33] <daftykins> qstrahl: cut the foolishness please
+[16:35] <qstrahl> Yessir
+=== shuduo is now known as shuduo-akf
+=== shuduo-akf is now known as shuduo-afk
+[16:42] <stuentttet> hello im trying to create a bootable usb stick for Mac OS X with ubuntu in it. I did everthing ccording to http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx  but I cant boot to it
+[16:43] <stuentttet> If i boot to Mac OSX it says the disk you inserted was not readable by this computer
+[16:43] <stuentttet> and considers it Unmounted still
+[16:43] <stuentttet> evebthough sudo dd transfer was successful
+[16:43] <daftykins> you're holding option after the chime i take it?
+[16:44] <stuentttet> daftykins:  yes, nothing happends. In mac OS it doesnt recognize the disk either
+[16:44] <daftykins> hmm ok, if you used 'dd' are you sure you used the main disk device and not a partition?
+[16:44] <stuentttet> yes i am sure
+[16:44] <daftykins> i understand disk naming under OS X is very different
+[16:45] <stuentttet> I did everything according to the link
+[16:45] <stuentttet> 1054867456 bytes transferred in 85.068227 secs (12400252 bytes/sec)
+[16:45] <daftykins> and what is the ISO you obtained?
+[16:45] <stuentttet> ubuntu-14.04.3-desktop-amd64 that I transformed to .img like the manual said
+[16:46] <stuentttet> .img.dmg apple added the .dmg
+[16:46] <daftykins> i would try using dd on the iso direct to the disk device without conversion
+[16:46] <daftykins> or just borrow another system temporarily
+[16:48] <stuentttet> okay I will try to transfer .iso directly but seems weird
+[16:48] <daftykins> that's macs for you :) which model is it?

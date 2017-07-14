@@ -1,0 +1,200 @@
+=== jParkton is now known as emacs
+=== emacs is now known as jParkton
+[19:17] <lotuspsychje> Blackport: anything usefull to see in your syslog or dmesg?
+[19:19] <lotuspsychje> xentity1x: found nvidia-settings from dash?
+[19:19] <Blackport> When I'm writing vainfo in terminal I don't see amd card, only information about Intel integrate card . I didn't check syslog
+[19:19] <lost> hello all
+[19:20] <xentity1x> <lotuspsychje>, ok so i did that. This is what nvidia-settings looks like for me http://i.imgur.com/3esUt0u.png
+=== user1234 is now known as user12345
+[19:20] <lotuspsychje> Blackport: can you switch the card to amd from bios?
+=== user12345 is now known as user12346
+[19:20] <lost> anyone have exp with uefi and ubuntu?
+[19:20] <lotuspsychje> xentity1x: what about application profiles
+[19:21] <xentity1x> <lotuspsychje>, it doesnt show any programs on that screen
+[19:21] <Blackport> lotuspsychje: nope ;/  I have asus k53sk laptop  so  they blocked this option in bios
+[19:21] <xentity1x> it's just a blank list
+[19:21] <lotuspsychje> xentity1x: no profile to edit?
+=== andrex is now known as andrex|off
+[19:22] <lost> i have some boot issues becuase i installed in legacy mode but i need it in uefi and need the efi file i think but im actually pretty new to linux
+[19:22] <lotuspsychje> xentity1x: should look like this: http://www.phoronix.net/image.php?id=nvidia_prime_ubuntu1404&image=nvidia_optimus_prime1_med
+[19:22] <xentity1x> http://imgur.com/CNHPsIb
+[19:22] <xentity1x> <lotuspsychje>,http://imgur.com/CNHPsIb
+=== yuciyuar is now known as Guest60850
+[19:23] <lotuspsychje> xentity1x: wich drive do you have loaded right now? maybe try a switch from additional drivers?
+[19:24] <lotuspsychje> !uefi | lost
+[19:24] <ubottu> lost: UEFI is a specification that defines a software interface between an operating system and platform firmware. It is meant as a replacement for the BIOS. For information on how to set up and install Ubuntu and its derivatives on UEFI machines please read https://help.ubuntu.com/community/UEFI
+[19:24] <xentity1x> <lotuspsychje im using nouevaeu right now
+[19:24] <lotuspsychje> xentity1x: try another maybe, to see if that influence nvidia-settings
+[19:25] <xentity1x> <lotuspsychje any idea how to figure out the best driver for your grpahics card?
+[19:25] <dacorr_> trial an error until one of the nvidia drivers work
+[19:25] <xentity1x> <lotuspsychje> i see a few listed under additional drivers
+[19:26] <lotuspsychje> xentity1x: ubuntu should normaly choose best driver by default, if you enabled internet + updates
+[19:26] <dacorr_>  think 340 worked but my onboard intel is still complaining
+[19:29] <xentity1x> <lotuspsychje> i tried reinstalling nvidia-current
+[19:29] <pbx> i solved my volume-keys-no-work problem.  it was some detritus from installing i3.  removed all i3 packages and rebooted and we're in business again
+[19:29] <xentity1x> <lotuspsychje>now im using nvidia-304 proprietary. The gpu still isnt showing up on nvidia settings
+[19:30] <lotuspsychje> !yay | xen
+[19:30] <ubottu> xen: Glad you made it! :-)
+[19:30] <lotuspsychje> xentity1x: might need a reboot
+[19:30] <xentity1x> <lotuspsychje> ok brb
+[19:31] <lotuspsychje> pbx: so i3 messed up unity?
+[19:31] <pbx> lotuspsychje, yeah, subtly
+[19:31] <lotuspsychje> pbx: ok tnx for feedback, good to know
+[19:32] <Stoner19> hello all
+[19:32] <Stoner19> is server the same as desktop, just without the GUI?
+[19:32] <lotuspsychje> !server | Stoner19
+[19:32] <ubottu> Stoner19: Ubuntu Server Edition is a release of Ubuntu designed especially for server environments, including a server specific !kernel and no !GUI. The install CD contains many server applications. Current !LTS version is !Trusty (Trusty Tahr 14.04) - More info: http://www.ubuntu.com/products/whatisubuntu/serveredition - Guide: https://help.ubuntu.com/14.04/serverguide - Support in #ubuntu-server
+[19:33] <Stoner19> thank you. I wasn't sure if there were additional packages included in server or if it was just designed to be command prompt only but with same packages as desktop
+[19:34] <lotuspsychje> Stoner19: server is non-gui indeed, with other needs then desktop
+[19:34] <Stoner19> thank you very much
+[19:34] <lotuspsychje> Stoner19: do you want to install ubuntu server?
+[19:35] <Stoner19> yes, that is likely what I'll be using. Going to wipe an old macbook to install it on
+[19:38] <mach20x> Should I update to 15.04 from 14.10 I have been having troubles with the graphics, it would seem
+[19:39] <SchrodingersScat> mach20x: eventually you'll want to make a move anyway
+[19:41] <mach20x> "The move" you mean
+[19:41] <SchrodingersScat> if you wait too long you'll be headed off to 16.04 before you know it :)
+[19:42] <lotuspsychje> mach20x: 14.10 is almost end of life, the move means you will have to update soon anyway
+[19:44] <mach20x> I'm doing the upgrade as we speak
+[19:44] <lotuspsychje> mach20x: good choice
+[19:45] <lost> im using 15.04 now
+[19:45] <lost> but i have dual boot for 14.04 also
+[19:46] <lost> but i have some boot issues because of uefi with a layer of bios
+[19:46] <mach20x> I just got a new modem installed, the Ethernet port fried during a lightning storm on the old one, I think that port was starting to go anyways
+[19:48] <xentity1x> <lotuspsychje>, okay got it!
+[19:48] <lotuspsychje> xentity1x: how did you fix mate?
+[19:48] <xentity1x> <lotuspsychje>, I had to install the nvidia-331 drivers.
+[19:48] <fellayaboy> is it possible to run a gui program without a desktop environment?
+[19:48] <mach20x> I might have got some bad packages as a result of the failing Ethernet port on the old modem
+[19:48] <xentity1x> <lotuspsychje>, now any idea how to get it to detect my second monitor connected to the vga port
+[19:48] <xentity1x> ?
+[19:49] <lotuspsychje> !xrandr | xentity1x
+[19:49] <ubottu> xentity1x: XRandR 1.2 is the new method of running dual screens in !X.  Information/HowTo here: http://wiki.debian.org/XStrikeForce/HowToRandR12
+[19:49] <xentity1x> <lotuspsychje>, this is the output of xrandr http://pastebin.com/zqahRfQS
+[19:50] <mach20x> That maybe why it was crashing. EriC^^  has the lowdown on the output of my machine with regards to that problem
+[19:50] <xentity1x> <lotuspsychje>, Its not detecting the vga connection
+[19:50] <lotuspsychje> xentity1x: you need to config xrandr, read the link mate
+[19:51] <lotuspsychje> fellayaboy: if the package is also for terminal, you can run it
+[19:52] <mach20x> Has there been any updates to the open source drivers in Ubuntu for my 4650 ati graphics cards (am doing variety)
+[19:52] <fellayaboy> lotuspsychje: well yeah but what about x applications like firefox or calculator libreoffice…is it possible to run the command and load the gui app without the desktop environment?
+[19:52] <mach20x> AMD not am
+[19:53] <lotuspsychje> fellayaboy: not sure what you wanna achieve with this?
+[19:53] <fellayaboy> or to somehow load a very very light weight desktop environment the moment it runs
+[19:53] <lotuspsychje> !windowmanagers | fellayaboy
+[19:53] <ubottu> fellayaboy: A desktop environment is what "puts the pieces of a !GUI together". The available desktop environments in Ubuntu are !GNOME (ubuntu-desktop), !KDE (kubuntu-desktop), !Xfce (xubuntu-desktop), !LXDE (lubuntu-desktop), IceWM, !Fluxbox, WindowMaker (wmaker), FVWM and others - See also !Flavors
+[19:54] <lotuspsychje> !info blackbox | fellayaboy
+[19:54] <ubottu> fellayaboy: blackbox (source: blackbox): Window manager for X. In component universe, is optional. Version 0.70.1-23 (vivid), package size 208 kB, installed size 670 kB
+[19:54] <fellayaboy> hmm blackbo
+[19:54] <fellayaboy> let me check that out
+[19:55] <fellayaboy> i also wanted to run gui apps off of an ssh server… i tried it to do it but some gui apps dont work while others do..but at least i wnted to try doing it locally…
+[19:55] <lotuspsychje> fellayaboy: e17 (enlightment) is also cool
+[19:55] <mach20x> fellayaboy:  are you running a chroot environment on a single core on a phone or something?
+[19:55] <fellayaboy> raspberry pi
+[19:56] <fellayaboy> ubuntu-mate…i had another ubuntu before where it was just the command line no deskto environment before i plan to do the same with this one
+[19:56] <lotuspsychje> fellayaboy: you can also ssh X
+[19:56] <mach20x> Ah OK, I figured it was something with very limited resources
+[19:57] <fellayaboy> i use to run gui apps using ssh -X …some apps run the gui fine on the client but not most
+[19:57] <fellayaboy> simple apps like gedit would work
+[19:58] <fellayaboy> guys thanks for all your help
+[19:59] <fellayaboy> lotuspsychje:  enlightment looks awesome tahnks for sharing that
+[19:59] <Peret> The 'avahi daemon' is installed in Ubuntu by default. Are there security risks if I am using public networks (Free WiFi, ...)?
+[19:59] <lotuspsychje> fellayaboy: no sweat mate
+[20:00] <lotuspsychje> Peret: public wifi's are always a risk mate
+[20:00] <lotuspsychje> Peret: they can sniff out passwords
+[20:00] <xentity1x> <lotuspsychje>, okay so I tried turning on vga1 with xrandr --output VGA1 --right-of LVDS1
+[20:01] <Peret> lotuspsychje: Yes, I know. But what could others do if I have the avahi daemon installed? Could you tell me some examples for possible attacks?
+[20:01] <xentity1x> <lotuspsychje>, that doesnt seem to work
+[20:01] <lotuspsychje> xentity1x: not sure about that man, sorry dont got 2 screens here
+[20:01] <xentity1x> <lotuspsychje>, okay thanks
+[20:03] <lotuspsychje> Peret: not sure for avahi, but public wifi's are always a risk
+=== lil_dangerz is now known as lil_danger
+[20:04] <lotuspsychje> Peret: if you keep your system up to date, security risks will lower
+=== georg is now known as Guest42680
+=== Lantizia is now known as Guest59309
+[20:10] <Z3> Hi ! If I buy BQ Aquaris E5 Ubuntu edition, when "docking mode" or convergence is finished will be available too in this phone?
+[20:10] <Ev0luti0n_> Hi folks.
+[20:10] <xentity1x> can anyone help me figure out how to add a second monitor with xrandr?
+[20:10] <brainwash_> !hi
+[20:10] <Z3> I want to use it as a desktop pc when convergence is ready
+[20:10] <lotuspsychje> !touch | Z3
+[20:10] <ubottu> Z3: Information about the Ubuntu Touch platform for Phone and Tablet is available here https://wiki.ubuntu.com/Touch . Support and discussion in #ubuntu-touch
+[20:11] <Z3> lotuspsychje ok, thank you
+[20:13] <Ev0luti0n_> Is there any hidden panel, where the power management features can be controled on Ubuntu?
+[20:14] <Ev0luti0n_> thoroughly searched the system settings, in hopes of finding how to enable bluetooth over battery, but found nothing. Unity tweaker has nothing as well...
+[20:14] <lotuspsychje> Ev0luti0n_: dconf-editor has power management options
+[20:14] <lotuspsychje> !info dconf-editor | Ev0luti0n_
+[20:14] <ubottu> Ev0luti0n_: dconf-editor (source: d-conf): simple configuration storage system - utilities. In component universe, is optional. Version 0.22.0-1 (vivid), package size 102 kB, installed size 488 kB
+[20:14] <Ev0luti0n_> thanks!
+[20:15] <Ev0luti0n_> Not being a complete newb, i do have a question. How am i able to find these not so obvious things? I mean, in windows you have "config .ini files, registry editing"... in linux, i just feel lost in certain situations.
+=== ianp_ is now known as ianp
+[20:16] <mach20x> I'm running my system on a TV with 1080p but the drivers I have won't recognize the hdmi converter. Should I load the propriety drivers for my graphics cards? Will that solve this issue?
+[20:17] <lotuspsychje> Ev0luti0n_: well dconf editor is a bit like a registry
+[20:18] <lotuspsychje> Ev0luti0n_: of course, there are plenty of nice packages also to make your life easier
+[20:18] <Ev0luti0n_> installing it already from the sources.
+[20:19] <Ev0luti0n_> What i am trying to say is that, "one sort of is capable of finding the solution through the windows guy for a problem that arises", while on linux, if i don't search the web, i am not capable of arranging a solution; ever. loll
+[20:20] <lotuspsychje> Ev0luti0n_: whats your issue exactly?
+[20:20] <Ev0luti0n_> there is always a myriad of commands, string combinations, packages, dpkg, extracting from archives
+[20:20] <Ev0luti0n_> you name it.
+[20:20] <lotuspsychje> !info arandr | xentity1x can this help?
+[20:20] <ubottu> xentity1x can this help?: arandr (source: arandr): Simple visual front end for XRandR. In component universe, is optional. Version 0.1.7.1-1 (vivid), package size 66 kB, installed size 507 kB
+[20:20] <Ev0luti0n_> As for now, nothing more. Just a newb ranting. Thanks lotuspsychje
+=== shadok_ is now known as shadok
+[20:26] <mach20x> I guess I'll just have to try it and find out
+[20:27] <tgm4883> mach20x: I'd say just try it. You could also just hand configure xorg.conf
+[20:28] <mach20x> What would I do with xorg.conf now?
+[20:29] <tgm4883> well you could hand configure it so the settings match what your TV can do, you'll need to set the ignore EDID flag
+[20:29] <sting3r> anyone know any replacement for remastersys or reconstructor
+[20:30] <tgm4883> mach20x: if the settings aren't getting picked up automatically, then that would be the way to do it manually
+[20:30] <sting3r> running ubuntu 15.04
+[20:30] <ptrz> how do I get to a terminal from the login prompt?
+[20:30] <mach20x> Great, I'll keep that in mind!
+[20:30] <ptrz> (the Unity login prompt)
+[20:30] <ptrz> it's giving me the "failed to start session" error
+[20:31] <tgm4883> ptrz: ctrl+alt+F1
+[20:31] <ptrz> and I'm pretty proficient as a sysadmin, but I'm not getting a grub option and I can't get any information at all about what's actually going on
+[20:31] <ptrz> tgm4883: ah, thanks. I really think there should be a menu option for that
+[20:32] <ptrz> cause from what I could tell, I was logged out and was going to have to boot to a recovery USB
+[20:32] <sting3r> need a good app too replace remastersys or reconstructor
+[20:32] <tgm4883> ptrz: I... you don't need to do that often, and that's the case for any linux distro out there.
+[20:32] <mach20x> I'm not getting any signal to the hdmi as it is set now with a converter for the dvi
+[20:34] <dmrq> ahoy
+=== CompuDesktop is now known as Compu
+[20:35] <hugegreenbug> sting3r: try my script: github.com/distroshare/distroshare-ubuntu-imager
+[20:35] <ptrz> tgm4883: what's the case?
+[20:36] <sting3r> thx
+[20:36] <tgm4883> ptrz: any linux distro you try would do the same for ctrl+alt+F1
+[20:36] <ptrz> tgm4883: anyway, I'm seeing two errors in syslog. one about dnsmasq that I think I recognize, and one about systemd not being able to open the usb descriptor file or something like that
+[20:37] <ptrz> I upgraded and dist-upgraded and rebooted. checking back now to see whether it worked
+[20:40] <roothy>  /msg NickServ VERIFY REGISTER roothy owgruqshujny
+[20:42] <jParkton> nope
+[20:42] <dionysus69> hey guys
+[20:43] <dionysus69> I am following this tutorial
+[20:43] <dionysus69> I am told to install tigervnc on centos, is tigervnc "default" for ubuntu for the same reasons it is for centos?
+=== Guest60850 is now known as yuciyuar
+[20:46] <tgm4883> I'm not sure I understand the question
+[20:47] <Peret> Can sombody explain me why ntpd opens port 123 by default although I only want to sync the time?
+[20:48] <compdoc> beacuse thats the NTP port?
+[20:49] <jParkton> :O
+[20:49] <swair>  i'm compiling kernel 3.16 gcc versions are 5 and 4.8, i've set CC=/usr/bin/gcc-4.8 still i get this error: fatal error: linux/compiler-gcc5.h: No such file or directory. anu ideas?
+[20:49] <jParkton> looks like the script you are trying to compile is looking for => v5
+[20:50] <swair> its the Makefile for kernel. i set CC=/usr/bin/gcc-4.8
+[20:50] <swair> so it should not look for the gcc5 header right?
+[20:51] <hugegreenbug> Peret: ntpd is also a server, not just a client to sync the time. AFAIK
+[20:51] <Peret> compdoc: But why not only send a ntp request to the server and get the answer? Why have the port be open all the time?
+[20:51] <dionysus69> so if I want to install vnc server or client on ubuntu, what would I install? I guess there are several forks
+[20:51] <mach20x> Should I replace /etc/nginx/nginx.conf  ?
+[20:52] <hugegreenbug> Peret: If configured correctly, other clients could sync the time from your ntpd daemon
+[20:52] <mach20x> From 14.10 to 15.04
+[20:52] <Peret> hugegreenbug: Isn't there a possibility so that I use the program only as client?
+[20:54] <hugegreenbug> Peret: I think by default it is setup to only be a client, but it still opens that port. You can check the ntp config file
+[20:55] <hugegreenbug> Peret: I think it is in /etc/ntp or something
+=== Samul_ is now known as Samul|AWAY
+[20:58] <ELITEZ-CRYPTO> http://worldhacker.org
+=== sins-_x is now known as sins-
+[21:02] <jParkton> man his site is so crappy
+[21:02] <jParkton> pitiful engrish
+[21:02] <OliPicard> Hi everyone, I'm trying to create a init.d script that can run the following command on boot su kippo -c /home/kippo/kippo/start.sh any ideas on how to do this?
+[21:02] <OliPicard> I just need the script to run on boot fire up and that's it.
+[21:02] <teward> OliPicard: perhaps put it at the end of /etc/rc.local
+[21:03] <mcphail> or add it to kippo's crontab
+[21:03] <teward> which is called during boot
+[21:03] <teward> mcphail: he'll need pidfile checking or such but that's another option
