@@ -19,4 +19,6 @@ moderately-sized (~170 messages) file containing dialogue from ubuntu irc chat
 **ubuntu_large_sample.txt**  
 large (~4000 messages) file from Ubuntu logs  
 
+# License
 
+The code under `src/` is licensed under the MIT license, while the data under `data/` is licensed under the CC-BY-4.0 license, in both cases copyright Joseph Peper and Jonathan K. Kummerfeld. For details, see the LICENSE files in each folder.
