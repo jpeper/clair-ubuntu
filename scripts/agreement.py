@@ -49,5 +49,5 @@ if __name__ == '__main__':
     val1 = 100 * common / len(pairs1)
     f1 = 2 * val0 * val1 / (val0 + val1)
 
-    print("F1    {:.2f}   from {:.2f} {:.2f}".format(f1, val0, val1))
+    print("F1    {:.2f}   from {:.2f} {:.2f} - {} {} {}".format(f1, val0, val1, common, len(pairs0), len(pairs1)))
     print("Kappa {:.3f}".format(kappa))

@@ -8,7 +8,7 @@ import argparse
 import math
 import sys
 
-def read_clusters(filename):
+def read_clusters(filename, other_clusters={}):
     ans = {}
     cfile = ""
     for line in open(filename):
@@ -17,20 +17,36 @@ def read_clusters(filename):
             line = line.split(":")[-1]
         cluster = {int(v) for v in line.split()}
         ans.setdefault(cfile, []).append(cluster)
-    for filename in ans:
+    filenames = set()
+    for name in ans:
+        filenames.add(name)
+    for name in other_clusters:
+        filenames.add(name)
+    for filename in filenames:
         min_num = -1
         max_num = -1
         seen = set()
-        for cluster in ans[filename]:
-            this_min = min(cluster)
-            this_max = max(cluster)
-            seen.update(cluster)
-            if min_num < 0 or this_min < min_num:
-                min_num = this_min
-            if max_num < 0 or this_max > max_num:
-                max_num = this_max
+        if filename in ans:
+            for cluster in ans[filename]:
+                this_min = min(cluster)
+                this_max = max(cluster)
+                seen.update(cluster)
+                if min_num < 0 or this_min < min_num:
+                    min_num = this_min
+                if max_num < 0 or this_max > max_num:
+                    max_num = this_max
+        if filename in other_clusters:
+            for cluster in other_clusters[filename]:
+                this_min = min(cluster)
+                this_max = max(cluster)
+                if min_num < 0 or this_min < min_num:
+                    min_num = this_min
+                if max_num < 0 or this_max > max_num:
+                    max_num = this_max
         for num in range(min_num, max_num):
             if num not in seen:
+                if filename not in ans:
+                    ans[filename] = []
                 ans[filename].append({num})
     return ans
 
@@ -134,8 +150,8 @@ if __name__ == '__main__':
     parser.add_argument('auto', help='File containing the gold clusters, one per line. If a line contains a ":" the start is considered a filename')
     args = parser.parse_args()
 
-    auto = read_clusters(args.auto)
     gold = read_clusters(args.gold)
+    auto = read_clusters(args.auto, gold)
 
     variation_of_information(gold, auto)
     van_dongen(gold, auto)
